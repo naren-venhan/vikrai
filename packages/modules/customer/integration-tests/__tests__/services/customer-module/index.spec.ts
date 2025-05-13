@@ -1,7 +1,7 @@
-import { ICustomerModuleService } from "@medusajs/framework/types"
-import { Module, Modules } from "@medusajs/framework/utils"
+import { ICustomerModuleService } from "@vikrai/framework/types"
+import { Module, Modules } from "@vikrai/framework/utils"
 import { CustomerModuleService } from "@services"
-import { moduleIntegrationTestRunner } from "@medusajs/test-utils"
+import { moduleIntegrationTestRunner } from "@vikrai/test-utils"
 
 jest.setTimeout(30000)
 
@@ -1365,3 +1365,4 @@ moduleIntegrationTestRunner<ICustomerModuleService>({
     })
   },
 })
+

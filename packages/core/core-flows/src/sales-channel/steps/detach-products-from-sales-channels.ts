@@ -1,5 +1,5 @@
-import { ContainerRegistrationKeys, Modules } from "@medusajs/framework/utils"
-import { createStep, StepResponse } from "@medusajs/framework/workflows-sdk"
+import { ContainerRegistrationKeys, Modules } from "@vikrai/framework/utils"
+import { createStep, StepResponse } from "@vikrai/framework/workflows-sdk"
 
 /**
  * The data to detach products from sales channels.
@@ -68,3 +68,4 @@ export const detachProductsFromSalesChannelsStep = createStep(
     await remoteLink.create(links)
   }
 )
+

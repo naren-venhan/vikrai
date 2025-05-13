@@ -1,4 +1,4 @@
-import { Logger } from "@medusajs/framework/types"
+import { Logger } from "@vikrai/framework/types"
 import { RedisOptions } from "ioredis"
 
 export type InitializeModuleInjectableDependencies = {
@@ -37,3 +37,4 @@ export type RedisWorkflowsOptions = {
     options?: RedisOptions
   }
 }
+

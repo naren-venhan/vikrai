@@ -4,10 +4,11 @@ export default function (files: string[]): string[] {
   return files.filter((file) =>
     minimatch(
       file,
-      "**/packages/@(medusa|core/types|medusa-js|medusa-react)/src/**/*.@(ts|tsx|js|jsx)",
+      "**/packages/@(vikrai|core/types|vikrai-js|vikrai-react)/src/**/*.@(ts|tsx|js|jsx)",
       {
         matchBase: true,
       }
     )
   )
 }
+

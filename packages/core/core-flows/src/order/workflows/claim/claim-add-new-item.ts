@@ -4,15 +4,15 @@ import {
   OrderDTO,
   OrderPreviewDTO,
   OrderWorkflow,
-} from "@medusajs/framework/types"
-import { ChangeActionType, OrderChangeStatus } from "@medusajs/framework/utils"
+} from "@vikrai/framework/types"
+import { ChangeActionType, OrderChangeStatus } from "@vikrai/framework/utils"
 import {
   WorkflowData,
   WorkflowResponse,
   createStep,
   createWorkflow,
   transform,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { useRemoteQueryStep } from "../../../common"
 import { previewOrderChangeStep } from "../../steps/preview-order-change"
 import {
@@ -48,8 +48,8 @@ export type OrderClaimAddNewItemValidationStepInput = {
  *
  * :::note
  *
- * You can retrieve an order, order claim, and order change details using [Query](https://docs.medusajs.com/learn/fundamentals/module-links/query),
- * or [useQueryGraphStep](https://docs.medusajs.com/resources/references/medusa-workflows/steps/useQueryGraphStep).
+ * You can retrieve an order, order claim, and order change details using [Query](https://docs.vikrai.com/learn/fundamentals/module-links/query),
+ * or [useQueryGraphStep](https://docs.vikrai.com/resources/references/vikrai-workflows/steps/useQueryGraphStep).
  *
  * :::
  *
@@ -85,7 +85,7 @@ export const orderClaimAddNewItemValidationStep = createStep(
 export const orderClaimAddNewItemWorkflowId = "claim-add-new-item"
 /**
  * This workflow adds outbound (or new) items to a claim. It's used by the
- * [Add Outbound Items Admin API Route](https://docs.medusajs.com/api/admin#claims_postclaimsidoutbounditems).
+ * [Add Outbound Items Admin API Route](https://docs.vikrai.com/api/admin#claims_postclaimsidoutbounditems).
  *
  * You can use this workflow within your customizations or your own custom workflows, allowing you to add outbound items to a claim
  * in your custom flows.
@@ -210,3 +210,4 @@ export const orderClaimAddNewItemWorkflow = createWorkflow(
     return new WorkflowResponse(previewOrderChangeStep(orderClaim.order_id))
   }
 )
+

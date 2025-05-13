@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react"
 import * as React from "react"
 
-import { Plus } from "@medusajs/icons"
+import { Plus } from "@vikrai/icons"
 import { IconButton } from "./icon-button"
 
 describe("IconButton", () => {
@@ -18,7 +18,7 @@ describe("IconButton", () => {
   it("renders a button as a link", () => {
     render(
       <IconButton asChild>
-        <a href="https://www.medusajs.com">
+        <a href="https://www.vikrai.com">
           <Plus />
         </a>
       </IconButton>
@@ -28,3 +28,4 @@ describe("IconButton", () => {
     expect(button).toBeInTheDocument()
   })
 })
+

@@ -1,7 +1,7 @@
-import { createWorkflow, WorkflowData } from "@medusajs/framework/workflows-sdk"
+import { createWorkflow, WorkflowData } from "@vikrai/framework/workflows-sdk"
 import { deleteFulfillmentSetsStep } from "../steps"
 import { removeRemoteLinkStep } from "../../common"
-import { Modules } from "@medusajs/framework/utils"
+import { Modules } from "@vikrai/framework/utils"
 
 /**
  * The data to delete one or more fulfillment sets.
@@ -17,7 +17,7 @@ export const deleteFulfillmentSetsWorkflowId =
   "delete-fulfillment-sets-workflow"
 /**
  * This workflow deletes one or more fulfillment sets. It's used by the
- * [Delete Fulfillment Sets Admin API Route](https://docs.medusajs.com/api/admin#fulfillment-sets_deletefulfillmentsetsid).
+ * [Delete Fulfillment Sets Admin API Route](https://docs.vikrai.com/api/admin#fulfillment-sets_deletefulfillmentsetsid).
  * 
  * You can use this workflow within your own customizations or custom workflows, allowing you to
  * delete fulfillment sets within your custom flows.
@@ -44,3 +44,4 @@ export const deleteFulfillmentSetsWorkflow = createWorkflow(
     })
   }
 )
+

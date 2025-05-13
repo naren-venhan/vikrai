@@ -1,4 +1,4 @@
-import { dynamicImport, readDirRecursive } from "@medusajs/utils"
+import { dynamicImport, readDirRecursive } from "@vikrai/utils"
 import { join, parse, sep } from "path"
 import { logger } from "../logger"
 import { HTTP_METHODS, type RouteDescriptor, type RouteVerb } from "./types"
@@ -230,3 +230,4 @@ export class RoutesLoader {
     )
   }
 }
+

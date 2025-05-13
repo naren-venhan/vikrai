@@ -1,17 +1,17 @@
-import { Link } from "@medusajs/framework/modules-sdk"
+import { Link } from "@vikrai/framework/modules-sdk"
 import {
   IPaymentModuleService,
   RemoteQueryFunction,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import {
   ContainerRegistrationKeys,
   LINKS,
-  MedusaError,
+  vikraiError,
   Modules,
   arrayDifference,
   promiseAll,
-} from "@medusajs/framework/utils"
-import { StepResponse, createStep } from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/utils"
+import { StepResponse, createStep } from "@vikrai/framework/workflows-sdk"
 
 /**
  * The data to set the payment providers available in regions.
@@ -59,8 +59,8 @@ async function validatePaymentProvidersExists(
   )
 
   if (missingProviders.length) {
-    throw new MedusaError(
-      MedusaError.Types.NOT_FOUND,
+    throw new vikraiError(
+      vikraiError.Types.NOT_FOUND,
       `Payment providers with ids ${missingProviders.join(
         ", "
       )} not found or not enabled`
@@ -234,3 +234,4 @@ export const setRegionsPaymentProvidersStep = createStep(
     await promiseAll(promises)
   }
 )
+

@@ -1,4 +1,4 @@
-import { HttpTypes } from "@medusajs/types"
+import { HttpTypes } from "@vikrai/types"
 import { JsonViewSection } from "../../../../../components/common/json-view-section"
 
 type WorkflowExecutionPayloadSectionProps = {
@@ -22,3 +22,4 @@ export const WorkflowExecutionPayloadSection = ({
 
   return <JsonViewSection data={payload as object} />
 }
+

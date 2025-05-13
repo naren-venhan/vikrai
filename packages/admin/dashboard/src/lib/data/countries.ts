@@ -1,4 +1,4 @@
-import type { HttpTypes } from "@medusajs/types"
+import type { HttpTypes } from "@vikrai/types"
 
 export interface StaticCountry
   extends Required<Omit<HttpTypes.AdminRegionCountry, "id">> {}
@@ -1765,3 +1765,4 @@ export const countries: StaticCountry[] = [
     display_name: "Åland Islands",
   },
 ]
+

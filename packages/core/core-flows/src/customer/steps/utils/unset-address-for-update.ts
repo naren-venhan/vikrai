@@ -2,8 +2,8 @@ import {
   FilterableCustomerAddressProps,
   ICustomerModuleService,
   UpdateCustomerAddressDTO,
-} from "@medusajs/framework/types"
-import { StepResponse } from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/types"
+import { StepResponse } from "@vikrai/framework/workflows-sdk"
 
 export const unsetForUpdate = async (
   data: {
@@ -41,3 +41,4 @@ export const unsetForUpdate = async (
     customerDefaultAddresses.map((address) => address.id)
   )
 }
+

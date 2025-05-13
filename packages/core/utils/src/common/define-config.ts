@@ -3,7 +3,7 @@ import {
   InputConfig,
   InputConfigModules,
   InternalModuleDeclaration,
-} from "@medusajs/types"
+} from "@vikrai/types"
 import {
   MODULE_PACKAGE_NAMES,
   Modules,
@@ -16,11 +16,11 @@ import { tryConvertToNumber } from "./try-convert-to-number"
 import { normalizeImportPathWithSource } from "./normalize-import-path-with-source"
 import { resolveExports } from "./resolve-exports"
 
-const MEDUSA_CLOUD_EXECUTION_CONTEXT = "medusa-cloud"
+const vikrai_CLOUD_EXECUTION_CONTEXT = "vikrai-cloud"
 const DEFAULT_SECRET = "supersecret"
 const DEFAULT_ADMIN_URL = "/"
 const DEFAULT_STORE_CORS = "http://localhost:8000"
-const DEFAULT_DATABASE_URL = "postgres://localhost/medusa-starter-default"
+const DEFAULT_DATABASE_URL = "postgres://localhost/vikrai-starter-default"
 const DEFAULT_ADMIN_CORS =
   "http://localhost:7000,http://localhost:7001,http://localhost:5173"
 
@@ -35,7 +35,7 @@ export const DEFAULT_STORE_RESTRICTED_FIELDS = [
 
 /**
  * The "defineConfig" helper can be used to define the configuration
- * of a medusa application.
+ * of a vikrai application.
  *
  * The helper under the hood merges your config with a set of defaults to
  * make an application work seamlessly, but still provide you the ability
@@ -43,7 +43,7 @@ export const DEFAULT_STORE_RESTRICTED_FIELDS = [
  */
 export function defineConfig(config: InputConfig = {}): ConfigModule {
   const options = {
-    isCloud: process.env.EXECUTION_CONTEXT === MEDUSA_CLOUD_EXECUTION_CONTEXT,
+    isCloud: process.env.EXECUTION_CONTEXT === vikrai_CLOUD_EXECUTION_CONTEXT,
   }
 
   const projectConfig = normalizeProjectConfig(config.projectConfig, options)
@@ -157,7 +157,7 @@ function resolveModules(
       options: {
         providers: [
           {
-            resolve: "@medusajs/medusa/auth-emailpass",
+            resolve: "@vikrai/vikrai/auth-emailpass",
             id: "emailpass",
           },
         ],
@@ -174,7 +174,7 @@ function resolveModules(
       options: {
         providers: [
           {
-            resolve: "@medusajs/medusa/fulfillment-manual",
+            resolve: "@vikrai/vikrai/fulfillment-manual",
             id: "manual",
           },
         ],
@@ -185,7 +185,7 @@ function resolveModules(
       options: {
         providers: [
           {
-            resolve: "@medusajs/medusa/notification-local",
+            resolve: "@vikrai/vikrai/notification-local",
             id: "local",
             options: {
               name: "Local Notification Provider",
@@ -209,7 +209,7 @@ function resolveModules(
       options: {
         providers: [
           {
-            resolve: "@medusajs/medusa/file-local",
+            resolve: "@vikrai/vikrai/file-local",
             id: "local",
           },
         ],
@@ -254,7 +254,7 @@ function resolveModules(
         providers: [
           {
             id: "s3",
-            resolve: "@medusajs/medusa/file-s3",
+            resolve: "@vikrai/vikrai/file-s3",
             options: {
               authentication_method: "s3-iam-role",
               file_url: process.env.S3_FILE_URL,
@@ -358,7 +358,7 @@ function normalizeProjectConfig(
               initialized: process.env.DYNAMO_DB_SESSIONS_CREATE_TABLE
                 ? false
                 : true,
-              table: process.env.DYNAMO_DB_SESSIONS_TABLE ?? "medusa-sessions",
+              table: process.env.DYNAMO_DB_SESSIONS_TABLE ?? "vikrai-sessions",
               readCapacityUnits: tryConvertToNumber(
                 process.env.DYNAMO_DB_SESSIONS_READ_UNITS,
                 5
@@ -385,8 +385,9 @@ function normalizeAdminConfig(
    * with the user defined config
    */
   return {
-    backendUrl: process.env.MEDUSA_BACKEND_URL || DEFAULT_ADMIN_URL,
+    backendUrl: process.env.vikrai_BACKEND_URL || DEFAULT_ADMIN_URL,
     path: "/app",
     ...adminConfig,
   }
 }
+

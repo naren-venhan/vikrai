@@ -1,4 +1,4 @@
-import { model } from "@medusajs/framework/utils"
+import { model } from "@vikrai/framework/utils"
 import Customer from "./customer"
 import { CustomerGroupCustomer } from "@models"
 
@@ -25,3 +25,4 @@ const CustomerGroup = model
   })
 
 export default CustomerGroup
+

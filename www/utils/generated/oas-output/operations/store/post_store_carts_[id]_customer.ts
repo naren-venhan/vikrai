@@ -5,7 +5,7 @@
  * x-sidebar-summary: Set Customer
  * description: Set the customer of the cart. This is useful when you create the cart for a guest customer, then they log in with their account.
  * externalDocs:
- *   url: https://docs.medusajs.com/resources/storefront-development/cart/update#set-carts-customer
+ *   url: https://docs.vikrai.com/resources/storefront-development/cart/update#set-carts-customer
  *   description: "Storefront guide: How to set the cart's customer."
  * x-authenticated: false
  * parameters:
@@ -17,12 +17,12 @@
  *       type: string
  *   - name: x-publishable-api-key
  *     in: header
- *     description: Publishable API Key created in the Medusa Admin.
+ *     description: Publishable API Key created in the vikrai Admin.
  *     required: true
  *     schema:
  *       type: string
  *       externalDocs:
- *         url: https://docs.medusajs.com/api/store#publishable-api-key
+ *         url: https://docs.vikrai.com/api/store#publishable-api-key
  *   - name: fields
  *     in: query
  *     description: |-
@@ -41,18 +41,18 @@
  *   - lang: JavaScript
  *     label: JS SDK
  *     source: |-
- *       import Medusa from "@medusajs/js-sdk"
+ *       import vikrai from "@vikrai/js-sdk"
  * 
- *       let MEDUSA_BACKEND_URL = "http://localhost:9000"
+ *       let vikrai_BACKEND_URL = "http://localhost:9000"
  * 
- *       if (process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL) {
- *         MEDUSA_BACKEND_URL = process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL
+ *       if (process.env.NEXT_PUBLIC_vikrai_BACKEND_URL) {
+ *         vikrai_BACKEND_URL = process.env.NEXT_PUBLIC_vikrai_BACKEND_URL
  *       }
  * 
- *       export const sdk = new Medusa({
- *         baseUrl: MEDUSA_BACKEND_URL,
+ *       export const sdk = new vikrai({
+ *         baseUrl: vikrai_BACKEND_URL,
  *         debug: process.env.NODE_ENV === "development",
- *         publishableKey: process.env.NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY,
+ *         publishableKey: process.env.NEXT_PUBLIC_vikrai_PUBLISHABLE_KEY,
  *       })
  * 
  *       sdk.store.cart.transferCart("cart_123")

@@ -1,178 +1,178 @@
 export const promotion = [
   {
     "title": "Manage Campaigns",
-    "path": "https://docs.medusajs.com/user-guide/promotions/campaigns"
+    "path": "https://docs.vikrai.com/user-guide/promotions/campaigns"
   },
   {
     "title": "Create a Promotion",
-    "path": "https://docs.medusajs.com/user-guide/promotions/create"
+    "path": "https://docs.vikrai.com/user-guide/promotions/create"
   },
   {
     "title": "Manage Promotions",
-    "path": "https://docs.medusajs.com/user-guide/promotions/manage"
+    "path": "https://docs.vikrai.com/user-guide/promotions/manage"
   },
   {
     "title": "Promotions Overview",
-    "path": "https://docs.medusajs.com/user-guide/promotions"
+    "path": "https://docs.vikrai.com/user-guide/promotions"
   },
   {
     "title": "Extend Promotion",
-    "path": "https://docs.medusajs.com/resources/commerce-modules/promotion/extend"
+    "path": "https://docs.vikrai.com/resources/commerce-modules/promotion/extend"
   },
   {
     "title": "Implement Loyalty Points",
-    "path": "https://docs.medusajs.com/resources/how-to-tutorials/tutorials/loyalty-points"
+    "path": "https://docs.vikrai.com/resources/how-to-tutorials/tutorials/loyalty-points"
   },
   {
     "title": "getActionsToComputeFromPromotionsStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/getActionsToComputeFromPromotionsStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/getActionsToComputeFromPromotionsStep"
   },
   {
     "title": "getPromotionCodesToApply",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/getPromotionCodesToApply"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/getPromotionCodesToApply"
   },
   {
     "title": "prepareAdjustmentsFromPromotionActionsStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/prepareAdjustmentsFromPromotionActionsStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/prepareAdjustmentsFromPromotionActionsStep"
   },
   {
     "title": "updateCartPromotionsStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/updateCartPromotionsStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/updateCartPromotionsStep"
   },
   {
     "title": "addShippingMethodToCartWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/addShippingMethodToCartWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/addShippingMethodToCartWorkflow"
   },
   {
     "title": "addToCartWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/addToCartWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/addToCartWorkflow"
   },
   {
     "title": "createCartWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createCartWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/createCartWorkflow"
   },
   {
     "title": "refreshCartItemsWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/refreshCartItemsWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/refreshCartItemsWorkflow"
   },
   {
     "title": "transferCartCustomerWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/transferCartCustomerWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/transferCartCustomerWorkflow"
   },
   {
     "title": "updateCartPromotionsWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateCartPromotionsWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/updateCartPromotionsWorkflow"
   },
   {
     "title": "updateCartWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateCartWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/updateCartWorkflow"
   },
   {
     "title": "updateLineItemInCartWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateLineItemInCartWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/updateLineItemInCartWorkflow"
   },
   {
     "title": "deleteLineItemsWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/deleteLineItemsWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/deleteLineItemsWorkflow"
   },
   {
     "title": "addCampaignPromotionsStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/addCampaignPromotionsStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/addCampaignPromotionsStep"
   },
   {
     "title": "addRulesToPromotionsStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/addRulesToPromotionsStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/addRulesToPromotionsStep"
   },
   {
     "title": "createCampaignsStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/createCampaignsStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/createCampaignsStep"
   },
   {
     "title": "createPromotionsStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/createPromotionsStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/createPromotionsStep"
   },
   {
     "title": "deleteCampaignsStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/deleteCampaignsStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/deleteCampaignsStep"
   },
   {
     "title": "deletePromotionsStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/deletePromotionsStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/deletePromotionsStep"
   },
   {
     "title": "removeCampaignPromotionsStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/removeCampaignPromotionsStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/removeCampaignPromotionsStep"
   },
   {
     "title": "removeRulesFromPromotionsStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/removeRulesFromPromotionsStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/removeRulesFromPromotionsStep"
   },
   {
     "title": "updateCampaignsStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/updateCampaignsStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/updateCampaignsStep"
   },
   {
     "title": "updatePromotionRulesStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/updatePromotionRulesStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/updatePromotionRulesStep"
   },
   {
     "title": "updatePromotionsStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/updatePromotionsStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/updatePromotionsStep"
   },
   {
     "title": "addOrRemoveCampaignPromotionsWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/addOrRemoveCampaignPromotionsWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/addOrRemoveCampaignPromotionsWorkflow"
   },
   {
     "title": "batchPromotionRulesWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/batchPromotionRulesWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/batchPromotionRulesWorkflow"
   },
   {
     "title": "createCampaignsWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createCampaignsWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/createCampaignsWorkflow"
   },
   {
     "title": "createPromotionRulesWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createPromotionRulesWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/createPromotionRulesWorkflow"
   },
   {
     "title": "createPromotionsWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createPromotionsWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/createPromotionsWorkflow"
   },
   {
     "title": "deleteCampaignsWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/deleteCampaignsWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/deleteCampaignsWorkflow"
   },
   {
     "title": "deletePromotionRulesWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/deletePromotionRulesWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/deletePromotionRulesWorkflow"
   },
   {
     "title": "deletePromotionsWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/deletePromotionsWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/deletePromotionsWorkflow"
   },
   {
     "title": "updateCampaignsWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateCampaignsWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/updateCampaignsWorkflow"
   },
   {
     "title": "updatePromotionRulesWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updatePromotionRulesWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/updatePromotionRulesWorkflow"
   },
   {
     "title": "updatePromotionsStatusWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updatePromotionsStatusWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/updatePromotionsStatusWorkflow"
   },
   {
     "title": "updatePromotionsWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updatePromotionsWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/updatePromotionsWorkflow"
   },
   {
     "title": "campaign",
-    "path": "https://docs.medusajs.com/resources/references/js-sdk/admin/campaign"
+    "path": "https://docs.vikrai.com/resources/references/js-sdk/admin/campaign"
   },
   {
     "title": "promotion",
-    "path": "https://docs.medusajs.com/resources/references/js-sdk/admin/promotion"
+    "path": "https://docs.vikrai.com/resources/references/js-sdk/admin/promotion"
   }
 ]

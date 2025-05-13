@@ -1,6 +1,7 @@
-import { MedusaInternalService } from "@medusajs/framework/utils"
+import { vikraiInternalService } from "@vikrai/framework/utils"
 import { IndexMetadata } from "@models"
 
-export class IndexMetadataService extends MedusaInternalService(
+export class IndexMetadataService extends vikraiInternalService(
   IndexMetadata
 ) {}
+

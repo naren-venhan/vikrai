@@ -1,9 +1,9 @@
 import {
   CreateOrderClaimDTO,
   IOrderModuleService,
-} from "@medusajs/framework/types"
-import { Modules } from "@medusajs/framework/utils"
-import { StepResponse, createStep } from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/types"
+import { Modules } from "@vikrai/framework/utils"
+import { StepResponse, createStep } from "@vikrai/framework/workflows-sdk"
 
 export const createOrderClaimsStepId = "create-order-claims"
 /**
@@ -30,3 +30,4 @@ export const createOrderClaimsStep = createStep(
     await service.deleteOrderClaims(claimIds)
   }
 )
+

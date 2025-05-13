@@ -1,4 +1,4 @@
-import { defineJoinerConfig, Modules } from "@medusajs/framework/utils"
+import { defineJoinerConfig, Modules } from "@vikrai/framework/utils"
 import {
   Payment,
   PaymentCollection,
@@ -36,3 +36,4 @@ export const joinerConfig = defineJoinerConfig(Modules.PAYMENT, {
     },
   ],
 })
+

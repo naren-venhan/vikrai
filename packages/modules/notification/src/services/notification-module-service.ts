@@ -7,17 +7,17 @@ import {
   Logger,
   ModulesSdkTypes,
   NotificationTypes,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import {
   EmitEvents,
   generateEntityId,
   InjectManager,
-  MedusaContext,
-  MedusaError,
-  MedusaService,
+  vikraiContext,
+  vikraiError,
+  vikraiService,
   NotificationStatus,
   promiseAll,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 import { Notification } from "@models"
 import { eventBuilders } from "@utils"
 import NotificationProviderService from "./notification-provider"
@@ -25,20 +25,20 @@ import NotificationProviderService from "./notification-provider"
 type InjectedDependencies = {
   logger?: Logger
   baseRepository: DAL.RepositoryService
-  notificationService: ModulesSdkTypes.IMedusaInternalService<
+  notificationService: ModulesSdkTypes.IvikraiInternalService<
     typeof Notification
   >
   notificationProviderService: NotificationProviderService
 }
 
 export default class NotificationModuleService
-  extends MedusaService<{
+  extends vikraiService<{
     Notification: { dto: NotificationTypes.NotificationDTO }
   }>({ Notification })
   implements INotificationModuleService
 {
   protected baseRepository_: DAL.RepositoryService
-  protected readonly notificationService_: ModulesSdkTypes.IMedusaInternalService<
+  protected readonly notificationService_: ModulesSdkTypes.IvikraiInternalService<
     typeof Notification
   >
   protected readonly notificationProviderService_: NotificationProviderService
@@ -76,7 +76,7 @@ export default class NotificationModuleService
     data:
       | NotificationTypes.CreateNotificationDTO
       | NotificationTypes.CreateNotificationDTO[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<
     NotificationTypes.NotificationDTO | NotificationTypes.NotificationDTO[]
   > {
@@ -102,7 +102,7 @@ export default class NotificationModuleService
   @InjectManager()
   protected async createNotifications_(
     data: NotificationTypes.CreateNotificationDTO[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<InferEntityType<typeof Notification>[]> {
     if (!data.length) {
       return []
@@ -198,7 +198,7 @@ export default class NotificationModuleService
               ? `Could not find a notification provider for channel: ${entry.data.channel} for notification id ${entry.data.id}`
               : `Notification provider ${provider.id} is not enabled. To enable it, configure it as a provider in the notification module options.`
 
-            throw new MedusaError(MedusaError.Types.NOT_FOUND, errorMessage)
+            throw new vikraiError(vikraiError.Types.NOT_FOUND, errorMessage)
           }
 
           const res = await this.notificationProviderService_
@@ -206,8 +206,8 @@ export default class NotificationModuleService
             .catch((e) => {
               entry.data.status = NotificationStatus.FAILURE
               notificationToUpdate.push(entry.data)
-              throw new MedusaError(
-                MedusaError.Types.UNEXPECTED_STATE,
+              throw new vikraiError(
+                vikraiError.Types.UNEXPECTED_STATE,
                 `Failed to send notification with id ${entry.data.id}:\n${e.message}`
               )
             })
@@ -239,3 +239,4 @@ export default class NotificationModuleService
     return createdNotifications
   }
 }
+

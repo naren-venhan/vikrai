@@ -5,8 +5,8 @@ import {
   OrderPreviewDTO,
   OrderWorkflow,
   ReturnDTO,
-} from "@medusajs/framework/types"
-import { ChangeActionType, OrderChangeStatus } from "@medusajs/framework/utils"
+} from "@vikrai/framework/types"
+import { ChangeActionType, OrderChangeStatus } from "@vikrai/framework/utils"
 import {
   WorkflowData,
   WorkflowResponse,
@@ -14,7 +14,7 @@ import {
   createWorkflow,
   transform,
   when,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { useRemoteQueryStep } from "../../../common"
 import { updateOrderClaimsStep } from "../../steps/claim/update-order-claims"
 import { previewOrderChangeStep } from "../../steps/preview-order-change"
@@ -60,8 +60,8 @@ export type OrderClaimRequestItemReturnValidationStepInput = {
  *
  * :::note
  *
- * You can retrieve an order, order claim, order return, and order change details using [Query](https://docs.medusajs.com/learn/fundamentals/module-links/query),
- * or [useQueryGraphStep](https://docs.medusajs.com/resources/references/medusa-workflows/steps/useQueryGraphStep).
+ * You can retrieve an order, order claim, order return, and order change details using [Query](https://docs.vikrai.com/learn/fundamentals/module-links/query),
+ * or [useQueryGraphStep](https://docs.vikrai.com/resources/references/vikrai-workflows/steps/useQueryGraphStep).
  *
  * :::
  *
@@ -112,7 +112,7 @@ export const orderClaimRequestItemReturnWorkflowId = "claim-request-item-return"
 /**
  * This workflow requests one or more items to be returned as part of a claim. The
  * items are added to the claim as inbound items. The workflow is used by the
- * [Add Inbound Items to Claim Admin API Route](https://docs.medusajs.com/api/admin#claims_postclaimsidinbounditems).
+ * [Add Inbound Items to Claim Admin API Route](https://docs.vikrai.com/api/admin#claims_postclaimsidinbounditems).
  *
  * You can use this workflow within your customizations or your own custom workflows, allowing you to request items to be returned
  * as part of a claim in your custom flows.
@@ -277,3 +277,4 @@ export const orderClaimRequestItemReturnWorkflow = createWorkflow(
     return new WorkflowResponse(previewOrderChangeStep(orderClaim.order_id))
   }
 )
+

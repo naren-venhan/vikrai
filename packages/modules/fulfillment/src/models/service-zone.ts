@@ -9,7 +9,7 @@ import {
   NullableModifier,
   PrimaryKeyModifier,
   TextProperty,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 
 import { FulfillmentSet } from "./fulfillment-set"
 import { GeoZone } from "./geo-zone"
@@ -58,3 +58,4 @@ export const ServiceZone = model
   DMLEntitySchemaBuilder<ServiceZoneSchema>,
   "ServiceZone"
 >
+

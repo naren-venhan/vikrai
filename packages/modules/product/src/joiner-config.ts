@@ -1,4 +1,4 @@
-import { defineJoinerConfig, Modules } from "@medusajs/framework/utils"
+import { defineJoinerConfig, Modules } from "@vikrai/framework/utils"
 import {
   Product,
   ProductCategory,
@@ -40,3 +40,4 @@ export const joinerConfig = defineJoinerConfig(Modules.PRODUCT, {
     },
   ],
 })
+

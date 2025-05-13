@@ -1,9 +1,9 @@
-import { LinkDefinition } from "@medusajs/framework/types"
+import { LinkDefinition } from "@vikrai/framework/types"
 import {
   WorkflowData,
   WorkflowResponse,
   createWorkflow,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { updateRemoteLinksStep } from "../steps/update-remote-links"
 
 export const updateLinksWorkflowId = "update-link"
@@ -13,14 +13,14 @@ export const updateLinksWorkflowId = "update-link"
  * You can use this workflow within your customizations or your own custom workflows, allowing you to
  * update links within your custom flows.
  * 
- * Learn more about links in [this documentation](https://docs.medusajs.com/learn/fundamentals/module-links/link).
+ * Learn more about links in [this documentation](https://docs.vikrai.com/learn/fundamentals/module-links/link).
  * 
  * @example
  * const { result } = await updateLinksWorkflow(container)
  * .run({
  *   input: [
  *     {
- *       // import { Modules } from "@medusajs/framework/utils"
+ *       // import { Modules } from "@vikrai/framework/utils"
  *       [Modules.PRODUCT]: {
  *         product_id: "prod_123",
  *       },
@@ -46,3 +46,4 @@ export const updateLinksWorkflow = createWorkflow(
     return new WorkflowResponse(updateRemoteLinksStep(input))
   }
 )
+

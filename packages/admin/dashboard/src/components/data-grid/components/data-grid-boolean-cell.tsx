@@ -1,4 +1,4 @@
-import { Checkbox } from "@medusajs/ui"
+import { Checkbox } from "@vikrai/ui"
 import { Controller, ControllerRenderProps } from "react-hook-form"
 
 import { useCombinedRefs } from "../../../hooks/use-combined-refs"
@@ -69,3 +69,4 @@ const Inner = ({
     />
   )
 }
+

@@ -1,11 +1,11 @@
-import { InlineTip } from "@medusajs/ui"
+import { InlineTip } from "@vikrai/ui"
 
 export default function InlineTipDemo() {
   return (
     <InlineTip
       label="Tip"
     >
-      Medusa UI is a package of React components to be used in Medusa Admin customizations.
+      vikrai UI is a package of React components to be used in vikrai Admin customizations.
     </InlineTip>
   )
 }

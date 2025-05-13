@@ -5,14 +5,14 @@ import {
   OrderDTO,
   OrderExchangeDTO,
   OrderPreviewDTO,
-} from "@medusajs/framework/types"
-import { ChangeActionType, OrderChangeStatus } from "@medusajs/framework/utils"
+} from "@vikrai/framework/types"
+import { ChangeActionType, OrderChangeStatus } from "@vikrai/framework/utils"
 import {
   WorkflowResponse,
   createStep,
   createWorkflow,
   transform,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { useRemoteQueryStep } from "../../../common"
 import { previewOrderChangeStep } from "../../steps"
 import { createOrderShippingMethods } from "../../steps/create-order-shipping-methods"
@@ -49,8 +49,8 @@ export type CreateExchangeShippingMethodValidationStepInput = {
  *
  * :::note
  *
- * You can retrieve an order, order exchange, and order change details using [Query](https://docs.medusajs.com/learn/fundamentals/module-links/query),
- * or [useQueryGraphStep](https://docs.medusajs.com/resources/references/medusa-workflows/steps/useQueryGraphStep).
+ * You can retrieve an order, order exchange, and order change details using [Query](https://docs.vikrai.com/learn/fundamentals/module-links/query),
+ * or [useQueryGraphStep](https://docs.vikrai.com/resources/references/vikrai-workflows/steps/useQueryGraphStep).
  *
  * :::
  *
@@ -112,8 +112,8 @@ export const createExchangeShippingMethodWorkflowId =
   "create-exchange-shipping-method"
 /**
  * This workflow creates an inbound (return) or outbound (delivery of new items) shipping method for an exchange.
- * It's used by the [Add Inbound Shipping Admin API Route](https://docs.medusajs.com/api/admin#exchanges_postexchangesidinboundshippingmethod)
- * and the [Add Outbound Shipping Admin API Route](https://docs.medusajs.com/api/admin#exchanges_postexchangesidoutboundshippingmethod).
+ * It's used by the [Add Inbound Shipping Admin API Route](https://docs.vikrai.com/api/admin#exchanges_postexchangesidinboundshippingmethod)
+ * and the [Add Outbound Shipping Admin API Route](https://docs.vikrai.com/api/admin#exchanges_postexchangesidoutboundshippingmethod).
  *
  * You can use this workflow within your customizations or your own custom workflows, allowing you to create a shipping method
  * for an exchange in your custom flow.
@@ -305,3 +305,4 @@ export const createExchangeShippingMethodWorkflow = createWorkflow(
     return new WorkflowResponse(previewOrderChangeStep(order.id))
   }
 )
+

@@ -1,5 +1,5 @@
-import { createStep } from "@medusajs/framework/workflows-sdk"
-import { PromotionDTO } from "@medusajs/types"
+import { createStep } from "@vikrai/framework/workflows-sdk"
+import { PromotionDTO } from "@vikrai/types"
 import {
   throwIfCodesAreInactive,
   throwIfCodesAreMissing,
@@ -27,8 +27,8 @@ export interface ValidatePromoCodesToAddStepInput {
  * 
  * :::note
  * 
- * You can retrieve a promotion's details using [Query](https://docs.medusajs.com/learn/fundamentals/module-links/query),
- * or [useQueryGraphStep](https://docs.medusajs.com/resources/references/medusa-workflows/steps/useQueryGraphStep).
+ * You can retrieve a promotion's details using [Query](https://docs.vikrai.com/learn/fundamentals/module-links/query),
+ * or [useQueryGraphStep](https://docs.vikrai.com/resources/references/vikrai-workflows/steps/useQueryGraphStep).
  * 
  * :::
  * 
@@ -53,3 +53,4 @@ export const validatePromoCodesToAddStep = createStep(
     throwIfCodesAreInactive(promo_codes, promotions)
   }
 )
+

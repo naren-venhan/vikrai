@@ -4,16 +4,16 @@ import {
   IProductModuleService,
   ProductDTO,
   ProductVariantDTO,
-} from "@medusajs/types"
-import { Modules, PriceListStatus, PriceListType } from "@medusajs/utils"
-import { medusaIntegrationTestRunner } from "@medusajs/test-utils"
+} from "@vikrai/types"
+import { Modules, PriceListStatus, PriceListType } from "@vikrai/utils"
+import { vikraiIntegrationTestRunner } from "@vikrai/test-utils"
 import { createAdminUser } from "../../../../helpers/create-admin-user"
 import { createVariantPriceSet } from "../../../helpers/create-variant-price-set"
 
 jest.setTimeout(50000)
 
-const env = { MEDUSA_FF_MEDUSA_V2: true }
-const adminHeaders = { headers: { "x-medusa-access-token": "test_token" } }
+const env = { vikrai_FF_vikrai_V2: true }
+const adminHeaders = { headers: { "x-vikrai-access-token": "test_token" } }
 
 async function createProductsWithVariants(
   productModule: IProductModuleService,
@@ -34,7 +34,7 @@ async function createProductsWithVariants(
   return [product, variants]
 }
 
-medusaIntegrationTestRunner({
+vikraiIntegrationTestRunner({
   env,
   testSuite: ({ dbConnection, getContainer, api }) => {
     describe("Admin: Products API", () => {
@@ -196,3 +196,4 @@ medusaIntegrationTestRunner({
     })
   },
 })
+

@@ -4,7 +4,7 @@ import {
   ModuleJoinerConfig,
   ModuleServiceInitializeOptions,
   PlannerActionLinkDescriptor,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 
 import {
   arrayDifference,
@@ -12,7 +12,7 @@ import {
   ModulesSdkUtils,
   normalizeMigrationSQL,
   promiseAll,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 import { EntitySchema, MikroORM } from "@mikro-orm/core"
 import { DatabaseSchema, PostgreSqlDriver } from "@mikro-orm/postgresql"
 import { generateEntity } from "../utils"
@@ -509,3 +509,4 @@ export class MigrationsExecutionPlanner implements ILinkMigrationsPlanner {
     ).finally(() => orm.close(true))
   }
 }
+

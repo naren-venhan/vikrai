@@ -1,17 +1,17 @@
-import { isObject, isPresent } from "@medusajs/utils"
+import { isObject, isPresent } from "@vikrai/utils"
 import type {
-  MedusaNextFunction,
-  MedusaRequest,
-  MedusaResponse,
+  vikraiNextFunction,
+  vikraiRequest,
+  vikraiResponse,
 } from "../types"
 
 export function applyDefaultFilters<TFilter extends object>(
   filtersToApply: TFilter
 ) {
   return async function defaultFiltersMiddleware(
-    req: MedusaRequest,
-    _: MedusaResponse,
-    next: MedusaNextFunction
+    req: vikraiRequest,
+    _: vikraiResponse,
+    next: vikraiNextFunction
   ) {
     for (const [filter, filterValue] of Object.entries(filtersToApply)) {
       let valueToApply = filterValue
@@ -40,3 +40,4 @@ export function applyDefaultFilters<TFilter extends object>(
     return next()
   }
 }
+

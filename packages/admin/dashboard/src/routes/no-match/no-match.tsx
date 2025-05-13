@@ -1,5 +1,5 @@
-import { ExclamationCircle } from "@medusajs/icons"
-import { Button, Text } from "@medusajs/ui"
+import { ExclamationCircle } from "@vikrai/icons"
+import { Button, Text } from "@vikrai/ui"
 import { useTranslation } from "react-i18next"
 import { Link } from "react-router-dom"
 
@@ -34,3 +34,4 @@ export const NoMatch = () => {
     </div>
   )
 }
+

@@ -1,4 +1,4 @@
-import { HttpTypes } from "@medusajs/types"
+import { HttpTypes } from "@vikrai/types"
 import { TransactionState, TransactionStepState } from "./types"
 
 export const STEP_IN_PROGRESS_STATES: HttpTypes.TransactionStepState[] = [
@@ -36,3 +36,4 @@ export const TRANSACTION_IN_PROGRESS_STATES: HttpTypes.TransactionState[] = [
   TransactionState.WAITING_TO_COMPENSATE,
   TransactionState.COMPENSATING,
 ]
+

@@ -1,9 +1,9 @@
 import {
   defineJoinerConfig,
-  MedusaService,
+  vikraiService,
   model,
   Module,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 
 export const User = model.define("user", {
   id: model.id().primaryKey(),
@@ -14,7 +14,7 @@ export const userJoinerConfig = defineJoinerConfig("user", {
   models: [User],
 })
 
-export class UserService extends MedusaService({ User }) {
+export class UserService extends vikraiService({ User }) {
   constructor() {
     super(...arguments)
   }
@@ -33,7 +33,7 @@ export const carJoinerConfig = defineJoinerConfig("car", {
   models: [Car],
 })
 
-export class CarService extends MedusaService({ Car }) {
+export class CarService extends vikraiService({ Car }) {
   constructor() {
     super(...arguments)
   }
@@ -58,7 +58,7 @@ export const longNameJoinerConfig = defineJoinerConfig(
   }
 )
 
-export class CustomModuleImplementationContainingAReallyBigNameThatExceedsPosgresLimitToNameATableService extends MedusaService(
+export class CustomModuleImplementationContainingAReallyBigNameThatExceedsPosgresLimitToNameATableService extends vikraiService(
   {
     CustomModuleImplementationContainingAReallyBigNameThatExceedsPosgresLimitToNameATable,
   }
@@ -76,3 +76,4 @@ export const CustomModuleImplementationContainingAReallyBigNameThatExceedsPosgre
         CustomModuleImplementationContainingAReallyBigNameThatExceedsPosgresLimitToNameATableService,
     }
   )
+

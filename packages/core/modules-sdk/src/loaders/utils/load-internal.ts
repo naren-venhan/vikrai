@@ -4,28 +4,28 @@ import {
   InternalModuleDeclaration,
   LoaderOptions,
   Logger,
-  MedusaContainer,
+  vikraiContainer,
   ModuleExports,
   ModuleLoaderFunction,
   ModuleProvider,
   ModuleProviderExports,
   ModuleProviderLoaderFunction,
   ModuleResolution,
-} from "@medusajs/types"
+} from "@vikrai/types"
 import {
   ContainerRegistrationKeys,
-  createMedusaContainer,
+  createvikraiContainer,
   defineJoinerConfig,
   DmlEntity,
   dynamicImport,
   getProviderRegistrationKey,
   isString,
-  MedusaModuleProviderType,
-  MedusaModuleType,
+  vikraiModuleProviderType,
+  vikraiModuleType,
   Modules,
   ModulesSdkUtils,
   toMikroOrmEntities,
-} from "@medusajs/utils"
+} from "@vikrai/utils"
 import { asFunction, asValue } from "awilix"
 import { statSync } from "fs"
 import { readdir } from "fs/promises"
@@ -103,7 +103,7 @@ export async function resolveModuleExports({
 
 async function loadInternalProvider(
   args: {
-    container: MedusaContainer
+    container: vikraiContainer
     resolution: ModuleResolution
     logger: Logger
     migrationOnly?: boolean
@@ -162,7 +162,7 @@ async function loadInternalProvider(
 }
 
 export async function loadInternalModule(args: {
-  container: MedusaContainer
+  container: vikraiContainer
   resolution: ModuleResolution
   logger: Logger
   migrationOnly?: boolean
@@ -216,7 +216,7 @@ export async function loadInternalModule(args: {
     }
   }
 
-  const localContainer = createMedusaContainer()
+  const localContainer = createvikraiContainer()
 
   const dependencies = resolution?.dependencies ?? []
 
@@ -337,7 +337,7 @@ export async function loadInternalModule(args: {
         )
       }
 
-      modProvider_.__type = MedusaModuleProviderType
+      modProvider_.__type = vikraiModuleProviderType
 
       const registrationKey = getProviderRegistrationKey({
         providerId,
@@ -346,7 +346,7 @@ export async function loadInternalModule(args: {
 
       container.register({
         [registrationKey]: asFunction(() => {
-          ;(moduleProviderService as any).__type = MedusaModuleType
+          ;(moduleProviderService as any).__type = vikraiModuleType
           return new moduleProviderService(
             localContainer.cradle,
             resolution.options,
@@ -359,7 +359,7 @@ export async function loadInternalModule(args: {
     const moduleService = moduleResources.moduleService ?? loadedModule_.service
     container.register({
       [keyName]: asFunction((cradle) => {
-        ;(moduleService as any).__type = MedusaModuleType
+        ;(moduleService as any).__type = vikraiModuleType
         return new moduleService(
           localContainer.cradle,
           resolution.options,
@@ -767,3 +767,4 @@ function generateJoinerConfigIfNecessary({
     })
   }
 }
+

@@ -1,5 +1,5 @@
-import { CreateCampaignDTO } from "@medusajs/framework/types"
-import { toMikroORMEntity } from "@medusajs/framework/utils"
+import { CreateCampaignDTO } from "@vikrai/framework/types"
+import { toMikroORMEntity } from "@vikrai/framework/utils"
 import { SqlEntityManager } from "@mikro-orm/postgresql"
 import { Campaign } from "@models"
 import { defaultCampaignsData } from "./data"
@@ -42,3 +42,4 @@ export async function createCampaigns(
 
   return campaigns
 }
+

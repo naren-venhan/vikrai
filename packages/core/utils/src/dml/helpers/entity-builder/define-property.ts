@@ -3,7 +3,7 @@ import {
   KnownDataTypes,
   PropertyMetadata,
   PropertyType,
-} from "@medusajs/types"
+} from "@vikrai/types"
 import {
   ArrayType,
   BeforeCreate,
@@ -343,3 +343,4 @@ export function defineProperty(
     ...(isDefined(field.defaultValue) && { default: field.defaultValue }),
   })(MikroORMEntity.prototype, field.fieldName)
 }
+

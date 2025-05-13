@@ -1,5 +1,5 @@
-import { LinkWorkflowInput } from "@medusajs/framework/types"
-import { WorkflowData, createWorkflow } from "@medusajs/framework/workflows-sdk"
+import { LinkWorkflowInput } from "@vikrai/framework/types"
+import { WorkflowData, createWorkflow } from "@vikrai/framework/workflows-sdk"
 import {
   linkSalesChannelsToApiKeyStep,
   validateSalesChannelsExistStep,
@@ -18,7 +18,7 @@ export const linkSalesChannelsToApiKeyWorkflowId =
   "link-sales-channels-to-api-key"
 /**
  * This workflow manages the sales channels of a publishable API key. It's used by the
- * [Manage Sales Channels API Route](https://docs.medusajs.com/api/admin#api-keys_postapikeysidsaleschannels).
+ * [Manage Sales Channels API Route](https://docs.vikrai.com/api/admin#api-keys_postapikeysidsaleschannels).
  * 
  * You can use this workflow within your customizations or your own custom workflows, allowing you to
  * manage the sales channels of a publishable API key within your custom flows.
@@ -46,3 +46,4 @@ export const linkSalesChannelsToApiKeyWorkflow = createWorkflow(
     linkSalesChannelsToApiKeyStep(input)
   }
 )
+

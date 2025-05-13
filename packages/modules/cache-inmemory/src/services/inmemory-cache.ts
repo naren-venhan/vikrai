@@ -1,4 +1,4 @@
-import { ICacheService } from "@medusajs/framework/types"
+import { ICacheService } from "@vikrai/framework/types"
 import { CacheRecord, InMemoryCacheModuleOptions } from "../types"
 
 const DEFAULT_TTL = 30 // seconds
@@ -104,3 +104,4 @@ class InMemoryCacheService implements ICacheService {
 }
 
 export default InMemoryCacheService
+

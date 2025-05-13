@@ -19,11 +19,11 @@ const cacheOptions: FormattingOptionsType = {
     startSections: [
       `## Resolve Cache Module's Service
 
-In your workflow's step, you can resolve the Cache Module's service from the Medusa container:
+In your workflow's step, you can resolve the Cache Module's service from the vikrai container:
 
 \`\`\`ts
-import { Modules } from "@medusajs/framework/utils"
-import { createStep } from "@medusajs/framework/workflows-sdk"
+import { Modules } from "@vikrai/framework/utils"
+import { createStep } from "@vikrai/framework/workflows-sdk"
 
 const step1 = createStep(
   "step-1",
@@ -37,7 +37,7 @@ const step1 = createStep(
 )
 \`\`\`
 
-This will resolve the service of the configured Cache Module, which is the [In-Memory Cache Module](https://docs.medusajs.com/resources/infrastructure-modules/cache/in-memory) by default.
+This will resolve the service of the configured Cache Module, which is the [In-Memory Cache Module](https://docs.vikrai.com/resources/infrastructure-modules/cache/in-memory) by default.
 
 You can then use the Cache Module's service's methods in the step. The rest of this guide details these methods.
 
@@ -48,3 +48,4 @@ You can then use the Cache Module's service's methods in the step. The rest of t
 }
 
 export default cacheOptions
+

@@ -1,7 +1,7 @@
 import {
   DateComparisonOperator,
   NumericalComparisonOperator,
-} from "@medusajs/types"
+} from "@vikrai/types"
 import { useQueryParams } from "../../../../../hooks/use-query-params"
 
 export type ReturnItemTableQuery = {
@@ -59,3 +59,4 @@ export const useClaimItemTableQuery = ({
 
   return { searchParams, raw }
 }
+

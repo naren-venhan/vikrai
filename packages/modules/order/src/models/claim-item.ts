@@ -1,4 +1,4 @@
-import { ClaimReason, model } from "@medusajs/framework/utils"
+import { ClaimReason, model } from "@vikrai/framework/utils"
 import { OrderClaim } from "./claim"
 import { OrderClaimItemImage } from "./claim-item-image"
 import { OrderLineItem } from "./line-item"
@@ -49,3 +49,4 @@ const _OrderClaimItem = model
   ])
 
 export const OrderClaimItem = _OrderClaimItem
+

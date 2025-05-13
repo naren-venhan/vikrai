@@ -1,4 +1,4 @@
-import { Label, Switch } from "@medusajs/ui"
+import { Label, Switch } from "@vikrai/ui"
 
 export default function SwitchCheckedDisabled() {
   return (
@@ -14,3 +14,4 @@ export default function SwitchCheckedDisabled() {
     </div>
   )
 }
+

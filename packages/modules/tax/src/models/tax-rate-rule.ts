@@ -1,4 +1,4 @@
-import { model } from "@medusajs/framework/utils"
+import { model } from "@vikrai/framework/utils"
 import TaxRate from "./tax-rate"
 
 const TaxRateRule = model
@@ -27,3 +27,4 @@ const TaxRateRule = model
   ])
 
 export default TaxRateRule
+

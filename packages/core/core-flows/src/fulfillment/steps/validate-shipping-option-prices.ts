@@ -1,10 +1,10 @@
-import { FulfillmentWorkflow } from "@medusajs/framework/types"
+import { FulfillmentWorkflow } from "@vikrai/framework/types"
 import {
-  MedusaError,
+  vikraiError,
   Modules,
   ShippingOptionPriceType,
-} from "@medusajs/framework/utils"
-import { StepResponse, createStep } from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/utils"
+import { StepResponse, createStep } from "@vikrai/framework/workflows-sdk"
 
 /**
  * The data to validate shipping option prices.
@@ -100,8 +100,8 @@ export const validateShippingOptionPricesStep = createStep(
       )
 
     if (validation.some((v) => !v)) {
-      throw new MedusaError(
-        MedusaError.Types.INVALID_DATA,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_DATA,
         `Cannot calcuate pricing for: [${calculatedOptions
           .filter((o, i) => !validation[i])
           .map((o) => o.name)
@@ -130,8 +130,8 @@ export const validateShippingOptionPricesStep = createStep(
       const missingRegions = Array.from(regionIdSet).filter(
         (id) => !regionList.some((region) => region.id === id)
       )
-      throw new MedusaError(
-        MedusaError.Types.INVALID_DATA,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_DATA,
         `Cannot create prices for non-existent regions. Region with ids [${missingRegions.join(
           ", "
         )}] were not found.`
@@ -141,3 +141,4 @@ export const validateShippingOptionPricesStep = createStep(
     return new StepResponse(void 0)
   }
 )
+

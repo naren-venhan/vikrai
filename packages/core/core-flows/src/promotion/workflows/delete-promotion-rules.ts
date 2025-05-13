@@ -1,5 +1,5 @@
-import { RemovePromotionRulesWorkflowDTO } from "@medusajs/framework/types"
-import { WorkflowData, createWorkflow } from "@medusajs/framework/workflows-sdk"
+import { RemovePromotionRulesWorkflowDTO } from "@vikrai/framework/types"
+import { WorkflowData, createWorkflow } from "@vikrai/framework/workflows-sdk"
 import { removeRulesFromPromotionsStep } from "../steps"
 
 export const deletePromotionRulesWorkflowId = "delete-promotion-rules-workflow"
@@ -34,3 +34,4 @@ export const deletePromotionRulesWorkflow = createWorkflow(
     return removeRulesFromPromotionsStep(input)
   }
 )
+

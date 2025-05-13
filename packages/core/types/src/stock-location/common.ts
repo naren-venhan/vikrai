@@ -28,7 +28,7 @@ import { FulfillmentSetDTO } from "../fulfillment"
  *   company:
  *     type: string
  *     description: Stock location company' name
- *     example: Medusa
+ *     example: vikrai
  *   city:
  *     type: string
  *     description: Stock location address' city
@@ -475,3 +475,4 @@ export interface FilterableStockLocationAddressProps
    */
   id?: string | string[]
 }
+

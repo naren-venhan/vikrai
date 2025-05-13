@@ -1,4 +1,4 @@
-import { AdjustmentLineDTO, BigNumberInput, TaxLineDTO } from "@medusajs/types"
+import { AdjustmentLineDTO, BigNumberInput, TaxLineDTO } from "@vikrai/types"
 import { isDefined, pickValueFromObject } from "../../common"
 import { calculateAdjustmentTotal } from "../adjustment"
 import { BigNumber } from "../big-number"
@@ -198,3 +198,4 @@ function getLineItemTotals(
 
   return totals
 }
+

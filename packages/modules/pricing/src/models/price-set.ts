@@ -1,4 +1,4 @@
-import { model } from "@medusajs/framework/utils"
+import { model } from "@vikrai/framework/utils"
 import Price from "./price"
 
 const PriceSet = model
@@ -13,3 +13,4 @@ const PriceSet = model
   })
 
 export default PriceSet
+

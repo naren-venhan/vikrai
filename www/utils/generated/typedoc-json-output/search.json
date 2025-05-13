@@ -37,7 +37,7 @@
 					},
 					{
 						"kind": "code",
-						"text": "`@medusajs/utils`"
+						"text": "`@vikrai/utils`"
 					},
 					{
 						"kind": "text",
@@ -77,11 +77,11 @@
 					},
 					{
 						"kind": "code",
-						"text": "```ts title=\"src/services/my-search.ts\"\nimport { AbstractSearchService } from \"@medusajs/utils\"\n\nclass MySearchService extends AbstractSearchService {\n  isDefault = false\n\n  createIndex(indexName: string, options: Record<string, any>) {\n    throw new Error(\"Method not implemented.\")\n  }\n  getIndex(indexName: string) {\n    throw new Error(\"Method not implemented.\")\n  }\n  addDocuments(\n    indexName: string,\n    documents: Record<string, any>[],\n    type: string\n  ) {\n    throw new Error(\"Method not implemented.\")\n  }\n  replaceDocuments(\n    indexName: string,\n    documents: Record<string, any>[],\n    type: string\n  ) {\n    throw new Error(\"Method not implemented.\")\n  }\n  deleteDocument(\n    indexName: string,\n    document_id: string | number\n  ) {\n    throw new Error(\"Method not implemented.\")\n  }\n  deleteAllDocuments(indexName: string) {\n    throw new Error(\"Method not implemented.\")\n  }\n  search(\n    indexName: string,\n    query: string,\n    options: Record<string, any>\n  ) {\n    return {\n      message: \"test\",\n    }\n  }\n  updateSettings(\n    indexName: string,\n    settings: Record<string, any>\n  ) {\n    throw new Error(\"Method not implemented.\")\n  }\n\n}\n\nexport default MySearchService\n```"
+						"text": "```ts title=\"src/services/my-search.ts\"\nimport { AbstractSearchService } from \"@vikrai/utils\"\n\nclass MySearchService extends AbstractSearchService {\n  isDefault = false\n\n  createIndex(indexName: string, options: Record<string, any>) {\n    throw new Error(\"Method not implemented.\")\n  }\n  getIndex(indexName: string) {\n    throw new Error(\"Method not implemented.\")\n  }\n  addDocuments(\n    indexName: string,\n    documents: Record<string, any>[],\n    type: string\n  ) {\n    throw new Error(\"Method not implemented.\")\n  }\n  replaceDocuments(\n    indexName: string,\n    documents: Record<string, any>[],\n    type: string\n  ) {\n    throw new Error(\"Method not implemented.\")\n  }\n  deleteDocument(\n    indexName: string,\n    document_id: string | number\n  ) {\n    throw new Error(\"Method not implemented.\")\n  }\n  deleteAllDocuments(indexName: string) {\n    throw new Error(\"Method not implemented.\")\n  }\n  search(\n    indexName: string,\n    query: string,\n    options: Record<string, any>\n  ) {\n    return {\n      message: \"test\",\n    }\n  }\n  updateSettings(\n    indexName: string,\n    settings: Record<string, any>\n  ) {\n    throw new Error(\"Method not implemented.\")\n  }\n\n}\n\nexport default MySearchService\n```"
 					},
 					{
 						"kind": "text",
-						"text": "\n\n---\n\n## Notes About Class Methods\n\nAlthough there are several helper methods in this class, the main methods used by the Medusa backend are "
+						"text": "\n\n---\n\n## Notes About Class Methods\n\nAlthough there are several helper methods in this class, the main methods used by the vikrai backend are "
 					},
 					{
 						"kind": "code",
@@ -123,7 +123,7 @@
 						"summary": [
 							{
 								"kind": "text",
-								"text": "This property is used to pinpoint the default search service defined in the Medusa core. For custom search services, the "
+								"text": "This property is used to pinpoint the default search service defined in the vikrai core. For custom search services, the "
 							},
 							{
 								"kind": "code",
@@ -148,7 +148,7 @@
 							"fileName": "abstract-service.ts",
 							"line": 97,
 							"character": 20,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/search/abstract-service.ts#L97"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/search/abstract-service.ts#L97"
 						}
 					],
 					"type": {
@@ -178,7 +178,7 @@
 							"fileName": "abstract-service.ts",
 							"line": 101,
 							"character": 21,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/search/abstract-service.ts#L101"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/search/abstract-service.ts#L101"
 						}
 					],
 					"type": {
@@ -214,7 +214,7 @@
 							"fileName": "abstract-service.ts",
 							"line": 147,
 							"character": 2,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/search/abstract-service.ts#L147"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/search/abstract-service.ts#L147"
 						}
 					],
 					"signatures": [
@@ -236,7 +236,7 @@
 									},
 									{
 										"kind": "text",
-										"text": " of your search service to access the different services in Medusa through dependency injection.\n\nYou can also use the constructor to initialize your integration with the third-party provider. For example, if you use a client to connect to the third-party provider’s APIs,\nyou can initialize it in the constructor and use it in other methods in the service.\n\nAdditionally, if you’re creating your search service as an external plugin to be installed on any Medusa backend and you want to access the options added for the plugin,\nyou can access them in the constructor. The default constructor already sets the value of the class proeprty "
+										"text": " of your search service to access the different services in vikrai through dependency injection.\n\nYou can also use the constructor to initialize your integration with the third-party provider. For example, if you use a client to connect to the third-party provider’s APIs,\nyou can initialize it in the constructor and use it in other methods in the service.\n\nAdditionally, if you’re creating your search service as an external plugin to be installed on any vikrai backend and you want to access the options added for the plugin,\nyou can access them in the constructor. The default constructor already sets the value of the class proeprty "
 									},
 									{
 										"kind": "code",
@@ -253,7 +253,7 @@
 										"content": [
 											{
 												"kind": "code",
-												"text": "```ts\n// ...\nimport { ProductService } from \"@medusajs/medusa\"\n\ntype InjectedDependencies = {\n  productService: ProductService\n}\n\nclass MySearchService extends AbstractSearchService {\n  // ...\n  protected readonly productService_: ProductService\n\n  constructor({ productService }: InjectedDependencies) {\n    // @ts-expect-error prefer-rest-params\n    super(...arguments)\n    this.productService_ = productService\n\n    // you can also initialize a client that\n    // communicates with a third-party service.\n    this.client = new Client(options)\n  }\n\n  // ...\n}\n```"
+												"text": "```ts\n// ...\nimport { ProductService } from \"@vikrai/vikrai\"\n\ntype InjectedDependencies = {\n  productService: ProductService\n}\n\nclass MySearchService extends AbstractSearchService {\n  // ...\n  protected readonly productService_: ProductService\n\n  constructor({ productService }: InjectedDependencies) {\n    // @ts-expect-error prefer-rest-params\n    super(...arguments)\n    this.productService_ = productService\n\n    // you can also initialize a client that\n    // communicates with a third-party service.\n    this.client = new Client(options)\n  }\n\n  // ...\n}\n```"
 											}
 										]
 									}
@@ -264,7 +264,7 @@
 									"fileName": "abstract-service.ts",
 									"line": 147,
 									"character": 2,
-									"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/search/abstract-service.ts#L147"
+									"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/search/abstract-service.ts#L147"
 								}
 							],
 							"parameters": [
@@ -278,7 +278,7 @@
 										"summary": [
 											{
 												"kind": "text",
-												"text": "An container cradle that allows you to access other resources, such as services, in your Medusa backend."
+												"text": "An container cradle that allows you to access other resources, such as services, in your vikrai backend."
 											}
 										]
 									},
@@ -311,7 +311,7 @@
 								"type": "reference",
 								"target": 44109,
 								"name": "AbstractSearchService",
-								"package": "@medusajs/utils"
+								"package": "@vikrai/utils"
 							}
 						}
 					]
@@ -329,7 +329,7 @@
 							"fileName": "abstract-service.ts",
 							"line": 188,
 							"character": 11,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/search/abstract-service.ts#L188"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/search/abstract-service.ts#L188"
 						}
 					],
 					"signatures": [
@@ -377,7 +377,7 @@
 											},
 											{
 												"kind": "text",
-												"text": "\n\nAnother example of how the [MeiliSearch plugin](https://docs.medusajs.com/plugins/search/meilisearch) uses the\n"
+												"text": "\n\nAnother example of how the [MeiliSearch plugin](https://docs.vikrai.com/plugins/search/meilisearch) uses the\n"
 											},
 											{
 												"kind": "code",
@@ -400,7 +400,7 @@
 									"fileName": "abstract-service.ts",
 									"line": 188,
 									"character": 11,
-									"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/search/abstract-service.ts#L188"
+									"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/search/abstract-service.ts#L188"
 								}
 							],
 							"parameters": [
@@ -473,7 +473,7 @@
 							"fileName": "abstract-service.ts",
 							"line": 205,
 							"character": 11,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/search/abstract-service.ts#L205"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/search/abstract-service.ts#L205"
 						}
 					],
 					"signatures": [
@@ -516,7 +516,7 @@
 									"fileName": "abstract-service.ts",
 									"line": 205,
 									"character": 11,
-									"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/search/abstract-service.ts#L205"
+									"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/search/abstract-service.ts#L205"
 								}
 							],
 							"parameters": [
@@ -570,7 +570,7 @@
 							"fileName": "abstract-service.ts",
 							"line": 232,
 							"character": 11,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/search/abstract-service.ts#L232"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/search/abstract-service.ts#L232"
 						}
 					],
 					"signatures": [
@@ -584,7 +584,7 @@
 								"summary": [
 									{
 										"kind": "text",
-										"text": "This method is used to add a document to an index in the search engine.\n\nWhen the Medusa backend loads, it triggers indexing for all products available in the Medusa backend, which uses this method to add or update documents.\nIt’s also used whenever a new product is added or a product is updated."
+										"text": "This method is used to add a document to an index in the search engine.\n\nWhen the vikrai backend loads, it triggers indexing for all products available in the vikrai backend, which uses this method to add or update documents.\nIt’s also used whenever a new product is added or a product is updated."
 									}
 								],
 								"blockTags": [
@@ -613,7 +613,7 @@
 									"fileName": "abstract-service.ts",
 									"line": 232,
 									"character": 11,
-									"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/search/abstract-service.ts#L232"
+									"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/search/abstract-service.ts#L232"
 								}
 							],
 							"parameters": [
@@ -722,7 +722,7 @@
 							"fileName": "abstract-service.ts",
 							"line": 263,
 							"character": 11,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/search/abstract-service.ts#L263"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/search/abstract-service.ts#L263"
 						}
 					],
 					"signatures": [
@@ -765,7 +765,7 @@
 									"fileName": "abstract-service.ts",
 									"line": 263,
 									"character": 11,
-									"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/search/abstract-service.ts#L263"
+									"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/search/abstract-service.ts#L263"
 								}
 							],
 							"parameters": [
@@ -874,7 +874,7 @@
 							"fileName": "abstract-service.ts",
 							"line": 292,
 							"character": 11,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/search/abstract-service.ts#L292"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/search/abstract-service.ts#L292"
 						}
 					],
 					"signatures": [
@@ -888,7 +888,7 @@
 								"summary": [
 									{
 										"kind": "text",
-										"text": "This method is used to delete a document from an index.\n\nWhen a product is deleted in the Medusa backend, this method is used to delete the product from the search engine’s index."
+										"text": "This method is used to delete a document from an index.\n\nWhen a product is deleted in the vikrai backend, this method is used to delete the product from the search engine’s index."
 									}
 								],
 								"blockTags": [
@@ -917,7 +917,7 @@
 									"fileName": "abstract-service.ts",
 									"line": 292,
 									"character": 11,
-									"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/search/abstract-service.ts#L292"
+									"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/search/abstract-service.ts#L292"
 								}
 							],
 							"parameters": [
@@ -999,7 +999,7 @@
 							"fileName": "abstract-service.ts",
 							"line": 313,
 							"character": 11,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/search/abstract-service.ts#L313"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/search/abstract-service.ts#L313"
 						}
 					],
 					"signatures": [
@@ -1042,7 +1042,7 @@
 									"fileName": "abstract-service.ts",
 									"line": 313,
 									"character": 11,
-									"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/search/abstract-service.ts#L313"
+									"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/search/abstract-service.ts#L313"
 								}
 							],
 							"parameters": [
@@ -1096,7 +1096,7 @@
 							"fileName": "abstract-service.ts",
 							"line": 350,
 							"character": 11,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/search/abstract-service.ts#L350"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/search/abstract-service.ts#L350"
 						}
 					],
 					"signatures": [
@@ -1110,7 +1110,7 @@
 								"summary": [
 									{
 										"kind": "text",
-										"text": "This method is used to search through an index by a query.\n\nIn the Medusa backend, this method is used within the [Search Products API Route](https://docs.medusajs.com/api/store#products_postproductssearch)\nto retrieve the search results. The API route's response type is an array of items, though the item's format is not defined as it depends on the\ndata returned by this method."
+										"text": "This method is used to search through an index by a query.\n\nIn the vikrai backend, this method is used within the [Search Products API Route](https://docs.vikrai.com/api/store#products_postproductssearch)\nto retrieve the search results. The API route's response type is an array of items, though the item's format is not defined as it depends on the\ndata returned by this method."
 									}
 								],
 								"blockTags": [
@@ -1139,7 +1139,7 @@
 									"fileName": "abstract-service.ts",
 									"line": 350,
 									"character": 11,
-									"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/search/abstract-service.ts#L350"
+									"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/search/abstract-service.ts#L350"
 								}
 							],
 							"parameters": [
@@ -1288,7 +1288,7 @@
 							"fileName": "abstract-service.ts",
 							"line": 379,
 							"character": 11,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/search/abstract-service.ts#L379"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/search/abstract-service.ts#L379"
 						}
 					],
 					"signatures": [
@@ -1302,7 +1302,7 @@
 								"summary": [
 									{
 										"kind": "text",
-										"text": "This method is used to update the settings of an index within the search service. This is useful if you want to update the index settings when the plugin options change.\n\nFor example, in the Algolia plugin, a loader, which runs when the Medusa backend loads, is used to update the settings of indices based on the plugin options.\nThe loader uses this method to update the settings."
+										"text": "This method is used to update the settings of an index within the search service. This is useful if you want to update the index settings when the plugin options change.\n\nFor example, in the Algolia plugin, a loader, which runs when the vikrai backend loads, is used to update the settings of indices based on the plugin options.\nThe loader uses this method to update the settings."
 									}
 								],
 								"blockTags": [
@@ -1331,7 +1331,7 @@
 									"fileName": "abstract-service.ts",
 									"line": 379,
 									"character": 11,
-									"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/search/abstract-service.ts#L379"
+									"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/search/abstract-service.ts#L379"
 								}
 							],
 							"parameters": [
@@ -1425,7 +1425,7 @@
 					"fileName": "abstract-service.ts",
 					"line": 79,
 					"character": 22,
-					"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/search/abstract-service.ts#L79"
+					"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/search/abstract-service.ts#L79"
 				}
 			],
 			"implementedTypes": [
@@ -1436,7 +1436,7 @@
 						"qualifiedName": "ISearchService"
 					},
 					"name": "ISearchService",
-					"package": "@medusajs/types"
+					"package": "@vikrai/types"
 				}
 			]
 		}
@@ -1449,7 +1449,7 @@
 			]
 		}
 	],
-	"packageName": "@medusajs/utils",
+	"packageName": "@vikrai/utils",
 	"symbolIdMap": {
 		"44108": {
 			"sourceFileName": "../../../../packages/core/utils/src/search/abstract-service.ts",
@@ -1625,3 +1625,4 @@
 		}
 	}
 }
+

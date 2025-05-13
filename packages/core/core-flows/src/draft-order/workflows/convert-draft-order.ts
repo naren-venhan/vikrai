@@ -2,15 +2,15 @@ import {
   Modules,
   OrderStatus,
   OrderWorkflowEvents,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 import {
   createStep,
   createWorkflow,
   StepResponse,
   WorkflowData,
   WorkflowResponse,
-} from "@medusajs/framework/workflows-sdk"
-import { IOrderModuleService, OrderDTO } from "@medusajs/types"
+} from "@vikrai/framework/workflows-sdk"
+import { IOrderModuleService, OrderDTO } from "@vikrai/types"
 import { emitEventStep, useRemoteQueryStep } from "../../common"
 import { validateDraftOrderStep } from "../steps/validate-draft-order"
 
@@ -77,7 +77,7 @@ export const convertDraftOrderStep = createStep(
 
 /**
  * This workflow converts a draft order to a pending order. It's used by the
- * [Convert Draft Order to Order Admin API Route](https://docs.medusajs.com/api/admin#draft-orders_postdraftordersidconverttoorder).
+ * [Convert Draft Order to Order Admin API Route](https://docs.vikrai.com/api/admin#draft-orders_postdraftordersidconverttoorder).
  * 
  * You can use this workflow within your customizations or your own custom workflows, allowing you to wrap custom logic around
  * converting a draft order to a pending order.
@@ -121,3 +121,4 @@ export const convertDraftOrderWorkflow = createWorkflow(
     return new WorkflowResponse(updatedOrder)
   }
 )
+

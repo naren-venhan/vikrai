@@ -477,6 +477,7 @@ export interface FixtureEntryPoints {
   shipping_option_price_sets: LinkShippingOptionPriceSet
 }
 
-declare module "@medusajs/types" {
+declare module "@vikrai/types" {
   export interface RemoteQueryEntryPoints extends FixtureEntryPoints {}
 }
+

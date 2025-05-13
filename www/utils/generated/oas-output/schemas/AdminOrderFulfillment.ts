@@ -50,7 +50,7 @@
  *     type: object
  *     description: Data useful for the fulfillment provider handling it. This is taken from the associated shipping option.
  *     externalDocs:
- *       url: https://docs.medusajs.com/v2/resources/commerce-modules/fulfillment/shipping-option#data-property
+ *       url: https://docs.vikrai.com/v2/resources/commerce-modules/fulfillment/shipping-option#data-property
  *   provider_id:
  *     type: string
  *     title: provider_id
@@ -78,4 +78,5 @@
  *     description: Whether the fulfillment requires shipping.
  * 
 */
+
 

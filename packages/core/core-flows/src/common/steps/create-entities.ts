@@ -1,4 +1,4 @@
-import { StepResponse, createStep } from "@medusajs/framework/workflows-sdk"
+import { StepResponse, createStep } from "@vikrai/framework/workflows-sdk"
 
 export interface CreateEntitiesStepType {
   moduleRegistrationName: string
@@ -48,3 +48,4 @@ export const createEntitiesStep = createStep(
     await module[compensateMethod](entityIdentifiers)
   }
 )
+

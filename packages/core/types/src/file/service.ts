@@ -128,7 +128,7 @@ export interface IFileModuleService extends IModuleService {
   ): Promise<FileDTO>
 
   /**
-   * This method is used to retrieve a file by ID, similarly to `retrieve`. It doesn't retrieve multiple files, but it's added to support retrieving files with [Query](https://docs.medusajs.com/learn/fundamentals/module-links/query).
+   * This method is used to retrieve a file by ID, similarly to `retrieve`. It doesn't retrieve multiple files, but it's added to support retrieving files with [Query](https://docs.vikrai.com/learn/fundamentals/module-links/query).
    *
    * @param {FilterableFileProps} filters - The filters to apply on the retrieved files.
    * @param {FindConfig<FileDTO>} config -
@@ -147,7 +147,7 @@ export interface IFileModuleService extends IModuleService {
   ): Promise<FileDTO[]>
 
   /**
-   * This method is used to retrieve a file by ID, similarly to `retrieve`. It doesn't retrieve multiple files, but it's added to support retrieving files with [Query](https://docs.medusajs.com/learn/fundamentals/module-links/query).
+   * This method is used to retrieve a file by ID, similarly to `retrieve`. It doesn't retrieve multiple files, but it's added to support retrieving files with [Query](https://docs.vikrai.com/learn/fundamentals/module-links/query).
    *
    * @param {FilterableFileProps} filters - The filters to apply on the retrieved files.
    * @param {FindConfig<FileDTO>} config -
@@ -197,3 +197,4 @@ export interface IFileModuleService extends IModuleService {
    */
   getAsBuffer(id: string, sharedContext?: Context): Promise<Buffer>
 }
+

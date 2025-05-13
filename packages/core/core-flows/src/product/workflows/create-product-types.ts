@@ -1,12 +1,12 @@
-import { AdditionalData, ProductTypes } from "@medusajs/framework/types"
-import { ProductTypeWorkflowEvents } from "@medusajs/framework/utils"
+import { AdditionalData, ProductTypes } from "@vikrai/framework/types"
+import { ProductTypeWorkflowEvents } from "@vikrai/framework/utils"
 import {
   WorkflowData,
   WorkflowResponse,
   createHook,
   createWorkflow,
   transform,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { emitEventStep } from "../../common/steps/emit-event"
 import { createProductTypesStep } from "../steps"
 
@@ -23,7 +23,7 @@ export type CreateProductTypesWorkflowInput = {
 export const createProductTypesWorkflowId = "create-product-types"
 /**
  * This workflow creates one or more product types. It's used by the 
- * [Create Product Type Admin API Route](https://docs.medusajs.com/api/admin#product-types_postproducttypes).
+ * [Create Product Type Admin API Route](https://docs.vikrai.com/api/admin#product-types_postproducttypes).
  * 
  * This workflow has a hook that allows you to perform custom actions on the created product types. For example, you can pass under `additional_data` custom data that 
  * allows you to create custom data models linked to the product types.
@@ -76,3 +76,4 @@ export const createProductTypesWorkflow = createWorkflow(
     })
   }
 )
+

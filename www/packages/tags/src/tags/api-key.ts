@@ -1,50 +1,50 @@
 export const apiKey = [
   {
     "title": "Manage Publishable API Keys",
-    "path": "https://docs.medusajs.com/user-guide/settings/developer/publishable-api-keys"
+    "path": "https://docs.vikrai.com/user-guide/settings/developer/publishable-api-keys"
   },
   {
     "title": "Manage Secret API Keys",
-    "path": "https://docs.medusajs.com/user-guide/settings/developer/secret-api-keys"
+    "path": "https://docs.vikrai.com/user-guide/settings/developer/secret-api-keys"
   },
   {
     "title": "Use a Publishable API Key in the Storefront",
-    "path": "https://docs.medusajs.com/resources/storefront-development/publishable-api-keys"
+    "path": "https://docs.vikrai.com/resources/storefront-development/publishable-api-keys"
   },
   {
     "title": "createApiKeysStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/createApiKeysStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/createApiKeysStep"
   },
   {
     "title": "deleteApiKeysStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/deleteApiKeysStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/deleteApiKeysStep"
   },
   {
     "title": "revokeApiKeysStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/revokeApiKeysStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/revokeApiKeysStep"
   },
   {
     "title": "updateApiKeysStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/updateApiKeysStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/updateApiKeysStep"
   },
   {
     "title": "createApiKeysWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createApiKeysWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/createApiKeysWorkflow"
   },
   {
     "title": "deleteApiKeysWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/deleteApiKeysWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/deleteApiKeysWorkflow"
   },
   {
     "title": "revokeApiKeysWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/revokeApiKeysWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/revokeApiKeysWorkflow"
   },
   {
     "title": "updateApiKeysWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateApiKeysWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/updateApiKeysWorkflow"
   },
   {
     "title": "apiKey",
-    "path": "https://docs.medusajs.com/resources/references/js-sdk/admin/apiKey"
+    "path": "https://docs.vikrai.com/resources/references/js-sdk/admin/apiKey"
   }
 ]

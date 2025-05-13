@@ -3,13 +3,13 @@ import {
   StockLocationDTO,
   UpdateStockLocationInput,
   UpsertStockLocationAddressInput,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import {
   WorkflowData,
   WorkflowResponse,
   createWorkflow,
   transform,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 
 import { useQueryGraphStep } from "../../common"
 import { updateStockLocationsStep } from "../steps"
@@ -31,7 +31,7 @@ export interface UpdateStockLocationsWorkflowInput {
 export const updateStockLocationsWorkflowId = "update-stock-locations-workflow"
 /**
  * This workflow updates stock locations matching the specified filters. It's used by the
- * [Update Stock Location Admin API Route](https://docs.medusajs.com/api/admin#stock-locations_poststocklocationsid).
+ * [Update Stock Location Admin API Route](https://docs.vikrai.com/api/admin#stock-locations_poststocklocationsid).
  * 
  * You can use this workflow within your own customizations or custom workflows, allowing you
  * to update stock locations in your custom flows.
@@ -105,3 +105,4 @@ export const updateStockLocationsWorkflow = createWorkflow(
     )
   }
 )
+

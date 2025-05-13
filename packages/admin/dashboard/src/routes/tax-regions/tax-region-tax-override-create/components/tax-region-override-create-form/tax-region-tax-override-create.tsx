@@ -10,12 +10,12 @@ import {
   Text,
   clx,
   toast,
-} from "@medusajs/ui"
+} from "@vikrai/ui"
 import { useFieldArray, useForm, useWatch } from "react-hook-form"
 import { z } from "zod"
 
-import { MagnifyingGlass } from "@medusajs/icons"
-import { HttpTypes } from "@medusajs/types"
+import { MagnifyingGlass } from "@vikrai/icons"
+import { HttpTypes } from "@vikrai/types"
 import { useTranslation } from "react-i18next"
 import { Form } from "../../../../../components/common/form"
 import { SwitchBox } from "../../../../../components/common/switch-box"
@@ -646,3 +646,4 @@ export const TaxRegionCreateTaxOverrideForm = ({
     </RouteFocusModal.Form>
   )
 }
+

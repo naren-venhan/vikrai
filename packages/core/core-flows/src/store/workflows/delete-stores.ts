@@ -1,5 +1,5 @@
-import { Modules } from "@medusajs/framework/utils"
-import { WorkflowData, createWorkflow } from "@medusajs/framework/workflows-sdk"
+import { Modules } from "@vikrai/framework/utils"
+import { WorkflowData, createWorkflow } from "@vikrai/framework/workflows-sdk"
 import { removeRemoteLinkStep } from "../../common/steps/remove-remote-links"
 import { deleteStoresStep } from "../steps"
 
@@ -19,9 +19,9 @@ export const deleteStoresWorkflowId = "delete-stores"
  *
  * :::note
  *
- * By default, Medusa uses a single store. This is useful
+ * By default, vikrai uses a single store. This is useful
  * if you're building a multi-tenant application or a marketplace where each tenant has its own store.
- * If you delete the only store in your application, the Medusa application will re-create it on application start-up.
+ * If you delete the only store in your application, the vikrai application will re-create it on application start-up.
  *
  * :::
  *
@@ -54,3 +54,4 @@ export const deleteStoresWorkflow = createWorkflow(
     return deletedStores
   }
 )
+

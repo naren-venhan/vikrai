@@ -2,8 +2,8 @@ import {
   Context,
   CreateOrderChangeActionDTO,
   OrderTypes,
-} from "@medusajs/framework/types"
-import { ChangeActionType } from "@medusajs/framework/utils"
+} from "@vikrai/framework/types"
+import { ChangeActionType } from "@vikrai/framework/utils"
 
 export async function registerShipment(
   this: any,
@@ -48,3 +48,4 @@ export async function registerShipment(
 
   await this.confirmOrderChange(change[0].id, sharedContext)
 }
+

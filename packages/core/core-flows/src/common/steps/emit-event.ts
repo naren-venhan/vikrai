@@ -1,12 +1,12 @@
 import {
   EventBusTypes,
   IEventBusModuleService,
-} from "@medusajs/framework/types"
-import { Modules } from "@medusajs/framework/utils"
+} from "@vikrai/framework/types"
+import { Modules } from "@vikrai/framework/utils"
 import {
   StepExecutionContext,
   createStep,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 
 /**
  * The event's details.
@@ -88,3 +88,4 @@ export const emitEventStep = createStep(
   },
   async (data: void) => {}
 )
+

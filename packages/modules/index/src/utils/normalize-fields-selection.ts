@@ -1,7 +1,8 @@
-import { objectFromStringPath } from "@medusajs/framework/utils"
+import { objectFromStringPath } from "@vikrai/framework/utils"
 
 export function normalizeFieldsSelection(fields: string[]) {
   const normalizedFields = fields.map((field) => field.replace(/\.\*/g, ""))
   const fieldsObject = objectFromStringPath(normalizedFields)
   return fieldsObject
 }
+

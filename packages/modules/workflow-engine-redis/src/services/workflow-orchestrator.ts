@@ -5,21 +5,21 @@ import {
   TransactionHandlerType,
   TransactionStep,
   WorkflowScheduler,
-} from "@medusajs/framework/orchestration"
+} from "@vikrai/framework/orchestration"
 import {
   ContainerLike,
   Context,
   Logger,
-  MedusaContainer,
-} from "@medusajs/framework/types"
-import { isString, TransactionState } from "@medusajs/framework/utils"
+  vikraiContainer,
+} from "@vikrai/framework/types"
+import { isString, TransactionState } from "@vikrai/framework/utils"
 import {
   FlowCancelOptions,
   FlowRunOptions,
-  MedusaWorkflow,
+  vikraiWorkflow,
   resolveValue,
   ReturnWorkflow,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import Redis from "ioredis"
 import { setTimeout } from "timers"
 import { ulid } from "ulid"
@@ -96,7 +96,7 @@ export class WorkflowOrchestratorService {
   private instanceId = ulid()
   protected redisPublisher: Redis
   protected redisSubscriber: Redis
-  protected container_: MedusaContainer
+  protected container_: vikraiContainer
   private subscribers: Subscribers = new Map()
   private activeStepsCount: number = 0
 
@@ -116,7 +116,7 @@ export class WorkflowOrchestratorService {
     workflowOrchestratorService: WorkflowOrchestratorService
     redisPublisher: Redis
     redisSubscriber: Redis
-    sharedContainer: MedusaContainer
+    sharedContainer: vikraiContainer
   }) {
     this.container_ = sharedContainer
     this.redisPublisher = redisPublisher
@@ -221,7 +221,7 @@ export class WorkflowOrchestratorService {
       transactionId: context.transactionId,
     })
 
-    const exportedWorkflow = MedusaWorkflow.getWorkflow(workflowId)
+    const exportedWorkflow = vikraiWorkflow.getWorkflow(workflowId)
     if (!exportedWorkflow) {
       throw new Error(`Workflow with id "${workflowId}" not found.`)
     }
@@ -309,7 +309,7 @@ export class WorkflowOrchestratorService {
       transactionId: transactionId,
     })
 
-    const exportedWorkflow = MedusaWorkflow.getWorkflow(workflowId)
+    const exportedWorkflow = vikraiWorkflow.getWorkflow(workflowId)
     if (!exportedWorkflow) {
       throw new Error(`Workflow with id "${workflowId}" not found.`)
     }
@@ -395,7 +395,7 @@ export class WorkflowOrchestratorService {
 
     context ??= {}
 
-    const exportedWorkflow: any = MedusaWorkflow.getWorkflow(workflowId)
+    const exportedWorkflow: any = vikraiWorkflow.getWorkflow(workflowId)
     if (!exportedWorkflow) {
       throw new Error(`Workflow with id "${workflowId}" not found.`)
     }
@@ -430,7 +430,7 @@ export class WorkflowOrchestratorService {
     const [idempotencyKey_, { workflowId, transactionId }] =
       this.buildIdempotencyKeyAndParts(idempotencyKey)
 
-    const exportedWorkflow: any = MedusaWorkflow.getWorkflow(workflowId)
+    const exportedWorkflow: any = vikraiWorkflow.getWorkflow(workflowId)
     if (!exportedWorkflow) {
       throw new Error(`Workflow with id "${workflowId}" not found.`)
     }
@@ -497,7 +497,7 @@ export class WorkflowOrchestratorService {
     const [idempotencyKey_, { workflowId, transactionId }] =
       this.buildIdempotencyKeyAndParts(idempotencyKey)
 
-    const exportedWorkflow: any = MedusaWorkflow.getWorkflow(workflowId)
+    const exportedWorkflow: any = vikraiWorkflow.getWorkflow(workflowId)
     if (!exportedWorkflow) {
       throw new Error(`Workflow with id "${workflowId}" not found.`)
     }
@@ -838,3 +838,4 @@ export class WorkflowOrchestratorService {
     return [idempotencyKey_, parts]
   }
 }
+

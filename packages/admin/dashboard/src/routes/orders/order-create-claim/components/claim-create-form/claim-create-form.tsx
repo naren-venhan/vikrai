@@ -1,11 +1,11 @@
 import { zodResolver } from "@hookform/resolvers/zod"
-import { PencilSquare } from "@medusajs/icons"
+import { PencilSquare } from "@vikrai/icons"
 import {
   AdminClaim,
   AdminOrder,
   AdminOrderPreview,
   InventoryLevelDTO,
-} from "@medusajs/types"
+} from "@vikrai/types"
 import {
   Alert,
   Button,
@@ -16,7 +16,7 @@ import {
   Text,
   toast,
   usePrompt,
-} from "@medusajs/ui"
+} from "@vikrai/ui"
 import { useEffect, useMemo, useState } from "react"
 import { useFieldArray, useForm } from "react-hook-form"
 import { useTranslation } from "react-i18next"
@@ -37,7 +37,7 @@ import { AddClaimItemsTable } from "../add-claim-items-table"
 import { ClaimInboundItem } from "./claim-inbound-item.tsx"
 import { ClaimCreateSchema, CreateClaimSchemaType } from "./schema"
 
-import { AdminReturn, HttpTypes } from "@medusajs/types"
+import { AdminReturn, HttpTypes } from "@vikrai/types"
 import { KeyboundForm } from "../../../../../components/utilities/keybound-form/keybound-form.tsx"
 import {
   useAddClaimInboundItems,
@@ -1052,3 +1052,4 @@ export const ClaimCreateForm = ({
     </RouteFocusModal.Form>
   )
 }
+

@@ -1,5 +1,5 @@
-import { IModuleService } from "@medusajs/types"
-import { MedusaContext } from "@medusajs/utils"
+import { IModuleService } from "@vikrai/types"
+import { vikraiContext } from "@vikrai/utils"
 
 // @ts-expect-error
 export class ModuleService implements IModuleService {
@@ -11,7 +11,8 @@ export class ModuleService implements IModuleService {
       key: "key value",
     }
   }
-  async methodName(input, @MedusaContext() context) {
+  async methodName(input, @vikraiContext() context) {
     return input + " called"
   }
 }
+

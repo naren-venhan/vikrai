@@ -21,7 +21,7 @@
 			},
 			"sources": [
 				{
-					"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/api-key/common/api-key.ts",
+					"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/api-key/common/api-key.ts",
 					"line": 6,
 					"character": 12
 				}
@@ -71,7 +71,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/api-key/common/api-key.ts",
+							"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/api-key/common/api-key.ts",
 							"line": 15,
 							"character": 2
 						}
@@ -97,7 +97,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/api-key/common/api-key.ts",
+							"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/api-key/common/api-key.ts",
 							"line": 20,
 							"character": 2
 						}
@@ -131,7 +131,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/api-key/common/api-key.ts",
+							"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/api-key/common/api-key.ts",
 							"line": 26,
 							"character": 2
 						}
@@ -157,7 +157,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/api-key/common/api-key.ts",
+							"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/api-key/common/api-key.ts",
 							"line": 31,
 							"character": 2
 						}
@@ -183,7 +183,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/api-key/common/api-key.ts",
+							"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/api-key/common/api-key.ts",
 							"line": 36,
 							"character": 2
 						}
@@ -192,7 +192,7 @@
 						"type": "reference",
 						"target": 173,
 						"name": "ApiKeyType",
-						"package": "@medusajs/types"
+						"package": "@vikrai/types"
 					}
 				},
 				{
@@ -211,7 +211,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/api-key/common/api-key.ts",
+							"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/api-key/common/api-key.ts",
 							"line": 41,
 							"character": 2
 						}
@@ -251,7 +251,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/api-key/common/api-key.ts",
+							"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/api-key/common/api-key.ts",
 							"line": 46,
 							"character": 2
 						}
@@ -277,7 +277,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/api-key/common/api-key.ts",
+							"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/api-key/common/api-key.ts",
 							"line": 51,
 							"character": 2
 						}
@@ -308,7 +308,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/api-key/common/api-key.ts",
+							"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/api-key/common/api-key.ts",
 							"line": 56,
 							"character": 2
 						}
@@ -339,7 +339,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/api-key/common/api-key.ts",
+							"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/api-key/common/api-key.ts",
 							"line": 61,
 							"character": 2
 						}
@@ -379,7 +379,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/api-key/common/api-key.ts",
+							"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/api-key/common/api-key.ts",
 							"line": 67,
 							"character": 2
 						}
@@ -414,7 +414,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/api-key/common/api-key.ts",
+							"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/api-key/common/api-key.ts",
 							"line": 72,
 							"character": 2
 						}
@@ -460,7 +460,7 @@
 			],
 			"sources": [
 				{
-					"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/api-key/common/api-key.ts",
+					"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/api-key/common/api-key.ts",
 					"line": 11,
 					"character": 17
 				}
@@ -499,7 +499,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/api-key/common/api-key.ts",
+							"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/api-key/common/api-key.ts",
 							"line": 83,
 							"character": 2
 						}
@@ -527,7 +527,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/api-key/common/api-key.ts",
+							"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/api-key/common/api-key.ts",
 							"line": 87,
 							"character": 2
 						}
@@ -567,7 +567,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/api-key/common/api-key.ts",
+							"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/api-key/common/api-key.ts",
 							"line": 92,
 							"character": 2
 						}
@@ -607,7 +607,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/api-key/common/api-key.ts",
+							"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/api-key/common/api-key.ts",
 							"line": 97,
 							"character": 2
 						}
@@ -647,7 +647,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/api-key/common/api-key.ts",
+							"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/api-key/common/api-key.ts",
 							"line": 102,
 							"character": 2
 						}
@@ -656,7 +656,7 @@
 						"type": "reference",
 						"target": 173,
 						"name": "ApiKeyType",
-						"package": "@medusajs/types"
+						"package": "@vikrai/types"
 					}
 				},
 				{
@@ -669,7 +669,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/api-key/common/api-key.ts",
+							"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/api-key/common/api-key.ts",
 							"line": 104,
 							"character": 2
 						}
@@ -698,7 +698,7 @@
 							}
 						],
 						"name": "OperatorMap",
-						"package": "@medusajs/types"
+						"package": "@vikrai/types"
 					}
 				},
 				{
@@ -720,7 +720,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/dal/index.ts",
+							"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/dal/index.ts",
 							"line": 15,
 							"character": 2
 						}
@@ -734,7 +734,7 @@
 									"type": "reference",
 									"target": 125,
 									"name": "FilterableApiKeyProps",
-									"package": "@medusajs/types"
+									"package": "@vikrai/types"
 								},
 								{
 									"type": "reference",
@@ -744,11 +744,11 @@
 											"type": "reference",
 											"target": 125,
 											"name": "FilterableApiKeyProps",
-											"package": "@medusajs/types"
+											"package": "@vikrai/types"
 										}
 									],
 									"name": "BaseFilterable",
-									"package": "@medusajs/types"
+									"package": "@vikrai/types"
 								}
 							]
 						}
@@ -778,7 +778,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/dal/index.ts",
+							"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/dal/index.ts",
 							"line": 20,
 							"character": 2
 						}
@@ -792,7 +792,7 @@
 									"type": "reference",
 									"target": 125,
 									"name": "FilterableApiKeyProps",
-									"package": "@medusajs/types"
+									"package": "@vikrai/types"
 								},
 								{
 									"type": "reference",
@@ -802,11 +802,11 @@
 											"type": "reference",
 											"target": 125,
 											"name": "FilterableApiKeyProps",
-											"package": "@medusajs/types"
+											"package": "@vikrai/types"
 										}
 									],
 									"name": "BaseFilterable",
-									"package": "@medusajs/types"
+									"package": "@vikrai/types"
 								}
 							]
 						}
@@ -835,7 +835,7 @@
 			],
 			"sources": [
 				{
-					"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/api-key/common/api-key.ts",
+					"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/api-key/common/api-key.ts",
 					"line": 78,
 					"character": 17
 				}
@@ -849,11 +849,11 @@
 							"type": "reference",
 							"target": 125,
 							"name": "FilterableApiKeyProps",
-							"package": "@medusajs/types"
+							"package": "@vikrai/types"
 						}
 					],
 					"name": "BaseFilterable",
-					"package": "@medusajs/types"
+					"package": "@vikrai/types"
 				}
 			]
 		},
@@ -888,7 +888,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/api-key/mutations/api-key.ts",
+							"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/api-key/mutations/api-key.ts",
 							"line": 10,
 							"character": 2
 						}
@@ -914,7 +914,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/api-key/mutations/api-key.ts",
+							"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/api-key/mutations/api-key.ts",
 							"line": 15,
 							"character": 2
 						}
@@ -923,7 +923,7 @@
 						"type": "reference",
 						"target": 173,
 						"name": "ApiKeyType",
-						"package": "@medusajs/types"
+						"package": "@vikrai/types"
 					}
 				},
 				{
@@ -944,13 +944,13 @@
 							},
 							{
 								"kind": "text",
-								"text": ", the user can use the created API key's token to authenticate\nas explained in the [API Reference](https://docs.medusajs.com/api/admin#2-api-token)."
+								"text": ", the user can use the created API key's token to authenticate\nas explained in the [API Reference](https://docs.vikrai.com/api/admin#2-api-token)."
 							}
 						]
 					},
 					"sources": [
 						{
-							"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/api-key/mutations/api-key.ts",
+							"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/api-key/mutations/api-key.ts",
 							"line": 22,
 							"character": 2
 						}
@@ -973,7 +973,7 @@
 			],
 			"sources": [
 				{
-					"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/api-key/mutations/api-key.ts",
+					"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/api-key/mutations/api-key.ts",
 					"line": 6,
 					"character": 17
 				}
@@ -1012,7 +1012,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/api-key/mutations/api-key.ts",
+							"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/api-key/mutations/api-key.ts",
 							"line": 33,
 							"character": 2
 						}
@@ -1040,7 +1040,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/api-key/mutations/api-key.ts",
+							"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/api-key/mutations/api-key.ts",
 							"line": 38,
 							"character": 2
 						}
@@ -1068,7 +1068,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/api-key/mutations/api-key.ts",
+							"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/api-key/mutations/api-key.ts",
 							"line": 43,
 							"character": 2
 						}
@@ -1077,7 +1077,7 @@
 						"type": "reference",
 						"target": 173,
 						"name": "ApiKeyType",
-						"package": "@medusajs/types"
+						"package": "@vikrai/types"
 					}
 				},
 				{
@@ -1098,7 +1098,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/api-key/mutations/api-key.ts",
+							"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/api-key/mutations/api-key.ts",
 							"line": 49,
 							"character": 2
 						}
@@ -1122,7 +1122,7 @@
 			],
 			"sources": [
 				{
-					"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/api-key/mutations/api-key.ts",
+					"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/api-key/mutations/api-key.ts",
 					"line": 29,
 					"character": 17
 				}
@@ -1161,7 +1161,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/api-key/mutations/api-key.ts",
+							"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/api-key/mutations/api-key.ts",
 							"line": 59,
 							"character": 2
 						}
@@ -1182,7 +1182,7 @@
 			],
 			"sources": [
 				{
-					"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/api-key/mutations/api-key.ts",
+					"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/api-key/mutations/api-key.ts",
 					"line": 55,
 					"character": 17
 				}
@@ -1219,7 +1219,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/api-key/mutations/api-key.ts",
+							"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/api-key/mutations/api-key.ts",
 							"line": 69,
 							"character": 2
 						}
@@ -1247,7 +1247,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/api-key/mutations/api-key.ts",
+							"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/api-key/mutations/api-key.ts",
 							"line": 74,
 							"character": 2
 						}
@@ -1269,7 +1269,7 @@
 			],
 			"sources": [
 				{
-					"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/api-key/mutations/api-key.ts",
+					"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/api-key/mutations/api-key.ts",
 					"line": 65,
 					"character": 17
 				}
@@ -1301,13 +1301,13 @@
 							"fileName": "api-key/service.ts",
 							"line": 30,
 							"character": 2,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/api-key/service.ts#L30"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/api-key/service.ts#L30"
 						},
 						{
 							"fileName": "api-key/service.ts",
 							"line": 49,
 							"character": 2,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/api-key/service.ts#L49"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/api-key/service.ts#L49"
 						}
 					],
 					"signatures": [
@@ -1350,7 +1350,7 @@
 									"fileName": "api-key/service.ts",
 									"line": 30,
 									"character": 2,
-									"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/api-key/service.ts#L30"
+									"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/api-key/service.ts#L30"
 								}
 							],
 							"parameters": [
@@ -1374,7 +1374,7 @@
 											"type": "reference",
 											"target": 87,
 											"name": "CreateApiKeyDTO",
-											"package": "@medusajs/types"
+											"package": "@vikrai/types"
 										}
 									}
 								},
@@ -1398,7 +1398,7 @@
 										"type": "reference",
 										"target": 91,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@vikrai/types"
 									}
 								}
 							],
@@ -1415,7 +1415,7 @@
 											"type": "reference",
 											"target": 105,
 											"name": "ApiKeyDTO",
-											"package": "@medusajs/types"
+											"package": "@vikrai/types"
 										}
 									}
 								],
@@ -1462,7 +1462,7 @@
 									"fileName": "api-key/service.ts",
 									"line": 49,
 									"character": 2,
-									"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/api-key/service.ts#L49"
+									"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/api-key/service.ts#L49"
 								}
 							],
 							"parameters": [
@@ -1484,7 +1484,7 @@
 										"type": "reference",
 										"target": 87,
 										"name": "CreateApiKeyDTO",
-										"package": "@medusajs/types"
+										"package": "@vikrai/types"
 									}
 								},
 								{
@@ -1507,7 +1507,7 @@
 										"type": "reference",
 										"target": 91,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@vikrai/types"
 									}
 								}
 							],
@@ -1522,7 +1522,7 @@
 										"type": "reference",
 										"target": 105,
 										"name": "ApiKeyDTO",
-										"package": "@medusajs/types"
+										"package": "@vikrai/types"
 									}
 								],
 								"name": "Promise",
@@ -1542,13 +1542,13 @@
 							"fileName": "api-key/service.ts",
 							"line": 74,
 							"character": 2,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/api-key/service.ts#L74"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/api-key/service.ts#L74"
 						},
 						{
 							"fileName": "api-key/service.ts",
 							"line": 92,
 							"character": 2,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/api-key/service.ts#L92"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/api-key/service.ts#L92"
 						}
 					],
 					"signatures": [
@@ -1591,7 +1591,7 @@
 									"fileName": "api-key/service.ts",
 									"line": 74,
 									"character": 2,
-									"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/api-key/service.ts#L74"
+									"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/api-key/service.ts#L74"
 								}
 							],
 							"parameters": [
@@ -1615,7 +1615,7 @@
 											"type": "reference",
 											"target": 118,
 											"name": "UpsertApiKeyDTO",
-											"package": "@medusajs/types"
+											"package": "@vikrai/types"
 										}
 									}
 								},
@@ -1639,7 +1639,7 @@
 										"type": "reference",
 										"target": 91,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@vikrai/types"
 									}
 								}
 							],
@@ -1656,7 +1656,7 @@
 											"type": "reference",
 											"target": 105,
 											"name": "ApiKeyDTO",
-											"package": "@medusajs/types"
+											"package": "@vikrai/types"
 										}
 									}
 								],
@@ -1703,7 +1703,7 @@
 									"fileName": "api-key/service.ts",
 									"line": 92,
 									"character": 2,
-									"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/api-key/service.ts#L92"
+									"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/api-key/service.ts#L92"
 								}
 							],
 							"parameters": [
@@ -1725,7 +1725,7 @@
 										"type": "reference",
 										"target": 118,
 										"name": "UpsertApiKeyDTO",
-										"package": "@medusajs/types"
+										"package": "@vikrai/types"
 									}
 								},
 								{
@@ -1748,7 +1748,7 @@
 										"type": "reference",
 										"target": 91,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@vikrai/types"
 									}
 								}
 							],
@@ -1763,7 +1763,7 @@
 										"type": "reference",
 										"target": 105,
 										"name": "ApiKeyDTO",
-										"package": "@medusajs/types"
+										"package": "@vikrai/types"
 									}
 								],
 								"name": "Promise",
@@ -1783,13 +1783,13 @@
 							"fileName": "api-key/service.ts",
 							"line": 110,
 							"character": 2,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/api-key/service.ts#L110"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/api-key/service.ts#L110"
 						},
 						{
 							"fileName": "api-key/service.ts",
 							"line": 134,
 							"character": 2,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/api-key/service.ts#L134"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/api-key/service.ts#L134"
 						}
 					],
 					"signatures": [
@@ -1832,7 +1832,7 @@
 									"fileName": "api-key/service.ts",
 									"line": 110,
 									"character": 2,
-									"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/api-key/service.ts#L110"
+									"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/api-key/service.ts#L110"
 								}
 							],
 							"parameters": [
@@ -1873,7 +1873,7 @@
 										"type": "reference",
 										"target": 123,
 										"name": "UpdateApiKeyDTO",
-										"package": "@medusajs/types"
+										"package": "@vikrai/types"
 									}
 								},
 								{
@@ -1896,7 +1896,7 @@
 										"type": "reference",
 										"target": 91,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@vikrai/types"
 									}
 								}
 							],
@@ -1911,7 +1911,7 @@
 										"type": "reference",
 										"target": 105,
 										"name": "ApiKeyDTO",
-										"package": "@medusajs/types"
+										"package": "@vikrai/types"
 									}
 								],
 								"name": "Promise",
@@ -1957,7 +1957,7 @@
 									"fileName": "api-key/service.ts",
 									"line": 134,
 									"character": 2,
-									"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/api-key/service.ts#L134"
+									"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/api-key/service.ts#L134"
 								}
 							],
 							"parameters": [
@@ -1979,7 +1979,7 @@
 										"type": "reference",
 										"target": 125,
 										"name": "FilterableApiKeyProps",
-										"package": "@medusajs/types"
+										"package": "@vikrai/types"
 									}
 								},
 								{
@@ -2000,7 +2000,7 @@
 										"type": "reference",
 										"target": 123,
 										"name": "UpdateApiKeyDTO",
-										"package": "@medusajs/types"
+										"package": "@vikrai/types"
 									}
 								},
 								{
@@ -2023,7 +2023,7 @@
 										"type": "reference",
 										"target": 91,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@vikrai/types"
 									}
 								}
 							],
@@ -2040,7 +2040,7 @@
 											"type": "reference",
 											"target": 105,
 											"name": "ApiKeyDTO",
-											"package": "@medusajs/types"
+											"package": "@vikrai/types"
 										}
 									}
 								],
@@ -2061,13 +2061,13 @@
 							"fileName": "api-key/service.ts",
 							"line": 150,
 							"character": 2,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/api-key/service.ts#L150"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/api-key/service.ts#L150"
 						},
 						{
 							"fileName": "api-key/service.ts",
 							"line": 162,
 							"character": 2,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/api-key/service.ts#L162"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/api-key/service.ts#L162"
 						}
 					],
 					"signatures": [
@@ -2110,7 +2110,7 @@
 									"fileName": "api-key/service.ts",
 									"line": 150,
 									"character": 2,
-									"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/api-key/service.ts#L150"
+									"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/api-key/service.ts#L150"
 								}
 							],
 							"parameters": [
@@ -2156,7 +2156,7 @@
 										"type": "reference",
 										"target": 91,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@vikrai/types"
 									}
 								}
 							],
@@ -2215,7 +2215,7 @@
 									"fileName": "api-key/service.ts",
 									"line": 162,
 									"character": 2,
-									"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/api-key/service.ts#L162"
+									"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/api-key/service.ts#L162"
 								}
 							],
 							"parameters": [
@@ -2258,7 +2258,7 @@
 										"type": "reference",
 										"target": 91,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@vikrai/types"
 									}
 								}
 							],
@@ -2291,7 +2291,7 @@
 							"fileName": "api-key/service.ts",
 							"line": 176,
 							"character": 2,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/api-key/service.ts#L176"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/api-key/service.ts#L176"
 						}
 					],
 					"signatures": [
@@ -2334,7 +2334,7 @@
 									"fileName": "api-key/service.ts",
 									"line": 176,
 									"character": 2,
-									"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/api-key/service.ts#L176"
+									"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/api-key/service.ts#L176"
 								}
 							],
 							"parameters": [
@@ -2397,11 +2397,11 @@
 												"type": "reference",
 												"target": 105,
 												"name": "ApiKeyDTO",
-												"package": "@medusajs/types"
+												"package": "@vikrai/types"
 											}
 										],
 										"name": "FindConfig",
-										"package": "@medusajs/types"
+										"package": "@vikrai/types"
 									}
 								},
 								{
@@ -2424,7 +2424,7 @@
 										"type": "reference",
 										"target": 91,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@vikrai/types"
 									}
 								}
 							],
@@ -2439,7 +2439,7 @@
 										"type": "reference",
 										"target": 105,
 										"name": "ApiKeyDTO",
-										"package": "@medusajs/types"
+										"package": "@vikrai/types"
 									}
 								],
 								"name": "Promise",
@@ -2459,7 +2459,7 @@
 							"fileName": "api-key/service.ts",
 							"line": 214,
 							"character": 2,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/api-key/service.ts#L214"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/api-key/service.ts#L214"
 						}
 					],
 					"signatures": [
@@ -2546,7 +2546,7 @@
 									"fileName": "api-key/service.ts",
 									"line": 214,
 									"character": 2,
-									"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/api-key/service.ts#L214"
+									"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/api-key/service.ts#L214"
 								}
 							],
 							"parameters": [
@@ -2570,7 +2570,7 @@
 										"type": "reference",
 										"target": 125,
 										"name": "FilterableApiKeyProps",
-										"package": "@medusajs/types"
+										"package": "@vikrai/types"
 									}
 								},
 								{
@@ -2613,11 +2613,11 @@
 												"type": "reference",
 												"target": 105,
 												"name": "ApiKeyDTO",
-												"package": "@medusajs/types"
+												"package": "@vikrai/types"
 											}
 										],
 										"name": "FindConfig",
-										"package": "@medusajs/types"
+										"package": "@vikrai/types"
 									}
 								},
 								{
@@ -2640,7 +2640,7 @@
 										"type": "reference",
 										"target": 91,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@vikrai/types"
 									}
 								}
 							],
@@ -2657,7 +2657,7 @@
 											"type": "reference",
 											"target": 105,
 											"name": "ApiKeyDTO",
-											"package": "@medusajs/types"
+											"package": "@vikrai/types"
 										}
 									}
 								],
@@ -2678,7 +2678,7 @@
 							"fileName": "api-key/service.ts",
 							"line": 254,
 							"character": 2,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/api-key/service.ts#L254"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/api-key/service.ts#L254"
 						}
 					],
 					"signatures": [
@@ -2765,7 +2765,7 @@
 									"fileName": "api-key/service.ts",
 									"line": 254,
 									"character": 2,
-									"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/api-key/service.ts#L254"
+									"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/api-key/service.ts#L254"
 								}
 							],
 							"parameters": [
@@ -2789,7 +2789,7 @@
 										"type": "reference",
 										"target": 125,
 										"name": "FilterableApiKeyProps",
-										"package": "@medusajs/types"
+										"package": "@vikrai/types"
 									}
 								},
 								{
@@ -2832,11 +2832,11 @@
 												"type": "reference",
 												"target": 105,
 												"name": "ApiKeyDTO",
-												"package": "@medusajs/types"
+												"package": "@vikrai/types"
 											}
 										],
 										"name": "FindConfig",
-										"package": "@medusajs/types"
+										"package": "@vikrai/types"
 									}
 								},
 								{
@@ -2859,7 +2859,7 @@
 										"type": "reference",
 										"target": 91,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@vikrai/types"
 									}
 								}
 							],
@@ -2879,7 +2879,7 @@
 													"type": "reference",
 													"target": 105,
 													"name": "ApiKeyDTO",
-													"package": "@medusajs/types"
+													"package": "@vikrai/types"
 												}
 											},
 											{
@@ -2906,13 +2906,13 @@
 							"fileName": "api-key/service.ts",
 							"line": 280,
 							"character": 2,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/api-key/service.ts#L280"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/api-key/service.ts#L280"
 						},
 						{
 							"fileName": "api-key/service.ts",
 							"line": 301,
 							"character": 2,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/api-key/service.ts#L301"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/api-key/service.ts#L301"
 						}
 					],
 					"signatures": [
@@ -2955,7 +2955,7 @@
 									"fileName": "api-key/service.ts",
 									"line": 280,
 									"character": 2,
-									"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/api-key/service.ts#L280"
+									"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/api-key/service.ts#L280"
 								}
 							],
 							"parameters": [
@@ -2977,7 +2977,7 @@
 										"type": "reference",
 										"target": 125,
 										"name": "FilterableApiKeyProps",
-										"package": "@medusajs/types"
+										"package": "@vikrai/types"
 									}
 								},
 								{
@@ -2998,7 +2998,7 @@
 										"type": "reference",
 										"target": 145,
 										"name": "RevokeApiKeyDTO",
-										"package": "@medusajs/types"
+										"package": "@vikrai/types"
 									}
 								},
 								{
@@ -3021,7 +3021,7 @@
 										"type": "reference",
 										"target": 91,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@vikrai/types"
 									}
 								}
 							],
@@ -3038,7 +3038,7 @@
 											"type": "reference",
 											"target": 105,
 											"name": "ApiKeyDTO",
-											"package": "@medusajs/types"
+											"package": "@vikrai/types"
 										}
 									}
 								],
@@ -3085,7 +3085,7 @@
 									"fileName": "api-key/service.ts",
 									"line": 301,
 									"character": 2,
-									"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/api-key/service.ts#L301"
+									"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/api-key/service.ts#L301"
 								}
 							],
 							"parameters": [
@@ -3126,7 +3126,7 @@
 										"type": "reference",
 										"target": 145,
 										"name": "RevokeApiKeyDTO",
-										"package": "@medusajs/types"
+										"package": "@vikrai/types"
 									}
 								},
 								{
@@ -3149,7 +3149,7 @@
 										"type": "reference",
 										"target": 91,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@vikrai/types"
 									}
 								}
 							],
@@ -3164,7 +3164,7 @@
 										"type": "reference",
 										"target": 105,
 										"name": "ApiKeyDTO",
-										"package": "@medusajs/types"
+										"package": "@vikrai/types"
 									}
 								],
 								"name": "Promise",
@@ -3184,7 +3184,7 @@
 							"fileName": "api-key/service.ts",
 							"line": 322,
 							"character": 2,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/api-key/service.ts#L322"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/api-key/service.ts#L322"
 						}
 					],
 					"signatures": [
@@ -3235,7 +3235,7 @@
 									"fileName": "api-key/service.ts",
 									"line": 322,
 									"character": 2,
-									"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/api-key/service.ts#L322"
+									"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/api-key/service.ts#L322"
 								}
 							],
 							"parameters": [
@@ -3278,7 +3278,7 @@
 										"type": "reference",
 										"target": 91,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@vikrai/types"
 									}
 								}
 							],
@@ -3300,7 +3300,7 @@
 												"type": "reference",
 												"target": 105,
 												"name": "ApiKeyDTO",
-												"package": "@medusajs/types"
+												"package": "@vikrai/types"
 											}
 										]
 									}
@@ -3333,7 +3333,7 @@
 					"fileName": "api-key/service.ts",
 					"line": 15,
 					"character": 17,
-					"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/api-key/service.ts#L15"
+					"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/api-key/service.ts#L15"
 				}
 			],
 			"extendedTypes": [
@@ -3341,7 +3341,7 @@
 					"type": "reference",
 					"target": 73,
 					"name": "IModuleService",
-					"package": "@medusajs/types"
+					"package": "@vikrai/types"
 				}
 			]
 		},
@@ -3361,7 +3361,7 @@
 			},
 			"sources": [
 				{
-					"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/common/common.ts",
+					"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/common/common.ts",
 					"line": 55,
 					"character": 12
 				}
@@ -3376,7 +3376,7 @@
 					"flags": {},
 					"sources": [
 						{
-							"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/common/common.ts",
+							"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/common/common.ts",
 							"line": 55,
 							"character": 30
 						}
@@ -3390,7 +3390,7 @@
 							"flags": {},
 							"sources": [
 								{
-									"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/common/common.ts",
+									"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/common/common.ts",
 									"line": 56,
 									"character": 2
 								}
@@ -3434,7 +3434,7 @@
 										"type": "reference",
 										"target": 214,
 										"name": "FindConfigOrder",
-										"package": "@medusajs/types"
+										"package": "@vikrai/types"
 									},
 									{
 										"type": "literal",
@@ -3492,7 +3492,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/common/common.ts",
+							"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/common/common.ts",
 							"line": 69,
 							"character": 2
 						}
@@ -3528,7 +3528,7 @@
 										"type": "reference",
 										"target": 144,
 										"name": "Entity",
-										"package": "@medusajs/types",
+										"package": "@vikrai/types",
 										"qualifiedName": "FindConfig.Entity",
 										"refersToTypeParameter": true
 									}
@@ -3555,7 +3555,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/common/common.ts",
+							"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/common/common.ts",
 							"line": 74,
 							"character": 2
 						}
@@ -3592,7 +3592,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/common/common.ts",
+							"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/common/common.ts",
 							"line": 79,
 							"character": 2
 						}
@@ -3629,7 +3629,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/common/common.ts",
+							"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/common/common.ts",
 							"line": 84,
 							"character": 2
 						}
@@ -3676,7 +3676,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/common/common.ts",
+							"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/common/common.ts",
 							"line": 90,
 							"character": 2
 						}
@@ -3685,7 +3685,7 @@
 						"type": "reference",
 						"target": 214,
 						"name": "FindConfigOrder",
-						"package": "@medusajs/types"
+						"package": "@vikrai/types"
 					}
 				},
 				{
@@ -3714,7 +3714,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/common/common.ts",
+							"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/common/common.ts",
 							"line": 96,
 							"character": 2
 						}
@@ -3742,7 +3742,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/common/common.ts",
+							"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/common/common.ts",
 							"line": 101,
 							"character": 2
 						}
@@ -3785,7 +3785,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/common/common.ts",
+							"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/common/common.ts",
 							"line": 106,
 							"character": 2
 						}
@@ -3828,7 +3828,7 @@
 			],
 			"sources": [
 				{
-					"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/common/common.ts",
+					"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/common/common.ts",
 					"line": 65,
 					"character": 17
 				}
@@ -3876,7 +3876,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/dal/index.ts",
+							"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/dal/index.ts",
 							"line": 15,
 							"character": 2
 						}
@@ -3894,19 +3894,19 @@
 											"type": "reference",
 											"target": 191,
 											"name": "T",
-											"package": "@medusajs/types",
+											"package": "@vikrai/types",
 											"qualifiedName": "BaseFilterable.T",
 											"refersToTypeParameter": true
 										}
 									],
 									"name": "BaseFilterable",
-									"package": "@medusajs/types"
+									"package": "@vikrai/types"
 								},
 								{
 									"type": "reference",
 									"target": 191,
 									"name": "T",
-									"package": "@medusajs/types",
+									"package": "@vikrai/types",
 									"qualifiedName": "BaseFilterable.T",
 									"refersToTypeParameter": true
 								}
@@ -3932,7 +3932,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/dal/index.ts",
+							"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/dal/index.ts",
 							"line": 20,
 							"character": 2
 						}
@@ -3950,19 +3950,19 @@
 											"type": "reference",
 											"target": 191,
 											"name": "T",
-											"package": "@medusajs/types",
+											"package": "@vikrai/types",
 											"qualifiedName": "BaseFilterable.T",
 											"refersToTypeParameter": true
 										}
 									],
 									"name": "BaseFilterable",
-									"package": "@medusajs/types"
+									"package": "@vikrai/types"
 								},
 								{
 									"type": "reference",
 									"target": 191,
 									"name": "T",
-									"package": "@medusajs/types",
+									"package": "@vikrai/types",
 									"qualifiedName": "BaseFilterable.T",
 									"refersToTypeParameter": true
 								}
@@ -3982,7 +3982,7 @@
 			],
 			"sources": [
 				{
-					"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/dal/index.ts",
+					"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/dal/index.ts",
 					"line": 11,
 					"character": 17
 				}
@@ -4012,7 +4012,7 @@
 			"flags": {},
 			"sources": [
 				{
-					"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/dal/utils.ts",
+					"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/dal/utils.ts",
 					"line": 9,
 					"character": 5
 				}
@@ -4032,7 +4032,7 @@
 					"type": "reference",
 					"target": 266,
 					"name": "T",
-					"package": "@medusajs/types",
+					"package": "@vikrai/types",
 					"refersToTypeParameter": true
 				},
 				"extendsType": {
@@ -4045,14 +4045,14 @@
 						"type": "reference",
 						"target": 266,
 						"name": "T",
-						"package": "@medusajs/types",
+						"package": "@vikrai/types",
 						"refersToTypeParameter": true
 					},
 					"extendsType": {
 						"type": "reference",
 						"target": 289,
 						"name": "Scalar",
-						"package": "@medusajs/types"
+						"package": "@vikrai/types"
 					},
 					"trueType": {
 						"type": "intrinsic",
@@ -4066,12 +4066,12 @@
 								"type": "reference",
 								"target": 266,
 								"name": "T",
-								"package": "@medusajs/types",
+								"package": "@vikrai/types",
 								"refersToTypeParameter": true
 							}
 						],
 						"name": "FilterQuery",
-						"package": "@medusajs/types"
+						"package": "@vikrai/types"
 					}
 				},
 				"falseType": {
@@ -4082,12 +4082,12 @@
 							"type": "reference",
 							"target": 266,
 							"name": "T",
-							"package": "@medusajs/types",
+							"package": "@vikrai/types",
 							"refersToTypeParameter": true
 						}
 					],
 					"name": "FilterValue",
-					"package": "@medusajs/types"
+					"package": "@vikrai/types"
 				}
 			}
 		},
@@ -4099,7 +4099,7 @@
 			"flags": {},
 			"sources": [
 				{
-					"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/dal/utils.ts",
+					"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/dal/utils.ts",
 					"line": 15,
 					"character": 5
 				}
@@ -4126,7 +4126,7 @@
 							"type": "reference",
 							"target": 268,
 							"name": "T",
-							"package": "@medusajs/types",
+							"package": "@vikrai/types",
 							"refersToTypeParameter": true
 						},
 						"extendsType": {
@@ -4157,7 +4157,7 @@
 								"type": "reference",
 								"target": 268,
 								"name": "T",
-								"package": "@medusajs/types",
+								"package": "@vikrai/types",
 								"refersToTypeParameter": true
 							},
 							"extendsType": {
@@ -4191,7 +4191,7 @@
 								"type": "reference",
 								"target": 268,
 								"name": "T",
-								"package": "@medusajs/types",
+								"package": "@vikrai/types",
 								"refersToTypeParameter": true
 							}
 						}
@@ -4207,7 +4207,7 @@
 			"flags": {},
 			"sources": [
 				{
-					"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/dal/utils.ts",
+					"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/dal/utils.ts",
 					"line": 18,
 					"character": 5
 				}
@@ -4280,7 +4280,7 @@
 									"flags": {},
 									"sources": [
 										{
-											"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/dal/utils.ts",
+											"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/dal/utils.ts",
 											"line": 28,
 											"character": 6
 										}
@@ -4294,7 +4294,7 @@
 											"flags": {},
 											"sources": [
 												{
-													"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/dal/utils.ts",
+													"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/dal/utils.ts",
 													"line": 28,
 													"character": 6
 												}
@@ -4317,7 +4317,7 @@
 							],
 							"sources": [
 								{
-									"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/dal/utils.ts",
+									"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/dal/utils.ts",
 									"line": 27,
 									"character": 4
 								}
@@ -4335,7 +4335,7 @@
 			"flags": {},
 			"sources": [
 				{
-					"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/dal/utils.ts",
+					"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/dal/utils.ts",
 					"line": 37,
 					"character": 5
 				}
@@ -4355,7 +4355,7 @@
 					"type": "reference",
 					"target": 328,
 					"name": "T",
-					"package": "@medusajs/types",
+					"package": "@vikrai/types",
 					"refersToTypeParameter": true
 				},
 				"extendsType": {
@@ -4376,7 +4376,7 @@
 							"type": "reference",
 							"target": 328,
 							"name": "T",
-							"package": "@medusajs/types",
+							"package": "@vikrai/types",
 							"refersToTypeParameter": true
 						}
 					],
@@ -4387,7 +4387,7 @@
 					"type": "reference",
 					"target": 328,
 					"name": "T",
-					"package": "@medusajs/types",
+					"package": "@vikrai/types",
 					"refersToTypeParameter": true
 				}
 			}
@@ -4400,7 +4400,7 @@
 			"flags": {},
 			"sources": [
 				{
-					"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/dal/utils.ts",
+					"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/dal/utils.ts",
 					"line": 40,
 					"character": 5
 				}
@@ -4420,7 +4420,7 @@
 					"type": "reference",
 					"target": 326,
 					"name": "T",
-					"package": "@medusajs/types",
+					"package": "@vikrai/types",
 					"refersToTypeParameter": true
 				},
 				"extendsType": {
@@ -4442,7 +4442,7 @@
 								},
 								"sources": [
 									{
-										"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/dal/utils.ts",
+										"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/dal/utils.ts",
 										"line": 41,
 										"character": 2
 									}
@@ -4463,7 +4463,7 @@
 						],
 						"sources": [
 							{
-								"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/dal/utils.ts",
+								"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/dal/utils.ts",
 								"line": 40,
 								"character": 28
 							}
@@ -4481,12 +4481,12 @@
 								"qualifiedName": "PK"
 							},
 							"name": "PK",
-							"package": "@medusajs/types",
+							"package": "@vikrai/types",
 							"refersToTypeParameter": true
 						}
 					],
 					"name": "ReadonlyPrimary",
-					"package": "@medusajs/types"
+					"package": "@vikrai/types"
 				},
 				"falseType": {
 					"type": "conditional",
@@ -4494,7 +4494,7 @@
 						"type": "reference",
 						"target": 326,
 						"name": "T",
-						"package": "@medusajs/types",
+						"package": "@vikrai/types",
 						"refersToTypeParameter": true
 					},
 					"extendsType": {
@@ -4516,7 +4516,7 @@
 									},
 									"sources": [
 										{
-											"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/dal/utils.ts",
+											"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/dal/utils.ts",
 											"line": 45,
 											"character": 6
 										}
@@ -4537,7 +4537,7 @@
 							],
 							"sources": [
 								{
-									"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/dal/utils.ts",
+									"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/dal/utils.ts",
 									"line": 44,
 									"character": 14
 								}
@@ -4558,12 +4558,12 @@
 											"qualifiedName": "PK"
 										},
 										"name": "PK",
-										"package": "@medusajs/types",
+										"package": "@vikrai/types",
 										"refersToTypeParameter": true
 									}
 								],
 								"name": "ReadonlyPrimary",
-								"package": "@medusajs/types"
+								"package": "@vikrai/types"
 							},
 							{
 								"type": "intrinsic",
@@ -4577,7 +4577,7 @@
 							"type": "reference",
 							"target": 326,
 							"name": "T",
-							"package": "@medusajs/types",
+							"package": "@vikrai/types",
 							"refersToTypeParameter": true
 						},
 						"extendsType": {
@@ -4599,7 +4599,7 @@
 										},
 										"sources": [
 											{
-												"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/dal/utils.ts",
+												"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/dal/utils.ts",
 												"line": 49,
 												"character": 6
 											}
@@ -4620,7 +4620,7 @@
 								],
 								"sources": [
 									{
-										"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/dal/utils.ts",
+										"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/dal/utils.ts",
 										"line": 48,
 										"character": 14
 									}
@@ -4638,12 +4638,12 @@
 										"qualifiedName": "PK"
 									},
 									"name": "PK",
-									"package": "@medusajs/types",
+									"package": "@vikrai/types",
 									"refersToTypeParameter": true
 								}
 							],
 							"name": "ReadonlyPrimary",
-							"package": "@medusajs/types"
+							"package": "@vikrai/types"
 						},
 						"falseType": {
 							"type": "conditional",
@@ -4651,7 +4651,7 @@
 								"type": "reference",
 								"target": 326,
 								"name": "T",
-								"package": "@medusajs/types",
+								"package": "@vikrai/types",
 								"refersToTypeParameter": true
 							},
 							"extendsType": {
@@ -4673,7 +4673,7 @@
 											},
 											"sources": [
 												{
-													"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/dal/utils.ts",
+													"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/dal/utils.ts",
 													"line": 53,
 													"character": 6
 												}
@@ -4694,7 +4694,7 @@
 									],
 									"sources": [
 										{
-											"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/dal/utils.ts",
+											"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/dal/utils.ts",
 											"line": 52,
 											"character": 14
 										}
@@ -4712,12 +4712,12 @@
 											"qualifiedName": "PK"
 										},
 										"name": "PK",
-										"package": "@medusajs/types",
+										"package": "@vikrai/types",
 										"refersToTypeParameter": true
 									}
 								],
 								"name": "ReadonlyPrimary",
-								"package": "@medusajs/types"
+								"package": "@vikrai/types"
 							},
 							"falseType": {
 								"type": "intrinsic",
@@ -4736,7 +4736,7 @@
 			"flags": {},
 			"sources": [
 				{
-					"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/dal/utils.ts",
+					"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/dal/utils.ts",
 					"line": 58,
 					"character": 12
 				}
@@ -4769,7 +4769,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/dal/utils.ts",
+									"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/dal/utils.ts",
 									"line": 59,
 									"character": 2
 								}
@@ -4784,12 +4784,12 @@
 											"type": "reference",
 											"target": 213,
 											"name": "T",
-											"package": "@medusajs/types",
+											"package": "@vikrai/types",
 											"refersToTypeParameter": true
 										}
 									],
 									"name": "Query",
-									"package": "@medusajs/types"
+									"package": "@vikrai/types"
 								}
 							}
 						},
@@ -4803,7 +4803,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/dal/utils.ts",
+									"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/dal/utils.ts",
 									"line": 60,
 									"character": 2
 								}
@@ -4818,12 +4818,12 @@
 											"type": "reference",
 											"target": 213,
 											"name": "T",
-											"package": "@medusajs/types",
+											"package": "@vikrai/types",
 											"refersToTypeParameter": true
 										}
 									],
 									"name": "Query",
-									"package": "@medusajs/types"
+									"package": "@vikrai/types"
 								}
 							}
 						},
@@ -4837,7 +4837,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/dal/utils.ts",
+									"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/dal/utils.ts",
 									"line": 61,
 									"character": 2
 								}
@@ -4853,12 +4853,12 @@
 												"type": "reference",
 												"target": 213,
 												"name": "T",
-												"package": "@medusajs/types",
+												"package": "@vikrai/types",
 												"refersToTypeParameter": true
 											}
 										],
 										"name": "ExpandScalar",
-										"package": "@medusajs/types"
+										"package": "@vikrai/types"
 									},
 									{
 										"type": "array",
@@ -4870,12 +4870,12 @@
 													"type": "reference",
 													"target": 213,
 													"name": "T",
-													"package": "@medusajs/types",
+													"package": "@vikrai/types",
 													"refersToTypeParameter": true
 												}
 											],
 											"name": "ExpandScalar",
-											"package": "@medusajs/types"
+											"package": "@vikrai/types"
 										}
 									}
 								]
@@ -4891,7 +4891,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/dal/utils.ts",
+									"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/dal/utils.ts",
 									"line": 62,
 									"character": 2
 								}
@@ -4904,12 +4904,12 @@
 										"type": "reference",
 										"target": 213,
 										"name": "T",
-										"package": "@medusajs/types",
+										"package": "@vikrai/types",
 										"refersToTypeParameter": true
 									}
 								],
 								"name": "ExpandScalar",
-								"package": "@medusajs/types"
+								"package": "@vikrai/types"
 							}
 						},
 						{
@@ -4922,7 +4922,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/dal/utils.ts",
+									"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/dal/utils.ts",
 									"line": 63,
 									"character": 2
 								}
@@ -4937,12 +4937,12 @@
 											"type": "reference",
 											"target": 213,
 											"name": "T",
-											"package": "@medusajs/types",
+											"package": "@vikrai/types",
 											"refersToTypeParameter": true
 										}
 									],
 									"name": "ExpandScalar",
-									"package": "@medusajs/types"
+									"package": "@vikrai/types"
 								}
 							}
 						},
@@ -4956,7 +4956,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/dal/utils.ts",
+									"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/dal/utils.ts",
 									"line": 64,
 									"character": 2
 								}
@@ -4971,12 +4971,12 @@
 											"type": "reference",
 											"target": 213,
 											"name": "T",
-											"package": "@medusajs/types",
+											"package": "@vikrai/types",
 											"refersToTypeParameter": true
 										}
 									],
 									"name": "ExpandScalar",
-									"package": "@medusajs/types"
+									"package": "@vikrai/types"
 								}
 							}
 						},
@@ -4990,7 +4990,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/dal/utils.ts",
+									"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/dal/utils.ts",
 									"line": 65,
 									"character": 2
 								}
@@ -5003,12 +5003,12 @@
 										"type": "reference",
 										"target": 213,
 										"name": "T",
-										"package": "@medusajs/types",
+										"package": "@vikrai/types",
 										"refersToTypeParameter": true
 									}
 								],
 								"name": "Query",
-								"package": "@medusajs/types"
+								"package": "@vikrai/types"
 							}
 						},
 						{
@@ -5021,7 +5021,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/dal/utils.ts",
+									"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/dal/utils.ts",
 									"line": 66,
 									"character": 2
 								}
@@ -5034,12 +5034,12 @@
 										"type": "reference",
 										"target": 213,
 										"name": "T",
-										"package": "@medusajs/types",
+										"package": "@vikrai/types",
 										"refersToTypeParameter": true
 									}
 								],
 								"name": "ExpandScalar",
-								"package": "@medusajs/types"
+								"package": "@vikrai/types"
 							}
 						},
 						{
@@ -5052,7 +5052,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/dal/utils.ts",
+									"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/dal/utils.ts",
 									"line": 67,
 									"character": 2
 								}
@@ -5065,12 +5065,12 @@
 										"type": "reference",
 										"target": 213,
 										"name": "T",
-										"package": "@medusajs/types",
+										"package": "@vikrai/types",
 										"refersToTypeParameter": true
 									}
 								],
 								"name": "ExpandScalar",
-								"package": "@medusajs/types"
+								"package": "@vikrai/types"
 							}
 						},
 						{
@@ -5083,7 +5083,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/dal/utils.ts",
+									"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/dal/utils.ts",
 									"line": 68,
 									"character": 2
 								}
@@ -5096,12 +5096,12 @@
 										"type": "reference",
 										"target": 213,
 										"name": "T",
-										"package": "@medusajs/types",
+										"package": "@vikrai/types",
 										"refersToTypeParameter": true
 									}
 								],
 								"name": "ExpandScalar",
-								"package": "@medusajs/types"
+								"package": "@vikrai/types"
 							}
 						},
 						{
@@ -5114,7 +5114,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/dal/utils.ts",
+									"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/dal/utils.ts",
 									"line": 69,
 									"character": 2
 								}
@@ -5127,12 +5127,12 @@
 										"type": "reference",
 										"target": 213,
 										"name": "T",
-										"package": "@medusajs/types",
+										"package": "@vikrai/types",
 										"refersToTypeParameter": true
 									}
 								],
 								"name": "ExpandScalar",
-								"package": "@medusajs/types"
+								"package": "@vikrai/types"
 							}
 						},
 						{
@@ -5145,7 +5145,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/dal/utils.ts",
+									"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/dal/utils.ts",
 									"line": 70,
 									"character": 2
 								}
@@ -5165,7 +5165,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/dal/utils.ts",
+									"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/dal/utils.ts",
 									"line": 71,
 									"character": 2
 								}
@@ -5185,7 +5185,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/dal/utils.ts",
+									"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/dal/utils.ts",
 									"line": 72,
 									"character": 2
 								}
@@ -5205,7 +5205,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/dal/utils.ts",
+									"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/dal/utils.ts",
 									"line": 73,
 									"character": 2
 								}
@@ -5225,7 +5225,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/dal/utils.ts",
+									"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/dal/utils.ts",
 									"line": 74,
 									"character": 2
 								}
@@ -5248,7 +5248,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/dal/utils.ts",
+									"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/dal/utils.ts",
 									"line": 75,
 									"character": 2
 								}
@@ -5271,7 +5271,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/dal/utils.ts",
+									"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/dal/utils.ts",
 									"line": 76,
 									"character": 2
 								}
@@ -5294,7 +5294,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/dal/utils.ts",
+									"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/dal/utils.ts",
 									"line": 77,
 									"character": 2
 								}
@@ -5333,7 +5333,7 @@
 					],
 					"sources": [
 						{
-							"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/dal/utils.ts",
+							"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/dal/utils.ts",
 							"line": 58,
 							"character": 29
 						}
@@ -5349,7 +5349,7 @@
 			"flags": {},
 			"sources": [
 				{
-					"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/dal/utils.ts",
+					"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/dal/utils.ts",
 					"line": 80,
 					"character": 5
 				}
@@ -5370,7 +5370,7 @@
 						"type": "reference",
 						"target": 315,
 						"name": "T",
-						"package": "@medusajs/types",
+						"package": "@vikrai/types",
 						"refersToTypeParameter": true
 					},
 					{
@@ -5381,12 +5381,12 @@
 								"type": "reference",
 								"target": 315,
 								"name": "T",
-								"package": "@medusajs/types",
+								"package": "@vikrai/types",
 								"refersToTypeParameter": true
 							}
 						],
 						"name": "ExpandScalar",
-						"package": "@medusajs/types"
+						"package": "@vikrai/types"
 					},
 					{
 						"type": "reference",
@@ -5396,12 +5396,12 @@
 								"type": "reference",
 								"target": 315,
 								"name": "T",
-								"package": "@medusajs/types",
+								"package": "@vikrai/types",
 								"refersToTypeParameter": true
 							}
 						],
 						"name": "Primary",
-						"package": "@medusajs/types"
+						"package": "@vikrai/types"
 					}
 				]
 			}
@@ -5414,7 +5414,7 @@
 			"flags": {},
 			"sources": [
 				{
-					"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/dal/utils.ts",
+					"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/dal/utils.ts",
 					"line": 81,
 					"character": 5
 				}
@@ -5443,16 +5443,16 @@
 										"type": "reference",
 										"target": 297,
 										"name": "T",
-										"package": "@medusajs/types",
+										"package": "@vikrai/types",
 										"refersToTypeParameter": true
 									}
 								],
 								"name": "FilterValue2",
-								"package": "@medusajs/types"
+								"package": "@vikrai/types"
 							}
 						],
 						"name": "OperatorMap",
-						"package": "@medusajs/types"
+						"package": "@vikrai/types"
 					},
 					{
 						"type": "reference",
@@ -5462,12 +5462,12 @@
 								"type": "reference",
 								"target": 297,
 								"name": "T",
-								"package": "@medusajs/types",
+								"package": "@vikrai/types",
 								"refersToTypeParameter": true
 							}
 						],
 						"name": "FilterValue2",
-						"package": "@medusajs/types"
+						"package": "@vikrai/types"
 					},
 					{
 						"type": "array",
@@ -5479,12 +5479,12 @@
 									"type": "reference",
 									"target": 297,
 									"name": "T",
-									"package": "@medusajs/types",
+									"package": "@vikrai/types",
 									"refersToTypeParameter": true
 								}
 							],
 							"name": "FilterValue2",
-							"package": "@medusajs/types"
+							"package": "@vikrai/types"
 						}
 					},
 					{
@@ -5502,7 +5502,7 @@
 			"flags": {},
 			"sources": [
 				{
-					"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/dal/utils.ts",
+					"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/dal/utils.ts",
 					"line": 87,
 					"character": 5
 				}
@@ -5537,7 +5537,7 @@
 			"flags": {},
 			"sources": [
 				{
-					"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/dal/utils.ts",
+					"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/dal/utils.ts",
 					"line": 89,
 					"character": 12
 				}
@@ -5576,7 +5576,7 @@
 						"type": "reference",
 						"target": 312,
 						"name": "T",
-						"package": "@medusajs/types",
+						"package": "@vikrai/types",
 						"refersToTypeParameter": true
 					}
 				},
@@ -5591,14 +5591,14 @@
 								"qualifiedName": "Key"
 							},
 							"name": "Key",
-							"package": "@medusajs/types",
+							"package": "@vikrai/types",
 							"refersToTypeParameter": true
 						},
 						"objectType": {
 							"type": "reference",
 							"target": 312,
 							"name": "T",
-							"package": "@medusajs/types",
+							"package": "@vikrai/types",
 							"refersToTypeParameter": true
 						}
 					},
@@ -5648,14 +5648,14 @@
 										"qualifiedName": "Key"
 									},
 									"name": "Key",
-									"package": "@medusajs/types",
+									"package": "@vikrai/types",
 									"refersToTypeParameter": true
 								},
 								"objectType": {
 									"type": "reference",
 									"target": 312,
 									"name": "T",
-									"package": "@medusajs/types",
+									"package": "@vikrai/types",
 									"refersToTypeParameter": true
 								}
 							},
@@ -5672,20 +5672,20 @@
 												"qualifiedName": "Key"
 											},
 											"name": "Key",
-											"package": "@medusajs/types",
+											"package": "@vikrai/types",
 											"refersToTypeParameter": true
 										},
 										"objectType": {
 											"type": "reference",
 											"target": 312,
 											"name": "T",
-											"package": "@medusajs/types",
+											"package": "@vikrai/types",
 											"refersToTypeParameter": true
 										}
 									}
 								],
 								"name": "OperatorMap",
-								"package": "@medusajs/types"
+								"package": "@vikrai/types"
 							}
 						]
 					},
@@ -5700,14 +5700,14 @@
 									"qualifiedName": "Key"
 								},
 								"name": "Key",
-								"package": "@medusajs/types",
+								"package": "@vikrai/types",
 								"refersToTypeParameter": true
 							},
 							"objectType": {
 								"type": "reference",
 								"target": 312,
 								"name": "T",
-								"package": "@medusajs/types",
+								"package": "@vikrai/types",
 								"refersToTypeParameter": true
 							}
 						},
@@ -5724,7 +5724,7 @@
 									"qualifiedName": "U"
 								},
 								"name": "U",
-								"package": "@medusajs/types",
+								"package": "@vikrai/types",
 								"refersToTypeParameter": true
 							},
 							"extendsType": {
@@ -5737,7 +5737,7 @@
 									"flags": {},
 									"sources": [
 										{
-											"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/dal/utils.ts",
+											"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/dal/utils.ts",
 											"line": 99,
 											"character": 16
 										}
@@ -5751,7 +5751,7 @@
 											"flags": {},
 											"sources": [
 												{
-													"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/dal/utils.ts",
+													"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/dal/utils.ts",
 													"line": 99,
 													"character": 18
 												}
@@ -5776,7 +5776,7 @@
 													"qualifiedName": "V"
 												},
 												"name": "V",
-												"package": "@medusajs/types",
+												"package": "@vikrai/types",
 												"refersToTypeParameter": true
 											}
 										}
@@ -5792,7 +5792,7 @@
 										"qualifiedName": "V"
 									},
 									"name": "V",
-									"package": "@medusajs/types",
+									"package": "@vikrai/types",
 									"refersToTypeParameter": true
 								},
 								"extendsType": {
@@ -5817,7 +5817,7 @@
 														"qualifiedName": "V"
 													},
 													"name": "V",
-													"package": "@medusajs/types",
+													"package": "@vikrai/types",
 													"refersToTypeParameter": true
 												}
 											],
@@ -5830,19 +5830,19 @@
 												"type": "reference",
 												"target": 313,
 												"name": "Prev",
-												"package": "@medusajs/types",
+												"package": "@vikrai/types",
 												"refersToTypeParameter": true
 											},
 											"objectType": {
 												"type": "reference",
 												"target": 316,
 												"name": "PrevLimit",
-												"package": "@medusajs/types"
+												"package": "@vikrai/types"
 											}
 										}
 									],
 									"name": "FilterQuery",
-									"package": "@medusajs/types"
+									"package": "@vikrai/types"
 								},
 								"falseType": {
 									"type": "intrinsic",
@@ -5871,7 +5871,7 @@
 			"flags": {},
 			"sources": [
 				{
-					"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/dal/utils.ts",
+					"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/dal/utils.ts",
 					"line": 107,
 					"character": 12
 				}
@@ -5910,7 +5910,7 @@
 					"type": "reference",
 					"target": 295,
 					"name": "Prev",
-					"package": "@medusajs/types",
+					"package": "@vikrai/types",
 					"refersToTypeParameter": true
 				},
 				"extendsType": {
@@ -5927,7 +5927,7 @@
 						"type": "reference",
 						"target": 294,
 						"name": "T",
-						"package": "@medusajs/types",
+						"package": "@vikrai/types",
 						"refersToTypeParameter": true
 					},
 					"extendsType": {
@@ -5940,7 +5940,7 @@
 							}
 						],
 						"name": "Constructor",
-						"package": "@medusajs/types"
+						"package": "@vikrai/types"
 					},
 					"trueType": {
 						"type": "reference",
@@ -5953,19 +5953,19 @@
 									"qualifiedName": "Prototype"
 								},
 								"name": "Prototype",
-								"package": "@medusajs/types",
+								"package": "@vikrai/types",
 								"refersToTypeParameter": true
 							},
 							{
 								"type": "reference",
 								"target": 295,
 								"name": "Prev",
-								"package": "@medusajs/types",
+								"package": "@vikrai/types",
 								"refersToTypeParameter": true
 							}
 						],
 						"name": "FilterQueryProperties",
-						"package": "@medusajs/types"
+						"package": "@vikrai/types"
 					},
 					"falseType": {
 						"type": "reference",
@@ -5975,19 +5975,19 @@
 								"type": "reference",
 								"target": 294,
 								"name": "T",
-								"package": "@medusajs/types",
+								"package": "@vikrai/types",
 								"refersToTypeParameter": true
 							},
 							{
 								"type": "reference",
 								"target": 295,
 								"name": "Prev",
-								"package": "@medusajs/types",
+								"package": "@vikrai/types",
 								"refersToTypeParameter": true
 							}
 						],
 						"name": "FilterQueryProperties",
-						"package": "@medusajs/types"
+						"package": "@vikrai/types"
 					}
 				}
 			}
@@ -6000,7 +6000,7 @@
 			"flags": {},
 			"sources": [
 				{
-					"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/event-bus/common.ts",
+					"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/event-bus/common.ts",
 					"line": 17,
 					"character": 12
 				}
@@ -6062,7 +6062,7 @@
 									},
 									"sources": [
 										{
-											"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/event-bus/common.ts",
+											"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/event-bus/common.ts",
 											"line": 24,
 											"character": 2
 										}
@@ -6083,7 +6083,7 @@
 							],
 							"sources": [
 								{
-									"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/event-bus/common.ts",
+									"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/event-bus/common.ts",
 									"line": 17,
 									"character": 54
 								}
@@ -6101,7 +6101,7 @@
 			"flags": {},
 			"sources": [
 				{
-					"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/event-bus/common.ts",
+					"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/event-bus/common.ts",
 					"line": 27,
 					"character": 12
 				}
@@ -6155,7 +6155,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/event-bus/common.ts",
+									"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/event-bus/common.ts",
 									"line": 34,
 									"character": 2
 								}
@@ -6183,7 +6183,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/event-bus/common.ts",
+									"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/event-bus/common.ts",
 									"line": 38,
 									"character": 2
 								}
@@ -6192,7 +6192,7 @@
 								"type": "reference",
 								"target": 298,
 								"name": "EventMetadata",
-								"package": "@medusajs/types"
+								"package": "@vikrai/types"
 							}
 						},
 						{
@@ -6211,7 +6211,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/event-bus/common.ts",
+									"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/event-bus/common.ts",
 									"line": 42,
 									"character": 2
 								}
@@ -6220,7 +6220,7 @@
 								"type": "reference",
 								"target": 288,
 								"name": "TData",
-								"package": "@medusajs/types",
+								"package": "@vikrai/types",
 								"refersToTypeParameter": true
 							}
 						}
@@ -6237,7 +6237,7 @@
 					],
 					"sources": [
 						{
-							"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/event-bus/common.ts",
+							"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/event-bus/common.ts",
 							"line": 27,
 							"character": 37
 						}
@@ -6261,7 +6261,7 @@
 			},
 			"sources": [
 				{
-					"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/event-bus/common.ts",
+					"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/event-bus/common.ts",
 					"line": 48,
 					"character": 12
 				}
@@ -6290,12 +6290,12 @@
 								"type": "reference",
 								"target": 247,
 								"name": "TData",
-								"package": "@medusajs/types",
+								"package": "@vikrai/types",
 								"refersToTypeParameter": true
 							}
 						],
 						"name": "Event",
-						"package": "@medusajs/types"
+						"package": "@vikrai/types"
 					},
 					{
 						"type": "reflection",
@@ -6316,7 +6316,7 @@
 									},
 									"sources": [
 										{
-											"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/event-bus/common.ts",
+											"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/event-bus/common.ts",
 											"line": 49,
 											"character": 2
 										}
@@ -6352,7 +6352,7 @@
 							],
 							"sources": [
 								{
-									"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/event-bus/common.ts",
+									"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/event-bus/common.ts",
 									"line": 48,
 									"character": 54
 								}
@@ -6370,7 +6370,7 @@
 			"flags": {},
 			"sources": [
 				{
-					"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/event-bus/common.ts",
+					"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/event-bus/common.ts",
 					"line": 52,
 					"character": 12
 				}
@@ -6405,7 +6405,7 @@
 							"flags": {},
 							"sources": [
 								{
-									"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/event-bus/common.ts",
+									"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/event-bus/common.ts",
 									"line": 53,
 									"character": 2
 								}
@@ -6423,7 +6423,7 @@
 							"flags": {},
 							"sources": [
 								{
-									"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/event-bus/common.ts",
+									"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/event-bus/common.ts",
 									"line": 54,
 									"character": 2
 								}
@@ -6432,7 +6432,7 @@
 								"type": "reference",
 								"target": 264,
 								"name": "TData",
-								"package": "@medusajs/types",
+								"package": "@vikrai/types",
 								"refersToTypeParameter": true
 							}
 						},
@@ -6444,7 +6444,7 @@
 							"flags": {},
 							"sources": [
 								{
-									"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/event-bus/common.ts",
+									"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/event-bus/common.ts",
 									"line": 55,
 									"character": 2
 								}
@@ -6462,7 +6462,7 @@
 							"flags": {},
 							"sources": [
 								{
-									"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/event-bus/common.ts",
+									"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/event-bus/common.ts",
 									"line": 56,
 									"character": 2
 								}
@@ -6482,7 +6482,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/event-bus/common.ts",
+									"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/event-bus/common.ts",
 									"line": 57,
 									"character": 2
 								}
@@ -6502,7 +6502,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/event-bus/common.ts",
+									"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/event-bus/common.ts",
 									"line": 58,
 									"character": 2
 								}
@@ -6518,7 +6518,7 @@
 										"type": "reference",
 										"target": 91,
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@vikrai/types"
 									},
 									{
 										"type": "literal",
@@ -6539,7 +6539,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/event-bus/common.ts",
+									"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/event-bus/common.ts",
 									"line": 59,
 									"character": 2
 								}
@@ -6581,7 +6581,7 @@
 					],
 					"sources": [
 						{
-							"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/event-bus/common.ts",
+							"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/event-bus/common.ts",
 							"line": 52,
 							"character": 44
 						}
@@ -6597,7 +6597,7 @@
 			"flags": {},
 			"sources": [
 				{
-					"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/joiner/index.ts",
+					"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/joiner/index.ts",
 					"line": 1,
 					"character": 12
 				}
@@ -6619,7 +6619,7 @@
 							"flags": {},
 							"sources": [
 								{
-									"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/joiner/index.ts",
+									"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/joiner/index.ts",
 									"line": 2,
 									"character": 2
 								}
@@ -6637,7 +6637,7 @@
 							"flags": {},
 							"sources": [
 								{
-									"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/joiner/index.ts",
+									"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/joiner/index.ts",
 									"line": 3,
 									"character": 2
 								}
@@ -6655,7 +6655,7 @@
 							"flags": {},
 							"sources": [
 								{
-									"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/joiner/index.ts",
+									"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/joiner/index.ts",
 									"line": 4,
 									"character": 2
 								}
@@ -6673,7 +6673,7 @@
 							"flags": {},
 							"sources": [
 								{
-									"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/joiner/index.ts",
+									"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/joiner/index.ts",
 									"line": 5,
 									"character": 2
 								}
@@ -6693,7 +6693,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/joiner/index.ts",
+									"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/joiner/index.ts",
 									"line": 6,
 									"character": 2
 								}
@@ -6721,7 +6721,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/joiner/index.ts",
+									"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/joiner/index.ts",
 									"line": 10,
 									"character": 2
 								}
@@ -6749,7 +6749,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/joiner/index.ts",
+									"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/joiner/index.ts",
 									"line": 14,
 									"character": 2
 								}
@@ -6777,7 +6777,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/joiner/index.ts",
+									"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/joiner/index.ts",
 									"line": 18,
 									"character": 2
 								}
@@ -6820,7 +6820,7 @@
 					],
 					"sources": [
 						{
-							"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/joiner/index.ts",
+							"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/joiner/index.ts",
 							"line": 1,
 							"character": 33
 						}
@@ -6843,7 +6843,7 @@
 					"flags": {},
 					"sources": [
 						{
-							"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/joiner/index.ts",
+							"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/joiner/index.ts",
 							"line": 22,
 							"character": 2
 						}
@@ -6875,7 +6875,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/joiner/index.ts",
+							"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/joiner/index.ts",
 							"line": 23,
 							"character": 2
 						}
@@ -6903,7 +6903,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/joiner/index.ts",
+							"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/joiner/index.ts",
 							"line": 27,
 							"character": 2
 						}
@@ -6941,7 +6941,7 @@
 			],
 			"sources": [
 				{
-					"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/joiner/index.ts",
+					"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/joiner/index.ts",
 					"line": 21,
 					"character": 17
 				}
@@ -6962,7 +6962,7 @@
 					"flags": {},
 					"sources": [
 						{
-							"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/joiner/index.ts",
+							"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/joiner/index.ts",
 							"line": 31,
 							"character": 2
 						}
@@ -6990,7 +6990,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/joiner/index.ts",
+							"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/joiner/index.ts",
 							"line": 35,
 							"character": 2
 						}
@@ -7002,7 +7002,7 @@
 								"type": "reference",
 								"target": 269,
 								"name": "JoinerServiceConfigAlias",
-								"package": "@medusajs/types"
+								"package": "@vikrai/types"
 							},
 							{
 								"type": "array",
@@ -7010,7 +7010,7 @@
 									"type": "reference",
 									"target": 269,
 									"name": "JoinerServiceConfigAlias",
-									"package": "@medusajs/types"
+									"package": "@vikrai/types"
 								}
 							}
 						]
@@ -7034,7 +7034,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/joiner/index.ts",
+							"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/joiner/index.ts",
 							"line": 39,
 							"character": 2
 						}
@@ -7074,7 +7074,7 @@
 													"flags": {},
 													"sources": [
 														{
-															"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/joiner/index.ts",
+															"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/joiner/index.ts",
 															"line": 43,
 															"character": 8
 														}
@@ -7092,7 +7092,7 @@
 													"flags": {},
 													"sources": [
 														{
-															"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/joiner/index.ts",
+															"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/joiner/index.ts",
 															"line": 44,
 															"character": 8
 														}
@@ -7117,7 +7117,7 @@
 											],
 											"sources": [
 												{
-													"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/joiner/index.ts",
+													"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/joiner/index.ts",
 													"line": 42,
 													"character": 6
 												}
@@ -7139,7 +7139,7 @@
 					"flags": {},
 					"sources": [
 						{
-							"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/joiner/index.ts",
+							"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/joiner/index.ts",
 							"line": 47,
 							"character": 2
 						}
@@ -7162,7 +7162,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/joiner/index.ts",
+							"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/joiner/index.ts",
 							"line": 48,
 							"character": 2
 						}
@@ -7173,7 +7173,7 @@
 							"type": "reference",
 							"target": 273,
 							"name": "JoinerRelationship",
-							"package": "@medusajs/types"
+							"package": "@vikrai/types"
 						}
 					}
 				},
@@ -7187,7 +7187,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/joiner/index.ts",
+							"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/joiner/index.ts",
 							"line": 49,
 							"character": 2
 						}
@@ -7211,7 +7211,7 @@
 										"flags": {},
 										"sources": [
 											{
-												"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/joiner/index.ts",
+												"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/joiner/index.ts",
 												"line": 50,
 												"character": 4
 											}
@@ -7231,7 +7231,7 @@
 										},
 										"sources": [
 											{
-												"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/joiner/index.ts",
+												"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/joiner/index.ts",
 												"line": 51,
 												"character": 4
 											}
@@ -7249,7 +7249,7 @@
 										"flags": {},
 										"sources": [
 											{
-												"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/joiner/index.ts",
+												"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/joiner/index.ts",
 												"line": 52,
 												"character": 4
 											}
@@ -7258,7 +7258,7 @@
 											"type": "reference",
 											"target": 273,
 											"name": "JoinerRelationship",
-											"package": "@medusajs/types"
+											"package": "@vikrai/types"
 										}
 									}
 								],
@@ -7274,7 +7274,7 @@
 								],
 								"sources": [
 									{
-										"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/joiner/index.ts",
+										"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/joiner/index.ts",
 										"line": 49,
 										"character": 12
 									}
@@ -7301,7 +7301,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/joiner/index.ts",
+							"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/joiner/index.ts",
 							"line": 57,
 							"character": 2
 						}
@@ -7343,7 +7343,7 @@
 			],
 			"sources": [
 				{
-					"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/joiner/index.ts",
+					"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/joiner/index.ts",
 					"line": 30,
 					"character": 17
 				}
@@ -7357,7 +7357,7 @@
 			"flags": {},
 			"sources": [
 				{
-					"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/modules-sdk/index.ts",
+					"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/modules-sdk/index.ts",
 					"line": 21,
 					"character": 12
 				}
@@ -7381,7 +7381,7 @@
 					"flags": {},
 					"sources": [
 						{
-							"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/modules-sdk/index.ts",
+							"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/modules-sdk/index.ts",
 							"line": 21,
 							"character": 29
 						}
@@ -7418,7 +7418,7 @@
 										"type": "reference",
 										"target": 307,
 										"name": "T",
-										"package": "@medusajs/types",
+										"package": "@vikrai/types",
 										"refersToTypeParameter": true
 									},
 									{
@@ -7431,7 +7431,7 @@
 											"flags": {},
 											"sources": [
 												{
-													"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/modules-sdk/index.ts",
+													"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/modules-sdk/index.ts",
 													"line": 21,
 													"character": 58
 												}
@@ -7447,7 +7447,7 @@
 														"type": "reference",
 														"target": 307,
 														"name": "T",
-														"package": "@medusajs/types",
+														"package": "@vikrai/types",
 														"refersToTypeParameter": true
 													}
 												}
@@ -7469,7 +7469,7 @@
 			"flags": {},
 			"sources": [
 				{
-					"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/modules-sdk/index.ts",
+					"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/modules-sdk/index.ts",
 					"line": 143,
 					"character": 12
 				}
@@ -7502,7 +7502,7 @@
 									"flags": {},
 									"sources": [
 										{
-											"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/modules-sdk/index.ts",
+											"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/modules-sdk/index.ts",
 											"line": 146,
 											"character": 4
 										}
@@ -7607,7 +7607,7 @@
 									},
 									"sources": [
 										{
-											"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/modules-sdk/index.ts",
+											"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/modules-sdk/index.ts",
 											"line": 168,
 											"character": 4
 										}
@@ -7627,7 +7627,7 @@
 									},
 									"sources": [
 										{
-											"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/modules-sdk/index.ts",
+											"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/modules-sdk/index.ts",
 											"line": 169,
 											"character": 4
 										}
@@ -7655,7 +7655,7 @@
 									},
 									"sources": [
 										{
-											"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/modules-sdk/index.ts",
+											"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/modules-sdk/index.ts",
 											"line": 173,
 											"character": 4
 										}
@@ -7694,7 +7694,7 @@
 							],
 							"sources": [
 								{
-									"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/modules-sdk/index.ts",
+									"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/modules-sdk/index.ts",
 									"line": 145,
 									"character": 2
 								}
@@ -7714,7 +7714,7 @@
 			"flags": {},
 			"sources": [
 				{
-					"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/modules-sdk/index.ts",
+					"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/modules-sdk/index.ts",
 					"line": 191,
 					"character": 12
 				}
@@ -7733,7 +7733,7 @@
 								"type": "reference",
 								"target": 219,
 								"name": "JoinerServiceConfig",
-								"package": "@medusajs/types"
+								"package": "@vikrai/types"
 							},
 							{
 								"type": "union",
@@ -7787,7 +7787,7 @@
 									},
 									"sources": [
 										{
-											"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/modules-sdk/index.ts",
+											"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/modules-sdk/index.ts",
 											"line": 198,
 											"character": 2
 										}
@@ -7807,7 +7807,7 @@
 									},
 									"sources": [
 										{
-											"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/modules-sdk/index.ts",
+											"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/modules-sdk/index.ts",
 											"line": 199,
 											"character": 2
 										}
@@ -7818,7 +7818,7 @@
 											"type": "reference",
 											"target": 234,
 											"name": "ModuleJoinerRelationship",
-											"package": "@medusajs/types"
+											"package": "@vikrai/types"
 										}
 									}
 								},
@@ -7832,7 +7832,7 @@
 									},
 									"sources": [
 										{
-											"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/modules-sdk/index.ts",
+											"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/modules-sdk/index.ts",
 											"line": 200,
 											"character": 2
 										}
@@ -7856,7 +7856,7 @@
 														"flags": {},
 														"sources": [
 															{
-																"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/modules-sdk/index.ts",
+																"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/modules-sdk/index.ts",
 																"line": 201,
 																"character": 4
 															}
@@ -7876,7 +7876,7 @@
 														},
 														"sources": [
 															{
-																"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/modules-sdk/index.ts",
+																"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/modules-sdk/index.ts",
 																"line": 202,
 																"character": 4
 															}
@@ -7896,7 +7896,7 @@
 														},
 														"sources": [
 															{
-																"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/modules-sdk/index.ts",
+																"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/modules-sdk/index.ts",
 																"line": 203,
 																"character": 4
 															}
@@ -7936,7 +7936,7 @@
 																						"flags": {},
 																						"sources": [
 																							{
-																								"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/modules-sdk/index.ts",
+																								"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/modules-sdk/index.ts",
 																								"line": 207,
 																								"character": 10
 																							}
@@ -7956,7 +7956,7 @@
 																						},
 																						"sources": [
 																							{
-																								"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/modules-sdk/index.ts",
+																								"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/modules-sdk/index.ts",
 																								"line": 208,
 																								"character": 10
 																							}
@@ -7979,7 +7979,7 @@
 																						},
 																						"sources": [
 																							{
-																								"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/modules-sdk/index.ts",
+																								"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/modules-sdk/index.ts",
 																								"line": 209,
 																								"character": 10
 																							}
@@ -8002,7 +8002,7 @@
 																				],
 																				"sources": [
 																					{
-																						"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/modules-sdk/index.ts",
+																						"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/modules-sdk/index.ts",
 																						"line": 206,
 																						"character": 8
 																					}
@@ -8024,7 +8024,7 @@
 														"flags": {},
 														"sources": [
 															{
-																"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/modules-sdk/index.ts",
+																"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/modules-sdk/index.ts",
 																"line": 212,
 																"character": 4
 															}
@@ -8040,7 +8040,7 @@
 																	"type": "reference",
 																	"target": 234,
 																	"name": "ModuleJoinerRelationship",
-																	"package": "@medusajs/types"
+																	"package": "@vikrai/types"
 																},
 																{
 																	"type": "literal",
@@ -8065,7 +8065,7 @@
 												],
 												"sources": [
 													{
-														"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/modules-sdk/index.ts",
+														"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/modules-sdk/index.ts",
 														"line": 200,
 														"character": 12
 													}
@@ -8084,7 +8084,7 @@
 									},
 									"sources": [
 										{
-											"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/modules-sdk/index.ts",
+											"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/modules-sdk/index.ts",
 											"line": 214,
 											"character": 2
 										}
@@ -8104,7 +8104,7 @@
 									},
 									"sources": [
 										{
-											"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/modules-sdk/index.ts",
+											"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/modules-sdk/index.ts",
 											"line": 215,
 											"character": 2
 										}
@@ -8135,7 +8135,7 @@
 									},
 									"sources": [
 										{
-											"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/modules-sdk/index.ts",
+											"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/modules-sdk/index.ts",
 											"line": 219,
 											"character": 2
 										}
@@ -8163,7 +8163,7 @@
 									},
 									"sources": [
 										{
-											"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/modules-sdk/index.ts",
+											"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/modules-sdk/index.ts",
 											"line": 223,
 											"character": 2
 										}
@@ -8206,7 +8206,7 @@
 									},
 									"sources": [
 										{
-											"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/modules-sdk/index.ts",
+											"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/modules-sdk/index.ts",
 											"line": 227,
 											"character": 2
 										}
@@ -8234,7 +8234,7 @@
 									},
 									"sources": [
 										{
-											"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/modules-sdk/index.ts",
+											"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/modules-sdk/index.ts",
 											"line": 232,
 											"character": 2
 										}
@@ -8257,7 +8257,7 @@
 									},
 									"sources": [
 										{
-											"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/modules-sdk/index.ts",
+											"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/modules-sdk/index.ts",
 											"line": 233,
 											"character": 2
 										}
@@ -8289,7 +8289,7 @@
 													},
 													"sources": [
 														{
-															"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/modules-sdk/index.ts",
+															"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/modules-sdk/index.ts",
 															"line": 237,
 															"character": 4
 														}
@@ -8317,7 +8317,7 @@
 													},
 													"sources": [
 														{
-															"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/modules-sdk/index.ts",
+															"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/modules-sdk/index.ts",
 															"line": 241,
 															"character": 4
 														}
@@ -8337,7 +8337,7 @@
 													},
 													"sources": [
 														{
-															"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/modules-sdk/index.ts",
+															"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/modules-sdk/index.ts",
 															"line": 242,
 															"character": 4
 														}
@@ -8346,7 +8346,7 @@
 														"type": "reference",
 														"target": 238,
 														"name": "LinkModulesExtraFields",
-														"package": "@medusajs/types"
+														"package": "@vikrai/types"
 													}
 												}
 											],
@@ -8362,7 +8362,7 @@
 											],
 											"sources": [
 												{
-													"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/modules-sdk/index.ts",
+													"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/modules-sdk/index.ts",
 													"line": 233,
 													"character": 19
 												}
@@ -8390,7 +8390,7 @@
 							],
 							"sources": [
 								{
-									"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/modules-sdk/index.ts",
+									"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/modules-sdk/index.ts",
 									"line": 194,
 									"character": 4
 								}
@@ -8408,7 +8408,7 @@
 			"flags": {},
 			"sources": [
 				{
-					"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/modules-sdk/index.ts",
+					"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/modules-sdk/index.ts",
 					"line": 246,
 					"character": 20
 				}
@@ -8420,7 +8420,7 @@
 						"type": "reference",
 						"target": 273,
 						"name": "JoinerRelationship",
-						"package": "@medusajs/types"
+						"package": "@vikrai/types"
 					},
 					{
 						"type": "reflection",
@@ -8449,7 +8449,7 @@
 									},
 									"sources": [
 										{
-											"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/modules-sdk/index.ts",
+											"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/modules-sdk/index.ts",
 											"line": 250,
 											"character": 2
 										}
@@ -8477,7 +8477,7 @@
 									},
 									"sources": [
 										{
-											"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/modules-sdk/index.ts",
+											"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/modules-sdk/index.ts",
 											"line": 255,
 											"character": 2
 										}
@@ -8499,7 +8499,7 @@
 							],
 							"sources": [
 								{
-									"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/modules-sdk/index.ts",
+									"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/modules-sdk/index.ts",
 									"line": 246,
 									"character": 68
 								}
@@ -8526,7 +8526,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/modules-sdk/index.ts",
+							"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/modules-sdk/index.ts",
 							"line": 319,
 							"character": 2
 						}
@@ -8546,7 +8546,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/modules-sdk/index.ts",
+									"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/modules-sdk/index.ts",
 									"line": 319,
 									"character": 2
 								}
@@ -8555,7 +8555,7 @@
 								"type": "reference",
 								"target": 148,
 								"name": "ModuleJoinerConfig",
-								"package": "@medusajs/types"
+								"package": "@vikrai/types"
 							}
 						}
 					]
@@ -8576,7 +8576,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/modules-sdk/index.ts",
+							"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/modules-sdk/index.ts",
 							"line": 324,
 							"character": 2
 						}
@@ -8600,7 +8600,7 @@
 									},
 									"sources": [
 										{
-											"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/modules-sdk/index.ts",
+											"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/modules-sdk/index.ts",
 											"line": 325,
 											"character": 4
 										}
@@ -8615,7 +8615,7 @@
 											"flags": {},
 											"sources": [
 												{
-													"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/modules-sdk/index.ts",
+													"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/modules-sdk/index.ts",
 													"line": 325,
 													"character": 25
 												}
@@ -8629,7 +8629,7 @@
 													"flags": {},
 													"sources": [
 														{
-															"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/modules-sdk/index.ts",
+															"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/modules-sdk/index.ts",
 															"line": 325,
 															"character": 25
 														}
@@ -8664,7 +8664,7 @@
 									},
 									"sources": [
 										{
-											"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/modules-sdk/index.ts",
+											"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/modules-sdk/index.ts",
 											"line": 326,
 											"character": 4
 										}
@@ -8679,7 +8679,7 @@
 											"flags": {},
 											"sources": [
 												{
-													"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/modules-sdk/index.ts",
+													"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/modules-sdk/index.ts",
 													"line": 326,
 													"character": 28
 												}
@@ -8693,7 +8693,7 @@
 													"flags": {},
 													"sources": [
 														{
-															"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/modules-sdk/index.ts",
+															"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/modules-sdk/index.ts",
 															"line": 326,
 															"character": 28
 														}
@@ -8728,7 +8728,7 @@
 									},
 									"sources": [
 										{
-											"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/modules-sdk/index.ts",
+											"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/modules-sdk/index.ts",
 											"line": 327,
 											"character": 4
 										}
@@ -8743,7 +8743,7 @@
 											"flags": {},
 											"sources": [
 												{
-													"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/modules-sdk/index.ts",
+													"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/modules-sdk/index.ts",
 													"line": 327,
 													"character": 35
 												}
@@ -8757,7 +8757,7 @@
 													"flags": {},
 													"sources": [
 														{
-															"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/modules-sdk/index.ts",
+															"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/modules-sdk/index.ts",
 															"line": 327,
 															"character": 35
 														}
@@ -8795,7 +8795,7 @@
 							],
 							"sources": [
 								{
-									"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/modules-sdk/index.ts",
+									"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/modules-sdk/index.ts",
 									"line": 324,
 									"character": 12
 								}
@@ -8820,7 +8820,7 @@
 			],
 			"sources": [
 				{
-					"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/modules-sdk/index.ts",
+					"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/modules-sdk/index.ts",
 					"line": 315,
 					"character": 17
 				}
@@ -8850,7 +8850,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/shared-context.ts",
+							"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/shared-context.ts",
 							"line": 5,
 							"character": 2
 						}
@@ -8873,7 +8873,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/shared-context.ts",
+							"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/shared-context.ts",
 							"line": 6,
 							"character": 2
 						}
@@ -8888,7 +8888,7 @@
 							"flags": {},
 							"sources": [
 								{
-									"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/shared-context.ts",
+									"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/shared-context.ts",
 									"line": 6,
 									"character": 11
 								}
@@ -8902,7 +8902,7 @@
 									"flags": {},
 									"sources": [
 										{
-											"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/shared-context.ts",
+											"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/shared-context.ts",
 											"line": 6,
 											"character": 13
 										}
@@ -8966,7 +8966,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/shared-context.ts",
+							"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/shared-context.ts",
 							"line": 11,
 							"character": 2
 						}
@@ -8989,7 +8989,7 @@
 			],
 			"sources": [
 				{
-					"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/shared-context.ts",
+					"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/shared-context.ts",
 					"line": 4,
 					"character": 17
 				}
@@ -9010,7 +9010,7 @@
 					"flags": {},
 					"sources": [
 						{
-							"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/shared-context.ts",
+							"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/shared-context.ts",
 							"line": 15,
 							"character": 2
 						}
@@ -9024,7 +9024,7 @@
 							"flags": {},
 							"sources": [
 								{
-									"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/shared-context.ts",
+									"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/shared-context.ts",
 									"line": 15,
 									"character": 2
 								}
@@ -9043,7 +9043,7 @@
 												"type": "reference",
 												"target": 244,
 												"name": "Message",
-												"package": "@medusajs/types"
+												"package": "@vikrai/types"
 											},
 											{
 												"type": "array",
@@ -9051,7 +9051,7 @@
 													"type": "reference",
 													"target": 244,
 													"name": "Message",
-													"package": "@medusajs/types"
+													"package": "@vikrai/types"
 												}
 											}
 										]
@@ -9073,7 +9073,7 @@
 					"flags": {},
 					"sources": [
 						{
-							"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/shared-context.ts",
+							"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/shared-context.ts",
 							"line": 16,
 							"character": 2
 						}
@@ -9087,7 +9087,7 @@
 							"flags": {},
 							"sources": [
 								{
-									"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/shared-context.ts",
+									"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/shared-context.ts",
 									"line": 16,
 									"character": 2
 								}
@@ -9105,7 +9105,7 @@
 										"type": "reference",
 										"target": 248,
 										"name": "MessageAggregatorFormat",
-										"package": "@medusajs/types"
+										"package": "@vikrai/types"
 									}
 								}
 							],
@@ -9126,7 +9126,7 @@
 											"type": "reference",
 											"target": 244,
 											"name": "Message",
-											"package": "@medusajs/types"
+											"package": "@vikrai/types"
 										}
 									}
 								],
@@ -9144,7 +9144,7 @@
 					"flags": {},
 					"sources": [
 						{
-							"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/shared-context.ts",
+							"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/shared-context.ts",
 							"line": 17,
 							"character": 2
 						}
@@ -9158,7 +9158,7 @@
 							"flags": {},
 							"sources": [
 								{
-									"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/shared-context.ts",
+									"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/shared-context.ts",
 									"line": 17,
 									"character": 2
 								}
@@ -9178,7 +9178,7 @@
 					"flags": {},
 					"sources": [
 						{
-							"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/shared-context.ts",
+							"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/shared-context.ts",
 							"line": 18,
 							"character": 2
 						}
@@ -9192,7 +9192,7 @@
 							"flags": {},
 							"sources": [
 								{
-									"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/shared-context.ts",
+									"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/shared-context.ts",
 									"line": 18,
 									"character": 2
 								}
@@ -9224,12 +9224,12 @@
 														"type": "reference",
 														"target": 185,
 														"name": "T",
-														"package": "@medusajs/types",
+														"package": "@vikrai/types",
 														"refersToTypeParameter": true
 													}
 												],
 												"name": "RawMessageFormat",
-												"package": "@medusajs/types"
+												"package": "@vikrai/types"
 											},
 											{
 												"type": "array",
@@ -9241,12 +9241,12 @@
 															"type": "reference",
 															"target": 185,
 															"name": "T",
-															"package": "@medusajs/types",
+															"package": "@vikrai/types",
 															"refersToTypeParameter": true
 														}
 													],
 													"name": "RawMessageFormat",
-													"package": "@medusajs/types"
+													"package": "@vikrai/types"
 												}
 											}
 										]
@@ -9302,7 +9302,7 @@
 			],
 			"sources": [
 				{
-					"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/shared-context.ts",
+					"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/shared-context.ts",
 					"line": 14,
 					"character": 17
 				}
@@ -9333,14 +9333,14 @@
 					},
 					"sources": [
 						{
-							"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/shared-context.ts",
+							"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/shared-context.ts",
 							"line": 31,
 							"character": 2
 						}
 					],
 					"type": {
 						"type": "literal",
-						"value": "MedusaContext"
+						"value": "vikraiContext"
 					}
 				},
 				{
@@ -9377,7 +9377,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/shared-context.ts",
+							"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/shared-context.ts",
 							"line": 35,
 							"character": 2
 						}
@@ -9386,7 +9386,7 @@
 						"type": "reference",
 						"target": 104,
 						"name": "TManager",
-						"package": "@medusajs/types",
+						"package": "@vikrai/types",
 						"refersToTypeParameter": true
 					}
 				},
@@ -9424,7 +9424,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/shared-context.ts",
+							"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/shared-context.ts",
 							"line": 39,
 							"character": 2
 						}
@@ -9433,7 +9433,7 @@
 						"type": "reference",
 						"target": 104,
 						"name": "TManager",
-						"package": "@medusajs/types",
+						"package": "@vikrai/types",
 						"refersToTypeParameter": true
 					}
 				},
@@ -9487,7 +9487,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/shared-context.ts",
+							"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/shared-context.ts",
 							"line": 43,
 							"character": 2
 						}
@@ -9515,7 +9515,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/shared-context.ts",
+							"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/shared-context.ts",
 							"line": 47,
 							"character": 2
 						}
@@ -9543,7 +9543,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/shared-context.ts",
+							"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/shared-context.ts",
 							"line": 51,
 							"character": 2
 						}
@@ -9571,7 +9571,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/shared-context.ts",
+							"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/shared-context.ts",
 							"line": 55,
 							"character": 2
 						}
@@ -9599,7 +9599,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/shared-context.ts",
+							"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/shared-context.ts",
 							"line": 60,
 							"character": 2
 						}
@@ -9608,7 +9608,7 @@
 						"type": "reference",
 						"target": 174,
 						"name": "IMessageAggregator",
-						"package": "@medusajs/types"
+						"package": "@vikrai/types"
 					}
 				},
 				{
@@ -9629,7 +9629,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/shared-context.ts",
+							"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/shared-context.ts",
 							"line": 65,
 							"character": 2
 						}
@@ -9657,7 +9657,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/shared-context.ts",
+							"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/shared-context.ts",
 							"line": 70,
 							"character": 2
 						}
@@ -9685,7 +9685,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/shared-context.ts",
+							"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/shared-context.ts",
 							"line": 75,
 							"character": 2
 						}
@@ -9713,7 +9713,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/shared-context.ts",
+							"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/shared-context.ts",
 							"line": 80,
 							"character": 2
 						}
@@ -9745,7 +9745,7 @@
 			],
 			"sources": [
 				{
-					"fileName": "/home/runner/work/medusa/medusa/packages/core/types/src/shared-context.ts",
+					"fileName": "/home/runner/work/vikrai/vikrai/packages/core/types/src/shared-context.ts",
 					"line": 30,
 					"character": 12
 				}
@@ -9814,7 +9814,7 @@
 			]
 		}
 	],
-	"packageName": "@medusajs/types",
+	"packageName": "@vikrai/types",
 	"symbolIdMap": {
 		"0": {
 			"sourceFileName": "../../../../packages/core/types/src/api-key/service.ts",
@@ -11078,3 +11078,4 @@
 		}
 	}
 }
+

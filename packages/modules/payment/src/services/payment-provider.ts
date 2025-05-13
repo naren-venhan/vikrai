@@ -30,8 +30,8 @@ import {
   UpdatePaymentInput,
   UpdatePaymentOutput,
   WebhookActionResult,
-} from "@medusajs/framework/types"
-import { ModulesSdkUtils } from "@medusajs/framework/utils"
+} from "@vikrai/framework/types"
+import { ModulesSdkUtils } from "@vikrai/framework/utils"
 import { PaymentProvider } from "@models"
 
 type InjectedDependencies = {
@@ -40,7 +40,7 @@ type InjectedDependencies = {
   [key: `pp_${string}`]: IPaymentProvider
 }
 
-export default class PaymentProviderService extends ModulesSdkUtils.MedusaInternalService<InjectedDependencies>(
+export default class PaymentProviderService extends ModulesSdkUtils.vikraiInternalService<InjectedDependencies>(
   PaymentProvider
 ) {
   #logger: Logger
@@ -220,3 +220,4 @@ Please make sure that the provider is registered in the container and it is conf
     return await provider.getWebhookActionAndData(data)
   }
 }
+

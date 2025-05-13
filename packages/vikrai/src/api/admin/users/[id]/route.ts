@@ -1,0 +1,99 @@
+import {
+  removeUserAccountWorkflow,
+  updateUsersWorkflow,
+} from "@vikrai/core-flows"
+import { HttpTypes, UpdateUserDTO } from "@vikrai/framework/types"
+import {
+  AuthenticatedvikraiRequest,
+  vikraiResponse,
+} from "@vikrai/framework/http"
+
+import {
+  ContainerRegistrationKeys,
+  vikraiError,
+  remoteQueryObjectFromString,
+} from "@vikrai/framework/utils"
+import { refetchUser } from "../helpers"
+import { AdminUpdateUserType } from "../validators"
+
+// Get user
+export const GET = async (
+  req: AuthenticatedvikraiRequest,
+  res: vikraiResponse<HttpTypes.AdminUserResponse>
+) => {
+  const remoteQuery = req.scope.resolve(ContainerRegistrationKeys.REMOTE_QUERY)
+  const { id } = req.params
+
+  const query = remoteQueryObjectFromString({
+    entryPoint: "user",
+    variables: { id },
+    fields: req.queryConfig.fields,
+  })
+
+  const [user] = await remoteQuery(query)
+  if (!user) {
+    throw new vikraiError(
+      vikraiError.Types.NOT_FOUND,
+      `User with id: ${id} was not found`
+    )
+  }
+
+  res.status(200).json({ user })
+}
+
+// update user
+export const POST = async (
+  req: AuthenticatedvikraiRequest<AdminUpdateUserType>,
+  res: vikraiResponse<HttpTypes.AdminUserResponse>
+) => {
+  const workflow = updateUsersWorkflow(req.scope)
+
+  const input = {
+    updates: [
+      {
+        id: req.params.id,
+        ...req.validatedBody,
+      } as UpdateUserDTO,
+    ],
+  }
+
+  await workflow.run({ input })
+
+  const user = await refetchUser(
+    req.params.id,
+    req.scope,
+    req.queryConfig.fields
+  )
+
+  res.status(200).json({ user })
+}
+
+// delete user
+export const DELETE = async (
+  req: AuthenticatedvikraiRequest,
+  res: vikraiResponse<HttpTypes.AdminUserDeleteResponse>
+) => {
+  const { id } = req.params
+  const { actor_id } = req.auth_context
+
+  if (actor_id !== id) {
+    throw new vikraiError(
+      vikraiError.Types.NOT_ALLOWED,
+      "You are not allowed to delete other users"
+    )
+  }
+
+  const workflow = removeUserAccountWorkflow(req.scope)
+
+  await workflow.run({
+    input: { userId: id },
+  })
+
+  res.status(200).json({
+    id,
+    object: "user",
+    deleted: true,
+  })
+}
+
+export const AUTHENTICATE = false

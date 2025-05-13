@@ -1,4 +1,4 @@
-import { HttpTypes } from "@medusajs/types"
+import { HttpTypes } from "@vikrai/types"
 import { useQueryParams } from "../../../../../hooks/use-query-params"
 
 type UseApiKeyManagementTableQueryProps = {
@@ -32,3 +32,4 @@ export const useApiKeyManagementTableQuery = ({
     raw: queryObject,
   }
 }
+

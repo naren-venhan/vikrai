@@ -1,7 +1,7 @@
-import { MedusaModule } from "@medusajs/framework/modules-sdk"
-import { ILinkModule, ModuleJoinerConfig } from "@medusajs/framework/types"
-import { defineLink, isObject, Modules } from "@medusajs/framework/utils"
-import { moduleIntegrationTestRunner } from "@medusajs/test-utils"
+import { vikraiModule } from "@vikrai/framework/modules-sdk"
+import { ILinkModule, ModuleJoinerConfig } from "@vikrai/framework/types"
+import { defineLink, isObject, Modules } from "@vikrai/framework/utils"
+import { moduleIntegrationTestRunner } from "@vikrai/test-utils"
 import { MigrationsExecutionPlanner } from "../../src"
 import {
   Car,
@@ -16,9 +16,9 @@ import {
 
 jest.setTimeout(30000)
 
-MedusaModule.setJoinerConfig(userJoinerConfig.serviceName, userJoinerConfig)
-MedusaModule.setJoinerConfig(carJoinerConfig.serviceName, carJoinerConfig)
-MedusaModule.setJoinerConfig(
+vikraiModule.setJoinerConfig(userJoinerConfig.serviceName, userJoinerConfig)
+vikraiModule.setJoinerConfig(carJoinerConfig.serviceName, carJoinerConfig)
+vikraiModule.setJoinerConfig(
   longNameJoinerConfig.serviceName,
   longNameJoinerConfig
 )
@@ -36,9 +36,9 @@ moduleIntegrationTestRunner<ILinkModule>({
             .linkable.veryLongTableNameOfCustomModule
         )
 
-        MedusaModule.getCustomLinks().forEach((linkDefinition: any) => {
-          MedusaModule.setCustomLink(
-            linkDefinition(MedusaModule.getAllJoinerConfigs())
+        vikraiModule.getCustomLinks().forEach((linkDefinition: any) => {
+          vikraiModule.setCustomLink(
+            linkDefinition(vikraiModule.getAllJoinerConfigs())
           )
         })
 
@@ -46,7 +46,7 @@ moduleIntegrationTestRunner<ILinkModule>({
          * Expect a create plan
          */
 
-        let joinerConfigs = MedusaModule.getCustomLinks().filter(
+        let joinerConfigs = vikraiModule.getCustomLinks().filter(
           (link): link is ModuleJoinerConfig => isObject(link)
         )
 
@@ -105,7 +105,7 @@ moduleIntegrationTestRunner<ILinkModule>({
          * Expect an update plan
          */
         // @ts-ignore
-        MedusaModule.customLinks_.length = 0
+        vikraiModule.customLinks_.length = 0
 
         defineLink(UserModule.linkable.user, CarModule.linkable.car, {
           database: {
@@ -117,13 +117,13 @@ moduleIntegrationTestRunner<ILinkModule>({
           },
         })
 
-        MedusaModule.getCustomLinks().forEach((linkDefinition: any) => {
-          MedusaModule.setCustomLink(
-            linkDefinition(MedusaModule.getAllJoinerConfigs())
+        vikraiModule.getCustomLinks().forEach((linkDefinition: any) => {
+          vikraiModule.setCustomLink(
+            linkDefinition(vikraiModule.getAllJoinerConfigs())
           )
         })
 
-        joinerConfigs = MedusaModule.getCustomLinks().filter(
+        joinerConfigs = vikraiModule.getCustomLinks().filter(
           (link): link is ModuleJoinerConfig => isObject(link)
         )
 
@@ -193,3 +193,4 @@ moduleIntegrationTestRunner<ILinkModule>({
     })
   },
 })
+

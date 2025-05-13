@@ -109,7 +109,7 @@ export class Client {
   private config: Config
   private logger: Logger
 
-  private DEFAULT_JWT_STORAGE_KEY = "medusa_auth_token"
+  private DEFAULT_JWT_STORAGE_KEY = "vikrai_auth_token"
   private token = ""
 
   constructor(config: Config) {
@@ -214,7 +214,7 @@ export class Client {
     })
 
     this.logger.debug(
-      "Initiating Medusa client with default headers:\n",
+      "Initiating vikrai client with default headers:\n",
       `${JSON.stringify(sanitizeHeaders(defaultHeaders), null, 2)}\n`
     )
 
@@ -366,3 +366,4 @@ export class Client {
     throw new Error(message)
   }
 }
+

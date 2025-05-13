@@ -1,1 +1,2 @@
-# @medusajs/admin-vite-plugin
+# @vikrai/admin-vite-plugin
+

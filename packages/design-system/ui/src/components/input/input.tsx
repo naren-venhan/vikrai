@@ -1,6 +1,6 @@
 "use client"
 
-import { Eye, EyeSlash, MagnifyingGlassMini } from "@medusajs/icons"
+import { Eye, EyeSlash, MagnifyingGlassMini } from "@vikrai/icons"
 import { VariantProps, cva } from "cva"
 import * as React from "react"
 
@@ -116,3 +116,4 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
 Input.displayName = "Input"
 
 export { Input, inputBaseStyles }
+

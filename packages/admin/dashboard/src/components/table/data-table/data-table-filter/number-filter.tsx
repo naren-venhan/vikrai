@@ -1,5 +1,5 @@
-import { EllipseMiniSolid } from "@medusajs/icons"
-import { Input, Label, clx } from "@medusajs/ui"
+import { EllipseMiniSolid } from "@vikrai/icons"
+import { Input, Label, clx } from "@vikrai/ui"
 import { debounce } from "lodash"
 import {
   Popover as RadixPopover,
@@ -314,3 +314,4 @@ const getOperator = (value?: string[] | null): Comparison | undefined => {
 
   return typeof parsed === "object" ? "range" : "exact"
 }
+

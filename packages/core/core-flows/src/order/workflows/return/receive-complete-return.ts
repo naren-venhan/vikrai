@@ -1,13 +1,13 @@
-import { OrderWorkflow } from "@medusajs/framework/types"
+import { OrderWorkflow } from "@vikrai/framework/types"
 import {
   WorkflowData,
   WorkflowResponse,
   createStep,
   createWorkflow,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { useRemoteQueryStep } from "../../../common"
 
-import { ReturnDTO } from "@medusajs/framework/types"
+import { ReturnDTO } from "@vikrai/framework/types"
 import { receiveReturnStep } from "../../steps/return/receive-return"
 import {
   throwIfIsCancelled,
@@ -34,8 +34,8 @@ export type ReceiveCompleteReturnValidationStepInput = {
  * 
  * :::note
  * 
- * You can retrieve a return details using [Query](https://docs.medusajs.com/learn/fundamentals/module-links/query),
- * or [useQueryGraphStep](https://docs.medusajs.com/resources/references/medusa-workflows/steps/useQueryGraphStep).
+ * You can retrieve a return details using [Query](https://docs.vikrai.com/learn/fundamentals/module-links/query),
+ * or [useQueryGraphStep](https://docs.vikrai.com/resources/references/vikrai-workflows/steps/useQueryGraphStep).
  * 
  * :::
  * 
@@ -113,3 +113,4 @@ export const receiveAndCompleteReturnOrderWorkflow = createWorkflow(
     return new WorkflowResponse(receiveReturnStep(input))
   }
 )
+

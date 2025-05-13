@@ -7,7 +7,7 @@ import {
   CheckCircleSolid,
   SquareTwoStack,
   SquareTwoStackMini,
-} from "@medusajs/icons"
+} from "@vikrai/icons"
 import copy from "copy-to-clipboard"
 import { Slot } from "radix-ui"
 import React, { useState } from "react"
@@ -117,3 +117,4 @@ const Copy = React.forwardRef<HTMLButtonElement, CopyProps>(
 Copy.displayName = "Copy"
 
 export { Copy }
+

@@ -1,4 +1,4 @@
-import { defineJoinerConfig, Modules } from "@medusajs/framework/utils"
+import { defineJoinerConfig, Modules } from "@vikrai/framework/utils"
 import {
   Fulfillment,
   FulfillmentProvider,
@@ -18,3 +18,4 @@ export const joinerConfig = defineJoinerConfig(Modules.FULFILLMENT, {
     fulfillment_provider_id: FulfillmentProvider.name,
   },
 })
+

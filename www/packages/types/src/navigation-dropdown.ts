@@ -1,4 +1,4 @@
-import { IconProps } from "@medusajs/icons/dist/types.js"
+import { IconProps } from "@vikrai/icons/dist/types.js"
 
 export type NavigationDropdownItemLink = {
   path: string
@@ -14,3 +14,4 @@ export type NavigationDropdownItem =
   | {
       type: "divider"
     }
+

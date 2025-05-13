@@ -1,4 +1,4 @@
-import { model } from "@medusajs/framework/utils"
+import { model } from "@vikrai/framework/utils"
 
 export default model.define("currency", {
   code: model.text().searchable().primaryKey(),
@@ -8,3 +8,4 @@ export default model.define("currency", {
   decimal_digits: model.number().default(0),
   rounding: model.bigNumber().default(0),
 })
+

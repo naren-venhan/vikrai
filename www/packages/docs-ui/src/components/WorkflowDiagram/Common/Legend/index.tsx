@@ -1,7 +1,7 @@
 import React from "react"
 import { InlineCode } from "../../../InlineCode"
-import { Text } from "@medusajs/ui"
-import { Bolt, CursorArrowRays, InformationCircle } from "@medusajs/icons"
+import { Text } from "@vikrai/ui"
+import { Bolt, CursorArrowRays, InformationCircle } from "@vikrai/icons"
 
 type WorkflowDiagramLegendProps = {
   hideLegend?: boolean
@@ -15,7 +15,7 @@ export const WorkflowDiagramLegend = ({
       {!hideLegend && (
         <>
           <div className="flex items-center gap-docs_0.5">
-            <div className="flex size-[20px] items-center justify-center text-medusa-tag-orange-icon">
+            <div className="flex size-[20px] items-center justify-center text-vikrai-tag-orange-icon">
               <Bolt />
             </div>
             <Text
@@ -28,7 +28,7 @@ export const WorkflowDiagramLegend = ({
             </Text>
           </div>
           <div className="flex items-center gap-docs_0.5">
-            <div className="flex size-[20px] items-center justify-center text-medusa-tag-green-icon">
+            <div className="flex size-[20px] items-center justify-center text-vikrai-tag-green-icon">
               <InformationCircle />
             </div>
             <Text
@@ -58,3 +58,4 @@ export const WorkflowDiagramLegend = ({
     </div>
   )
 }
+

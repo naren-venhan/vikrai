@@ -5,13 +5,13 @@ import {
   TransactionStepTimeoutError,
   TransactionTimeoutError,
   WorkflowManager,
-} from "@medusajs/framework/orchestration"
+} from "@vikrai/framework/orchestration"
 import {
   IWorkflowEngineService,
   Logger,
-  MedusaContainer,
+  vikraiContainer,
   RemoteQueryFunction,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import {
   ContainerRegistrationKeys,
   Module,
@@ -19,14 +19,14 @@ import {
   promiseAll,
   TransactionHandlerType,
   TransactionStepState,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 import {
   createStep,
   createWorkflow,
   StepResponse,
   WorkflowResponse,
-} from "@medusajs/framework/workflows-sdk"
-import { moduleIntegrationTestRunner } from "@medusajs/test-utils"
+} from "@vikrai/framework/workflows-sdk"
+import { moduleIntegrationTestRunner } from "@vikrai/test-utils"
 import { asValue } from "awilix"
 import { setTimeout as setTimeoutSync } from "timers"
 import { setTimeout } from "timers/promises"
@@ -89,7 +89,7 @@ moduleIntegrationTestRunner<IWorkflowEngineService>({
       url: "localhost:6379",
     },
   },
-  testSuite: ({ service: workflowOrcModule, medusaApp }) => {
+  testSuite: ({ service: workflowOrcModule, vikraiApp }) => {
     describe("Workflow Orchestrator module", function () {
       beforeEach(async () => {
         await TestDatabase.clearTables()
@@ -97,11 +97,11 @@ moduleIntegrationTestRunner<IWorkflowEngineService>({
       })
 
       let query: RemoteQueryFunction
-      let sharedContainer_: MedusaContainer
+      let sharedContainer_: vikraiContainer
 
       beforeEach(() => {
-        query = medusaApp.query
-        sharedContainer_ = medusaApp.sharedContainer
+        query = vikraiApp.query
+        sharedContainer_ = vikraiApp.sharedContainer
       })
 
       it(`should export the appropriate linkable configuration`, () => {
@@ -891,3 +891,4 @@ moduleIntegrationTestRunner<IWorkflowEngineService>({
     })
   },
 })
+

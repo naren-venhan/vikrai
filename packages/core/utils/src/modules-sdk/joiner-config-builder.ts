@@ -3,7 +3,7 @@ import {
   JoinerServiceConfigAlias,
   ModuleJoinerConfig,
   PropertyType,
-} from "@medusajs/types"
+} from "@vikrai/types"
 import { accessSync } from "fs"
 import * as path from "path"
 import { dirname, join, normalize } from "path"
@@ -96,8 +96,8 @@ export function defineJoinerConfig(
       let basePath = splitPath[0] + srcDir
 
       const potentialModulesDirPathSegment = normalize(`${srcDir}/modules/`)
-      const isMedusaProject = fullPath.includes(potentialModulesDirPathSegment)
-      if (isMedusaProject) {
+      const isvikraiProject = fullPath.includes(potentialModulesDirPathSegment)
+      if (isvikraiProject) {
         basePath = dirname(fullPath)
       }
 
@@ -509,3 +509,4 @@ export function buildModelsNameToLinkableKeysMap(
   })
   return entityLinkableKeysMap
 }
+

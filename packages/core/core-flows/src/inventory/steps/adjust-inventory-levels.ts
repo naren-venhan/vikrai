@@ -1,7 +1,7 @@
-import { InventoryTypes } from "@medusajs/framework/types"
-import { StepResponse, createStep } from "@medusajs/framework/workflows-sdk"
+import { InventoryTypes } from "@vikrai/framework/types"
+import { StepResponse, createStep } from "@vikrai/framework/workflows-sdk"
 
-import { MathBN, Modules } from "@medusajs/framework/utils"
+import { MathBN, Modules } from "@vikrai/framework/utils"
 
 /**
  * The data to adjust the inventory levels.
@@ -88,3 +88,4 @@ export const adjustInventoryLevelsStep = createStep(
     })
   }
 )
+

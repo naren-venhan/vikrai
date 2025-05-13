@@ -1,4 +1,4 @@
-import { EventBusTypes } from "@medusajs/types"
+import { EventBusTypes } from "@vikrai/types"
 import { AbstractEventBusModuleService } from ".."
 
 class MockEventBusModuleService extends AbstractEventBusModuleService {
@@ -50,3 +50,4 @@ describe("AbstractEventBusModuleService", () => {
     expect(eventBus.eventToSubscribersMap.get("test")).toEqual([])
   })
 })
+

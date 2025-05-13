@@ -2,9 +2,9 @@ import {
   CreateStoreDTO,
   IStoreModuleService,
   StoreDTO,
-} from "@medusajs/framework/types"
-import { Modules } from "@medusajs/framework/utils"
-import { StepResponse, createStep } from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/types"
+import { Modules } from "@vikrai/framework/utils"
+import { StepResponse, createStep } from "@vikrai/framework/workflows-sdk"
 import { createStoresWorkflow } from "../../store"
 
 /**
@@ -20,7 +20,7 @@ type CreateDefaultStoreStepInput = {
 export const createDefaultStoreStepId = "create-default-store"
 /**
  * This step creates a default store. Useful if creating a workflow
- * that seeds data into Medusa.
+ * that seeds data into vikrai.
  * 
  * @example
  * const data = createDefaultStoreStep({
@@ -88,3 +88,4 @@ export const createDefaultStoreStep = createStep(
     await service.deleteStores(data.storeId)
   }
 )
+

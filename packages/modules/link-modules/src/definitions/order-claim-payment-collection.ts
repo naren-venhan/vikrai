@@ -1,5 +1,5 @@
-import { ModuleJoinerConfig } from "@medusajs/framework/types"
-import { LINKS, Modules } from "@medusajs/framework/utils"
+import { ModuleJoinerConfig } from "@vikrai/framework/types"
+import { LINKS, Modules } from "@vikrai/framework/utils"
 
 export const OrderClaimPaymentCollection: ModuleJoinerConfig = {
   serviceName: LINKS.OrderClaimPaymentCollection,
@@ -73,3 +73,4 @@ export const OrderClaimPaymentCollection: ModuleJoinerConfig = {
     },
   ],
 }
+

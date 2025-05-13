@@ -3,8 +3,8 @@ import {
   WorkflowManager,
   WorkflowStepHandler,
   WorkflowStepHandlerArguments,
-} from "@medusajs/orchestration"
-import { isString, OrchestrationUtils } from "@medusajs/utils"
+} from "@vikrai/orchestration"
+import { isString, OrchestrationUtils } from "@vikrai/utils"
 import { ulid } from "ulid"
 import { resolveValue, StepResponse } from "./helpers"
 import { createStepHandler } from "./helpers/create-step-handler"
@@ -192,9 +192,9 @@ export function applyStep<
       ret.__step__ = newStepName
       WorkflowManager.update(this.workflowId, this.flow, this.handlers)
 
-      if (global[OrchestrationUtils.SymbolMedusaWorkflowComposerCondition]) {
+      if (global[OrchestrationUtils.SymbolvikraiWorkflowComposerCondition]) {
         const flagSteps =
-          global[OrchestrationUtils.SymbolMedusaWorkflowComposerCondition].steps
+          global[OrchestrationUtils.SymbolvikraiWorkflowComposerCondition].steps
 
         const idx = flagSteps.findIndex((a) => a.__step__ === ret.__step__)
         if (idx > -1) {
@@ -219,9 +219,9 @@ export function applyStep<
       return refRet
     }
 
-    if (global[OrchestrationUtils.SymbolMedusaWorkflowComposerCondition]) {
+    if (global[OrchestrationUtils.SymbolvikraiWorkflowComposerCondition]) {
       global[
-        OrchestrationUtils.SymbolMedusaWorkflowComposerCondition
+        OrchestrationUtils.SymbolvikraiWorkflowComposerCondition
       ].steps.push(refRet)
     }
 
@@ -331,7 +331,7 @@ function wrapConditionalStep(
  * import {
  *   createStep,
  *   StepResponse
- * } from "@medusajs/framework/workflows-sdk"
+ * } from "@vikrai/framework/workflows-sdk"
  *
  * interface CreateProductInput {
  *   title: string
@@ -410,7 +410,7 @@ export function createStep<
       | undefined
   ): WorkflowData<TInvokeResultOutput> {
     const context = global[
-      OrchestrationUtils.SymbolMedusaWorkflowComposerContext
+      OrchestrationUtils.SymbolvikraiWorkflowComposerContext
     ] as CreateWorkflowComposerContext
 
     if (!context) {
@@ -440,3 +440,4 @@ export function createStep<
 
   return returnFn
 }
+

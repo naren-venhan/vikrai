@@ -1,5 +1,5 @@
 import { ConfigModule } from "./types"
-import { deepCopy, isDefined } from "@medusajs/utils"
+import { deepCopy, isDefined } from "@vikrai/utils"
 import { logger } from "../logger"
 
 export class ConfigManager {
@@ -23,7 +23,7 @@ export class ConfigManager {
    */
   get #envWorkMode(): ConfigModule["projectConfig"]["workerMode"] {
     return process.env
-      .MEDUSA_WORKER_MODE as ConfigModule["projectConfig"]["workerMode"]
+      .vikrai_WORKER_MODE as ConfigModule["projectConfig"]["workerMode"]
   }
 
   /**
@@ -175,3 +175,4 @@ export class ConfigManager {
     return this.#config
   }
 }
+

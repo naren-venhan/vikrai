@@ -165,7 +165,7 @@ class DocblockGenerator extends AbstractGenerator {
   isFileIncluded(fileName: string): boolean {
     return (
       super.isFileIncluded(fileName) &&
-      !minimatch(getBasePath(fileName), "packages/medusa/**/api**/**", {
+      !minimatch(getBasePath(fileName), "packages/vikrai/**/api**/**", {
         matchBase: true,
       }) &&
       !minimatch(getBasePath(fileName), "packages/modules/**/models/**", {
@@ -176,3 +176,4 @@ class DocblockGenerator extends AbstractGenerator {
 }
 
 export default DocblockGenerator
+

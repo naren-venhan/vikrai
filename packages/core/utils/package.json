@@ -1,14 +1,14 @@
 {
-  "name": "@medusajs/utils",
+  "name": "@vikrai/utils",
   "version": "2.7.1",
-  "description": "Medusa utilities functions shared by Medusa core and Modules",
+  "description": "vikrai utilities functions shared by vikrai core and Modules",
   "main": "dist/index.js",
   "exports": {
     ".": "./dist/index.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/medusajs/medusa",
+    "url": "https://github.com/vikrai/vikrai",
     "directory": "packages/core/utils"
   },
   "engines": {
@@ -23,7 +23,7 @@
     "!dist/**/__mocks__",
     "!dist/**/__fixtures__"
   ],
-  "author": "Medusa",
+  "author": "vikrai",
   "license": "MIT",
   "devDependencies": {
     "@mikro-orm/core": "6.4.3",
@@ -47,7 +47,7 @@
     "@graphql-codegen/typescript": "^4.0.9",
     "@graphql-tools/merge": "^9.0.7",
     "@graphql-tools/schema": "^10.0.6",
-    "@medusajs/types": "2.7.1",
+    "@vikrai/types": "2.7.1",
     "@types/pluralize": "^0.0.33",
     "bignumber.js": "^9.1.2",
     "dotenv": "^16.4.5",
@@ -74,3 +74,4 @@
     "test:integration": "jest --silent --bail --runInBand --forceExit -- src/**/integration-tests/__tests__/**/*.ts"
   }
 }
+

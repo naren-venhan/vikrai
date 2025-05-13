@@ -14,7 +14,7 @@ export const SidebarTop = React.forwardRef<HTMLDivElement>(
       <div
         className={clsx(
           "pt-docs_0.25 sticky top-0 z-[5]",
-          "bg-medusa-bg-base lg:bg-medusa-bg-subtle"
+          "bg-vikrai-bg-base lg:bg-vikrai-bg-subtle"
         )}
         ref={ref}
       >
@@ -31,3 +31,4 @@ export const SidebarTop = React.forwardRef<HTMLDivElement>(
     )
   }
 )
+

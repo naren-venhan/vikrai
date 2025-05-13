@@ -8,15 +8,15 @@
     text-rendering: optimizeLegibility;
   }
   .html {
-    @apply text-medusa-fg-base;
+    @apply text-vikrai-fg-base;
   }
 
   *::selection {
-    @apply bg-medusa-bg-highlight;
+    @apply bg-vikrai-bg-highlight;
   }
 
   pre *::selection {
-    @apply !bg-medusa-contrast-bg-highlight;
+    @apply !bg-vikrai-contrast-bg-highlight;
   }
 
   * {

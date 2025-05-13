@@ -1,5 +1,5 @@
 {
-  "name": "@medusajs/oas-github-ci",
+  "name": "@vikrai/oas-github-ci",
   "version": "2.7.1",
   "description": "OAS Github CI",
   "main": "scripts/build-openapi.js",
@@ -8,20 +8,21 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/medusajs/medusa",
+    "url": "https://github.com/vikrai/vikrai",
     "directory": "packages/cli/oas/oas-github-ci"
   },
   "private": true,
-  "author": "Medusa",
+  "author": "vikrai",
   "license": "MIT",
   "scripts": {
     "ci": "node scripts/build-openapi.js",
-    "preview:admin": "yarn medusa-oas docs --src-file ../../../../www/apps/api-reference/specs/admin/openapi.yaml --preview",
-    "preview:store": "yarn medusa-oas docs --src-file ../../../../www/apps/api-reference/specs/store/openapi.yaml --preview",
+    "preview:admin": "yarn vikrai-oas docs --src-file ../../../../www/apps/api-reference/specs/admin/openapi.yaml --preview",
+    "preview:store": "yarn vikrai-oas docs --src-file ../../../../www/apps/api-reference/specs/store/openapi.yaml --preview",
     "test": "jest --passWithNoTests"
   },
   "dependencies": {
-    "@medusajs/medusa-oas-cli": "2.7.1",
+    "@vikrai/vikrai-oas-cli": "2.7.1",
     "execa": "^5.1.1"
   }
 }
+

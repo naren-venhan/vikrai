@@ -1,6 +1,6 @@
-import { PencilSquare, Trash } from "@medusajs/icons"
-import { HttpTypes } from "@medusajs/types"
-import { StatusBadge, Text } from "@medusajs/ui"
+import { PencilSquare, Trash } from "@vikrai/icons"
+import { HttpTypes } from "@vikrai/types"
+import { StatusBadge, Text } from "@vikrai/ui"
 import { useTranslation } from "react-i18next"
 import { ActionMenu } from "../../../../../components/common/action-menu"
 import { formatPercentage } from "../../../../../lib/percentage-helpers"
@@ -80,3 +80,4 @@ const TaxRateActions = ({ taxRate }: { taxRate: HttpTypes.AdminTaxRate }) => {
     />
   )
 }
+

@@ -12,12 +12,12 @@ post:
         type: string
     - name: x-publishable-api-key
       in: header
-      description: Publishable API Key created in the Medusa Admin.
+      description: Publishable API Key created in the vikrai Admin.
       required: true
       schema:
         type: string
         externalDocs:
-          url: https://docs.medusajs.com/api/store#publishable-api-key
+          url: https://docs.vikrai.com/api/store#publishable-api-key
     - name: fields
       in: query
       description: >-
@@ -58,7 +58,7 @@ post:
                 calculate the price.
               externalDocs:
                 url: >-
-                  https://docs.medusajs.com/resources/commerce-modules/fulfillment/shipping-option#data-property
+                  https://docs.vikrai.com/resources/commerce-modules/fulfillment/shipping-option#data-property
   x-codeSamples:
     - lang: JavaScript
       label: JS SDK
@@ -92,3 +92,4 @@ post:
       $ref: ../components/responses/500_error.yaml
   x-workflow: calculateShippingOptionsPricesWorkflow
   x-events: []
+

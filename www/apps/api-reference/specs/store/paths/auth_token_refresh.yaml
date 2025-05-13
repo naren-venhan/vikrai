@@ -8,7 +8,7 @@ post:
     every day.
   externalDocs:
     url: >-
-      https://docs.medusajs.com/v2/storefront-development/customers/third-party-login
+      https://docs.vikrai.com/v2/storefront-development/customers/third-party-login
     description: 'Storefront development: Implement third-party (social) login.'
   x-authenticated: true
   x-codeSamples:
@@ -41,3 +41,4 @@ post:
       $ref: ../components/responses/invalid_request_error.yaml
     '500':
       $ref: ../components/responses/500_error.yaml
+

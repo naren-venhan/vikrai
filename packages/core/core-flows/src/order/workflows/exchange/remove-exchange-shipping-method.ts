@@ -4,8 +4,8 @@ import {
   OrderExchangeDTO,
   OrderPreviewDTO,
   OrderWorkflow,
-} from "@medusajs/framework/types"
-import { ChangeActionType, OrderChangeStatus } from "@medusajs/framework/utils"
+} from "@vikrai/framework/types"
+import { ChangeActionType, OrderChangeStatus } from "@vikrai/framework/utils"
 import {
   WorkflowData,
   WorkflowResponse,
@@ -13,7 +13,7 @@ import {
   createWorkflow,
   parallelize,
   transform,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { useRemoteQueryStep } from "../../../common"
 import { deleteOrderShippingMethods } from "../../steps"
 import { deleteOrderChangeActionsStep } from "../../steps/delete-order-change-actions"
@@ -48,8 +48,8 @@ export type RemoveExchangeShippingMethodValidationStepInput = {
  * 
  * :::note
  * 
- * You can retrieve an order exchange and order change details using [Query](https://docs.medusajs.com/learn/fundamentals/module-links/query),
- * or [useQueryGraphStep](https://docs.medusajs.com/resources/references/medusa-workflows/steps/useQueryGraphStep).
+ * You can retrieve an order exchange and order change details using [Query](https://docs.vikrai.com/learn/fundamentals/module-links/query),
+ * or [useQueryGraphStep](https://docs.vikrai.com/resources/references/vikrai-workflows/steps/useQueryGraphStep).
  * 
  * :::
  * 
@@ -99,8 +99,8 @@ export const removeExchangeShippingMethodWorkflowId =
   "remove-exchange-shipping-method"
 /**
  * This workflow removes an inbound or outbound shipping method of an exchange. It's used by the
- * [Remove Inbound Shipping Admin API Route](https://docs.medusajs.com/api/admin#exchanges_deleteexchangesidinboundshippingmethodaction_id) or
- * the [Remove Outbound Shipping Admin API Route](https://docs.medusajs.com/api/admin#exchanges_deleteexchangesidoutboundshippingmethodaction_id).
+ * [Remove Inbound Shipping Admin API Route](https://docs.vikrai.com/api/admin#exchanges_deleteexchangesidinboundshippingmethodaction_id) or
+ * the [Remove Outbound Shipping Admin API Route](https://docs.vikrai.com/api/admin#exchanges_deleteexchangesidoutboundshippingmethodaction_id).
  * 
  * You can use this workflow within your customizations or your own custom workflows, allowing you to remove an inbound or outbound shipping method
  * from an exchange in your custom flow.
@@ -172,3 +172,4 @@ export const removeExchangeShippingMethodWorkflow = createWorkflow(
     return new WorkflowResponse(previewOrderChangeStep(orderExchange.order_id))
   }
 )
+

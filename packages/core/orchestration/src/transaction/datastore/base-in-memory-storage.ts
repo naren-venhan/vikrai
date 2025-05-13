@@ -1,4 +1,4 @@
-import { TransactionState } from "@medusajs/utils"
+import { TransactionState } from "@vikrai/utils"
 import { TransactionCheckpoint } from "../distributed-transaction"
 import { TransactionOptions } from "../types"
 import { DistributedTransactionStorage } from "./abstract-storage"
@@ -42,3 +42,4 @@ export class BaseInMemoryDistributedTransactionStorage extends DistributedTransa
     }
   }
 }
+

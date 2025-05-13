@@ -6,7 +6,7 @@ import { CardProps } from "../.."
 import { BorderedIcon, ThemeImage, useIsExternalLink } from "../../../.."
 import Link from "next/link"
 import Image from "next/image"
-import { ArrowUpRightOnBox, TriangleRightMini } from "@medusajs/icons"
+import { ArrowUpRightOnBox, TriangleRightMini } from "@vikrai/icons"
 
 export const CardLayoutMini = ({
   icon,
@@ -21,11 +21,11 @@ export const CardLayoutMini = ({
   return (
     <div
       className={clsx(
-        "relative rounded-docs_DEFAULT border-medusa-fg-on-inverted border",
+        "relative rounded-docs_DEFAULT border-vikrai-fg-on-inverted border",
         "shadow-elevation-card-rest dark:shadow-elevation-card-rest-dark",
         "hover:shadow-elevation-card-hover dark:hover:shadow-elevation-card-hover-dark",
-        "bg-medusa-tag-neutral-bg dark:bg-medusa-bg-component",
-        "hover:bg-medusa-tag-neutral-bg-hover dark:hover:bg-medusa-bg-component-hover",
+        "bg-vikrai-tag-neutral-bg dark:bg-vikrai-bg-component",
+        "hover:bg-vikrai-tag-neutral-bg-hover dark:hover:bg-vikrai-bg-component-hover",
         "w-fit transition-all"
       )}
     >
@@ -37,7 +37,7 @@ export const CardLayoutMini = ({
       >
         {icon && (
           <BorderedIcon
-            wrapperClassName={clsx("p-[4.5px] bg-medusa-bg-component-hover")}
+            wrapperClassName={clsx("p-[4.5px] bg-vikrai-bg-component-hover")}
             IconComponent={icon}
           />
         )}
@@ -75,17 +75,17 @@ export const CardLayoutMini = ({
         )}
         <div className="flex flex-col">
           {title && (
-            <span className="text-x-small-plus text-medusa-fg-base">
+            <span className="text-x-small-plus text-vikrai-fg-base">
               {title}
             </span>
           )}
           {text && (
-            <span className="text-x-small-plus text-medusa-fg-subtle">
+            <span className="text-x-small-plus text-vikrai-fg-subtle">
               {text}
             </span>
           )}
         </div>
-        <span className="text-medusa-fg-subtle">
+        <span className="text-vikrai-fg-subtle">
           {isExternal ? <ArrowUpRightOnBox /> : <TriangleRightMini />}
         </span>
         {href && (
@@ -99,3 +99,4 @@ export const CardLayoutMini = ({
     </div>
   )
 }
+

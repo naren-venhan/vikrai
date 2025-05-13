@@ -1,6 +1,6 @@
-import { PencilSquare, Trash } from "@medusajs/icons"
-import { HttpTypes } from "@medusajs/types"
-import { usePrompt } from "@medusajs/ui"
+import { PencilSquare, Trash } from "@vikrai/icons"
+import { HttpTypes } from "@vikrai/types"
+import { usePrompt } from "@vikrai/ui"
 import { useTranslation } from "react-i18next"
 
 import { ActionMenu } from "../../../../../components/common/action-menu"
@@ -61,3 +61,4 @@ export const CollectionRowActions = ({
     />
   )
 }
+

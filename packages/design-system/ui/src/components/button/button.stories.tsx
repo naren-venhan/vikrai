@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react"
 import * as React from "react"
 
-import { PlusMini } from "@medusajs/icons"
+import { PlusMini } from "@vikrai/icons"
 import { Button } from "./button"
 
 const meta: Meta<typeof Button> = {
@@ -76,3 +76,4 @@ export const XLarge: Story = {
     size: "xlarge",
   },
 }
+

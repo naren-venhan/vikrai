@@ -1,5 +1,5 @@
-import { InformationCircleSolid } from "@medusajs/icons"
-import { Tooltip } from "@medusajs/ui"
+import { InformationCircleSolid } from "@vikrai/icons"
+import { Tooltip } from "@vikrai/ui"
 
 export default function TooltipDemo() {
   return (
@@ -8,3 +8,4 @@ export default function TooltipDemo() {
     </Tooltip>
   )
 }
+

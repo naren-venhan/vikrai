@@ -1,10 +1,10 @@
-import { IProductModuleService, ProductTypes } from "@medusajs/framework/types"
+import { IProductModuleService, ProductTypes } from "@vikrai/framework/types"
 import {
-  MedusaError,
+  vikraiError,
   Modules,
   getSelectsAndRelationsFromObjectArray,
-} from "@medusajs/framework/utils"
-import { StepResponse, createStep } from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/utils"
+import { StepResponse, createStep } from "@vikrai/framework/workflows-sdk"
 
 /**
  * The details of the product variants update.
@@ -65,8 +65,8 @@ export const updateProductVariantsStep = createStep(
 
     if ("product_variants" in data) {
       if (data.product_variants.some((p) => !p.id)) {
-        throw new MedusaError(
-          MedusaError.Types.INVALID_DATA,
+        throw new vikraiError(
+          vikraiError.Types.INVALID_DATA,
           "Product variant ID is required when doing a batch update of product variants"
         )
       }
@@ -106,3 +106,4 @@ export const updateProductVariantsStep = createStep(
     await service.upsertProductVariants(prevData)
   }
 )
+

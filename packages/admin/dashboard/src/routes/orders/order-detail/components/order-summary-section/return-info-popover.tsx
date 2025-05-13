@@ -1,6 +1,6 @@
-import { InformationCircleSolid } from "@medusajs/icons"
-import { AdminReturn } from "@medusajs/types"
-import { Badge, Popover, Text } from "@medusajs/ui"
+import { InformationCircleSolid } from "@vikrai/icons"
+import { AdminReturn } from "@vikrai/types"
+import { Badge, Popover, Text } from "@vikrai/ui"
 import { useState } from "react"
 import { useTranslation } from "react-i18next"
 import { useDate } from "../../../../../hooks/use-date"
@@ -88,3 +88,4 @@ function ReturnInfoPopover({ orderReturn }: ReturnInfoPopoverProps) {
 }
 
 export default ReturnInfoPopover
+

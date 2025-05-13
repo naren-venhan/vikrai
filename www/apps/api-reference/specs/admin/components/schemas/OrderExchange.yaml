@@ -53,7 +53,7 @@ properties:
     description: The exchange's transactions.
     externalDocs:
       url: >-
-        https://docs.medusajs.com/v2/resources/commerce-modules/order/transactions
+        https://docs.vikrai.com/v2/resources/commerce-modules/order/transactions
     items:
       $ref: ./OrderTransaction.yaml
   metadata:
@@ -109,3 +109,4 @@ properties:
     title: canceled_at
     description: The date the exchange was canceled.
     format: date-time
+

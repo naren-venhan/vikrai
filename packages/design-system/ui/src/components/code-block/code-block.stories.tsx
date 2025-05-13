@@ -23,14 +23,14 @@ const snippets = [
     code: `curl -H 'x-publishable-key: YOUR_API_KEY' 'http://localhost:9000/store/products/PRODUCT_ID'`,
   },
   {
-    label: "Medusa JS Client",
+    label: "vikrai JS Client",
     language: "jsx",
-    code: `// Install the JS Client in your storefront project: @medusajs/medusa-js\n\nimport Medusa from "@medusajs/medusa-js"\n\nconst medusa = new Medusa({ publishableApiKey: "YOUR_API_KEY"})\nconst product = await medusa.products.retrieve("PRODUCT_ID")\nconsole.log(product.id)`,
+    code: `// Install the JS Client in your storefront project: @vikrai/vikrai-js\n\nimport vikrai from "@vikrai/vikrai-js"\n\nconst vikrai = new vikrai({ publishableApiKey: "YOUR_API_KEY"})\nconst product = await vikrai.products.retrieve("PRODUCT_ID")\nconsole.log(product.id)`,
   },
   {
-    label: "Medusa React",
+    label: "vikrai React",
     language: "tsx",
-    code: `// Install the React SDK and required dependencies in your storefront project:\n// medusa-react @tanstack/react-query @medusajs/medusa\n\nimport { useProduct } from "medusa-react"\n\nconst { product } = useProduct("PRODUCT_ID")\nconsole.log(product.id)`,
+    code: `// Install the React SDK and required dependencies in your storefront project:\n// vikrai-react @tanstack/react-query @vikrai/vikrai\n\nimport { useProduct } from "vikrai-react"\n\nconst { product } = useProduct("PRODUCT_ID")\nconsole.log(product.id)`,
   },
 ]
 
@@ -77,7 +77,7 @@ const generateStartupLog = () => {
     `✔ ${service.name} optimized – ${service.time + 3}ms`,
   ])
 
-  return `medusa develop\n${lines.join("\n")}\n✔ Server is ready on port: 9000`
+  return `vikrai develop\n${lines.join("\n")}\n✔ Server is ready on port: 9000`
 }
 
 const code = generateStartupLog()
@@ -104,3 +104,4 @@ export const ManyLines: Story = {
     )
   },
 }
+

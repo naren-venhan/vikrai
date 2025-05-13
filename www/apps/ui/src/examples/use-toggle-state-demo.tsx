@@ -4,7 +4,7 @@ import {
   Heading,
   Table,
   useToggleState,
-} from "@medusajs/ui"
+} from "@vikrai/ui"
 import { useState } from "react"
 
 export default function useToggleStateDemo() {
@@ -67,3 +67,4 @@ export default function useToggleStateDemo() {
     </>
   )
 }
+

@@ -1,6 +1,6 @@
 "use client"
 
-import { EllipseMiniSolid } from "@medusajs/icons"
+import { EllipseMiniSolid } from "@vikrai/icons"
 import clsx from "clsx"
 import React from "react"
 import { ToCItemUi } from "types"
@@ -20,13 +20,13 @@ export const TocMenu = ({ items, activeItem, show, setShow }: TocMenuProps) => {
     const isActive = item.id === activeItem
     const hasChildren = item.children?.length || 0 > 0
     return (
-      <li className={clsx("text-medusa-fg-base w-full")}>
+      <li className={clsx("text-vikrai-fg-base w-full")}>
         <Button
           variant="transparent-clear"
           className={clsx(
             "gap-docs_0.5 flex-1",
             "cursor-pointer rounded-docs_sm py-docs_0.25",
-            "px-docs_0.5 hover:bg-medusa-bg-component-hover",
+            "px-docs_0.5 hover:bg-vikrai-bg-component-hover",
             "!text-inherit max-w-full w-full",
             "focus:!outline-none focus:!shadow-none focus:dark:!shadow-none",
             "!flex !justify-start !items-center",
@@ -59,7 +59,7 @@ export const TocMenu = ({ items, activeItem, show, setShow }: TocMenuProps) => {
     <div
       className={clsx(
         "hidden lg:flex relative transition-[width] lg:h-full",
-        "w-0 z-50 bg-medusa-bg-subtle overflow-hidden flex flex-col justify-center",
+        "w-0 z-50 bg-vikrai-bg-subtle overflow-hidden flex flex-col justify-center",
         show && "lg:w-toc"
       )}
       onMouseLeave={() => setShow(false)}
@@ -78,3 +78,4 @@ export const TocMenu = ({ items, activeItem, show, setShow }: TocMenuProps) => {
     </div>
   )
 }
+

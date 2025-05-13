@@ -1,12 +1,12 @@
-import { BigNumberInput, PaymentDTO } from "@medusajs/framework/types"
-import { PaymentEvents } from "@medusajs/framework/utils"
+import { BigNumberInput, PaymentDTO } from "@vikrai/framework/types"
+import { PaymentEvents } from "@vikrai/framework/utils"
 import {
   WorkflowData,
   WorkflowResponse,
   createWorkflow,
   transform,
   when,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { emitEventStep, useRemoteQueryStep } from "../../common"
 import { addOrderTransactionStep } from "../../order/steps/add-order-transaction"
 import { capturePaymentStep } from "../steps/capture-payment"
@@ -32,7 +32,7 @@ export type CapturePaymentWorkflowInput = {
 export const capturePaymentWorkflowId = "capture-payment-workflow"
 /**
  * This workflow captures a payment. It's used by the
- * [Capture Payment Admin API Route](https://docs.medusajs.com/api/admin#payments_postpaymentsidcapture).
+ * [Capture Payment Admin API Route](https://docs.vikrai.com/api/admin#payments_postpaymentsidcapture).
  *
  * You can use this workflow within your own customizations or custom workflows, allowing you
  * to capture a payment in your custom flows.
@@ -92,3 +92,4 @@ export const capturePaymentWorkflow = createWorkflow(
     return new WorkflowResponse(payment)
   }
 )
+

@@ -2,15 +2,15 @@ import {
   OrderChangeDTO,
   OrderClaimDTO,
   OrderDTO,
-} from "@medusajs/framework/types"
-import { ChangeActionType, OrderChangeStatus } from "@medusajs/framework/utils"
+} from "@vikrai/framework/types"
+import { ChangeActionType, OrderChangeStatus } from "@vikrai/framework/utils"
 import {
   WorkflowData,
   createStep,
   createWorkflow,
   parallelize,
   transform,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { useRemoteQueryStep } from "../../../common"
 import {
   deleteClaimsStep,
@@ -47,8 +47,8 @@ export type CancelBeginOrderClaimValidationStepInput = {
  * 
  * :::note
  * 
- * You can retrieve an order, order claim, and order change details using [Query](https://docs.medusajs.com/learn/fundamentals/module-links/query),
- * or [useQueryGraphStep](https://docs.medusajs.com/resources/references/medusa-workflows/steps/useQueryGraphStep).
+ * You can retrieve an order, order claim, and order change details using [Query](https://docs.vikrai.com/learn/fundamentals/module-links/query),
+ * or [useQueryGraphStep](https://docs.vikrai.com/resources/references/vikrai-workflows/steps/useQueryGraphStep).
  * 
  * :::
  * 
@@ -94,7 +94,7 @@ export type CancelBeginOrderClaimWorkflowInput = {
 export const cancelBeginOrderClaimWorkflowId = "cancel-begin-order-claim"
 /**
  * This workflow cancels a requested order claim. It's used by the
- * [Cancel Claim Request Admin API Route](https://docs.medusajs.com/api/admin#claims_deleteclaimsidrequest).
+ * [Cancel Claim Request Admin API Route](https://docs.vikrai.com/api/admin#claims_deleteclaimsidrequest).
  * 
  * You can use this workflow within your customizations or your own custom workflows, allowing you to cancel a claim
  * for an order in your custom flows.
@@ -162,3 +162,4 @@ export const cancelBeginOrderClaimWorkflow = createWorkflow(
     )
   }
 )
+

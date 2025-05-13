@@ -1,7 +1,7 @@
-import { IAuthModuleService } from "@medusajs/framework/types"
-import { Module, Modules } from "@medusajs/framework/utils"
+import { IAuthModuleService } from "@vikrai/framework/types"
+import { Module, Modules } from "@vikrai/framework/utils"
 import { AuthModuleService } from "@services"
-import { moduleIntegrationTestRunner, SuiteOptions } from "@medusajs/test-utils"
+import { moduleIntegrationTestRunner, SuiteOptions } from "@vikrai/test-utils"
 import { resolve } from "path"
 
 let moduleOptions = {
@@ -153,3 +153,4 @@ Please make sure that the provider is registered in the container and it is conf
       })
     }),
 })
+

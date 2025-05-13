@@ -4,7 +4,7 @@ import {
   createWorkflow,
   transform,
   when,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { setAuthAppMetadataStep } from "../../auth"
 import { useRemoteQueryStep } from "../../common"
 import { deleteUsersWorkflow } from "./delete-users"
@@ -21,7 +21,7 @@ export type RemoveUserAccountWorkflowInput = {
 export const removeUserAccountWorkflowId = "remove-user-account"
 /**
  * This workflow deletes a user and remove the association to its auth identity. It's used
- * by the [Delete User Admin API Route](https://docs.medusajs.com/api/admin#users_deleteusersid).
+ * by the [Delete User Admin API Route](https://docs.vikrai.com/api/admin#users_deleteusersid).
  * 
  * You can use this workflow within your customizations or your own custom workflows, allowing you to
  * delete users within your custom flows.
@@ -81,3 +81,4 @@ export const removeUserAccountWorkflow = createWorkflow(
     return new WorkflowResponse(input.userId)
   }
 )
+

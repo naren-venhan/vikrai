@@ -1,4 +1,4 @@
-import { ProductTypes } from "@medusajs/framework/types"
+import { ProductTypes } from "@vikrai/framework/types"
 import faker from "faker"
 
 export const buildProductVariantOnlyData = ({
@@ -40,3 +40,4 @@ export const buildProductVariantOnlyData = ({
     metadata,
   }
 }
+

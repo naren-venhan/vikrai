@@ -1,7 +1,7 @@
-import { CreatePriceSetDTO } from "@medusajs/framework/types"
+import { CreatePriceSetDTO } from "@vikrai/framework/types"
 import { SqlEntityManager } from "@mikro-orm/postgresql"
 import { Price, PriceSet } from "@models"
-import { toMikroORMEntity } from "@medusajs/framework/utils"
+import { toMikroORMEntity } from "@vikrai/framework/utils"
 import { defaultPriceSetsData } from "./data"
 
 export * from "./data"
@@ -39,3 +39,4 @@ export async function createPriceSets(
 
   return priceSets
 }
+

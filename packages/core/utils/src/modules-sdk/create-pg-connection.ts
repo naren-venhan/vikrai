@@ -1,4 +1,4 @@
-import { ModuleServiceInitializeOptions } from "@medusajs/types"
+import { ModuleServiceInitializeOptions } from "@vikrai/types"
 import { knex } from "@mikro-orm/postgresql"
 
 type Options = ModuleServiceInitializeOptions["database"]
@@ -33,3 +33,4 @@ export function createPgConnection(options: Options) {
 }
 
 export const isSharedConnectionSymbol = Symbol.for("isSharedConnection")
+

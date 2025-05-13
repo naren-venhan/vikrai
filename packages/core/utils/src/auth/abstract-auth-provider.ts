@@ -3,7 +3,7 @@ import {
   AuthenticationResponse,
   AuthIdentityProviderService,
   IAuthProvider,
-} from "@medusajs/types"
+} from "@vikrai/types"
 
 /**
  * ### constructor
@@ -16,8 +16,8 @@ import {
  * #### Example
  *
  * ```ts
- * import { AbstractAuthModuleProvider } from "@medusajs/framework/utils"
- * import { Logger } from "@medusajs/framework/types"
+ * import { AbstractAuthModuleProvider } from "@vikrai/framework/utils"
+ * import { Logger } from "@vikrai/framework/types"
  *
  * type InjectedDependencies = {
  *   logger: Logger
@@ -57,7 +57,7 @@ export abstract class AbstractAuthModuleProvider implements IAuthProvider {
   /**
    * Every auth provider must have an `identifier` static property. The provider's ID
    * will be stored as `au_{identifier}_{id}`, where `{id}` is the provider's `id` 
-   * property in the `medusa-config.ts`.
+   * property in the `vikrai-config.ts`.
    * 
    * @example
    * class MyAuthProviderService extends AbstractAuthModuleProvider {
@@ -106,7 +106,7 @@ export abstract class AbstractAuthModuleProvider implements IAuthProvider {
   }
 
   /**
-   * This method validates the options of the provider set in `medusa-config.ts`.
+   * This method validates the options of the provider set in `vikrai-config.ts`.
    * Implementing this method is optional. It's useful if your provider requires custom validation.
    * 
    * If the options aren't valid, throw an error.
@@ -117,8 +117,8 @@ export abstract class AbstractAuthModuleProvider implements IAuthProvider {
    * class MyAuthProviderService extends AbstractAuthModuleProvider {
    *   static validateOptions(options: Record<any, any>) {
    *     if (!options.apiKey) {
-   *       throw new MedusaError(
-   *         MedusaError.Types.INVALID_DATA,
+   *       throw new vikraiError(
+   *         vikraiError.Types.INVALID_DATA,
    *         "API key is required in the provider's options."
    *       )
    *     }
@@ -134,7 +134,7 @@ export abstract class AbstractAuthModuleProvider implements IAuthProvider {
    * The authentication happens either by directly authenticating or returning a redirect URL to continue
    * the authentication with a third party provider.
    *
-   * Related Read: [Learn about the different authentication flows in Medusa](https://docs.medusajs.com/resources/commerce-modules/auth/authentication-route).
+   * Related Read: [Learn about the different authentication flows in vikrai](https://docs.vikrai.com/resources/commerce-modules/auth/authentication-route).
    *
    * @param {AuthenticationInput} data - The details of the authentication request.
    * @param {AuthIdentityProviderService} authIdentityProviderService - The service used to retrieve or
@@ -151,7 +151,7 @@ export abstract class AbstractAuthModuleProvider implements IAuthProvider {
    *   AuthIdentityProviderService,
    *   AuthenticationInput,
    *   AuthenticationResponse
-   * } from "@medusajs/framework/types"
+   * } from "@vikrai/framework/types"
    * // ...
    *
    * class MyAuthProviderService extends AbstractAuthModuleProvider {
@@ -194,7 +194,7 @@ export abstract class AbstractAuthModuleProvider implements IAuthProvider {
    *   AuthIdentityProviderService,
    *   AuthenticationInput,
    *   AuthenticationResponse
-   * } from "@medusajs/framework/types"
+   * } from "@vikrai/framework/types"
    * // ...
    *
    * class MyAuthProviderService extends AbstractAuthModuleProvider {
@@ -239,7 +239,7 @@ export abstract class AbstractAuthModuleProvider implements IAuthProvider {
    * This method is only used in a basic authentication flow, such as when using an email and password
    * to register and authenticate a user.
    *
-   * Related Read: [Learn about the different authentication flows in Medusa](https://docs.medusajs.com/resources/commerce-modules/auth/authentication-route).
+   * Related Read: [Learn about the different authentication flows in vikrai](https://docs.vikrai.com/resources/commerce-modules/auth/authentication-route).
    *
    * @param {AuthenticationInput} data - The details of the authentication request.
    * @param {AuthIdentityProviderService} authIdentityProviderService - The service used to retrieve or
@@ -253,8 +253,8 @@ export abstract class AbstractAuthModuleProvider implements IAuthProvider {
    *   AuthIdentityProviderService,
    *   AuthenticationInput,
    *   AuthenticationResponse
-   * } from "@medusajs/framework/types"
-   * import { MedusaError } from "@medusajs/framework/utils"
+   * } from "@vikrai/framework/types"
+   * import { vikraiError } from "@vikrai/framework/utils"
    * // ...
    *
    * class MyAuthProviderService extends AbstractAuthModuleProvider {
@@ -273,7 +273,7 @@ export abstract class AbstractAuthModuleProvider implements IAuthProvider {
    *         error: "Identity with email already exists",
    *       }
    *     } catch (error) {
-   *       if (error.type === MedusaError.Types.NOT_FOUND) {
+   *       if (error.type === vikraiError.Types.NOT_FOUND) {
    *         const createdAuthIdentity = await authIdentityProviderService.create({
    *           entity_id: data.body.email, // email or some ID
    *           provider: this.provider,
@@ -320,8 +320,8 @@ export abstract class AbstractAuthModuleProvider implements IAuthProvider {
    *   AuthIdentityProviderService,
    *   AuthenticationInput,
    *   AuthenticationResponse
-   * } from "@medusajs/framework/types"
-   * import { MedusaError } from "@medusajs/framework/utils"
+   * } from "@vikrai/framework/types"
+   * import { vikraiError } from "@vikrai/framework/utils"
    * // ...
    *
    * class MyAuthProviderService extends AbstractAuthModuleProvider {
@@ -361,7 +361,7 @@ export abstract class AbstractAuthModuleProvider implements IAuthProvider {
    * with a social account, the {@link authenticate} method is called first.
    *
    * Then, the third-party service redirects to a frontend URL passing it a `code` query parameter.
-   * The frontend should then send a request to the Medusa application's validate callback API route, passing it the code.
+   * The frontend should then send a request to the vikrai application's validate callback API route, passing it the code.
    * That route uses this method to verify the callback's code.
    *
    * If the callback is verified successfully, the provider creates an auth identity for the user, or updates the auth identity's user information.
@@ -372,7 +372,7 @@ export abstract class AbstractAuthModuleProvider implements IAuthProvider {
    * - `user_metadata`: Store metadata of the user's details. For example, if the third-party service returns the user's information such as email
    * or name, you store this data in this property.
    *
-   * Related Guide: [Learn about the different authentication flows in Medusa](https://docs.medusajs.com/resources/commerce-modules/auth/authentication-route).
+   * Related Guide: [Learn about the different authentication flows in vikrai](https://docs.vikrai.com/resources/commerce-modules/auth/authentication-route).
    *
    * @param {AuthenticationInput} data - The details of the authentication request.
    * @param {AuthIdentityProviderService} authIdentityProviderService - The service used to retrieve or
@@ -386,7 +386,7 @@ export abstract class AbstractAuthModuleProvider implements IAuthProvider {
    *   AuthIdentityProviderService,
    *   AuthenticationInput,
    *   AuthenticationResponse
-   * } from "@medusajs/framework/types"
+   * } from "@vikrai/framework/types"
    * // ...
    *
    * class MyAuthProviderService extends AbstractAuthModuleProvider {
@@ -447,3 +447,4 @@ export abstract class AbstractAuthModuleProvider implements IAuthProvider {
     )
   }
 }
+

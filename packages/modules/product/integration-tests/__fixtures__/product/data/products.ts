@@ -1,4 +1,4 @@
-import { ProductStatus } from "@medusajs/framework/utils"
+import { ProductStatus } from "@vikrai/framework/utils"
 
 export const productsData = [
   {
@@ -53,3 +53,4 @@ export const variantsData = [
     product: { id: productsData[1].id },
   },
 ]
+

@@ -5,15 +5,15 @@ import {
   OrderExchangeDTO,
   OrderPreviewDTO,
   OrderWorkflow,
-} from "@medusajs/framework/types"
-import { ChangeActionType, OrderChangeStatus } from "@medusajs/framework/utils"
+} from "@vikrai/framework/types"
+import { ChangeActionType, OrderChangeStatus } from "@vikrai/framework/utils"
 import {
   WorkflowData,
   WorkflowResponse,
   createStep,
   createWorkflow,
   transform,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { useRemoteQueryStep } from "../../../common"
 import {
   previewOrderChangeStep,
@@ -54,8 +54,8 @@ export type UpdateExchangeAddItemValidationStepInput = {
  *
  * :::note
  *
- * You can retrieve an order, order exchange, and order change details using [Query](https://docs.medusajs.com/learn/fundamentals/module-links/query),
- * or [useQueryGraphStep](https://docs.medusajs.com/resources/references/medusa-workflows/steps/useQueryGraphStep).
+ * You can retrieve an order, order exchange, and order change details using [Query](https://docs.vikrai.com/learn/fundamentals/module-links/query),
+ * or [useQueryGraphStep](https://docs.vikrai.com/resources/references/vikrai-workflows/steps/useQueryGraphStep).
  *
  * :::
  *
@@ -114,7 +114,7 @@ export const updateExchangeAddItemValidationStep = createStep(
 export const updateExchangeAddItemWorkflowId = "update-exchange-add-item"
 /**
  * This workflow updates an outbound or new item in the exchange. It's used by the
- * [Update Outbound Item Admin API Route](https://docs.medusajs.com/api/admin#exchanges_postexchangesidoutbounditemsaction_id).
+ * [Update Outbound Item Admin API Route](https://docs.vikrai.com/api/admin#exchanges_postexchangesidoutbounditemsaction_id).
  *
  * You can use this workflow within your customizations or your own custom workflows, allowing you to update an outbound or new item
  * in an exchange in your custom flow.
@@ -214,3 +214,4 @@ export const updateExchangeAddItemWorkflow = createWorkflow(
     return new WorkflowResponse(previewOrderChangeStep(order.id))
   }
 )
+

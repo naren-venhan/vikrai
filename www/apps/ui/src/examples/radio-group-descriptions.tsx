@@ -1,4 +1,4 @@
-import { Label, RadioGroup, Text } from "@medusajs/ui"
+import { Label, RadioGroup, Text } from "@vikrai/ui"
 
 export default function RadioGroupDescriptions() {
   return (
@@ -39,3 +39,4 @@ export default function RadioGroupDescriptions() {
     </RadioGroup>
   )
 }
+

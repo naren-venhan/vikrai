@@ -1,4 +1,4 @@
-import { CampaignBudgetType } from "@medusajs/framework/utils"
+import { CampaignBudgetType } from "@vikrai/framework/utils"
 
 export const defaultCampaignsData = [
   {
@@ -30,3 +30,4 @@ export const defaultCampaignsData = [
     },
   },
 ]
+

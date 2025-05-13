@@ -1,5 +1,5 @@
 import type { Readable } from "stream"
-import { FileTypes, IFileProvider } from "@medusajs/types"
+import { FileTypes, IFileProvider } from "@vikrai/types"
 
 /**
  * ### constructor
@@ -12,8 +12,8 @@ import { FileTypes, IFileProvider } from "@medusajs/types"
  * #### Example
  *
  * ```ts
- * import { Logger } from "@medusajs/framework/types"
- * import { AbstractFileProviderService } from "@medusajs/framework/utils"
+ * import { Logger } from "@vikrai/framework/types"
+ * import { AbstractFileProviderService } from "@vikrai/framework/utils"
  *
  * type InjectedDependencies = {
  *   logger: Logger
@@ -51,7 +51,7 @@ export class AbstractFileProviderService implements IFileProvider {
   /**
    * Each file provider has a unique ID used to identify it. The provider's ID
    * will be stored as `fs_{identifier}_{id}`, where `{id}` is the provider's `id`
-   * property in the `medusa-config.ts`.
+   * property in the `vikrai-config.ts`.
    *
    * @example
    * class MyFileProviderService extends AbstractFileProviderService {
@@ -62,7 +62,7 @@ export class AbstractFileProviderService implements IFileProvider {
   static identifier: string
 
   /**
-   * This method validates the options of the provider set in `medusa-config.ts`.
+   * This method validates the options of the provider set in `vikrai-config.ts`.
    * Implementing this method is optional. It's useful if your provider requires custom validation.
    *
    * If the options aren't valid, throw an error.
@@ -73,8 +73,8 @@ export class AbstractFileProviderService implements IFileProvider {
    * class MyFileProviderService extends AbstractFileProviderService {
    *   static validateOptions(options: Record<any, any>) {
    *     if (!options.apiKey) {
-   *       throw new MedusaError(
-   *         MedusaError.Types.INVALID_DATA,
+   *       throw new vikraiError(
+   *         vikraiError.Types.INVALID_DATA,
    *         "API key is required in the provider's options."
    *       )
    *     }
@@ -228,3 +228,4 @@ export class AbstractFileProviderService implements IFileProvider {
     throw Error("getAsBuffer must be overridden by the child class")
   }
 }
+

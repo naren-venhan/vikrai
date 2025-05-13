@@ -1,6 +1,6 @@
 "use client"
 
-import { MagnifyingGlass, XMark } from "@medusajs/icons"
+import { MagnifyingGlass, XMark } from "@vikrai/icons"
 import clsx from "clsx"
 import React from "react"
 import { useKeyboardShortcut } from "../../../hooks"
@@ -28,15 +28,15 @@ export const SearchInput = ({
   return (
     <div className="flex flex-col gap-docs_0.5">
       <div className="relative">
-        <MagnifyingGlass className="absolute left-docs_0.5 top-[8.5px] bottom-[8.5px] text-medusa-fg-muted" />
+        <MagnifyingGlass className="absolute left-docs_0.5 top-[8.5px] bottom-[8.5px] text-vikrai-fg-muted" />
         <input
           type="text"
           placeholder={placeholder}
           className={clsx(
-            "w-full h-docs_2 pl-docs_2 text-base md:text-compact-small placeholder:text-medusa-fg-muted",
-            "bg-medusa-bg-field text-medusa-fg-base rounded-full",
-            "shadow-borders-base hover:bg-medusa-bg-field-hover",
-            "focus:bg-medusa-bg-field focus:shadow-borders-interactive-with-active focus:outline-none",
+            "w-full h-docs_2 pl-docs_2 text-base md:text-compact-small placeholder:text-vikrai-fg-muted",
+            "bg-vikrai-bg-field text-vikrai-fg-base rounded-full",
+            "shadow-borders-base hover:bg-vikrai-bg-field-hover",
+            "focus:bg-vikrai-bg-field focus:shadow-borders-interactive-with-active focus:outline-none",
             className
           )}
           value={value}
@@ -51,14 +51,15 @@ export const SearchInput = ({
             )}
             onClick={() => onChange("")}
           >
-            <XMark className="text-medusa-fg-muted" />
+            <XMark className="text-vikrai-fg-muted" />
           </button>
         )}
       </div>
       <span className="flex gap-docs_0.25 justify-end items-center text-compact-x-small">
         <Kbd variant="small">esc</Kbd>
-        <span className="text-medusa-fg-muted">Clear Search</span>
+        <span className="text-vikrai-fg-muted">Clear Search</span>
       </span>
     </div>
   )
 }
+

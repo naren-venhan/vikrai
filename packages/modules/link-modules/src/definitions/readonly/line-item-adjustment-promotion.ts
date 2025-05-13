@@ -1,5 +1,5 @@
-import { ModuleJoinerConfig } from "@medusajs/framework/types"
-import { Modules } from "@medusajs/framework/utils"
+import { ModuleJoinerConfig } from "@vikrai/framework/types"
+import { Modules } from "@vikrai/framework/utils"
 
 export const LineItemAdjustmentPromotion: ModuleJoinerConfig = {
   isLink: true,
@@ -21,3 +21,4 @@ export const LineItemAdjustmentPromotion: ModuleJoinerConfig = {
     },
   ],
 }
+

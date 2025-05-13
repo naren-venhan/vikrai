@@ -1,10 +1,10 @@
-import { OrderWorkflowDTO } from "@medusajs/framework/types"
+import { OrderWorkflowDTO } from "@vikrai/framework/types"
 import {
   WorkflowData,
   createWorkflow,
   transform,
   when,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { useRemoteQueryStep } from "../../common"
 import { getItemTaxLinesStep } from "../../tax/steps/get-item-tax-lines"
 import { setOrderTaxLinesForItemsStep } from "../steps"
@@ -246,3 +246,4 @@ export const updateOrderTaxLinesWorkflow = createWorkflow(
     })
   }
 )
+

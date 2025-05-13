@@ -66,7 +66,7 @@ const TagsOperationDescriptionSection = ({
         {operation["x-featureFlag"] && (
           <FeatureFlagNotice
             featureFlag={operation["x-featureFlag"]}
-            tooltipTextClassName="font-normal text-medusa-fg-base"
+            tooltipTextClassName="font-normal text-vikrai-fg-base"
             badgeClassName="ml-0.5"
           />
         )}
@@ -135,3 +135,4 @@ const TagsOperationDescriptionSection = ({
 }
 
 export default TagsOperationDescriptionSection
+

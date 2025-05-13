@@ -1,5 +1,5 @@
-import { OrderDetailDTO } from "@medusajs/framework/types"
-import { isDefined, MathBN } from "@medusajs/framework/utils"
+import { OrderDetailDTO } from "@vikrai/framework/types"
+import { isDefined, MathBN } from "@vikrai/framework/utils"
 
 export const getLastPaymentStatus = (order: OrderDetailDTO) => {
   const PaymentStatus = {
@@ -193,3 +193,4 @@ export const getLastFulfillmentStatus = (order: OrderDetailDTO) => {
 
   return FulfillmentStatus.NOT_FULFILLED
 }
+

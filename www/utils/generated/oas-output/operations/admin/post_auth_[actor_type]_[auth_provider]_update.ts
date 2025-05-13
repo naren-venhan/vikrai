@@ -3,9 +3,9 @@
  * operationId: PostActor_typeAuth_providerUpdate
  * summary: Reset an Admin User's Password
  * x-sidebar-summary: Reset Password
- * description: Reset an admin user's password using a reset-password token generated with the [Generate Reset Password Token API route](https://docs.medusajs.com/api/admin#auth_postactor_typeauth_providerresetpassword). You pass the token as a bearer token in the request's Authorization header.
+ * description: Reset an admin user's password using a reset-password token generated with the [Generate Reset Password Token API route](https://docs.vikrai.com/api/admin#auth_postactor_typeauth_providerresetpassword). You pass the token as a bearer token in the request's Authorization header.
  * externalDocs:
- *   url: https://docs.medusajs.com/v2/resources/commerce-modules/auth/authentication-route#reset-password-route
+ *   url: https://docs.vikrai.com/v2/resources/commerce-modules/auth/authentication-route#reset-password-route
  *   description: Learn more about this API route.
  * x-authenticated: true
  * parameters:
@@ -24,15 +24,15 @@
  *         title: input
  *         description: The input data necessary for authentication. For example, for email-pass authentication, pass `email` and `password` properties.
  *         example:
- *           email: "admin@medusa-test.com"
+ *           email: "admin@vikrai-test.com"
  *           password: "supersecret"
  * x-codeSamples:
  *   - lang: JavaScript
  *     label: JS SDK
  *     source: |-
- *       import Medusa from "@medusajs/js-sdk"
+ *       import vikrai from "@vikrai/js-sdk"
  * 
- *       export const sdk = new Medusa({
+ *       export const sdk = new vikrai({
  *         baseUrl: import.meta.env.VITE_BACKEND_URL || "/",
  *         debug: import.meta.env.DEV,
  *         auth: {
@@ -58,7 +58,7 @@
  *       -H 'Content-Type: application/json' \
  *       -H 'Authorization: Bearer {token}' \
  *       --data-raw '{
- *         "email": "admin@medusa-test.com",
+ *         "email": "admin@vikrai-test.com",
  *         "password": "supersecret"
  *       }'
  * security:

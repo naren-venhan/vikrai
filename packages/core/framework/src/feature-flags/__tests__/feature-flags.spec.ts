@@ -1,4 +1,4 @@
-import { FileSystem } from "@medusajs/utils"
+import { FileSystem } from "@vikrai/utils"
 import { join } from "path"
 import { featureFlagsLoader } from "../feature-flag-loader"
 import { configManager } from "../../config"
@@ -15,7 +15,7 @@ const buildFeatureFlag = (
     export default {
       description: "${key} descr",
       key: "${snakeCaseKey}",
-      env_key: "MEDUSA_FF_${snakeCaseKey.toUpperCase()}",
+      env_key: "vikrai_FF_${snakeCaseKey.toUpperCase()}",
       default_val: ${defaultVal},
     }
   `
@@ -87,7 +87,7 @@ describe("feature flags", () => {
   })
 
   it("should load the flag from env", async () => {
-    process.env.MEDUSA_FF_FLAG_1 = "false"
+    process.env.vikrai_FF_FLAG_1 = "false"
 
     await filesystem.create(
       "flags/flag-1.js",
@@ -104,7 +104,7 @@ describe("feature flags", () => {
       baseDir: filesystem.basePath,
     })
 
-    process.env.MEDUSA_FF_FLAG_3 = "true"
+    process.env.vikrai_FF_FLAG_3 = "true"
     await filesystem.create(
       "flags/flag-1.js",
       buildFeatureFlag("flag-1", false)
@@ -125,3 +125,4 @@ describe("feature flags", () => {
     expect(flags.isFeatureEnabled("flag_3")).toEqual(true)
   })
 })
+

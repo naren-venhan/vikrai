@@ -1,7 +1,7 @@
 import {
   AdditionalData,
   CreateCustomerAddressDTO,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import {
   WorkflowData,
   WorkflowResponse,
@@ -9,7 +9,7 @@ import {
   createWorkflow,
   parallelize,
   transform,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import {
   createCustomerAddressesStep,
   maybeUnsetDefaultBillingAddressesStep,
@@ -28,8 +28,8 @@ export type CreateCustomerAddressesWorkflowInput = {
 
 export const createCustomerAddressesWorkflowId = "create-customer-addresses"
 /**
- * This workflow creates one or more addresses for customers. It's used by the [Add Customer Address Admin API Route](https://docs.medusajs.com/api/admin#customers_postcustomersidaddresses)
- * and the [Add Customer Address Store API Route](https://docs.medusajs.com/api/store#customers_postcustomersmeaddresses).
+ * This workflow creates one or more addresses for customers. It's used by the [Add Customer Address Admin API Route](https://docs.vikrai.com/api/admin#customers_postcustomersidaddresses)
+ * and the [Add Customer Address Store API Route](https://docs.vikrai.com/api/store#customers_postcustomersmeaddresses).
  * 
  * This workflow has a hook that allows you to perform custom actions on the created customer addresses. For example, you can pass under `additional_data` custom data that
  * allows you to create custom data models linked to the addresses.
@@ -95,3 +95,4 @@ export const createCustomerAddressesWorkflow = createWorkflow(
     })
   }
 )
+

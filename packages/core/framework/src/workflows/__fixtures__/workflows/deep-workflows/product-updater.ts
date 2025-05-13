@@ -2,7 +2,7 @@ import {
   createStep,
   createWorkflow,
   WorkflowResponse,
-} from "@medusajs/workflows-sdk"
+} from "@vikrai/workflows-sdk"
 
 export const productWorkflowId = "product-notifier-workflow"
 
@@ -14,3 +14,4 @@ export const productUpdatedWorkflow = createWorkflow(productWorkflowId, () => {
   step()
   return new WorkflowResponse(void 0)
 })
+

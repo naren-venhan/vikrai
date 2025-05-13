@@ -1,9 +1,9 @@
 import {
   IOrderModuleService,
   OrderChangeActionDTO,
-} from "@medusajs/framework/types"
-import { ChangeActionType, Modules } from "@medusajs/framework/utils"
-import { StepResponse, createStep } from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/types"
+import { ChangeActionType, Modules } from "@vikrai/framework/utils"
+import { StepResponse, createStep } from "@vikrai/framework/workflows-sdk"
 
 /**
  * The details of creating the claim items from a change action.
@@ -24,8 +24,8 @@ export type CreateOrderClaimItemsFromActionsInput = {
  * 
  * :::note
  * 
- * You can retrieve an order change action details using [Query](https://docs.medusajs.com/learn/fundamentals/module-links/query),
- * or [useQueryGraphStep](https://docs.medusajs.com/resources/references/medusa-workflows/steps/useQueryGraphStep).
+ * You can retrieve an order change action details using [Query](https://docs.vikrai.com/learn/fundamentals/module-links/query),
+ * or [useQueryGraphStep](https://docs.vikrai.com/resources/references/vikrai-workflows/steps/useQueryGraphStep).
  * 
  * :::
  * 
@@ -90,3 +90,4 @@ export const createOrderClaimItemsFromActionsStep = createStep(
     await orderModuleService.deleteOrderClaimItems(ids)
   }
 )
+

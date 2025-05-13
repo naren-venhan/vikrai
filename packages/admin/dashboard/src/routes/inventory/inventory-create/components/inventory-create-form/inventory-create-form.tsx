@@ -9,12 +9,12 @@ import {
   ProgressTabs,
   Textarea,
   toast,
-} from "@medusajs/ui"
+} from "@vikrai/ui"
 import { useCallback, useEffect, useState } from "react"
 import { useForm } from "react-hook-form"
 import { useTranslation } from "react-i18next"
 
-import { HttpTypes } from "@medusajs/types"
+import { HttpTypes } from "@vikrai/types"
 import { Form } from "../../../../../components/common/form"
 import { SwitchBox } from "../../../../../components/common/switch-box"
 import { CountrySelect } from "../../../../../components/inputs/country-select"
@@ -513,3 +513,4 @@ export function InventoryCreateForm({ locations }: InventoryCreateFormProps) {
     </RouteFocusModal.Form>
   )
 }
+

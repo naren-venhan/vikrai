@@ -1,7 +1,7 @@
 import { zodResolver } from "@hookform/resolvers/zod"
-import { InformationCircleSolid } from "@medusajs/icons"
-import { HttpTypes } from "@medusajs/types"
-import { Button, Heading, Input, Text, Tooltip, toast } from "@medusajs/ui"
+import { InformationCircleSolid } from "@vikrai/icons"
+import { HttpTypes } from "@vikrai/types"
+import { Button, Heading, Input, Text, Tooltip, toast } from "@vikrai/ui"
 import { useForm } from "react-hook-form"
 import { useTranslation } from "react-i18next"
 import { z } from "zod"
@@ -246,3 +246,4 @@ export const TaxRegionProvinceCreateForm = ({
     </RouteFocusModal.Form>
   )
 }
+

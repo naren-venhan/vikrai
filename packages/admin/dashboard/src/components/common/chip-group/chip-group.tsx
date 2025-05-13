@@ -1,5 +1,5 @@
-import { XMarkMini } from "@medusajs/icons"
-import { Button, clx } from "@medusajs/ui"
+import { XMarkMini } from "@vikrai/icons"
+import { Button, clx } from "@vikrai/ui"
 import { Children, PropsWithChildren, createContext, useContext } from "react"
 import { useTranslation } from "react-i18next"
 
@@ -109,3 +109,4 @@ const Chip = ({ index, className, children }: ChipProps) => {
 }
 
 export const ChipGroup = Object.assign(Group, { Chip })
+

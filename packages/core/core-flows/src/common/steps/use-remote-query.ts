@@ -1,8 +1,8 @@
 import {
   ContainerRegistrationKeys,
   remoteQueryObjectFromString,
-} from "@medusajs/framework/utils"
-import { createStep, StepResponse } from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/utils"
+import { createStep, StepResponse } from "@vikrai/framework/workflows-sdk"
 
 /**
  * The remote query's details.
@@ -50,7 +50,7 @@ export const useRemoteQueryStepId = "use-remote-query"
 /**
  * This step fetches data across modules using the remote query.
  *
- * Learn more in the [Remote Query documentation](https://docs.medusajs.com/learn/fundamentals/module-links/query).
+ * Learn more in the [Remote Query documentation](https://docs.vikrai.com/learn/fundamentals/module-links/query).
  * 
  * :::note
  *
@@ -138,3 +138,4 @@ export const useRemoteQueryStep = createStep(
     return new StepResponse(result)
   }
 )
+

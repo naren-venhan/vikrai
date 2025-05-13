@@ -14,7 +14,7 @@ import {
   DataTable as Primitive,
   Text,
   useDataTable,
-} from "@medusajs/ui"
+} from "@vikrai/ui"
 import React, { ReactNode, useCallback, useMemo } from "react"
 import { useTranslation } from "react-i18next"
 import { Link, useNavigate, useSearchParams } from "react-router-dom"
@@ -426,3 +426,4 @@ const DataTableAction = ({
     </Button>
   )
 }
+

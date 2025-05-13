@@ -1,5 +1,5 @@
-import { HttpTypes } from "@medusajs/types"
-import { toast, usePrompt } from "@medusajs/ui"
+import { HttpTypes } from "@vikrai/types"
+import { toast, usePrompt } from "@vikrai/ui"
 import { useTranslation } from "react-i18next"
 import { useNavigate } from "react-router-dom"
 
@@ -48,3 +48,4 @@ export const useDeletePriceListAction = ({
 
   return handleDelete
 }
+

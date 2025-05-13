@@ -2,7 +2,7 @@ import {
   WorkflowData,
   WorkflowResponse,
   createWorkflow,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { deleteTaxRatesStep } from "../steps"
 
 /**
@@ -18,7 +18,7 @@ export type DeleteTaxRatesWorkflowInput = {
 export const deleteTaxRatesWorkflowId = "delete-tax-rates"
 /**
  * This workflow deletes one or more tax rates. It's used by the
- * [Delete Tax Rates Admin API Route](https://docs.medusajs.com/api/admin#tax-rates_deletetaxratesid).
+ * [Delete Tax Rates Admin API Route](https://docs.vikrai.com/api/admin#tax-rates_deletetaxratesid).
  * 
  * You can use this workflow within your own customizations or custom workflows, allowing you
  * to delete tax rates in your custom flows.
@@ -43,3 +43,4 @@ export const deleteTaxRatesWorkflow = createWorkflow(
     return new WorkflowResponse(deleteTaxRatesStep(input.ids))
   }
 )
+

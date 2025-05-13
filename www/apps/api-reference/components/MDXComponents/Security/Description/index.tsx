@@ -39,7 +39,7 @@ const SecurityDescription = ({
         {getSecuritySchemaTypeName(securitySchema)}
       </p>
       {(securitySchema.type === "http" || securitySchema.type === "apiKey") && (
-        <p className={clsx("bg-medusa-bg-subtle", "p-1")}>
+        <p className={clsx("bg-vikrai-bg-subtle", "p-1")}>
           <strong>
             {securitySchema.type === "http"
               ? "HTTP Authorization Scheme"
@@ -59,3 +59,4 @@ const SecurityDescription = ({
 }
 
 export default SecurityDescription
+

@@ -1,4 +1,4 @@
-import { ILockingModule } from "@medusajs/types"
+import { ILockingModule } from "@vikrai/types"
 
 export class Orchestrator {
   /**
@@ -158,3 +158,4 @@ export class Orchestrator {
     this.#state = "completed"
   }
 }
+

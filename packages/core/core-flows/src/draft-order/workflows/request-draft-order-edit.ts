@@ -1,10 +1,10 @@
-import { OrderChangeStatus } from "@medusajs/framework/utils"
+import { OrderChangeStatus } from "@vikrai/framework/utils"
 import {
   createWorkflow,
   transform,
   WorkflowResponse,
-} from "@medusajs/framework/workflows-sdk"
-import { OrderChangeDTO, OrderDTO } from "@medusajs/types"
+} from "@vikrai/framework/workflows-sdk"
+import { OrderChangeDTO, OrderDTO } from "@vikrai/types"
 import { useRemoteQueryStep } from "../../common"
 import {
   createOrUpdateOrderPaymentCollectionWorkflow,
@@ -50,7 +50,7 @@ export type RequestDraftOrderEditWorkflowInput = {
 
 /**
  * This workflow requests a draft order edit. It's used by the
- * [Request Draft Order Edit Admin API Route](https://docs.medusajs.com/api/admin#draft-orders_postdraftordersideditrequest).
+ * [Request Draft Order Edit Admin API Route](https://docs.vikrai.com/api/admin#draft-orders_postdraftordersideditrequest).
  * 
  * You can use this workflow within your customizations or your own custom workflows, allowing you to wrap custom logic around
  * requesting a draft order edit.
@@ -108,3 +108,4 @@ export const requestDraftOrderEditWorkflow = createWorkflow(
     return new WorkflowResponse(previewOrderChangeStep(order.id))
   }
 )
+

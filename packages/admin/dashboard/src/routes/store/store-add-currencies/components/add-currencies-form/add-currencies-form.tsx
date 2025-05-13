@@ -1,4 +1,4 @@
-import { Button, Checkbox, Hint, Switch, toast, Tooltip } from "@medusajs/ui"
+import { Button, Checkbox, Hint, Switch, toast, Tooltip } from "@vikrai/ui"
 import {
   createColumnHelper,
   OnChangeFn,
@@ -9,7 +9,7 @@ import { useTranslation } from "react-i18next"
 import * as zod from "zod"
 
 import { zodResolver } from "@hookform/resolvers/zod"
-import { HttpTypes } from "@medusajs/types"
+import { HttpTypes } from "@vikrai/types"
 import { keepPreviousData } from "@tanstack/react-query"
 import { useForm } from "react-hook-form"
 import {
@@ -304,3 +304,4 @@ const useColumns = (
     [t, base, pricePreferences, setPricePreferences]
   )
 }
+

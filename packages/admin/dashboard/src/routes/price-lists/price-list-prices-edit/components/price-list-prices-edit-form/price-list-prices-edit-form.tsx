@@ -1,6 +1,6 @@
 import { zodResolver } from "@hookform/resolvers/zod"
-import { HttpTypes } from "@medusajs/types"
-import { Button, toast } from "@medusajs/ui"
+import { HttpTypes } from "@vikrai/types"
+import { Button, toast } from "@vikrai/ui"
 import { useRef } from "react"
 import { useForm } from "react-hook-form"
 import { useTranslation } from "react-i18next"
@@ -311,3 +311,4 @@ function sortPrices(
 
   return comparePrices(initialPrices, newPrices)
 }
+

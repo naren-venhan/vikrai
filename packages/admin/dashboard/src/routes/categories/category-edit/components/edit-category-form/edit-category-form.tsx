@@ -1,10 +1,10 @@
 import { zodResolver } from "@hookform/resolvers/zod"
-import { Button, Input, Select, Textarea, toast } from "@medusajs/ui"
+import { Button, Input, Select, Textarea, toast } from "@vikrai/ui"
 import { useForm } from "react-hook-form"
 import { useTranslation } from "react-i18next"
 import { z } from "zod"
 
-import { HttpTypes } from "@medusajs/types"
+import { HttpTypes } from "@vikrai/types"
 import { Form } from "../../../../../components/common/form"
 import { HandleInput } from "../../../../../components/inputs/handle-input"
 import { RouteDrawer, useRouteModal } from "../../../../../components/modals"
@@ -193,3 +193,4 @@ export const EditCategoryForm = ({ category }: EditCategoryFormProps) => {
     </RouteDrawer.Form>
   )
 }
+

@@ -1,4 +1,4 @@
-import { generatePostgresAlterColummnIfExistStatement } from "@medusajs/framework/utils"
+import { generatePostgresAlterColummnIfExistStatement } from "@vikrai/framework/utils"
 import { Migration } from "@mikro-orm/migrations"
 
 export class Migration20240227090331 extends Migration {
@@ -112,3 +112,4 @@ export class Migration20240227090331 extends Migration {
     )
   }
 }
+

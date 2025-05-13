@@ -1,11 +1,11 @@
-import { OrderDTO } from "@medusajs/framework/types"
-import { OrderWorkflowEvents } from "@medusajs/framework/utils"
+import { OrderDTO } from "@vikrai/framework/types"
+import { OrderWorkflowEvents } from "@vikrai/framework/utils"
 import {
   WorkflowData,
   WorkflowResponse,
   createWorkflow,
   transform,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { emitEventStep } from "../../common/steps/emit-event"
 import { archiveOrdersStep } from "../steps"
 
@@ -27,7 +27,7 @@ export type ArchiveOrdersWorkflowOutput = OrderDTO[]
 export const archiveOrderWorkflowId = "archive-order-workflow"
 /**
  * This workflow archives one or more orders. It's used by the 
- * [Archive Order Admin API Route](https://docs.medusajs.com/api/admin#orders_postordersidarchive).
+ * [Archive Order Admin API Route](https://docs.vikrai.com/api/admin#orders_postordersidarchive).
  * 
  * You can use this workflow within your customizations or your own custom workflows, allowing you to wrap custom logic around archiving orders.
  * 
@@ -60,3 +60,4 @@ export const archiveOrderWorkflow = createWorkflow(
     return new WorkflowResponse(archiveOrdersStep(input))
   }
 )
+

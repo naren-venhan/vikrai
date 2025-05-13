@@ -1,4 +1,4 @@
-import { DMLSchema, EntityIndex, QueryCondition } from "@medusajs/types"
+import { DMLSchema, EntityIndex, QueryCondition } from "@vikrai/types"
 import { isObject, isPresent } from "../../../common"
 import { DateTimeProperty } from "../../properties/date-time"
 import { buildWhereQuery } from "./query-builder"
@@ -45,3 +45,4 @@ function transformWhere(where?: string): string {
 
   return where
 }
+

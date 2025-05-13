@@ -1,4 +1,4 @@
-import { medusaIntegrationTestRunner } from "@medusajs/test-utils"
+import { vikraiIntegrationTestRunner } from "@vikrai/test-utils"
 import {
   adminHeaders,
   createAdminUser,
@@ -6,7 +6,7 @@ import {
 
 jest.setTimeout(30000)
 
-medusaIntegrationTestRunner({
+vikraiIntegrationTestRunner({
   env: {},
   testSuite: ({ dbConnection, getContainer, api }) => {
     beforeEach(async () => {
@@ -64,5 +64,6 @@ medusaIntegrationTestRunner({
     })
   },
 
-  // BREAKING: There was an "should update currency includes_tax" test that no longer applies in v2 (realted to MEDUSA_FF_TAX_INCLUSIVE_PRICING)
+  // BREAKING: There was an "should update currency includes_tax" test that no longer applies in v2 (realted to vikrai_FF_TAX_INCLUSIVE_PRICING)
 })
+

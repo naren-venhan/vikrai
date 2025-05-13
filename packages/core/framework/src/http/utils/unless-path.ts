@@ -1,7 +1,7 @@
 import {
-  MedusaNextFunction,
-  MedusaRequest,
-  MedusaResponse,
+  vikraiNextFunction,
+  vikraiRequest,
+  vikraiResponse,
   MiddlewareFunction,
 } from "../types"
 
@@ -13,10 +13,11 @@ import {
  */
 export const unlessPath =
   (onPath: RegExp, middleware: MiddlewareFunction) =>
-  (req: MedusaRequest, res: MedusaResponse, next: MedusaNextFunction) => {
+  (req: vikraiRequest, res: vikraiResponse, next: vikraiNextFunction) => {
     if (onPath.test(req.path)) {
       return next()
     } else {
       return middleware(req, res, next)
     }
   }
+

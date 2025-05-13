@@ -1,13 +1,13 @@
 import compression from "compression"
-import type { ConfigModule } from "@medusajs/types"
-import { ContainerRegistrationKeys } from "@medusajs/utils"
+import type { ConfigModule } from "@vikrai/types"
+import { ContainerRegistrationKeys } from "@vikrai/utils"
 
 import { HttpCompressionOptions, ProjectConfigOptions } from "../../config"
-import type { MedusaRequest, MedusaResponse } from "../types"
+import type { vikraiRequest, vikraiResponse } from "../types"
 
 export function shouldCompressResponse(
-  req: MedusaRequest,
-  res: MedusaResponse
+  req: vikraiRequest,
+  res: vikraiResponse
 ) {
   const { projectConfig } = req.scope.resolve<ConfigModule>(
     ContainerRegistrationKeys.CONFIG_MODULE
@@ -41,3 +41,4 @@ export function compressionOptions(
 
   return responseCompressionOptions
 }
+

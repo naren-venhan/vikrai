@@ -1,10 +1,10 @@
-import { IProductModuleService, ProductTypes } from "@medusajs/framework/types"
+import { IProductModuleService, ProductTypes } from "@vikrai/framework/types"
 import {
-  MedusaError,
+  vikraiError,
   Modules,
   getSelectsAndRelationsFromObjectArray,
-} from "@medusajs/framework/utils"
-import { StepResponse, createStep } from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/utils"
+import { StepResponse, createStep } from "@vikrai/framework/workflows-sdk"
 
 /**
  * The details of the products update.
@@ -65,8 +65,8 @@ export const updateProductsStep = createStep(
 
     if ("products" in data) {
       if (data.products.some((p) => !p.id)) {
-        throw new MedusaError(
-          MedusaError.Types.INVALID_DATA,
+        throw new vikraiError(
+          vikraiError.Types.INVALID_DATA,
           "Product ID is required when doing a batch update of products"
         )
       }
@@ -109,3 +109,4 @@ export const updateProductsStep = createStep(
     )
   }
 )
+

@@ -2,7 +2,7 @@ import {
   WorkflowData,
   WorkflowResponse,
   createWorkflow,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { removePriceListPricesStep } from "../steps/remove-price-list-prices"
 
 /**
@@ -41,3 +41,4 @@ export const removePriceListPricesWorkflow = createWorkflow(
     return new WorkflowResponse(removePriceListPricesStep(input.ids))
   }
 )
+

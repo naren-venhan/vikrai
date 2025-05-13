@@ -1,6 +1,6 @@
-import { PencilSquare, Trash } from "@medusajs/icons"
-import { AdminCampaign, AdminPromotion } from "@medusajs/types"
-import { Button, Checkbox, Container, Heading, usePrompt } from "@medusajs/ui"
+import { PencilSquare, Trash } from "@vikrai/icons"
+import { AdminCampaign, AdminPromotion } from "@vikrai/types"
+import { Button, Checkbox, Container, Heading, usePrompt } from "@vikrai/ui"
 import { RowSelectionState, createColumnHelper } from "@tanstack/react-table"
 import { useMemo, useState } from "react"
 import { useTranslation } from "react-i18next"
@@ -235,3 +235,4 @@ const useColumns = () => {
     [columns]
   )
 }
+

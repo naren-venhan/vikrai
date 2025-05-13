@@ -1,7 +1,7 @@
 "use client"
 
-import * as Icons from "@medusajs/icons"
-import { Container, Input, Text } from "@medusajs/ui"
+import * as Icons from "@vikrai/icons"
+import { Container, Input, Text } from "@vikrai/ui"
 import clsx from "clsx"
 import { CopyButton } from "docs-ui"
 import * as React from "react"
@@ -35,7 +35,7 @@ const SearchResults = ({ query = "" }: { query?: string }) => {
     return (
       <div
         className={clsx(
-          "text-medusa-text-muted dark:text-medusa-text-muted-dark",
+          "text-vikrai-text-muted dark:text-vikrai-text-muted-dark",
           "flex min-h-[300px] items-center justify-center"
         )}
       >
@@ -60,14 +60,14 @@ const SearchResults = ({ query = "" }: { query?: string }) => {
             <CopyButton text={name} tooltipText={name} handleTouch>
               <div
                 className={clsx(
-                  "border-medusa-border-base",
+                  "border-vikrai-border-base",
                   "flex h-10 w-10 items-center justify-center rounded-lg border"
                 )}
               >
                 <span className="sr-only">Icon named {name}</span>
                 <div
                   className={clsx(
-                    "bg-medusa-bg-component text-medusa-fg-base",
+                    "bg-vikrai-bg-component text-vikrai-fg-base",
                     "flex h-8 w-8 items-center justify-center rounded-[4px]"
                   )}
                 >
@@ -92,3 +92,4 @@ function escapeStringRegexp(string: unknown) {
 }
 
 export { IconSearch }
+

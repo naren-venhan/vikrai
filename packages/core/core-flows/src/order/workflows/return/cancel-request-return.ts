@@ -1,12 +1,12 @@
-import { OrderChangeDTO, OrderDTO, ReturnDTO } from "@medusajs/framework/types"
-import { ChangeActionType, OrderChangeStatus } from "@medusajs/framework/utils"
+import { OrderChangeDTO, OrderDTO, ReturnDTO } from "@vikrai/framework/types"
+import { ChangeActionType, OrderChangeStatus } from "@vikrai/framework/utils"
 import {
   WorkflowData,
   createStep,
   createWorkflow,
   parallelize,
   transform,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { useRemoteQueryStep } from "../../../common"
 import {
   deleteOrderChangesStep,
@@ -43,8 +43,8 @@ export type CancelRequestReturnValidationStepInput = {
  * 
  * :::note
  * 
- * You can retrieve an order, return, and order change details using [Query](https://docs.medusajs.com/learn/fundamentals/module-links/query),
- * or [useQueryGraphStep](https://docs.medusajs.com/resources/references/medusa-workflows/steps/useQueryGraphStep).
+ * You can retrieve an order, return, and order change details using [Query](https://docs.vikrai.com/learn/fundamentals/module-links/query),
+ * or [useQueryGraphStep](https://docs.vikrai.com/resources/references/vikrai-workflows/steps/useQueryGraphStep).
  * 
  * :::
  * 
@@ -90,7 +90,7 @@ export type CancelRequestReturnWorkflowInput = {
 export const cancelReturnRequestWorkflowId = "cancel-return-request"
 /**
  * This workflow cancels a requested return. It's used by the
- * [Cancel Return Request API Route](https://docs.medusajs.com/api/admin#returns_deletereturnsidrequest).
+ * [Cancel Return Request API Route](https://docs.vikrai.com/api/admin#returns_deletereturnsidrequest).
  * 
  * You can use this workflow within your customizations or your own custom workflows, allowing you
  * to cancel a return request in your custom flow.
@@ -157,3 +157,4 @@ export const cancelReturnRequestWorkflow = createWorkflow(
     )
   }
 )
+

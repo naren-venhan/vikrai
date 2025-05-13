@@ -1,4 +1,4 @@
-import { AdminCampaign } from "@medusajs/types"
+import { AdminCampaign } from "@vikrai/types"
 import { isAfter, isBefore } from "date-fns"
 
 export function campaignStatus(campaign: AdminCampaign) {
@@ -29,3 +29,4 @@ export const statusColor = (status: string) => {
       return "grey"
   }
 }
+

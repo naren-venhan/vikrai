@@ -8,24 +8,24 @@ import {
   ICurrencyModuleService,
   InternalModuleDeclaration,
   ModulesSdkTypes,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 
-import { MedusaService } from "@medusajs/framework/utils"
+import { vikraiService } from "@vikrai/framework/utils"
 import { Currency } from "@models"
 
 type InjectedDependencies = {
   baseRepository: DAL.RepositoryService
-  currencyService: ModulesSdkTypes.IMedusaInternalService<typeof Currency>
+  currencyService: ModulesSdkTypes.IvikraiInternalService<typeof Currency>
 }
 
 export default class CurrencyModuleService
-  extends MedusaService<{
+  extends vikraiService<{
     Currency: { dto: CurrencyTypes.CurrencyDTO; model: typeof Currency }
   }>({ Currency })
   implements ICurrencyModuleService
 {
   protected baseRepository_: DAL.RepositoryService
-  protected readonly currencyService_: ModulesSdkTypes.IMedusaInternalService<
+  protected readonly currencyService_: ModulesSdkTypes.IvikraiInternalService<
     typeof Currency
   >
 
@@ -122,3 +122,4 @@ const normalizeFilterable = <TModel, TFilter extends BaseFilterable<TFilter>>(
 
   return normalizedFilters
 }
+

@@ -1,6 +1,6 @@
-import { IStoreModuleService } from "@medusajs/types"
-import { Modules } from "@medusajs/utils"
-import { medusaIntegrationTestRunner } from "@medusajs/test-utils"
+import { IStoreModuleService } from "@vikrai/types"
+import { Modules } from "@vikrai/utils"
+import { vikraiIntegrationTestRunner } from "@vikrai/test-utils"
 import {
   adminHeaders,
   createAdminUser,
@@ -8,7 +8,7 @@ import {
 
 jest.setTimeout(90000)
 
-medusaIntegrationTestRunner({
+vikraiIntegrationTestRunner({
   testSuite: ({ dbConnection, getContainer, api }) => {
     describe("/admin/stores", () => {
       let store
@@ -195,3 +195,4 @@ medusaIntegrationTestRunner({
     })
   },
 })
+

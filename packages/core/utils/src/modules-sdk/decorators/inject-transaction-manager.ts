@@ -1,5 +1,5 @@
-import { Context } from "@medusajs/types"
-import { MedusaContextType } from "./context-parameter"
+import { Context } from "@vikrai/types"
+import { vikraiContextType } from "./context-parameter"
 
 export function InjectTransactionManager(
   managerProperty?: string
@@ -9,18 +9,18 @@ export function InjectTransactionManager(
     propertyKey: string | symbol,
     descriptor: any
   ): void {
-    if (!target.MedusaContextIndex_) {
+    if (!target.vikraiContextIndex_) {
       throw new Error(
         `An error occured applying decorator '@InjectTransactionManager' to method ${String(
           propertyKey
-        )}: Missing parameter with flag @MedusaContext`
+        )}: Missing parameter with flag @vikraiContext`
       )
     }
 
     const originalMethod = descriptor.value
     managerProperty ??= "baseRepository_"
 
-    const argIndex = target.MedusaContextIndex_[propertyKey]
+    const argIndex = target.vikraiContextIndex_[propertyKey]
     descriptor.value = async function (...args: any[]) {
       const originalContext = args[argIndex] ?? {}
 
@@ -56,7 +56,7 @@ export function InjectTransactionManager(
             copiedContext.manager = originalContext?.manager
           }
 
-          copiedContext.__type = MedusaContextType
+          copiedContext.__type = vikraiContextType
 
           args[argIndex] = copiedContext
 
@@ -72,3 +72,4 @@ export function InjectTransactionManager(
     }
   }
 }
+

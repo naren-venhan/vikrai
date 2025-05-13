@@ -1,6 +1,6 @@
-import { createStep, StepResponse } from "@medusajs/framework/workflows-sdk"
+import { createStep, StepResponse } from "@vikrai/framework/workflows-sdk"
 
-import { ContainerRegistrationKeys, Modules } from "@medusajs/framework/utils"
+import { ContainerRegistrationKeys, Modules } from "@vikrai/framework/utils"
 
 /**
  * The data to attach inventory items to variants.
@@ -62,3 +62,4 @@ export const attachInventoryItemToVariants = createStep(
     await remoteLink.dismiss(linkDefinitions)
   }
 )
+

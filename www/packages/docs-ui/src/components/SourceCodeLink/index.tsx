@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "../Link"
 import { Badge } from "../Badge"
-import { Github } from "@medusajs/icons"
+import { Github } from "@vikrai/icons"
 import clsx from "clsx"
 
 type SourceCodeLinkProps = {
@@ -26,7 +26,7 @@ export const SourceCodeLink = ({
     >
       <Badge
         variant="neutral"
-        className="inline-flex hover:bg-medusa-tag-neutral-bg-hover cursor-pointer"
+        className="inline-flex hover:bg-vikrai-tag-neutral-bg-hover cursor-pointer"
         childrenWrapperClassName="inline-flex flex-row gap-[3px] items-center"
       >
         {icon || <Github />}
@@ -35,3 +35,4 @@ export const SourceCodeLink = ({
     </Link>
   )
 }
+

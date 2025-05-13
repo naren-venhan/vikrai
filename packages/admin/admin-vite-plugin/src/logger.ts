@@ -19,7 +19,7 @@ function getPrefix(type: "warn" | "info" | "error") {
       ? colors.green
       : colors.red
 
-  const prefix = typeColor("[@medusajs/admin-vite-plugin]")
+  const prefix = typeColor("[@vikrai/admin-vite-plugin]")
 
   return `${timestamp} ${prefix}`
 }
@@ -62,3 +62,4 @@ const logger = {
 }
 
 export { logger }
+

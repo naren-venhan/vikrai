@@ -2,18 +2,18 @@ import {
   OrderChangeDTO,
   OrderDTO,
   OrderWorkflow,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import {
   ChangeActionType,
-  MedusaError,
+  vikraiError,
   OrderChangeStatus,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 import {
   WorkflowData,
   createStep,
   createWorkflow,
   transform,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { useQueryGraphStep } from "../../../common"
 import { deleteOrderChangesStep } from "../../steps"
 import {
@@ -46,8 +46,8 @@ export type CancelTransferOrderRequestValidationStep = {
  *
  * :::note
  *
- * You can retrieve an order and order change details using [Query](https://docs.medusajs.com/learn/fundamentals/module-links/query),
- * or [useQueryGraphStep](https://docs.medusajs.com/resources/references/medusa-workflows/steps/useQueryGraphStep).
+ * You can retrieve an order and order change details using [Query](https://docs.vikrai.com/learn/fundamentals/module-links/query),
+ * or [useQueryGraphStep](https://docs.vikrai.com/resources/references/vikrai-workflows/steps/useQueryGraphStep).
  *
  * :::
  *
@@ -87,8 +87,8 @@ export const cancelTransferOrderRequestValidationStep = createStep(
     )
 
     if (action?.reference_id !== input.logged_in_user_id) {
-      throw new MedusaError(
-        MedusaError.Types.NOT_ALLOWED,
+      throw new vikraiError(
+        vikraiError.Types.NOT_ALLOWED,
         "This customer is not allowed to cancel the transfer."
       )
     }
@@ -99,8 +99,8 @@ export const cancelTransferOrderRequestWorkflowId =
   "cancel-transfer-order-request"
 /**
  * This workflow cancels a requested order transfer. This operation is allowed only by admin users and the customer that requested the transfer.
- * This workflow is used by the [Cancel Order Transfer Store API Route](https://docs.medusajs.com/api/store#orders_postordersidtransfercancel),
- * and the [Cancel Transfer Request Admin API Route](https://docs.medusajs.com/api/admin#orders_postordersidtransfercancel).
+ * This workflow is used by the [Cancel Order Transfer Store API Route](https://docs.vikrai.com/api/store#orders_postordersidtransfercancel),
+ * and the [Cancel Transfer Request Admin API Route](https://docs.vikrai.com/api/admin#orders_postordersidtransfercancel).
  *
  * You can use this workflow within your customizations or your own custom workflows, allowing you to build a custom flow
  * around canceling an order transfer.
@@ -155,3 +155,4 @@ export const cancelOrderTransferRequestWorkflow = createWorkflow(
     deleteOrderChangesStep({ ids: [orderChange.id] })
   }
 )
+

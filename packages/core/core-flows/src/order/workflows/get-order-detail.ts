@@ -1,11 +1,11 @@
-import { OrderDTO, OrderDetailDTO } from "@medusajs/framework/types"
-import { deduplicate } from "@medusajs/framework/utils"
+import { OrderDTO, OrderDetailDTO } from "@vikrai/framework/types"
+import { deduplicate } from "@vikrai/framework/utils"
 import {
   WorkflowData,
   WorkflowResponse,
   createWorkflow,
   transform,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { useRemoteQueryStep } from "../../common"
 import {
   getLastFulfillmentStatus,
@@ -31,7 +31,7 @@ export type GetOrderDetailWorkflowInput = {
   }
   /**
    * The fields and relations to retrieve in the order. These fields
-   * are passed to [Query](https://docs.medusajs.com/learn/fundamentals/module-links/query),
+   * are passed to [Query](https://docs.vikrai.com/learn/fundamentals/module-links/query),
    * so you can pass names of custom models linked to the order.
    */
   fields: string[]
@@ -49,8 +49,8 @@ export type GetOrderDetailWorkflowInput = {
 export const getOrderDetailWorkflowId = "get-order-detail"
 /**
  * This workflow retrieves an order's details. It's used by many API routes, including
- * [Get an Order Admin API Route](https://docs.medusajs.com/api/admin#orders_getordersid), and
- * [Get an Order Store API Route](https://docs.medusajs.com/api/store#orders_getordersid).
+ * [Get an Order Admin API Route](https://docs.vikrai.com/api/admin#orders_getordersid), and
+ * [Get an Order Store API Route](https://docs.vikrai.com/api/store#orders_getordersid).
  * 
  * You can use this workflow within your customizations or your own custom workflows, allowing you to retrieve an 
  * order's details in your custom flows.
@@ -111,3 +111,4 @@ export const getOrderDetailWorkflow = createWorkflow(
     return new WorkflowResponse(aggregatedOrder)
   }
 )
+

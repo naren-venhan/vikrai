@@ -1,4 +1,4 @@
-import { FindParams, HttpTypes } from "@medusajs/types"
+import { FindParams, HttpTypes } from "@vikrai/types"
 import { useQueryParams } from "../../use-query-params"
 
 type UseRegionTableQueryProps = {
@@ -31,3 +31,4 @@ export const useRegionTableQuery = ({
     raw: queryObject,
   }
 }
+

@@ -1,4 +1,4 @@
-import { Button, usePrompt } from "@medusajs/ui"
+import { Button, usePrompt } from "@vikrai/ui"
 
 export default function usePromptVerification() {
   const entityName = "foo-bar-baz"
@@ -21,3 +21,4 @@ export default function usePromptVerification() {
     <Button onClick={async () => deleteEntity()}>Delete {entityName}</Button>
   )
 }
+

@@ -1,4 +1,4 @@
-import { INotificationModuleService } from "@medusajs/framework/types"
+import { INotificationModuleService } from "@vikrai/framework/types"
 import {
   CommonEvents,
   composeMessage,
@@ -6,12 +6,12 @@ import {
   Modules,
   NotificationEvents,
   NotificationStatus,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 import { NotificationModuleService } from "@services"
 import {
   MockEventBusService,
   moduleIntegrationTestRunner,
-} from "@medusajs/test-utils"
+} from "@vikrai/test-utils"
 import { resolve } from "path"
 
 let moduleOptions = {
@@ -69,7 +69,7 @@ moduleIntegrationTestRunner<INotificationModuleService>({
 
       it("should send a notification and stores it in the database", async () => {
         const notification = {
-          to: "admin@medusa.com",
+          to: "admin@vikrai.com",
           template: "some-template",
           channel: "email",
           data: {},
@@ -87,12 +87,12 @@ moduleIntegrationTestRunner<INotificationModuleService>({
 
       it("should send a notification and don't store the content in the database", async () => {
         const notification = {
-          to: "admin@medusa.com",
+          to: "admin@vikrai.com",
           template: "signup-template",
           channel: "email",
           data: {},
           content: {
-            html: "<p>Welcome to medusa</p>",
+            html: "<p>Welcome to vikrai</p>",
           },
         }
 
@@ -111,7 +111,7 @@ moduleIntegrationTestRunner<INotificationModuleService>({
 
       it("should emit an event when a notification is created", async () => {
         const notification = {
-          to: "admin@medusa.com",
+          to: "admin@vikrai.com",
           template: "some-template",
           channel: "email",
           data: {},
@@ -137,7 +137,7 @@ moduleIntegrationTestRunner<INotificationModuleService>({
 
       it("should ensures the same notification is not sent twice", async () => {
         const notification = {
-          to: "admin@medusa.com",
+          to: "admin@vikrai.com",
           template: "some-template",
           channel: "email",
           data: {},
@@ -159,7 +159,7 @@ moduleIntegrationTestRunner<INotificationModuleService>({
 
       it("should manage the status of multiple notification properly in any scenarios", async () => {
         const notification1 = {
-          to: "admin@medusa.com",
+          to: "admin@vikrai.com",
           template: "some-template",
           channel: "email",
           data: {},
@@ -175,7 +175,7 @@ moduleIntegrationTestRunner<INotificationModuleService>({
         }
 
         const notification3 = {
-          to: "admin@medusa.com",
+          to: "admin@vikrai.com",
           template: "some-template",
           channel: "email",
           data: {},
@@ -232,3 +232,4 @@ Failed to send notification`
       })
     }),
 })
+

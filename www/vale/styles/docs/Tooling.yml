@@ -9,7 +9,7 @@ swap:
   "Module SDK": Modules SDK
   "Data Modeling Language": "Data Model Language"
   '(?:[\w\d'']+) framework': $1 Framework
-  "Medusa's Framework": "Medusa Framework"
+  "vikrai's Framework": "vikrai Framework"
   "Architecural Module[s]?": "Infrastructure Module"
   "Architectural module[s]?": "Infrastructure module"
   "architectural module[s]?": "infrastructure module"

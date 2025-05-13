@@ -31,21 +31,21 @@ export const CodeTab = ({
         className={clsx(
           "text-compact-x-small-plus font-base xs:border-0 pb-docs_0.5 relative",
           !isSelected && [
-            blockStyle === "loud" && "text-medusa-contrast-fg-secondary",
+            blockStyle === "loud" && "text-vikrai-contrast-fg-secondary",
             blockStyle === "subtle" && [
               colorMode === "light" &&
-                "text-medusa-fg-subtle hover:bg-medusa-bg-base",
+                "text-vikrai-fg-subtle hover:bg-vikrai-bg-base",
               colorMode === "dark" &&
-                "text-medusa-contrast-fg-secondary hover:bg-medusa-code-bg-base",
+                "text-vikrai-contrast-fg-secondary hover:bg-vikrai-code-bg-base",
             ],
           ],
           isSelected && [
-            blockStyle === "loud" && "text-medusa-contrast-fg-primary",
+            blockStyle === "loud" && "text-vikrai-contrast-fg-primary",
             blockStyle === "subtle" && [
               colorMode === "light" &&
-                "xs:border-medusa-border-base text-medusa-contrast-fg-primary",
+                "xs:border-vikrai-border-base text-vikrai-contrast-fg-primary",
               colorMode === "dark" &&
-                "xs:border-medusa-code-border text-medusa-contrast-fg-primary",
+                "xs:border-vikrai-code-border text-vikrai-contrast-fg-primary",
             ],
           ]
         )}
@@ -64,3 +64,4 @@ export const CodeTab = ({
     </li>
   )
 }
+

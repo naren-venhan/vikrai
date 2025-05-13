@@ -2,7 +2,7 @@ import {
   AdminOrderLineItem,
   DateComparisonOperator,
   NumericalComparisonOperator,
-} from "@medusajs/types"
+} from "@vikrai/types"
 import { OnChangeFn, RowSelectionState } from "@tanstack/react-table"
 import { useMemo, useState } from "react"
 
@@ -281,3 +281,4 @@ const filterByNumber = (
     return isValid
   })
 }
+

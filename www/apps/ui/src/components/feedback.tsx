@@ -23,7 +23,8 @@ export const Feedback = ({ title, ...props }: FeedbackProps) => {
         section: title,
       }}
       {...props}
-      className={clsx("text-medusa-fg-base", props.className)}
+      className={clsx("text-vikrai-fg-base", props.className)}
     />
   )
 }
+

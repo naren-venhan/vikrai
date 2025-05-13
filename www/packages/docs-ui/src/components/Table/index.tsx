@@ -1,5 +1,5 @@
 import React from "react"
-import { Table as UiTable } from "@medusajs/ui"
+import { Table as UiTable } from "@vikrai/ui"
 import clsx from "clsx"
 
 type RootProps = React.HTMLAttributes<HTMLTableElement>
@@ -27,7 +27,7 @@ const Header = ({ className, ...props }: HeaderProps) => {
     <UiTable.Header
       className={clsx(
         className,
-        "!border-0 bg-medusa-bg-component [&_tr]:!bg-medusa-bg-component",
+        "!border-0 bg-vikrai-bg-component [&_tr]:!bg-vikrai-bg-component",
         "rounded-docs_DEFAULT [&_tr]:rounded-docs_DEFAULT"
       )}
       {...props}
@@ -43,7 +43,7 @@ const HeaderCell = ({ className, ...props }: HeaderCellProps) => {
       className={clsx(
         className,
         "text-left !px-docs_0.75 py-docs_0.5 break-words",
-        "!text-compact-small-plus text-medusa-fg-subtle",
+        "!text-compact-small-plus text-vikrai-fg-subtle",
         "first:rounded-tl-docs_DEFAULT last:rounded-tr-docs_DEFAULT"
       )}
       {...props}
@@ -85,3 +85,4 @@ const Table = Object.assign(Root, {
 })
 
 export { Table }
+

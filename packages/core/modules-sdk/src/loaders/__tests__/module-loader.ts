@@ -1,5 +1,5 @@
-import { ModuleResolution } from "@medusajs/types"
-import { createMedusaContainer } from "@medusajs/utils"
+import { ModuleResolution } from "@vikrai/types"
+import { createvikraiContainer } from "@vikrai/utils"
 import { MODULE_SCOPE } from "../../types"
 import { moduleLoader } from "../module-loader"
 
@@ -16,7 +16,7 @@ describe("modules loader", () => {
   })
 
   beforeEach(() => {
-    container = createMedusaContainer()
+    container = createvikraiContainer()
   })
 
   it("should register the service as undefined in the container when no resolution path is given", async () => {
@@ -161,10 +161,10 @@ describe("modules loader", () => {
     expect.assertions(1)
     const moduleResolutions: Record<string, ModuleResolution> = {
       testService: {
-        resolutionPath: "@medusajs/testService",
+        resolutionPath: "@vikrai/testService",
         definition: {
           key: "testService",
-          defaultPackage: "@medusajs/testService",
+          defaultPackage: "@vikrai/testService",
           label: "TestService",
           isRequired: true,
           defaultModuleDeclaration: {
@@ -181,7 +181,7 @@ describe("modules loader", () => {
       await moduleLoader({ container, moduleResolutions, logger })
     } catch (err) {
       expect(err.message).toEqual(
-        `Make sure you have installed the default package: @medusajs/testService`
+        `Make sure you have installed the default package: @vikrai/testService`
       )
     }
   })
@@ -214,3 +214,4 @@ describe("modules loader", () => {
     }
   })
 })
+

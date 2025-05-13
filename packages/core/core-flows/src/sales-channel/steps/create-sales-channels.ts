@@ -1,9 +1,9 @@
 import {
   CreateSalesChannelDTO,
   ISalesChannelModuleService,
-} from "@medusajs/framework/types"
-import { Modules } from "@medusajs/framework/utils"
-import { StepResponse, createStep } from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/types"
+import { Modules } from "@vikrai/framework/utils"
+import { StepResponse, createStep } from "@vikrai/framework/workflows-sdk"
 
 /**
  * The data to create sales channels.
@@ -54,3 +54,4 @@ export const createSalesChannelsStep = createStep(
     await service.deleteSalesChannels(createdIds)
   }
 )
+

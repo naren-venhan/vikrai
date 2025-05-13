@@ -1,5 +1,5 @@
-import { CreatePromotionDTO } from "@medusajs/framework/types"
-import { PromotionType } from "@medusajs/framework/utils"
+import { CreatePromotionDTO } from "@vikrai/framework/types"
+import { PromotionType } from "@vikrai/framework/utils"
 
 export const defaultPromotionsData: CreatePromotionDTO[] = [
   {
@@ -27,3 +27,4 @@ export const defaultPromotionsData: CreatePromotionDTO[] = [
     },
   },
 ]
+

@@ -1,5 +1,5 @@
-import { PencilSquare, Trash, XCircle } from "@medusajs/icons"
-import { ApiKeyDTO } from "@medusajs/types"
+import { PencilSquare, Trash, XCircle } from "@vikrai/icons"
+import { ApiKeyDTO } from "@vikrai/types"
 import {
   Badge,
   Container,
@@ -9,7 +9,7 @@ import {
   Text,
   toast,
   usePrompt,
-} from "@medusajs/ui"
+} from "@vikrai/ui"
 import { useTranslation } from "react-i18next"
 import { useNavigate } from "react-router-dom"
 import {
@@ -247,3 +247,4 @@ const ActionBy = ({ userId }: { userId: string | null }) => {
 
   return <UserLink {...user} />
 }
+

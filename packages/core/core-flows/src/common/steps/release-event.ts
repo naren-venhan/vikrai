@@ -1,5 +1,5 @@
-import { Modules } from "@medusajs/framework/utils"
-import { createStep } from "@medusajs/framework/workflows-sdk"
+import { Modules } from "@vikrai/framework/utils"
+import { createStep } from "@vikrai/framework/workflows-sdk"
 
 export const releaseEventsStepId = "release-events-step"
 export const releaseEventsStep = createStep(
@@ -16,3 +16,4 @@ export const releaseEventsStep = createStep(
   },
   async (data: void) => {}
 )
+

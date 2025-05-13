@@ -1,11 +1,11 @@
-import { PaymentCollectionDTO } from "@medusajs/framework/types"
-import { MedusaError } from "@medusajs/framework/utils"
+import { PaymentCollectionDTO } from "@vikrai/framework/types"
+import { vikraiError } from "@vikrai/framework/utils"
 import {
   WorkflowData,
   WorkflowResponse,
   createStep,
   createWorkflow,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { useRemoteQueryStep } from "../../common"
 import {
   authorizePaymentSessionStep,
@@ -29,8 +29,8 @@ export type ThrowUnlessPaymentCollectionNotePaidInput = {
  *
  * :::note
  *
- * You can retrieve a payment collection's details using [Query](https://docs.medusajs.com/learn/fundamentals/module-links/query),
- * or [useQueryGraphStep](https://docs.medusajs.com/resources/references/medusa-workflows/steps/useQueryGraphStep).
+ * You can retrieve a payment collection's details using [Query](https://docs.vikrai.com/learn/fundamentals/module-links/query),
+ * or [useQueryGraphStep](https://docs.vikrai.com/resources/references/vikrai-workflows/steps/useQueryGraphStep).
  *
  * :::
  *
@@ -46,8 +46,8 @@ export const throwUnlessPaymentCollectionNotPaid = createStep(
   "validate-existing-payment-collection",
   ({ paymentCollection }: ThrowUnlessPaymentCollectionNotePaidInput) => {
     if (paymentCollection.status !== "not_paid") {
-      throw new MedusaError(
-        MedusaError.Types.NOT_ALLOWED,
+      throw new vikraiError(
+        vikraiError.Types.NOT_ALLOWED,
         `Can only mark 'not_paid' payment collection as paid`
       )
     }
@@ -76,7 +76,7 @@ const systemPaymentProviderId = "pp_system_default"
 export const markPaymentCollectionAsPaidId = "mark-payment-collection-as-paid"
 /**
  * This workflow marks a payment collection for an order as paid. It's used by the
- * [Mark Payment Collection as Paid Admin API Route](https://docs.medusajs.com/api/admin#payment-collections_postpaymentcollectionsidmarkaspaid).
+ * [Mark Payment Collection as Paid Admin API Route](https://docs.vikrai.com/api/admin#payment-collections_postpaymentcollectionsidmarkaspaid).
  *
  * You can use this workflow within your customizations or your own custom workflows, allowing you to wrap custom logic around
  * marking a payment collection for an order as paid.
@@ -131,3 +131,4 @@ export const markPaymentCollectionAsPaid = createWorkflow(
     return new WorkflowResponse(payment)
   }
 )
+

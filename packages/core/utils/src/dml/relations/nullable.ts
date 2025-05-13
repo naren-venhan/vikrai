@@ -1,4 +1,4 @@
-import { RelationshipType } from "@medusajs/types"
+import { RelationshipType } from "@vikrai/types"
 import { IsRelationship } from "./base"
 
 const IsNullableModifier = Symbol.for("isNullableModifier")
@@ -50,3 +50,4 @@ export class RelationNullableModifier<
     return relation
   }
 }
+

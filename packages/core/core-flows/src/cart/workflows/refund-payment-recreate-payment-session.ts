@@ -1,9 +1,9 @@
-import { BigNumberInput, PaymentSessionDTO } from "@medusajs/framework/types"
+import { BigNumberInput, PaymentSessionDTO } from "@vikrai/framework/types"
 import {
   createWorkflow,
   WorkflowData,
   WorkflowResponse,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { createPaymentSessionsWorkflow } from "../../payment-collection/workflows/create-payment-session"
 import { refundPaymentsWorkflow } from "../../payment/workflows/refund-payments"
 
@@ -26,7 +26,7 @@ export interface refundPaymentAndRecreatePaymentSessionWorkflowInput {
   customer_id?: string
   /**
    * Custom data relevant for the payment provider to process the payment session.
-   * Learn more in [this documentation](https://docs.medusajs.com/resources/commerce-modules/payment/payment-session#data-property).
+   * Learn more in [this documentation](https://docs.vikrai.com/resources/commerce-modules/payment/payment-session#data-property).
    */
   data?: Record<string, unknown>
 
@@ -88,3 +88,4 @@ export const refundPaymentAndRecreatePaymentSessionWorkflow = createWorkflow(
     return new WorkflowResponse(paymentSession)
   }
 )
+

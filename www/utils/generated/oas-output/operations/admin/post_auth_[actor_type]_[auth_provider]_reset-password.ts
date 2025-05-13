@@ -7,12 +7,12 @@
  *   Generate a reset password token for an admin user. This API route doesn't reset the admin's password or send them the reset instructions in a notification.
  * 
  * 
- *   Instead, This API route emits the `auth.password_reset` event, passing it the token as a payload. You can listen to that event in a subscriber as explained in [this guide](https://docs.medusajs.com/resources/commerce-modules/auth/reset-password), then send the user a notification. The notification is sent using a [Notification Module Provider](https://docs.medusajs.com/resources/infrastructure-modules/notification), and it should have the URL to reset the password in the Medusa Admin dashboard, such as `http://localhost:9000/app/reset-password?token=123`.
+ *   Instead, This API route emits the `auth.password_reset` event, passing it the token as a payload. You can listen to that event in a subscriber as explained in [this guide](https://docs.vikrai.com/resources/commerce-modules/auth/reset-password), then send the user a notification. The notification is sent using a [Notification Module Provider](https://docs.vikrai.com/resources/infrastructure-modules/notification), and it should have the URL to reset the password in the vikrai Admin dashboard, such as `http://localhost:9000/app/reset-password?token=123`.
  * 
  * 
- *    Use the generated token to update the user's password using the [Reset Password API route](https://docs.medusajs.com/api/admin#auth_postactor_typeauth_providerupdate).
+ *    Use the generated token to update the user's password using the [Reset Password API route](https://docs.vikrai.com/api/admin#auth_postactor_typeauth_providerupdate).
  * externalDocs:
- *   url: https://docs.medusajs.com/v2/resources/commerce-modules/auth/authentication-route#generate-reset-password-token-route
+ *   url: https://docs.vikrai.com/v2/resources/commerce-modules/auth/authentication-route#generate-reset-password-token-route
  *   description: Learn more about this API route.
  * x-authenticated: false
  * parameters:
@@ -30,14 +30,14 @@
  *         type: object
  *         title: identifier
  *         description: The user's identifier for the selected auth provider. For example, for the `emailpass` auth provider, the value is the user's email.
- *         example: "admin@medusa-test.com"
+ *         example: "admin@vikrai-test.com"
  * x-codeSamples:
  *   - lang: JavaScript
  *     label: JS SDK
  *     source: |-
- *       import Medusa from "@medusajs/js-sdk"
+ *       import vikrai from "@vikrai/js-sdk"
  * 
- *       export const sdk = new Medusa({
+ *       export const sdk = new vikrai({
  *         baseUrl: import.meta.env.VITE_BACKEND_URL || "/",
  *         debug: import.meta.env.DEV,
  *         auth: {
@@ -61,7 +61,7 @@
  *       curl -X POST '{backend_url}/auth/user/emailpass/reset-password' \
  *       -H 'Content-Type: application/json' \
  *       --data-raw '{
- *         "identifier": "admin@medusa-test.com"
+ *         "identifier": "admin@vikrai-test.com"
  *       }'
  * tags:
  *   - Auth

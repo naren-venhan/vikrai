@@ -1,11 +1,11 @@
-import { AbstractFulfillmentProviderService } from "@medusajs/framework/utils"
+import { AbstractFulfillmentProviderService } from "@vikrai/framework/utils"
 import {
   CalculatedShippingOptionPrice,
   CalculateShippingOptionPriceContext,
   CreateFulfillmentResult,
   FulfillmentOption,
   ValidateFulfillmentDataContext,
-} from "@medusajs/types"
+} from "@vikrai/types"
 
 // TODO rework type and DTO's
 
@@ -71,3 +71,4 @@ export class ManualFulfillmentService extends AbstractFulfillmentProviderService
     }
   }
 }
+

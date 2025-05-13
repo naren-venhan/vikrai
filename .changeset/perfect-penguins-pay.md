@@ -1,5 +1,6 @@
 ---
-"@medusajs/ui": patch
+"@vikrai/ui": patch
 ---
 
 fix(design-system): filter/sorting menu tooltip error
+

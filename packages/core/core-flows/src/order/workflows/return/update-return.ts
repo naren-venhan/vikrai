@@ -3,15 +3,15 @@ import {
   OrderPreviewDTO,
   OrderWorkflow,
   ReturnDTO,
-} from "@medusajs/framework/types"
-import { OrderChangeStatus } from "@medusajs/framework/utils"
+} from "@vikrai/framework/types"
+import { OrderChangeStatus } from "@vikrai/framework/utils"
 import {
   WorkflowData,
   WorkflowResponse,
   createStep,
   createWorkflow,
   transform,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { useRemoteQueryStep } from "../../../common"
 import { updateReturnsStep } from "../../steps"
 import { previewOrderChangeStep } from "../../steps/preview-order-change"
@@ -40,8 +40,8 @@ export type UpdateReturnValidationStepInput = {
  * 
  * :::note
  * 
- * You can retrieve a return and order change details using [Query](https://docs.medusajs.com/learn/fundamentals/module-links/query),
- * or [useQueryGraphStep](https://docs.medusajs.com/resources/references/medusa-workflows/steps/useQueryGraphStep).
+ * You can retrieve a return and order change details using [Query](https://docs.vikrai.com/learn/fundamentals/module-links/query),
+ * or [useQueryGraphStep](https://docs.vikrai.com/resources/references/vikrai-workflows/steps/useQueryGraphStep).
  * 
  * :::
  * 
@@ -71,7 +71,7 @@ export const updateReturnValidationStep = createStep(
 export const updateReturnWorkflowId = "update-return"
 /**
  * This workflow updates a return's details. It's used by the
- * [Update Return Admin API Route](https://docs.medusajs.com/api/admin#returns_postreturnsid).
+ * [Update Return Admin API Route](https://docs.vikrai.com/api/admin#returns_postreturnsid).
  * 
  * You can use this workflow within your customizations or your own custom workflows, allowing you
  * to update a return in your custom flow.
@@ -131,3 +131,4 @@ export const updateReturnWorkflow = createWorkflow(
     return new WorkflowResponse(previewOrderChangeStep(orderReturn.order_id))
   }
 )
+

@@ -7,8 +7,8 @@ import {
   getOrderDetailWorkflow,
   listShippingOptionsForCartWorkflow,
   processPaymentWorkflow,
-} from "@medusajs/core-flows"
-import { medusaIntegrationTestRunner } from "@medusajs/test-utils"
+} from "@vikrai/core-flows"
+import { vikraiIntegrationTestRunner } from "@vikrai/test-utils"
 import {
   ICartModuleService,
   ICustomerModuleService,
@@ -20,12 +20,12 @@ import {
   IRegionModuleService,
   ISalesChannelModuleService,
   IStockLocationService,
-} from "@medusajs/types"
+} from "@vikrai/types"
 import {
   ContainerRegistrationKeys,
   Modules,
   remoteQueryObjectFromString,
-} from "@medusajs/utils"
+} from "@vikrai/utils"
 import {
   adminHeaders,
   createAdminUser,
@@ -37,9 +37,9 @@ import { createAuthenticatedCustomer } from "../../../helpers/create-authenticat
 
 jest.setTimeout(200000)
 
-const env = { MEDUSA_FF_MEDUSA_V2: true }
+const env = { vikrai_FF_vikrai_V2: true }
 
-medusaIntegrationTestRunner({
+vikraiIntegrationTestRunner({
   env,
   testSuite: ({ dbConnection, getContainer, api }) => {
     describe("Carts workflows", () => {
@@ -751,3 +751,4 @@ medusaIntegrationTestRunner({
     })
   },
 })
+

@@ -1,6 +1,6 @@
-import { ArrowPath } from "@medusajs/icons"
-import { HttpTypes } from "@medusajs/types"
-import { Container, Heading } from "@medusajs/ui"
+import { ArrowPath } from "@vikrai/icons"
+import { HttpTypes } from "@vikrai/types"
+import { Container, Heading } from "@vikrai/ui"
 import { keepPreviousData } from "@tanstack/react-query"
 import { createColumnHelper } from "@tanstack/react-table"
 import { useMemo } from "react"
@@ -128,3 +128,4 @@ const useColumns = () => {
     [base]
   )
 }
+

@@ -1,4 +1,4 @@
-import { ChangeActionType, MedusaError } from "@medusajs/framework/utils"
+import { ChangeActionType, vikraiError } from "@vikrai/framework/utils"
 import { OrderChangeProcessing } from "../calculate-order-change"
 
 OrderChangeProcessing.registerActionType(ChangeActionType.SHIPPING_REMOVE, {
@@ -19,10 +19,11 @@ OrderChangeProcessing.registerActionType(ChangeActionType.SHIPPING_REMOVE, {
   },
   validate({ action }) {
     if (!action.reference_id) {
-      throw new MedusaError(
-        MedusaError.Types.INVALID_DATA,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_DATA,
         "Reference ID is required."
       )
     }
   },
 })
+

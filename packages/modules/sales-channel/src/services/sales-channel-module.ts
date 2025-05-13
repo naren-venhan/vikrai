@@ -11,15 +11,15 @@ import {
   SalesChannelDTO,
   UpdateSalesChannelDTO,
   UpsertSalesChannelDTO,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import {
   InjectManager,
   InjectTransactionManager,
   isString,
-  MedusaContext,
-  MedusaService,
+  vikraiContext,
+  vikraiService,
   promiseAll,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 
 import { SalesChannel } from "@models"
 import { UpdateSalesChanneInput } from "@types"
@@ -27,17 +27,17 @@ import { joinerConfig } from "../joinfer-config"
 
 type InjectedDependencies = {
   baseRepository: DAL.RepositoryService
-  salesChannelService: ModulesSdkTypes.IMedusaInternalService<any>
+  salesChannelService: ModulesSdkTypes.IvikraiInternalService<any>
 }
 
 export default class SalesChannelModuleService
-  extends MedusaService<{ SalesChannel: { dto: SalesChannelDTO } }>({
+  extends vikraiService<{ SalesChannel: { dto: SalesChannelDTO } }>({
     SalesChannel,
   })
   implements ISalesChannelModuleService
 {
   protected baseRepository_: DAL.RepositoryService
-  protected readonly salesChannelService_: ModulesSdkTypes.IMedusaInternalService<
+  protected readonly salesChannelService_: ModulesSdkTypes.IvikraiInternalService<
     InferEntityType<typeof SalesChannel>
   >
 
@@ -70,7 +70,7 @@ export default class SalesChannelModuleService
   // @ts-expect-error
   async createSalesChannels(
     data: CreateSalesChannelDTO | CreateSalesChannelDTO[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<SalesChannelDTO | SalesChannelDTO[]> {
     const input = Array.isArray(data) ? data : [data]
 
@@ -87,7 +87,7 @@ export default class SalesChannelModuleService
   @InjectTransactionManager()
   async createSalesChannels_(
     data: CreateSalesChannelDTO[],
-    @MedusaContext() sharedContext: Context
+    @vikraiContext() sharedContext: Context
   ): Promise<InferEntityType<typeof SalesChannel>[]> {
     return await this.salesChannelService_.create(data, sharedContext)
   }
@@ -110,7 +110,7 @@ export default class SalesChannelModuleService
   async updateSalesChannels(
     idOrSelector: string | FilterableSalesChannelProps,
     data: UpdateSalesChannelDTO | UpdateSalesChannelDTO[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<SalesChannelDTO | SalesChannelDTO[]> {
     let normalizedInput: UpdateSalesChanneInput[] = []
     if (isString(idOrSelector)) {
@@ -160,7 +160,7 @@ export default class SalesChannelModuleService
   @InjectTransactionManager()
   async upsertSalesChannels(
     data: UpsertSalesChannelDTO | UpsertSalesChannelDTO[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<SalesChannelDTO | SalesChannelDTO[]> {
     const input = Array.isArray(data) ? data : [data]
     const forUpdate = input.filter(
@@ -185,3 +185,4 @@ export default class SalesChannelModuleService
     >(Array.isArray(data) ? result : result[0])
   }
 }
+

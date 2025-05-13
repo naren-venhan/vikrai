@@ -1,13 +1,13 @@
 import {
   IPromotionModuleService,
   LinkWorkflowInput,
-} from "@medusajs/framework/types"
-import { Modules } from "@medusajs/framework/utils"
+} from "@vikrai/framework/types"
+import { Modules } from "@vikrai/framework/utils"
 import {
   StepResponse,
   WorkflowData,
   createStep,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 
 export const addOrRemoveCampaignPromotionsStepId =
   "add-or-remove-campaign-promotions"
@@ -72,3 +72,4 @@ export const addOrRemoveCampaignPromotionsStep = createStep(
     }
   }
 )
+

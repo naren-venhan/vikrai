@@ -1,15 +1,15 @@
 import {
   CartDTO,
   CreatePaymentCollectionForCartWorkflowInputDTO,
-} from "@medusajs/framework/types"
-import { Modules } from "@medusajs/framework/utils"
+} from "@vikrai/framework/types"
+import { Modules } from "@vikrai/framework/utils"
 import {
   createStep,
   createWorkflow,
   parallelize,
   transform,
   WorkflowData,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { createRemoteLinkStep } from "../../common/steps/create-remote-links"
 import { useRemoteQueryStep } from "../../common/steps/use-remote-query"
 import { createPaymentCollectionsStep } from "../steps/create-payment-collection"
@@ -59,7 +59,7 @@ export const createPaymentCollectionForCartWorkflowId =
   "create-payment-collection-for-cart"
 /**
  * This workflow creates a payment collection for a cart. It's executed by the
- * [Create Payment Collection Store API Route](https://docs.medusajs.com/api/store#payment-collections_postpaymentcollections).
+ * [Create Payment Collection Store API Route](https://docs.vikrai.com/api/store#payment-collections_postpaymentcollections).
  *
  * You can use this workflow within your own customizations or custom workflows, allowing you to wrap custom logic around adding creating a payment collection for a cart.
  *
@@ -129,3 +129,4 @@ export const createPaymentCollectionForCartWorkflow = createWorkflow(
     })
   }
 )
+

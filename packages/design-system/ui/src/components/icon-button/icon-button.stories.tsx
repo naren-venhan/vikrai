@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react"
 import * as React from "react"
 
-import { Plus } from "@medusajs/icons"
+import { Plus } from "@vikrai/icons"
 import { IconButton } from "./icon-button"
 
 const meta: Meta<typeof IconButton> = {
@@ -81,3 +81,4 @@ export const IsLoading: Story = {
     isLoading: true,
   },
 }
+

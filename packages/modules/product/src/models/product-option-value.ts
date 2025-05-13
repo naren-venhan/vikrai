@@ -1,4 +1,4 @@
-import { model } from "@medusajs/framework/utils"
+import { model } from "@vikrai/framework/utils"
 import { ProductOption, ProductVariant } from "./index"
 
 const ProductOptionValue = model
@@ -25,3 +25,4 @@ const ProductOptionValue = model
   ])
 
 export default ProductOptionValue
+

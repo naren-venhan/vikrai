@@ -1,4 +1,4 @@
-import { medusaIntegrationTestRunner } from "@medusajs/test-utils"
+import { vikraiIntegrationTestRunner } from "@vikrai/test-utils"
 import {
   adminHeaders,
   createAdminUser,
@@ -6,7 +6,7 @@ import {
 
 jest.setTimeout(50000)
 
-medusaIntegrationTestRunner({
+vikraiIntegrationTestRunner({
   env: {},
   testSuite: ({ dbConnection, getContainer, api }) => {
     describe("Publishable Keys - Admin", () => {
@@ -295,3 +295,4 @@ medusaIntegrationTestRunner({
     })
   },
 })
+

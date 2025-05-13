@@ -1,11 +1,11 @@
-import { Constructor, IDmlEntity, ModuleExports } from "@medusajs/types"
+import { Constructor, IDmlEntity, ModuleExports } from "@vikrai/types"
 import { DmlEntity } from "../dml"
 import {
   buildLinkConfigFromLinkableKeys,
   buildLinkConfigFromModelObjects,
   defineJoinerConfig,
 } from "./joiner-config-builder"
-import { MedusaServiceModelObjectsSymbol } from "./medusa-service"
+import { vikraiServiceModelObjectsSymbol } from "./vikrai-service"
 import { InfersLinksConfig } from "./types/links-config"
 
 /**
@@ -33,7 +33,7 @@ export function Module<
 ): ModuleExports<Service> & {
   linkable: Linkable
 } {
-  const modelObjects = service[MedusaServiceModelObjectsSymbol] ?? {}
+  const modelObjects = service[vikraiServiceModelObjectsSymbol] ?? {}
 
   service.prototype.__joinerConfig ??= () =>
     defineJoinerConfig(serviceName, {
@@ -73,3 +73,4 @@ export function Module<
     linkable,
   }
 }
+

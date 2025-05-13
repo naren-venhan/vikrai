@@ -1,7 +1,7 @@
-import { InternalModuleDeclaration, ModuleDefinition } from "@medusajs/types"
+import { InternalModuleDeclaration, ModuleDefinition } from "@vikrai/types"
 import { ModulesDefinition } from "../../definitions"
 import { MODULE_SCOPE } from "../../types"
-import { registerMedusaModule } from "../register-modules"
+import { registervikraiModule } from "../register-modules"
 
 const testServiceResolved = require.resolve(
   "../__fixtures__/test-service-resolved"
@@ -35,7 +35,7 @@ describe("module definitions loader", () => {
       [defaultDefinition.key]: defaultDefinition,
     })
 
-    const res = registerMedusaModule(defaultDefinition.key)
+    const res = registervikraiModule(defaultDefinition.key)
 
     expect(res[defaultDefinition.key]).toEqual(
       expect.objectContaining({
@@ -50,7 +50,7 @@ describe("module definitions loader", () => {
   })
 
   it("Resolves a custom module without pre-defined definition", () => {
-    const res = registerMedusaModule("customModulesABC", {
+    const res = registervikraiModule("customModulesABC", {
       resolve: testServiceResolved,
       options: {
         test: 123,
@@ -80,7 +80,7 @@ describe("module definitions loader", () => {
         [defaultDefinition.key]: defaultDefinition,
       })
 
-      const res = registerMedusaModule(defaultDefinition.key, false)
+      const res = registervikraiModule(defaultDefinition.key, false)
 
       expect(res[defaultDefinition.key]).toEqual(
         expect.objectContaining({
@@ -98,7 +98,7 @@ describe("module definitions loader", () => {
       })
 
       try {
-        registerMedusaModule(defaultDefinition.key, false)
+        registervikraiModule(defaultDefinition.key, false)
       } catch (err) {
         expect(err.message).toEqual(
           `Module: ${defaultDefinition.label} is required`
@@ -118,7 +118,7 @@ describe("module definitions loader", () => {
       [defaultDefinition.key]: definition,
     })
 
-    const res = registerMedusaModule(defaultDefinition.key)
+    const res = registervikraiModule(defaultDefinition.key)
 
     expect(res[defaultDefinition.key]).toEqual(
       expect.objectContaining({
@@ -138,7 +138,7 @@ describe("module definitions loader", () => {
         [defaultDefinition.key]: defaultDefinition,
       })
 
-      const res = registerMedusaModule(
+      const res = registervikraiModule(
         defaultDefinition.key,
         defaultDefinition.defaultPackage
       )
@@ -162,7 +162,7 @@ describe("module definitions loader", () => {
         [defaultDefinition.key]: defaultDefinition,
       })
 
-      const res = registerMedusaModule(defaultDefinition.key, {
+      const res = registervikraiModule(defaultDefinition.key, {
         scope: MODULE_SCOPE.INTERNAL,
         resolve: defaultDefinition.defaultPackage,
       } as InternalModuleDeclaration)
@@ -186,7 +186,7 @@ describe("module definitions loader", () => {
         [defaultDefinition.key]: defaultDefinition,
       })
 
-      const res = registerMedusaModule(defaultDefinition.key, {
+      const res = registervikraiModule(defaultDefinition.key, {
         options: { test: 123 },
       } as any)
 
@@ -209,7 +209,7 @@ describe("module definitions loader", () => {
         [defaultDefinition.key]: defaultDefinition,
       })
 
-      const res = registerMedusaModule(defaultDefinition.key, {
+      const res = registervikraiModule(defaultDefinition.key, {
         resolve: defaultDefinition.defaultPackage,
         options: { test: 123 },
         scope: "internal",
@@ -231,3 +231,4 @@ describe("module definitions loader", () => {
     })
   })
 })
+

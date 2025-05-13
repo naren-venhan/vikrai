@@ -1,5 +1,5 @@
-import { Spinner } from "@medusajs/icons"
-import { Container } from "@medusajs/ui"
+import { Spinner } from "@vikrai/icons"
+import { Container } from "@vikrai/ui"
 import * as React from "react"
 
 import { HookRegistry } from "@/registries/hook-registry"
@@ -32,7 +32,7 @@ const HookValues = ({ hook }: HookValuesProps) => {
       <Container className="mb-6 mt-8 overflow-hidden p-0">
         <React.Suspense
           fallback={
-            <div className="text-medusa-fg-muted flex flex-1 items-center justify-center">
+            <div className="text-vikrai-fg-muted flex flex-1 items-center justify-center">
               <Spinner className="animate-spin" />
             </div>
           }
@@ -46,3 +46,4 @@ const HookValues = ({ hook }: HookValuesProps) => {
 }
 
 export { HookValues }
+

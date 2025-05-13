@@ -8,14 +8,14 @@ import {
   ShippingOptionDTO,
   WithCalculatedPrice,
   AdditionalData,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import {
   MathBN,
-  MedusaError,
+  vikraiError,
   Modules,
   OrderWorkflowEvents,
   isDefined,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 import {
   WorkflowData,
   WorkflowResponse,
@@ -24,7 +24,7 @@ import {
   createWorkflow,
   parallelize,
   transform,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import {
   createRemoteLinkStep,
   emitEventStep,
@@ -94,8 +94,8 @@ function validateCustomRefundAmount({
   // validate that the refund prop input is less than order.item_total (item total)
   // TODO: Probably this amount should be retrieved from the payments linked to the order
   if (refundAmount && MathBN.gt(refundAmount, order.item_total)) {
-    throw new MedusaError(
-      MedusaError.Types.INVALID_DATA,
+    throw new vikraiError(
+      vikraiError.Types.INVALID_DATA,
       `Refund amount cannot be greater than order total.`
     )
   }
@@ -167,8 +167,8 @@ function prepareFulfillmentData({
   }
 
   if (!locationId) {
-    throw new MedusaError(
-      MedusaError.Types.INVALID_DATA,
+    throw new vikraiError(
+      vikraiError.Types.INVALID_DATA,
       `Cannot create return without stock location, either provide a location or you should link the shipping option ${returnShippingOption.id} to a stock location.`
     )
   }
@@ -239,8 +239,8 @@ export type CreateCompleteReturnValidationStepInput = {
  *
  * :::note
  *
- * You can retrieve an order details using [Query](https://docs.medusajs.com/learn/fundamentals/module-links/query),
- * or [useQueryGraphStep](https://docs.medusajs.com/resources/references/medusa-workflows/steps/useQueryGraphStep).
+ * You can retrieve an order details using [Query](https://docs.vikrai.com/learn/fundamentals/module-links/query),
+ * or [useQueryGraphStep](https://docs.vikrai.com/resources/references/vikrai-workflows/steps/useQueryGraphStep).
  *
  * :::
  *
@@ -268,8 +268,8 @@ export const createCompleteReturnValidationStep = createStep(
     context
   ) {
     if (!input.items) {
-      throw new MedusaError(
-        MedusaError.Types.INVALID_DATA,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_DATA,
         `Items are required to create a return.`
       )
     }
@@ -289,7 +289,7 @@ export const createAndCompleteReturnOrderWorkflowId =
 /**
  * This workflow creates and completes a return from the storefront. The admin would receive the return and
  * process it from the dashboard. This workflow is used by the
- * [Create Return Store API Route](https://docs.medusajs.com/api/store#return_postreturn).
+ * [Create Return Store API Route](https://docs.vikrai.com/api/store#return_postreturn).
  *
  * You can use this workflow within your customizations or your own custom workflows, allowing you to create a return
  * for an order in your custom flow.
@@ -327,8 +327,8 @@ export const createAndCompleteReturnOrderWorkflowId =
  * You can consume the `setPricingContext` hook to add the `location_id` context to the prices calculation:
  * 
  * ```ts
- * import { createAndCompleteReturnOrderWorkflow } from "@medusajs/medusa/core-flows";
- * import { StepResponse } from "@medusajs/workflows-sdk";
+ * import { createAndCompleteReturnOrderWorkflow } from "@vikrai/vikrai/core-flows";
+ * import { StepResponse } from "@vikrai/workflows-sdk";
  * 
  * createAndCompleteReturnOrderWorkflow.hooks.setPricingContext((
  *   { order, additional_data }, { container }
@@ -343,7 +343,7 @@ export const createAndCompleteReturnOrderWorkflowId =
  * 
  * :::note
  * 
- * Learn more about prices calculation context in the [Prices Calculation](https://docs.medusajs.com/resources/commerce-modules/pricing/price-calculation) documentation.
+ * Learn more about prices calculation context in the [Prices Calculation](https://docs.vikrai.com/resources/commerce-modules/pricing/price-calculation) documentation.
  * 
  * :::
  */
@@ -475,3 +475,4 @@ export const createAndCompleteReturnOrderWorkflow = createWorkflow(
     })
   }
 )
+

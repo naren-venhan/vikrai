@@ -2,15 +2,15 @@ import {
   ChangeActionType,
   OrderChangeStatus,
   PromotionActions,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 import {
   createWorkflow,
   transform,
   when,
   WorkflowData,
   WorkflowResponse,
-} from "@medusajs/framework/workflows-sdk"
-import { BigNumberInput, OrderChangeDTO, OrderDTO } from "@medusajs/types"
+} from "@vikrai/framework/workflows-sdk"
+import { BigNumberInput, OrderChangeDTO, OrderDTO } from "@vikrai/types"
 import { useRemoteQueryStep } from "../../common"
 import {
   createOrderChangeActionsWorkflow,
@@ -47,7 +47,7 @@ export interface AddDraftOrderShippingMethodsWorkflowInput {
 
 /**
  * This workflow adds shipping methods to a draft order. It's used by the
- * [Add Shipping Method to Draft Order Admin API Route](https://docs.medusajs.com/api/admin#draft-orders_postdraftordersideditshippingmethods).
+ * [Add Shipping Method to Draft Order Admin API Route](https://docs.vikrai.com/api/admin#draft-orders_postdraftordersideditshippingmethods).
  * 
  * You can use this workflow within your customizations or your own custom workflows, allowing you to wrap custom logic around adding shipping methods to
  * a draft order.
@@ -207,3 +207,4 @@ export const addDraftOrderShippingMethodsWorkflow = createWorkflow(
     return new WorkflowResponse(previewOrderChangeStep(order.id))
   }
 )
+

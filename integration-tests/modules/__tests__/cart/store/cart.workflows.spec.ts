@@ -15,9 +15,9 @@ import {
   updateLineItemsStepId,
   updatePaymentCollectionStepId,
   updateTaxLinesWorkflow,
-} from "@medusajs/core-flows"
-import { StepResponse } from "@medusajs/framework/workflows-sdk"
-import { medusaIntegrationTestRunner } from "@medusajs/test-utils"
+} from "@vikrai/core-flows"
+import { StepResponse } from "@vikrai/framework/workflows-sdk"
+import { vikraiIntegrationTestRunner } from "@vikrai/test-utils"
 import {
   ICartModuleService,
   ICustomerModuleService,
@@ -29,14 +29,14 @@ import {
   IRegionModuleService,
   ISalesChannelModuleService,
   IStockLocationService,
-} from "@medusajs/types"
+} from "@vikrai/types"
 import {
   ContainerRegistrationKeys,
   Modules,
   PriceListStatus,
   PriceListType,
   RuleOperator,
-} from "@medusajs/utils"
+} from "@vikrai/utils"
 import {
   adminHeaders,
   createAdminUser,
@@ -48,9 +48,9 @@ import { createAuthenticatedCustomer } from "../../../helpers/create-authenticat
 
 jest.setTimeout(200000)
 
-const env = { MEDUSA_FF_MEDUSA_V2: true }
+const env = { vikrai_FF_vikrai_V2: true }
 
-medusaIntegrationTestRunner({
+vikraiIntegrationTestRunner({
   env,
   testSuite: ({ dbConnection, getContainer, api }) => {
     describe("Carts workflows", () => {
@@ -4284,3 +4284,4 @@ medusaIntegrationTestRunner({
     })
   },
 })
+

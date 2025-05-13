@@ -38,9 +38,9 @@ export const SidebarItemSidebar = ({
             "py-docs_0.25 px-docs_0.5",
             "block w-full rounded-docs_sm",
             !isTitleOneWord && "break-words",
-            !nested && "text-medusa-fg-subtle",
-            nested && "text-medusa-fg-muted",
-            "hover:bg-medusa-bg-base-hover lg:hover:bg-medusa-bg-subtle-hover",
+            !nested && "text-vikrai-fg-subtle",
+            nested && "text-vikrai-fg-muted",
+            "hover:bg-vikrai-bg-base-hover lg:hover:bg-vikrai-bg-subtle-hover",
             "text-compact-small-plus",
             "flex justify-between items-center gap-[6px]",
             className
@@ -64,3 +64,4 @@ export const SidebarItemSidebar = ({
     </li>
   )
 }
+

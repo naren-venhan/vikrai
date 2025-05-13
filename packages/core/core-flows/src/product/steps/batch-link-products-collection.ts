@@ -1,9 +1,9 @@
 import {
   IProductModuleService,
   LinkWorkflowInput,
-} from "@medusajs/framework/types"
-import { Modules } from "@medusajs/framework/utils"
-import { createStep, StepResponse } from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/types"
+import { Modules } from "@vikrai/framework/utils"
+import { createStep, StepResponse } from "@vikrai/framework/workflows-sdk"
 
 export const batchLinkProductsToCollectionStepId =
   "batch-link-products-to-collection"
@@ -59,3 +59,4 @@ export const batchLinkProductsToCollectionStep = createStep(
     })
   }
 )
+

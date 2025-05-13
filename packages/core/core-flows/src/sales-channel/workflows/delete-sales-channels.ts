@@ -1,9 +1,9 @@
-import { Modules, SalesChannelWorkflowEvents } from "@medusajs/framework/utils"
+import { Modules, SalesChannelWorkflowEvents } from "@vikrai/framework/utils"
 import {
   createWorkflow,
   transform,
   WorkflowData,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { emitEventStep } from "../../common"
 import { removeRemoteLinkStep } from "../../common/steps/remove-remote-links"
 import { deleteSalesChannelsStep } from "../steps/delete-sales-channels"
@@ -22,7 +22,7 @@ export type DeleteSalesChannelsWorkflowInput = {
 export const deleteSalesChannelsWorkflowId = "delete-sales-channels"
 /**
  * This workflow deletes one or more sales channels. It's used by the
- * [Delete Sales Channel Admin API Route](https://docs.medusajs.com/api/admin#sales-channels_deletesaleschannelsid).
+ * [Delete Sales Channel Admin API Route](https://docs.vikrai.com/api/admin#sales-channels_deletesaleschannelsid).
  * 
  * You can use this workflow within your customizations or your own custom workflows, allowing you to
  * delete sales channels within your custom flows.
@@ -63,3 +63,4 @@ export const deleteSalesChannelsWorkflow = createWorkflow(
     })
   }
 )
+

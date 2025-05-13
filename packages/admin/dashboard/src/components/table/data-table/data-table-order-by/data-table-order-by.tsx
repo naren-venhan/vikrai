@@ -1,5 +1,5 @@
-import { DescendingSorting } from "@medusajs/icons"
-import { DropdownMenu, IconButton } from "@medusajs/ui"
+import { DescendingSorting } from "@vikrai/icons"
+import { DropdownMenu, IconButton } from "@vikrai/ui"
 import { useState } from "react"
 import { useTranslation } from "react-i18next"
 import { useSearchParams } from "react-router-dom"
@@ -148,3 +148,4 @@ export const DataTableOrderBy = <TData,>({
     </DropdownMenu>
   )
 }
+

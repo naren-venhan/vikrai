@@ -46,7 +46,7 @@
  *                 type: string
  *                 description: The promotion's type.
  *                 externalDocs:
- *                   url: https://docs.medusajs.com/v2/resources/commerce-modules/promotion/concepts#what-is-a-promotion
+ *                   url: https://docs.vikrai.com/v2/resources/commerce-modules/promotion/concepts#what-is-a-promotion
  *                 enum:
  *                   - standard
  *                   - buyget
@@ -313,9 +313,9 @@
  *   - lang: JavaScript
  *     label: JS SDK
  *     source: |-
- *       import Medusa from "@medusajs/js-sdk"
+ *       import vikrai from "@vikrai/js-sdk"
  * 
- *       export const sdk = new Medusa({
+ *       export const sdk = new vikrai({
  *         baseUrl: import.meta.env.VITE_BACKEND_URL || "/",
  *         debug: import.meta.env.DEV,
  *         auth: {
@@ -382,4 +382,5 @@
  * x-events: []
  * 
 */
+
 

@@ -3,7 +3,7 @@
 import React, { useCallback } from "react"
 import { Badge, Button, InputText, Kbd, Tooltip, Link } from "@/components"
 import { useSearch } from "@/providers"
-import { ArrowUturnLeft } from "@medusajs/icons"
+import { ArrowUturnLeft } from "@vikrai/icons"
 import clsx from "clsx"
 import { AiAssistantThreadItem } from "../ThreadItem"
 import { AiAssistantSuggestions } from "../Suggestions"
@@ -61,13 +61,13 @@ export const AiAssistantSearchWindow = () => {
         className={clsx(
           "flex gap-docs_1 px-docs_1 py-docs_0.75",
           "h-[57px] w-full md:rounded-t-docs_xl relative border-0 border-solid",
-          "border-b border-medusa-border-base relative"
+          "border-b border-vikrai-border-base relative"
         )}
       >
         <Button
           variant="transparent"
           onClick={() => setCommand(null)}
-          className="text-medusa-fg-muted p-[6.5px]"
+          className="text-vikrai-fg-muted p-[6.5px]"
         >
           <ArrowUturnLeft />
         </Button>
@@ -76,10 +76,10 @@ export const AiAssistantSearchWindow = () => {
           onChange={(e) => setQuestion(e.target.value)}
           className={clsx(
             "bg-transparent border-0 focus:outline-none hover:!bg-transparent",
-            "!shadow-none flex-1 text-medusa-fg-base",
+            "!shadow-none flex-1 text-vikrai-fg-base",
             "disabled:!bg-transparent disabled:cursor-not-allowed"
           )}
-          placeholder="Ask me a question about Medusa..."
+          placeholder="Ask me a question about vikrai..."
           autoFocus={true}
           passedRef={inputRef as React.RefObject<HTMLInputElement | null>}
           disabled={loading}
@@ -90,7 +90,7 @@ export const AiAssistantSearchWindow = () => {
             inputRef.current?.focus()
           }}
           className={clsx(
-            "text-medusa-fg-muted hover:text-medusa-fg-subtle",
+            "text-vikrai-fg-muted hover:text-vikrai-fg-subtle",
             "absolute top-docs_0.75 right-docs_1",
             "cursor-pointer",
             question.length === 0 && "hidden"
@@ -117,8 +117,8 @@ export const AiAssistantSearchWindow = () => {
       <div
         className={clsx(
           "py-docs_0.75 hidden md:flex items-center justify-end px-docs_1",
-          "border-medusa-border-base border-t",
-          "bg-medusa-bg-field-component"
+          "border-vikrai-border-base border-t",
+          "bg-vikrai-bg-field-component"
         )}
       >
         <div className="flex items-center gap-docs_0.75">
@@ -127,7 +127,7 @@ export const AiAssistantSearchWindow = () => {
               <>
                 <span
                   className={clsx(
-                    "text-medusa-fg-subtle",
+                    "text-vikrai-fg-subtle",
                     "text-compact-x-small"
                   )}
                 >
@@ -136,16 +136,16 @@ export const AiAssistantSearchWindow = () => {
                 <span className="gap-[5px] flex">
                   <Kbd
                     className={clsx(
-                      "!bg-medusa-bg-field-component !border-medusa-border-strong",
-                      "!text-medusa-fg-subtle h-[18px] w-[18px] p-0"
+                      "!bg-vikrai-bg-field-component !border-vikrai-border-strong",
+                      "!text-vikrai-fg-subtle h-[18px] w-[18px] p-0"
                     )}
                   >
                     ↑
                   </Kbd>
                   <Kbd
                     className={clsx(
-                      "!bg-medusa-bg-field-component !border-medusa-border-strong",
-                      "!text-medusa-fg-subtle h-[18px] w-[18px] p-0"
+                      "!bg-vikrai-bg-field-component !border-vikrai-border-strong",
+                      "!text-vikrai-fg-subtle h-[18px] w-[18px] p-0"
                     )}
                   >
                     ↓
@@ -155,25 +155,25 @@ export const AiAssistantSearchWindow = () => {
             )}
             {thread.length > 0 && (
               <span
-                className={clsx("text-medusa-fg-muted", "text-compact-x-small")}
+                className={clsx("text-vikrai-fg-muted", "text-compact-x-small")}
               >
                 Chat is cleared on exit
               </span>
             )}
           </div>
           <div
-            className={clsx("h-docs_0.75 w-px bg-medusa-border-strong")}
+            className={clsx("h-docs_0.75 w-px bg-vikrai-border-strong")}
           ></div>
           <div className="flex items-center gap-docs_0.5">
             <span
-              className={clsx("text-medusa-fg-subtle", "text-compact-x-small")}
+              className={clsx("text-vikrai-fg-subtle", "text-compact-x-small")}
             >
               Ask Question
             </span>
             <Kbd
               className={clsx(
-                "!bg-medusa-bg-field-component !border-medusa-border-strong",
-                "!text-medusa-fg-subtle h-[18px] w-[18px] p-0"
+                "!bg-vikrai-bg-field-component !border-vikrai-border-strong",
+                "!text-vikrai-fg-subtle h-[18px] w-[18px] p-0"
               )}
             >
               ↵
@@ -184,3 +184,4 @@ export const AiAssistantSearchWindow = () => {
     </div>
   )
 }
+

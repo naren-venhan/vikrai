@@ -1,4 +1,4 @@
-import { HttpTypes } from "@medusajs/types"
+import { HttpTypes } from "@vikrai/types"
 
 export function isProductVariant(
   row:
@@ -51,3 +51,4 @@ export function getDisabledInventoryRows(
 
   return disabled
 }
+

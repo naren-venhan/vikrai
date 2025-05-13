@@ -1,6 +1,6 @@
 import { transform } from "../transform"
 import { WorkflowData, WorkflowTransactionContext } from "../type"
-import { OrchestrationUtils } from "@medusajs/utils"
+import { OrchestrationUtils } from "@vikrai/utils"
 import { resolveValue } from "./resolve-value"
 
 export function proxify<T>(obj: WorkflowData<any>): T {
@@ -25,3 +25,4 @@ export function proxify<T>(obj: WorkflowData<any>): T {
     },
   }) as unknown as T
 }
+

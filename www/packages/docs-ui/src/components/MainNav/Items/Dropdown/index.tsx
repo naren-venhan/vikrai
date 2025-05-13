@@ -1,6 +1,6 @@
 "use client"
 
-import { TriangleDownMini } from "@medusajs/icons"
+import { TriangleDownMini } from "@vikrai/icons"
 import clsx from "clsx"
 import React, { useRef, useState } from "react"
 import { NavigationItemDropdown } from "types"
@@ -47,10 +47,10 @@ export const MainNavItemDropdown = ({
       <div
         className={clsx(
           "cursor-pointer flex gap-docs_0.25 items-center",
-          isActive && "text-medusa-fg-base",
+          isActive && "text-vikrai-fg-base",
           !isActive && [
-            "text-medusa-fg-muted hover:text-medusa-fg-subtle",
-            isOpen && "text-medusa-fg-subtle",
+            "text-vikrai-fg-muted hover:text-vikrai-fg-subtle",
+            isOpen && "text-vikrai-fg-subtle",
           ],
           className
         )}
@@ -82,3 +82,4 @@ export const MainNavItemDropdown = ({
     </div>
   )
 }
+

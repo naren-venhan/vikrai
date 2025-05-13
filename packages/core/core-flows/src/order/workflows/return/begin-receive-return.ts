@@ -3,14 +3,14 @@ import {
   OrderDTO,
   OrderWorkflow,
   ReturnDTO,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import {
   WorkflowData,
   WorkflowResponse,
   createStep,
   createWorkflow,
   transform,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { useRemoteQueryStep } from "../../../common"
 import { createOrderChangeStep } from "../../steps"
 import { throwIfIsCancelled } from "../../utils/order-validation"
@@ -35,8 +35,8 @@ export type BeginReceiveReturnValidationStepInput = {
  * 
  * :::note
  * 
- * You can retrieve an order and return details using [Query](https://docs.medusajs.com/learn/fundamentals/module-links/query),
- * or [useQueryGraphStep](https://docs.medusajs.com/resources/references/medusa-workflows/steps/useQueryGraphStep).
+ * You can retrieve an order and return details using [Query](https://docs.vikrai.com/learn/fundamentals/module-links/query),
+ * or [useQueryGraphStep](https://docs.vikrai.com/resources/references/vikrai-workflows/steps/useQueryGraphStep).
  * 
  * :::
  * 
@@ -69,7 +69,7 @@ export const beginReceiveReturnValidationStep = createStep(
 export const beginReceiveReturnWorkflowId = "begin-receive-return"
 /**
  * This workflow requests return receival. It's used by the
- * [Start Return Receival Admin API Route](https://docs.medusajs.com/api/admin#returns_postreturnsidreceive).
+ * [Start Return Receival Admin API Route](https://docs.vikrai.com/api/admin#returns_postreturnsidreceive).
  * 
  * You can confirm the return receival using the {@link confirmReturnRequestWorkflow}.
  * 
@@ -127,3 +127,4 @@ export const beginReceiveReturnWorkflow = createWorkflow(
     return new WorkflowResponse(createOrderChangeStep(orderChangeInput))
   }
 )
+

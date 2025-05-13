@@ -1,6 +1,6 @@
-import { IOrderModuleService } from "@medusajs/framework/types"
-import { Modules } from "@medusajs/framework/utils"
-import { StepResponse, createStep } from "@medusajs/framework/workflows-sdk"
+import { IOrderModuleService } from "@vikrai/framework/types"
+import { Modules } from "@vikrai/framework/utils"
+import { StepResponse, createStep } from "@vikrai/framework/workflows-sdk"
 
 /**
  * The ID of the order to retrieve its preview.
@@ -21,3 +21,4 @@ export const previewOrderChangeStep = createStep(
     return new StepResponse(preview)
   }
 )
+

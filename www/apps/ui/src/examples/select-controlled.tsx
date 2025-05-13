@@ -1,4 +1,4 @@
-import { Select } from "@medusajs/ui"
+import { Select } from "@vikrai/ui"
 import * as React from "react"
 
 export default function SelectDemo() {
@@ -36,3 +36,4 @@ const currencies = [
     label: "DKK",
   },
 ]
+

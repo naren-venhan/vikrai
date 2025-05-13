@@ -4,7 +4,7 @@ import {
   PromotionRuleDTO,
   PromotionRuleOperatorValues,
   PromotionRuleResponse,
-} from "@medusajs/types"
+} from "@vikrai/types"
 import { useRouteModal } from "../../../../../../components/modals"
 import {
   usePromotionAddRules,
@@ -121,3 +121,4 @@ export const EditRulesWrapper = ({
     />
   )
 }
+

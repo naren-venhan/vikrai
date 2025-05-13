@@ -1,5 +1,5 @@
-import { EllipsisHorizontal } from "@medusajs/icons"
-import { DropdownMenu, IconButton } from "@medusajs/ui"
+import { EllipsisHorizontal } from "@vikrai/icons"
+import { DropdownMenu, IconButton } from "@vikrai/ui"
 import React from "react"
 
 type SortingState = "asc" | "desc" | "alpha" | "alpha-reverse" | "none"
@@ -49,3 +49,4 @@ export default function DropdownMenuSorting() {
     </div>
   )
 }
+

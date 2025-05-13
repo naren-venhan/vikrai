@@ -1,4 +1,4 @@
-import { model } from "@medusajs/framework/utils"
+import { model } from "@vikrai/framework/utils"
 import LineItem from "./line-item"
 
 const LineItemAdjustment = model
@@ -32,3 +32,4 @@ const LineItemAdjustment = model
   .checks([(columns) => `${columns.amount} >= 0`])
 
 export default LineItemAdjustment
+

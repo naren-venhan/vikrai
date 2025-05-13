@@ -12,10 +12,11 @@
     "postcss.config.js"
   ],
   "dependencies": {
-    "@medusajs/ui-preset": "2.6.0",
+    "@vikrai/ui-preset": "2.6.0",
     "tailwindcss-animate": "^1.0.7"
   },
   "peerDependencies": {
     "docs-ui": "*"
   }
 }
+

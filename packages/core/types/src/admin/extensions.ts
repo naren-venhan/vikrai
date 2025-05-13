@@ -8,8 +8,8 @@
  *
  * @example
  * ```tsx
- * import type { DetailWidgetProps, AdminProduct } from "@medusajs/types"
- * import { defineWidgetConfig } from "@medusajs/admin-sdk"
+ * import type { DetailWidgetProps, AdminProduct } from "@vikrai/types"
+ * import { defineWidgetConfig } from "@vikrai/admin-sdk"
  *
  * const ProductWidget = ({ data }: DetailWidgetProps<AdminProduct>) => {
  *  return <div>{data.title}</div>
@@ -25,3 +25,4 @@
 export interface DetailWidgetProps<TData> {
   data: TData
 }
+

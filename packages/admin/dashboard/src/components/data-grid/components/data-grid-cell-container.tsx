@@ -1,6 +1,6 @@
 import { ErrorMessage } from "@hookform/error-message"
-import { ExclamationCircle } from "@medusajs/icons"
-import { Tooltip, clx } from "@medusajs/ui"
+import { ExclamationCircle } from "@vikrai/icons"
+import { Tooltip, clx } from "@vikrai/ui"
 import { PropsWithChildren } from "react"
 import { get } from "react-hook-form"
 
@@ -86,3 +86,4 @@ const RenderChildren = ({
 
   return children
 }
+

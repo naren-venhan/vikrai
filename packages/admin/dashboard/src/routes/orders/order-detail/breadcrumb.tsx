@@ -1,4 +1,4 @@
-import { HttpTypes } from "@medusajs/types"
+import { HttpTypes } from "@vikrai/types"
 import { UIMatch } from "react-router-dom"
 import { useOrder } from "../../../hooks/api"
 import { DEFAULT_FIELDS } from "./constants"
@@ -25,3 +25,4 @@ export const OrderDetailBreadcrumb = (props: OrderDetailBreadcrumbProps) => {
 
   return <span>#{order.display_id}</span>
 }
+

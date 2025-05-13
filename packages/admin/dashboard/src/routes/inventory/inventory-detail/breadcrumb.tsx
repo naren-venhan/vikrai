@@ -1,4 +1,4 @@
-import { HttpTypes } from "@medusajs/types"
+import { HttpTypes } from "@vikrai/types"
 import { UIMatch } from "react-router-dom"
 
 import { useInventoryItem } from "../../../hooks/api"
@@ -29,3 +29,4 @@ export const InventoryDetailBreadcrumb = (
 
   return <span>{inventory_item.title ?? inventory_item.sku ?? id}</span>
 }
+

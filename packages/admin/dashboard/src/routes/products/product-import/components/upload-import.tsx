@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { FileType, FileUpload } from "../../../../components/common/file-upload"
-import { Hint } from "@medusajs/ui"
+import { Hint } from "@vikrai/ui"
 import { useTranslation } from "react-i18next"
 
 const SUPPORTED_FORMATS = ["text/csv"]
@@ -58,3 +58,4 @@ export const UploadImport = ({
     </div>
   )
 }
+

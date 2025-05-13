@@ -164,17 +164,17 @@ export interface BaseProductVariant {
    */
   allow_backorder: boolean | null
   /**
-   * Whether Medusa manages the variant's inventory. If disabled, the variant
+   * Whether vikrai manages the variant's inventory. If disabled, the variant
    * is always considered in stock.
    */
   manage_inventory: boolean | null
   /**
    * The variant's inventory quantity if `manage_inventory` is enabled.
-   * This field is only retrieved in the [Get Product](https://docs.medusajs.com/api/store#products_getproductsid)
-   * and [List Products](https://docs.medusajs.com/api/store#products_getproducts) API routes if you
+   * This field is only retrieved in the [Get Product](https://docs.vikrai.com/api/store#products_getproductsid)
+   * and [List Products](https://docs.vikrai.com/api/store#products_getproducts) API routes if you
    * pass `+variants.inventory_quantity` in the `fields` query parameter.
    * 
-   * Learn more in the [Retrieve Product Variant's Inventory](https://docs.medusajs.com/resources/storefront-development/products/inventory) storefront guide.
+   * Learn more in the [Retrieve Product Variant's Inventory](https://docs.vikrai.com/resources/storefront-development/products/inventory) storefront guide.
    */
   inventory_quantity?: number
   /**
@@ -439,3 +439,4 @@ export interface BaseProductVariantParams
   updated_at?: OperatorMap<string>
   deleted_at?: OperatorMap<string>
 }
+

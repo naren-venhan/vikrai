@@ -10,19 +10,19 @@ import {
   TransactionOptions,
   TransactionStep,
   TransactionStepError,
-} from "@medusajs/framework/orchestration"
+} from "@vikrai/framework/orchestration"
 import {
   InferEntityType,
   Logger,
   ModulesSdkTypes,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import {
-  MedusaError,
+  vikraiError,
   TransactionState,
   TransactionStepState,
   isDefined,
   isPresent,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 import { WorkflowOrchestratorService } from "@services"
 import { type CronExpression, parseExpression } from "cron-parser"
 import { WorkflowExecution } from "../models/workflow-execution"
@@ -56,7 +56,7 @@ function parseNextExecution(
 export class InMemoryDistributedTransactionStorage
   implements IDistributedTransactionStorage, IDistributedSchedulerStorage
 {
-  private workflowExecutionService_: ModulesSdkTypes.IMedusaInternalService<any>
+  private workflowExecutionService_: ModulesSdkTypes.IvikraiInternalService<any>
   private logger_: Logger
   private workflowOrchestratorService_: WorkflowOrchestratorService
 
@@ -77,7 +77,7 @@ export class InMemoryDistributedTransactionStorage
     workflowExecutionService,
     logger,
   }: {
-    workflowExecutionService: ModulesSdkTypes.IMedusaInternalService<any>
+    workflowExecutionService: ModulesSdkTypes.IvikraiInternalService<any>
     logger: Logger
   }) {
     this.workflowExecutionService_ = workflowExecutionService
@@ -228,8 +228,8 @@ export class InMemoryDistributedTransactionStorage
     if (isNotStarted && isManualTransactionId) {
       const storedData = this.storage.get(key)
       if (storedData) {
-        throw new MedusaError(
-          MedusaError.Types.INVALID_ARGUMENT,
+        throw new vikraiError(
+          vikraiError.Types.INVALID_ARGUMENT,
           "Transaction already started for transactionId: " +
             data.flow.transactionId
         )
@@ -511,8 +511,8 @@ export class InMemoryDistributedTransactionStorage
     } else if ("interval" in schedulerOptions) {
       expression = schedulerOptions.interval
     } else {
-      throw new MedusaError(
-        MedusaError.Types.INVALID_ARGUMENT,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_ARGUMENT,
         "Schedule cron or interval definition is required for scheduled jobs."
       )
     }
@@ -587,7 +587,7 @@ export class InMemoryDistributedTransactionStorage
         config: job.config,
       })
     } catch (e) {
-      if (e instanceof MedusaError && e.type === MedusaError.Types.NOT_FOUND) {
+      if (e instanceof vikraiError && e.type === vikraiError.Types.NOT_FOUND) {
         this.logger_?.warn(
           `Tried to execute a scheduled workflow with ID ${jobId} that does not exist, removing it from the scheduler.`
         )
@@ -600,3 +600,4 @@ export class InMemoryDistributedTransactionStorage
     }
   }
 }
+

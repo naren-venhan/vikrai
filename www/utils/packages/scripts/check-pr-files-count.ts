@@ -18,8 +18,8 @@ async function getPrFilesCount() {
   const { data: pr } = await octokit.request(
     "GET /repos/{owner}/{repo}/pulls/{pull_number}",
     {
-      owner: process.env.GIT_OWNER || "medusajs",
-      repo: process.env.GIT_REPO || "medusa",
+      owner: process.env.GIT_OWNER || "vikrai",
+      repo: process.env.GIT_REPO || "vikrai",
       pull_number: parseInt(prNumber),
       headers: {
         "X-GitHub-Api-Version": "2022-11-28",
@@ -31,3 +31,4 @@ async function getPrFilesCount() {
 }
 
 void getPrFilesCount()
+

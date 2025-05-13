@@ -1,4 +1,4 @@
-import { FindParams, HttpTypes, SelectParams } from "@medusajs/types"
+import { FindParams, HttpTypes, SelectParams } from "@vikrai/types"
 import { Client } from "../client"
 import { ClientHeaders } from "../types"
 
@@ -21,9 +21,9 @@ export class Store {
   public region = {
     /**
      * This method retrieves the paginated list of regions in the store. It sends a request to the
-     * [List Regions API route](https://docs.medusajs.com/api/store#regions_getregions).
+     * [List Regions API route](https://docs.vikrai.com/api/store#regions_getregions).
      *
-     * Related guide: [How to list regions in a storefront](https://docs.medusajs.com/resources/storefront-development/regions/list).
+     * Related guide: [How to list regions in a storefront](https://docs.vikrai.com/resources/storefront-development/regions/list).
      *
      * @param query - Filters and pagination configurations.
      * @param headers - Headers to pass in the request
@@ -65,7 +65,7 @@ export class Store {
      * })
      * ```
      *
-     * Learn more about the `fields` property in the [API reference](https://docs.medusajs.com/api/store#select-fields-and-relations).
+     * Learn more about the `fields` property in the [API reference](https://docs.vikrai.com/api/store#select-fields-and-relations).
      */
     list: async (
       query?: FindParams & HttpTypes.StoreRegionFilters,
@@ -80,10 +80,10 @@ export class Store {
       )
     },
     /**
-     * This method retrieves a region by its ID. It sends a request to the [Get Region](https://docs.medusajs.com/api/store#regions_getregionsid)
+     * This method retrieves a region by its ID. It sends a request to the [Get Region](https://docs.vikrai.com/api/store#regions_getregionsid)
      * API route.
      *
-     * Related guide: [Store and retrieve regions in a storefront](https://docs.medusajs.com/resources/storefront-development/regions/store-retrieve-region).
+     * Related guide: [Store and retrieve regions in a storefront](https://docs.vikrai.com/resources/storefront-development/regions/store-retrieve-region).
      *
      * @param id - The region's ID.
      * @param query - Configure the fields to retrieve in the region.
@@ -114,7 +114,7 @@ export class Store {
      * })
      * ```
      *
-     * Learn more about the `fields` property in the [API reference](https://docs.medusajs.com/api/store#select-fields-and-relations).
+     * Learn more about the `fields` property in the [API reference](https://docs.vikrai.com/api/store#select-fields-and-relations).
      */
     retrieve: async (
       id: string,
@@ -137,9 +137,9 @@ export class Store {
   public collection = {
     /**
      * This method retrieves a paginated list of product collections. It sends a request to the
-     * [List Collections](https://docs.medusajs.com/api/store#collections_getcollections) API route.
+     * [List Collections](https://docs.vikrai.com/api/store#collections_getcollections) API route.
      *
-     * Related guide: [How to retrieve collections in a storefront](https://docs.medusajs.com/resources/storefront-development/products/collections/list).
+     * Related guide: [How to retrieve collections in a storefront](https://docs.vikrai.com/resources/storefront-development/products/collections/list).
      *
      * @param query - Filters and pagination configurations.
      * @param headers - Headers to pass in the request
@@ -181,7 +181,7 @@ export class Store {
      * })
      * ```
      *
-     * Learn more about the `fields` property in the [API reference](https://docs.medusajs.com/api/store#select-fields-and-relations).
+     * Learn more about the `fields` property in the [API reference](https://docs.vikrai.com/api/store#select-fields-and-relations).
      */
     list: async (
       query?: FindParams & HttpTypes.StoreCollectionFilters,
@@ -196,10 +196,10 @@ export class Store {
       )
     },
     /**
-     * This method retrieves a collection by its ID. It sends a request to the [Get Collection](https://docs.medusajs.com/api/store#collections_getcollectionsid)
+     * This method retrieves a collection by its ID. It sends a request to the [Get Collection](https://docs.vikrai.com/api/store#collections_getcollectionsid)
      * API route.
      *
-     * Related guide: [How to retrieve a collection in a storefront](https://docs.medusajs.com/resources/storefront-development/products/collections/retrieve).
+     * Related guide: [How to retrieve a collection in a storefront](https://docs.vikrai.com/resources/storefront-development/products/collections/retrieve).
      *
      * @param id - The ID of the collection to retrieve.
      * @param query - Configure the fields to retrieve in the collection.
@@ -227,7 +227,7 @@ export class Store {
      * })
      * ```
      *
-     * Learn more about the `fields` property in the [API reference](https://docs.medusajs.com/api/store#select-fields-and-relations).
+     * Learn more about the `fields` property in the [API reference](https://docs.vikrai.com/api/store#select-fields-and-relations).
      */
     retrieve: async (
       id: string,
@@ -250,9 +250,9 @@ export class Store {
   public category = {
     /**
      * This method retrieves a paginated list of product categories. It sends a request to the
-     * [List Categories](https://docs.medusajs.com/api/store#product-categories_getproductcategories) API route.
+     * [List Categories](https://docs.vikrai.com/api/store#product-categories_getproductcategories) API route.
      *
-     * Related guide: [How to retrieve list of categories in the storefront](https://docs.medusajs.com/resources/storefront-development/products/categories/list).
+     * Related guide: [How to retrieve list of categories in the storefront](https://docs.vikrai.com/resources/storefront-development/products/categories/list).
      *
      * @param query - Filters and pagination configurations.
      * @param headers - Headers to pass in the request.
@@ -294,7 +294,7 @@ export class Store {
      * })
      * ```
      *
-     * Learn more about the `fields` property in the [API reference](https://docs.medusajs.com/api/store#select-fields-and-relations).
+     * Learn more about the `fields` property in the [API reference](https://docs.vikrai.com/api/store#select-fields-and-relations).
      */
     list: async (
       query?: FindParams & HttpTypes.StoreProductCategoryListParams,
@@ -310,9 +310,9 @@ export class Store {
     },
     /**
      * This method retrieves a category by its ID. It sends a request to the
-     * [Retrieve Product Category](https://docs.medusajs.com/api/store#product-categories_getproductcategoriesid).
+     * [Retrieve Product Category](https://docs.vikrai.com/api/store#product-categories_getproductcategoriesid).
      *
-     * Related guide: [How to retrieve a category in the storefront](https://docs.medusajs.com/resources/storefront-development/products/categories/retrieve).
+     * Related guide: [How to retrieve a category in the storefront](https://docs.vikrai.com/resources/storefront-development/products/categories/retrieve).
      *
      * @param id - The ID of the category to retrieve.
      * @param query - Configure the fields to retrieve in the category.
@@ -340,7 +340,7 @@ export class Store {
      * })
      * ```
      *
-     * Learn more about the `fields` property in the [API reference](https://docs.medusajs.com/api/store#select-fields-and-relations).
+     * Learn more about the `fields` property in the [API reference](https://docs.vikrai.com/api/store#select-fields-and-relations).
      */
     retrieve: async (
       id: string,
@@ -363,12 +363,12 @@ export class Store {
   public product = {
     /**
      * This method retrieves a list of products. It sends a request to the
-     * [List Products API route](https://docs.medusajs.com/api/store#products_getproducts).
+     * [List Products API route](https://docs.vikrai.com/api/store#products_getproducts).
      *
      * Related guides:
      *
-     * - [How to list products in a storefront](https://docs.medusajs.com/resources/storefront-development/products/list).
-     * - [How to retrieve a product variant's prices in the storefront](https://docs.medusajs.com/resources/storefront-development/products/price)
+     * - [How to list products in a storefront](https://docs.vikrai.com/resources/storefront-development/products/list).
+     * - [How to retrieve a product variant's prices in the storefront](https://docs.vikrai.com/resources/storefront-development/products/price)
      *
      * @param query - Filters and pagination configurations.
      * @param headers - Headers to pass in the request.
@@ -410,7 +410,7 @@ export class Store {
      * })
      * ```
      *
-     * Learn more about the `fields` property in the [API reference](https://docs.medusajs.com/api/store#select-fields-and-relations).
+     * Learn more about the `fields` property in the [API reference](https://docs.vikrai.com/api/store#select-fields-and-relations).
      */
     list: async (
       query?: HttpTypes.StoreProductListParams,
@@ -426,12 +426,12 @@ export class Store {
     },
     /**
      * This method is used to retrieve a product by its ID. It sends a request to the
-     * [Get Product](https://docs.medusajs.com/api/store#products_getproductsid) API route.
+     * [Get Product](https://docs.vikrai.com/api/store#products_getproductsid) API route.
      *
      * Related guides:
      *
-     * - [How to retrieve a product in the storefront](https://docs.medusajs.com/resources/storefront-development/products/retrieve).
-     * - [How to retrieve a product variant's prices in the storefront](https://docs.medusajs.com/resources/storefront-development/products/price)
+     * - [How to retrieve a product in the storefront](https://docs.vikrai.com/resources/storefront-development/products/retrieve).
+     * - [How to retrieve a product variant's prices in the storefront](https://docs.vikrai.com/resources/storefront-development/products/price)
      *
      * @param id - The product's ID.
      * @param query - Configure the fields to retrieve in the product.
@@ -459,7 +459,7 @@ export class Store {
      * })
      * ```
      *
-     * Learn more about the `fields` property in the [API reference](https://docs.medusajs.com/api/store#select-fields-and-relations).
+     * Learn more about the `fields` property in the [API reference](https://docs.vikrai.com/api/store#select-fields-and-relations).
      */
     retrieve: async (
       id: string,
@@ -477,16 +477,16 @@ export class Store {
   }
 
   /**
-   * Related guides: [How to implement carts in the storefront](https://docs.medusajs.com/resources/storefront-development/cart).
+   * Related guides: [How to implement carts in the storefront](https://docs.vikrai.com/resources/storefront-development/cart).
    * 
    * @tags cart
    */
   public cart = {
     /**
-     * This method creates a cart. It sends a request to the [Create Cart](https://docs.medusajs.com/api/store#carts_postcarts)
+     * This method creates a cart. It sends a request to the [Create Cart](https://docs.vikrai.com/api/store#carts_postcarts)
      * API route.
      *
-     * Related guide: [How to create a cart in the storefront](https://docs.medusajs.com/resources/storefront-development/cart/create).
+     * Related guide: [How to create a cart in the storefront](https://docs.vikrai.com/resources/storefront-development/cart/create).
      *
      * @param body - The details of the cart to create.
      * @param query - Configure the fields to retrieve in the cart.
@@ -515,9 +515,9 @@ export class Store {
     },
     /**
      * This method updates a cart. It sends a request to the
-     * [Update Cart](https://docs.medusajs.com/api/store#carts_postcartsid) API route.
+     * [Update Cart](https://docs.vikrai.com/api/store#carts_postcartsid) API route.
      *
-     * Related guide: [How to update a cart in the storefront](https://docs.medusajs.com/resources/storefront-development/cart/update).
+     * Related guide: [How to update a cart in the storefront](https://docs.vikrai.com/resources/storefront-development/cart/update).
      *
      * @param id - The cart's ID.
      * @param body - The data to update in the cart.
@@ -551,9 +551,9 @@ export class Store {
     },
     /**
      * This method retrieves a cart by its ID. It sends a request to the
-     * [Get Cart](https://docs.medusajs.com/api/store#carts_getcartsid) API route.
+     * [Get Cart](https://docs.vikrai.com/api/store#carts_getcartsid) API route.
      *
-     * Related guide: [How to retrieve a cart in the storefront](https://docs.medusajs.com/resources/storefront-development/cart/retrieve).
+     * Related guide: [How to retrieve a cart in the storefront](https://docs.vikrai.com/resources/storefront-development/cart/retrieve).
      *
      * @param id - The cart's ID.
      * @param query - Configure the fields to retrieve in the cart.
@@ -581,7 +581,7 @@ export class Store {
      * })
      * ```
      *
-     * Learn more about the `fields` property in the [API reference](https://docs.medusajs.com/api/store#select-fields-and-relations).
+     * Learn more about the `fields` property in the [API reference](https://docs.vikrai.com/api/store#select-fields-and-relations).
      */
     retrieve: async (
       id: string,
@@ -598,9 +598,9 @@ export class Store {
     },
     /**
      * This methods adds a product variant to the cart as a line item. It sends a request to the
-     * [Add Line Item](https://docs.medusajs.com/api/store#carts_postcartsidlineitems) API route.
+     * [Add Line Item](https://docs.vikrai.com/api/store#carts_postcartsidlineitems) API route.
      *
-     * Related guide: [How to manage a cart's line items in the storefront](https://docs.medusajs.com/resources/storefront-development/cart/manage-items).
+     * Related guide: [How to manage a cart's line items in the storefront](https://docs.vikrai.com/resources/storefront-development/cart/manage-items).
      *
      * @param cartId - The cart's ID.
      * @param body - The details of the item to add.
@@ -635,9 +635,9 @@ export class Store {
     },
     /**
      * This method updates a line item in a cart. It sends a request to the
-     * [Update Line Item](https://docs.medusajs.com/api/store#carts_postcartsidlineitemsline_id) API route.
+     * [Update Line Item](https://docs.vikrai.com/api/store#carts_postcartsidlineitemsline_id) API route.
      *
-     * Related guide: [How to manage a cart's line items in the storefront](https://docs.medusajs.com/resources/storefront-development/cart/manage-items).
+     * Related guide: [How to manage a cart's line items in the storefront](https://docs.vikrai.com/resources/storefront-development/cart/manage-items).
      *
      * @param cartId - The cart's ID.
      * @param lineItemId - The line item's ID.
@@ -677,9 +677,9 @@ export class Store {
     },
     /**
      * This method deletes a line item from a cart. It sends a request to the
-     * [Remove Line Item](https://docs.medusajs.com/api/store#carts_deletecartsidlineitemsline_id) API route.
+     * [Remove Line Item](https://docs.vikrai.com/api/store#carts_deletecartsidlineitemsline_id) API route.
      *
-     * Related guide: [How to manage a cart's line items in the storefront](https://docs.medusajs.com/resources/storefront-development/cart/manage-items).
+     * Related guide: [How to manage a cart's line items in the storefront](https://docs.vikrai.com/resources/storefront-development/cart/manage-items).
      *
      * @param cartId - The cart's ID.
      * @param lineItemId - The item's ID.
@@ -710,9 +710,9 @@ export class Store {
     },
     /**
      * This method adds a shipping method to a cart. It sends a request to
-     * the [Add Shipping Method](https://docs.medusajs.com/api/store#carts_postcartsidshippingmethods) API routes.
+     * the [Add Shipping Method](https://docs.vikrai.com/api/store#carts_postcartsidshippingmethods) API routes.
      *
-     * Related guide: [Implement shipping step during checkout](https://docs.medusajs.com/resources/storefront-development/checkout/shipping).
+     * Related guide: [Implement shipping step during checkout](https://docs.vikrai.com/resources/storefront-development/checkout/shipping).
      *
      * @param cartId - The cart's ID.
      * @param body - The shipping method's details.
@@ -749,10 +749,10 @@ export class Store {
     },
     /**
      * This method completes a cart and places the order. It's the last step of the checkout flow.
-     * The method sends a request to the [Complete Cart](https://docs.medusajs.com/api/store#carts_postcartsidcomplete)
+     * The method sends a request to the [Complete Cart](https://docs.vikrai.com/api/store#carts_postcartsidcomplete)
      * API route.
      *
-     * Related guide: [Learn how to complete cart in checkout flow](https://docs.medusajs.com/resources/storefront-development/checkout/complete-cart).
+     * Related guide: [Learn how to complete cart in checkout flow](https://docs.vikrai.com/resources/storefront-development/checkout/complete-cart).
      *
      * @param cartId - The cart's ID.
      * @param query - Configure the fields to retrieve in the created order.
@@ -822,10 +822,10 @@ export class Store {
   public fulfillment = {
     /**
      * This method retrieves the list of shipping options for a cart. It sends a request to
-     * the [List Shipping Options](https://docs.medusajs.com/api/store#shipping-options_getshippingoptions)
+     * the [List Shipping Options](https://docs.vikrai.com/api/store#shipping-options_getshippingoptions)
      * API route.
      *
-     * Related guide: [Implement shipping step during checkout](https://docs.medusajs.com/resources/storefront-development/checkout/shipping).
+     * Related guide: [Implement shipping step during checkout](https://docs.vikrai.com/resources/storefront-development/checkout/shipping).
      *
      * @param query - The cart's details along with configurations of the fields to retrieve in the options.
      * @param headers - Headers to pass in the request.
@@ -854,7 +854,7 @@ export class Store {
 
     /**
      * This method calculates the price of a shipping option in a cart, which is useful during checkout.
-     * It sends a request to the [Calculate Shipping Option Price](https://docs.medusajs.com/api/store#shipping-options_postshippingoptionsidcalculate)
+     * It sends a request to the [Calculate Shipping Option Price](https://docs.vikrai.com/api/store#shipping-options_postshippingoptionsidcalculate)
      * API route.
      *
      * @param id - The shipping option's ID.
@@ -895,10 +895,10 @@ export class Store {
   public payment = {
     /**
      * This method retrieves the payment providers available in a region, which is useful during checkout.
-     * It sends a request to the [List Payment Providers](https://docs.medusajs.com/api/store#payment-providers_getpaymentproviders)
+     * It sends a request to the [List Payment Providers](https://docs.vikrai.com/api/store#payment-providers_getpaymentproviders)
      * API route.
      *
-     * Related guide: [Implement payment step during checkout](https://docs.medusajs.com/resources/storefront-development/checkout/payment).
+     * Related guide: [Implement payment step during checkout](https://docs.vikrai.com/resources/storefront-development/checkout/payment).
      *
      * @param query - The filters to apply on the retrieved providers, along with configurations of the
      * fields to retrieve in the options.
@@ -947,7 +947,7 @@ export class Store {
      * })
      * ```
      *
-     * Learn more about the `fields` property in the [API reference](https://docs.medusajs.com/api/store#select-fields-and-relations).
+     * Learn more about the `fields` property in the [API reference](https://docs.vikrai.com/api/store#select-fields-and-relations).
      */
     listPaymentProviders: async (
       query?: FindParams & HttpTypes.StorePaymentProviderFilters,
@@ -964,14 +964,14 @@ export class Store {
 
     /**
      * This method creates a payment session of a cart's payment collection, selecting a payment provider.
-     * It sends a request to the [Initialize Payment Session](https://docs.medusajs.com/api/store#payment-collections_postpaymentcollectionsidpaymentsessions)
+     * It sends a request to the [Initialize Payment Session](https://docs.vikrai.com/api/store#payment-collections_postpaymentcollectionsidpaymentsessions)
      * API route.
      *
      * If the cart doesn't have a payment collection, a payment collection is created for the cart by
-     * sending a request to the [Create Payment Collection](https://docs.medusajs.com/api/store#payment-collections_postpaymentcollections)
+     * sending a request to the [Create Payment Collection](https://docs.vikrai.com/api/store#payment-collections_postpaymentcollections)
      * API route.
      *
-     * Related guide: [Implement payment step during checkout](https://docs.medusajs.com/resources/storefront-development/checkout/payment).
+     * Related guide: [Implement payment step during checkout](https://docs.vikrai.com/resources/storefront-development/checkout/payment).
      *
      * @param cart - The cart's details.
      * @param body - The payment session's details.
@@ -1034,7 +1034,7 @@ export class Store {
   public order = {
     /**
      * This method retrieves a paginated list of orders matching the specified filters. It
-     * sends a request to the [List Orders](https://docs.medusajs.com/api/store#orders_getorders)
+     * sends a request to the [List Orders](https://docs.vikrai.com/api/store#orders_getorders)
      * API route.
      *
      * @param query - Configure the fields to retrieve in the orders.
@@ -1077,7 +1077,7 @@ export class Store {
      * })
      * ```
      *
-     * Learn more about the `fields` property in the [API reference](https://docs.medusajs.com/api/store#select-fields-and-relations).
+     * Learn more about the `fields` property in the [API reference](https://docs.vikrai.com/api/store#select-fields-and-relations).
      */
     list: async (
       query?: HttpTypes.StoreOrderFilters,
@@ -1093,7 +1093,7 @@ export class Store {
     },
     /**
      * This method retrieves an order by its ID. It sends a request to the
-     * [Get Order](https://docs.medusajs.com/api/store#orders_getordersid) API route.
+     * [Get Order](https://docs.vikrai.com/api/store#orders_getordersid) API route.
      *
      * @param id - The order's ID.
      * @param query - Configure the fields to retrieve in the order.
@@ -1121,7 +1121,7 @@ export class Store {
      * })
      * ```
      *
-     * Learn more about the `fields` property in the [API reference](https://docs.medusajs.com/api/store#select-fields-and-relations).
+     * Learn more about the `fields` property in the [API reference](https://docs.vikrai.com/api/store#select-fields-and-relations).
      */
     retrieve: async (
       id: string,
@@ -1299,13 +1299,13 @@ export class Store {
    */
   public customer = {
     /**
-     * This method registers a customer. It sends a request to the [Register Customer](https://docs.medusajs.com/api/store#customers_postcustomers)
+     * This method registers a customer. It sends a request to the [Register Customer](https://docs.vikrai.com/api/store#customers_postcustomers)
      * API route.
      *
      * You must use the {@link Auth.register} method first to retrieve a registration token. Then, pass that
      * registration token in the `headers` parameter of this method as an authorization bearer header.
      *
-     * Related guide: [How to register customer in storefront](https://docs.medusajs.com/resources/storefront-development/customers/register)
+     * Related guide: [How to register customer in storefront](https://docs.vikrai.com/resources/storefront-development/customers/register)
      *
      * @param body - The customer's details.
      * @param query - Configure the fields to retrieve in the customer.
@@ -1351,9 +1351,9 @@ export class Store {
      * first with the {@link Auth.login} method.
      *
      * It sends a request to the
-     * [Update Customer](https://docs.medusajs.com/api/store#customers_postcustomersme) API route.
+     * [Update Customer](https://docs.vikrai.com/api/store#customers_postcustomersme) API route.
      *
-     * Related guide: [How to edit customer's profile in the storefront](https://docs.medusajs.com/resources/storefront-development/customers/profile).
+     * Related guide: [How to edit customer's profile in the storefront](https://docs.vikrai.com/resources/storefront-development/customers/profile).
      *
      * @param body - The customer's details to update.
      * @param query - Configure the fields to retrieve in the customer.
@@ -1387,7 +1387,7 @@ export class Store {
      * This method retrieves the logged-in customer's details. The customer must be logged in
      * first with the {@link Auth.login} method.
      *
-     * It sends a request to the [Get Logged-In Customer](https://docs.medusajs.com/api/store#customers_getcustomersme)
+     * It sends a request to the [Get Logged-In Customer](https://docs.vikrai.com/api/store#customers_getcustomersme)
      * API route.
      *
      * @param query - Configure the fields to retrieve in the customer.
@@ -1413,10 +1413,10 @@ export class Store {
      * This method creates an address for the logged-in customer. The customer must be logged in
      * first with the {@link Auth.login} method.
      *
-     * It sends a request to the [Create Address](https://docs.medusajs.com/api/store#customers_postcustomersmeaddresses)
+     * It sends a request to the [Create Address](https://docs.vikrai.com/api/store#customers_postcustomersmeaddresses)
      * API route.
      *
-     * Related guides: [How to manage customer's addresses in the storefront](https://docs.medusajs.com/resources/storefront-development/customers/addresses)
+     * Related guides: [How to manage customer's addresses in the storefront](https://docs.vikrai.com/resources/storefront-development/customers/addresses)
      *
      * @param body - The address's details.
      * @param query - Configure the fields to retrieve in the customer.
@@ -1450,10 +1450,10 @@ export class Store {
      * This method updates the address of the logged-in customer. The customer must be logged in
      * first with the {@link Auth.login} method.
      *
-     * It sends a request to the [Update Address](https://docs.medusajs.com/api/store#customers_postcustomersmeaddressesaddress_id)
+     * It sends a request to the [Update Address](https://docs.vikrai.com/api/store#customers_postcustomersmeaddressesaddress_id)
      * API route.
      *
-     * Related guides: [How to manage customer's addresses in the storefront](https://docs.medusajs.com/resources/storefront-development/customers/addresses)
+     * Related guides: [How to manage customer's addresses in the storefront](https://docs.vikrai.com/resources/storefront-development/customers/addresses)
      *
      * @param addressId - The ID of the address to update.
      * @param body - The details to update in the address.
@@ -1492,10 +1492,10 @@ export class Store {
      * This method retrieves the logged-in customer's address. The customer must be logged in
      * first with the {@link Auth.login} method.
      *
-     * It sends a request to the [List Customer's Address](https://docs.medusajs.com/api/store#customers_getcustomersmeaddresses)
+     * It sends a request to the [List Customer's Address](https://docs.vikrai.com/api/store#customers_getcustomersmeaddresses)
      * API route.
      *
-     * Related guides: [How to manage customer's addresses in the storefront](https://docs.medusajs.com/resources/storefront-development/customers/addresses)
+     * Related guides: [How to manage customer's addresses in the storefront](https://docs.vikrai.com/resources/storefront-development/customers/addresses)
      *
      * @param query - Configure the fields to retrieve in the addresses.
      * @param headers - Headers to pass in the request.
@@ -1537,7 +1537,7 @@ export class Store {
      * })
      * ```
      *
-     * Learn more about the `fields` property in the [API reference](https://docs.medusajs.com/api/store#select-fields-and-relations).
+     * Learn more about the `fields` property in the [API reference](https://docs.vikrai.com/api/store#select-fields-and-relations).
      */
     listAddress: async (
       query?: FindParams & HttpTypes.StoreCustomerAddressFilters,
@@ -1555,10 +1555,10 @@ export class Store {
      * This method retrieves an address of the logged-in customer. The customer must be logged in
      * first with the {@link Auth.login} method.
      *
-     * It sends a request to the [Get Address](https://docs.medusajs.com/api/store#customers_getcustomersmeaddressesaddress_id)
+     * It sends a request to the [Get Address](https://docs.vikrai.com/api/store#customers_getcustomersmeaddressesaddress_id)
      * API route.
      *
-     * Related guides: [How to manage customer's addresses in the storefront](https://docs.medusajs.com/resources/storefront-development/customers/addresses)
+     * Related guides: [How to manage customer's addresses in the storefront](https://docs.vikrai.com/resources/storefront-development/customers/addresses)
      *
      * @param addressId - The address's ID.
      * @param query - Configure the fields to retrieve in the address.
@@ -1591,7 +1591,7 @@ export class Store {
      * })
      * ```
      *
-     * Learn more about the `fields` property in the [API reference](https://docs.medusajs.com/api/store#select-fields-and-relations).
+     * Learn more about the `fields` property in the [API reference](https://docs.vikrai.com/api/store#select-fields-and-relations).
      */
     retrieveAddress: async (
       addressId: string,
@@ -1610,10 +1610,10 @@ export class Store {
      * This method deletes an address of the logged-in customer. The customer must be logged in
      * first with the {@link Auth.login} method.
      *
-     * It sends a request to the [Remove Address](https://docs.medusajs.com/api/store#customers_deletecustomersmeaddressesaddress_id)
+     * It sends a request to the [Remove Address](https://docs.vikrai.com/api/store#customers_deletecustomersmeaddressesaddress_id)
      * API route.
      *
-     * Related guides: [How to manage customer's addresses in the storefront](https://docs.medusajs.com/resources/storefront-development/customers/addresses)
+     * Related guides: [How to manage customer's addresses in the storefront](https://docs.vikrai.com/resources/storefront-development/customers/addresses)
      *
      * @param addressId - The address's ID.
      * @param headers - Headers to pass in the request.
@@ -1636,3 +1636,4 @@ export class Store {
     },
   }
 }
+

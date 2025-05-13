@@ -20,9 +20,9 @@ import {
 } from "@dnd-kit/sortable"
 import { CSS } from "@dnd-kit/utilities"
 import { zodResolver } from "@hookform/resolvers/zod"
-import { ThumbnailBadge } from "@medusajs/icons"
-import { HttpTypes } from "@medusajs/types"
-import { Button, Checkbox, clx, CommandBar, toast, Tooltip } from "@medusajs/ui"
+import { ThumbnailBadge } from "@vikrai/icons"
+import { HttpTypes } from "@vikrai/types"
+import { Button, Checkbox, clx, CommandBar, toast, Tooltip } from "@vikrai/ui"
 import { Fragment, useCallback, useState } from "react"
 import { useFieldArray, useForm } from "react-hook-form"
 import { useTranslation } from "react-i18next"
@@ -454,3 +454,4 @@ export const MediaGridItemOverlay = ({
     </div>
   )
 }
+

@@ -1,4 +1,4 @@
-# @medusajs/toolbox
+# @vikrai/toolbox
 
 ## 2.7.1
 
@@ -46,4 +46,5 @@
 
 ### Major Changes
 
-- [#7341](https://github.com/medusajs/medusa/pull/7341) [`2e42e053d4c9d5445d227bdc268c66713aad8e2e`](https://github.com/medusajs/medusa/commit/2e42e053d4c9d5445d227bdc268c66713aad8e2e) Thanks [@olivermrbl](https://github.com/olivermrbl)! - chore: Medusa 2.0
+- [#7341](https://github.com/vikrai/vikrai/pull/7341) [`2e42e053d4c9d5445d227bdc268c66713aad8e2e`](https://github.com/vikrai/vikrai/commit/2e42e053d4c9d5445d227bdc268c66713aad8e2e) Thanks [@olivermrbl](https://github.com/olivermrbl)! - chore: vikrai 2.0
+

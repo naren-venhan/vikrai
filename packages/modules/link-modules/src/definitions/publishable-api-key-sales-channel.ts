@@ -1,5 +1,5 @@
-import { ModuleJoinerConfig } from "@medusajs/framework/types"
-import { LINKS, Modules } from "@medusajs/framework/utils"
+import { ModuleJoinerConfig } from "@vikrai/framework/types"
+import { LINKS, Modules } from "@vikrai/framework/utils"
 
 export const PublishableApiKeySalesChannel: ModuleJoinerConfig = {
   serviceName: LINKS.PublishableApiKeySalesChannel,
@@ -78,3 +78,4 @@ export const PublishableApiKeySalesChannel: ModuleJoinerConfig = {
     },
   ],
 }
+

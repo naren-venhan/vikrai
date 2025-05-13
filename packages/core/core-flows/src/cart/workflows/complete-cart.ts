@@ -2,13 +2,13 @@ import {
   CartCreditLineDTO,
   CartWorkflowDTO,
   UsageComputedActions,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import {
   isDefined,
   Modules,
   OrderStatus,
   OrderWorkflowEvents,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 import {
   createHook,
   createWorkflow,
@@ -17,7 +17,7 @@ import {
   when,
   WorkflowData,
   WorkflowResponse,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import {
   createRemoteLinkStep,
   emitEventStep,
@@ -65,10 +65,10 @@ export const THREE_DAYS = 60 * 60 * 24 * 3
 export const completeCartWorkflowId = "complete-cart"
 /**
  * This workflow completes a cart and places an order for the customer. It's executed by the
- * [Complete Cart Store API Route](https://docs.medusajs.com/api/store#carts_postcartsidcomplete).
+ * [Complete Cart Store API Route](https://docs.vikrai.com/api/store#carts_postcartsidcomplete).
  *
  * You can use this workflow within your own customizations or custom workflows, allowing you to wrap custom logic around completing a cart.
- * For example, in the [Subscriptions recipe](https://docs.medusajs.com/resources/recipes/subscriptions/examples/standard#create-workflow),
+ * For example, in the [Subscriptions recipe](https://docs.vikrai.com/resources/recipes/subscriptions/examples/standard#create-workflow),
  * this workflow is used within another workflow that creates a subscription order.
  *
  * @example
@@ -384,3 +384,4 @@ export const completeCartWorkflow = createWorkflow(
     })
   }
 )
+

@@ -3,8 +3,8 @@ import {
   OrderClaimDTO,
   OrderWorkflow,
   ReturnDTO,
-} from "@medusajs/framework/types"
-import { MedusaError } from "@medusajs/framework/utils"
+} from "@vikrai/framework/types"
+import { vikraiError } from "@vikrai/framework/utils"
 import {
   WorkflowData,
   createStep,
@@ -12,7 +12,7 @@ import {
   parallelize,
   transform,
   when,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { useRemoteQueryStep } from "../../../common"
 import { deleteReservationsByLineItemsStep } from "../../../reservation/steps/delete-reservations-by-line-items"
 import { cancelOrderClaimStep } from "../../steps"
@@ -43,8 +43,8 @@ export type CancelClaimValidateOrderStepInput = {
  *
  * :::note
  *
- * You can retrieve an order claim's details using [Query](https://docs.medusajs.com/learn/fundamentals/module-links/query),
- * or [useQueryGraphStep](https://docs.medusajs.com/resources/references/medusa-workflows/steps/useQueryGraphStep).
+ * You can retrieve an order claim's details using [Query](https://docs.vikrai.com/learn/fundamentals/module-links/query),
+ * or [useQueryGraphStep](https://docs.vikrai.com/resources/references/vikrai-workflows/steps/useQueryGraphStep).
  *
  * :::
  *
@@ -74,7 +74,7 @@ export const cancelClaimValidateOrderStep = createStep(
       message: string
     ) => {
       if (arr?.some(pred)) {
-        throw new MedusaError(MedusaError.Types.NOT_ALLOWED, message)
+        throw new vikraiError(vikraiError.Types.NOT_ALLOWED, message)
       }
     }
 
@@ -91,7 +91,7 @@ export const cancelClaimValidateOrderStep = createStep(
 export const cancelOrderClaimWorkflowId = "cancel-claim"
 /**
  * This workflow cancels a confirmed order claim. It's used by the
- * [Cancel Claim API Route](https://docs.medusajs.com/api/admin#claims_postclaimsidcancel).
+ * [Cancel Claim API Route](https://docs.vikrai.com/api/admin#claims_postclaimsidcancel).
  *
  * You can use this workflow within your customizations or your own custom workflows, allowing you to cancel a claim
  * for an order in your custom flows.
@@ -162,3 +162,4 @@ export const cancelOrderClaimWorkflow = createWorkflow(
     })
   }
 )
+

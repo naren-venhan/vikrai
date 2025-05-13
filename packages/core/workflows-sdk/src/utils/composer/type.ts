@@ -6,8 +6,8 @@ import {
   TransactionPayload,
   TransactionStepsDefinition,
   WorkflowHandler,
-} from "@medusajs/orchestration"
-import { Context, LoadedModule, MedusaContainer } from "@medusajs/types"
+} from "@vikrai/orchestration"
+import { Context, LoadedModule, vikraiContainer } from "@vikrai/types"
 import { ExportedWorkflow } from "../../helper"
 import { Hook } from "./create-hook"
 import { CompensateFn, InvokeFn } from "./create-step"
@@ -166,7 +166,7 @@ export interface StepExecutionContext {
   /**
    * The container used to access resources, such as services, in the step.
    */
-  container: MedusaContainer
+  container: vikraiContainer
   /**
    * Metadata passed in the input.
    */
@@ -219,20 +219,20 @@ export type WorkflowTransactionContext = StepExecutionContext &
  * ```
  *
  * To specify the container of the workflow, you can pass it as an argument to the call of the exported workflow. This is necessary when executing the workflow
- * within a Medusa resource such as an API Route or a Subscriber.
+ * within a vikrai resource such as an API Route or a Subscriber.
  *
  * For example:
  *
  * ```ts
  * import type {
- *   MedusaRequest,
- *   MedusaResponse
- * } from "@medusajs/medusa";
+ *   vikraiRequest,
+ *   vikraiResponse
+ * } from "@vikrai/vikrai";
  * import myWorkflow from "../../../workflows/hello-world";
  *
  * export async function GET(
- *   req: MedusaRequest,
- *   res: MedusaResponse
+ *   req: vikraiRequest,
+ *   res: vikraiResponse
  * ) {
  *   const { result } = await myWorkflow(req.scope)
  *     .run({
@@ -247,7 +247,7 @@ export type WorkflowTransactionContext = StepExecutionContext &
  */
 export type ReturnWorkflow<TData, TResult, THooks extends any[]> = {
   <TDataOverride = undefined, TResultOverride = undefined>(
-    container?: LoadedModule[] | MedusaContainer
+    container?: LoadedModule[] | vikraiContainer
   ): Omit<
     LocalWorkflow,
     "run" | "registerStepSuccess" | "registerStepFailure" | "cancel"
@@ -257,7 +257,7 @@ export type ReturnWorkflow<TData, TResult, THooks extends any[]> = {
   /**
    * This method executes the workflow as a step. Useful when running a workflow within another.
    *
-   * Learn more in [this documentation](https://docs.medusajs.com/learn/fundamentals/workflows/execute-another-workflow).
+   * Learn more in [this documentation](https://docs.vikrai.com/learn/fundamentals/workflows/execute-another-workflow).
    *
    * @param param0 - The options to execute the workflow.
    * @returns The workflow's result
@@ -294,7 +294,7 @@ export type ReturnWorkflow<TData, TResult, THooks extends any[]> = {
   /**
    * The workflow's exposed hooks, used to register a handler to consume the hook.
    *
-   * Learn more in [this documentation](https://docs.medusajs.com/learn/fundamentals/workflows/workflow-hooks#how-to-consume-a-hook).
+   * Learn more in [this documentation](https://docs.vikrai.com/learn/fundamentals/workflows/workflow-hooks#how-to-consume-a-hook).
    */
   hooks: ConvertHooksToFunctions<THooks>
 }
@@ -308,3 +308,4 @@ export type ReturnWorkflow<TData, TResult, THooks extends any[]> = {
 export type UnwrapWorkflowInputDataType<
   T extends ReturnWorkflow<any, any, any>
 > = T extends ReturnWorkflow<infer TData, infer R, infer THooks> ? TData : never
+

@@ -7,9 +7,10 @@ type IconHeadlineProps = {
 
 export const IconHeadline = ({ title, icon }: IconHeadlineProps) => {
   return (
-    <div className="flex gap-docs_0.5 text-medusa-fg-base">
+    <div className="flex gap-docs_0.5 text-vikrai-fg-base">
       {icon}
       <span className="text-small-plus">{title}</span>
     </div>
   )
 }
+

@@ -1,4 +1,4 @@
-import { HttpTypes } from "@medusajs/types"
+import { HttpTypes } from "@vikrai/types"
 import {
   QueryKey,
   UseMutationOptions,
@@ -7,7 +7,7 @@ import {
   useQuery,
 } from "@tanstack/react-query"
 
-import { FetchError } from "@medusajs/js-sdk"
+import { FetchError } from "@vikrai/js-sdk"
 import { sdk } from "../../lib/client"
 import { queryClient } from "../../lib/query-client"
 import { queryKeysFactory } from "../../lib/query-key-factory"
@@ -130,3 +130,4 @@ export const useDeleteReturnReason = (
     ...options,
   })
 }
+

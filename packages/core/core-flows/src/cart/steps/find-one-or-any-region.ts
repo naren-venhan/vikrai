@@ -1,9 +1,9 @@
 import {
   IRegionModuleService,
   IStoreModuleService,
-} from "@medusajs/framework/types"
-import { MedusaError, Modules } from "@medusajs/framework/utils"
-import { StepResponse, createStep } from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/types"
+import { vikraiError, Modules } from "@vikrai/framework/utils"
+import { StepResponse, createStep } from "@vikrai/framework/workflows-sdk"
 
 /**
  * The details of the region to find.
@@ -40,7 +40,7 @@ export const findOneOrAnyRegionStep = createStep(
     const [store] = await storeModule.listStores()
 
     if (!store) {
-      throw new MedusaError(MedusaError.Types.NOT_FOUND, "Store not found")
+      throw new vikraiError(vikraiError.Types.NOT_FOUND, "Store not found")
     }
 
     const [region] = await service.listRegions(
@@ -57,3 +57,4 @@ export const findOneOrAnyRegionStep = createStep(
     return new StepResponse(region)
   }
 )
+

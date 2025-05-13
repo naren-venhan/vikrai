@@ -1,13 +1,13 @@
-import { ApiKeyDTO, IApiKeyModuleService } from "@medusajs/types"
-import { ContainerRegistrationKeys, Modules } from "@medusajs/utils"
+import { ApiKeyDTO, IApiKeyModuleService } from "@vikrai/types"
+import { ContainerRegistrationKeys, Modules } from "@vikrai/utils"
 import { NextFunction, RequestHandler } from "express"
 import { JwtPayload, verify } from "jsonwebtoken"
 import { ConfigModule } from "../../config"
 import {
   AuthContext,
-  AuthenticatedMedusaRequest,
-  MedusaRequest,
-  MedusaResponse,
+  AuthenticatedvikraiRequest,
+  vikraiRequest,
+  vikraiResponse,
 } from "../types"
 
 const SESSION_AUTH = "session"
@@ -22,7 +22,7 @@ export type AuthType =
   | typeof BEARER_AUTH
   | typeof API_KEY_AUTH
 
-type MedusaSession = {
+type vikraiSession = {
   auth_context: AuthContext
 }
 
@@ -32,13 +32,13 @@ export const authenticate = (
   options: { allowUnauthenticated?: boolean; allowUnregistered?: boolean } = {}
 ): RequestHandler => {
   const authenticateMiddleware = async (
-    req: MedusaRequest,
-    res: MedusaResponse,
+    req: vikraiRequest,
+    res: vikraiResponse,
     next: NextFunction
   ): Promise<void> => {
     const authTypes = Array.isArray(authType) ? authType : [authType]
     const actorTypes = Array.isArray(actorType) ? actorType : [actorType]
-    const req_ = req as AuthenticatedMedusaRequest
+    const req_ = req as AuthenticatedvikraiRequest
 
     // We only allow authenticating using a secret API key on the admin
     const isExclusivelyUser =
@@ -108,7 +108,7 @@ export const authenticate = (
   return authenticateMiddleware as unknown as RequestHandler
 }
 
-const getApiKeyInfo = async (req: MedusaRequest): Promise<ApiKeyDTO | null> => {
+const getApiKeyInfo = async (req: vikraiRequest): Promise<ApiKeyDTO | null> => {
   const authHeader = req.headers.authorization
   if (!authHeader) {
     return null
@@ -152,7 +152,7 @@ const getApiKeyInfo = async (req: MedusaRequest): Promise<ApiKeyDTO | null> => {
 }
 
 const getAuthContextFromSession = (
-  session: Partial<MedusaSession> = {},
+  session: Partial<vikraiSession> = {},
   authTypes: AuthType[],
   actorTypes: string[]
 ): AuthContext | null => {
@@ -214,3 +214,4 @@ const isActorTypePermitted = (
 ) => {
   return actorTypes.includes("*") || actorTypes.includes(currentActorType)
 }
+

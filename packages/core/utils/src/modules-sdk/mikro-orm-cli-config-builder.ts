@@ -51,7 +51,7 @@ export function defineMikroOrmCliConfig(
   ) as MikroORMOptions["entities"]
 
   const normalizedModuleName = kebabCase(moduleName.replace("Service", ""))
-  const databaseName = `medusa-${normalizedModuleName}`
+  const databaseName = `vikrai-${normalizedModuleName}`
 
   return defineConfig({
     dbName: databaseName,
@@ -67,3 +67,4 @@ export function defineMikroOrmCliConfig(
     },
   }) as ReturnedOptions
 }
+

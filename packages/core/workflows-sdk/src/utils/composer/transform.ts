@@ -1,12 +1,12 @@
 import { resolveValue } from "./helpers"
 import { StepExecutionContext, WorkflowData } from "./type"
 import { proxify } from "./helpers/proxy"
-import { OrchestrationUtils } from "@medusajs/utils"
+import { OrchestrationUtils } from "@vikrai/utils"
 import { ulid } from "ulid"
 import {
   TransactionContext,
   WorkflowStepHandlerArguments,
-} from "@medusajs/orchestration"
+} from "@vikrai/orchestration"
 
 type Func1<T extends object | WorkflowData, U> = (
   input: T extends WorkflowData<infer U>
@@ -37,7 +37,7 @@ type Func<T, U> = (input: T, context: StepExecutionContext) => U | Promise<U>
  *   createWorkflow,
  *   transform,
  *   WorkflowResponse
- * } from "@medusajs/framework/workflows-sdk"
+ * } from "@vikrai/framework/workflows-sdk"
  * import { step1, step2 } from "./steps"
  *
  * type WorkflowInput = {
@@ -211,3 +211,4 @@ export function transform(
 
   return proxyfiedRet
 }
+

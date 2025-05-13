@@ -1,6 +1,6 @@
-import { IPricingModuleService } from "@medusajs/framework/types"
-import { Modules } from "@medusajs/framework/utils"
-import { StepResponse, createStep } from "@medusajs/framework/workflows-sdk"
+import { IPricingModuleService } from "@vikrai/framework/types"
+import { Modules } from "@vikrai/framework/utils"
+import { StepResponse, createStep } from "@vikrai/framework/workflows-sdk"
 
 /**
  * The IDs of price lists to delete.
@@ -34,3 +34,4 @@ export const deletePriceListsStep = createStep(
     await pricingModule.restorePriceLists(idsToRestore)
   }
 )
+

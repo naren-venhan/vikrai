@@ -1,5 +1,5 @@
-import { createCartCreditLinesWorkflow } from "@medusajs/core-flows"
-import { medusaIntegrationTestRunner } from "@medusajs/test-utils"
+import { createCartCreditLinesWorkflow } from "@vikrai/core-flows"
+import { vikraiIntegrationTestRunner } from "@vikrai/test-utils"
 import {
   Modules,
   PriceListStatus,
@@ -7,7 +7,7 @@ import {
   PromotionRuleOperator,
   PromotionStatus,
   PromotionType,
-} from "@medusajs/utils"
+} from "@vikrai/utils"
 import {
   createAdminUser,
   generatePublishableKey,
@@ -15,12 +15,12 @@ import {
 } from "../../../../helpers/create-admin-user"
 import { setupTaxStructure } from "../../../../modules/__tests__/fixtures"
 import { createAuthenticatedCustomer } from "../../../../modules/helpers/create-authenticated-customer"
-import { medusaTshirtProduct } from "../../../__fixtures__/product"
+import { vikraiTshirtProduct } from "../../../__fixtures__/product"
 
 jest.setTimeout(100000)
 
-const env = { MEDUSA_FF_MEDUSA_V2: true }
-const adminHeaders = { headers: { "x-medusa-access-token": "test_token" } }
+const env = { vikrai_FF_vikrai_V2: true }
+const adminHeaders = { headers: { "x-vikrai-access-token": "test_token" } }
 
 const shippingAddressData = {
   address_1: "test address 1",
@@ -31,7 +31,7 @@ const shippingAddressData = {
   postal_code: "94016",
 }
 
-medusaIntegrationTestRunner({
+vikraiIntegrationTestRunner({
   env,
   testSuite: ({ dbConnection, getContainer, api }) => {
     describe("Store Carts API", () => {
@@ -99,7 +99,7 @@ medusaIntegrationTestRunner({
         product = (
           await api.post(
             "/admin/products",
-            { ...medusaTshirtProduct, shipping_profile_id: shippingProfile.id },
+            { ...vikraiTshirtProduct, shipping_profile_id: shippingProfile.id },
             adminHeaders
           )
         ).data.product
@@ -679,7 +679,7 @@ medusaIntegrationTestRunner({
                   unit_price: 1500,
                   compare_at_unit_price: null,
                   is_tax_inclusive: true,
-                  title: "Medusa T-Shirt",
+                  title: "vikrai T-Shirt",
                   quantity: 2,
                   tax_lines: [
                     expect.objectContaining({
@@ -714,7 +714,7 @@ medusaIntegrationTestRunner({
                   compare_at_unit_price: null,
                   is_tax_inclusive: true,
                   quantity: 2,
-                  title: "Medusa T-Shirt",
+                  title: "vikrai T-Shirt",
                   tax_lines: [
                     expect.objectContaining({
                       description: "CA Default Rate",
@@ -729,7 +729,7 @@ medusaIntegrationTestRunner({
                   compare_at_unit_price: null,
                   is_tax_inclusive: true,
                   quantity: 1,
-                  title: "Medusa T-Shirt",
+                  title: "vikrai T-Shirt",
                   tax_lines: [
                     expect.objectContaining({
                       description: "CA Default Rate",
@@ -3024,3 +3024,4 @@ medusaIntegrationTestRunner({
     })
   },
 })
+

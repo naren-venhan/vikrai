@@ -1,7 +1,7 @@
 import { Price } from "@models"
 import { defaultPricesData } from "./data"
 import { SqlEntityManager } from "@mikro-orm/postgresql"
-import { toMikroORMEntity } from "@medusajs/framework/utils"
+import { toMikroORMEntity } from "@vikrai/framework/utils"
 
 export * from "./data"
 
@@ -20,3 +20,4 @@ export async function createPrices(
 
   return prices
 }
+

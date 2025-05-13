@@ -4,7 +4,7 @@ import React, { useState } from "react"
 import { Menu, MenuProps } from ".."
 import clsx from "clsx"
 import { MenuItemSubMenu } from "types"
-import { ChevronRight } from "@medusajs/icons"
+import { ChevronRight } from "@vikrai/icons"
 import Link from "next/link"
 
 type MenuSubMenuProps = Pick<MenuProps, "itemsOnClick"> & {
@@ -26,14 +26,14 @@ export const MenuSubMenu = ({ item, itemsOnClick }: MenuSubMenuProps) => {
         className={clsx(
           "flex py-docs_0.25 px-docs_0.5",
           "gap-docs_0.5 rounded-docs_xs",
-          "hover:bg-medusa-bg-component-hover",
-          "text-medusa-fg-base justify-between"
+          "hover:bg-vikrai-bg-component-hover",
+          "text-vikrai-fg-base justify-between"
         )}
         onClick={() => itemsOnClick?.(item)}
         href={item.link || "#"}
       >
         <span className="text-compact-small">{item.title}</span>
-        <span className="text-medusa-fg-subtle mt-[2.5px] block">
+        <span className="text-vikrai-fg-subtle mt-[2.5px] block">
           <ChevronRight />
         </span>
       </Component>
@@ -45,3 +45,4 @@ export const MenuSubMenu = ({ item, itemsOnClick }: MenuSubMenuProps) => {
     </div>
   )
 }
+

@@ -1,10 +1,10 @@
-import { StoreDTO, StoreWorkflow } from "@medusajs/framework/types"
+import { StoreDTO, StoreWorkflow } from "@vikrai/framework/types"
 import {
   WorkflowData,
   WorkflowResponse,
   createWorkflow,
   transform,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { createStoresStep } from "../steps"
 import { updatePricePreferencesAsArrayStep } from "../../pricing"
 
@@ -25,7 +25,7 @@ export type CreateStoresWorkflowOutput = StoreDTO[]
 
 export const createStoresWorkflowId = "create-stores"
 /**
- * This workflow creates one or more stores. By default, Medusa uses a single store. This is useful
+ * This workflow creates one or more stores. By default, vikrai uses a single store. This is useful
  * if you're building a multi-tenant application or a marketplace where each tenant has its own store.
  * 
  * You can use this workflow within your customizations or your own custom workflows, allowing you to
@@ -95,3 +95,4 @@ export const createStoresWorkflow = createWorkflow(
     return new WorkflowResponse(stores)
   }
 )
+

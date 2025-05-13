@@ -1,15 +1,15 @@
 import {
   ProductCategoryDTO,
   ProductCategoryWorkflow,
-} from "@medusajs/framework/types"
-import { ProductCategoryWorkflowEvents } from "@medusajs/framework/utils"
+} from "@vikrai/framework/types"
+import { ProductCategoryWorkflowEvents } from "@vikrai/framework/utils"
 import {
   WorkflowData,
   WorkflowResponse,
   createWorkflow,
   transform,
   createHook,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { emitEventStep } from "../../common"
 import { updateProductCategoriesStep } from "../steps"
 
@@ -21,7 +21,7 @@ export type UpdateProductCategoriesWorkflowOutput = ProductCategoryDTO[]
 export const updateProductCategoriesWorkflowId = "update-product-categories"
 /**
  * This workflow updates product categories matching specified filters. It's used by the
- * [Update Product Category Admin API Route](https://docs.medusajs.com/api/admin#product-categories_postproductcategoriesid).
+ * [Update Product Category Admin API Route](https://docs.vikrai.com/api/admin#product-categories_postproductcategoriesid).
  *
  * You can use this workflow within your customizations or your own custom workflows, allowing you to
  * update product categories within your custom flows.
@@ -78,3 +78,4 @@ export const updateProductCategoriesWorkflow = createWorkflow(
     })
   }
 )
+

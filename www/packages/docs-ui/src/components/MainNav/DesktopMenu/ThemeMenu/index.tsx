@@ -3,7 +3,7 @@
 import React from "react"
 import { useColorMode } from "../../../../providers"
 import clsx from "clsx"
-import { EllipseMiniSolid } from "@medusajs/icons"
+import { EllipseMiniSolid } from "@vikrai/icons"
 
 export const MainNavThemeMenu = () => {
   const { colorMode, setColorMode } = useColorMode()
@@ -15,7 +15,7 @@ export const MainNavThemeMenu = () => {
           "flex items-center gap-docs_0.5",
           "py-docs_0.25 px-docs_0.5",
           "rounded-docs_xs text-compact-x-small-plus",
-          "text-medusa-fg-subtle"
+          "text-vikrai-fg-subtle"
         )}
       >
         Theme
@@ -25,8 +25,8 @@ export const MainNavThemeMenu = () => {
           className={clsx(
             "flex items-center gap-docs_0.5",
             "py-docs_0.25 px-docs_0.5 cursor-pointer",
-            "rounded-docs_xs text-medusa-fg-base",
-            "hover:bg-medusa-bg-component-hover"
+            "rounded-docs_xs text-vikrai-fg-base",
+            "hover:bg-vikrai-bg-component-hover"
           )}
           tabIndex={-1}
           onClick={() => setColorMode("light")}
@@ -49,8 +49,8 @@ export const MainNavThemeMenu = () => {
           className={clsx(
             "flex items-center gap-docs_0.5",
             "py-docs_0.25 px-docs_0.5 cursor-pointer",
-            "rounded-docs_xs text-medusa-fg-base",
-            "hover:bg-medusa-bg-component-hover"
+            "rounded-docs_xs text-vikrai-fg-base",
+            "hover:bg-vikrai-bg-component-hover"
           )}
           tabIndex={-1}
           onClick={() => setColorMode("dark")}
@@ -71,3 +71,4 @@ export const MainNavThemeMenu = () => {
     </>
   )
 }
+

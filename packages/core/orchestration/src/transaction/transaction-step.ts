@@ -1,4 +1,4 @@
-import { MedusaError, TransactionStepState } from "@medusajs/utils"
+import { vikraiError, TransactionStepState } from "@vikrai/utils"
 import {
   DistributedTransactionType,
   TransactionPayload,
@@ -117,8 +117,8 @@ export class TransactionStep {
       return
     }
 
-    throw new MedusaError(
-      MedusaError.Types.NOT_ALLOWED,
+    throw new vikraiError(
+      vikraiError.Types.NOT_ALLOWED,
       `Updating State from "${curState.state}" to "${toState}" is not allowed.`
     )
   }
@@ -147,8 +147,8 @@ export class TransactionStep {
       return
     }
 
-    throw new MedusaError(
-      MedusaError.Types.NOT_ALLOWED,
+    throw new vikraiError(
+      vikraiError.Types.NOT_ALLOWED,
       `Updating Status from "${curState.status}" to "${toStatus}" is not allowed.`
     )
   }
@@ -221,3 +221,4 @@ export class TransactionStep {
     )
   }
 }
+

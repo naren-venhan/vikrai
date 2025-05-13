@@ -5,7 +5,7 @@ import {
   InferDmlEntityNameFromConfig,
   Prettify,
   SnakeCase,
-} from "@medusajs/types"
+} from "@vikrai/types"
 import { PrimaryKeyModifier } from "../../dml/properties/primary-key"
 
 /**
@@ -216,3 +216,4 @@ export type InfersLinksConfig<
 /**
  * End Links config
  */
+

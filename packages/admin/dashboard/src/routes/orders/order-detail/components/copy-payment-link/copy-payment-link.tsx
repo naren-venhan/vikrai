@@ -1,11 +1,11 @@
-import { CheckCircleSolid, SquareTwoStack } from "@medusajs/icons"
-import { AdminOrder, AdminPaymentCollection } from "@medusajs/types"
-import { Button, Tooltip } from "@medusajs/ui"
+import { CheckCircleSolid, SquareTwoStack } from "@vikrai/icons"
+import { AdminOrder, AdminPaymentCollection } from "@vikrai/types"
+import { Button, Tooltip } from "@vikrai/ui"
 import copy from "copy-to-clipboard"
 import React, { useState } from "react"
 import { useTranslation } from "react-i18next"
 import { getStylizedAmount } from "../../../../../lib/money-amount-helpers"
-import { MEDUSA_STOREFRONT_URL } from "../../../../../lib/storefront"
+import { vikrai_STOREFRONT_URL } from "../../../../../lib/storefront"
 
 type CopyPaymentLinkProps = {
   paymentCollection: AdminPaymentCollection
@@ -31,7 +31,7 @@ const CopyPaymentLink = React.forwardRef<any, CopyPaymentLinkProps>(
 
       setDone(true)
       copy(
-        `${MEDUSA_STOREFRONT_URL}/payment-collection/${paymentCollection.id}`
+        `${vikrai_STOREFRONT_URL}/payment-collection/${paymentCollection.id}`
       )
 
       setTimeout(() => {
@@ -78,3 +78,4 @@ const CopyPaymentLink = React.forwardRef<any, CopyPaymentLinkProps>(
 CopyPaymentLink.displayName = "CopyPaymentLink"
 
 export { CopyPaymentLink }
+

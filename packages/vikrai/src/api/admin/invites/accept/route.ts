@@ -1,0 +1,41 @@
+import { acceptInviteWorkflow } from "@vikrai/core-flows"
+import { HttpTypes, InviteWorkflow } from "@vikrai/framework/types"
+import { vikraiError } from "@vikrai/framework/utils"
+import {
+  AuthenticatedvikraiRequest,
+  vikraiResponse,
+} from "@vikrai/framework/http"
+import { AdminInviteAcceptType } from "../validators"
+
+export const POST = async (
+  req: AuthenticatedvikraiRequest<AdminInviteAcceptType>,
+  res: vikraiResponse<HttpTypes.AdminAcceptInviteResponse>
+) => {
+  if (req.auth_context.actor_id) {
+    throw new vikraiError(
+      vikraiError.Types.INVALID_DATA,
+      "The user is already authenticated and cannot accept an invite."
+    )
+  }
+
+  const input = {
+    invite_token: req.filterableFields.token as string,
+    auth_identity_id: req.auth_context.auth_identity_id,
+    user: req.validatedBody,
+  } as InviteWorkflow.AcceptInviteWorkflowInputDTO
+
+  let users
+
+  try {
+    const { result } = await acceptInviteWorkflow(req.scope).run({ input })
+    users = result
+  } catch (e) {
+    res.status(401).json({ message: "Unauthorized" })
+    return
+  }
+
+  res.status(200).json({ user: users[0] })
+}
+
+export const AUTHENTICATE = false
+

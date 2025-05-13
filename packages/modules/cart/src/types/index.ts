@@ -1,4 +1,4 @@
-import { Logger } from "@medusajs/framework/types"
+import { Logger } from "@vikrai/framework/types"
 
 export * from "./address"
 export * from "./cart"
@@ -12,3 +12,4 @@ export * from "./shipping-method-tax-line"
 export type InitializeModuleInjectableDependencies = {
   logger?: Logger
 }
+

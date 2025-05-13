@@ -1,8 +1,8 @@
 import {
   CreateCustomerAddressDTO,
   ICustomerModuleService,
-} from "@medusajs/framework/types"
-import { StepResponse } from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/types"
+import { StepResponse } from "@vikrai/framework/workflows-sdk"
 
 export const unsetForCreate = async (
   data: CreateCustomerAddressDTO[],
@@ -31,3 +31,4 @@ export const unsetForCreate = async (
     customerDefaultAddresses.map((address) => address.id)
   )
 }
+

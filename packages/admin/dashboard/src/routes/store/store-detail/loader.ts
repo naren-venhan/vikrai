@@ -1,4 +1,4 @@
-import { HttpTypes } from "@medusajs/types"
+import { HttpTypes } from "@vikrai/types"
 
 import { retrieveActiveStore, storeQueryKeys } from "../../../hooks/api/store"
 import { queryClient } from "../../../lib/query-client"
@@ -16,3 +16,4 @@ export const storeLoader = async () => {
     (await queryClient.fetchQuery(query))
   )
 }
+

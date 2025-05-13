@@ -19,7 +19,7 @@
     "lint:content": "turbo run lint:content",
     "watch": "turbo run watch",
     "prep": "turbo run prep",
-    "up:medusa": "yarn workspaces foreach -v --topological-dev --recursive exec yarn up @medusajs/icons @medusajs/ui @medusajs/ui-preset --exact"
+    "up:vikrai": "yarn workspaces foreach -v --topological-dev --recursive exec yarn up @vikrai/icons @vikrai/ui @vikrai/ui-preset --exact"
   },
   "dependencies": {
     "autoprefixer": "10.4.14",
@@ -46,3 +46,4 @@
     "node": ">=18.17.0"
   }
 }
+

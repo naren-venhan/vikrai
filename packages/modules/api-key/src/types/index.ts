@@ -4,7 +4,7 @@ import {
   Logger,
   RevokeApiKeyDTO,
   UpdateApiKeyDTO,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 
 export type InitializeModuleInjectableDependencies = {
   logger?: Logger
@@ -29,3 +29,4 @@ export type TokenDTO = {
 
 export type UpdateApiKeyInput = UpdateApiKeyDTO & { id: string }
 export type RevokeApiKeyInput = RevokeApiKeyDTO & { id: string }
+

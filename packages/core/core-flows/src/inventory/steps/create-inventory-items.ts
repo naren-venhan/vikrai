@@ -1,7 +1,7 @@
-import { StepResponse, createStep } from "@medusajs/framework/workflows-sdk"
+import { StepResponse, createStep } from "@vikrai/framework/workflows-sdk"
 
-import { IInventoryService, InventoryTypes } from "@medusajs/framework/types"
-import { Modules } from "@medusajs/framework/utils"
+import { IInventoryService, InventoryTypes } from "@vikrai/framework/types"
+import { Modules } from "@vikrai/framework/utils"
 
 /**
  * The data to create the inventory items.
@@ -37,3 +37,4 @@ export const createInventoryItemsStep = createStep(
     await inventoryService.deleteInventoryItems(data)
   }
 )
+

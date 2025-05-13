@@ -3,14 +3,14 @@ import {
   IPaymentModuleService,
   Logger,
   PaymentDTO,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import {
   ContainerRegistrationKeys,
   isObject,
   Modules,
   promiseAll,
-} from "@medusajs/framework/utils"
-import { createStep, StepResponse } from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/utils"
+import { createStep, StepResponse } from "@vikrai/framework/workflows-sdk"
 
 /**
  * The data to refund one or more payments.
@@ -65,3 +65,4 @@ export const refundPaymentsStep = createStep(
     return new StepResponse(successfulRefunds)
   }
 )
+

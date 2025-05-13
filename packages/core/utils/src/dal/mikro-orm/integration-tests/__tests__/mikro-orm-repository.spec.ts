@@ -1,4 +1,4 @@
-import { BigNumberRawValue } from "@medusajs/types"
+import { BigNumberRawValue } from "@vikrai/types"
 import {
   BeforeCreate,
   Collection,
@@ -1194,7 +1194,7 @@ describe("mikroOrmRepository", () => {
   })
 
   describe("error mapping", () => {
-    it("should map UniqueConstraintViolationException to MedusaError on upsertWithReplace", async () => {
+    it("should map UniqueConstraintViolationException to vikraiError on upsertWithReplace", async () => {
       const entity3 = { title: "en3" }
 
       await manager3().upsertWithReplace([entity3])
@@ -1206,7 +1206,7 @@ describe("mikroOrmRepository", () => {
       expect(err).toEqual("Entity3 with title: en3, already exists.")
     })
 
-    it("should map NotNullConstraintViolationException MedusaError on upsertWithReplace", async () => {
+    it("should map NotNullConstraintViolationException vikraiError on upsertWithReplace", async () => {
       const entity3 = { title: null }
       const err = await manager3()
         .upsertWithReplace([entity3])
@@ -1215,7 +1215,7 @@ describe("mikroOrmRepository", () => {
       expect(err).toEqual("Cannot set field 'title' of Entity3 to null")
     })
 
-    it("should map InvalidFieldNameException MedusaError on upsertWithReplace", async () => {
+    it("should map InvalidFieldNameException vikraiError on upsertWithReplace", async () => {
       const entity3 = { othertitle: "en3" }
       const err = await manager3()
         .upsertWithReplace([entity3])
@@ -1225,7 +1225,7 @@ describe("mikroOrmRepository", () => {
         'column "othertitle" of relation "entity3" does not exist'
       )
     })
-    it("should map ForeignKeyConstraintViolationException MedusaError on upsertWithReplace", async () => {
+    it("should map ForeignKeyConstraintViolationException vikraiError on upsertWithReplace", async () => {
       const entity2 = {
         title: "en2",
         handle: "some-handle",
@@ -1241,3 +1241,4 @@ describe("mikroOrmRepository", () => {
     })
   })
 })
+

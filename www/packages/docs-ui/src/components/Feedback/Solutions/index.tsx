@@ -24,7 +24,7 @@ export const Solutions = ({ feedback, message }: SolutionsProps) => {
   >([])
 
   function constructQuery(searchQuery: string) {
-    return `${searchQuery} repo:medusajs/medusa is:closed is:issue`
+    return `${searchQuery} repo:vikrai/vikrai is:closed is:issue`
   }
 
   async function searchGitHub(query: string) {
@@ -78,7 +78,7 @@ export const Solutions = ({ feedback, message }: SolutionsProps) => {
           <span>
             Explore more issues in{" "}
             <a
-              href={`https://github.com/medusajs/medusa/issues?q=${possibleSolutionsQuery}`}
+              href={`https://github.com/vikrai/vikrai/issues?q=${possibleSolutionsQuery}`}
               target="_blank"
               rel="noreferrer"
             >
@@ -90,3 +90,4 @@ export const Solutions = ({ feedback, message }: SolutionsProps) => {
     </>
   )
 }
+

@@ -1,4 +1,4 @@
-import { EntityConstructor } from "@medusajs/types"
+import { EntityConstructor } from "@vikrai/types"
 import { MetadataStorage, MikroORM } from "@mikro-orm/core"
 import { defineConfig, SqlEntityManager } from "@mikro-orm/postgresql"
 import { join } from "path"
@@ -275,3 +275,4 @@ describe("manyToOne - belongTo", () => {
     )
   })
 })
+

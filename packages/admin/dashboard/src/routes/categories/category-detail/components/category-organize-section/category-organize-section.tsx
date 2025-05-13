@@ -2,9 +2,9 @@ import {
   FolderIllustration,
   PencilSquare,
   TriangleRightMini,
-} from "@medusajs/icons"
-import { HttpTypes } from "@medusajs/types"
-import { Badge, Container, Heading, Text, Tooltip } from "@medusajs/ui"
+} from "@vikrai/icons"
+import { HttpTypes } from "@vikrai/types"
+import { Badge, Container, Heading, Text, Tooltip } from "@vikrai/ui"
 import { useMemo, useState } from "react"
 import { useTranslation } from "react-i18next"
 import { Link } from "react-router-dom"
@@ -214,3 +214,4 @@ const ChildrenDisplay = ({
     </div>
   )
 }
+

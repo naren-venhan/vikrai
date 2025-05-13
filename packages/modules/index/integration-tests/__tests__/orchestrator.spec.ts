@@ -1,6 +1,6 @@
 import { asValue } from "awilix"
-import { container } from "@medusajs/framework"
-import type { IndexTypes } from "@medusajs/types"
+import { container } from "@vikrai/framework"
+import type { IndexTypes } from "@vikrai/types"
 import { Orchestrator } from "@utils"
 
 function creatingFakeLockingModule() {
@@ -282,3 +282,4 @@ describe("Orchestrator", () => {
     expect(lockingModule.lockEntities.size).toEqual(0)
   })
 })
+

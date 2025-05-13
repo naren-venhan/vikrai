@@ -1,7 +1,7 @@
 import { zodResolver } from "@hookform/resolvers/zod"
-import { XMarkMini } from "@medusajs/icons"
-import { AdminProductVariant, HttpTypes } from "@medusajs/types"
-import { Button, Heading, IconButton, Input, Label, toast } from "@medusajs/ui"
+import { XMarkMini } from "@vikrai/icons"
+import { AdminProductVariant, HttpTypes } from "@vikrai/types"
+import { Button, Heading, IconButton, Input, Label, toast } from "@vikrai/ui"
 import i18next from "i18next"
 import { useFieldArray, useForm, UseFormReturn } from "react-hook-form"
 import { useTranslation } from "react-i18next"
@@ -340,3 +340,4 @@ export function ManageVariantInventoryItemsForm({
     </RouteFocusModal.Form>
   )
 }
+

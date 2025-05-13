@@ -2,7 +2,7 @@ import type {
   PluginDetails,
   ConfigModule,
   InputConfigModules,
-} from "@medusajs/types"
+} from "@vikrai/types"
 import { transformModules } from "./define-config"
 
 /**
@@ -33,3 +33,4 @@ export function mergePluginModules(
     ...configModule.modules,
   }
 }
+

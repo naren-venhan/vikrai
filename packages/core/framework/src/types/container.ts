@@ -1,4 +1,4 @@
-import { Link } from "@medusajs/modules-sdk"
+import { Link } from "@vikrai/modules-sdk"
 import {
   ConfigModule,
   IApiKeyModuleService,
@@ -28,12 +28,12 @@ import {
   Logger,
   ModuleImplementations,
   RemoteQueryFunction,
-} from "@medusajs/types"
-import { ContainerRegistrationKeys, Modules } from "@medusajs/utils"
+} from "@vikrai/types"
+import { ContainerRegistrationKeys, Modules } from "@vikrai/utils"
 import { Knex } from "@mikro-orm/knex"
 import { AwilixContainer, ResolveOptions } from "awilix"
 
-declare module "@medusajs/types" {
+declare module "@vikrai/types" {
   export interface ModuleImplementations {
     /**
      * @deprecated use {@link ContainerRegistrationKeys.LINK} instead.
@@ -75,7 +75,7 @@ declare module "@medusajs/types" {
   }
 }
 
-export type MedusaContainer<Cradle extends object = ModuleImplementations> =
+export type vikraiContainer<Cradle extends object = ModuleImplementations> =
   Omit<AwilixContainer, "resolve"> & {
     resolve<K extends keyof Cradle>(
       key: K,
@@ -86,13 +86,14 @@ export type MedusaContainer<Cradle extends object = ModuleImplementations> =
     /**
      * @ignore
      */
-    registerAdd: <T>(name: string, registration: T) => MedusaContainer
+    registerAdd: <T>(name: string, registration: T) => vikraiContainer
     /**
      * @ignore
      */
-    createScope: () => MedusaContainer
+    createScope: () => vikraiContainer
   }
 
 export type ContainerLike = {
   resolve<T = unknown>(key: string): T
 }
+

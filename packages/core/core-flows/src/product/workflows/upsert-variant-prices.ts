@@ -2,13 +2,13 @@ import {
   CreatePricesDTO,
   UpdatePricesDTO,
   CreatePriceSetDTO,
-} from "@medusajs/framework/types"
-import { Modules, arrayDifference } from "@medusajs/framework/utils"
+} from "@vikrai/framework/types"
+import { Modules, arrayDifference } from "@vikrai/framework/utils"
 import {
   WorkflowData,
   createWorkflow,
   transform,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { removeRemoteLinkStep, useRemoteQueryStep } from "../../common"
 import { createPriceSetsStep, updatePriceSetsStep } from "../../pricing"
 import { createVariantPricingLinkStep } from "../steps"
@@ -170,3 +170,4 @@ export const upsertVariantPricesWorkflow = createWorkflow(
     createVariantPricingLinkStep(variantAndPriceSetLinks)
   }
 )
+

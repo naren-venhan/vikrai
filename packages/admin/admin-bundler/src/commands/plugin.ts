@@ -12,7 +12,7 @@ interface PluginOptions {
 export async function plugin(options: PluginOptions) {
   const vite = await import("vite")
   const react = (await import("@vitejs/plugin-react")).default
-  const medusa = (await import("@medusajs/admin-vite-plugin")).default
+  const vikrai = (await import("@vikrai/admin-vite-plugin")).default
 
   const pkg = JSON.parse(
     readFileSync(path.resolve(options.root, "package.json"), "utf-8")
@@ -24,8 +24,8 @@ export async function plugin(options: PluginOptions) {
     "react",
     "react/jsx-runtime",
     "react-router-dom",
-    "@medusajs/js-sdk",
-    "@medusajs/admin-sdk",
+    "@vikrai/js-sdk",
+    "@vikrai/admin-sdk",
     "@tanstack/react-query",
   ])
 
@@ -93,7 +93,7 @@ export async function plugin(options: PluginOptions) {
     },
     plugins: [
       react(),
-      medusa({
+      vikrai({
         pluginMode: true,
         sources: [path.resolve(options.root, "src/admin")],
       }),
@@ -110,3 +110,4 @@ export async function plugin(options: PluginOptions) {
    */
   process.env.NODE_ENV = originalNodeEnv
 }
+

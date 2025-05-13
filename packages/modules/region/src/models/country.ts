@@ -1,4 +1,4 @@
-import { model } from "@medusajs/framework/utils"
+import { model } from "@vikrai/framework/utils"
 import Region from "./region"
 
 export default model
@@ -24,3 +24,4 @@ export default model
       unique: true,
     },
   ])
+

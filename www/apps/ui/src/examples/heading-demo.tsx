@@ -1,4 +1,4 @@
-import { Heading } from "@medusajs/ui"
+import { Heading } from "@vikrai/ui"
 
 export default function HeadingDemo() {
   return (
@@ -9,3 +9,4 @@ export default function HeadingDemo() {
     </div>
   )
 }
+

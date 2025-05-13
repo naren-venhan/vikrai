@@ -1,4 +1,4 @@
-import { createMedusaContainer } from "@medusajs/utils"
+import { createvikraiContainer } from "@vikrai/utils"
 import { asFunction, Lifetime } from "awilix"
 import { moduleProviderLoader } from "../module-provider-loader"
 
@@ -10,7 +10,7 @@ describe("modules loader", () => {
   })
 
   beforeEach(() => {
-    container = createMedusaContainer()
+    container = createvikraiContainer()
   })
 
   it("should register the provider service", async () => {
@@ -142,3 +142,4 @@ describe("modules loader", () => {
     }
   })
 })
+

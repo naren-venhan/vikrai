@@ -1,5 +1,5 @@
-import { HttpTypes } from "@medusajs/types"
-import { Container, Heading } from "@medusajs/ui"
+import { HttpTypes } from "@vikrai/types"
+import { Container, Heading } from "@vikrai/ui"
 import { keepPreviousData } from "@tanstack/react-query"
 import { useTranslation } from "react-i18next"
 
@@ -64,3 +64,4 @@ export const TaxRegionOverrideSection = ({
     </Container>
   )
 }
+

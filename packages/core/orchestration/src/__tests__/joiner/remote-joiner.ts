@@ -1,9 +1,9 @@
 import {
   IModuleService,
-  MedusaContainer,
+  vikraiContainer,
   RemoteExpandProperty,
-} from "@medusajs/types"
-import { lowerCaseFirst, toPascalCase } from "@medusajs/utils"
+} from "@vikrai/types"
+import { lowerCaseFirst, toPascalCase } from "@vikrai/utils"
 import { serviceConfigs, serviceMock } from "../../__mocks__/joiner/mock_data"
 import { RemoteJoiner } from "./../../joiner"
 
@@ -15,7 +15,7 @@ const container = {
       },
     }
   },
-} as MedusaContainer
+} as vikraiContainer
 
 const fetchServiceDataCallback = async (
   expand: RemoteExpandProperty,
@@ -611,3 +611,4 @@ describe("RemoteJoiner", () => {
     })
   })
 })
+

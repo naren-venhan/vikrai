@@ -1,4 +1,4 @@
-import { AbstractFulfillmentProviderService } from "@medusajs/framework/utils"
+import { AbstractFulfillmentProviderService } from "@vikrai/framework/utils"
 
 export class FulfillmentProviderServiceFixtures extends AbstractFulfillmentProviderService {
   static identifier = "fixtures-fulfillment-provider"
@@ -21,3 +21,4 @@ export class FulfillmentProviderServiceFixtures extends AbstractFulfillmentProvi
 }
 
 export const services = [FulfillmentProviderServiceFixtures]
+

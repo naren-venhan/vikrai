@@ -18,7 +18,7 @@ import {
   UpdateFulfillmentSetDTO,
   UpdateServiceZoneDTO,
   ValidateFulfillmentDataContext,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import {
   arrayDifference,
   deepCopy,
@@ -30,11 +30,11 @@ import {
   isDefined,
   isPresent,
   isString,
-  MedusaContext,
-  MedusaError,
+  vikraiContext,
+  vikraiError,
   ModulesSdkUtils,
   promiseAll,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 import {
   Fulfillment,
   FulfillmentProvider,
@@ -74,21 +74,21 @@ const generateMethodForModels = {
 
 type InjectedDependencies = {
   baseRepository: DAL.RepositoryService
-  fulfillmentAddressService: ModulesSdkTypes.IMedusaInternalService<any>
-  fulfillmentSetService: ModulesSdkTypes.IMedusaInternalService<any>
-  serviceZoneService: ModulesSdkTypes.IMedusaInternalService<any>
-  geoZoneService: ModulesSdkTypes.IMedusaInternalService<any>
-  shippingProfileService: ModulesSdkTypes.IMedusaInternalService<any>
-  shippingOptionService: ModulesSdkTypes.IMedusaInternalService<any>
-  shippingOptionRuleService: ModulesSdkTypes.IMedusaInternalService<any>
-  shippingOptionTypeService: ModulesSdkTypes.IMedusaInternalService<any>
+  fulfillmentAddressService: ModulesSdkTypes.IvikraiInternalService<any>
+  fulfillmentSetService: ModulesSdkTypes.IvikraiInternalService<any>
+  serviceZoneService: ModulesSdkTypes.IvikraiInternalService<any>
+  geoZoneService: ModulesSdkTypes.IvikraiInternalService<any>
+  shippingProfileService: ModulesSdkTypes.IvikraiInternalService<any>
+  shippingOptionService: ModulesSdkTypes.IvikraiInternalService<any>
+  shippingOptionRuleService: ModulesSdkTypes.IvikraiInternalService<any>
+  shippingOptionTypeService: ModulesSdkTypes.IvikraiInternalService<any>
   fulfillmentProviderService: FulfillmentProviderService
-  fulfillmentService: ModulesSdkTypes.IMedusaInternalService<any>
+  fulfillmentService: ModulesSdkTypes.IvikraiInternalService<any>
   logger?: Logger
 }
 
 export default class FulfillmentModuleService
-  extends ModulesSdkUtils.MedusaService<{
+  extends ModulesSdkUtils.vikraiService<{
     FulfillmentSet: { dto: FulfillmentTypes.FulfillmentSetDTO }
     ServiceZone: { dto: FulfillmentTypes.ServiceZoneDTO }
     ShippingOption: { dto: FulfillmentTypes.ShippingOptionDTO }
@@ -101,29 +101,29 @@ export default class FulfillmentModuleService
   implements IFulfillmentModuleService
 {
   protected baseRepository_: DAL.RepositoryService
-  protected readonly fulfillmentSetService_: ModulesSdkTypes.IMedusaInternalService<
+  protected readonly fulfillmentSetService_: ModulesSdkTypes.IvikraiInternalService<
     InferEntityType<typeof FulfillmentSet>
   >
-  protected readonly serviceZoneService_: ModulesSdkTypes.IMedusaInternalService<
+  protected readonly serviceZoneService_: ModulesSdkTypes.IvikraiInternalService<
     InferEntityType<typeof ServiceZone>
   >
-  protected readonly geoZoneService_: ModulesSdkTypes.IMedusaInternalService<
+  protected readonly geoZoneService_: ModulesSdkTypes.IvikraiInternalService<
     InferEntityType<typeof GeoZone>
   >
-  protected readonly shippingProfileService_: ModulesSdkTypes.IMedusaInternalService<
+  protected readonly shippingProfileService_: ModulesSdkTypes.IvikraiInternalService<
     InferEntityType<typeof ShippingProfile>
   >
-  protected readonly shippingOptionService_: ModulesSdkTypes.IMedusaInternalService<
+  protected readonly shippingOptionService_: ModulesSdkTypes.IvikraiInternalService<
     InferEntityType<typeof ShippingOption>
   >
-  protected readonly shippingOptionRuleService_: ModulesSdkTypes.IMedusaInternalService<
+  protected readonly shippingOptionRuleService_: ModulesSdkTypes.IvikraiInternalService<
     InferEntityType<typeof ShippingOptionRule>
   >
-  protected readonly shippingOptionTypeService_: ModulesSdkTypes.IMedusaInternalService<
+  protected readonly shippingOptionTypeService_: ModulesSdkTypes.IvikraiInternalService<
     InferEntityType<typeof ShippingOptionType>
   >
   protected readonly fulfillmentProviderService_: FulfillmentProviderService
-  protected readonly fulfillmentService_: ModulesSdkTypes.IMedusaInternalService<
+  protected readonly fulfillmentService_: ModulesSdkTypes.IvikraiInternalService<
     InferEntityType<typeof Fulfillment>
   >
 
@@ -166,7 +166,7 @@ export default class FulfillmentModuleService
   async listShippingOptions(
     filters: FulfillmentTypes.FilterableShippingOptionForContextProps = {},
     config: FindConfig<FulfillmentTypes.ShippingOptionDTO> = {},
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<FulfillmentTypes.ShippingOptionDTO[]> {
     // Eventually, we could call normalizeListShippingOptionsForContextParams to translate the address and make a and condition with the other filters
     // In that case we could remote the address check below
@@ -185,7 +185,7 @@ export default class FulfillmentModuleService
   async listShippingOptionsForContext(
     filters: FulfillmentTypes.FilterableShippingOptionForContextProps,
     config: FindConfig<ShippingOptionDTO> = {},
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<FulfillmentTypes.ShippingOptionDTO[]> {
     const {
       context,
@@ -224,7 +224,7 @@ export default class FulfillmentModuleService
   async retrieveFulfillment(
     id: string,
     config: FindConfig<FulfillmentTypes.FulfillmentDTO> = {},
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<FulfillmentTypes.FulfillmentDTO> {
     const fulfillment = await this.fulfillmentService_.retrieve(
       id,
@@ -241,7 +241,7 @@ export default class FulfillmentModuleService
   async listFulfillments(
     filters: FulfillmentTypes.FilterableFulfillmentProps = {},
     config: FindConfig<FulfillmentTypes.FulfillmentDTO> = {},
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<FulfillmentTypes.FulfillmentDTO[]> {
     const fulfillments = await this.fulfillmentService_.list(
       filters,
@@ -258,7 +258,7 @@ export default class FulfillmentModuleService
   async listAndCountFulfillments(
     filters?: FilterableFulfillmentSetProps,
     config?: FindConfig<FulfillmentDTO>,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<[FulfillmentDTO[], number]> {
     const [fulfillments, count] = await this.fulfillmentService_.listAndCount(
       filters,
@@ -292,7 +292,7 @@ export default class FulfillmentModuleService
     data:
       | FulfillmentTypes.CreateFulfillmentSetDTO
       | FulfillmentTypes.CreateFulfillmentSetDTO[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<
     FulfillmentTypes.FulfillmentSetDTO | FulfillmentTypes.FulfillmentSetDTO[]
   > {
@@ -315,7 +315,7 @@ export default class FulfillmentModuleService
     data:
       | FulfillmentTypes.CreateFulfillmentSetDTO
       | FulfillmentTypes.CreateFulfillmentSetDTO[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<InferEntityType<typeof FulfillmentSet>[]> {
     const data_ = Array.isArray(data) ? data : [data]
 
@@ -364,7 +364,7 @@ export default class FulfillmentModuleService
     data:
       | FulfillmentTypes.CreateServiceZoneDTO[]
       | FulfillmentTypes.CreateServiceZoneDTO,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<
     FulfillmentTypes.ServiceZoneDTO | FulfillmentTypes.ServiceZoneDTO[]
   > {
@@ -383,7 +383,7 @@ export default class FulfillmentModuleService
     data:
       | FulfillmentTypes.CreateServiceZoneDTO[]
       | FulfillmentTypes.CreateServiceZoneDTO,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<InferEntityType<typeof ServiceZone>[]> {
     const data_ = Array.isArray(data) ? data : [data]
 
@@ -430,7 +430,7 @@ export default class FulfillmentModuleService
     data:
       | FulfillmentTypes.CreateShippingOptionDTO[]
       | FulfillmentTypes.CreateShippingOptionDTO,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<
     FulfillmentTypes.ShippingOptionDTO | FulfillmentTypes.ShippingOptionDTO[]
   > {
@@ -449,7 +449,7 @@ export default class FulfillmentModuleService
     data:
       | FulfillmentTypes.CreateShippingOptionDTO[]
       | FulfillmentTypes.CreateShippingOptionDTO,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<InferEntityType<typeof ShippingOption>[]> {
     const data_ = Array.isArray(data) ? data : [data]
 
@@ -493,7 +493,7 @@ export default class FulfillmentModuleService
     data:
       | FulfillmentTypes.CreateShippingProfileDTO[]
       | FulfillmentTypes.CreateShippingProfileDTO,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<
     FulfillmentTypes.ShippingProfileDTO | FulfillmentTypes.ShippingProfileDTO[]
   > {
@@ -520,7 +520,7 @@ export default class FulfillmentModuleService
     data:
       | FulfillmentTypes.CreateShippingProfileDTO[]
       | FulfillmentTypes.CreateShippingProfileDTO,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<InferEntityType<typeof ShippingProfile>[]> {
     const data_ = Array.isArray(data) ? data : [data]
 
@@ -549,7 +549,7 @@ export default class FulfillmentModuleService
     data:
       | FulfillmentTypes.CreateGeoZoneDTO
       | FulfillmentTypes.CreateGeoZoneDTO[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<FulfillmentTypes.GeoZoneDTO | FulfillmentTypes.GeoZoneDTO[]> {
     const data_ = Array.isArray(data) ? data : [data]
 
@@ -588,7 +588,7 @@ export default class FulfillmentModuleService
     data:
       | FulfillmentTypes.CreateShippingOptionRuleDTO[]
       | FulfillmentTypes.CreateShippingOptionRuleDTO,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<
     | FulfillmentTypes.ShippingOptionRuleDTO
     | FulfillmentTypes.ShippingOptionRuleDTO[]
@@ -613,7 +613,7 @@ export default class FulfillmentModuleService
     data:
       | FulfillmentTypes.CreateShippingOptionRuleDTO[]
       | FulfillmentTypes.CreateShippingOptionRuleDTO,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<InferEntityType<typeof ShippingOptionRule>[]> {
     const data_ = Array.isArray(data) ? data : [data]
 
@@ -640,7 +640,7 @@ export default class FulfillmentModuleService
   @EmitEvents()
   async createFulfillment(
     data: FulfillmentTypes.CreateFulfillmentDTO,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<FulfillmentTypes.FulfillmentDTO> {
     const { order, ...fulfillmentDataToCreate } = data
 
@@ -692,7 +692,7 @@ export default class FulfillmentModuleService
   @EmitEvents()
   async deleteFulfillment(
     id: string,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<void> {
     const fulfillment = await this.fulfillmentService_.retrieve(
       id,
@@ -701,8 +701,8 @@ export default class FulfillmentModuleService
     )
 
     if (!isPresent(fulfillment.canceled_at)) {
-      throw new MedusaError(
-        MedusaError.Types.INVALID_DATA,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_DATA,
         `Fulfillment with id ${fulfillment.id} needs to be canceled first before deleting`
       )
     }
@@ -714,7 +714,7 @@ export default class FulfillmentModuleService
   @EmitEvents()
   async createReturnFulfillment(
     data: FulfillmentTypes.CreateFulfillmentDTO,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<FulfillmentTypes.FulfillmentDTO> {
     const { order, ...fulfillmentDataToCreate } = data
 
@@ -779,7 +779,7 @@ export default class FulfillmentModuleService
   // @ts-expect-error
   async updateFulfillmentSets(
     data: UpdateFulfillmentSetDTO[] | UpdateFulfillmentSetDTO,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<
     FulfillmentTypes.FulfillmentSetDTO[] | FulfillmentTypes.FulfillmentSetDTO
   > {
@@ -796,7 +796,7 @@ export default class FulfillmentModuleService
   @InjectTransactionManager()
   protected async updateFulfillmentSets_(
     data: UpdateFulfillmentSetDTO[] | UpdateFulfillmentSetDTO,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<
     | InferEntityType<typeof FulfillmentSet>[]
     | InferEntityType<typeof FulfillmentSet>
@@ -831,8 +831,8 @@ export default class FulfillmentModuleService
     )
 
     if (missingFulfillmentSetIds.size) {
-      throw new MedusaError(
-        MedusaError.Types.NOT_FOUND,
+      throw new vikraiError(
+        vikraiError.Types.NOT_FOUND,
         `The following fulfillment sets does not exists: ${Array.from(
           missingFulfillmentSetIds
         ).join(", ")}`
@@ -904,8 +904,8 @@ export default class FulfillmentModuleService
         )
 
         if (missingServiceZoneIds.size) {
-          throw new MedusaError(
-            MedusaError.Types.NOT_FOUND,
+          throw new vikraiError(
+            vikraiError.Types.NOT_FOUND,
             `The following service zones does not exists: ${Array.from(
               missingServiceZoneIds
             ).join(", ")}`
@@ -1022,7 +1022,7 @@ export default class FulfillmentModuleService
   async updateServiceZones(
     idOrSelector: string | FulfillmentTypes.FilterableServiceZoneProps,
     data: FulfillmentTypes.UpdateServiceZoneDTO,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<
     FulfillmentTypes.ServiceZoneDTO[] | FulfillmentTypes.ServiceZoneDTO
   > {
@@ -1065,7 +1065,7 @@ export default class FulfillmentModuleService
     data:
       | FulfillmentTypes.UpdateServiceZoneDTO[]
       | FulfillmentTypes.UpdateServiceZoneDTO,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<
     InferEntityType<typeof ServiceZone> | InferEntityType<typeof ServiceZone>[]
   > {
@@ -1099,8 +1099,8 @@ export default class FulfillmentModuleService
     )
 
     if (missingServiceZoneIds.size) {
-      throw new MedusaError(
-        MedusaError.Types.NOT_FOUND,
+      throw new vikraiError(
+        vikraiError.Types.NOT_FOUND,
         `The following service zones does not exists: ${Array.from(
           missingServiceZoneIds
         ).join(", ")}`
@@ -1157,8 +1157,8 @@ export default class FulfillmentModuleService
         )
 
         if (missingGeoZoneIds.size) {
-          throw new MedusaError(
-            MedusaError.Types.NOT_FOUND,
+          throw new vikraiError(
+            vikraiError.Types.NOT_FOUND,
             `The following geo zones does not exists: ${Array.from(
               missingGeoZoneIds
             ).join(", ")}`
@@ -1242,7 +1242,7 @@ export default class FulfillmentModuleService
     data:
       | FulfillmentTypes.UpsertServiceZoneDTO
       | FulfillmentTypes.UpsertServiceZoneDTO[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<
     FulfillmentTypes.ServiceZoneDTO | FulfillmentTypes.ServiceZoneDTO[]
   > {
@@ -1263,7 +1263,7 @@ export default class FulfillmentModuleService
     data:
       | FulfillmentTypes.UpsertServiceZoneDTO[]
       | FulfillmentTypes.UpsertServiceZoneDTO,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<
     InferEntityType<typeof ServiceZone>[] | InferEntityType<typeof ServiceZone>
   > {
@@ -1328,7 +1328,7 @@ export default class FulfillmentModuleService
   async updateShippingOptions(
     idOrSelector: string | FulfillmentTypes.FilterableShippingOptionProps,
     data: FulfillmentTypes.UpdateShippingOptionDTO,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<
     FulfillmentTypes.ShippingOptionDTO[] | FulfillmentTypes.ShippingOptionDTO
   > {
@@ -1362,7 +1362,7 @@ export default class FulfillmentModuleService
   @InjectTransactionManager()
   async updateShippingOptions_(
     data: UpdateShippingOptionsInput[] | UpdateShippingOptionsInput,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<
     | InferEntityType<typeof ShippingOption>
     | InferEntityType<typeof ShippingOption>[]
@@ -1580,7 +1580,7 @@ export default class FulfillmentModuleService
     data:
       | FulfillmentTypes.UpsertShippingOptionDTO[]
       | FulfillmentTypes.UpsertShippingOptionDTO,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<
     FulfillmentTypes.ShippingOptionDTO[] | FulfillmentTypes.ShippingOptionDTO
   > {
@@ -1601,7 +1601,7 @@ export default class FulfillmentModuleService
     data:
       | FulfillmentTypes.UpsertShippingOptionDTO[]
       | FulfillmentTypes.UpsertShippingOptionDTO,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<InferEntityType<typeof ShippingOption>[]> {
     const input = Array.isArray(data) ? data : [data]
     const forUpdate = input.filter(
@@ -1660,7 +1660,7 @@ export default class FulfillmentModuleService
   async updateShippingProfiles(
     idOrSelector: string | FulfillmentTypes.FilterableShippingProfileProps,
     data: FulfillmentTypes.UpdateShippingProfileDTO,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<
     FulfillmentTypes.ShippingProfileDTO | FulfillmentTypes.ShippingProfileDTO[]
   > {
@@ -1713,7 +1713,7 @@ export default class FulfillmentModuleService
     data:
       | FulfillmentTypes.UpsertShippingProfileDTO[]
       | FulfillmentTypes.UpsertShippingProfileDTO,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<
     FulfillmentTypes.ShippingProfileDTO[] | FulfillmentTypes.ShippingProfileDTO
   > {
@@ -1766,7 +1766,7 @@ export default class FulfillmentModuleService
     data:
       | FulfillmentTypes.UpdateGeoZoneDTO
       | FulfillmentTypes.UpdateGeoZoneDTO[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<FulfillmentTypes.GeoZoneDTO | FulfillmentTypes.GeoZoneDTO[]> {
     const data_ = Array.isArray(data) ? data : [data]
 
@@ -1811,7 +1811,7 @@ export default class FulfillmentModuleService
     data:
       | FulfillmentTypes.UpdateShippingOptionRuleDTO[]
       | FulfillmentTypes.UpdateShippingOptionRuleDTO,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<
     | FulfillmentTypes.ShippingOptionRuleDTO[]
     | FulfillmentTypes.ShippingOptionRuleDTO
@@ -1832,7 +1832,7 @@ export default class FulfillmentModuleService
     data:
       | FulfillmentTypes.UpdateShippingOptionRuleDTO[]
       | FulfillmentTypes.UpdateShippingOptionRuleDTO,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<
     | InferEntityType<typeof ShippingOptionRule>
     | InferEntityType<typeof ShippingOptionRule>[]
@@ -1863,7 +1863,7 @@ export default class FulfillmentModuleService
   async updateFulfillment(
     id: string,
     data: FulfillmentTypes.UpdateFulfillmentDTO,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<FulfillmentTypes.FulfillmentDTO> {
     const fulfillment = await this.updateFulfillment_(id, data, sharedContext)
 
@@ -1876,7 +1876,7 @@ export default class FulfillmentModuleService
   protected async updateFulfillment_(
     id: string,
     data: FulfillmentTypes.UpdateFulfillmentDTO,
-    @MedusaContext() sharedContext: Context
+    @vikraiContext() sharedContext: Context
   ): Promise<InferEntityType<typeof Fulfillment>> {
     const existingFulfillment: InferEntityType<typeof Fulfillment> =
       await this.fulfillmentService_.retrieve(
@@ -1984,7 +1984,7 @@ export default class FulfillmentModuleService
   @EmitEvents()
   async cancelFulfillment(
     id: string,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<FulfillmentDTO> {
     const canceledAt = new Date()
 
@@ -2063,7 +2063,7 @@ export default class FulfillmentModuleService
   async validateShippingOption(
     shippingOptionId: string,
     context: Record<string, unknown> = {},
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ) {
     const shippingOptions = await this.listShippingOptionsForContext(
       { id: shippingOptionId, context },
@@ -2079,15 +2079,15 @@ export default class FulfillmentModuleService
   @InjectManager()
   async validateShippingOptionsForPriceCalculation(
     shippingOptionsData: FulfillmentTypes.CreateShippingOptionDTO[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<boolean[]> {
     const nonCalculatedOptions = shippingOptionsData.filter(
       (option) => option.price_type !== "calculated"
     )
 
     if (nonCalculatedOptions.length) {
-      throw new MedusaError(
-        MedusaError.Types.INVALID_DATA,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_DATA,
         `Cannot calculate price for non-calculated shipping options: ${nonCalculatedOptions
           .map((o) => o.name)
           .join(", ")}`
@@ -2120,7 +2120,7 @@ export default class FulfillmentModuleService
   // @ts-expect-error
   async deleteShippingProfiles(
     ids: string | string[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ) {
     const shippingProfileIds = Array.isArray(ids) ? ids : [ids]
     await this.validateShippingProfileDeletion(
@@ -2138,7 +2138,7 @@ export default class FulfillmentModuleService
   >(
     ids: string[],
     config?: SoftDeleteReturn<TReturnableLinkableKeys>,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<Record<string, string[]> | void> {
     await this.validateShippingProfileDeletion(ids, sharedContext)
 
@@ -2166,8 +2166,8 @@ export default class FulfillmentModuleService
         (profile) => profile.id
       )
 
-      throw new MedusaError(
-        MedusaError.Types.INVALID_DATA,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_DATA,
         `Cannot delete Shipping Profiles ${undeletableShippingProfileIds} with associated Shipping Options. Delete Shipping Options first and try again.`
       )
     }
@@ -2177,15 +2177,15 @@ export default class FulfillmentModuleService
     fulfillment: InferEntityType<typeof Fulfillment>
   ) {
     if (fulfillment.shipped_at) {
-      throw new MedusaError(
-        MedusaError.Types.INVALID_DATA,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_DATA,
         `Fulfillment with id ${fulfillment.id} already shipped`
       )
     }
 
     if (fulfillment.delivered_at) {
-      throw new MedusaError(
-        MedusaError.Types.INVALID_DATA,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_DATA,
         `Fulfillment with id ${fulfillment.id} already delivered`
       )
     }
@@ -2203,8 +2203,8 @@ export default class FulfillmentModuleService
     )
 
     if (missingShippingOptionIds.length) {
-      throw new MedusaError(
-        MedusaError.Types.NOT_FOUND,
+      throw new vikraiError(
+        vikraiError.Types.NOT_FOUND,
         `The following shipping options do not exist: ${Array.from(
           missingShippingOptionIds
         ).join(", ")}`
@@ -2232,8 +2232,8 @@ export default class FulfillmentModuleService
     const nonAlreadyExistingRules = getSetDifference(expectedRuleSet, rulesSet)
 
     if (nonAlreadyExistingRules.size) {
-      throw new MedusaError(
-        MedusaError.Types.NOT_FOUND,
+      throw new vikraiError(
+        vikraiError.Types.NOT_FOUND,
         `The following rules does not exists: ${Array.from(
           nonAlreadyExistingRules
         ).join(", ")} on shipping option ${shippingOptionUpdateData.id}`
@@ -2256,16 +2256,16 @@ export default class FulfillmentModuleService
 
     for (const geoZone of geoZones) {
       if (!requirePropForType[geoZone.type]) {
-        throw new MedusaError(
-          MedusaError.Types.INVALID_DATA,
+        throw new vikraiError(
+          vikraiError.Types.INVALID_DATA,
           `Invalid geo zone type: ${geoZone.type}`
         )
       }
 
       for (const prop of requirePropForType[geoZone.type]) {
         if (!geoZone[prop]) {
-          throw new MedusaError(
-            MedusaError.Types.INVALID_DATA,
+          throw new vikraiError(
+            vikraiError.Types.INVALID_DATA,
             `Missing required property ${prop} for geo zone type ${geoZone.type}`
           )
         }
@@ -2413,7 +2413,7 @@ export default class FulfillmentModuleService
     /**
      * The following changes assume that the lowest level check (e.g postal expression) can't exist multiple times in the higher level (e.g country)
      * In case we encounter situations where it is possible to have multiple postal expressions for the same country we need to change the logic back
-     * to this pr https://github.com/medusajs/medusa/pull/8066
+     * to this pr https://github.com/vikrai/vikrai/pull/8066
      */
 
     const geoZoneConstraints = Object.entries(geoZoneRequirePropertyHierarchy)
@@ -2433,3 +2433,4 @@ export default class FulfillmentModuleService
     return geoZoneConstraints
   }
 }
+

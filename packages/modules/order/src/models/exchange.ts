@@ -1,4 +1,4 @@
-import { model } from "@medusajs/framework/utils"
+import { model } from "@vikrai/framework/utils"
 import { OrderExchangeItem } from "./exchange-item"
 import { Order } from "./order"
 import { OrderShipping } from "./order-shipping-method"
@@ -76,3 +76,4 @@ const _OrderExchange = model
   ])
 
 export const OrderExchange = _OrderExchange
+

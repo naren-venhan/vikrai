@@ -2,7 +2,7 @@ import {
   cancelOrderFulfillmentWorkflow,
   cancelOrderWorkflow,
   createOrderFulfillmentWorkflow,
-} from "@medusajs/core-flows"
+} from "@vikrai/core-flows"
 import {
   IOrderModuleService,
   InventoryItemDTO,
@@ -11,20 +11,20 @@ import {
   RegionDTO,
   ShippingOptionDTO,
   StockLocationDTO,
-} from "@medusajs/types"
+} from "@vikrai/types"
 import {
   ContainerRegistrationKeys,
   Modules,
   remoteQueryObjectFromString,
-} from "@medusajs/utils"
-import { medusaIntegrationTestRunner } from "@medusajs/test-utils"
+} from "@vikrai/utils"
+import { vikraiIntegrationTestRunner } from "@vikrai/test-utils"
 import { createOrderFixture, prepareDataFixtures } from "./__fixtures__"
 
 jest.setTimeout(500000)
 
-const env = { MEDUSA_FF_MEDUSA_V2: true }
+const env = { vikrai_FF_vikrai_V2: true }
 
-medusaIntegrationTestRunner({
+vikraiIntegrationTestRunner({
   env,
   testSuite: ({ getContainer }) => {
     let container
@@ -170,3 +170,4 @@ medusaIntegrationTestRunner({
     })
   },
 })
+

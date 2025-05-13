@@ -1,12 +1,12 @@
 import {
   AdditionalData,
   CreateCartWorkflowInputDTO,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import {
   CartWorkflowEvents,
   isDefined,
-  MedusaError,
-} from "@medusajs/framework/utils"
+  vikraiError,
+} from "@vikrai/framework/utils"
 import {
   createHook,
   createWorkflow,
@@ -15,7 +15,7 @@ import {
   when,
   WorkflowData,
   WorkflowResponse,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { emitEventStep } from "../../common/steps/emit-event"
 import { useRemoteQueryStep } from "../../common/steps/use-remote-query"
 import {
@@ -47,9 +47,9 @@ export type CreateCartWorkflowInput = CreateCartWorkflowInputDTO &
 export const createCartWorkflowId = "create-cart"
 /**
  * This workflow creates and returns a cart. You can set the cart's items, region, customer, and other details. This workflow is executed by the
- * [Create Cart Store API Route](https://docs.medusajs.com/api/store#carts_postcarts).
+ * [Create Cart Store API Route](https://docs.vikrai.com/api/store#carts_postcarts).
  *
- * This workflow has a hook that allows you to perform custom actions on the created cart. You can see an example in [this guide](https://docs.medusajs.com/resources/commerce-modules/cart/extend#step-4-consume-cartcreated-workflow-hook).
+ * This workflow has a hook that allows you to perform custom actions on the created cart. You can see an example in [this guide](https://docs.vikrai.com/resources/commerce-modules/cart/extend#step-4-consume-cartcreated-workflow-hook).
  *
  * You can also use this workflow within your customizations or your own custom workflows, allowing you to wrap custom logic around cart creation.
  *
@@ -92,8 +92,8 @@ export const createCartWorkflowId = "create-cart"
  * You can consume the `setPricingContext` hook to add the `location_id` context to the prices calculation:
  * 
  * ```ts
- * import { createCartWorkflow } from "@medusajs/medusa/core-flows";
- * import { StepResponse } from "@medusajs/workflows-sdk";
+ * import { createCartWorkflow } from "@vikrai/vikrai/core-flows";
+ * import { StepResponse } from "@vikrai/workflows-sdk";
  * 
  * createCartWorkflow.hooks.setPricingContext((
  *   { region, variantIds, salesChannel, customerData, additional_data }, { container }
@@ -108,7 +108,7 @@ export const createCartWorkflowId = "create-cart"
  * 
  * :::note
  * 
- * Learn more about prices calculation context in the [Prices Calculation](https://docs.medusajs.com/resources/commerce-modules/pricing/price-calculation) documentation.
+ * Learn more about prices calculation context in the [Prices Calculation](https://docs.vikrai.com/resources/commerce-modules/pricing/price-calculation) documentation.
  * 
  * :::
  */
@@ -153,7 +153,7 @@ export const createCartWorkflow = createWorkflow(
       { input, region, customerData, setPricingContextResult },
       (data) => {
         if (!data.region) {
-          throw new MedusaError(MedusaError.Types.NOT_FOUND, "No regions found")
+          throw new vikraiError(vikraiError.Types.NOT_FOUND, "No regions found")
         }
 
         return {
@@ -194,7 +194,7 @@ export const createCartWorkflow = createWorkflow(
       { input, region, customerData, salesChannel },
       (data) => {
         if (!data.region) {
-          throw new MedusaError(MedusaError.Types.NOT_FOUND, "No regions found")
+          throw new vikraiError(vikraiError.Types.NOT_FOUND, "No regions found")
         }
 
         const data_ = {
@@ -302,3 +302,4 @@ export const createCartWorkflow = createWorkflow(
     })
   }
 )
+

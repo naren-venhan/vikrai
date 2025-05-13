@@ -7,15 +7,15 @@ import {
   OrderExchangeItemDTO,
   OrderPreviewDTO,
   OrderReturnItemDTO,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import {
   ChangeActionType,
-  MedusaError,
+  vikraiError,
   Modules,
   OrderChangeStatus,
   OrderWorkflowEvents,
   ReturnStatus,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 import {
   WorkflowResponse,
   createStep,
@@ -23,7 +23,7 @@ import {
   parallelize,
   transform,
   when,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { reserveInventoryStep } from "../../../cart/steps/reserve-inventory"
 import { prepareConfirmInventoryInput } from "../../../cart/utils/prepare-confirm-inventory-input"
 import {
@@ -66,8 +66,8 @@ export type ConfirmExchangeRequestValidationStepInput = {
  *
  * :::note
  *
- * You can retrieve an order, order exchange, and order change details using [Query](https://docs.medusajs.com/learn/fundamentals/module-links/query),
- * or [useQueryGraphStep](https://docs.medusajs.com/resources/references/medusa-workflows/steps/useQueryGraphStep).
+ * You can retrieve an order, order exchange, and order change details using [Query](https://docs.vikrai.com/learn/fundamentals/module-links/query),
+ * or [useQueryGraphStep](https://docs.vikrai.com/resources/references/vikrai-workflows/steps/useQueryGraphStep).
  *
  * :::
  *
@@ -116,8 +116,8 @@ const confirmIfExchangeItemsArePresent = createStep(
       return
     }
 
-    throw new MedusaError(
-      MedusaError.Types.INVALID_DATA,
+    throw new vikraiError(
+      vikraiError.Types.INVALID_DATA,
       `Order exchange request should have at least 1 item inbound and 1 item outbound`
     )
   }
@@ -265,7 +265,7 @@ export type ConfirmExchangeRequestWorkflowInput = {
 export const confirmExchangeRequestWorkflowId = "confirm-exchange-request"
 /**
  * This workflow confirms an exchange request. It's used by the
- * [Confirm Exchange Admin API Route](https://docs.medusajs.com/api/admin#exchanges_postexchangesidrequest).
+ * [Confirm Exchange Admin API Route](https://docs.vikrai.com/api/admin#exchanges_postexchangesidrequest).
  *
  * You can use this workflow within your customizations or your own custom workflows, allowing you to confirm an exchange
  * for an order in your custom flow.
@@ -504,3 +504,4 @@ export const confirmExchangeRequestWorkflow = createWorkflow(
     return new WorkflowResponse(orderPreview)
   }
 )
+

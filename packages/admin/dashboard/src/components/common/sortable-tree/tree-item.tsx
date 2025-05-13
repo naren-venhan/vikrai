@@ -6,8 +6,8 @@ import {
   FolderOpenIllustration,
   TagIllustration,
   TriangleRightMini,
-} from "@medusajs/icons"
-import { Badge, clx, IconButton } from "@medusajs/ui"
+} from "@vikrai/icons"
+import { Badge, clx, IconButton } from "@vikrai/ui"
 import { HandleProps } from "./types"
 
 export interface TreeItemProps
@@ -205,3 +205,4 @@ const ChildrenCount = ({ clone, childrenCount }: ChildrenCountProps) => {
     </Badge>
   )
 }
+

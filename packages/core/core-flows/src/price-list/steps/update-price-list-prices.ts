@@ -5,12 +5,12 @@ import {
   UpdatePriceListPricesDTO,
   UpdatePriceListPriceWorkflowDTO,
   UpdatePriceListPriceWorkflowStepDTO,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import {
   buildPriceSetPricesForModule,
   Modules,
-} from "@medusajs/framework/utils"
-import { createStep, StepResponse } from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/utils"
+import { createStep, StepResponse } from "@vikrai/framework/workflows-sdk"
 
 export const updatePriceListPricesStepId = "update-price-list-prices"
 /**
@@ -116,3 +116,4 @@ export const updatePriceListPricesStep = createStep(
     }
   }
 )
+

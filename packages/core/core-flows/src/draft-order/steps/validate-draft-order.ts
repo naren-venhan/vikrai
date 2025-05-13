@@ -1,6 +1,6 @@
-import { MedusaError, OrderStatus } from "@medusajs/framework/utils"
-import { createStep } from "@medusajs/framework/workflows-sdk"
-import { OrderDTO } from "@medusajs/types"
+import { vikraiError, OrderStatus } from "@vikrai/framework/utils"
+import { createStep } from "@vikrai/framework/workflows-sdk"
+import { OrderDTO } from "@vikrai/types"
 
 /**
  * The details of the draft order to validate.
@@ -17,8 +17,8 @@ export interface ValidateDraftOrderStepInput {
  * 
  * :::note
  * 
- * You can retrieve a draft order's details using [Query](https://docs.medusajs.com/learn/fundamentals/module-links/query),
- * or [useQueryGraphStep](https://docs.medusajs.com/resources/references/medusa-workflows/steps/useQueryGraphStep).
+ * You can retrieve a draft order's details using [Query](https://docs.vikrai.com/learn/fundamentals/module-links/query),
+ * or [useQueryGraphStep](https://docs.vikrai.com/resources/references/vikrai-workflows/steps/useQueryGraphStep).
  * 
  * :::
  * 
@@ -34,10 +34,11 @@ export const validateDraftOrderStep = createStep(
   "validate-draft-order",
   async function ({ order }: ValidateDraftOrderStepInput) {
     if (order.status !== OrderStatus.DRAFT && !order.is_draft_order) {
-      throw new MedusaError(
-        MedusaError.Types.INVALID_DATA,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_DATA,
         `Order ${order.id} is not a draft order`
       )
     }
   }
 )
+

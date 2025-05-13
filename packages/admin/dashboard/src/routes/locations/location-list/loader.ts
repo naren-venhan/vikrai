@@ -1,7 +1,7 @@
-import { FetchError } from "@medusajs/js-sdk"
+import { FetchError } from "@vikrai/js-sdk"
 import { LoaderFunctionArgs, redirect } from "react-router-dom"
 
-import { HttpTypes } from "@medusajs/types"
+import { HttpTypes } from "@vikrai/types"
 import { stockLocationsQueryKeys } from "../../../hooks/api/stock-locations"
 import { sdk } from "../../../lib/client"
 import { queryClient } from "../../../lib/query-client"
@@ -34,3 +34,4 @@ export const shippingListLoader = async (_: LoaderFunctionArgs) => {
     ) ?? (await queryClient.fetchQuery(query))
   )
 }
+

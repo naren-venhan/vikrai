@@ -1,11 +1,11 @@
-import { updateProductVariantsWorkflow } from "@medusajs/core-flows"
-import { medusaIntegrationTestRunner } from "@medusajs/test-utils"
-import { IProductModuleService } from "@medusajs/types"
-import { MedusaError, Modules } from "@medusajs/utils"
+import { updateProductVariantsWorkflow } from "@vikrai/core-flows"
+import { vikraiIntegrationTestRunner } from "@vikrai/test-utils"
+import { IProductModuleService } from "@vikrai/types"
+import { vikraiError, Modules } from "@vikrai/utils"
 
 jest.setTimeout(50000)
 
-medusaIntegrationTestRunner({
+vikraiIntegrationTestRunner({
   env: {},
   testSuite: ({ getContainer }) => {
     describe("Workflows: Update product variants", () => {
@@ -20,8 +20,8 @@ medusaIntegrationTestRunner({
       describe("updateProductVariantsWorkflow", () => {
         beforeAll(() => {
           updateProductVariantsWorkflow.hooks.productVariantsUpdated(() => {
-            throw new MedusaError(
-              MedusaError.Types.NOT_ALLOWED,
+            throw new vikraiError(
+              vikraiError.Types.NOT_ALLOWED,
               "product variants updated hook failed"
             )
           })
@@ -188,3 +188,4 @@ medusaIntegrationTestRunner({
     })
   },
 })
+

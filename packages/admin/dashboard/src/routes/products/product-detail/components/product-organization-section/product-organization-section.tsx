@@ -1,6 +1,6 @@
-import { PencilSquare } from "@medusajs/icons"
-import { HttpTypes } from "@medusajs/types"
-import { Badge, Container, Heading, Tooltip } from "@medusajs/ui"
+import { PencilSquare } from "@vikrai/icons"
+import { HttpTypes } from "@vikrai/types"
+import { Badge, Container, Heading, Tooltip } from "@vikrai/ui"
 import { useTranslation } from "react-i18next"
 import { Link } from "react-router-dom"
 import { ActionMenu } from "../../../../../components/common/action-menu"
@@ -105,3 +105,4 @@ const OrganizationTag = ({ label, to }: { label: string; to: string }) => {
     </Tooltip>
   )
 }
+

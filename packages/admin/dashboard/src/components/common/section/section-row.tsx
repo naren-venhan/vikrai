@@ -1,4 +1,4 @@
-import { Text, clx } from "@medusajs/ui"
+import { Text, clx } from "@vikrai/ui"
 import { ReactNode } from "react"
 
 export type SectionRowProps = {
@@ -39,3 +39,4 @@ export const SectionRow = ({ title, value, actions }: SectionRowProps) => {
     </div>
   )
 }
+

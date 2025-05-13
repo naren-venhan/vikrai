@@ -1,4 +1,4 @@
-import { ModuleProvider, Modules } from "@medusajs/framework/utils"
+import { ModuleProvider, Modules } from "@vikrai/framework/utils"
 import {
   StripeBancontactService,
   StripeBlikService,
@@ -20,3 +20,4 @@ const services = [
 export default ModuleProvider(Modules.PAYMENT, {
   services,
 })
+

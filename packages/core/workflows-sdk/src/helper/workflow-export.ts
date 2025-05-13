@@ -1,27 +1,27 @@
-import { MedusaModule } from "@medusajs/modules-sdk"
+import { vikraiModule } from "@vikrai/modules-sdk"
 import {
   DistributedTransactionEvents,
   DistributedTransactionType,
   LocalWorkflow,
   TransactionState,
-} from "@medusajs/orchestration"
+} from "@vikrai/orchestration"
 import {
   Context,
   IEventBusModuleService,
   LoadedModule,
   Logger,
-  MedusaContainer,
-} from "@medusajs/types"
+  vikraiContainer,
+} from "@vikrai/types"
 import {
   ContainerRegistrationKeys,
   isPresent,
-  MedusaContextType,
+  vikraiContextType,
   Modules,
   TransactionHandlerType,
-} from "@medusajs/utils"
+} from "@vikrai/utils"
 import { EOL } from "os"
 import { ulid } from "ulid"
-import { MedusaWorkflow } from "../medusa-workflow"
+import { vikraiWorkflow } from "../vikrai-workflow"
 import { resolveValue } from "../utils/composer/helpers/resolve-value"
 import {
   ExportedWorkflow,
@@ -50,7 +50,7 @@ function createContextualWorkflowRunner<
     wrappedInput?: boolean
     sourcePath?: string
   }
-  container?: LoadedModule[] | MedusaContainer
+  container?: LoadedModule[] | vikraiContainer
 }): Omit<
   LocalWorkflow,
   "run" | "registerStepSuccess" | "registerStepFailure" | "cancel"
@@ -78,10 +78,10 @@ function createContextualWorkflowRunner<
     events: DistributedTransactionEvents | undefined = {}
   ) => {
     if (!executionContainer) {
-      const container_ = flow.container as MedusaContainer
+      const container_ = flow.container as vikraiContainer
 
       if (!container_ || !isPresent(container_?.registrations)) {
-        executionContainer = MedusaModule.getLoadedModules().map(
+        executionContainer = vikraiModule.getLoadedModules().map(
           (mod) => Object.values(mod)[0]
         )
       }
@@ -187,7 +187,7 @@ function createContextualWorkflowRunner<
 
     const context = {
       ...outerContext,
-      __type: MedusaContextType as Context["__type"],
+      __type: vikraiContextType as Context["__type"],
     }
 
     context.transactionId ??= "auto-" + ulid()
@@ -232,7 +232,7 @@ function createContextualWorkflowRunner<
     const context = {
       ...outerContext,
       transactionId,
-      __type: MedusaContextType as Context["__type"],
+      __type: vikraiContextType as Context["__type"],
     }
 
     context.eventGroupId ??= ulid()
@@ -276,7 +276,7 @@ function createContextualWorkflowRunner<
     const context = {
       ...outerContext,
       transactionId,
-      __type: MedusaContextType as Context["__type"],
+      __type: vikraiContextType as Context["__type"],
     }
 
     context.eventGroupId ??= ulid()
@@ -312,7 +312,7 @@ function createContextualWorkflowRunner<
     const context = {
       ...outerContext,
       transactionId,
-      __type: MedusaContextType as Context["__type"],
+      __type: vikraiContextType as Context["__type"],
     }
 
     context.eventGroupId ??= ulid()
@@ -351,7 +351,7 @@ export const exportWorkflow = <TData = unknown, TResult = unknown>(
     TResultOverride = undefined
   >(
     // TODO: rm when all usage have been migrated
-    container?: LoadedModule[] | MedusaContainer
+    container?: LoadedModule[] | vikraiContainer
   ): Omit<
     LocalWorkflow,
     "run" | "registerStepSuccess" | "registerStepFailure" | "cancel"
@@ -380,7 +380,7 @@ export const exportWorkflow = <TData = unknown, TResult = unknown>(
     TResultOverride
   >(
     action: "run" | "registerStepSuccess" | "registerStepFailure" | "cancel",
-    container?: LoadedModule[] | MedusaContainer
+    container?: LoadedModule[] | vikraiContainer
   ) => {
     const contextualRunner = createContextualWorkflowRunner<
       TData,
@@ -495,7 +495,7 @@ export const exportWorkflow = <TData = unknown, TResult = unknown>(
     )(inputArgs)
   }
 
-  MedusaWorkflow.registerWorkflow(workflowId, exportedWorkflow)
+  vikraiWorkflow.registerWorkflow(workflowId, exportedWorkflow)
   return exportedWorkflow as MainExportedWorkflow<TData, TResult>
 }
 
@@ -519,7 +519,7 @@ function attachOnFinishReleaseEvents(
     const flowEventGroupId = transaction.getFlow().metadata?.eventGroupId
 
     const logger =
-      (flow.container as MedusaContainer).resolve<Logger>(
+      (flow.container as vikraiContainer).resolve<Logger>(
         ContainerRegistrationKeys.LOGGER,
         { allowUnregistered: true }
       ) || console
@@ -536,7 +536,7 @@ function attachOnFinishReleaseEvents(
     }
 
     const eventBusService = (
-      flow.container as MedusaContainer
+      flow.container as vikraiContainer
     ).resolve<IEventBusModuleService>(Modules.EVENT_BUS, {
       allowUnregistered: true,
     })
@@ -575,3 +575,4 @@ function attachOnFinishReleaseEvents(
 
   events.onFinish = wrappedOnFinish
 }
+

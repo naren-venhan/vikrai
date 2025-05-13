@@ -1,14 +1,14 @@
 import type {
-  MedusaNextFunction,
-  MedusaRequest,
-  MedusaResponse,
+  vikraiNextFunction,
+  vikraiRequest,
+  vikraiResponse,
 } from "../types"
 
 export function clearFiltersByKey(keys: string[]) {
   return async function clearFiltersByKeyMiddleware(
-    req: MedusaRequest,
-    _: MedusaResponse,
-    next: MedusaNextFunction
+    req: vikraiRequest,
+    _: vikraiResponse,
+    next: vikraiNextFunction
   ) {
     keys.forEach((key) => {
       delete req.filterableFields[key]
@@ -17,3 +17,4 @@ export function clearFiltersByKey(keys: string[]) {
     return next()
   }
 }
+

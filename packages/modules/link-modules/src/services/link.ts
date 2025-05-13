@@ -1,11 +1,11 @@
-import { Context, FindConfig } from "@medusajs/framework/types"
+import { Context, FindConfig } from "@vikrai/framework/types"
 import {
   InjectManager,
   InjectTransactionManager,
-  MedusaContext,
+  vikraiContext,
   MikroOrmBaseRepository,
   ModulesSdkUtils,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 
 type InjectedDependencies = {
   linkRepository: MikroOrmBaseRepository
@@ -22,7 +22,7 @@ export default class LinkService<TEntity> {
   async list(
     filters: unknown = {},
     config: FindConfig<unknown> = {},
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<TEntity[]> {
     const queryOptions = ModulesSdkUtils.buildQuery<unknown>(
       filters as any,
@@ -35,7 +35,7 @@ export default class LinkService<TEntity> {
   async listAndCount(
     filters = {},
     config: FindConfig<unknown> = {},
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<[TEntity[], number]> {
     const queryOptions = ModulesSdkUtils.buildQuery<unknown>(filters, config)
     return await this.linkRepository_.findAndCount(queryOptions, sharedContext)
@@ -44,7 +44,7 @@ export default class LinkService<TEntity> {
   @InjectTransactionManager("linkRepository_")
   async create(
     data: unknown[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<TEntity[]> {
     return await this.linkRepository_.create(data, {
       transactionManager: sharedContext.transactionManager,
@@ -54,7 +54,7 @@ export default class LinkService<TEntity> {
   @InjectTransactionManager("linkRepository_")
   async dismiss(
     data: unknown[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<TEntity[]> {
     const filter: any = []
     for (const pair of data) {
@@ -78,7 +78,7 @@ export default class LinkService<TEntity> {
   @InjectTransactionManager("linkRepository_")
   async delete(
     data: unknown,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<void> {
     await this.linkRepository_.delete(data, {
       transactionManager: sharedContext.transactionManager,
@@ -88,7 +88,7 @@ export default class LinkService<TEntity> {
   @InjectTransactionManager("linkRepository_")
   async softDelete(
     data: any[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<[object[], Record<string, string[]>]> {
     const deleteFilters = {
       $or: data.map((dataEntry) => {
@@ -112,7 +112,7 @@ export default class LinkService<TEntity> {
   @InjectTransactionManager("linkRepository_")
   async restore(
     data: any,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<[object[], Record<string, string[]>]> {
     const restoreFilters = {
       $or: data.map((dataEntry) => {
@@ -133,3 +133,4 @@ export default class LinkService<TEntity> {
     })
   }
 }
+

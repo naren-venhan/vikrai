@@ -1,4 +1,4 @@
-import { medusaIntegrationTestRunner } from "@medusajs/test-utils"
+import { vikraiIntegrationTestRunner } from "@vikrai/test-utils"
 import {
   createAdminUser,
   generatePublishableKey,
@@ -7,10 +7,10 @@ import {
 
 jest.setTimeout(50000)
 
-const env = { MEDUSA_FF_MEDUSA_V2: true }
-const adminHeaders = { headers: { "x-medusa-access-token": "test_token" } }
+const env = { vikrai_FF_vikrai_V2: true }
+const adminHeaders = { headers: { "x-vikrai-access-token": "test_token" } }
 
-medusaIntegrationTestRunner({
+vikraiIntegrationTestRunner({
   env,
   testSuite: ({ dbConnection, getContainer, api }) => {
     describe("Store: Shipping Option API", () => {
@@ -725,3 +725,4 @@ medusaIntegrationTestRunner({
     })
   },
 })
+

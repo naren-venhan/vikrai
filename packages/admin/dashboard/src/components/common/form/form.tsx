@@ -1,11 +1,11 @@
-import { InformationCircleSolid } from "@medusajs/icons"
+import { InformationCircleSolid } from "@vikrai/icons"
 import {
   Hint as HintComponent,
   Label as LabelComponent,
   Text,
   Tooltip,
   clx,
-} from "@medusajs/ui"
+} from "@vikrai/ui"
 import { Label as RadixLabel, Slot } from "radix-ui"
 import React, {
   ReactNode,
@@ -220,3 +220,4 @@ const Form = Object.assign(Provider, {
 })
 
 export { Form }
+

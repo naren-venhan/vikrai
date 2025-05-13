@@ -1,8 +1,8 @@
 import { Documentation } from "react-docgen"
 import { Suspense } from "react"
-import { Spinner } from "@medusajs/icons"
+import { Spinner } from "@vikrai/icons"
 import { PropTable } from "./props-table"
-import { Container } from "@medusajs/ui"
+import { Container } from "@vikrai/ui"
 import { Feedback } from "./feedback"
 import { H3, MarkdownContent } from "docs-ui"
 import { components } from "./mdx-components"
@@ -41,7 +41,7 @@ const ComponentReference = ({
         return (
           <Suspense
             fallback={
-              <div className="text-medusa-fg-muted flex flex-1 items-center justify-center">
+              <div className="text-vikrai-fg-muted flex flex-1 items-center justify-center">
                 <Spinner className="animate-spin" />
               </div>
             }
@@ -62,7 +62,7 @@ const ComponentReference = ({
                     <Container className="mb-6 mt-8 overflow-hidden p-0">
                       <Suspense
                         fallback={
-                          <div className="text-medusa-fg-muted flex flex-1 items-center justify-center">
+                          <div className="text-vikrai-fg-muted flex flex-1 items-center justify-center">
                             <Spinner className="animate-spin" />
                           </div>
                         }
@@ -86,3 +86,4 @@ const ComponentReference = ({
 }
 
 export { ComponentReference }
+

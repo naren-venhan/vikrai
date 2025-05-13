@@ -1,4 +1,4 @@
-import { model } from "@medusajs/framework/utils"
+import { model } from "@vikrai/framework/utils"
 import InventoryItem from "./inventory-item"
 
 const ReservationItem = model
@@ -38,3 +38,4 @@ const ReservationItem = model
   ])
 
 export default ReservationItem
+

@@ -1,4 +1,4 @@
-import { model } from "@medusajs/framework/utils"
+import { model } from "@vikrai/framework/utils"
 import Customer from "./customer"
 
 const CustomerAddress = model
@@ -38,3 +38,4 @@ const CustomerAddress = model
   ])
 
 export default CustomerAddress
+

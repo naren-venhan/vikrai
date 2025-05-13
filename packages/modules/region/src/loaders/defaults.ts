@@ -2,18 +2,18 @@ import {
   LoaderOptions,
   Logger,
   ModulesSdkTypes,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import {
   ContainerRegistrationKeys,
   DefaultsUtils,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 import { Country } from "@models"
 
 export default async ({ container }: LoaderOptions): Promise<void> => {
   // TODO: Add default logger to the container when running tests
   const logger =
     container.resolve<Logger>(ContainerRegistrationKeys.LOGGER) ?? console
-  const countryService_: ModulesSdkTypes.IMedusaInternalService<
+  const countryService_: ModulesSdkTypes.IvikraiInternalService<
     typeof Country
   > = container.resolve("countryService")
 
@@ -34,3 +34,4 @@ export default async ({ container }: LoaderOptions): Promise<void> => {
     )
   }
 }
+

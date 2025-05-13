@@ -1,4 +1,4 @@
-import { Checkbox, Label } from "@medusajs/ui"
+import { Checkbox, Label } from "@vikrai/ui"
 
 export default function CheckboxDefault() {
   return (
@@ -10,3 +10,4 @@ export default function CheckboxDefault() {
     </div>
   )
 }
+

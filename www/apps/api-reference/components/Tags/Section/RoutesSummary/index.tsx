@@ -48,19 +48,19 @@ export const RoutesSummary = ({ tagName, paths }: RoutesSummaryProps) => {
     <div
       className={clsx(
         "hidden lg:flex flex-col",
-        "bg-medusa-contrast-bg-base rounded-lg",
+        "bg-vikrai-contrast-bg-base rounded-lg",
         "shadow-elevation-code-block dark:shadow-elevation-code-block-dark"
       )}
     >
       <div className="flex py-0.5 px-1 gap-x-0.75">
-        <span className="text-medusa-contrast-fg-secondary text-code-label">
+        <span className="text-vikrai-contrast-fg-secondary text-code-label">
           API Routes
         </span>
       </div>
       <div className="flex p-[5px] justify-center items-center w-full">
         <div
           className={clsx(
-            "bg-medusa-contrast-bg-subtle rounded-md border border-medusa-contrast-border-bot",
+            "bg-vikrai-contrast-bg-subtle rounded-md border border-vikrai-contrast-border-bot",
             "p-0.75 text-code-body w-full flex flex-col gap-y-0.25"
           )}
         >
@@ -75,16 +75,16 @@ export const RoutesSummary = ({ tagName, paths }: RoutesSummaryProps) => {
                   <span
                     className={clsx(
                       "w-[15%]",
-                      method === "get" && "text-medusa-tag-green-icon",
-                      method === "post" && "text-medusa-tag-blue-icon",
-                      method === "delete" && "text-medusa-tag-red-icon"
+                      method === "get" && "text-vikrai-tag-green-icon",
+                      method === "post" && "text-vikrai-tag-blue-icon",
+                      method === "delete" && "text-vikrai-tag-red-icon"
                     )}
                   >
                     {method.toUpperCase()}
                   </span>
                   <Link
                     href={`#${operationId}`}
-                    className="text-medusa-contrast-fg-secondary hover:text-medusa-contrast-fg-primary w-[85%]"
+                    className="text-vikrai-contrast-fg-secondary hover:text-vikrai-contrast-fg-primary w-[85%]"
                   >
                     {endpointPath}
                   </Link>
@@ -97,3 +97,4 @@ export const RoutesSummary = ({ tagName, paths }: RoutesSummaryProps) => {
     </div>
   )
 }
+

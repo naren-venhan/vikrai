@@ -1,6 +1,6 @@
-import { ICartModuleService } from "@medusajs/framework/types"
-import { BigNumber, Module, Modules } from "@medusajs/framework/utils"
-import { moduleIntegrationTestRunner } from "@medusajs/test-utils"
+import { ICartModuleService } from "@vikrai/framework/types"
+import { BigNumber, Module, Modules } from "@vikrai/framework/utils"
+import { moduleIntegrationTestRunner } from "@vikrai/test-utils"
 import { CheckConstraintViolationException } from "@mikro-orm/core"
 import { CartModuleService } from "@services"
 
@@ -3261,3 +3261,4 @@ moduleIntegrationTestRunner<ICartModuleService>({
     })
   },
 })
+

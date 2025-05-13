@@ -15,7 +15,7 @@ export interface CreatePricePreferencesWorkflowInput {
   /**
    * Whether prices matching this preference are tax inclusive.
    * 
-   * Learn more in [this documentation](https://docs.medusajs.com/resources/commerce-modules/pricing/tax-inclusive-pricing).
+   * Learn more in [this documentation](https://docs.vikrai.com/resources/commerce-modules/pricing/tax-inclusive-pricing).
    */
   is_tax_inclusive?: boolean
 }
@@ -30,3 +30,4 @@ export interface UpdatePricePreferencesWorkflowInput {
   selector: FilterablePricePreferenceProps
   update: UpdatePricePreferences
 }
+

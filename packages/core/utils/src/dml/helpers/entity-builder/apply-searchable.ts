@@ -2,7 +2,7 @@ import {
   EntityConstructor,
   PropertyMetadata,
   RelationshipMetadata,
-} from "@medusajs/types"
+} from "@vikrai/types"
 import { Searchable } from "../../../dal"
 
 /**
@@ -29,3 +29,4 @@ export function applySearchable(
 
   Searchable()(MikroORMEntity.prototype, propertyName)
 }
+

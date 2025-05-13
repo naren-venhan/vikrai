@@ -28,12 +28,12 @@ const notificationOptions: FormattingOptionsType = {
       
 As you implement your Notification Module Provider, it can be useful to refer to an existing provider and how it's implemeted.
 
-If you need to refer to an existing implementation as an example, check the [SendGrid Notification Module Provider in the Medusa repository](https://github.com/medusajs/medusa/tree/develop/packages/modules/providers/notification-sendgrid).`,
+If you need to refer to an existing implementation as an example, check the [SendGrid Notification Module Provider in the vikrai repository](https://github.com/vikrai/vikrai/tree/develop/packages/modules/providers/notification-sendgrid).`,
       `## 1. Create Module Provider Directory
 
 Start by creating a new directory for your module provider.
 
-If you're creating the module provider in a Medusa application, create it under the \`src/modules\` directory. For example, \`src/modules/my-notification\`.
+If you're creating the module provider in a vikrai application, create it under the \`src/modules\` directory. For example, \`src/modules/my-notification\`.
 
 If you're creating the module provider in a plugin, create it under the \`src/providers\` directory. For example, \`src/providers/my-notification\`.
 
@@ -46,12 +46,12 @@ The rest of this guide always uses the \`src/modules/my-notification\` directory
 
 Create the file \`src/modules/my-notification/service.ts\` that holds the implementation of the notification service.
 
-The Notification Module Provider's main service must extend the \`AbstractNotificationProviderService\` class imported from \`@medusajs/framework/utils\`:
+The Notification Module Provider's main service must extend the \`AbstractNotificationProviderService\` class imported from \`@vikrai/framework/utils\`:
 
 \`\`\`ts title="src/modules/my-notification/service.ts"
 import { 
   AbstractNotificationProviderService
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 
 class MyNotificationProviderService extends AbstractNotificationProviderService {
   // TODO add methods
@@ -70,7 +70,7 @@ import MyNotificationProviderService from "./service"
 import { 
   ModuleProvider, 
   Modules
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 
 export default ModuleProvider(Modules.NOTIFICATION, {
   services: [MyNotificationProviderService],
@@ -86,7 +86,7 @@ A notification module provider can have export multiple provider services, where
 </Note>`,
       `## 4. Use Module Provider
 
-To use your Notification Module Provider, add it to the \`providers\` array of the Notification Module in \`medusa-config.ts\`:
+To use your Notification Module Provider, add it to the \`providers\` array of the Notification Module in \`vikrai-config.ts\`:
 
 <Note>
 
@@ -94,17 +94,17 @@ The Notification Module accepts one provider per channel.
 
 </Note>
 
-\`\`\`ts title="medusa-config.ts"
+\`\`\`ts title="vikrai-config.ts"
 module.exports = defineConfig({
   // ...
   modules: [
     {
-      resolve: "@medusajs/medusa/notification",
+      resolve: "@vikrai/vikrai/notification",
       options: {
         providers: [
           // default provider
           {
-            resolve: "@medusajs/medusa/notification-local",
+            resolve: "@vikrai/vikrai/notification-local",
             id: "local",
             options: {
               name: "Local Notification Provider",
@@ -135,11 +135,11 @@ Make sure to specify the correct channels for your provider in the \`channels\` 
 To test out the provider, create a subscriber at \`src/subscribers/user-created.ts\` with the following content:
 
 \`\`\`ts title="src/subscribers/user-created.ts"
-import { Modules } from "@medusajs/framework/utils"
+import { Modules } from "@vikrai/framework/utils"
 import {
   SubscriberArgs,
   type SubscriberConfig,
-} from "@medusajs/medusa"
+} from "@vikrai/vikrai"
 
 export default async function userCreatedHandler({
   event: { data },
@@ -177,7 +177,7 @@ Make sure to replace the value of \`template\` to the ID of the template in your
 Use the following command to create a user:
 
 \`\`\`bash
-npx medusa user -e admin@test.com -p supersecret
+npx vikrai user -e admin@test.com -p supersecret
 \`\`\`
 
 After the user is created, the subscriber is executed, sending the notification using your provider.
@@ -187,3 +187,4 @@ After the user is created, the subscriber is executed, sending the notification 
 }
 
 export default notificationOptions
+

@@ -1,5 +1,5 @@
-import { ArrowsPointingOut, CircleSliders } from "@medusajs/icons"
-import { clx } from "@medusajs/ui"
+import { ArrowsPointingOut, CircleSliders } from "@vikrai/icons"
+import { clx } from "@vikrai/ui"
 import { useCallback, useEffect, useRef, useState } from "react"
 import CurrencyInput, {
   CurrencyInputProps,
@@ -259,3 +259,4 @@ const Inner = ({
     </div>
   )
 }
+

@@ -2,7 +2,7 @@
  * @oas [get] /admin/plugins
  * operationId: GetPlugins
  * summary: List Plugins
- * description: Retrieve the list of plugins installed in the Medusa application.
+ * description: Retrieve the list of plugins installed in the vikrai application.
  * x-authenticated: true
  * security:
  *   - api_token: []
@@ -12,9 +12,9 @@
  *   - lang: JavaScript
  *     label: JS SDK
  *     source: |-
- *       import Medusa from "@medusajs/js-sdk"
+ *       import vikrai from "@vikrai/js-sdk"
  * 
- *       export const sdk = new Medusa({
+ *       export const sdk = new vikrai({
  *         baseUrl: import.meta.env.VITE_BACKEND_URL || "/",
  *         debug: import.meta.env.DEV,
  *         auth: {
@@ -54,4 +54,5 @@
  *     $ref: "#/components/responses/500_error"
  * 
 */
+
 

@@ -1,14 +1,14 @@
 {
-  "name": "@medusajs/ui-preset",
+  "name": "@vikrai/ui-preset",
   "version": "2.7.1",
-  "description": "Medusa UI preset",
+  "description": "vikrai UI preset",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/medusajs/medusa.git",
+    "url": "https://github.com/vikrai/vikrai.git",
     "directory": "packages/design-system/ui-preset"
   },
-  "author": "Kasper Kristensen <kasper@medusajs.com>",
+  "author": "Kasper Kristensen <kasper@vikrai.com>",
   "exports": {
     ".": {
       "import": "./dist/index.mjs",
@@ -30,7 +30,7 @@
     "tailwindcss": ">=3.0.0"
   },
   "devDependencies": {
-    "@medusajs/toolbox": "2.7.1",
+    "@vikrai/toolbox": "2.7.1",
     "tailwindcss": "^3.4.1",
     "tsup": "^7.1.0",
     "typescript": "^5.1.6"
@@ -39,3 +39,4 @@
     "access": "public"
   }
 }
+

@@ -1,6 +1,6 @@
-import { ITaxModuleService } from "@medusajs/framework/types"
-import { Modules } from "@medusajs/framework/utils"
-import { createStep, StepResponse } from "@medusajs/framework/workflows-sdk"
+import { ITaxModuleService } from "@vikrai/framework/types"
+import { Modules } from "@vikrai/framework/utils"
+import { createStep, StepResponse } from "@vikrai/framework/workflows-sdk"
 
 /**
  * The IDs of the tax rates to delete.
@@ -30,3 +30,4 @@ export const deleteTaxRatesStep = createStep(
     await service.restoreTaxRates(prevIds)
   }
 )
+

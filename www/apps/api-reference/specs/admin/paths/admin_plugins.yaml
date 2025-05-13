@@ -1,7 +1,7 @@
 get:
   operationId: GetPlugins
   summary: List Plugins
-  description: Retrieve the list of plugins installed in the Medusa application.
+  description: Retrieve the list of plugins installed in the vikrai application.
   x-authenticated: true
   security:
     - api_token: []
@@ -37,3 +37,4 @@ get:
       $ref: ../components/responses/invalid_request_error.yaml
     '500':
       $ref: ../components/responses/500_error.yaml
+

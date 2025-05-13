@@ -5,7 +5,7 @@ import {
   Spinner,
   XCircleSolid,
   XMark,
-} from "@medusajs/icons"
+} from "@vikrai/icons"
 import * as React from "react"
 import { toast } from "sonner"
 
@@ -151,3 +151,4 @@ export const Toast = ({
     </div>
   )
 }
+

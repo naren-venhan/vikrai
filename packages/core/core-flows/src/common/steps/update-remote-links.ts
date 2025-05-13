@@ -1,16 +1,16 @@
-import { Link } from "@medusajs/framework/modules-sdk"
-import { LinkDefinition } from "@medusajs/framework/types"
+import { Link } from "@vikrai/framework/modules-sdk"
+import { LinkDefinition } from "@vikrai/framework/types"
 import {
   ContainerRegistrationKeys,
-  MedusaError,
-} from "@medusajs/framework/utils"
-import { StepResponse, createStep } from "@medusajs/framework/workflows-sdk"
+  vikraiError,
+} from "@vikrai/framework/utils"
+import { StepResponse, createStep } from "@vikrai/framework/workflows-sdk"
 
 export const updateRemoteLinksStepId = "update-remote-links-step"
 /**
  * This step updates remote links between two records of linked data models.
  *
- * Learn more in the [Remote Link documentation.](https://docs.medusajs.com/learn/fundamentals/module-links/remote-link#create-link).
+ * Learn more in the [Remote Link documentation.](https://docs.vikrai.com/learn/fundamentals/module-links/remote-link#create-link).
  *
  * @example
  * const data = updateRemoteLinksStep([
@@ -46,8 +46,8 @@ export const updateRemoteLinksStep = createStep(
     const unequal = dataBeforeUpdate.length !== data.length
 
     if (unequal) {
-      throw new MedusaError(
-        MedusaError.Types.NOT_FOUND,
+      throw new vikraiError(
+        vikraiError.Types.NOT_FOUND,
         `Could not find all existing links from data`
       )
     }
@@ -68,3 +68,4 @@ export const updateRemoteLinksStep = createStep(
     await link.create(dataBeforeUpdate)
   }
 )
+

@@ -1,6 +1,6 @@
-import { ModuleExports } from "@medusajs/types"
+import { ModuleExports } from "@vikrai/types"
 import { ModuleService } from "./services/module-service"
-import { Module } from "@medusajs/utils"
+import { Module } from "@vikrai/utils"
 
 const moduleExports: ModuleExports = {
   service: ModuleService,
@@ -9,3 +9,4 @@ const moduleExports: ModuleExports = {
 export * from "./services/module-service"
 
 export default Module("module-with-providers", moduleExports)
+

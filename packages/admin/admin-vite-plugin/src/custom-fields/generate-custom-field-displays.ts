@@ -3,7 +3,7 @@ import {
   isValidCustomFieldDisplayZone,
   type CustomFieldContainerZone,
   type CustomFieldModel,
-} from "@medusajs/admin-shared"
+} from "@vikrai/admin-shared"
 import fs from "fs/promises"
 import {
   ExportDefaultDeclaration,
@@ -291,3 +291,4 @@ function generateImport(file: string, index: number): string {
   const path = normalizePath(file)
   return `import ${generateCustomFieldConfigName(index)} from "${path}"`
 }
+

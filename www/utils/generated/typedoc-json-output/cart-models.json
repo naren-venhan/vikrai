@@ -30,7 +30,7 @@
 					"fileName": "address.ts",
 					"line": 3,
 					"character": 6,
-					"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/address.ts#L3"
+					"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/address.ts#L3"
 				}
 			],
 			"type": {
@@ -75,7 +75,7 @@
 													"fileName": "address.ts",
 													"line": 6,
 													"character": 4,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/address.ts#L6"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/address.ts#L6"
 												}
 											],
 											"type": {
@@ -92,11 +92,11 @@
 															"qualifiedName": "IdProperty"
 														},
 														"name": "IdProperty",
-														"package": "@medusajs/utils"
+														"package": "@vikrai/utils"
 													}
 												],
 												"name": "PrimaryKeyModifier",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -121,7 +121,7 @@
 													"fileName": "address.ts",
 													"line": 7,
 													"character": 4,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/address.ts#L7"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/address.ts#L7"
 												}
 											],
 											"type": {
@@ -131,7 +131,7 @@
 													"qualifiedName": "TextProperty"
 												},
 												"name": "TextProperty",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -156,7 +156,7 @@
 													"fileName": "address.ts",
 													"line": 8,
 													"character": 4,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/address.ts#L8"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/address.ts#L8"
 												}
 											],
 											"type": {
@@ -166,7 +166,7 @@
 													"qualifiedName": "TextProperty"
 												},
 												"name": "TextProperty",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -191,7 +191,7 @@
 													"fileName": "address.ts",
 													"line": 9,
 													"character": 4,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/address.ts#L9"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/address.ts#L9"
 												}
 											],
 											"type": {
@@ -201,7 +201,7 @@
 													"qualifiedName": "TextProperty"
 												},
 												"name": "TextProperty",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -226,7 +226,7 @@
 													"fileName": "address.ts",
 													"line": 10,
 													"character": 4,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/address.ts#L10"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/address.ts#L10"
 												}
 											],
 											"type": {
@@ -236,7 +236,7 @@
 													"qualifiedName": "TextProperty"
 												},
 												"name": "TextProperty",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -261,7 +261,7 @@
 													"fileName": "address.ts",
 													"line": 11,
 													"character": 4,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/address.ts#L11"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/address.ts#L11"
 												}
 											],
 											"type": {
@@ -271,7 +271,7 @@
 													"qualifiedName": "TextProperty"
 												},
 												"name": "TextProperty",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -296,7 +296,7 @@
 													"fileName": "address.ts",
 													"line": 12,
 													"character": 4,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/address.ts#L12"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/address.ts#L12"
 												}
 											],
 											"type": {
@@ -306,7 +306,7 @@
 													"qualifiedName": "TextProperty"
 												},
 												"name": "TextProperty",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -331,7 +331,7 @@
 													"fileName": "address.ts",
 													"line": 13,
 													"character": 4,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/address.ts#L13"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/address.ts#L13"
 												}
 											],
 											"type": {
@@ -341,7 +341,7 @@
 													"qualifiedName": "TextProperty"
 												},
 												"name": "TextProperty",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -366,7 +366,7 @@
 													"fileName": "address.ts",
 													"line": 14,
 													"character": 4,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/address.ts#L14"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/address.ts#L14"
 												}
 											],
 											"type": {
@@ -376,7 +376,7 @@
 													"qualifiedName": "TextProperty"
 												},
 												"name": "TextProperty",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -401,7 +401,7 @@
 													"fileName": "address.ts",
 													"line": 15,
 													"character": 4,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/address.ts#L15"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/address.ts#L15"
 												}
 											],
 											"type": {
@@ -411,7 +411,7 @@
 													"qualifiedName": "TextProperty"
 												},
 												"name": "TextProperty",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -436,7 +436,7 @@
 													"fileName": "address.ts",
 													"line": 16,
 													"character": 4,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/address.ts#L16"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/address.ts#L16"
 												}
 											],
 											"type": {
@@ -446,7 +446,7 @@
 													"qualifiedName": "TextProperty"
 												},
 												"name": "TextProperty",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -471,7 +471,7 @@
 													"fileName": "address.ts",
 													"line": 17,
 													"character": 4,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/address.ts#L17"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/address.ts#L17"
 												}
 											],
 											"type": {
@@ -481,7 +481,7 @@
 													"qualifiedName": "TextProperty"
 												},
 												"name": "TextProperty",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -506,7 +506,7 @@
 													"fileName": "address.ts",
 													"line": 18,
 													"character": 4,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/address.ts#L18"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/address.ts#L18"
 												}
 											],
 											"type": {
@@ -516,7 +516,7 @@
 													"qualifiedName": "JSONProperty"
 												},
 												"name": "JSONProperty",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										}
@@ -546,14 +546,14 @@
 											"fileName": "address.ts",
 											"line": 5,
 											"character": 2,
-											"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/address.ts#L5"
+											"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/address.ts#L5"
 										}
 									]
 								}
 							}
 						],
 						"name": "DMLEntitySchemaBuilder",
-						"package": "@medusajs/utils"
+						"package": "@vikrai/utils"
 					},
 					{
 						"type": "reflection",
@@ -577,7 +577,7 @@
 											"fileName": "address.ts",
 											"line": 4,
 											"character": 4,
-											"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/address.ts#L4"
+											"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/address.ts#L4"
 										}
 									],
 									"type": {
@@ -599,7 +599,7 @@
 											"fileName": "address.ts",
 											"line": 4,
 											"character": 31,
-											"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/address.ts#L4"
+											"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/address.ts#L4"
 										}
 									],
 									"type": {
@@ -623,14 +623,14 @@
 									"fileName": "address.ts",
 									"line": 4,
 									"character": 2,
-									"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/address.ts#L4"
+									"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/address.ts#L4"
 								}
 							]
 						}
 					}
 				],
 				"name": "DmlEntity",
-				"package": "@medusajs/utils"
+				"package": "@vikrai/utils"
 			},
 			"defaultValue": "..."
 		},
@@ -647,7 +647,7 @@
 					"fileName": "cart.ts",
 					"line": 7,
 					"character": 6,
-					"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/cart.ts#L7"
+					"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/cart.ts#L7"
 				}
 			],
 			"type": {
@@ -692,7 +692,7 @@
 													"fileName": "cart.ts",
 													"line": 9,
 													"character": 4,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/cart.ts#L9"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/cart.ts#L9"
 												}
 											],
 											"type": {
@@ -709,11 +709,11 @@
 															"qualifiedName": "IdProperty"
 														},
 														"name": "IdProperty",
-														"package": "@medusajs/utils"
+														"package": "@vikrai/utils"
 													}
 												],
 												"name": "PrimaryKeyModifier",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -738,7 +738,7 @@
 													"fileName": "cart.ts",
 													"line": 10,
 													"character": 4,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/cart.ts#L10"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/cart.ts#L10"
 												}
 											],
 											"type": {
@@ -748,7 +748,7 @@
 													"qualifiedName": "TextProperty"
 												},
 												"name": "TextProperty",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -773,7 +773,7 @@
 													"fileName": "cart.ts",
 													"line": 11,
 													"character": 4,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/cart.ts#L11"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/cart.ts#L11"
 												}
 											],
 											"type": {
@@ -783,7 +783,7 @@
 													"qualifiedName": "TextProperty"
 												},
 												"name": "TextProperty",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -808,7 +808,7 @@
 													"fileName": "cart.ts",
 													"line": 12,
 													"character": 4,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/cart.ts#L12"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/cart.ts#L12"
 												}
 											],
 											"type": {
@@ -818,7 +818,7 @@
 													"qualifiedName": "TextProperty"
 												},
 												"name": "TextProperty",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -843,7 +843,7 @@
 													"fileName": "cart.ts",
 													"line": 13,
 													"character": 4,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/cart.ts#L13"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/cart.ts#L13"
 												}
 											],
 											"type": {
@@ -853,7 +853,7 @@
 													"qualifiedName": "TextProperty"
 												},
 												"name": "TextProperty",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -876,7 +876,7 @@
 													"fileName": "cart.ts",
 													"line": 14,
 													"character": 4,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/cart.ts#L14"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/cart.ts#L14"
 												}
 											],
 											"type": {
@@ -886,7 +886,7 @@
 													"qualifiedName": "TextProperty"
 												},
 												"name": "TextProperty",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -911,7 +911,7 @@
 													"fileName": "cart.ts",
 													"line": 15,
 													"character": 4,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/cart.ts#L15"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/cart.ts#L15"
 												}
 											],
 											"type": {
@@ -921,7 +921,7 @@
 													"qualifiedName": "JSONProperty"
 												},
 												"name": "JSONProperty",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -946,7 +946,7 @@
 													"fileName": "cart.ts",
 													"line": 16,
 													"character": 4,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/cart.ts#L16"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/cart.ts#L16"
 												}
 											],
 											"type": {
@@ -956,7 +956,7 @@
 													"qualifiedName": "DateTimeProperty"
 												},
 												"name": "DateTimeProperty",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -984,7 +984,7 @@
 													"fileName": "cart.ts",
 													"line": 17,
 													"character": 4,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/cart.ts#L17"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/cart.ts#L17"
 												}
 											],
 											"type": {
@@ -1001,7 +1001,7 @@
 													}
 												],
 												"name": "HasOneWithForeignKey",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -1029,7 +1029,7 @@
 													"fileName": "cart.ts",
 													"line": 23,
 													"character": 4,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/cart.ts#L23"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/cart.ts#L23"
 												}
 											],
 											"type": {
@@ -1046,7 +1046,7 @@
 													}
 												],
 												"name": "HasOneWithForeignKey",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -1072,7 +1072,7 @@
 													"fileName": "cart.ts",
 													"line": 29,
 													"character": 4,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/cart.ts#L29"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/cart.ts#L29"
 												}
 											],
 											"type": {
@@ -1089,7 +1089,7 @@
 													}
 												],
 												"name": "HasMany",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -1115,7 +1115,7 @@
 													"fileName": "cart.ts",
 													"line": 32,
 													"character": 4,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/cart.ts#L32"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/cart.ts#L32"
 												}
 											],
 											"type": {
@@ -1132,7 +1132,7 @@
 													}
 												],
 												"name": "HasMany",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -1158,7 +1158,7 @@
 													"fileName": "cart.ts",
 													"line": 35,
 													"character": 4,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/cart.ts#L35"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/cart.ts#L35"
 												}
 											],
 											"type": {
@@ -1175,7 +1175,7 @@
 													}
 												],
 												"name": "HasMany",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										}
@@ -1205,14 +1205,14 @@
 											"fileName": "cart.ts",
 											"line": 8,
 											"character": 18,
-											"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/cart.ts#L8"
+											"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/cart.ts#L8"
 										}
 									]
 								}
 							}
 						],
 						"name": "DMLEntitySchemaBuilder",
-						"package": "@medusajs/utils"
+						"package": "@vikrai/utils"
 					},
 					{
 						"type": "literal",
@@ -1220,7 +1220,7 @@
 					}
 				],
 				"name": "DmlEntity",
-				"package": "@medusajs/utils"
+				"package": "@vikrai/utils"
 			},
 			"defaultValue": "..."
 		},
@@ -1237,7 +1237,7 @@
 					"fileName": "credit-line.ts",
 					"line": 4,
 					"character": 6,
-					"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/credit-line.ts#L4"
+					"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/credit-line.ts#L4"
 				}
 			],
 			"type": {
@@ -1282,7 +1282,7 @@
 													"fileName": "credit-line.ts",
 													"line": 6,
 													"character": 4,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/credit-line.ts#L6"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/credit-line.ts#L6"
 												}
 											],
 											"type": {
@@ -1299,11 +1299,11 @@
 															"qualifiedName": "IdProperty"
 														},
 														"name": "IdProperty",
-														"package": "@medusajs/utils"
+														"package": "@vikrai/utils"
 													}
 												],
 												"name": "PrimaryKeyModifier",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -1329,7 +1329,7 @@
 													"fileName": "credit-line.ts",
 													"line": 7,
 													"character": 4,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/credit-line.ts#L7"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/credit-line.ts#L7"
 												}
 											],
 											"type": {
@@ -1346,7 +1346,7 @@
 													}
 												],
 												"name": "BelongsTo",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -1371,7 +1371,7 @@
 													"fileName": "credit-line.ts",
 													"line": 10,
 													"character": 4,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/credit-line.ts#L10"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/credit-line.ts#L10"
 												}
 											],
 											"type": {
@@ -1381,7 +1381,7 @@
 													"qualifiedName": "TextProperty"
 												},
 												"name": "TextProperty",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -1406,7 +1406,7 @@
 													"fileName": "credit-line.ts",
 													"line": 11,
 													"character": 4,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/credit-line.ts#L11"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/credit-line.ts#L11"
 												}
 											],
 											"type": {
@@ -1416,7 +1416,7 @@
 													"qualifiedName": "TextProperty"
 												},
 												"name": "TextProperty",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -1439,7 +1439,7 @@
 													"fileName": "credit-line.ts",
 													"line": 12,
 													"character": 4,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/credit-line.ts#L12"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/credit-line.ts#L12"
 												}
 											],
 											"type": {
@@ -1449,7 +1449,7 @@
 													"qualifiedName": "BigNumberProperty"
 												},
 												"name": "BigNumberProperty",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -1472,7 +1472,7 @@
 													"fileName": "credit-line.ts",
 													"line": 13,
 													"character": 4,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/credit-line.ts#L13"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/credit-line.ts#L13"
 												}
 											],
 											"type": {
@@ -1482,7 +1482,7 @@
 													"qualifiedName": "JSONProperty"
 												},
 												"name": "JSONProperty",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -1507,7 +1507,7 @@
 													"fileName": "credit-line.ts",
 													"line": 14,
 													"character": 4,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/credit-line.ts#L14"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/credit-line.ts#L14"
 												}
 											],
 											"type": {
@@ -1517,7 +1517,7 @@
 													"qualifiedName": "JSONProperty"
 												},
 												"name": "JSONProperty",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										}
@@ -1541,14 +1541,14 @@
 											"fileName": "credit-line.ts",
 											"line": 5,
 											"character": 24,
-											"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/credit-line.ts#L5"
+											"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/credit-line.ts#L5"
 										}
 									]
 								}
 							}
 						],
 						"name": "DMLEntitySchemaBuilder",
-						"package": "@medusajs/utils"
+						"package": "@vikrai/utils"
 					},
 					{
 						"type": "literal",
@@ -1556,7 +1556,7 @@
 					}
 				],
 				"name": "DmlEntity",
-				"package": "@medusajs/utils"
+				"package": "@vikrai/utils"
 			},
 			"defaultValue": "..."
 		},
@@ -1573,7 +1573,7 @@
 					"fileName": "line-item-adjustment.ts",
 					"line": 4,
 					"character": 6,
-					"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item-adjustment.ts#L4"
+					"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item-adjustment.ts#L4"
 				}
 			],
 			"type": {
@@ -1618,7 +1618,7 @@
 													"fileName": "line-item-adjustment.ts",
 													"line": 8,
 													"character": 6,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item-adjustment.ts#L8"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item-adjustment.ts#L8"
 												}
 											],
 											"type": {
@@ -1635,11 +1635,11 @@
 															"qualifiedName": "IdProperty"
 														},
 														"name": "IdProperty",
-														"package": "@medusajs/utils"
+														"package": "@vikrai/utils"
 													}
 												],
 												"name": "PrimaryKeyModifier",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -1664,7 +1664,7 @@
 													"fileName": "line-item-adjustment.ts",
 													"line": 9,
 													"character": 6,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item-adjustment.ts#L9"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item-adjustment.ts#L9"
 												}
 											],
 											"type": {
@@ -1674,7 +1674,7 @@
 													"qualifiedName": "TextProperty"
 												},
 												"name": "TextProperty",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -1699,7 +1699,7 @@
 													"fileName": "line-item-adjustment.ts",
 													"line": 10,
 													"character": 6,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item-adjustment.ts#L10"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item-adjustment.ts#L10"
 												}
 											],
 											"type": {
@@ -1709,7 +1709,7 @@
 													"qualifiedName": "TextProperty"
 												},
 												"name": "TextProperty",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -1732,7 +1732,7 @@
 													"fileName": "line-item-adjustment.ts",
 													"line": 11,
 													"character": 6,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item-adjustment.ts#L11"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item-adjustment.ts#L11"
 												}
 											],
 											"type": {
@@ -1742,7 +1742,7 @@
 													"qualifiedName": "BigNumberProperty"
 												},
 												"name": "BigNumberProperty",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -1767,7 +1767,7 @@
 													"fileName": "line-item-adjustment.ts",
 													"line": 12,
 													"character": 6,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item-adjustment.ts#L12"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item-adjustment.ts#L12"
 												}
 											],
 											"type": {
@@ -1777,7 +1777,7 @@
 													"qualifiedName": "TextProperty"
 												},
 												"name": "TextProperty",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -1802,7 +1802,7 @@
 													"fileName": "line-item-adjustment.ts",
 													"line": 13,
 													"character": 6,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item-adjustment.ts#L13"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item-adjustment.ts#L13"
 												}
 											],
 											"type": {
@@ -1812,7 +1812,7 @@
 													"qualifiedName": "TextProperty"
 												},
 												"name": "TextProperty",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -1837,7 +1837,7 @@
 													"fileName": "line-item-adjustment.ts",
 													"line": 14,
 													"character": 6,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item-adjustment.ts#L14"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item-adjustment.ts#L14"
 												}
 											],
 											"type": {
@@ -1847,7 +1847,7 @@
 													"qualifiedName": "JSONProperty"
 												},
 												"name": "JSONProperty",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -1873,7 +1873,7 @@
 													"fileName": "line-item-adjustment.ts",
 													"line": 15,
 													"character": 6,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item-adjustment.ts#L15"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item-adjustment.ts#L15"
 												}
 											],
 											"type": {
@@ -1890,7 +1890,7 @@
 													}
 												],
 												"name": "BelongsTo",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										}
@@ -1915,14 +1915,14 @@
 											"fileName": "line-item-adjustment.ts",
 											"line": 7,
 											"character": 4,
-											"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item-adjustment.ts#L7"
+											"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item-adjustment.ts#L7"
 										}
 									]
 								}
 							}
 						],
 						"name": "DMLEntitySchemaBuilder",
-						"package": "@medusajs/utils"
+						"package": "@vikrai/utils"
 					},
 					{
 						"type": "reflection",
@@ -1946,7 +1946,7 @@
 											"fileName": "line-item-adjustment.ts",
 											"line": 6,
 											"character": 6,
-											"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item-adjustment.ts#L6"
+											"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item-adjustment.ts#L6"
 										}
 									],
 									"type": {
@@ -1968,7 +1968,7 @@
 											"fileName": "line-item-adjustment.ts",
 											"line": 6,
 											"character": 34,
-											"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item-adjustment.ts#L6"
+											"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item-adjustment.ts#L6"
 										}
 									],
 									"type": {
@@ -1992,14 +1992,14 @@
 									"fileName": "line-item-adjustment.ts",
 									"line": 6,
 									"character": 4,
-									"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item-adjustment.ts#L6"
+									"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item-adjustment.ts#L6"
 								}
 							]
 						}
 					}
 				],
 				"name": "DmlEntity",
-				"package": "@medusajs/utils"
+				"package": "@vikrai/utils"
 			},
 			"defaultValue": "..."
 		},
@@ -2016,7 +2016,7 @@
 					"fileName": "line-item-tax-line.ts",
 					"line": 4,
 					"character": 6,
-					"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item-tax-line.ts#L4"
+					"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item-tax-line.ts#L4"
 				}
 			],
 			"type": {
@@ -2061,7 +2061,7 @@
 													"fileName": "line-item-tax-line.ts",
 													"line": 11,
 													"character": 6,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item-tax-line.ts#L11"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item-tax-line.ts#L11"
 												}
 											],
 											"type": {
@@ -2078,11 +2078,11 @@
 															"qualifiedName": "IdProperty"
 														},
 														"name": "IdProperty",
-														"package": "@medusajs/utils"
+														"package": "@vikrai/utils"
 													}
 												],
 												"name": "PrimaryKeyModifier",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -2107,7 +2107,7 @@
 													"fileName": "line-item-tax-line.ts",
 													"line": 12,
 													"character": 6,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item-tax-line.ts#L12"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item-tax-line.ts#L12"
 												}
 											],
 											"type": {
@@ -2117,7 +2117,7 @@
 													"qualifiedName": "TextProperty"
 												},
 												"name": "TextProperty",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -2140,7 +2140,7 @@
 													"fileName": "line-item-tax-line.ts",
 													"line": 13,
 													"character": 6,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item-tax-line.ts#L13"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item-tax-line.ts#L13"
 												}
 											],
 											"type": {
@@ -2150,7 +2150,7 @@
 													"qualifiedName": "TextProperty"
 												},
 												"name": "TextProperty",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -2173,7 +2173,7 @@
 													"fileName": "line-item-tax-line.ts",
 													"line": 14,
 													"character": 6,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item-tax-line.ts#L14"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item-tax-line.ts#L14"
 												}
 											],
 											"type": {
@@ -2183,7 +2183,7 @@
 													"qualifiedName": "FloatProperty"
 												},
 												"name": "FloatProperty",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -2208,7 +2208,7 @@
 													"fileName": "line-item-tax-line.ts",
 													"line": 15,
 													"character": 6,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item-tax-line.ts#L15"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item-tax-line.ts#L15"
 												}
 											],
 											"type": {
@@ -2218,7 +2218,7 @@
 													"qualifiedName": "TextProperty"
 												},
 												"name": "TextProperty",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -2243,7 +2243,7 @@
 													"fileName": "line-item-tax-line.ts",
 													"line": 16,
 													"character": 6,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item-tax-line.ts#L16"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item-tax-line.ts#L16"
 												}
 											],
 											"type": {
@@ -2253,7 +2253,7 @@
 													"qualifiedName": "JSONProperty"
 												},
 												"name": "JSONProperty",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -2278,7 +2278,7 @@
 													"fileName": "line-item-tax-line.ts",
 													"line": 17,
 													"character": 6,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item-tax-line.ts#L17"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item-tax-line.ts#L17"
 												}
 											],
 											"type": {
@@ -2288,7 +2288,7 @@
 													"qualifiedName": "TextProperty"
 												},
 												"name": "TextProperty",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -2314,7 +2314,7 @@
 													"fileName": "line-item-tax-line.ts",
 													"line": 18,
 													"character": 6,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item-tax-line.ts#L18"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item-tax-line.ts#L18"
 												}
 											],
 											"type": {
@@ -2331,7 +2331,7 @@
 													}
 												],
 												"name": "BelongsTo",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										}
@@ -2356,14 +2356,14 @@
 											"fileName": "line-item-tax-line.ts",
 											"line": 10,
 											"character": 4,
-											"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item-tax-line.ts#L10"
+											"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item-tax-line.ts#L10"
 										}
 									]
 								}
 							}
 						],
 						"name": "DMLEntitySchemaBuilder",
-						"package": "@medusajs/utils"
+						"package": "@vikrai/utils"
 					},
 					{
 						"type": "reflection",
@@ -2387,7 +2387,7 @@
 											"fileName": "line-item-tax-line.ts",
 											"line": 7,
 											"character": 6,
-											"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item-tax-line.ts#L7"
+											"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item-tax-line.ts#L7"
 										}
 									],
 									"type": {
@@ -2409,7 +2409,7 @@
 											"fileName": "line-item-tax-line.ts",
 											"line": 8,
 											"character": 6,
-											"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item-tax-line.ts#L8"
+											"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item-tax-line.ts#L8"
 										}
 									],
 									"type": {
@@ -2433,14 +2433,14 @@
 									"fileName": "line-item-tax-line.ts",
 									"line": 6,
 									"character": 4,
-									"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item-tax-line.ts#L6"
+									"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item-tax-line.ts#L6"
 								}
 							]
 						}
 					}
 				],
 				"name": "DmlEntity",
-				"package": "@medusajs/utils"
+				"package": "@vikrai/utils"
 			},
 			"defaultValue": "..."
 		},
@@ -2457,7 +2457,7 @@
 					"fileName": "line-item.ts",
 					"line": 6,
 					"character": 6,
-					"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item.ts#L6"
+					"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item.ts#L6"
 				}
 			],
 			"type": {
@@ -2502,7 +2502,7 @@
 													"fileName": "line-item.ts",
 													"line": 10,
 													"character": 6,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item.ts#L10"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item.ts#L10"
 												}
 											],
 											"type": {
@@ -2519,11 +2519,11 @@
 															"qualifiedName": "IdProperty"
 														},
 														"name": "IdProperty",
-														"package": "@medusajs/utils"
+														"package": "@vikrai/utils"
 													}
 												],
 												"name": "PrimaryKeyModifier",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -2546,7 +2546,7 @@
 													"fileName": "line-item.ts",
 													"line": 11,
 													"character": 6,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item.ts#L11"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item.ts#L11"
 												}
 											],
 											"type": {
@@ -2556,7 +2556,7 @@
 													"qualifiedName": "TextProperty"
 												},
 												"name": "TextProperty",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -2581,7 +2581,7 @@
 													"fileName": "line-item.ts",
 													"line": 12,
 													"character": 6,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item.ts#L12"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item.ts#L12"
 												}
 											],
 											"type": {
@@ -2591,7 +2591,7 @@
 													"qualifiedName": "TextProperty"
 												},
 												"name": "TextProperty",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -2616,7 +2616,7 @@
 													"fileName": "line-item.ts",
 													"line": 13,
 													"character": 6,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item.ts#L13"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item.ts#L13"
 												}
 											],
 											"type": {
@@ -2626,7 +2626,7 @@
 													"qualifiedName": "TextProperty"
 												},
 												"name": "TextProperty",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -2649,7 +2649,7 @@
 													"fileName": "line-item.ts",
 													"line": 14,
 													"character": 6,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item.ts#L14"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item.ts#L14"
 												}
 											],
 											"type": {
@@ -2659,7 +2659,7 @@
 													"qualifiedName": "NumberProperty"
 												},
 												"name": "NumberProperty",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -2684,7 +2684,7 @@
 													"fileName": "line-item.ts",
 													"line": 15,
 													"character": 6,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item.ts#L15"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item.ts#L15"
 												}
 											],
 											"type": {
@@ -2694,7 +2694,7 @@
 													"qualifiedName": "TextProperty"
 												},
 												"name": "TextProperty",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -2719,7 +2719,7 @@
 													"fileName": "line-item.ts",
 													"line": 16,
 													"character": 6,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item.ts#L16"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item.ts#L16"
 												}
 											],
 											"type": {
@@ -2729,7 +2729,7 @@
 													"qualifiedName": "TextProperty"
 												},
 												"name": "TextProperty",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -2754,7 +2754,7 @@
 													"fileName": "line-item.ts",
 													"line": 17,
 													"character": 6,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item.ts#L17"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item.ts#L17"
 												}
 											],
 											"type": {
@@ -2764,7 +2764,7 @@
 													"qualifiedName": "TextProperty"
 												},
 												"name": "TextProperty",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -2789,7 +2789,7 @@
 													"fileName": "line-item.ts",
 													"line": 18,
 													"character": 6,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item.ts#L18"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item.ts#L18"
 												}
 											],
 											"type": {
@@ -2799,7 +2799,7 @@
 													"qualifiedName": "TextProperty"
 												},
 												"name": "TextProperty",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -2824,7 +2824,7 @@
 													"fileName": "line-item.ts",
 													"line": 19,
 													"character": 6,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item.ts#L19"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item.ts#L19"
 												}
 											],
 											"type": {
@@ -2834,7 +2834,7 @@
 													"qualifiedName": "TextProperty"
 												},
 												"name": "TextProperty",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -2859,7 +2859,7 @@
 													"fileName": "line-item.ts",
 													"line": 20,
 													"character": 6,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item.ts#L20"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item.ts#L20"
 												}
 											],
 											"type": {
@@ -2869,7 +2869,7 @@
 													"qualifiedName": "TextProperty"
 												},
 												"name": "TextProperty",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -2894,7 +2894,7 @@
 													"fileName": "line-item.ts",
 													"line": 21,
 													"character": 6,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item.ts#L21"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item.ts#L21"
 												}
 											],
 											"type": {
@@ -2904,7 +2904,7 @@
 													"qualifiedName": "TextProperty"
 												},
 												"name": "TextProperty",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -2929,7 +2929,7 @@
 													"fileName": "line-item.ts",
 													"line": 22,
 													"character": 6,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item.ts#L22"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item.ts#L22"
 												}
 											],
 											"type": {
@@ -2939,7 +2939,7 @@
 													"qualifiedName": "TextProperty"
 												},
 												"name": "TextProperty",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -2964,7 +2964,7 @@
 													"fileName": "line-item.ts",
 													"line": 23,
 													"character": 6,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item.ts#L23"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item.ts#L23"
 												}
 											],
 											"type": {
@@ -2974,7 +2974,7 @@
 													"qualifiedName": "TextProperty"
 												},
 												"name": "TextProperty",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -2999,7 +2999,7 @@
 													"fileName": "line-item.ts",
 													"line": 24,
 													"character": 6,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item.ts#L24"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item.ts#L24"
 												}
 											],
 											"type": {
@@ -3009,7 +3009,7 @@
 													"qualifiedName": "TextProperty"
 												},
 												"name": "TextProperty",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -3034,7 +3034,7 @@
 													"fileName": "line-item.ts",
 													"line": 25,
 													"character": 6,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item.ts#L25"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item.ts#L25"
 												}
 											],
 											"type": {
@@ -3044,7 +3044,7 @@
 													"qualifiedName": "TextProperty"
 												},
 												"name": "TextProperty",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -3069,7 +3069,7 @@
 													"fileName": "line-item.ts",
 													"line": 26,
 													"character": 6,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item.ts#L26"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item.ts#L26"
 												}
 											],
 											"type": {
@@ -3079,7 +3079,7 @@
 													"qualifiedName": "TextProperty"
 												},
 												"name": "TextProperty",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -3104,7 +3104,7 @@
 													"fileName": "line-item.ts",
 													"line": 27,
 													"character": 6,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item.ts#L27"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item.ts#L27"
 												}
 											],
 											"type": {
@@ -3114,7 +3114,7 @@
 													"qualifiedName": "JSONProperty"
 												},
 												"name": "JSONProperty",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -3137,7 +3137,7 @@
 													"fileName": "line-item.ts",
 													"line": 28,
 													"character": 6,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item.ts#L28"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item.ts#L28"
 												}
 											],
 											"type": {
@@ -3147,7 +3147,7 @@
 													"qualifiedName": "BooleanProperty"
 												},
 												"name": "BooleanProperty",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -3170,7 +3170,7 @@
 													"fileName": "line-item.ts",
 													"line": 29,
 													"character": 6,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item.ts#L29"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item.ts#L29"
 												}
 											],
 											"type": {
@@ -3180,7 +3180,7 @@
 													"qualifiedName": "BooleanProperty"
 												},
 												"name": "BooleanProperty",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -3203,7 +3203,7 @@
 													"fileName": "line-item.ts",
 													"line": 30,
 													"character": 6,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item.ts#L30"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item.ts#L30"
 												}
 											],
 											"type": {
@@ -3213,7 +3213,7 @@
 													"qualifiedName": "BooleanProperty"
 												},
 												"name": "BooleanProperty",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -3236,7 +3236,7 @@
 													"fileName": "line-item.ts",
 													"line": 31,
 													"character": 6,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item.ts#L31"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item.ts#L31"
 												}
 											],
 											"type": {
@@ -3246,7 +3246,7 @@
 													"qualifiedName": "BooleanProperty"
 												},
 												"name": "BooleanProperty",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -3269,7 +3269,7 @@
 													"fileName": "line-item.ts",
 													"line": 32,
 													"character": 6,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item.ts#L32"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item.ts#L32"
 												}
 											],
 											"type": {
@@ -3279,7 +3279,7 @@
 													"qualifiedName": "BooleanProperty"
 												},
 												"name": "BooleanProperty",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -3304,7 +3304,7 @@
 													"fileName": "line-item.ts",
 													"line": 33,
 													"character": 6,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item.ts#L33"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item.ts#L33"
 												}
 											],
 											"type": {
@@ -3314,7 +3314,7 @@
 													"qualifiedName": "BigNumberProperty"
 												},
 												"name": "BigNumberProperty",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -3337,7 +3337,7 @@
 													"fileName": "line-item.ts",
 													"line": 34,
 													"character": 6,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item.ts#L34"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item.ts#L34"
 												}
 											],
 											"type": {
@@ -3347,7 +3347,7 @@
 													"qualifiedName": "BigNumberProperty"
 												},
 												"name": "BigNumberProperty",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -3372,7 +3372,7 @@
 													"fileName": "line-item.ts",
 													"line": 35,
 													"character": 6,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item.ts#L35"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item.ts#L35"
 												}
 											],
 											"type": {
@@ -3382,7 +3382,7 @@
 													"qualifiedName": "JSONProperty"
 												},
 												"name": "JSONProperty",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -3408,7 +3408,7 @@
 													"fileName": "line-item.ts",
 													"line": 36,
 													"character": 6,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item.ts#L36"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item.ts#L36"
 												}
 											],
 											"type": {
@@ -3425,7 +3425,7 @@
 													}
 												],
 												"name": "HasMany",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -3451,7 +3451,7 @@
 													"fileName": "line-item.ts",
 													"line": 39,
 													"character": 6,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item.ts#L39"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item.ts#L39"
 												}
 											],
 											"type": {
@@ -3468,7 +3468,7 @@
 													}
 												],
 												"name": "HasMany",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -3494,7 +3494,7 @@
 													"fileName": "line-item.ts",
 													"line": 42,
 													"character": 6,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item.ts#L42"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item.ts#L42"
 												}
 											],
 											"type": {
@@ -3511,7 +3511,7 @@
 													}
 												],
 												"name": "BelongsTo",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										}
@@ -3557,14 +3557,14 @@
 											"fileName": "line-item.ts",
 											"line": 9,
 											"character": 4,
-											"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item.ts#L9"
+											"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item.ts#L9"
 										}
 									]
 								}
 							}
 						],
 						"name": "DMLEntitySchemaBuilder",
-						"package": "@medusajs/utils"
+						"package": "@vikrai/utils"
 					},
 					{
 						"type": "reflection",
@@ -3588,7 +3588,7 @@
 											"fileName": "line-item.ts",
 											"line": 8,
 											"character": 6,
-											"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item.ts#L8"
+											"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item.ts#L8"
 										}
 									],
 									"type": {
@@ -3610,7 +3610,7 @@
 											"fileName": "line-item.ts",
 											"line": 8,
 											"character": 24,
-											"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item.ts#L8"
+											"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item.ts#L8"
 										}
 									],
 									"type": {
@@ -3634,14 +3634,14 @@
 									"fileName": "line-item.ts",
 									"line": 8,
 									"character": 4,
-									"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item.ts#L8"
+									"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/line-item.ts#L8"
 								}
 							]
 						}
 					}
 				],
 				"name": "DmlEntity",
-				"package": "@medusajs/utils"
+				"package": "@vikrai/utils"
 			},
 			"defaultValue": "..."
 		},
@@ -3658,7 +3658,7 @@
 					"fileName": "shipping-method-adjustment.ts",
 					"line": 4,
 					"character": 6,
-					"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/shipping-method-adjustment.ts#L4"
+					"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/shipping-method-adjustment.ts#L4"
 				}
 			],
 			"type": {
@@ -3703,7 +3703,7 @@
 													"fileName": "shipping-method-adjustment.ts",
 													"line": 11,
 													"character": 6,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/shipping-method-adjustment.ts#L11"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/shipping-method-adjustment.ts#L11"
 												}
 											],
 											"type": {
@@ -3720,11 +3720,11 @@
 															"qualifiedName": "IdProperty"
 														},
 														"name": "IdProperty",
-														"package": "@medusajs/utils"
+														"package": "@vikrai/utils"
 													}
 												],
 												"name": "PrimaryKeyModifier",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -3749,7 +3749,7 @@
 													"fileName": "shipping-method-adjustment.ts",
 													"line": 12,
 													"character": 6,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/shipping-method-adjustment.ts#L12"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/shipping-method-adjustment.ts#L12"
 												}
 											],
 											"type": {
@@ -3759,7 +3759,7 @@
 													"qualifiedName": "TextProperty"
 												},
 												"name": "TextProperty",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -3784,7 +3784,7 @@
 													"fileName": "shipping-method-adjustment.ts",
 													"line": 13,
 													"character": 6,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/shipping-method-adjustment.ts#L13"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/shipping-method-adjustment.ts#L13"
 												}
 											],
 											"type": {
@@ -3794,7 +3794,7 @@
 													"qualifiedName": "TextProperty"
 												},
 												"name": "TextProperty",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -3817,7 +3817,7 @@
 													"fileName": "shipping-method-adjustment.ts",
 													"line": 14,
 													"character": 6,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/shipping-method-adjustment.ts#L14"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/shipping-method-adjustment.ts#L14"
 												}
 											],
 											"type": {
@@ -3827,7 +3827,7 @@
 													"qualifiedName": "BigNumberProperty"
 												},
 												"name": "BigNumberProperty",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -3852,7 +3852,7 @@
 													"fileName": "shipping-method-adjustment.ts",
 													"line": 15,
 													"character": 6,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/shipping-method-adjustment.ts#L15"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/shipping-method-adjustment.ts#L15"
 												}
 											],
 											"type": {
@@ -3862,7 +3862,7 @@
 													"qualifiedName": "TextProperty"
 												},
 												"name": "TextProperty",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -3887,7 +3887,7 @@
 													"fileName": "shipping-method-adjustment.ts",
 													"line": 16,
 													"character": 6,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/shipping-method-adjustment.ts#L16"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/shipping-method-adjustment.ts#L16"
 												}
 											],
 											"type": {
@@ -3897,7 +3897,7 @@
 													"qualifiedName": "JSONProperty"
 												},
 												"name": "JSONProperty",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -3922,7 +3922,7 @@
 													"fileName": "shipping-method-adjustment.ts",
 													"line": 17,
 													"character": 6,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/shipping-method-adjustment.ts#L17"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/shipping-method-adjustment.ts#L17"
 												}
 											],
 											"type": {
@@ -3932,7 +3932,7 @@
 													"qualifiedName": "TextProperty"
 												},
 												"name": "TextProperty",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -3958,7 +3958,7 @@
 													"fileName": "shipping-method-adjustment.ts",
 													"line": 18,
 													"character": 6,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/shipping-method-adjustment.ts#L18"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/shipping-method-adjustment.ts#L18"
 												}
 											],
 											"type": {
@@ -3975,7 +3975,7 @@
 													}
 												],
 												"name": "BelongsTo",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										}
@@ -4000,14 +4000,14 @@
 											"fileName": "shipping-method-adjustment.ts",
 											"line": 10,
 											"character": 4,
-											"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/shipping-method-adjustment.ts#L10"
+											"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/shipping-method-adjustment.ts#L10"
 										}
 									]
 								}
 							}
 						],
 						"name": "DMLEntitySchemaBuilder",
-						"package": "@medusajs/utils"
+						"package": "@vikrai/utils"
 					},
 					{
 						"type": "reflection",
@@ -4031,7 +4031,7 @@
 											"fileName": "shipping-method-adjustment.ts",
 											"line": 7,
 											"character": 6,
-											"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/shipping-method-adjustment.ts#L7"
+											"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/shipping-method-adjustment.ts#L7"
 										}
 									],
 									"type": {
@@ -4053,7 +4053,7 @@
 											"fileName": "shipping-method-adjustment.ts",
 											"line": 8,
 											"character": 6,
-											"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/shipping-method-adjustment.ts#L8"
+											"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/shipping-method-adjustment.ts#L8"
 										}
 									],
 									"type": {
@@ -4077,14 +4077,14 @@
 									"fileName": "shipping-method-adjustment.ts",
 									"line": 6,
 									"character": 4,
-									"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/shipping-method-adjustment.ts#L6"
+									"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/shipping-method-adjustment.ts#L6"
 								}
 							]
 						}
 					}
 				],
 				"name": "DmlEntity",
-				"package": "@medusajs/utils"
+				"package": "@vikrai/utils"
 			},
 			"defaultValue": "..."
 		},
@@ -4101,7 +4101,7 @@
 					"fileName": "shipping-method-tax-line.ts",
 					"line": 4,
 					"character": 6,
-					"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/shipping-method-tax-line.ts#L4"
+					"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/shipping-method-tax-line.ts#L4"
 				}
 			],
 			"type": {
@@ -4146,7 +4146,7 @@
 													"fileName": "shipping-method-tax-line.ts",
 													"line": 11,
 													"character": 6,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/shipping-method-tax-line.ts#L11"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/shipping-method-tax-line.ts#L11"
 												}
 											],
 											"type": {
@@ -4163,11 +4163,11 @@
 															"qualifiedName": "IdProperty"
 														},
 														"name": "IdProperty",
-														"package": "@medusajs/utils"
+														"package": "@vikrai/utils"
 													}
 												],
 												"name": "PrimaryKeyModifier",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -4192,7 +4192,7 @@
 													"fileName": "shipping-method-tax-line.ts",
 													"line": 12,
 													"character": 6,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/shipping-method-tax-line.ts#L12"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/shipping-method-tax-line.ts#L12"
 												}
 											],
 											"type": {
@@ -4202,7 +4202,7 @@
 													"qualifiedName": "TextProperty"
 												},
 												"name": "TextProperty",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -4225,7 +4225,7 @@
 													"fileName": "shipping-method-tax-line.ts",
 													"line": 13,
 													"character": 6,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/shipping-method-tax-line.ts#L13"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/shipping-method-tax-line.ts#L13"
 												}
 											],
 											"type": {
@@ -4235,7 +4235,7 @@
 													"qualifiedName": "TextProperty"
 												},
 												"name": "TextProperty",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -4258,7 +4258,7 @@
 													"fileName": "shipping-method-tax-line.ts",
 													"line": 14,
 													"character": 6,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/shipping-method-tax-line.ts#L14"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/shipping-method-tax-line.ts#L14"
 												}
 											],
 											"type": {
@@ -4268,7 +4268,7 @@
 													"qualifiedName": "FloatProperty"
 												},
 												"name": "FloatProperty",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -4293,7 +4293,7 @@
 													"fileName": "shipping-method-tax-line.ts",
 													"line": 15,
 													"character": 6,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/shipping-method-tax-line.ts#L15"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/shipping-method-tax-line.ts#L15"
 												}
 											],
 											"type": {
@@ -4303,7 +4303,7 @@
 													"qualifiedName": "TextProperty"
 												},
 												"name": "TextProperty",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -4328,7 +4328,7 @@
 													"fileName": "shipping-method-tax-line.ts",
 													"line": 16,
 													"character": 6,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/shipping-method-tax-line.ts#L16"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/shipping-method-tax-line.ts#L16"
 												}
 											],
 											"type": {
@@ -4338,7 +4338,7 @@
 													"qualifiedName": "TextProperty"
 												},
 												"name": "TextProperty",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -4363,7 +4363,7 @@
 													"fileName": "shipping-method-tax-line.ts",
 													"line": 17,
 													"character": 6,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/shipping-method-tax-line.ts#L17"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/shipping-method-tax-line.ts#L17"
 												}
 											],
 											"type": {
@@ -4373,7 +4373,7 @@
 													"qualifiedName": "JSONProperty"
 												},
 												"name": "JSONProperty",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -4399,7 +4399,7 @@
 													"fileName": "shipping-method-tax-line.ts",
 													"line": 18,
 													"character": 6,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/shipping-method-tax-line.ts#L18"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/shipping-method-tax-line.ts#L18"
 												}
 											],
 											"type": {
@@ -4416,7 +4416,7 @@
 													}
 												],
 												"name": "BelongsTo",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										}
@@ -4441,14 +4441,14 @@
 											"fileName": "shipping-method-tax-line.ts",
 											"line": 10,
 											"character": 4,
-											"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/shipping-method-tax-line.ts#L10"
+											"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/shipping-method-tax-line.ts#L10"
 										}
 									]
 								}
 							}
 						],
 						"name": "DMLEntitySchemaBuilder",
-						"package": "@medusajs/utils"
+						"package": "@vikrai/utils"
 					},
 					{
 						"type": "reflection",
@@ -4472,7 +4472,7 @@
 											"fileName": "shipping-method-tax-line.ts",
 											"line": 7,
 											"character": 6,
-											"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/shipping-method-tax-line.ts#L7"
+											"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/shipping-method-tax-line.ts#L7"
 										}
 									],
 									"type": {
@@ -4494,7 +4494,7 @@
 											"fileName": "shipping-method-tax-line.ts",
 											"line": 8,
 											"character": 6,
-											"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/shipping-method-tax-line.ts#L8"
+											"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/shipping-method-tax-line.ts#L8"
 										}
 									],
 									"type": {
@@ -4518,14 +4518,14 @@
 									"fileName": "shipping-method-tax-line.ts",
 									"line": 6,
 									"character": 4,
-									"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/shipping-method-tax-line.ts#L6"
+									"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/shipping-method-tax-line.ts#L6"
 								}
 							]
 						}
 					}
 				],
 				"name": "DmlEntity",
-				"package": "@medusajs/utils"
+				"package": "@vikrai/utils"
 			},
 			"defaultValue": "..."
 		},
@@ -4542,7 +4542,7 @@
 					"fileName": "shipping-method.ts",
 					"line": 6,
 					"character": 6,
-					"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/shipping-method.ts#L6"
+					"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/shipping-method.ts#L6"
 				}
 			],
 			"type": {
@@ -4587,7 +4587,7 @@
 													"fileName": "shipping-method.ts",
 													"line": 13,
 													"character": 6,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/shipping-method.ts#L13"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/shipping-method.ts#L13"
 												}
 											],
 											"type": {
@@ -4604,11 +4604,11 @@
 															"qualifiedName": "IdProperty"
 														},
 														"name": "IdProperty",
-														"package": "@medusajs/utils"
+														"package": "@vikrai/utils"
 													}
 												],
 												"name": "PrimaryKeyModifier",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -4631,7 +4631,7 @@
 													"fileName": "shipping-method.ts",
 													"line": 14,
 													"character": 6,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/shipping-method.ts#L14"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/shipping-method.ts#L14"
 												}
 											],
 											"type": {
@@ -4641,7 +4641,7 @@
 													"qualifiedName": "TextProperty"
 												},
 												"name": "TextProperty",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -4666,7 +4666,7 @@
 													"fileName": "shipping-method.ts",
 													"line": 15,
 													"character": 6,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/shipping-method.ts#L15"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/shipping-method.ts#L15"
 												}
 											],
 											"type": {
@@ -4676,7 +4676,7 @@
 													"qualifiedName": "JSONProperty"
 												},
 												"name": "JSONProperty",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -4699,7 +4699,7 @@
 													"fileName": "shipping-method.ts",
 													"line": 16,
 													"character": 6,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/shipping-method.ts#L16"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/shipping-method.ts#L16"
 												}
 											],
 											"type": {
@@ -4709,7 +4709,7 @@
 													"qualifiedName": "BigNumberProperty"
 												},
 												"name": "BigNumberProperty",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -4732,7 +4732,7 @@
 													"fileName": "shipping-method.ts",
 													"line": 17,
 													"character": 6,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/shipping-method.ts#L17"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/shipping-method.ts#L17"
 												}
 											],
 											"type": {
@@ -4742,7 +4742,7 @@
 													"qualifiedName": "BooleanProperty"
 												},
 												"name": "BooleanProperty",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -4767,7 +4767,7 @@
 													"fileName": "shipping-method.ts",
 													"line": 18,
 													"character": 6,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/shipping-method.ts#L18"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/shipping-method.ts#L18"
 												}
 											],
 											"type": {
@@ -4777,7 +4777,7 @@
 													"qualifiedName": "TextProperty"
 												},
 												"name": "TextProperty",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -4802,7 +4802,7 @@
 													"fileName": "shipping-method.ts",
 													"line": 19,
 													"character": 6,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/shipping-method.ts#L19"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/shipping-method.ts#L19"
 												}
 											],
 											"type": {
@@ -4812,7 +4812,7 @@
 													"qualifiedName": "JSONProperty"
 												},
 												"name": "JSONProperty",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -4837,7 +4837,7 @@
 													"fileName": "shipping-method.ts",
 													"line": 20,
 													"character": 6,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/shipping-method.ts#L20"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/shipping-method.ts#L20"
 												}
 											],
 											"type": {
@@ -4847,7 +4847,7 @@
 													"qualifiedName": "JSONProperty"
 												},
 												"name": "JSONProperty",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -4873,7 +4873,7 @@
 													"fileName": "shipping-method.ts",
 													"line": 21,
 													"character": 6,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/shipping-method.ts#L21"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/shipping-method.ts#L21"
 												}
 											],
 											"type": {
@@ -4890,7 +4890,7 @@
 													}
 												],
 												"name": "BelongsTo",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -4916,7 +4916,7 @@
 													"fileName": "shipping-method.ts",
 													"line": 24,
 													"character": 6,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/shipping-method.ts#L24"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/shipping-method.ts#L24"
 												}
 											],
 											"type": {
@@ -4933,7 +4933,7 @@
 													}
 												],
 												"name": "HasMany",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										},
@@ -4959,7 +4959,7 @@
 													"fileName": "shipping-method.ts",
 													"line": 27,
 													"character": 6,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/shipping-method.ts#L27"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/shipping-method.ts#L27"
 												}
 											],
 											"type": {
@@ -4976,7 +4976,7 @@
 													}
 												],
 												"name": "HasMany",
-												"package": "@medusajs/utils"
+												"package": "@vikrai/utils"
 											},
 											"defaultValue": "..."
 										}
@@ -5004,14 +5004,14 @@
 											"fileName": "shipping-method.ts",
 											"line": 12,
 											"character": 4,
-											"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/shipping-method.ts#L12"
+											"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/shipping-method.ts#L12"
 										}
 									]
 								}
 							}
 						],
 						"name": "DMLEntitySchemaBuilder",
-						"package": "@medusajs/utils"
+						"package": "@vikrai/utils"
 					},
 					{
 						"type": "reflection",
@@ -5035,7 +5035,7 @@
 											"fileName": "shipping-method.ts",
 											"line": 9,
 											"character": 6,
-											"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/shipping-method.ts#L9"
+											"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/shipping-method.ts#L9"
 										}
 									],
 									"type": {
@@ -5057,7 +5057,7 @@
 											"fileName": "shipping-method.ts",
 											"line": 10,
 											"character": 6,
-											"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/shipping-method.ts#L10"
+											"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/shipping-method.ts#L10"
 										}
 									],
 									"type": {
@@ -5081,14 +5081,14 @@
 									"fileName": "shipping-method.ts",
 									"line": 8,
 									"character": 4,
-									"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/shipping-method.ts#L8"
+									"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/modules/cart/src/models/shipping-method.ts#L8"
 								}
 							]
 						}
 					}
 				],
 				"name": "DmlEntity",
-				"package": "@medusajs/utils"
+				"package": "@vikrai/utils"
 			},
 			"defaultValue": "..."
 		}
@@ -5109,7 +5109,7 @@
 			]
 		}
 	],
-	"packageName": "@medusajs/cart",
+	"packageName": "@vikrai/cart",
 	"symbolIdMap": {
 		"1927": {
 			"sourceFileName": "../../../../packages/modules/cart/src/models/index.ts",
@@ -7437,3 +7437,4 @@
 		}
 	}
 }
+

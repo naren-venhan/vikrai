@@ -3,7 +3,7 @@ import type {
   CustomFieldModel,
   CustomFieldZone,
   InjectionZone,
-} from "@medusajs/admin-shared"
+} from "@vikrai/admin-shared"
 import type * as Vite from "vite"
 
 export type ExtensionGraph = Map<string, Set<string>>
@@ -54,9 +54,10 @@ export type LoadModuleOptions =
       get: CustomFieldDisplayPath
     }
 
-export interface MedusaVitePluginOptions {
+export interface vikraiVitePluginOptions {
   sources?: string[]
   pluginMode?: boolean
 }
 
-export type MedusaVitePlugin = (config?: MedusaVitePluginOptions) => Vite.Plugin
+export type vikraiVitePlugin = (config?: vikraiVitePluginOptions) => Vite.Plugin
+

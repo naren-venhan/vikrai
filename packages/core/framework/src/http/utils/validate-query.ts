@@ -1,11 +1,11 @@
-import { BaseEntity, QueryConfig, RequestQueryFields } from "@medusajs/types"
-import { MedusaError, removeUndefinedProperties } from "@medusajs/utils"
+import { BaseEntity, QueryConfig, RequestQueryFields } from "@vikrai/types"
+import { vikraiError, removeUndefinedProperties } from "@vikrai/utils"
 import { NextFunction } from "express"
 import { omit } from "lodash"
 import { z } from "zod"
 
 import { zodValidator } from "../../zod/zod-helpers"
-import { MedusaRequest, MedusaResponse } from "../types"
+import { vikraiRequest, vikraiResponse } from "../types"
 import { prepareListQuery, prepareRetrieveQuery } from "./get-query-config"
 
 /**
@@ -14,7 +14,7 @@ import { prepareListQuery, prepareRetrieveQuery } from "./get-query-config"
  *
  * We only support up to 2 levels of depth for query params in order to have a somewhat readable query param, and limit possible performance issues
  */
-const normalizeQuery = (req: MedusaRequest) => {
+const normalizeQuery = (req: vikraiRequest) => {
   return Object.entries(req.query).reduce((acc, [key, val]) => {
     let normalizedValue = val
     if (Array.isArray(val) && val.length === 1 && typeof val[0] === "string") {
@@ -24,8 +24,8 @@ const normalizeQuery = (req: MedusaRequest) => {
     if (key.includes(".")) {
       const [parent, child, ...others] = key.split(".")
       if (others.length > 0) {
-        throw new MedusaError(
-          MedusaError.Types.INVALID_ARGUMENT,
+        throw new vikraiError(
+          vikraiError.Types.INVALID_ARGUMENT,
           `Key accessor more than 2 levels deep: ${key}`
         )
       }
@@ -58,13 +58,13 @@ export function validateAndTransformQuery<TEntity extends BaseEntity>(
   zodSchema: z.ZodObject<any, any> | z.ZodEffects<any, any>,
   queryConfig: QueryConfig<TEntity>
 ): (
-  req: MedusaRequest,
-  res: MedusaResponse,
+  req: vikraiRequest,
+  res: vikraiResponse,
   next: NextFunction
 ) => Promise<void> {
   return async function validateQuery(
-    req: MedusaRequest,
-    _: MedusaResponse,
+    req: vikraiRequest,
+    _: vikraiResponse,
     next: NextFunction
   ) {
     try {
@@ -101,3 +101,4 @@ export function validateAndTransformQuery<TEntity extends BaseEntity>(
     }
   }
 }
+

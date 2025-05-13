@@ -1,6 +1,6 @@
 import { codegen } from "@graphql-codegen/core"
 import * as typescriptPlugin from "@graphql-codegen/typescript"
-import { ModuleJoinerConfig } from "@medusajs/types"
+import { ModuleJoinerConfig } from "@vikrai/types"
 import { type GraphQLSchema, parse, printSchema } from "graphql"
 import { FileSystem } from "../common"
 
@@ -54,12 +54,12 @@ async function generateTypes({
 }) {
   const fileSystem = new FileSystem(outputDir)
 
-  let output = 'import "@medusajs/framework/types"\n'
+  let output = 'import "@vikrai/framework/types"\n'
   output += await codegen(config)
   const entryPoints = buildEntryPointsTypeMap({ schema: output, joinerConfigs })
 
   const remoteQueryEntryPoints = `
-declare module '@medusajs/framework/types' {
+declare module '@vikrai/framework/types' {
   interface ${interfaceName} {
 ${entryPoints
   .map((entry) => `    ${entry.entryPoint}: ${entry.entityType}`)
@@ -136,3 +136,4 @@ export async function gqlSchemaToTypes({
     interfaceName,
   })
 }
+

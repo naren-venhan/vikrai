@@ -1,5 +1,5 @@
 import { zodResolver } from "@hookform/resolvers/zod"
-import { Alert, Button, Heading, Hint, Input, Text, toast } from "@medusajs/ui"
+import { Alert, Button, Heading, Hint, Input, Text, toast } from "@vikrai/ui"
 import i18n from "i18next"
 import { AnimatePresence, motion } from "motion/react"
 import { useState } from "react"
@@ -176,7 +176,7 @@ const CreateView = ({
   const [invalid, setInvalid] = useState(false)
 
   const [params] = useSearchParams()
-  const isFirstRun = params.get("first_run") === "true" // true when the invite page is open during a "create medusa app" run
+  const isFirstRun = params.get("first_run") === "true" // true when the invite page is open during a "create vikrai app" run
 
   const form = useForm<z.infer<typeof CreateAccountSchema>>({
     resolver: zodResolver(CreateAccountSchema),
@@ -414,3 +414,4 @@ const InviteSchema = z.object({
 const validateDecodedInvite = (decoded: any): decoded is DecodedInvite => {
   return InviteSchema.safeParse(decoded).success
 }
+

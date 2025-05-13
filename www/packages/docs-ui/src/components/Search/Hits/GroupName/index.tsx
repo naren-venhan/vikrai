@@ -10,7 +10,7 @@ export const SearchHitGroupName = ({ name }: SearchHitGroupNameProps) => {
     <span
       className={clsx(
         "pb-docs_0.25 flex px-docs_0.5 pt-docs_0.75",
-        "text-medusa-fg-muted",
+        "text-vikrai-fg-muted",
         "text-compact-x-small-plus"
       )}
     >
@@ -18,3 +18,4 @@ export const SearchHitGroupName = ({ name }: SearchHitGroupNameProps) => {
     </span>
   )
 }
+

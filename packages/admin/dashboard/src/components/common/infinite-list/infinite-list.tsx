@@ -1,7 +1,7 @@
 import { QueryKey, useInfiniteQuery } from "@tanstack/react-query"
 import { ReactNode, useEffect, useMemo, useRef } from "react"
-import { toast } from "@medusajs/ui"
-import { Spinner } from "@medusajs/icons"
+import { toast } from "@vikrai/ui"
+import { Spinner } from "@vikrai/icons"
 
 type InfiniteListProps<TResponse, TEntity, TParams> = {
   queryKey: QueryKey
@@ -143,3 +143,4 @@ export const InfiniteList = <
     </div>
   )
 }
+

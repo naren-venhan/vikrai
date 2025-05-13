@@ -5,15 +5,15 @@ import {
   OrderDTO,
   OrderPreviewDTO,
   OrderWorkflow,
-} from "@medusajs/framework/types"
-import { ChangeActionType, OrderChangeStatus } from "@medusajs/framework/utils"
+} from "@vikrai/framework/types"
+import { ChangeActionType, OrderChangeStatus } from "@vikrai/framework/utils"
 import {
   WorkflowData,
   WorkflowResponse,
   createStep,
   createWorkflow,
   transform,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { useRemoteQueryStep } from "../../../common"
 import {
   previewOrderChangeStep,
@@ -54,8 +54,8 @@ export type UpdateClaimAddNewItemValidationStepInput = {
  *
  * :::note
  *
- * You can retrieve an order, order claim, and order change details using [Query](https://docs.medusajs.com/learn/fundamentals/module-links/query),
- * or [useQueryGraphStep](https://docs.medusajs.com/resources/references/medusa-workflows/steps/useQueryGraphStep).
+ * You can retrieve an order, order claim, and order change details using [Query](https://docs.vikrai.com/learn/fundamentals/module-links/query),
+ * or [useQueryGraphStep](https://docs.vikrai.com/resources/references/vikrai-workflows/steps/useQueryGraphStep).
  *
  * :::
  *
@@ -114,7 +114,7 @@ export const updateClaimAddItemValidationStep = createStep(
 export const updateClaimAddItemWorkflowId = "update-claim-add-item"
 /**
  * This workflow updates a claim's new or outbound item. It's used by the
- * [Update Outbound Item API Route](https://docs.medusajs.com/api/admin#claims_postclaimsidoutbounditemsaction_id).
+ * [Update Outbound Item API Route](https://docs.vikrai.com/api/admin#claims_postclaimsidoutbounditemsaction_id).
  *
  * You can use this workflow within your customizations or your own custom workflows, allowing you to update a claim's new or outbound item
  * in your custom flows.
@@ -209,3 +209,4 @@ export const updateClaimAddItemWorkflow = createWorkflow(
     return new WorkflowResponse(previewOrderChangeStep(order.id))
   }
 )
+

@@ -1,5 +1,5 @@
-import { AdditionalData, CreateOrderDTO } from "@medusajs/framework/types"
-import { MedusaError, isDefined, isPresent } from "@medusajs/framework/utils"
+import { AdditionalData, CreateOrderDTO } from "@vikrai/framework/types"
+import { vikraiError, isDefined, isPresent } from "@vikrai/framework/utils"
 import {
   WorkflowData,
   WorkflowResponse,
@@ -8,7 +8,7 @@ import {
   parallelize,
   transform,
   when,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { findOneOrAnyRegionStep } from "../../cart/steps/find-one-or-any-region"
 import { findOrCreateCustomerStep } from "../../cart/steps/find-or-create-customer"
 import { findSalesChannelStep } from "../../cart/steps/find-sales-channel"
@@ -85,14 +85,14 @@ export type CreateOrderWorkflowInput = CreateOrderDTO & AdditionalData
 
 export const createOrdersWorkflowId = "create-orders"
 /**
- * This workflow creates an order. It's used by the [Create Draft Order Admin API Route](https://docs.medusajs.com/api/admin#draft-orders_postdraftorders), but
+ * This workflow creates an order. It's used by the [Create Draft Order Admin API Route](https://docs.vikrai.com/api/admin#draft-orders_postdraftorders), but
  * you can also use it to create any order.
  *
  * This workflow has a hook that allows you to perform custom actions on the created order. For example, you can pass under `additional_data` custom data that
  * allows you to create custom data models linked to the order.
  *
  * You can also use this workflow within your customizations or your own custom workflows, allowing you to wrap custom logic around creating an order. For example,
- * you can create a workflow that imports orders from an external system, then uses this workflow to create the orders in Medusa.
+ * you can create a workflow that imports orders from an external system, then uses this workflow to create the orders in vikrai.
  *
  * @example
  * const { result } = await createOrderWorkflow(container)
@@ -143,8 +143,8 @@ export const createOrdersWorkflowId = "create-orders"
  * You can consume the `setPricingContext` hook to add the `location_id` context to the prices calculation:
  * 
  * ```ts
- * import { createOrderWorkflow } from "@medusajs/medusa/core-flows";
- * import { StepResponse } from "@medusajs/workflows-sdk";
+ * import { createOrderWorkflow } from "@vikrai/vikrai/core-flows";
+ * import { StepResponse } from "@vikrai/workflows-sdk";
  * 
  * createOrderWorkflow.hooks.setPricingContext((
  *   { variantIds, region, customerData, additional_data }, { container }
@@ -159,7 +159,7 @@ export const createOrdersWorkflowId = "create-orders"
  * 
  * :::note
  * 
- * Learn more about prices calculation context in the [Prices Calculation](https://docs.medusajs.com/resources/commerce-modules/pricing/price-calculation) documentation.
+ * Learn more about prices calculation context in the [Prices Calculation](https://docs.vikrai.com/resources/commerce-modules/pricing/price-calculation) documentation.
  * 
  * :::
  */
@@ -204,7 +204,7 @@ export const createOrderWorkflow = createWorkflow(
       { input, region, customerData, setPricingContextResult },
       (data) => {
         if (!data.region) {
-          throw new MedusaError(MedusaError.Types.NOT_FOUND, "Region not found")
+          throw new vikraiError(vikraiError.Types.NOT_FOUND, "Region not found")
         }
 
         return {
@@ -281,3 +281,4 @@ export const createOrderWorkflow = createWorkflow(
  * @deprecated Instead use the singular name `createOrderWorkflow`.
  */
 export const createOrdersWorkflow = createOrderWorkflow
+

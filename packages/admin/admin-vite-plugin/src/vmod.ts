@@ -5,7 +5,7 @@ import {
   MENU_ITEM_VIRTUAL_MODULE,
   ROUTE_VIRTUAL_MODULE,
   WIDGET_VIRTUAL_MODULE,
-} from "@medusajs/admin-shared"
+} from "@vikrai/admin-shared"
 
 const RESOLVED_LINK_VIRTUAL_MODULE = `\0${LINK_VIRTUAL_MODULE}`
 const RESOLVED_FORM_VIRTUAL_MODULE = `\0${FORM_VIRTUAL_MODULE}`
@@ -77,3 +77,4 @@ export const vmod = {
   resolved: resolvedVirtualModuleIds,
   virtual: virtualModuleIds,
 }
+

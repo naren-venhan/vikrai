@@ -1,4 +1,4 @@
-import { ContainerLike } from "@medusajs/types"
+import { ContainerLike } from "@vikrai/types"
 
 export function createContainerLike(obj): ContainerLike {
   return {
@@ -7,3 +7,4 @@ export function createContainerLike(obj): ContainerLike {
     },
   }
 }
+

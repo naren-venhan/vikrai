@@ -1,12 +1,12 @@
-import { moduleProviderLoader } from "@medusajs/framework/modules-sdk"
+import { moduleProviderLoader } from "@vikrai/framework/modules-sdk"
 import {
   CreatePaymentProviderDTO,
   LoaderOptions,
   ModuleProvider,
   ModulesSdkTypes,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import { asFunction, asValue, Lifetime } from "awilix"
-import { MedusaError } from "@medusajs/framework/utils"
+import { vikraiError } from "@vikrai/framework/utils"
 
 import { PaymentProviderService } from "@services"
 import * as providers from "../providers"
@@ -15,8 +15,8 @@ const PROVIDER_REGISTRATION_KEY = "payment_providers"
 
 const registrationFn = async (klass, container, pluginOptions) => {
   if (!klass?.identifier) {
-    throw new MedusaError(
-      MedusaError.Types.INVALID_ARGUMENT,
+    throw new vikraiError(
+      vikraiError.Types.INVALID_ARGUMENT,
       `Trying to register a payment provider without a provider identifier.`
     )
   }
@@ -84,3 +84,4 @@ const registerProvidersInDb = async ({
 
   await paymentProviderService.upsert(upsertData)
 }
+

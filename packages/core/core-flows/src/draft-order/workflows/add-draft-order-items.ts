@@ -2,15 +2,15 @@ import {
   ChangeActionType,
   OrderChangeStatus,
   PromotionActions,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 import {
   createWorkflow,
   transform,
   when,
   WorkflowData,
   WorkflowResponse,
-} from "@medusajs/framework/workflows-sdk"
-import { OrderChangeDTO, OrderDTO, OrderWorkflow } from "@medusajs/types"
+} from "@vikrai/framework/workflows-sdk"
+import { OrderChangeDTO, OrderDTO, OrderWorkflow } from "@vikrai/types"
 import { useRemoteQueryStep } from "../../common"
 import {
   addOrderLineItemsWorkflow,
@@ -26,7 +26,7 @@ export const addDraftOrderItemsWorkflowId = "add-draft-order-items"
 
 /**
  * This workflow adds items to a draft order. It's used by the
- * [Add Item to Draft Order Admin API Route](https://docs.medusajs.com/api/admin#draft-orders_postdraftordersidedititems).
+ * [Add Item to Draft Order Admin API Route](https://docs.vikrai.com/api/admin#draft-orders_postdraftordersidedititems).
  * 
  * You can use this workflow within your customizations or your own custom workflows, allowing you to wrap custom logic around adding items to
  * a draft order.
@@ -149,3 +149,4 @@ export const addDraftOrderItemsWorkflow = createWorkflow(
     return new WorkflowResponse(previewOrderChangeStep(input.order_id))
   }
 )
+

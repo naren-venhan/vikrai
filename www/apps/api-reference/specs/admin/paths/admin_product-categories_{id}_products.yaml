@@ -20,7 +20,7 @@ post:
         replace the entire default fields. This API route restricts the fields
         that can be selected. Learn how to override the retrievable fields in
         the [Retrieve Custom
-        Links](https://docs.medusajs.com/learn/fundamentals/api-routes/retrieve-custom-links)
+        Links](https://docs.vikrai.com/learn/fundamentals/api-routes/retrieve-custom-links)
         documentation.
       required: false
       schema:
@@ -33,7 +33,7 @@ post:
           prefix it will replace the entire default fields. This API route
           restricts the fields that can be selected. Learn how to override the
           retrievable fields in the [Retrieve Custom
-          Links](https://docs.medusajs.com/learn/fundamentals/api-routes/retrieve-custom-links)
+          Links](https://docs.vikrai.com/learn/fundamentals/api-routes/retrieve-custom-links)
           documentation.
         externalDocs:
           url: '#select-fields-and-relations'
@@ -95,3 +95,4 @@ post:
       $ref: ../components/responses/500_error.yaml
   x-workflow: batchLinkProductsToCategoryWorkflow
   x-events: []
+

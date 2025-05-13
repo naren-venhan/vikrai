@@ -1,6 +1,6 @@
-import { medusaIntegrationTestRunner } from "@medusajs/test-utils"
-import { RemoteQueryFunction } from "@medusajs/types"
-import { ContainerRegistrationKeys, defaultCurrencies } from "@medusajs/utils"
+import { vikraiIntegrationTestRunner } from "@vikrai/test-utils"
+import { RemoteQueryFunction } from "@vikrai/types"
+import { ContainerRegistrationKeys, defaultCurrencies } from "@vikrai/utils"
 import { setTimeout } from "timers/promises"
 import {
   adminHeaders,
@@ -81,7 +81,7 @@ async function populateData(api: any) {
 
 process.env.ENABLE_INDEX_MODULE = "true"
 
-medusaIntegrationTestRunner({
+vikraiIntegrationTestRunner({
   testSuite: ({ getContainer, dbConnection, api, dbConfig }) => {
     let appContainer
 
@@ -376,3 +376,4 @@ medusaIntegrationTestRunner({
     })
   },
 })
+

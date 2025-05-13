@@ -1,10 +1,10 @@
-import { FulfillmentWorkflow } from "@medusajs/framework/types"
+import { FulfillmentWorkflow } from "@vikrai/framework/types"
 import {
   createWorkflow,
   transform,
   WorkflowData,
   WorkflowResponse,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { calculateShippingOptionsPricesStep } from "../steps"
 import { useQueryGraphStep } from "../../common"
 import { cartFieldsForCalculateShippingOptionsPrices } from "../../cart/utils/fields"
@@ -13,7 +13,7 @@ export const calculateShippingOptionsPricesWorkflowId =
   "calculate-shipping-options-prices-workflow"
 /**
  * This workflow calculates the prices for one or more shipping options in a cart. It's used by the
- * [Calculate Shipping Option Price Store API Route](https://docs.medusajs.com/api/store#shipping-options_postshippingoptionsidcalculate).
+ * [Calculate Shipping Option Price Store API Route](https://docs.vikrai.com/api/store#shipping-options_postshippingoptionsidcalculate).
  * 
  * :::note
  * 
@@ -147,3 +147,4 @@ export const calculateShippingOptionsPricesWorkflow = createWorkflow(
     return new WorkflowResponse(prices)
   }
 )
+

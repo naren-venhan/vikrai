@@ -1,5 +1,6 @@
 ---
-"@medusajs/dashboard": patch
+"@vikrai/dashboard": patch
 ---
 
 fix(dashboard): inventory kit combobox state
+

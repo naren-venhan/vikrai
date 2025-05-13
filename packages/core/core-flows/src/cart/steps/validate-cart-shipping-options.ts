@@ -1,10 +1,10 @@
-import { CartDTO, IFulfillmentModuleService } from "@medusajs/framework/types"
+import { CartDTO, IFulfillmentModuleService } from "@vikrai/framework/types"
 import {
-  MedusaError,
+  vikraiError,
   Modules,
   arrayDifference,
-} from "@medusajs/framework/utils"
-import { StepResponse, createStep } from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/utils"
+import { StepResponse, createStep } from "@vikrai/framework/workflows-sdk"
 
 /**
  * The details of the cart and its shipping options context.
@@ -80,8 +80,8 @@ export const validateCartShippingOptionsStep = createStep(
     const invalidOptionIds = arrayDifference(optionIds, validShippingOptionIds)
 
     if (invalidOptionIds.length) {
-      throw new MedusaError(
-        MedusaError.Types.INVALID_DATA,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_DATA,
         `Shipping Options are invalid for cart.`
       )
     }
@@ -89,3 +89,4 @@ export const validateCartShippingOptionsStep = createStep(
     return new StepResponse(void 0)
   }
 )
+

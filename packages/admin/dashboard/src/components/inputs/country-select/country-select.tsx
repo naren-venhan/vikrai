@@ -5,8 +5,8 @@ import {
   useRef,
 } from "react"
 
-import { TrianglesMini } from "@medusajs/icons"
-import { clx } from "@medusajs/ui"
+import { TrianglesMini } from "@vikrai/icons"
+import { clx } from "@vikrai/ui"
 import { useTranslation } from "react-i18next"
 import { countries } from "../../../lib/data/countries"
 
@@ -76,3 +76,4 @@ export const CountrySelect = forwardRef<
   }
 )
 CountrySelect.displayName = "CountrySelect"
+

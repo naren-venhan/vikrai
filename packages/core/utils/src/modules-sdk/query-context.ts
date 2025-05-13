@@ -1,4 +1,4 @@
-import { QueryContextType } from "@medusajs/types"
+import { QueryContextType } from "@vikrai/types"
 
 type QueryContexFnType = {
   (query: Record<string, unknown>): Record<string, unknown>
@@ -19,3 +19,4 @@ QueryContextFn.isQueryContext = (obj: any) => {
 }
 
 export const QueryContext: QueryContexFnType = QueryContextFn
+

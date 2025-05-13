@@ -1,13 +1,13 @@
 import {
   IPricingModuleService,
   PricingWorkflow,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import {
-  MedusaError,
+  vikraiError,
   Modules,
   arrayDifference,
-} from "@medusajs/framework/utils"
-import { StepResponse, createStep } from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/utils"
+import { StepResponse, createStep } from "@vikrai/framework/workflows-sdk"
 
 /**
  * The price preferences to update.
@@ -37,8 +37,8 @@ export const updatePricePreferencesAsArrayStep = createStep(
     const prevData = await service.listPricePreferences({
       $or: input.map((entry) => {
         if (!entry.attribute || !entry.value) {
-          throw new MedusaError(
-            MedusaError.Types.INVALID_DATA,
+          throw new vikraiError(
+            vikraiError.Types.INVALID_DATA,
             "Attribute and value must be provided when updating price preferences"
           )
         }
@@ -86,3 +86,4 @@ export const updatePricePreferencesAsArrayStep = createStep(
     await service.deletePricePreferences(compensationData.newDataIds)
   }
 )
+

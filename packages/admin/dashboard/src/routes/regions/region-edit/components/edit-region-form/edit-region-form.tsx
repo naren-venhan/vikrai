@@ -1,5 +1,5 @@
-import { HttpTypes, PaymentProviderDTO } from "@medusajs/types"
-import { Button, Input, Select, Switch, Text, toast } from "@medusajs/ui"
+import { HttpTypes, PaymentProviderDTO } from "@vikrai/types"
+import { Button, Input, Select, Switch, Text, toast } from "@vikrai/ui"
 import { useForm } from "react-hook-form"
 import { useTranslation } from "react-i18next"
 import * as zod from "zod"
@@ -227,3 +227,4 @@ export const EditRegionForm = ({
     </RouteDrawer.Form>
   )
 }
+

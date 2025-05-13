@@ -1,5 +1,5 @@
-import { AdminApiKeyResponse } from "@medusajs/types"
-import { Badge } from "@medusajs/ui"
+import { AdminApiKeyResponse } from "@vikrai/types"
+import { Badge } from "@vikrai/ui"
 import { createColumnHelper } from "@tanstack/react-table"
 import { useMemo } from "react"
 import { useTranslation } from "react-i18next"
@@ -78,3 +78,4 @@ export const useApiKeyManagementTableColumns = () => {
     [t]
   )
 }
+

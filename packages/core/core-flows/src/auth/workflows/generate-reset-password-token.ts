@@ -1,24 +1,24 @@
 import {
   AuthWorkflowEvents,
   generateJwtToken,
-  MedusaError,
-} from "@medusajs/framework/utils"
+  vikraiError,
+} from "@vikrai/framework/utils"
 import {
   createWorkflow,
   transform,
   WorkflowResponse,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { emitEventStep, useRemoteQueryStep } from "../../common"
 
 /**
  * This workflow generates a reset password token for a user. It's used by the
- * [Generate Reset Password Token for Admin](https://docs.medusajs.com/api/admin#auth_postactor_typeauth_providerresetpassword)
- * and [Generate Reset Password Token for Customer](https://docs.medusajs.com/api/store#auth_postactor_typeauth_providerresetpassword)
+ * [Generate Reset Password Token for Admin](https://docs.vikrai.com/api/admin#auth_postactor_typeauth_providerresetpassword)
+ * and [Generate Reset Password Token for Customer](https://docs.vikrai.com/api/store#auth_postactor_typeauth_providerresetpassword)
  * API Routes.
  *
  * The workflow emits the `auth.password_reset` event, which you can listen to in
- * a [subscriber](https://docs.medusajs.com/learn/fundamentals/events-and-subscribers). Follow
- * [this guide](https://docs.medusajs.com/resources/commerce-modules/auth/reset-password) to learn
+ * a [subscriber](https://docs.vikrai.com/learn/fundamentals/events-and-subscribers). Follow
+ * [this guide](https://docs.vikrai.com/resources/commerce-modules/auth/reset-password) to learn
  * how to handle this event.
  *
  * You can use this workflow within your customizations or your own custom workflows, allowing you to
@@ -64,8 +64,8 @@ export const generateResetPasswordTokenWorkflow = createWorkflow(
         const providerIdentity = providerIdentities?.[0]
 
         if (!providerIdentity) {
-          throw new MedusaError(
-            MedusaError.Types.INVALID_DATA,
+          throw new vikraiError(
+            vikraiError.Types.INVALID_DATA,
             `Provider identity with entity_id ${input.entityId} and provider ${input.provider} not found`
           )
         }
@@ -98,3 +98,4 @@ export const generateResetPasswordTokenWorkflow = createWorkflow(
     return new WorkflowResponse(token)
   }
 )
+

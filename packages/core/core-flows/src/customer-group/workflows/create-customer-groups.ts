@@ -1,12 +1,12 @@
 import {
   CustomerGroupDTO,
   CreateCustomerGroupDTO,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import {
   WorkflowData,
   WorkflowResponse,
   createWorkflow,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { createCustomerGroupsStep } from "../steps"
 
 /**
@@ -27,7 +27,7 @@ export type CreateCustomerGroupsWorkflowOutput = CustomerGroupDTO[]
 export const createCustomerGroupsWorkflowId = "create-customer-groups"
 /**
  * This workflow creates one or more customer groups. It's used by the
- * [Create Customer Group Admin API Route](https://docs.medusajs.com/api/admin#customer-groups_postcustomergroups).
+ * [Create Customer Group Admin API Route](https://docs.vikrai.com/api/admin#customer-groups_postcustomergroups).
  * 
  * You can use this workflow within your customizations or your own custom workflows, allowing you to 
  * create customer groups within your custom flows. For example, you can create customer groups to segregate
@@ -57,3 +57,4 @@ export const createCustomerGroupsWorkflow = createWorkflow(
     return new WorkflowResponse(createCustomerGroupsStep(input.customersData))
   }
 )
+

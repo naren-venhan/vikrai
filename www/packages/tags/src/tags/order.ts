@@ -1,658 +1,658 @@
 export const order = [
   {
     "title": "Manage Order Claims",
-    "path": "https://docs.medusajs.com/user-guide/orders/claims"
+    "path": "https://docs.vikrai.com/user-guide/orders/claims"
   },
   {
     "title": "Edit Order Items",
-    "path": "https://docs.medusajs.com/user-guide/orders/edit"
+    "path": "https://docs.vikrai.com/user-guide/orders/edit"
   },
   {
     "title": "Manage Order Exchanges",
-    "path": "https://docs.medusajs.com/user-guide/orders/exchanges"
+    "path": "https://docs.vikrai.com/user-guide/orders/exchanges"
   },
   {
     "title": "Manage Order Fulfillments",
-    "path": "https://docs.medusajs.com/user-guide/orders/fulfillments"
+    "path": "https://docs.vikrai.com/user-guide/orders/fulfillments"
   },
   {
     "title": "Manage Order Details",
-    "path": "https://docs.medusajs.com/user-guide/orders/manage"
+    "path": "https://docs.vikrai.com/user-guide/orders/manage"
   },
   {
     "title": "Orders Overview",
-    "path": "https://docs.medusajs.com/user-guide/orders"
+    "path": "https://docs.vikrai.com/user-guide/orders"
   },
   {
     "title": "Manage Order Payments",
-    "path": "https://docs.medusajs.com/user-guide/orders/payments"
+    "path": "https://docs.vikrai.com/user-guide/orders/payments"
   },
   {
     "title": "Manage Order Returns",
-    "path": "https://docs.medusajs.com/user-guide/orders/returns"
+    "path": "https://docs.vikrai.com/user-guide/orders/returns"
   },
   {
     "title": "Manage Return Reasons",
-    "path": "https://docs.medusajs.com/user-guide/settings/return-reasons"
+    "path": "https://docs.vikrai.com/user-guide/settings/return-reasons"
   },
   {
     "title": "Implement Quote Management",
-    "path": "https://docs.medusajs.com/resources/examples/guides/quote-management"
+    "path": "https://docs.vikrai.com/resources/examples/guides/quote-management"
   },
   {
     "title": "Implement Loyalty Points",
-    "path": "https://docs.medusajs.com/resources/how-to-tutorials/tutorials/loyalty-points"
+    "path": "https://docs.vikrai.com/resources/how-to-tutorials/tutorials/loyalty-points"
   },
   {
     "title": "Checkout Step 5: Complete Cart",
-    "path": "https://docs.medusajs.com/resources/storefront-development/checkout/complete-cart"
+    "path": "https://docs.vikrai.com/resources/storefront-development/checkout/complete-cart"
   },
   {
     "title": "Order Confirmation in Storefront",
-    "path": "https://docs.medusajs.com/resources/storefront-development/checkout/order-confirmation"
+    "path": "https://docs.vikrai.com/resources/storefront-development/checkout/order-confirmation"
   },
   {
-    "title": "Implement Express Checkout with Medusa",
-    "path": "https://docs.medusajs.com/resources/storefront-development/guides/express-checkout"
+    "title": "Implement Express Checkout with vikrai",
+    "path": "https://docs.vikrai.com/resources/storefront-development/guides/express-checkout"
   },
   {
     "title": "completeCartWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/completeCartWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/completeCartWorkflow"
   },
   {
     "title": "addDraftOrderItemsWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/addDraftOrderItemsWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/addDraftOrderItemsWorkflow"
   },
   {
     "title": "addDraftOrderPromotionWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/addDraftOrderPromotionWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/addDraftOrderPromotionWorkflow"
   },
   {
     "title": "addDraftOrderShippingMethodsWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/addDraftOrderShippingMethodsWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/addDraftOrderShippingMethodsWorkflow"
   },
   {
     "title": "beginDraftOrderEditWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/beginDraftOrderEditWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/beginDraftOrderEditWorkflow"
   },
   {
     "title": "cancelDraftOrderEditWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/cancelDraftOrderEditWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/cancelDraftOrderEditWorkflow"
   },
   {
     "title": "confirmDraftOrderEditWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/confirmDraftOrderEditWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/confirmDraftOrderEditWorkflow"
   },
   {
     "title": "removeDraftOrderActionItemWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/removeDraftOrderActionItemWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/removeDraftOrderActionItemWorkflow"
   },
   {
     "title": "removeDraftOrderActionShippingMethodWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/removeDraftOrderActionShippingMethodWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/removeDraftOrderActionShippingMethodWorkflow"
   },
   {
     "title": "removeDraftOrderPromotionsWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/removeDraftOrderPromotionsWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/removeDraftOrderPromotionsWorkflow"
   },
   {
     "title": "removeDraftOrderShippingMethodWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/removeDraftOrderShippingMethodWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/removeDraftOrderShippingMethodWorkflow"
   },
   {
     "title": "requestDraftOrderEditWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/requestDraftOrderEditWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/requestDraftOrderEditWorkflow"
   },
   {
     "title": "updateDraftOrderActionItemWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateDraftOrderActionItemWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/updateDraftOrderActionItemWorkflow"
   },
   {
     "title": "updateDraftOrderActionShippingMethodWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateDraftOrderActionShippingMethodWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/updateDraftOrderActionShippingMethodWorkflow"
   },
   {
     "title": "updateDraftOrderItemWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateDraftOrderItemWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/updateDraftOrderItemWorkflow"
   },
   {
     "title": "updateDraftOrderShippingMethodWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateDraftOrderShippingMethodWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/updateDraftOrderShippingMethodWorkflow"
   },
   {
     "title": "updateDraftOrderStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateDraftOrderStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/updateDraftOrderStep"
   },
   {
     "title": "updateDraftOrderWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateDraftOrderWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/updateDraftOrderWorkflow"
   },
   {
     "title": "addOrderTransactionStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/addOrderTransactionStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/addOrderTransactionStep"
   },
   {
     "title": "archiveOrdersStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/archiveOrdersStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/archiveOrdersStep"
   },
   {
     "title": "cancelOrderChangeStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/cancelOrderChangeStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/cancelOrderChangeStep"
   },
   {
     "title": "cancelOrderClaimStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/cancelOrderClaimStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/cancelOrderClaimStep"
   },
   {
     "title": "cancelOrderExchangeStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/cancelOrderExchangeStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/cancelOrderExchangeStep"
   },
   {
     "title": "cancelOrderFulfillmentStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/cancelOrderFulfillmentStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/cancelOrderFulfillmentStep"
   },
   {
     "title": "cancelOrderReturnStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/cancelOrderReturnStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/cancelOrderReturnStep"
   },
   {
     "title": "cancelOrdersStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/cancelOrdersStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/cancelOrdersStep"
   },
   {
     "title": "completeOrdersStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/completeOrdersStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/completeOrdersStep"
   },
   {
     "title": "createCompleteReturnStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/createCompleteReturnStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/createCompleteReturnStep"
   },
   {
     "title": "createOrderChangeStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/createOrderChangeStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/createOrderChangeStep"
   },
   {
     "title": "createOrderClaimItemsFromActionsStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/createOrderClaimItemsFromActionsStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/createOrderClaimItemsFromActionsStep"
   },
   {
     "title": "createOrderClaimsStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/createOrderClaimsStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/createOrderClaimsStep"
   },
   {
     "title": "createOrderExchangeItemsFromActionsStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/createOrderExchangeItemsFromActionsStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/createOrderExchangeItemsFromActionsStep"
   },
   {
     "title": "createOrderExchangesStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/createOrderExchangesStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/createOrderExchangesStep"
   },
   {
     "title": "createOrdersStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/createOrdersStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/createOrdersStep"
   },
   {
     "title": "createReturnsStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/createReturnsStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/createReturnsStep"
   },
   {
     "title": "declineOrderChangeStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/declineOrderChangeStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/declineOrderChangeStep"
   },
   {
     "title": "deleteClaimsStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/deleteClaimsStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/deleteClaimsStep"
   },
   {
     "title": "deleteExchangesStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/deleteExchangesStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/deleteExchangesStep"
   },
   {
     "title": "deleteOrderChangeActionsStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/deleteOrderChangeActionsStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/deleteOrderChangeActionsStep"
   },
   {
     "title": "deleteOrderChangesStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/deleteOrderChangesStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/deleteOrderChangesStep"
   },
   {
     "title": "deleteOrderShippingMethods",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/deleteOrderShippingMethods"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/deleteOrderShippingMethods"
   },
   {
     "title": "deleteReturnsStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/deleteReturnsStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/deleteReturnsStep"
   },
   {
     "title": "previewOrderChangeStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/previewOrderChangeStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/previewOrderChangeStep"
   },
   {
     "title": "registerOrderChangesStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/registerOrderChangesStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/registerOrderChangesStep"
   },
   {
     "title": "registerOrderDeliveryStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/registerOrderDeliveryStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/registerOrderDeliveryStep"
   },
   {
     "title": "registerOrderFulfillmentStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/registerOrderFulfillmentStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/registerOrderFulfillmentStep"
   },
   {
     "title": "registerOrderShipmentStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/registerOrderShipmentStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/registerOrderShipmentStep"
   },
   {
     "title": "setOrderTaxLinesForItemsStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/setOrderTaxLinesForItemsStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/setOrderTaxLinesForItemsStep"
   },
   {
     "title": "updateOrderChangeActionsStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/updateOrderChangeActionsStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/updateOrderChangeActionsStep"
   },
   {
     "title": "updateOrderChangesStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/updateOrderChangesStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/updateOrderChangesStep"
   },
   {
     "title": "updateOrderShippingMethodsStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/updateOrderShippingMethodsStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/updateOrderShippingMethodsStep"
   },
   {
     "title": "updateOrdersStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/updateOrdersStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/updateOrdersStep"
   },
   {
     "title": "acceptOrderTransferWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/acceptOrderTransferWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/acceptOrderTransferWorkflow"
   },
   {
     "title": "archiveOrderWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/archiveOrderWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/archiveOrderWorkflow"
   },
   {
     "title": "beginClaimOrderWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/beginClaimOrderWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/beginClaimOrderWorkflow"
   },
   {
     "title": "beginExchangeOrderWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/beginExchangeOrderWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/beginExchangeOrderWorkflow"
   },
   {
     "title": "beginOrderEditOrderWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/beginOrderEditOrderWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/beginOrderEditOrderWorkflow"
   },
   {
     "title": "beginReceiveReturnWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/beginReceiveReturnWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/beginReceiveReturnWorkflow"
   },
   {
     "title": "beginReturnOrderWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/beginReturnOrderWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/beginReturnOrderWorkflow"
   },
   {
     "title": "cancelBeginOrderClaimWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/cancelBeginOrderClaimWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/cancelBeginOrderClaimWorkflow"
   },
   {
     "title": "cancelBeginOrderEditWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/cancelBeginOrderEditWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/cancelBeginOrderEditWorkflow"
   },
   {
     "title": "cancelBeginOrderExchangeWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/cancelBeginOrderExchangeWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/cancelBeginOrderExchangeWorkflow"
   },
   {
     "title": "cancelOrderChangeWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/cancelOrderChangeWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/cancelOrderChangeWorkflow"
   },
   {
     "title": "cancelOrderClaimWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/cancelOrderClaimWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/cancelOrderClaimWorkflow"
   },
   {
     "title": "cancelOrderExchangeWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/cancelOrderExchangeWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/cancelOrderExchangeWorkflow"
   },
   {
     "title": "cancelOrderFulfillmentWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/cancelOrderFulfillmentWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/cancelOrderFulfillmentWorkflow"
   },
   {
     "title": "cancelOrderTransferRequestWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/cancelOrderTransferRequestWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/cancelOrderTransferRequestWorkflow"
   },
   {
     "title": "cancelOrderWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/cancelOrderWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/cancelOrderWorkflow"
   },
   {
     "title": "cancelReturnReceiveWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/cancelReturnReceiveWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/cancelReturnReceiveWorkflow"
   },
   {
     "title": "cancelReturnRequestWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/cancelReturnRequestWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/cancelReturnRequestWorkflow"
   },
   {
     "title": "cancelReturnWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/cancelReturnWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/cancelReturnWorkflow"
   },
   {
     "title": "completeOrderWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/completeOrderWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/completeOrderWorkflow"
   },
   {
     "title": "confirmClaimRequestWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/confirmClaimRequestWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/confirmClaimRequestWorkflow"
   },
   {
     "title": "confirmExchangeRequestWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/confirmExchangeRequestWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/confirmExchangeRequestWorkflow"
   },
   {
     "title": "confirmOrderEditRequestWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/confirmOrderEditRequestWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/confirmOrderEditRequestWorkflow"
   },
   {
     "title": "confirmReturnReceiveWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/confirmReturnReceiveWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/confirmReturnReceiveWorkflow"
   },
   {
     "title": "confirmReturnRequestWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/confirmReturnRequestWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/confirmReturnRequestWorkflow"
   },
   {
     "title": "createAndCompleteReturnOrderWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createAndCompleteReturnOrderWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/createAndCompleteReturnOrderWorkflow"
   },
   {
     "title": "createClaimShippingMethodWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createClaimShippingMethodWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/createClaimShippingMethodWorkflow"
   },
   {
     "title": "createExchangeShippingMethodWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createExchangeShippingMethodWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/createExchangeShippingMethodWorkflow"
   },
   {
     "title": "createOrderChangeWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createOrderChangeWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/createOrderChangeWorkflow"
   },
   {
     "title": "createOrderCreditLinesWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createOrderCreditLinesWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/createOrderCreditLinesWorkflow"
   },
   {
     "title": "createOrderEditShippingMethodWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createOrderEditShippingMethodWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/createOrderEditShippingMethodWorkflow"
   },
   {
     "title": "createOrderFulfillmentWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createOrderFulfillmentWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/createOrderFulfillmentWorkflow"
   },
   {
     "title": "createOrderShipmentWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createOrderShipmentWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/createOrderShipmentWorkflow"
   },
   {
     "title": "createOrderWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createOrderWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/createOrderWorkflow"
   },
   {
     "title": "createReturnShippingMethodWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createReturnShippingMethodWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/createReturnShippingMethodWorkflow"
   },
   {
     "title": "declineOrderChangeWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/declineOrderChangeWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/declineOrderChangeWorkflow"
   },
   {
     "title": "declineOrderTransferRequestWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/declineOrderTransferRequestWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/declineOrderTransferRequestWorkflow"
   },
   {
     "title": "deleteOrderChangeActionsWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/deleteOrderChangeActionsWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/deleteOrderChangeActionsWorkflow"
   },
   {
     "title": "deleteOrderChangeWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/deleteOrderChangeWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/deleteOrderChangeWorkflow"
   },
   {
     "title": "dismissItemReturnRequestWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/dismissItemReturnRequestWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/dismissItemReturnRequestWorkflow"
   },
   {
     "title": "markOrderFulfillmentAsDeliveredWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/markOrderFulfillmentAsDeliveredWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/markOrderFulfillmentAsDeliveredWorkflow"
   },
   {
     "title": "markPaymentCollectionAsPaid",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/markPaymentCollectionAsPaid"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/markPaymentCollectionAsPaid"
   },
   {
     "title": "orderClaimAddNewItemWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/orderClaimAddNewItemWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/orderClaimAddNewItemWorkflow"
   },
   {
     "title": "orderClaimItemWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/orderClaimItemWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/orderClaimItemWorkflow"
   },
   {
     "title": "orderClaimRequestItemReturnWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/orderClaimRequestItemReturnWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/orderClaimRequestItemReturnWorkflow"
   },
   {
     "title": "orderEditAddNewItemWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/orderEditAddNewItemWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/orderEditAddNewItemWorkflow"
   },
   {
     "title": "orderEditUpdateItemQuantityWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/orderEditUpdateItemQuantityWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/orderEditUpdateItemQuantityWorkflow"
   },
   {
     "title": "orderExchangeAddNewItemWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/orderExchangeAddNewItemWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/orderExchangeAddNewItemWorkflow"
   },
   {
     "title": "orderExchangeRequestItemReturnWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/orderExchangeRequestItemReturnWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/orderExchangeRequestItemReturnWorkflow"
   },
   {
     "title": "receiveItemReturnRequestWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/receiveItemReturnRequestWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/receiveItemReturnRequestWorkflow"
   },
   {
     "title": "removeAddItemClaimActionWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/removeAddItemClaimActionWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/removeAddItemClaimActionWorkflow"
   },
   {
     "title": "removeClaimShippingMethodWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/removeClaimShippingMethodWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/removeClaimShippingMethodWorkflow"
   },
   {
     "title": "removeExchangeShippingMethodWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/removeExchangeShippingMethodWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/removeExchangeShippingMethodWorkflow"
   },
   {
     "title": "removeItemClaimActionWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/removeItemClaimActionWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/removeItemClaimActionWorkflow"
   },
   {
     "title": "removeItemExchangeActionWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/removeItemExchangeActionWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/removeItemExchangeActionWorkflow"
   },
   {
     "title": "removeItemOrderEditActionWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/removeItemOrderEditActionWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/removeItemOrderEditActionWorkflow"
   },
   {
     "title": "removeItemReceiveReturnActionWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/removeItemReceiveReturnActionWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/removeItemReceiveReturnActionWorkflow"
   },
   {
     "title": "removeItemReturnActionWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/removeItemReturnActionWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/removeItemReturnActionWorkflow"
   },
   {
     "title": "removeOrderEditShippingMethodWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/removeOrderEditShippingMethodWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/removeOrderEditShippingMethodWorkflow"
   },
   {
     "title": "removeReturnShippingMethodWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/removeReturnShippingMethodWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/removeReturnShippingMethodWorkflow"
   },
   {
     "title": "requestItemReturnWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/requestItemReturnWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/requestItemReturnWorkflow"
   },
   {
     "title": "requestOrderEditRequestWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/requestOrderEditRequestWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/requestOrderEditRequestWorkflow"
   },
   {
     "title": "requestOrderTransferWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/requestOrderTransferWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/requestOrderTransferWorkflow"
   },
   {
     "title": "updateClaimAddItemWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateClaimAddItemWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/updateClaimAddItemWorkflow"
   },
   {
     "title": "updateClaimItemWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateClaimItemWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/updateClaimItemWorkflow"
   },
   {
     "title": "updateClaimShippingMethodWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateClaimShippingMethodWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/updateClaimShippingMethodWorkflow"
   },
   {
     "title": "updateExchangeAddItemWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateExchangeAddItemWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/updateExchangeAddItemWorkflow"
   },
   {
     "title": "updateExchangeShippingMethodWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateExchangeShippingMethodWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/updateExchangeShippingMethodWorkflow"
   },
   {
     "title": "updateOrderChangeActionsWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateOrderChangeActionsWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/updateOrderChangeActionsWorkflow"
   },
   {
     "title": "updateOrderChangesWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateOrderChangesWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/updateOrderChangesWorkflow"
   },
   {
     "title": "updateOrderEditAddItemWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateOrderEditAddItemWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/updateOrderEditAddItemWorkflow"
   },
   {
     "title": "updateOrderEditItemQuantityWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateOrderEditItemQuantityWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/updateOrderEditItemQuantityWorkflow"
   },
   {
     "title": "updateOrderEditShippingMethodWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateOrderEditShippingMethodWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/updateOrderEditShippingMethodWorkflow"
   },
   {
     "title": "updateOrderTaxLinesWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateOrderTaxLinesWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/updateOrderTaxLinesWorkflow"
   },
   {
     "title": "updateOrderWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateOrderWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/updateOrderWorkflow"
   },
   {
     "title": "updateReceiveItemReturnRequestWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateReceiveItemReturnRequestWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/updateReceiveItemReturnRequestWorkflow"
   },
   {
     "title": "updateRequestItemReturnWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateRequestItemReturnWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/updateRequestItemReturnWorkflow"
   },
   {
     "title": "updateReturnShippingMethodWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateReturnShippingMethodWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/updateReturnShippingMethodWorkflow"
   },
   {
     "title": "updateReturnWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateReturnWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/updateReturnWorkflow"
   },
   {
     "title": "capturePaymentWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/capturePaymentWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/capturePaymentWorkflow"
   },
   {
     "title": "processPaymentWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/processPaymentWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/processPaymentWorkflow"
   },
   {
     "title": "refundPaymentWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/refundPaymentWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/refundPaymentWorkflow"
   },
   {
     "title": "refundPaymentsWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/refundPaymentsWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/refundPaymentsWorkflow"
   },
   {
     "title": "createReturnReasonsStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/createReturnReasonsStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/createReturnReasonsStep"
   },
   {
     "title": "deleteReturnReasonStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/deleteReturnReasonStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/deleteReturnReasonStep"
   },
   {
     "title": "updateReturnReasonsStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/updateReturnReasonsStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/updateReturnReasonsStep"
   },
   {
     "title": "createReturnReasonsWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createReturnReasonsWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/createReturnReasonsWorkflow"
   },
   {
     "title": "deleteReturnReasonsWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/deleteReturnReasonsWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/deleteReturnReasonsWorkflow"
   },
   {
     "title": "updateReturnReasonsWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateReturnReasonsWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/updateReturnReasonsWorkflow"
   },
   {
     "title": "claim",
-    "path": "https://docs.medusajs.com/resources/references/js-sdk/admin/claim"
+    "path": "https://docs.vikrai.com/resources/references/js-sdk/admin/claim"
   },
   {
     "title": "draftOrder",
-    "path": "https://docs.medusajs.com/resources/references/js-sdk/admin/draftOrder"
+    "path": "https://docs.vikrai.com/resources/references/js-sdk/admin/draftOrder"
   },
   {
     "title": "exchange",
-    "path": "https://docs.medusajs.com/resources/references/js-sdk/admin/exchange"
+    "path": "https://docs.vikrai.com/resources/references/js-sdk/admin/exchange"
   },
   {
     "title": "order",
-    "path": "https://docs.medusajs.com/resources/references/js-sdk/admin/order"
+    "path": "https://docs.vikrai.com/resources/references/js-sdk/admin/order"
   },
   {
     "title": "orderEdit",
-    "path": "https://docs.medusajs.com/resources/references/js-sdk/admin/orderEdit"
+    "path": "https://docs.vikrai.com/resources/references/js-sdk/admin/orderEdit"
   },
   {
     "title": "refundReason",
-    "path": "https://docs.medusajs.com/resources/references/js-sdk/admin/refundReason"
+    "path": "https://docs.vikrai.com/resources/references/js-sdk/admin/refundReason"
   },
   {
     "title": "return",
-    "path": "https://docs.medusajs.com/resources/references/js-sdk/admin/return"
+    "path": "https://docs.vikrai.com/resources/references/js-sdk/admin/return"
   },
   {
     "title": "returnReason",
-    "path": "https://docs.medusajs.com/resources/references/js-sdk/admin/returnReason"
+    "path": "https://docs.vikrai.com/resources/references/js-sdk/admin/returnReason"
   },
   {
     "title": "order",
-    "path": "https://docs.medusajs.com/resources/references/js-sdk/store/order"
+    "path": "https://docs.vikrai.com/resources/references/js-sdk/store/order"
   }
 ]

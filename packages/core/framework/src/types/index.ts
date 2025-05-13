@@ -1,1 +1,2 @@
-export * from "@medusajs/types"
+export * from "@vikrai/types"
+

@@ -79,7 +79,7 @@ module.exports = {
       parser: "@typescript-eslint/parser",
       parserOptions: {
         project: [
-          "./packages/medusa/tsconfig.json",
+          "./packages/vikrai/tsconfig.json",
 
           "./packages/admin/dashboard/tsconfig.json",
           "./packages/admin/admin-sdk/tsconfig.json",
@@ -92,9 +92,9 @@ module.exports = {
           "./packages/design-system/ui-preset/tsconfig.json",
           "./packages/design-system/toolbox/tsconfig.json",
 
-          "./packages/cli/create-medusa-app/tsconfig.json",
-          "./packages/cli/medusa-cli/tsconfig.spec.json",
-          "./packages/cli/oas/medusa-oas-cli/tsconfig.spec.json",
+          "./packages/cli/create-vikrai-app/tsconfig.json",
+          "./packages/cli/vikrai-cli/tsconfig.spec.json",
+          "./packages/cli/oas/vikrai-oas-cli/tsconfig.spec.json",
 
           "./packages/core/orchestration/tsconfig.json",
           "./packages/core/workflows-sdk/tsconfig.spec.json",
@@ -102,7 +102,7 @@ module.exports = {
           "./packages/core/js-sdk/tsconfig.json",
           "./packages/core/types/tsconfig.json",
           "./packages/core/utils/tsconfig.spec.json",
-          "./packages/core/medusa-test-utils/tsconfig.json",
+          "./packages/core/vikrai-test-utils/tsconfig.json",
 
           "./packages/modules/product/tsconfig.json",
           "./packages/modules/event-bus-local/tsconfig.spec.json",
@@ -283,3 +283,4 @@ module.exports = {
     },
   ],
 }
+

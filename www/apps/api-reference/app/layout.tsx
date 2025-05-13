@@ -6,11 +6,11 @@ import clsx from "clsx"
 import { Metadata } from "next"
 
 const ogImage =
-  "https://res.cloudinary.com/dza7lstvk/image/upload/v1732200992/Medusa%20Resources/opengraph-image_daq6nx.jpg"
+  "https://res.cloudinary.com/dza7lstvk/image/upload/v1732200992/vikrai%20Resources/opengraph-image_daq6nx.jpg"
 
 export const metadata: Metadata = {
-  title: "Medusa API Reference",
-  description: "Check out Medusa's API reference",
+  title: "vikrai API Reference",
+  description: "Check out vikrai's API reference",
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000"
   ),
@@ -67,3 +67,4 @@ export default function RootLayout({
     </BareboneLayout>
   )
 }
+

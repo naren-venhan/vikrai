@@ -1,10 +1,10 @@
 import {
   arrayDifference,
   ContainerRegistrationKeys,
-  MedusaError,
+  vikraiError,
   Modules,
-} from "@medusajs/framework/utils"
-import { createStep, StepResponse } from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/utils"
+import { createStep, StepResponse } from "@vikrai/framework/workflows-sdk"
 
 /**
  * The configurations to retrieve pricing links for product variants.
@@ -50,8 +50,8 @@ export const getVariantPricingLinkStep = createStep(
         existingItems.map((i) => i.variant_id)
       )
 
-      throw new MedusaError(
-        MedusaError.Types.NOT_FOUND,
+      throw new vikraiError(
+        vikraiError.Types.NOT_FOUND,
         `Variants with IDs ${missing.join(", ")} do not have prices associated.`
       )
     }
@@ -59,3 +59,4 @@ export const getVariantPricingLinkStep = createStep(
     return new StepResponse(existingItems)
   }
 )
+

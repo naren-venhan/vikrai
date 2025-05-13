@@ -1,10 +1,10 @@
-import { AdditionalData, CreatePromotionDTO } from "@medusajs/framework/types"
+import { AdditionalData, CreatePromotionDTO } from "@vikrai/framework/types"
 import {
   WorkflowData,
   WorkflowResponse,
   createHook,
   createWorkflow,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { createPromotionsStep } from "../steps"
 
 /**
@@ -19,7 +19,7 @@ export type CreatePromotionsWorkflowInput = {
 
 export const createPromotionsWorkflowId = "create-promotions"
 /**
- * This workflow creates one or more promotions. It's used by the [Create Promotion Admin API Route](https://docs.medusajs.com/api/admin#promotions_postpromotions).
+ * This workflow creates one or more promotions. It's used by the [Create Promotion Admin API Route](https://docs.vikrai.com/api/admin#promotions_postpromotions).
  * 
  * This workflow has a hook that allows you to perform custom actions on the created promotion. For example, you can pass under `additional_data` custom data that
  * allows you to create custom data models linked to the promotions.
@@ -70,3 +70,4 @@ export const createPromotionsWorkflow = createWorkflow(
     })
   }
 )
+

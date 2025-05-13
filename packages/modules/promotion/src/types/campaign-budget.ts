@@ -2,7 +2,7 @@ import {
   BigNumberInput,
   CampaignBudgetTypeValues,
   InferEntityType,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import { Campaign } from "@models"
 
 export interface CreateCampaignBudgetDTO {
@@ -20,3 +20,4 @@ export interface UpdateCampaignBudgetDTO {
   currency_code?: string | null
   used?: BigNumberInput
 }
+

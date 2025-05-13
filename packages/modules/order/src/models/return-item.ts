@@ -1,4 +1,4 @@
-import { model } from "@medusajs/framework/utils"
+import { model } from "@vikrai/framework/utils"
 import { OrderLineItem } from "./line-item"
 import { Return } from "./return"
 import { ReturnReason } from "./return-reason"
@@ -57,3 +57,4 @@ const _ReturnItem = model
   ])
 
 export const ReturnItem = _ReturnItem
+

@@ -9,8 +9,8 @@ export const CardFillerLayout = ({ text, href, className }: CardProps) => {
       className={clsx(
         "flex justify-center items-center w-full",
         "gap-docs_0.75 px-docs_0.75 py-docs_0.5 rounded-docs_DEFAULT",
-        "border border-dashed border-medusa-border-strong",
-        "bg-medusa-bg-component text-medusa-fg-subtle",
+        "border border-dashed border-vikrai-border-strong",
+        "bg-vikrai-bg-component text-vikrai-fg-subtle",
         className
       )}
     >
@@ -28,3 +28,4 @@ export const CardFillerLayout = ({ text, href, className }: CardProps) => {
     </div>
   )
 }
+

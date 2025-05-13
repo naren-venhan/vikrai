@@ -6,36 +6,36 @@ import {
   IStoreModuleService,
   ModulesSdkTypes,
   StoreTypes,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import {
   getDuplicates,
   InjectManager,
   InjectTransactionManager,
   isString,
-  MedusaContext,
-  MedusaError,
-  MedusaService,
+  vikraiContext,
+  vikraiError,
+  vikraiService,
   promiseAll,
   removeUndefined,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 
 import { Store, StoreCurrency } from "@models"
 import { UpdateStoreInput } from "@types"
 
 type InjectedDependencies = {
   baseRepository: DAL.RepositoryService
-  storeService: ModulesSdkTypes.IMedusaInternalService<any>
+  storeService: ModulesSdkTypes.IvikraiInternalService<any>
 }
 
 export default class StoreModuleService
-  extends MedusaService<{
+  extends vikraiService<{
     Store: { dto: StoreTypes.StoreDTO }
     StoreCurrency: { dto: StoreTypes.StoreCurrencyDTO }
   }>({ Store, StoreCurrency })
   implements IStoreModuleService
 {
   protected baseRepository_: DAL.RepositoryService
-  protected readonly storeService_: ModulesSdkTypes.IMedusaInternalService<
+  protected readonly storeService_: ModulesSdkTypes.IvikraiInternalService<
     InferEntityType<typeof Store>
   >
 
@@ -63,7 +63,7 @@ export default class StoreModuleService
   // @ts-expect-error
   async createStores(
     data: StoreTypes.CreateStoreDTO | StoreTypes.CreateStoreDTO[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<StoreTypes.StoreDTO | StoreTypes.StoreDTO[]> {
     const input = Array.isArray(data) ? data : [data]
 
@@ -77,7 +77,7 @@ export default class StoreModuleService
   @InjectTransactionManager()
   async create_(
     data: StoreTypes.CreateStoreDTO[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<InferEntityType<typeof Store>[]> {
     let normalizedInput = StoreModuleService.normalizeInput(data)
     StoreModuleService.validateCreateRequest(normalizedInput)
@@ -102,7 +102,7 @@ export default class StoreModuleService
   @InjectTransactionManager()
   async upsertStores(
     data: StoreTypes.UpsertStoreDTO | StoreTypes.UpsertStoreDTO[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<StoreTypes.StoreDTO | StoreTypes.StoreDTO[]> {
     const input = Array.isArray(data) ? data : [data]
     const forUpdate = input.filter(
@@ -144,7 +144,7 @@ export default class StoreModuleService
   async updateStores(
     idOrSelector: string | StoreTypes.FilterableStoreProps,
     data: StoreTypes.UpdateStoreDTO,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<StoreTypes.StoreDTO | StoreTypes.StoreDTO[]> {
     let normalizedInput: UpdateStoreInput[] = []
     if (isString(idOrSelector)) {
@@ -174,7 +174,7 @@ export default class StoreModuleService
   @InjectTransactionManager()
   protected async update_(
     data: UpdateStoreInput[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<InferEntityType<typeof Store>[]> {
     const normalizedInput = StoreModuleService.normalizeInput(data)
     StoreModuleService.validateUpdateRequest(normalizedInput)
@@ -213,8 +213,8 @@ export default class StoreModuleService
         )
 
         if (duplicates.length) {
-          throw new MedusaError(
-            MedusaError.Types.INVALID_DATA,
+          throw new vikraiError(
+            vikraiError.Types.INVALID_DATA,
             `Duplicate currency codes: ${duplicates.join(", ")}`
           )
         }
@@ -223,8 +223,8 @@ export default class StoreModuleService
         store.supported_currencies?.forEach((c) => {
           if (c.is_default) {
             if (seenDefault) {
-              throw new MedusaError(
-                MedusaError.Types.INVALID_DATA,
+              throw new vikraiError(
+                vikraiError.Types.INVALID_DATA,
                 `Only one default currency is allowed`
               )
             }
@@ -233,8 +233,8 @@ export default class StoreModuleService
         })
 
         if (!seenDefault) {
-          throw new MedusaError(
-            MedusaError.Types.INVALID_DATA,
+          throw new vikraiError(
+            vikraiError.Types.INVALID_DATA,
             `There should be a default currency set for the store`
           )
         }
@@ -246,3 +246,4 @@ export default class StoreModuleService
     StoreModuleService.validateCreateRequest(stores)
   }
 }
+

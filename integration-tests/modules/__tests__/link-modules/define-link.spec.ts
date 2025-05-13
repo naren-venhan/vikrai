@@ -1,14 +1,14 @@
-import { medusaIntegrationTestRunner } from "@medusajs/test-utils"
+import { vikraiIntegrationTestRunner } from "@vikrai/test-utils"
 
-import CurrencyModule from "@medusajs/currency"
-import { MedusaModule } from "@medusajs/modules-sdk"
-import ProductModule from "@medusajs/product"
-import RegionModule from "@medusajs/region"
-import { defineLink } from "@medusajs/utils"
+import CurrencyModule from "@vikrai/currency"
+import { vikraiModule } from "@vikrai/modules-sdk"
+import ProductModule from "@vikrai/product"
+import RegionModule from "@vikrai/region"
+import { defineLink } from "@vikrai/utils"
 
 jest.setTimeout(50000)
 
-medusaIntegrationTestRunner({
+vikraiIntegrationTestRunner({
   testSuite: ({ getContainer }) => {
     describe("defineLink", () => {
       it("should generate a proper link definition", async () => {
@@ -17,10 +17,10 @@ medusaIntegrationTestRunner({
 
         const link = defineLink(currencyLinks.currency, regionLinks.region)
 
-        const linkDefinition = MedusaModule.getCustomLinks()
+        const linkDefinition = vikraiModule.getCustomLinks()
           .map((linkDefinition: any) => {
             const definition = linkDefinition(
-              MedusaModule.getAllJoinerConfigs()
+              vikraiModule.getAllJoinerConfigs()
             )
             return definition.serviceName === link.serviceName && definition
           })
@@ -118,10 +118,10 @@ medusaIntegrationTestRunner({
           regionLinks.region
         )
 
-        const linkDefinition = MedusaModule.getCustomLinks()
+        const linkDefinition = vikraiModule.getCustomLinks()
           .map((linkDefinition: any) => {
             const definition = linkDefinition(
-              MedusaModule.getAllJoinerConfigs()
+              vikraiModule.getAllJoinerConfigs()
             )
             return definition.serviceName === link.serviceName && definition
           })
@@ -224,10 +224,10 @@ medusaIntegrationTestRunner({
           regionLinks.region
         )
 
-        const linkDefinition = MedusaModule.getCustomLinks()
+        const linkDefinition = vikraiModule.getCustomLinks()
           .map((linkDefinition: any) => {
             const definition = linkDefinition(
-              MedusaModule.getAllJoinerConfigs()
+              vikraiModule.getAllJoinerConfigs()
             )
             return definition.serviceName === link.serviceName && definition
           })
@@ -325,10 +325,10 @@ medusaIntegrationTestRunner({
           isList: true,
         })
 
-        const linkDefinition = MedusaModule.getCustomLinks()
+        const linkDefinition = vikraiModule.getCustomLinks()
           .map((linkDefinition: any) => {
             const definition = linkDefinition(
-              MedusaModule.getAllJoinerConfigs()
+              vikraiModule.getAllJoinerConfigs()
             )
             return definition.serviceName === link.serviceName && definition
           })
@@ -431,10 +431,10 @@ medusaIntegrationTestRunner({
           }
         )
 
-        const linkDefinition = MedusaModule.getCustomLinks()
+        const linkDefinition = vikraiModule.getCustomLinks()
           .map((linkDefinition: any) => {
             const definition = linkDefinition(
-              MedusaModule.getAllJoinerConfigs()
+              vikraiModule.getAllJoinerConfigs()
             )
             return definition.serviceName === link.serviceName && definition
           })
@@ -537,10 +537,10 @@ medusaIntegrationTestRunner({
           }
         )
 
-        const linkDefinition = MedusaModule.getCustomLinks()
+        const linkDefinition = vikraiModule.getCustomLinks()
           .map((linkDefinition: any) => {
             const definition = linkDefinition(
-              MedusaModule.getAllJoinerConfigs()
+              vikraiModule.getAllJoinerConfigs()
             )
             return definition.serviceName === link.serviceName && definition
           })
@@ -630,3 +630,4 @@ medusaIntegrationTestRunner({
     })
   },
 })
+

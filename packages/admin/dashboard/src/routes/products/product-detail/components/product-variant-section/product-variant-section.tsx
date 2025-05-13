@@ -1,5 +1,5 @@
-import { Buildings, Component, PencilSquare, Trash } from "@medusajs/icons"
-import { HttpTypes } from "@medusajs/types"
+import { Buildings, Component, PencilSquare, Trash } from "@vikrai/icons"
+import { HttpTypes } from "@vikrai/types"
 import {
   Badge,
   clx,
@@ -10,7 +10,7 @@ import {
   DataTableAction,
   Tooltip,
   usePrompt,
-} from "@medusajs/ui"
+} from "@vikrai/ui"
 import { keepPreviousData } from "@tanstack/react-query"
 import { useCallback, useMemo } from "react"
 import { useTranslation } from "react-i18next"
@@ -442,3 +442,4 @@ const useCommands = () => {
     }),
   ]
 }
+

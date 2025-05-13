@@ -5,19 +5,19 @@ import {
   ProductDTO,
   ProductVariantDTO,
   UpdateProductVariantDTO,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import {
   CommonEvents,
   composeMessage,
   Modules,
   ProductEvents,
   ProductStatus,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 
 import {
   MockEventBusService,
   moduleIntegrationTestRunner,
-} from "@medusajs/test-utils"
+} from "@vikrai/test-utils"
 
 jest.setTimeout(30000)
 
@@ -523,3 +523,4 @@ moduleIntegrationTestRunner<IProductModuleService>({
     })
   },
 })
+

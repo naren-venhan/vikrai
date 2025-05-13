@@ -43,7 +43,7 @@ export const MainContentLayout = ({
     >
       <div
         className={clsx(
-          "bg-medusa-bg-base",
+          "bg-vikrai-bg-base",
           "flex-col items-center",
           "h-full w-full",
           "overflow-y-scroll overflow-x-hidden",
@@ -69,3 +69,4 @@ export const MainContentLayout = ({
     </div>
   )
 }
+

@@ -1,4 +1,4 @@
-import { EventBusTypes, InternalModuleDeclaration } from "@medusajs/types"
+import { EventBusTypes, InternalModuleDeclaration } from "@vikrai/types"
 import { ulid } from "ulid"
 
 export abstract class AbstractEventBusModuleService
@@ -132,3 +132,4 @@ export * from "./build-event-messages"
 export * from "./common-events"
 export * from "./message-aggregator"
 export * from "./utils"
+

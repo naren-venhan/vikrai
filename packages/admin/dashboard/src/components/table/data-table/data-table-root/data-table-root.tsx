@@ -1,4 +1,4 @@
-import { CommandBar, Table, clx } from "@medusajs/ui"
+import { CommandBar, Table, clx } from "@vikrai/ui"
 import {
   ColumnDef,
   Table as ReactTable,
@@ -380,3 +380,4 @@ const Pagination = (props: PaginationProps) => {
     />
   )
 }
+

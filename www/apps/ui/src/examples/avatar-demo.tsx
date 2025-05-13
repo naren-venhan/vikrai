@@ -1,4 +1,4 @@
-import { Avatar } from "@medusajs/ui"
+import { Avatar } from "@vikrai/ui"
 
 export default function AvatarDemo() {
   return (
@@ -8,3 +8,4 @@ export default function AvatarDemo() {
     />
   )
 }
+

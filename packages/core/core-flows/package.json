@@ -1,14 +1,14 @@
 {
-  "name": "@medusajs/core-flows",
+  "name": "@vikrai/core-flows",
   "version": "2.7.1",
-  "description": "Set of workflow definitions for Medusa",
+  "description": "Set of workflow definitions for vikrai",
   "main": "dist/index.js",
   "exports": {
     ".": "./dist/index.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/medusajs/medusa",
+    "url": "https://github.com/vikrai/vikrai",
     "directory": "packages/core-flows"
   },
   "publishConfig": {
@@ -23,10 +23,10 @@
     "!dist/**/__mocks__",
     "!dist/**/__fixtures__"
   ],
-  "author": "Medusa",
+  "author": "vikrai",
   "license": "MIT",
   "devDependencies": {
-    "@medusajs/framework": "2.7.1",
+    "@vikrai/framework": "2.7.1",
     "@mikro-orm/core": "6.4.3",
     "@mikro-orm/knex": "6.4.3",
     "@mikro-orm/migrations": "6.4.3",
@@ -44,7 +44,7 @@
     "json-2-csv": "^5.5.4"
   },
   "peerDependencies": {
-    "@medusajs/framework": "2.7.1",
+    "@vikrai/framework": "2.7.1",
     "awilix": "^8.0.1"
   },
   "scripts": {
@@ -53,3 +53,4 @@
     "test": "jest --runInBand --bail --forceExit --passWithNoTests"
   }
 }
+

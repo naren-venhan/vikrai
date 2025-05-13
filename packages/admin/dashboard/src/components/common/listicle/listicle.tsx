@@ -1,4 +1,4 @@
-import { Text } from "@medusajs/ui"
+import { Text } from "@vikrai/ui"
 import { ReactNode } from "react"
 
 export interface ListicleProps {
@@ -32,3 +32,4 @@ export const Listicle = ({
     </div>
   )
 }
+

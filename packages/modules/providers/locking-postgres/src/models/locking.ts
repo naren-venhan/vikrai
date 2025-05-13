@@ -1,4 +1,4 @@
-import { model } from "@medusajs/framework/utils"
+import { model } from "@vikrai/framework/utils"
 
 const Locking = model.define("Locking", {
   id: model.id({ prefix: "lk" }).primaryKey(),
@@ -7,3 +7,4 @@ const Locking = model.define("Locking", {
 })
 
 export default Locking
+

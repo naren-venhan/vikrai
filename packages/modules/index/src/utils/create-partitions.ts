@@ -1,4 +1,4 @@
-import { IndexTypes } from "@medusajs/framework/types"
+import { IndexTypes } from "@vikrai/framework/types"
 import { SqlEntityManager } from "@mikro-orm/postgresql"
 import { schemaObjectRepresentationPropertiesToOmit } from "@types"
 
@@ -111,3 +111,4 @@ export async function createPartitions(
 
   await manager.execute(partitions.join("; "))
 }
+

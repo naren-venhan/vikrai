@@ -5,7 +5,7 @@ const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000"
 
 export const config: DocsConfig = {
   ...globalConfig,
-  titleSuffix: "Medusa Documentation",
+  titleSuffix: "vikrai Documentation",
   baseUrl,
   basePath: process.env.NEXT_PUBLIC_BASE_PATH,
   sidebars: [],
@@ -23,3 +23,4 @@ export const config: DocsConfig = {
   },
   logo: `${process.env.NEXT_PUBLIC_BASE_PATH}/images/logo.png`,
 }
+

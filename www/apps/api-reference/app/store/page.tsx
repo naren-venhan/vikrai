@@ -26,8 +26,9 @@ export default StorePage
 
 export function generateMetadata() {
   return {
-    title: `Medusa Store API Reference`,
-    description: `REST API reference for the Medusa v2 store API, with code snippets and examples.`,
+    title: `vikrai Store API Reference`,
+    description: `REST API reference for the vikrai v2 store API, with code snippets and examples.`,
     metadataBase: process.env.NEXT_PUBLIC_BASE_URL,
   }
 }
+

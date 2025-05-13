@@ -1,5 +1,5 @@
-import { Modules } from "@medusajs/framework/utils"
-import { WorkflowData, createWorkflow } from "@medusajs/framework/workflows-sdk"
+import { Modules } from "@vikrai/framework/utils"
+import { WorkflowData, createWorkflow } from "@vikrai/framework/workflows-sdk"
 import { removeRemoteLinkStep } from "../../common"
 import { deleteReturnReasonStep } from "../steps"
 
@@ -16,7 +16,7 @@ export type DeleteReturnReasonsWorkflowInput = {
 export const deleteReturnReasonsWorkflowId = "delete-return-reasons"
 /**
  * This workflow deletes one or more return reasons. It's used by the
- * [Delete Return Reasons Admin API Route](https://docs.medusajs.com/api/admin#return-reasons_deletereturnreasonsid).
+ * [Delete Return Reasons Admin API Route](https://docs.vikrai.com/api/admin#return-reasons_deletereturnreasonsid).
  *
  * You can use this workflow within your customizations or your own custom workflows, allowing you to
  * delete return reasons within your custom flows.
@@ -49,3 +49,4 @@ export const deleteReturnReasonsWorkflow = createWorkflow(
     return deletedReturnReasons
   }
 )
+

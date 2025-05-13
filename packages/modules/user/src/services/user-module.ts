@@ -5,7 +5,7 @@ import {
   InternalModuleDeclaration,
   ModulesSdkTypes,
   UserTypes,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import {
   arrayDifference,
   CommonEvents,
@@ -13,13 +13,13 @@ import {
   generateEntityId,
   InjectManager,
   InjectTransactionManager,
-  MedusaContext,
-  MedusaError,
-  MedusaService,
+  vikraiContext,
+  vikraiError,
+  vikraiService,
   moduleEventBuilderFactory,
   Modules,
   UserEvents,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 import jwt, { JwtPayload } from "jsonwebtoken"
 import crypto from "node:crypto"
 
@@ -27,13 +27,13 @@ import { Invite, User } from "@models"
 
 type InjectedDependencies = {
   baseRepository: DAL.RepositoryService
-  userService: ModulesSdkTypes.IMedusaInternalService<any>
-  inviteService: ModulesSdkTypes.IMedusaInternalService<any>
+  userService: ModulesSdkTypes.IvikraiInternalService<any>
+  inviteService: ModulesSdkTypes.IvikraiInternalService<any>
 }
 
 const DEFAULT_VALID_INVITE_DURATION_SECONDS = 60 * 60 * 24
 export default class UserModuleService
-  extends MedusaService<{
+  extends vikraiService<{
     User: {
       dto: UserTypes.UserDTO
     }
@@ -45,10 +45,10 @@ export default class UserModuleService
 {
   protected baseRepository_: DAL.RepositoryService
 
-  protected readonly userService_: ModulesSdkTypes.IMedusaInternalService<
+  protected readonly userService_: ModulesSdkTypes.IvikraiInternalService<
     InferEntityType<typeof User>
   >
-  protected readonly inviteService_: ModulesSdkTypes.IMedusaInternalService<
+  protected readonly inviteService_: ModulesSdkTypes.IvikraiInternalService<
     InferEntityType<typeof Invite>
   >
   protected readonly config: { jwtSecret: string; expiresIn: number }
@@ -71,8 +71,8 @@ export default class UserModuleService
     }
 
     if (!this.config.jwtSecret) {
-      throw new MedusaError(
-        MedusaError.Types.INVALID_DATA,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_DATA,
         "No jwt_secret was provided in the UserModule's options. Please add one."
       )
     }
@@ -81,7 +81,7 @@ export default class UserModuleService
   @InjectTransactionManager()
   async validateInviteToken(
     token: string,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<UserTypes.InviteDTO> {
     const jwtSecret = this.moduleDeclaration["jwt_secret"]
     const decoded: JwtPayload = jwt.verify(token, jwtSecret, { complete: true })
@@ -93,8 +93,8 @@ export default class UserModuleService
     )
 
     if (invite.expires_at < new Date()) {
-      throw new MedusaError(
-        MedusaError.Types.INVALID_DATA,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_DATA,
         "The invite has expired"
       )
     }
@@ -108,7 +108,7 @@ export default class UserModuleService
   @EmitEvents()
   async refreshInviteTokens(
     inviteIds: string[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<UserTypes.InviteDTO[]> {
     const invites = await this.refreshInviteTokens_(inviteIds, sharedContext)
 
@@ -133,7 +133,7 @@ export default class UserModuleService
   @InjectTransactionManager()
   async refreshInviteTokens_(
     inviteIds: string[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ) {
     const [invites, count] = await this.inviteService_.listAndCount(
       { id: inviteIds },
@@ -148,8 +148,8 @@ export default class UserModuleService
       )
 
       if (missing.length > 0) {
-        throw new MedusaError(
-          MedusaError.Types.INVALID_DATA,
+        throw new vikraiError(
+          vikraiError.Types.INVALID_DATA,
           `The following invites do not exist: ${missing.join(", ")}`
         )
       }
@@ -182,7 +182,7 @@ export default class UserModuleService
   // @ts-expect-error
   async createUsers(
     data: UserTypes.CreateUserDTO[] | UserTypes.CreateUserDTO,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<UserTypes.UserDTO | UserTypes.UserDTO[]> {
     const input = Array.isArray(data) ? data : [data]
 
@@ -223,7 +223,7 @@ export default class UserModuleService
   // @ts-expect-error
   async updateUsers(
     data: UserTypes.UpdateUserDTO | UserTypes.UpdateUserDTO[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<UserTypes.UserDTO | UserTypes.UserDTO[]> {
     const input = Array.isArray(data) ? data : [data]
 
@@ -264,7 +264,7 @@ export default class UserModuleService
   // @ts-expect-error
   async createInvites(
     data: UserTypes.CreateInviteDTO[] | UserTypes.CreateInviteDTO,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<UserTypes.InviteDTO | UserTypes.InviteDTO[]> {
     const input = Array.isArray(data) ? data : [data]
 
@@ -302,15 +302,15 @@ export default class UserModuleService
   @InjectTransactionManager()
   private async createInvites_(
     data: UserTypes.CreateInviteDTO[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<InferEntityType<typeof Invite>[]> {
     const alreadyExistingUsers = await this.listUsers({
       email: data.map((d) => d.email),
     })
 
     if (alreadyExistingUsers.length) {
-      throw new MedusaError(
-        MedusaError.Types.INVALID_DATA,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_DATA,
         `User account for following email(s) already exist: ${alreadyExistingUsers
           .map((u) => u.email)
           .join(", ")}`
@@ -346,7 +346,7 @@ export default class UserModuleService
   // @ts-expect-error
   async updateInvites(
     data: UserTypes.UpdateInviteDTO | UserTypes.UpdateInviteDTO[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<UserTypes.InviteDTO | UserTypes.InviteDTO[]> {
     const input = Array.isArray(data) ? data : [data]
 
@@ -382,3 +382,4 @@ export default class UserModuleService
     })
   }
 }
+

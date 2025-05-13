@@ -1,4 +1,4 @@
-import { model } from "@medusajs/framework/utils"
+import { model } from "@vikrai/framework/utils"
 import { IndexMetadataStatus } from "../utils/index-metadata-status"
 
 const IndexMetadata = model
@@ -20,3 +20,4 @@ const IndexMetadata = model
   ])
 
 export default IndexMetadata
+

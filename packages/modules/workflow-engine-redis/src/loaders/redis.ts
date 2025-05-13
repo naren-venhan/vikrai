@@ -1,7 +1,7 @@
 import {
   InternalModuleDeclaration,
   LoaderOptions,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import { asValue } from "awilix"
 import Redis from "ioredis"
 import { RedisWorkflowsOptions } from "../types"
@@ -25,8 +25,8 @@ export default async (
 
   const cnnPubSub = pubsub ?? { url, options: redisOptions }
 
-  const queueName = options?.queueName ?? "medusa-workflows"
-  const jobQueueName = options?.jobQueueName ?? "medusa-workflows-jobs"
+  const queueName = options?.queueName ?? "vikrai-workflows"
+  const jobQueueName = options?.jobQueueName ?? "vikrai-workflows-jobs"
 
   let connection
   let redisPublisher
@@ -90,3 +90,4 @@ async function getConnection(url, redisOptions) {
 
   return connection
 }
+

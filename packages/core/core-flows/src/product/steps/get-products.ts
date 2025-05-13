@@ -1,6 +1,6 @@
-import { IProductModuleService } from "@medusajs/framework/types"
-import { Modules } from "@medusajs/framework/utils"
-import { createStep, StepResponse } from "@medusajs/framework/workflows-sdk"
+import { IProductModuleService } from "@vikrai/framework/types"
+import { Modules } from "@vikrai/framework/utils"
+import { createStep, StepResponse } from "@vikrai/framework/workflows-sdk"
 
 /**
  * Configurations to retrieve products.
@@ -32,3 +32,4 @@ export const getProductsStep = createStep(
     return new StepResponse(products, products)
   }
 )
+

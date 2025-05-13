@@ -1,6 +1,6 @@
 import { EmitEvents } from "../emit-events"
-import { MedusaContext } from "../context-parameter"
-import { Context } from "@medusajs/types"
+import { vikraiContext } from "../context-parameter"
+import { Context } from "@vikrai/types"
 import { InjectSharedContext } from "../inject-shared-context"
 
 describe("EmitEvents", () => {
@@ -14,7 +14,7 @@ describe("EmitEvents", () => {
 
       @InjectSharedContext()
       @EmitEvents({ internal: true })
-      async method(@MedusaContext() sharedContext: Context = {}) {
+      async method(@vikraiContext() sharedContext: Context = {}) {
         sharedContext.messageAggregator?.saveRawMessageData({
           data: { id: 1 },
           object: "test",
@@ -59,7 +59,7 @@ describe("EmitEvents", () => {
 
       @InjectSharedContext()
       @EmitEvents({ internal: true, groupBy: ["name"] })
-      async method(@MedusaContext() sharedContext: Context = {}) {
+      async method(@vikraiContext() sharedContext: Context = {}) {
         sharedContext.messageAggregator?.saveRawMessageData({
           data: { id: 1 },
           object: "test",
@@ -94,3 +94,4 @@ describe("EmitEvents", () => {
     })
   })
 })
+

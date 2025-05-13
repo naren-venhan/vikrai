@@ -1,8 +1,8 @@
 import { NextFunction, ErrorRequestHandler, Response } from "express"
 
-import { ContainerRegistrationKeys, MedusaError } from "@medusajs/utils"
+import { ContainerRegistrationKeys, vikraiError } from "@vikrai/utils"
 import { formatException } from "./exception-formatter"
-import { MedusaRequest } from "../types"
+import { vikraiRequest } from "../types"
 
 const QUERY_RUNNER_RELEASED = "QueryRunnerAlreadyReleasedError"
 const TRANSACTION_STARTED = "TransactionAlreadyStartedError"
@@ -14,8 +14,8 @@ const INVALID_STATE_ERROR = "invalid_state_error"
 
 export function errorHandler() {
   return function coreErrorHandler(
-    err: MedusaError,
-    req: MedusaRequest,
+    err: vikraiError,
+    req: vikraiRequest,
     res: Response,
     _: NextFunction
   ) {
@@ -38,35 +38,35 @@ export function errorHandler() {
       case QUERY_RUNNER_RELEASED:
       case TRANSACTION_STARTED:
       case TRANSACTION_NOT_STARTED:
-      case MedusaError.Types.CONFLICT:
+      case vikraiError.Types.CONFLICT:
         statusCode = 409
         errObj.code = INVALID_STATE_ERROR
         errObj.message =
           "The request conflicted with another request. You may retry the request with the provided Idempotency-Key."
         break
-      case MedusaError.Types.UNAUTHORIZED:
+      case vikraiError.Types.UNAUTHORIZED:
         statusCode = 401
         break
-      case MedusaError.Types.PAYMENT_AUTHORIZATION_ERROR:
+      case vikraiError.Types.PAYMENT_AUTHORIZATION_ERROR:
         statusCode = 422
         break
-      case MedusaError.Types.DUPLICATE_ERROR:
+      case vikraiError.Types.DUPLICATE_ERROR:
         statusCode = 422
         errObj.code = INVALID_REQUEST_ERROR
         break
-      case MedusaError.Types.NOT_ALLOWED:
-      case MedusaError.Types.INVALID_DATA:
+      case vikraiError.Types.NOT_ALLOWED:
+      case vikraiError.Types.INVALID_DATA:
         statusCode = 400
         break
-      case MedusaError.Types.NOT_FOUND:
+      case vikraiError.Types.NOT_FOUND:
         statusCode = 404
         break
-      case MedusaError.Types.DB_ERROR:
+      case vikraiError.Types.DB_ERROR:
         statusCode = 500
         errObj.code = API_ERROR
         break
-      case MedusaError.Types.UNEXPECTED_STATE:
-      case MedusaError.Types.INVALID_ARGUMENT:
+      case vikraiError.Types.UNEXPECTED_STATE:
+      case vikraiError.Types.INVALID_ARGUMENT:
         break
       default:
         errObj.code = "unknown_error"
@@ -97,3 +97,4 @@ export function errorHandler() {
  *    description: A slug indicating the type of the error.
  *    enum: [QueryRunnerAlreadyReleasedError, TransactionAlreadyStartedError, TransactionNotStartedError, conflict, unauthorized, payment_authorization_error, duplicate_error, not_allowed, invalid_data, not_found, database_error, unexpected_state, invalid_argument, unknown_error]
  */
+

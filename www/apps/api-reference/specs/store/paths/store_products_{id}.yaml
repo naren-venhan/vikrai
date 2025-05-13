@@ -7,7 +7,7 @@ get:
   x-authenticated: false
   externalDocs:
     url: >-
-      https://docs.medusajs.com/v2/resources/storefront-development/products/price
+      https://docs.vikrai.com/v2/resources/storefront-development/products/price
     description: 'Storefront guide: How to retrieve a product variants'' prices.'
   parameters:
     - name: id
@@ -18,12 +18,12 @@ get:
         type: string
     - name: x-publishable-api-key
       in: header
-      description: Publishable API Key created in the Medusa Admin.
+      description: Publishable API Key created in the vikrai Admin.
       required: true
       schema:
         type: string
         externalDocs:
-          url: https://docs.medusajs.com/api/store#publishable-api-key
+          url: https://docs.vikrai.com/api/store#publishable-api-key
     - name: fields
       in: query
       description: >-
@@ -56,7 +56,7 @@ get:
           required if you're retrieving product variant prices with taxes.
         externalDocs:
           url: >-
-            https://docs.medusajs.com/v2/resources/storefront-development/products/price/examples/tax-price
+            https://docs.vikrai.com/v2/resources/storefront-development/products/price/examples/tax-price
           description: 'Storefront guide: How to show product variants'' prices with taxes.'
     - name: country_code
       in: query
@@ -167,3 +167,4 @@ get:
       $ref: ../components/responses/invalid_request_error.yaml
     '500':
       $ref: ../components/responses/500_error.yaml
+

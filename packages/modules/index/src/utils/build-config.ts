@@ -1,17 +1,17 @@
-import { MedusaModule } from "@medusajs/framework/modules-sdk"
+import { vikraiModule } from "@vikrai/framework/modules-sdk"
 import {
   IndexTypes,
   JoinerServiceConfigAlias,
   ModuleJoinerConfig,
   ModuleJoinerRelationship,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import {
   buildModuleResourceEventName,
   CommonEvents,
   GraphQLUtils,
   kebabCase,
   lowerCaseFirst,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 import { schemaObjectRepresentationPropertiesToOmit } from "@types"
 import { baseGraphqlSchema } from "./base-graphql-schema"
 
@@ -1228,7 +1228,7 @@ export function buildSchemaObjectRepresentation(schema: string): {
   entitiesMap: Record<string, any>
   executableSchema: GraphQLUtils.GraphQLSchema
 } {
-  const moduleJoinerConfigs = MedusaModule.getAllJoinerConfigs()
+  const moduleJoinerConfigs = vikraiModule.getAllJoinerConfigs()
 
   const servicesEntityMap = getServicesEntityMap(moduleJoinerConfigs)
   const filterableEntities = buildSchemaFromFilterableLinks(
@@ -1272,3 +1272,4 @@ export function buildSchemaObjectRepresentation(schema: string): {
     executableSchema,
   }
 }
+

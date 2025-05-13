@@ -51,7 +51,7 @@ export interface ITaxModuleService extends IModuleService {
    * :::note
    * 
    * You can only retrieve data models defined in the same module. To retrieve linked data models
-   * from other modules, use [Query](https://docs.medusajs.com/learn/fundamentals/module-links/query) instead.
+   * from other modules, use [Query](https://docs.vikrai.com/learn/fundamentals/module-links/query) instead.
    * 
    * :::
    *
@@ -90,7 +90,7 @@ export interface ITaxModuleService extends IModuleService {
    * :::note
    * 
    * You can only retrieve data models defined in the same module. To retrieve linked data models
-   * from other modules, use [Query](https://docs.medusajs.com/learn/fundamentals/module-links/query) instead.
+   * from other modules, use [Query](https://docs.vikrai.com/learn/fundamentals/module-links/query) instead.
    * 
    * :::
    *
@@ -151,7 +151,7 @@ export interface ITaxModuleService extends IModuleService {
    * :::note
    * 
    * You can only retrieve data models defined in the same module. To retrieve linked data models
-   * from other modules, use [Query](https://docs.medusajs.com/learn/fundamentals/module-links/query) instead.
+   * from other modules, use [Query](https://docs.vikrai.com/learn/fundamentals/module-links/query) instead.
    * 
    * :::
    *
@@ -525,7 +525,7 @@ export interface ITaxModuleService extends IModuleService {
    * :::note
    * 
    * You can only retrieve data models defined in the same module. To retrieve linked data models
-   * from other modules, use [Query](https://docs.medusajs.com/learn/fundamentals/module-links/query) instead.
+   * from other modules, use [Query](https://docs.vikrai.com/learn/fundamentals/module-links/query) instead.
    * 
    * :::
    *
@@ -607,7 +607,7 @@ export interface ITaxModuleService extends IModuleService {
    * :::note
    * 
    * You can only retrieve data models defined in the same module. To retrieve linked data models
-   * from other modules, use [Query](https://docs.medusajs.com/learn/fundamentals/module-links/query) instead.
+   * from other modules, use [Query](https://docs.vikrai.com/learn/fundamentals/module-links/query) instead.
    * 
    * :::
    *
@@ -727,7 +727,7 @@ export interface ITaxModuleService extends IModuleService {
    * :::note
    * 
    * You can only retrieve data models defined in the same module. To retrieve linked data models
-   * from other modules, use [Query](https://docs.medusajs.com/learn/fundamentals/module-links/query) instead.
+   * from other modules, use [Query](https://docs.vikrai.com/learn/fundamentals/module-links/query) instead.
    * 
    * :::
    *
@@ -766,7 +766,7 @@ export interface ITaxModuleService extends IModuleService {
   /**
    * This method retrieves tax lines for taxable items and shipping methods in a cart.
    *
-   * Learn more in [this guide](https://docs.medusajs.com/resources/commerce-modules/tax/tax-calculation-with-provider).
+   * Learn more in [this guide](https://docs.vikrai.com/resources/commerce-modules/tax/tax-calculation-with-provider).
    *
    * @param {(TaxableItemDTO | TaxableShippingDTO)[]} items - The items and shipping methods to retrieve their tax lines.
    * @param {TaxCalculationContext} calculationContext - The context to pass to the underlying tax provider. It provides more
@@ -916,3 +916,4 @@ export interface ITaxModuleService extends IModuleService {
     sharedContext?: Context
   ): Promise<Record<string, string[]> | void>
 }
+

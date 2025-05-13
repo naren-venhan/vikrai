@@ -1,0 +1,32 @@
+import { linkCustomersToCustomerGroupWorkflow } from "@vikrai/core-flows"
+import {
+  AuthenticatedvikraiRequest,
+  vikraiResponse,
+} from "@vikrai/framework/http"
+
+import { HttpTypes, LinkMethodRequest } from "@vikrai/framework/types"
+import { refetchCustomerGroup } from "../../helpers"
+
+export const POST = async (
+  req: AuthenticatedvikraiRequest<LinkMethodRequest>,
+  res: vikraiResponse<HttpTypes.AdminCustomerGroupResponse>
+) => {
+  const { id } = req.params
+  const { add, remove } = req.validatedBody
+
+  const workflow = linkCustomersToCustomerGroupWorkflow(req.scope)
+  await workflow.run({
+    input: {
+      id,
+      add,
+      remove,
+    },
+  })
+
+  const customerGroup = await refetchCustomerGroup(
+    req.params.id,
+    req.scope,
+    req.queryConfig.fields
+  )
+  res.status(200).json({ customer_group: customerGroup })
+}

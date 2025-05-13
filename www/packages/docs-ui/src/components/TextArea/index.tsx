@@ -13,18 +13,19 @@ export const TextArea = (props: TextAreaProps) => {
     <textarea
       {...props}
       className={clsx(
-        "bg-medusa-bg-field shadow-border-base dark:shadow-border-base-dark",
-        "border-medusa-border-base rounded-docs_sm border border-solid",
+        "bg-vikrai-bg-field shadow-border-base dark:shadow-border-base-dark",
+        "border-vikrai-border-base rounded-docs_sm border border-solid",
         "pt-docs_0.4 px-docs_0.75 text-medium font-base pb-[9px]",
-        "hover:bg-medusa-bg-field-hover",
-        "focus:border-medusa-border-interactive",
-        "active:border-medusa-border-interactive",
-        "disabled:bg-medusa-bg-disabled",
-        "disabled:border-medusa-border-base",
-        "placeholder:text-medusa-fg-muted",
-        "disabled:placeholder:text-medusa-fg-disabled",
+        "hover:bg-vikrai-bg-field-hover",
+        "focus:border-vikrai-border-interactive",
+        "active:border-vikrai-border-interactive",
+        "disabled:bg-vikrai-bg-disabled",
+        "disabled:border-vikrai-border-base",
+        "placeholder:text-vikrai-fg-muted",
+        "disabled:placeholder:text-vikrai-fg-disabled",
         props.className
       )}
     />
   )
 }
+

@@ -2,14 +2,14 @@ import {
   ChangeActionType,
   OrderChangeStatus,
   PromotionActions,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 import {
   createWorkflow,
   transform,
   WorkflowData,
   WorkflowResponse,
-} from "@medusajs/framework/workflows-sdk"
-import { OrderChangeDTO, OrderDTO, PromotionDTO } from "@medusajs/types"
+} from "@vikrai/framework/workflows-sdk"
+import { OrderChangeDTO, OrderDTO, PromotionDTO } from "@vikrai/types"
 import { useRemoteQueryStep } from "../../common"
 import {
   createOrderChangeActionsWorkflow,
@@ -38,7 +38,7 @@ export interface AddDraftOrderPromotionWorkflowInput {
 
 /**
  * This workflow adds promotions to a draft order. It's used by the
- * [Add Promotion to Draft Order Admin API Route](https://docs.medusajs.com/api/admin#draft-orders_postdraftordersideditpromotions).
+ * [Add Promotion to Draft Order Admin API Route](https://docs.vikrai.com/api/admin#draft-orders_postdraftordersideditpromotions).
  * 
  * You can use this workflow within your customizations or your own custom workflows, allowing you to wrap custom logic around adding promotions to
  * a draft order.
@@ -130,3 +130,4 @@ export const addDraftOrderPromotionWorkflow = createWorkflow(
     return new WorkflowResponse(previewOrderChangeStep(input.order_id))
   }
 )
+

@@ -53,8 +53,8 @@ const sidebarMappings: {
       }>,
     paths: [
       "/tools",
-      "/create-medusa-app",
-      "/medusa-cli",
+      "/create-vikrai-app",
+      "/vikrai-cli",
       "/js-sdk",
       "/nextjs-starter",
       "/references/js-sdk",
@@ -112,8 +112,8 @@ const sidebarMappings: {
       }>,
     paths: [
       "/admin-widget-injection-zones",
-      "/medusa-container-resources",
-      "/medusa-workflows-reference",
+      "/vikrai-container-resources",
+      "/vikrai-workflows-reference",
       "/references/core-flows",
       "/references/data-model",
       "/references/events",
@@ -122,7 +122,7 @@ const sidebarMappings: {
       "/test-tools-reference",
       "/references/workflows",
       "/references-overview",
-      "/references/medusa-workflows",
+      "/references/vikrai-workflows",
       "/data-model-repository-reference",
     ],
   },
@@ -155,3 +155,4 @@ export async function getSidebarForPath(
 
   return await getDefaultSidebar().then((module) => module.default)
 }
+

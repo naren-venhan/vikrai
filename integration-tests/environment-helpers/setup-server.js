@@ -15,7 +15,7 @@ module.exports = async ({ cwd, redisUrl, uploadDir, verbose, env }) => {
   verbose = verbose ?? false
 
   return await new Promise((resolve, reject) => {
-    const medusaProcess = spawn("node", [path.resolve(serverPath)], {
+    const vikraiProcess = spawn("node", [path.resolve(serverPath)], {
       cwd,
       env: {
         ...process.env,
@@ -31,24 +31,24 @@ module.exports = async ({ cwd, redisUrl, uploadDir, verbose, env }) => {
         : ["ignore", "ignore", "ignore", "ipc"],
     })
 
-    medusaProcess.on("error", (err) => {
+    vikraiProcess.on("error", (err) => {
       console.log(err)
       reject(err)
       process.exit()
     })
 
-    medusaProcess.on("uncaughtException", (err) => {
+    vikraiProcess.on("uncaughtException", (err) => {
       console.log(err)
       reject(err)
-      medusaProcess.kill()
+      vikraiProcess.kill()
     })
 
-    medusaProcess.on("message", (port) => {
+    vikraiProcess.on("message", (port) => {
       setPort(port)
-      resolve(medusaProcess)
+      resolve(vikraiProcess)
     })
 
-    medusaProcess.on("exit", () => {
+    vikraiProcess.on("exit", () => {
       const expressServer = useExpressServer()
 
       setContainer(null)
@@ -59,3 +59,4 @@ module.exports = async ({ cwd, redisUrl, uploadDir, verbose, env }) => {
     })
   })
 }
+

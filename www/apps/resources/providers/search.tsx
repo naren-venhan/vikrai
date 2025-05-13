@@ -32,9 +32,9 @@ const SearchProvider = ({ children }: SearchProviderProps) => {
           {
             title: "Search Suggestions",
             items: [
-              "Medusa Configurations",
+              "vikrai Configurations",
               "Commerce Modules",
-              "Medusa Workflows Reference",
+              "vikrai Workflows Reference",
               "Storefront Development",
             ],
           },
@@ -49,3 +49,4 @@ const SearchProvider = ({ children }: SearchProviderProps) => {
 }
 
 export default SearchProvider
+

@@ -4,15 +4,15 @@ import {
   OrderPreviewDTO,
   OrderWorkflow,
   ReturnDTO,
-} from "@medusajs/framework/types"
-import { ChangeActionType, OrderChangeStatus } from "@medusajs/framework/utils"
+} from "@vikrai/framework/types"
+import { ChangeActionType, OrderChangeStatus } from "@vikrai/framework/utils"
 import {
   WorkflowData,
   WorkflowResponse,
   createStep,
   createWorkflow,
   transform,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { useRemoteQueryStep } from "../../../common"
 import { previewOrderChangeStep } from "../../steps"
 import {
@@ -51,8 +51,8 @@ export type DismissItemReturnRequestValidationStepInput = {
  * 
  * :::note
  * 
- * You can retrieve an order, return, and order change details using [Query](https://docs.medusajs.com/learn/fundamentals/module-links/query),
- * or [useQueryGraphStep](https://docs.medusajs.com/resources/references/medusa-workflows/steps/useQueryGraphStep).
+ * You can retrieve an order, return, and order change details using [Query](https://docs.vikrai.com/learn/fundamentals/module-links/query),
+ * or [useQueryGraphStep](https://docs.vikrai.com/resources/references/vikrai-workflows/steps/useQueryGraphStep).
  * 
  * :::
  * 
@@ -112,7 +112,7 @@ export type DismissItemReturnRequestWorkflowInput = OrderWorkflow.ReceiveOrderRe
 export const dismissItemReturnRequestWorkflowId = "dismiss-item-return-request"
 /**
  * This workflow dismisses items from a return request due to them being damaged. It's used
- * by the [Add Damaged Items Admin API Route](https://docs.medusajs.com/api/admin#returns_postreturnsiddismissitems).
+ * by the [Add Damaged Items Admin API Route](https://docs.vikrai.com/api/admin#returns_postreturnsiddismissitems).
  * 
  * A damaged item's quantity is dismissed, meaning it's not returned to the inventory.
  * 
@@ -205,3 +205,4 @@ export const dismissItemReturnRequestWorkflow = createWorkflow(
     return new WorkflowResponse(previewOrderChangeStep(order.id))
   }
 )
+

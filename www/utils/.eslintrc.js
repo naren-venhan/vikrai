@@ -99,7 +99,7 @@ module.exports = {
           "./packages/scripts/tsconfig.json",
           "./packages/typedoc-generate-references/tsconfig.json",
           "./packages/typedoc-plugin-custom/tsconfig.json",
-          "./packages/typedoc-markdown-medusa-plugin/tsconfig.json",
+          "./packages/typedoc-markdown-vikrai-plugin/tsconfig.json",
           "./packages/types/tsconfig.json",
           "./packages/utils/tsconfig.json",
           "./packages/workflows-diagrams-generator/tsconfig.json"
@@ -125,3 +125,4 @@ module.exports = {
     }
   ],
 }
+

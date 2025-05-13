@@ -9,7 +9,7 @@ export const Bordered = ({ wrapperClassName, children }: BorderedProps) => {
   return (
     <span
       className={clsx(
-        "border-medusa-border-strong bg-medusa-bg-base",
+        "border-vikrai-border-strong bg-vikrai-bg-base",
         "mr-docs_1 inline-flex w-fit items-center justify-center rounded-docs_DEFAULT border border-solid p-[3px]",
         "no-zoom-img",
         wrapperClassName
@@ -19,3 +19,4 @@ export const Bordered = ({ wrapperClassName, children }: BorderedProps) => {
     </span>
   )
 }
+

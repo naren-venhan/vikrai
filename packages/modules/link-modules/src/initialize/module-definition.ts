@@ -2,7 +2,7 @@ import {
   JoinerRelationship,
   ModuleExports,
   ModuleJoinerConfig,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import { getModuleService, getReadOnlyModuleService } from "@services"
 import { getLoaders } from "../loaders"
 
@@ -22,3 +22,4 @@ export function getLinkModuleDefinition(
     }),
   }
 }
+

@@ -55,7 +55,7 @@
  *     type: object
  *     description: The shipping method's data, useful for fulfillment provider handling its fulfillment.
  *     externalDocs:
- *       url: https://docs.medusajs.com/v2/resources/commerce-modules/fulfillment/shipping-option#data-property
+ *       url: https://docs.vikrai.com/v2/resources/commerce-modules/fulfillment/shipping-option#data-property
  *   metadata:
  *     type: object
  *     description: The shipping method's metadata, can hold custom key-value pairs.
@@ -1713,4 +1713,5 @@
  *     description: Details of changes to a shipping method.
  * 
 */
+
 

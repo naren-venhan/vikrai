@@ -4,7 +4,7 @@
  * summary: Request Order Transfer
  * x-sidebar-summery: Request Transfer
  * description: Request an order to be transfered to the logged-in customer's account. The transfer is confirmed using the [Accept Order
- *   Transfer](https://docs.medusajs.com/api/store#orders_postordersidtransferaccept) API route.
+ *   Transfer](https://docs.vikrai.com/api/store#orders_postordersidtransferaccept) API route.
  * x-authenticated: true
  * parameters:
  *   - name: id
@@ -15,12 +15,12 @@
  *       type: string
  *   - name: x-publishable-api-key
  *     in: header
- *     description: Publishable API Key created in the Medusa Admin.
+ *     description: Publishable API Key created in the vikrai Admin.
  *     required: true
  *     schema:
  *       type: string
  *       externalDocs:
- *         url: https://docs.medusajs.com/api/store#publishable-api-key
+ *         url: https://docs.vikrai.com/api/store#publishable-api-key
  *   - name: fields
  *     in: query
  *     description: |-
@@ -44,18 +44,18 @@
  *   - lang: JavaScript
  *     label: JS SDK
  *     source: |-
- *       import Medusa from "@medusajs/js-sdk"
+ *       import vikrai from "@vikrai/js-sdk"
  * 
- *       let MEDUSA_BACKEND_URL = "http://localhost:9000"
+ *       let vikrai_BACKEND_URL = "http://localhost:9000"
  * 
- *       if (process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL) {
- *         MEDUSA_BACKEND_URL = process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL
+ *       if (process.env.NEXT_PUBLIC_vikrai_BACKEND_URL) {
+ *         vikrai_BACKEND_URL = process.env.NEXT_PUBLIC_vikrai_BACKEND_URL
  *       }
  * 
- *       export const sdk = new Medusa({
- *         baseUrl: MEDUSA_BACKEND_URL,
+ *       export const sdk = new vikrai({
+ *         baseUrl: vikrai_BACKEND_URL,
  *         debug: process.env.NODE_ENV === "development",
- *         publishableKey: process.env.NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY,
+ *         publishableKey: process.env.NEXT_PUBLIC_vikrai_PUBLISHABLE_KEY,
  *       })
  * 
  *       sdk.store.order.requestTransfer(

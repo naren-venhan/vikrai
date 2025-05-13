@@ -123,8 +123,8 @@ export const SearchHits = ({
     <div
       className={clsx(
         "overflow-auto",
-        "[&_mark]:bg-medusa-bg-highlight",
-        "[&_mark]:text-medusa-fg-interactive"
+        "[&_mark]:bg-vikrai-bg-highlight",
+        "[&_mark]:text-vikrai-fg-interactive"
       )}
       data-group
     >
@@ -137,8 +137,8 @@ export const SearchHits = ({
             className={clsx(
               "gap-docs_0.25 relative flex flex-1 flex-col p-docs_0.5",
               "overflow-x-hidden text-ellipsis whitespace-nowrap break-words",
-              "hover:bg-medusa-bg-base-hover",
-              "focus:bg-medusa-bg-base-hover",
+              "hover:bg-vikrai-bg-base-hover",
+              "focus:bg-vikrai-bg-base-hover",
               "focus:outline-none"
             )}
             key={index}
@@ -153,14 +153,14 @@ export const SearchHits = ({
           >
             <span
               className={clsx(
-                "text-compact-small-plus text-medusa-fg-base",
+                "text-compact-small-plus text-vikrai-fg-base",
                 "max-w-full"
               )}
             >
               {/* @ts-expect-error React v19 doesn't see this type as a React element */}
               <Snippet attribute={"hierarchy.lvl1"} hit={item} />
             </span>
-            <span className="text-compact-small text-medusa-fg-subtle text-ellipsis overflow-hidden">
+            <span className="text-compact-small text-vikrai-fg-subtle text-ellipsis overflow-hidden">
               {item.type === "content" && (
                 <>
                   {/* @ts-expect-error React v19 doesn't see this type as a React element */}
@@ -173,7 +173,7 @@ export const SearchHits = ({
             <span
               className={clsx(
                 "text-ellipsis overflow-hidden",
-                "text-medusa-fg-muted items-center text-compact-x-small"
+                "text-vikrai-fg-muted items-center text-compact-x-small"
               )}
             >
               {hierarchies}
@@ -197,3 +197,4 @@ export const SearchHits = ({
     </div>
   )
 }
+

@@ -1,4 +1,4 @@
-import { WorkflowData, createWorkflow } from "@medusajs/framework/workflows-sdk"
+import { WorkflowData, createWorkflow } from "@vikrai/framework/workflows-sdk"
 import { deleteOrderChangesStep } from "../steps"
 
 /**
@@ -28,3 +28,4 @@ export const deleteOrderChangeWorkflow = createWorkflow(
     deleteOrderChangesStep(input)
   }
 )
+

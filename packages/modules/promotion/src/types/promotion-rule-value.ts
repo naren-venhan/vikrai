@@ -1,4 +1,4 @@
-import { InferEntityType, PromotionRuleDTO } from "@medusajs/framework/types"
+import { InferEntityType, PromotionRuleDTO } from "@vikrai/framework/types"
 import { PromotionRule } from "@models"
 
 export interface CreatePromotionRuleValueDTO {
@@ -17,3 +17,4 @@ export interface UpdatePromotionRuleValueDTO {
     | PromotionRuleDTO
     | InferEntityType<typeof PromotionRule>
 }
+

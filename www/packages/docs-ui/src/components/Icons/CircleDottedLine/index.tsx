@@ -1,4 +1,4 @@
-import { IconProps } from "@medusajs/icons/dist/types"
+import { IconProps } from "@vikrai/icons/dist/types"
 import clsx from "clsx"
 import React from "react"
 
@@ -58,3 +58,4 @@ export const IconCircleDottedLine = (props: IconProps) => {
     </svg>
   )
 }
+

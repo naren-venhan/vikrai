@@ -19,7 +19,7 @@ import {
   SoftDeleteReturn,
   UpdateOrderItemWithSelectorDTO,
   UpdateOrderReturnReasonDTO,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import {
   BigNumber,
   ChangeActionType,
@@ -33,15 +33,15 @@ import {
   isObject,
   isString,
   MathBN,
-  MedusaContext,
-  MedusaError,
+  vikraiContext,
+  vikraiError,
   ModulesSdkUtils,
   OrderChangeStatus,
   OrderStatus,
   promiseAll,
   toMikroORMEntity,
   transformPropertiesToBigNumber,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 import { BeforeCreate, OnInit, rel } from "@mikro-orm/core"
 import {
   Order,
@@ -94,25 +94,25 @@ import OrderService from "./order-service"
 type InjectedDependencies = {
   baseRepository: DAL.RepositoryService
   orderService: OrderService
-  orderAddressService: ModulesSdkTypes.IMedusaInternalService<any>
-  orderLineItemService: ModulesSdkTypes.IMedusaInternalService<any>
-  orderShippingMethodAdjustmentService: ModulesSdkTypes.IMedusaInternalService<any>
-  orderShippingMethodService: ModulesSdkTypes.IMedusaInternalService<any>
-  orderLineItemAdjustmentService: ModulesSdkTypes.IMedusaInternalService<any>
-  orderLineItemTaxLineService: ModulesSdkTypes.IMedusaInternalService<any>
-  orderShippingMethodTaxLineService: ModulesSdkTypes.IMedusaInternalService<any>
-  orderTransactionService: ModulesSdkTypes.IMedusaInternalService<any>
-  orderChangeService: ModulesSdkTypes.IMedusaInternalService<any>
-  orderChangeActionService: ModulesSdkTypes.IMedusaInternalService<any>
-  orderItemService: ModulesSdkTypes.IMedusaInternalService<any>
-  orderSummaryService: ModulesSdkTypes.IMedusaInternalService<any>
-  orderShippingService: ModulesSdkTypes.IMedusaInternalService<any>
-  returnReasonService: ModulesSdkTypes.IMedusaInternalService<any>
-  returnService: ModulesSdkTypes.IMedusaInternalService<any>
-  returnItemService: ModulesSdkTypes.IMedusaInternalService<any>
-  orderClaimService: ModulesSdkTypes.IMedusaInternalService<any>
-  orderExchangeService: ModulesSdkTypes.IMedusaInternalService<any>
-  orderCreditLineService: ModulesSdkTypes.IMedusaInternalService<any>
+  orderAddressService: ModulesSdkTypes.IvikraiInternalService<any>
+  orderLineItemService: ModulesSdkTypes.IvikraiInternalService<any>
+  orderShippingMethodAdjustmentService: ModulesSdkTypes.IvikraiInternalService<any>
+  orderShippingMethodService: ModulesSdkTypes.IvikraiInternalService<any>
+  orderLineItemAdjustmentService: ModulesSdkTypes.IvikraiInternalService<any>
+  orderLineItemTaxLineService: ModulesSdkTypes.IvikraiInternalService<any>
+  orderShippingMethodTaxLineService: ModulesSdkTypes.IvikraiInternalService<any>
+  orderTransactionService: ModulesSdkTypes.IvikraiInternalService<any>
+  orderChangeService: ModulesSdkTypes.IvikraiInternalService<any>
+  orderChangeActionService: ModulesSdkTypes.IvikraiInternalService<any>
+  orderItemService: ModulesSdkTypes.IvikraiInternalService<any>
+  orderSummaryService: ModulesSdkTypes.IvikraiInternalService<any>
+  orderShippingService: ModulesSdkTypes.IvikraiInternalService<any>
+  returnReasonService: ModulesSdkTypes.IvikraiInternalService<any>
+  returnService: ModulesSdkTypes.IvikraiInternalService<any>
+  returnItemService: ModulesSdkTypes.IvikraiInternalService<any>
+  orderClaimService: ModulesSdkTypes.IvikraiInternalService<any>
+  orderExchangeService: ModulesSdkTypes.IvikraiInternalService<any>
+  orderCreditLineService: ModulesSdkTypes.IvikraiInternalService<any>
 }
 
 const generateMethodForModels = {
@@ -191,7 +191,7 @@ const generateMethodForModels = {
 
 // TODO: rm template args here, keep it for later to not collide with carlos work at least as little as possible
 export default class OrderModuleService
-  extends ModulesSdkUtils.MedusaService<{
+  extends ModulesSdkUtils.vikraiService<{
     Order: { dto: OrderTypes.OrderDTO }
     OrderAddress: { dto: OrderTypes.OrderAddressDTO }
     OrderLineItem: { dto: OrderTypes.OrderLineItemDTO }
@@ -224,70 +224,70 @@ export default class OrderModuleService
 {
   protected baseRepository_: DAL.RepositoryService
   protected orderService_: OrderService
-  protected orderAddressService_: ModulesSdkTypes.IMedusaInternalService<
+  protected orderAddressService_: ModulesSdkTypes.IvikraiInternalService<
     InferEntityType<typeof OrderAddress>
   >
-  protected orderLineItemService_: ModulesSdkTypes.IMedusaInternalService<
+  protected orderLineItemService_: ModulesSdkTypes.IvikraiInternalService<
     InferEntityType<typeof OrderLineItem>
   >
-  protected orderShippingMethodAdjustmentService_: ModulesSdkTypes.IMedusaInternalService<
+  protected orderShippingMethodAdjustmentService_: ModulesSdkTypes.IvikraiInternalService<
     InferEntityType<typeof OrderShippingMethodAdjustment>
   >
-  protected orderShippingMethodService_: ModulesSdkTypes.IMedusaInternalService<
+  protected orderShippingMethodService_: ModulesSdkTypes.IvikraiInternalService<
     InferEntityType<typeof OrderShippingMethod>
   >
-  protected orderLineItemAdjustmentService_: ModulesSdkTypes.IMedusaInternalService<
+  protected orderLineItemAdjustmentService_: ModulesSdkTypes.IvikraiInternalService<
     InferEntityType<typeof OrderLineItemAdjustment>
   >
-  protected orderLineItemTaxLineService_: ModulesSdkTypes.IMedusaInternalService<
+  protected orderLineItemTaxLineService_: ModulesSdkTypes.IvikraiInternalService<
     InferEntityType<typeof OrderLineItemTaxLine>
   >
-  protected orderShippingMethodTaxLineService_: ModulesSdkTypes.IMedusaInternalService<
+  protected orderShippingMethodTaxLineService_: ModulesSdkTypes.IvikraiInternalService<
     InferEntityType<typeof OrderShippingMethodTaxLine>
   >
-  protected orderTransactionService_: ModulesSdkTypes.IMedusaInternalService<
+  protected orderTransactionService_: ModulesSdkTypes.IvikraiInternalService<
     InferEntityType<typeof OrderTransaction>
   >
-  protected orderChangeService_: ModulesSdkTypes.IMedusaInternalService<
+  protected orderChangeService_: ModulesSdkTypes.IvikraiInternalService<
     InferEntityType<typeof OrderChange>
   >
-  protected orderChangeActionService_: ModulesSdkTypes.IMedusaInternalService<
+  protected orderChangeActionService_: ModulesSdkTypes.IvikraiInternalService<
     InferEntityType<typeof OrderChangeAction>
   >
-  protected orderItemService_: ModulesSdkTypes.IMedusaInternalService<
+  protected orderItemService_: ModulesSdkTypes.IvikraiInternalService<
     InferEntityType<typeof OrderItem>
   >
-  protected orderSummaryService_: ModulesSdkTypes.IMedusaInternalService<
+  protected orderSummaryService_: ModulesSdkTypes.IvikraiInternalService<
     InferEntityType<typeof OrderSummary>
   >
-  protected orderShippingService_: ModulesSdkTypes.IMedusaInternalService<
+  protected orderShippingService_: ModulesSdkTypes.IvikraiInternalService<
     InferEntityType<typeof OrderShipping>
   >
-  protected returnReasonService_: ModulesSdkTypes.IMedusaInternalService<
+  protected returnReasonService_: ModulesSdkTypes.IvikraiInternalService<
     InferEntityType<typeof ReturnReason>
   >
-  protected returnService_: ModulesSdkTypes.IMedusaInternalService<
+  protected returnService_: ModulesSdkTypes.IvikraiInternalService<
     InferEntityType<typeof Return>
   >
-  protected returnItemService_: ModulesSdkTypes.IMedusaInternalService<
+  protected returnItemService_: ModulesSdkTypes.IvikraiInternalService<
     InferEntityType<typeof ReturnItem>
   >
-  protected orderClaimService_: ModulesSdkTypes.IMedusaInternalService<
+  protected orderClaimService_: ModulesSdkTypes.IvikraiInternalService<
     InferEntityType<typeof OrderClaim>
   >
-  protected orderClaimItemService_: ModulesSdkTypes.IMedusaInternalService<
+  protected orderClaimItemService_: ModulesSdkTypes.IvikraiInternalService<
     InferEntityType<typeof OrderClaimItem>
   >
-  protected orderClaimItemImageService_: ModulesSdkTypes.IMedusaInternalService<
+  protected orderClaimItemImageService_: ModulesSdkTypes.IvikraiInternalService<
     InferEntityType<typeof OrderClaimItemImage>
   >
-  protected orderExchangeService_: ModulesSdkTypes.IMedusaInternalService<
+  protected orderExchangeService_: ModulesSdkTypes.IvikraiInternalService<
     InferEntityType<typeof OrderExchange>
   >
-  protected orderExchangeItemService_: ModulesSdkTypes.IMedusaInternalService<
+  protected orderExchangeItemService_: ModulesSdkTypes.IvikraiInternalService<
     InferEntityType<typeof OrderExchangeItem>
   >
-  protected orderCreditLineService_: ModulesSdkTypes.IMedusaInternalService<
+  protected orderCreditLineService_: ModulesSdkTypes.IvikraiInternalService<
     InferEntityType<typeof OrderCreditLine>
   >
 
@@ -417,7 +417,7 @@ export default class OrderModuleService
   async retrieveOrder(
     id: string,
     config?: FindConfig<any> | undefined,
-    @MedusaContext() sharedContext?: Context | undefined
+    @vikraiContext() sharedContext?: Context | undefined
   ): Promise<OrderTypes.OrderDTO> {
     config ??= {}
     const includeTotals = this.shouldIncludeTotals(config)
@@ -442,7 +442,7 @@ export default class OrderModuleService
   async listOrders(
     filters?: any,
     config?: FindConfig<any> | undefined,
-    @MedusaContext() sharedContext?: Context | undefined
+    @vikraiContext() sharedContext?: Context | undefined
   ): Promise<OrderTypes.OrderDTO[]> {
     config ??= {}
     const includeTotals = this.shouldIncludeTotals(config)
@@ -459,7 +459,7 @@ export default class OrderModuleService
   async listAndCountOrders(
     filters?: any,
     config?: FindConfig<any> | undefined,
-    @MedusaContext() sharedContext?: Context | undefined
+    @vikraiContext() sharedContext?: Context | undefined
   ): Promise<[OrderTypes.OrderDTO[], number]> {
     config ??= {}
     const includeTotals = this.shouldIncludeTotals(config)
@@ -483,7 +483,7 @@ export default class OrderModuleService
   async retrieveReturn(
     id: string,
     config?: FindConfig<any> | undefined,
-    @MedusaContext() sharedContext?: Context | undefined
+    @vikraiContext() sharedContext?: Context | undefined
   ): Promise<OrderTypes.ReturnDTO> {
     config ??= {}
     const includeTotals = this.shouldIncludeTotals(config)
@@ -500,7 +500,7 @@ export default class OrderModuleService
   async listReturns(
     filters?: any,
     config?: FindConfig<any> | undefined,
-    @MedusaContext() sharedContext?: Context | undefined
+    @vikraiContext() sharedContext?: Context | undefined
   ): Promise<OrderTypes.ReturnDTO[]> {
     config ??= {}
     const includeTotals = this.shouldIncludeTotals(config)
@@ -517,7 +517,7 @@ export default class OrderModuleService
   async listAndCountReturns(
     filters?: any,
     config?: FindConfig<any> | undefined,
-    @MedusaContext() sharedContext?: Context | undefined
+    @vikraiContext() sharedContext?: Context | undefined
   ): Promise<[OrderTypes.ReturnDTO[], number]> {
     config ??= {}
     const includeTotals = this.shouldIncludeTotals(config)
@@ -541,7 +541,7 @@ export default class OrderModuleService
   async retrieveOrderClaim(
     id: string,
     config?: FindConfig<any> | undefined,
-    @MedusaContext() sharedContext?: Context | undefined
+    @vikraiContext() sharedContext?: Context | undefined
   ): Promise<OrderTypes.OrderClaimDTO> {
     config ??= {}
     const includeTotals = this.shouldIncludeTotals(config)
@@ -562,7 +562,7 @@ export default class OrderModuleService
   async listOrderClaims(
     filters?: any,
     config?: FindConfig<any> | undefined,
-    @MedusaContext() sharedContext?: Context | undefined
+    @vikraiContext() sharedContext?: Context | undefined
   ): Promise<OrderTypes.OrderClaimDTO[]> {
     config ??= {}
     const includeTotals = this.shouldIncludeTotals(config)
@@ -583,7 +583,7 @@ export default class OrderModuleService
   async listAndCountOrderClaims(
     filters?: any,
     config?: FindConfig<any> | undefined,
-    @MedusaContext() sharedContext?: Context | undefined
+    @vikraiContext() sharedContext?: Context | undefined
   ): Promise<[OrderTypes.OrderClaimDTO[], number]> {
     config ??= {}
     const includeTotals = this.shouldIncludeTotals(config)
@@ -607,7 +607,7 @@ export default class OrderModuleService
   async retrieveOrderExchange(
     id: string,
     config?: FindConfig<any> | undefined,
-    @MedusaContext() sharedContext?: Context | undefined
+    @vikraiContext() sharedContext?: Context | undefined
   ): Promise<OrderTypes.OrderExchangeDTO> {
     config ??= {}
     const includeTotals = this.shouldIncludeTotals(config)
@@ -628,7 +628,7 @@ export default class OrderModuleService
   async listOrderExchanges(
     filters?: any,
     config?: FindConfig<any> | undefined,
-    @MedusaContext() sharedContext?: Context | undefined
+    @vikraiContext() sharedContext?: Context | undefined
   ): Promise<OrderTypes.OrderExchangeDTO[]> {
     config ??= {}
     const includeTotals = this.shouldIncludeTotals(config)
@@ -649,7 +649,7 @@ export default class OrderModuleService
   async listAndCountOrderExchanges(
     filters?: any,
     config?: FindConfig<any> | undefined,
-    @MedusaContext() sharedContext?: Context | undefined
+    @vikraiContext() sharedContext?: Context | undefined
   ): Promise<[OrderTypes.OrderExchangeDTO[], number]> {
     config ??= {}
     const includeTotals = this.shouldIncludeTotals(config)
@@ -684,7 +684,7 @@ export default class OrderModuleService
   // @ts-expect-error
   async createOrders(
     data: OrderTypes.CreateOrderDTO[] | OrderTypes.CreateOrderDTO,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<OrderTypes.OrderDTO[] | OrderTypes.OrderDTO> {
     const input = Array.isArray(data) ? data : [data]
 
@@ -720,7 +720,7 @@ export default class OrderModuleService
   @InjectTransactionManager()
   protected async createOrders_(
     data: OrderTypes.CreateOrderDTO[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ) {
     await this.createOrderAddresses_(data, sharedContext)
 
@@ -801,7 +801,7 @@ export default class OrderModuleService
   @InjectTransactionManager()
   protected async createOrderAddresses_(
     input: OrderTypes.CreateOrderDTO[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ) {
     const allAddresses: {
       data: any
@@ -869,7 +869,7 @@ export default class OrderModuleService
       | string
       | Partial<OrderTypes.FilterableOrderProps>,
     data?: OrderTypes.UpdateOrderDTO,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<OrderTypes.OrderDTO[] | OrderTypes.OrderDTO> {
     const result = await this.updateOrders_(
       dataOrIdOrSelector,
@@ -893,7 +893,7 @@ export default class OrderModuleService
       | string
       | Partial<OrderTypes.FilterableOrderProps>,
     data?: OrderTypes.UpdateOrderDTO,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ) {
     let toUpdate: OrderTypes.UpdateOrderDTO[] = []
     if (isString(dataOrIdOrSelector)) {
@@ -949,7 +949,7 @@ export default class OrderModuleService
     data?:
       | OrderTypes.CreateOrderLineItemDTO[]
       | OrderTypes.CreateOrderLineItemDTO,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<OrderTypes.OrderLineItemDTO[]> {
     let items: InferEntityType<typeof OrderLineItem>[] = []
     if (isString(orderIdOrData)) {
@@ -996,7 +996,7 @@ export default class OrderModuleService
   protected async createOrderLineItems_(
     orderId: string,
     items: OrderTypes.CreateOrderLineItemDTO[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<InferEntityType<typeof OrderLineItem>[]> {
     const order = await this.retrieveOrder(
       orderId,
@@ -1018,7 +1018,7 @@ export default class OrderModuleService
   @InjectTransactionManager()
   protected async createOrderLineItemsBulk_(
     data: CreateOrderLineItemDTO[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<InferEntityType<typeof OrderLineItem>[]> {
     const orderItemToCreate: CreateOrderItemDTO[] = []
 
@@ -1075,7 +1075,7 @@ export default class OrderModuleService
     data?:
       | OrderTypes.UpdateOrderLineItemDTO
       | Partial<OrderTypes.UpdateOrderLineItemDTO>,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<OrderTypes.OrderLineItemDTO[] | OrderTypes.OrderLineItemDTO> {
     let items: InferEntityType<typeof OrderLineItem>[] = []
     if (isString(lineItemIdOrDataOrSelector)) {
@@ -1119,7 +1119,7 @@ export default class OrderModuleService
   protected async updateOrderLineItem_(
     lineItemId: string,
     data: Partial<OrderTypes.UpdateOrderLineItemDTO>,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<InferEntityType<typeof OrderLineItem>> {
     const [item] = await this.orderLineItemService_.update(
       [{ id: lineItemId, ...data }],
@@ -1144,7 +1144,7 @@ export default class OrderModuleService
   @InjectTransactionManager()
   protected async updateOrderLineItemsWithSelector_(
     updates: OrderTypes.UpdateOrderLineItemWithSelectorDTO[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<InferEntityType<typeof OrderLineItem>[]> {
     let toUpdate: UpdateOrderLineItemDTO[] = []
     const detailsToUpdate: UpdateOrderItemWithSelectorDTO[] = []
@@ -1197,7 +1197,7 @@ export default class OrderModuleService
     data?:
       | OrderTypes.UpdateOrderItemDTO
       | Partial<OrderTypes.UpdateOrderItemDTO>,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<OrderTypes.OrderItemDTO[] | OrderTypes.OrderItemDTO> {
     let items: InferEntityType<typeof OrderItem>[] = []
     if (isString(orderItemIdOrDataOrSelector)) {
@@ -1238,7 +1238,7 @@ export default class OrderModuleService
   protected async updateOrderItem_(
     orderItemId: string,
     data: Partial<OrderTypes.UpdateOrderItemDTO>,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<InferEntityType<typeof OrderItem>> {
     const [detail] = await this.orderItemService_.update(
       [{ id: orderItemId, ...data }],
@@ -1251,7 +1251,7 @@ export default class OrderModuleService
   @InjectTransactionManager()
   protected async updateOrderItemWithSelector_(
     updates: OrderTypes.UpdateOrderItemWithSelectorDTO[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<InferEntityType<typeof OrderItem>[]> {
     let toUpdate: UpdateOrderItemDTO[] = []
     for (const { selector, data } of updates) {
@@ -1295,7 +1295,7 @@ export default class OrderModuleService
       | OrderTypes.CreateOrderShippingMethodDTO[]
       | OrderTypes.CreateOrderShippingMethodDTO,
     data?: OrderTypes.CreateOrderShippingMethodDTO[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<
     OrderTypes.OrderShippingMethodDTO[] | OrderTypes.OrderShippingMethodDTO
   > {
@@ -1348,7 +1348,7 @@ export default class OrderModuleService
   protected async createOrderShippingMethods_(
     orderId: string,
     data: CreateOrderShippingMethodDTO[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<InferEntityType<typeof OrderShippingMethod>[]> {
     const order = await this.retrieveOrder(
       orderId,
@@ -1377,7 +1377,7 @@ export default class OrderModuleService
       order_id: string
       version: number
     }[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<InferEntityType<typeof OrderShippingMethod>[]> {
     const sm = await this.orderShippingService_.create(data, sharedContext)
 
@@ -1389,7 +1389,7 @@ export default class OrderModuleService
   async softDeleteOrderShippingMethods<TReturnableLinkableKeys extends string>(
     ids: string | object | string[] | object[],
     config?: SoftDeleteReturn<TReturnableLinkableKeys>,
-    @MedusaContext() sharedContext?: Context
+    @vikraiContext() sharedContext?: Context
   ): Promise<Record<string, string[]> | void> {
     const rel = await super.listOrderShippings(
       {
@@ -1415,7 +1415,7 @@ export default class OrderModuleService
   async restoreOrderShippingMethods<TReturnableLinkableKeys extends string>(
     ids: string | object | string[] | object[],
     config?: RestoreReturn<TReturnableLinkableKeys>,
-    @MedusaContext() sharedContext?: Context
+    @vikraiContext() sharedContext?: Context
   ): Promise<Record<string, string[]> | void> {
     const rel = await super.listOrderShippings(
       {
@@ -1459,7 +1459,7 @@ export default class OrderModuleService
       | OrderTypes.CreateOrderLineItemAdjustmentDTO[]
       | OrderTypes.CreateOrderLineItemAdjustmentDTO,
     adjustments?: OrderTypes.CreateOrderLineItemAdjustmentDTO[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<OrderTypes.OrderLineItemAdjustmentDTO[]> {
     let addedAdjustments: InferEntityType<typeof OrderLineItemAdjustment>[] = []
     if (isString(orderIdOrData)) {
@@ -1473,8 +1473,8 @@ export default class OrderModuleService
 
       for (const adj of adjustments || []) {
         if (!lineIds?.includes(adj.item_id)) {
-          throw new MedusaError(
-            MedusaError.Types.INVALID_DATA,
+          throw new vikraiError(
+            vikraiError.Types.INVALID_DATA,
             `Line item with id ${adj.item_id} does not exist on order with id ${orderIdOrData}`
           )
         }
@@ -1508,7 +1508,7 @@ export default class OrderModuleService
       | OrderTypes.CreateOrderLineItemAdjustmentDTO
       | OrderTypes.UpdateOrderLineItemAdjustmentDTO
     )[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<OrderTypes.OrderLineItemAdjustmentDTO[]> {
     let result = await this.orderLineItemAdjustmentService_.upsert(
       adjustments,
@@ -1529,7 +1529,7 @@ export default class OrderModuleService
       | OrderTypes.CreateOrderLineItemAdjustmentDTO
       | OrderTypes.UpdateOrderLineItemAdjustmentDTO
     )[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<OrderTypes.OrderLineItemAdjustmentDTO[]> {
     const order = await this.retrieveOrder(
       orderId,
@@ -1579,7 +1579,7 @@ export default class OrderModuleService
       | OrderTypes.CreateOrderShippingMethodAdjustmentDTO
       | OrderTypes.UpdateOrderShippingMethodAdjustmentDTO
     )[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<OrderTypes.OrderShippingMethodAdjustmentDTO[]> {
     const result = await this.orderShippingMethodAdjustmentService_.upsert(
       adjustments,
@@ -1600,7 +1600,7 @@ export default class OrderModuleService
       | OrderTypes.CreateOrderShippingMethodAdjustmentDTO
       | OrderTypes.UpdateOrderShippingMethodAdjustmentDTO
     )[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<OrderTypes.OrderShippingMethodAdjustmentDTO[]> {
     const order = await this.retrieveOrder(
       orderId,
@@ -1672,7 +1672,7 @@ export default class OrderModuleService
       | OrderTypes.CreateOrderShippingMethodAdjustmentDTO[]
       | OrderTypes.CreateOrderShippingMethodAdjustmentDTO,
     adjustments?: OrderTypes.CreateOrderShippingMethodAdjustmentDTO[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<
     | OrderTypes.OrderShippingMethodAdjustmentDTO[]
     | OrderTypes.OrderShippingMethodAdjustmentDTO
@@ -1691,8 +1691,8 @@ export default class OrderModuleService
 
       for (const adj of adjustments || []) {
         if (!methodIds?.includes(adj.shipping_method_id)) {
-          throw new MedusaError(
-            MedusaError.Types.INVALID_DATA,
+          throw new vikraiError(
+            vikraiError.Types.INVALID_DATA,
             `Shipping method with id ${adj.shipping_method_id} does not exist on order with id ${orderIdOrData}`
           )
         }
@@ -1758,7 +1758,7 @@ export default class OrderModuleService
     taxLines?:
       | OrderTypes.CreateOrderLineItemTaxLineDTO[]
       | OrderTypes.CreateOrderLineItemTaxLineDTO,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<
     OrderTypes.OrderLineItemTaxLineDTO[] | OrderTypes.OrderLineItemTaxLineDTO
   > {
@@ -1800,7 +1800,7 @@ export default class OrderModuleService
       | OrderTypes.CreateOrderLineItemTaxLineDTO
       | OrderTypes.UpdateOrderLineItemTaxLineDTO
     )[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<OrderTypes.OrderLineItemTaxLineDTO[]> {
     const result = await this.orderLineItemTaxLineService_.upsert(
       taxLines as UpdateOrderLineItemTaxLineDTO[],
@@ -1821,7 +1821,7 @@ export default class OrderModuleService
       | OrderTypes.CreateOrderLineItemTaxLineDTO
       | OrderTypes.UpdateOrderLineItemTaxLineDTO
     )[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<OrderTypes.OrderLineItemTaxLineDTO[]> {
     const order = await this.retrieveOrder(
       orderId,
@@ -1892,7 +1892,7 @@ export default class OrderModuleService
     taxLines?:
       | OrderTypes.CreateOrderShippingMethodTaxLineDTO[]
       | OrderTypes.CreateOrderShippingMethodTaxLineDTO,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<
     | OrderTypes.OrderShippingMethodTaxLineDTO[]
     | OrderTypes.OrderShippingMethodTaxLineDTO
@@ -1933,7 +1933,7 @@ export default class OrderModuleService
       | OrderTypes.CreateOrderShippingMethodTaxLineDTO
       | OrderTypes.UpdateOrderShippingMethodTaxLineDTO
     )[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<OrderTypes.OrderShippingMethodTaxLineDTO[]> {
     const result = await this.orderShippingMethodTaxLineService_.upsert(
       taxLines as UpdateOrderShippingMethodTaxLineDTO[],
@@ -1954,7 +1954,7 @@ export default class OrderModuleService
       | OrderTypes.CreateOrderShippingMethodTaxLineDTO
       | OrderTypes.UpdateOrderShippingMethodTaxLineDTO
     )[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<OrderTypes.OrderShippingMethodTaxLineDTO[]> {
     const order = await this.retrieveOrder(
       orderId,
@@ -2018,7 +2018,7 @@ export default class OrderModuleService
   // @ts-expect-error
   async createReturns(
     data: OrderTypes.CreateOrderReturnDTO | OrderTypes.CreateOrderReturnDTO[],
-    @MedusaContext() sharedContext?: Context
+    @vikraiContext() sharedContext?: Context
   ): Promise<OrderTypes.ReturnDTO | OrderTypes.ReturnDTO[]> {
     const created = await this.createOrderRelatedEntity_(
       data,
@@ -2050,7 +2050,7 @@ export default class OrderModuleService
   // @ts-expect-error
   async createOrderClaims(
     data: OrderTypes.CreateOrderClaimDTO | OrderTypes.CreateOrderClaimDTO[],
-    @MedusaContext() sharedContext?: Context
+    @vikraiContext() sharedContext?: Context
   ): Promise<OrderTypes.OrderClaimDTO | OrderTypes.OrderClaimDTO[]> {
     const created = await this.createOrderRelatedEntity_(
       data,
@@ -2084,7 +2084,7 @@ export default class OrderModuleService
     data:
       | OrderTypes.CreateOrderExchangeDTO
       | OrderTypes.CreateOrderExchangeDTO[],
-    @MedusaContext() sharedContext?: Context
+    @vikraiContext() sharedContext?: Context
   ): Promise<OrderTypes.OrderExchangeDTO | OrderTypes.OrderExchangeDTO[]> {
     const created = await this.createOrderRelatedEntity_(
       data,
@@ -2123,8 +2123,8 @@ export default class OrderModuleService
     if (orders.length !== orderIds.length) {
       const foundOrders = orders.map((o) => o.id)
       const missing = orderIds.filter((id) => !foundOrders.includes(id))
-      throw new MedusaError(
-        MedusaError.Types.INVALID_DATA,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_DATA,
         `Order could not be found: ${missing.join(", ")}`
       )
     }
@@ -2149,7 +2149,7 @@ export default class OrderModuleService
   @InjectManager()
   async createOrderChange(
     data: CreateOrderChangeDTO | CreateOrderChangeDTO[],
-    @MedusaContext() sharedContext?: Context
+    @vikraiContext() sharedContext?: Context
   ): Promise<OrderTypes.OrderChangeDTO | OrderTypes.OrderChangeDTO[]> {
     const changes = await this.createOrderChange_(data, sharedContext)
 
@@ -2164,7 +2164,7 @@ export default class OrderModuleService
   @InjectTransactionManager()
   protected async createOrderChange_(
     data: CreateOrderChangeDTO | CreateOrderChangeDTO[],
-    @MedusaContext() sharedContext?: Context
+    @vikraiContext() sharedContext?: Context
   ): Promise<InferEntityType<typeof OrderChange>[]> {
     const dataArr = Array.isArray(data) ? data : [data]
     const orderIds: string[] = []
@@ -2197,8 +2197,8 @@ export default class OrderModuleService
     if (orders.length !== orderIds.length) {
       const foundOrders = orders.map((o) => o.id)
       const missing = orderIds.filter((id) => !foundOrders.includes(id))
-      throw new MedusaError(
-        MedusaError.Types.INVALID_DATA,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_DATA,
         `Order could not be found: ${missing.join(", ")}`
       )
     }
@@ -2207,8 +2207,8 @@ export default class OrderModuleService
       const existingOrderChange = orderChangesMap.get(order.id)
 
       if (existingOrderChange) {
-        throw new MedusaError(
-          MedusaError.Types.INVALID_DATA,
+        throw new vikraiError(
+          vikraiError.Types.INVALID_DATA,
           `Order (${order.id}) already has an existing active order change`
         )
       }
@@ -2408,7 +2408,7 @@ export default class OrderModuleService
       | string[]
       | OrderTypes.CancelOrderChangeDTO
       | OrderTypes.CancelOrderChangeDTO[],
-    @MedusaContext() sharedContext?: Context
+    @vikraiContext() sharedContext?: Context
   ): Promise<void> {
     const data = Array.isArray(orderChangeIdOrData)
       ? orderChangeIdOrData
@@ -2448,7 +2448,7 @@ export default class OrderModuleService
       | string[]
       | OrderTypes.ConfirmOrderChangeDTO
       | OrderTypes.ConfirmOrderChangeDTO[],
-    @MedusaContext() sharedContext?: Context
+    @vikraiContext() sharedContext?: Context
   ): Promise<OrderTypes.OrderChangeReturn> {
     const data = Array.isArray(orderChangeIdOrData)
       ? orderChangeIdOrData
@@ -2498,7 +2498,7 @@ export default class OrderModuleService
       | string[]
       | OrderTypes.DeclineOrderChangeDTO
       | OrderTypes.DeclineOrderChangeDTO[],
-    @MedusaContext() sharedContext?: Context
+    @vikraiContext() sharedContext?: Context
   ): Promise<void> {
     const data = Array.isArray(orderChangeIdOrData)
       ? orderChangeIdOrData
@@ -2577,7 +2577,7 @@ export default class OrderModuleService
   @InjectManager()
   async applyPendingOrderActions(
     orderId: string | string[],
-    @MedusaContext() sharedContext?: Context
+    @vikraiContext() sharedContext?: Context
   ): Promise<OrderTypes.OrderChangeReturn> {
     const orderIds = Array.isArray(orderId) ? orderId : [orderId]
 
@@ -2629,7 +2629,7 @@ export default class OrderModuleService
   @InjectManager()
   async revertLastVersion(
     orderId: string,
-    @MedusaContext() sharedContext?: Context
+    @vikraiContext() sharedContext?: Context
   ) {
     const order = await super.retrieveOrder(
       orderId,
@@ -2640,8 +2640,8 @@ export default class OrderModuleService
     )
 
     if (order.version < 2) {
-      throw new MedusaError(
-        MedusaError.Types.INVALID_DATA,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_DATA,
         `Order with id ${orderId} has no previous versions`
       )
     }
@@ -2653,7 +2653,7 @@ export default class OrderModuleService
   async undoLastChange(
     orderId: string,
     lastOrderChange?: Partial<OrderChangeDTO>,
-    @MedusaContext() sharedContext?: Context
+    @vikraiContext() sharedContext?: Context
   ) {
     const order = await super.retrieveOrder(
       orderId,
@@ -2664,8 +2664,8 @@ export default class OrderModuleService
     )
 
     if (order.version < 2) {
-      throw new MedusaError(
-        MedusaError.Types.INVALID_DATA,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_DATA,
         `Order with id ${orderId} has no previous versions`
       )
     }
@@ -2992,8 +2992,8 @@ export default class OrderModuleService
     if (orderChanges.length !== orderChangeIds.length) {
       const foundOrders = orderChanges.map((o) => o.id)
       const missing = orderChangeIds.filter((id) => !foundOrders.includes(id))
-      throw new MedusaError(
-        MedusaError.Types.INVALID_DATA,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_DATA,
         `Order Change could not be found: ${missing.join(", ")}`
       )
     }
@@ -3010,8 +3010,8 @@ export default class OrderModuleService
       }
 
       if (notAllowed.length) {
-        throw new MedusaError(
-          MedusaError.Types.INVALID_DATA,
+        throw new vikraiError(
+          vikraiError.Types.INVALID_DATA,
           `Order Change cannot be modified: ${notAllowed.join(", ")}.`
         )
       }
@@ -3034,7 +3034,7 @@ export default class OrderModuleService
     data:
       | OrderTypes.CreateOrderChangeActionDTO
       | OrderTypes.CreateOrderChangeActionDTO[],
-    @MedusaContext() sharedContext?: Context
+    @vikraiContext() sharedContext?: Context
   ): Promise<
     OrderTypes.OrderChangeActionDTO | OrderTypes.OrderChangeActionDTO[]
   > {
@@ -3194,7 +3194,7 @@ export default class OrderModuleService
     transactionData:
       | OrderTypes.CreateOrderTransactionDTO
       | OrderTypes.CreateOrderTransactionDTO[],
-    @MedusaContext() sharedContext?: Context
+    @vikraiContext() sharedContext?: Context
   ): Promise<
     OrderTypes.OrderTransactionDTO | OrderTypes.OrderTransactionDTO[]
   > {
@@ -3240,7 +3240,7 @@ export default class OrderModuleService
   // @ts-ignore
   async deleteOrderTransactions(
     transactionIds: string | object | string[] | object[],
-    @MedusaContext() sharedContext?: Context
+    @vikraiContext() sharedContext?: Context
   ): Promise<void> {
     const data = Array.isArray(transactionIds)
       ? transactionIds
@@ -3270,7 +3270,7 @@ export default class OrderModuleService
   async softDeleteOrderTransactions<TReturnableLinkableKeys extends string>(
     transactionIds: string | object | string[] | object[],
     config?: SoftDeleteReturn<TReturnableLinkableKeys>,
-    @MedusaContext() sharedContext?: Context
+    @vikraiContext() sharedContext?: Context
   ): Promise<Record<string, string[]> | void> {
     const transactions = await super.listOrderTransactions(
       {
@@ -3302,7 +3302,7 @@ export default class OrderModuleService
   async restoreOrderTransactions<TReturnableLinkableKeys extends string>(
     transactionIds: string | object | string[] | object[],
     config?: RestoreReturn<TReturnableLinkableKeys>,
-    @MedusaContext() sharedContext?: Context
+    @vikraiContext() sharedContext?: Context
   ): Promise<Record<string, string[]> | void> {
     const transactions = await super.listOrderTransactions(
       {
@@ -3406,7 +3406,7 @@ export default class OrderModuleService
   @InjectTransactionManager()
   async archive(
     orderId: string | string[],
-    @MedusaContext() sharedContext?: Context
+    @vikraiContext() sharedContext?: Context
   ): Promise<OrderTypes.OrderDTO | OrderTypes.OrderDTO[]> {
     const orderIds = Array.isArray(orderId) ? orderId : [orderId]
     const orders = await this.listOrders(
@@ -3433,8 +3433,8 @@ export default class OrderModuleService
     }
 
     if (notAllowed.length) {
-      throw new MedusaError(
-        MedusaError.Types.INVALID_DATA,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_DATA,
         `Orders ${notAllowed.join(
           ", "
         )} are completed, canceled, or in draft and cannot be archived`
@@ -3466,7 +3466,7 @@ export default class OrderModuleService
   @InjectTransactionManager()
   async completeOrder(
     orderId: string | string[],
-    @MedusaContext() sharedContext?: Context
+    @vikraiContext() sharedContext?: Context
   ): Promise<OrderTypes.OrderDTO | OrderTypes.OrderDTO[]> {
     const orderIds = Array.isArray(orderId) ? orderId : [orderId]
     const orders = await this.listOrders(
@@ -3487,8 +3487,8 @@ export default class OrderModuleService
     }
 
     if (notAllowed.length) {
-      throw new MedusaError(
-        MedusaError.Types.INVALID_DATA,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_DATA,
         `Orders ${notAllowed.join(", ")} are canceled and cannot be completed`
       )
     }
@@ -3518,7 +3518,7 @@ export default class OrderModuleService
   @InjectTransactionManager()
   async cancel(
     orderId: string | string[],
-    @MedusaContext() sharedContext?: Context
+    @vikraiContext() sharedContext?: Context
   ): Promise<OrderTypes.OrderDTO | OrderTypes.OrderDTO[]> {
     const orderIds = Array.isArray(orderId) ? orderId : [orderId]
     const orders = await this.listOrders(
@@ -3554,7 +3554,7 @@ export default class OrderModuleService
   @InjectTransactionManager()
   async createReturn(
     data: OrderTypes.CreateOrderReturnDTO,
-    @MedusaContext() sharedContext?: Context
+    @vikraiContext() sharedContext?: Context
   ): Promise<OrderTypes.ReturnDTO> {
     const ret = await BundledActions.createReturn.bind(this)(
       data,
@@ -3578,7 +3578,7 @@ export default class OrderModuleService
   @InjectManager()
   async receiveReturn(
     data: OrderTypes.ReceiveOrderReturnDTO,
-    @MedusaContext() sharedContext?: Context
+    @vikraiContext() sharedContext?: Context
   ): Promise<OrderTypes.ReturnDTO> {
     const ret = await this.receiveReturn_(data, sharedContext)
 
@@ -3596,7 +3596,7 @@ export default class OrderModuleService
   @InjectTransactionManager()
   private async receiveReturn_(
     data: OrderTypes.ReceiveOrderReturnDTO,
-    @MedusaContext() sharedContext?: Context
+    @vikraiContext() sharedContext?: Context
   ): Promise<any> {
     return await BundledActions.receiveReturn.bind(this)(data, sharedContext)
   }
@@ -3604,7 +3604,7 @@ export default class OrderModuleService
   @InjectManager()
   async cancelReturn(
     data: OrderTypes.CancelOrderReturnDTO,
-    @MedusaContext() sharedContext?: Context
+    @vikraiContext() sharedContext?: Context
   ): Promise<OrderTypes.ReturnDTO> {
     const ret = await this.cancelReturn_(data, sharedContext)
 
@@ -3621,7 +3621,7 @@ export default class OrderModuleService
   @InjectTransactionManager()
   private async cancelReturn_(
     data: OrderTypes.CancelOrderReturnDTO,
-    @MedusaContext() sharedContext?: Context
+    @vikraiContext() sharedContext?: Context
   ): Promise<any> {
     return await BundledActions.cancelReturn.bind(this)(data, sharedContext)
   }
@@ -3629,7 +3629,7 @@ export default class OrderModuleService
   @InjectManager()
   async createClaim(
     data: OrderTypes.CreateOrderClaimDTO,
-    @MedusaContext() sharedContext?: Context
+    @vikraiContext() sharedContext?: Context
   ): Promise<OrderTypes.OrderClaimDTO> {
     const ret = await this.createClaim_(data, sharedContext)
 
@@ -3663,7 +3663,7 @@ export default class OrderModuleService
   @InjectTransactionManager()
   async createClaim_(
     data: OrderTypes.CreateOrderClaimDTO,
-    @MedusaContext() sharedContext?: Context
+    @vikraiContext() sharedContext?: Context
   ): Promise<any> {
     return await BundledActions.createClaim.bind(this)(data, sharedContext)
   }
@@ -3671,7 +3671,7 @@ export default class OrderModuleService
   @InjectManager()
   async cancelClaim(
     data: OrderTypes.CancelOrderClaimDTO,
-    @MedusaContext() sharedContext?: Context
+    @vikraiContext() sharedContext?: Context
   ): Promise<OrderTypes.OrderClaimDTO> {
     const ret = await this.cancelClaim_(data, sharedContext)
 
@@ -3683,7 +3683,7 @@ export default class OrderModuleService
   @InjectTransactionManager()
   private async cancelClaim_(
     data: OrderTypes.CancelOrderClaimDTO,
-    @MedusaContext() sharedContext?: Context
+    @vikraiContext() sharedContext?: Context
   ): Promise<any> {
     return await BundledActions.cancelClaim.bind(this)(data, sharedContext)
   }
@@ -3691,7 +3691,7 @@ export default class OrderModuleService
   @InjectManager()
   async createExchange(
     data: OrderTypes.CreateOrderExchangeDTO,
-    @MedusaContext() sharedContext?: Context
+    @vikraiContext() sharedContext?: Context
   ): Promise<OrderTypes.OrderExchangeDTO> {
     const ret = await this.createExchange_(data, sharedContext)
 
@@ -3738,7 +3738,7 @@ export default class OrderModuleService
   async updateReturnReasons(
     idOrSelector: string | FilterableOrderReturnReasonProps,
     data: UpdateOrderReturnReasonDTO,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<OrderReturnReasonDTO[] | OrderReturnReasonDTO> {
     let normalizedInput: UpdateReturnReasonDTO[] = []
     if (isString(idOrSelector)) {
@@ -3775,7 +3775,7 @@ export default class OrderModuleService
   @InjectTransactionManager()
   async createExchange_(
     data: OrderTypes.CreateOrderExchangeDTO,
-    @MedusaContext() sharedContext?: Context
+    @vikraiContext() sharedContext?: Context
   ): Promise<any> {
     return await BundledActions.createExchange.bind(this)(data, sharedContext)
   }
@@ -3783,7 +3783,7 @@ export default class OrderModuleService
   @InjectManager()
   async cancelExchange(
     data: OrderTypes.CancelOrderExchangeDTO,
-    @MedusaContext() sharedContext?: Context
+    @vikraiContext() sharedContext?: Context
   ): Promise<OrderTypes.OrderExchangeDTO> {
     const ret = await this.cancelExchange_(data, sharedContext)
 
@@ -3795,7 +3795,7 @@ export default class OrderModuleService
   @InjectTransactionManager()
   private async cancelExchange_(
     data: OrderTypes.CancelOrderExchangeDTO,
-    @MedusaContext() sharedContext?: Context
+    @vikraiContext() sharedContext?: Context
   ): Promise<any> {
     return await BundledActions.cancelExchange.bind(this)(data, sharedContext)
   }
@@ -3803,7 +3803,7 @@ export default class OrderModuleService
   @InjectTransactionManager()
   async registerFulfillment(
     data: OrderTypes.RegisterOrderFulfillmentDTO,
-    @MedusaContext() sharedContext?: Context
+    @vikraiContext() sharedContext?: Context
   ): Promise<void> {
     return await BundledActions.registerFulfillment.bind(this)(
       data,
@@ -3814,7 +3814,7 @@ export default class OrderModuleService
   @InjectTransactionManager()
   async cancelFulfillment(
     data: OrderTypes.CancelOrderFulfillmentDTO,
-    @MedusaContext() sharedContext?: Context
+    @vikraiContext() sharedContext?: Context
   ): Promise<void> {
     return await BundledActions.cancelFulfillment.bind(this)(
       data,
@@ -3825,7 +3825,7 @@ export default class OrderModuleService
   @InjectTransactionManager()
   async registerShipment(
     data: OrderTypes.RegisterOrderShipmentDTO,
-    @MedusaContext() sharedContext?: Context
+    @vikraiContext() sharedContext?: Context
   ): Promise<void> {
     return await BundledActions.registerShipment.bind(this)(data, sharedContext)
   }
@@ -3833,7 +3833,7 @@ export default class OrderModuleService
   @InjectTransactionManager()
   async registerDelivery(
     data: OrderTypes.RegisterOrderDeliveryDTO,
-    @MedusaContext() sharedContext?: Context
+    @vikraiContext() sharedContext?: Context
   ): Promise<void> {
     return await BundledActions.registerDelivery.bind(this)(data, sharedContext)
   }
@@ -3850,3 +3850,4 @@ export default class OrderModuleService
     )
   }
 }
+

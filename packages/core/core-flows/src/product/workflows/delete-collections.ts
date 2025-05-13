@@ -1,7 +1,7 @@
 import {
   Modules,
   ProductCollectionWorkflowEvents,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 import {
   WorkflowData,
   WorkflowResponse,
@@ -9,7 +9,7 @@ import {
   createWorkflow,
   parallelize,
   transform,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { emitEventStep, removeRemoteLinkStep } from "../../common"
 import { deleteCollectionsStep } from "../steps"
 
@@ -26,7 +26,7 @@ export type DeleteCollectionsWorkflowInput = {
 export const deleteCollectionsWorkflowId = "delete-collections"
 /**
  * This workflow deletes one or more product collections. It's used by the
- * [Delete Product Collection Admin API Route](https://docs.medusajs.com/api/admin#collections_deletecollectionsid).
+ * [Delete Product Collection Admin API Route](https://docs.vikrai.com/api/admin#collections_deletecollectionsid).
  *
  * This workflow has a hook that allows you to perform custom actions after the product collections are deleted. For example,
  * you can delete custom records linked to the product colleciton.
@@ -77,3 +77,4 @@ export const deleteCollectionsWorkflow = createWorkflow(
     })
   }
 )
+

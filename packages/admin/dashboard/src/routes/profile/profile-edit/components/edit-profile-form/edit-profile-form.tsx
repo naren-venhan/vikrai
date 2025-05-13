@@ -1,10 +1,10 @@
 import { zodResolver } from "@hookform/resolvers/zod"
-import { Button, Input, Select, toast } from "@medusajs/ui"
+import { Button, Input, Select, toast } from "@vikrai/ui"
 import { useForm } from "react-hook-form"
 import { useTranslation } from "react-i18next"
 import * as zod from "zod"
 
-import { HttpTypes } from "@medusajs/types"
+import { HttpTypes } from "@vikrai/types"
 import { Form } from "../../../../../components/common/form"
 import { RouteDrawer, useRouteModal } from "../../../../../components/modals"
 import { KeyboundForm } from "../../../../../components/utilities/keybound-form"
@@ -167,7 +167,7 @@ export const EditProfileForm = ({ user }: EditProfileProps) => {
                             key="hint-link"
                             className="text-ui-fg-interactive hover:text-ui-fg-interactive-hover transition-fg underline"
                             // TODO change link once docs are public
-                            href="https://medusa-resources-git-docs-v2-medusajs.vercel.app/resources/usage#admin-analytics"
+                            href="https://vikrai-resources-git-docs-v2-vikrai.vercel.app/resources/usage#admin-analytics"
                             target="_blank"
                             rel="noopener noreferrer"
                           />,
@@ -197,3 +197,4 @@ export const EditProfileForm = ({ user }: EditProfileProps) => {
     </RouteDrawer.Form>
   )
 }
+

@@ -17,7 +17,7 @@ import {
   Link,
 } from "@/components"
 import clsx from "clsx"
-import { Text } from "@medusajs/ui"
+import { Text } from "@vikrai/ui"
 
 export const MDXComponents: MDXComponentsType = {
   code: CodeMdx,
@@ -39,7 +39,7 @@ export const MDXComponents: MDXComponentsType = {
     return (
       <p
         className={clsx(
-          "text-medusa-fg-base [&:not(:last-child)]:mb-docs_1.5 last:!mb-0",
+          "text-vikrai-fg-base [&:not(:last-child)]:mb-docs_1.5 last:!mb-0",
           className
         )}
         {...props}
@@ -88,7 +88,7 @@ export const MDXComponents: MDXComponentsType = {
     return (
       <li
         className={clsx(
-          "text-medusa-fg-base [&:not(:last-child)]:mb-docs_0.5",
+          "text-vikrai-fg-base [&:not(:last-child)]:mb-docs_0.5",
           "[&_ol]:mt-docs_0.5 [&_ul]:mt-docs_0.5",
           className
         )}
@@ -102,7 +102,7 @@ export const MDXComponents: MDXComponentsType = {
     return (
       <hr
         className={clsx(
-          "my-docs_2 h-[1px] w-full border-0 bg-medusa-border-base",
+          "my-docs_2 h-[1px] w-full border-0 bg-vikrai-border-base",
           className
         )}
         {...props}
@@ -124,3 +124,4 @@ export const MDXComponents: MDXComponentsType = {
 }
 
 export const Hr = MDXComponents["hr"] as () => React.JSX.Element
+

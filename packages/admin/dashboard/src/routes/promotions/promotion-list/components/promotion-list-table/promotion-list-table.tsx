@@ -1,6 +1,6 @@
-import { PencilSquare, Trash } from "@medusajs/icons"
-import { PromotionDTO } from "@medusajs/types"
-import { Button, Container, Heading, usePrompt } from "@medusajs/ui"
+import { PencilSquare, Trash } from "@vikrai/icons"
+import { PromotionDTO } from "@vikrai/types"
+import { Button, Container, Heading, usePrompt } from "@vikrai/ui"
 import { createColumnHelper } from "@tanstack/react-table"
 import { useMemo } from "react"
 import { useTranslation } from "react-i18next"
@@ -156,3 +156,4 @@ const useColumns = () => {
     [base]
   )
 }
+

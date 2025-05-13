@@ -5,7 +5,7 @@ import Link from "next/link"
 import React, { useMemo } from "react"
 import { MenuItem, MenuItemLink, MenuItemSubMenu } from "types"
 import { SelectedMenu } from ".."
-import { TriangleRightMini } from "@medusajs/icons"
+import { TriangleRightMini } from "@vikrai/icons"
 
 type MainNavMobileSubMenuProps = {
   menu: MenuItem[]
@@ -25,7 +25,7 @@ export const MainNavMobileSubMenu = ({
   }, [menu])
   return (
     <div className="flex flex-col gap-[23px] max-h-[90%]">
-      <span className="text-compact-small-plus text-medusa-fg-muted uppercase">
+      <span className="text-compact-small-plus text-vikrai-fg-muted uppercase">
         {title}
       </span>
       <ul className="flex flex-col gap-[18px] max-h-full overflow-auto">
@@ -33,7 +33,7 @@ export const MainNavMobileSubMenu = ({
           <li
             key={index}
             className={clsx(
-              "text-h1 text-medusa-fg-base cursor-pointer",
+              "text-h1 text-vikrai-fg-base cursor-pointer",
               "flex justify-between gap-docs_1"
             )}
           >
@@ -65,3 +65,4 @@ export const MainNavMobileSubMenu = ({
     </div>
   )
 }
+

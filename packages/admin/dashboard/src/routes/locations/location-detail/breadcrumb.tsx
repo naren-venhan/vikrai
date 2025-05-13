@@ -1,4 +1,4 @@
-import { HttpTypes } from "@medusajs/types"
+import { HttpTypes } from "@vikrai/types"
 import { UIMatch } from "react-router-dom"
 
 import { useStockLocation } from "../../../hooks/api/stock-locations"
@@ -29,3 +29,4 @@ export const LocationDetailBreadcrumb = (
 
   return <span>{stock_location.name}</span>
 }
+

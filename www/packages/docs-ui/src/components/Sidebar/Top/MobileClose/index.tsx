@@ -2,7 +2,7 @@
 
 import React from "react"
 import { Button, useSidebar } from "../../../.."
-import { XMarkMini } from "@medusajs/icons"
+import { XMarkMini } from "@vikrai/icons"
 
 export const SidebarTopMobileClose = () => {
   const { setMobileSidebarOpen } = useSidebar()
@@ -14,8 +14,9 @@ export const SidebarTopMobileClose = () => {
         onClick={() => setMobileSidebarOpen(false)}
         className="!p-0 hover:!bg-transparent"
       >
-        <XMarkMini className="text-medusa-fg-subtle" />
+        <XMarkMini className="text-vikrai-fg-subtle" />
       </Button>
     </div>
   )
 }
+

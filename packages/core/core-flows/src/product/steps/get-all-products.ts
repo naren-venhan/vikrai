@@ -1,9 +1,9 @@
 import {
   FilterableProductProps,
   RemoteQueryFunction,
-} from "@medusajs/framework/types"
-import { ContainerRegistrationKeys } from "@medusajs/framework/utils"
-import { createStep, StepResponse } from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/types"
+import { ContainerRegistrationKeys } from "@vikrai/framework/utils"
+import { createStep, StepResponse } from "@vikrai/framework/workflows-sdk"
 
 /**
  * The configuration to retrieve the products.
@@ -11,7 +11,7 @@ import { createStep, StepResponse } from "@medusajs/framework/workflows-sdk"
 export type GetAllProductsStepInput = {
   /**
    * The fields to select. These fields will be passed to 
-   * [Query](https://docs.medusajs.com/learn/fundamentals/module-links/query), so you can
+   * [Query](https://docs.vikrai.com/learn/fundamentals/module-links/query), so you can
    * pass product properties or any relation names, including custom links.
    */
   select: string[]
@@ -79,3 +79,4 @@ export const getAllProductsStep = createStep(
     return new StepResponse(allProducts, allProducts)
   }
 )
+

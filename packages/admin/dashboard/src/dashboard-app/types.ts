@@ -5,7 +5,7 @@ import {
   CustomFieldModel,
   InjectionZone,
   NestedRoutePosition,
-} from "@medusajs/admin-shared"
+} from "@vikrai/admin-shared"
 import { ComponentType } from "react"
 import { LoaderFunction } from "react-router-dom"
 import { ZodFirstPartySchemaTypes } from "zod"
@@ -132,3 +132,4 @@ export type DashboardPlugin = {
   widgetModule: WidgetModule
   routeModule: RouteModule
 }
+

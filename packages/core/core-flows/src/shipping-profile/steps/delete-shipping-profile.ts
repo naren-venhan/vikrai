@@ -1,6 +1,6 @@
-import { IFulfillmentModuleService } from "@medusajs/framework/types"
-import { Modules } from "@medusajs/framework/utils"
-import { StepResponse, createStep } from "@medusajs/framework/workflows-sdk"
+import { IFulfillmentModuleService } from "@vikrai/framework/types"
+import { Modules } from "@vikrai/framework/utils"
+import { StepResponse, createStep } from "@vikrai/framework/workflows-sdk"
 
 /**
  * The IDs of the shipping profiles to delete.
@@ -34,3 +34,4 @@ export const deleteShippingProfilesStep = createStep(
     await service.restoreShippingProfiles(prevIds)
   }
 )
+

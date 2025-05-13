@@ -1,7 +1,7 @@
 import {
-  MedusaNextFunction,
-  MedusaRequest,
-  MedusaResponse,
+  vikraiNextFunction,
+  vikraiRequest,
+  vikraiResponse,
   MiddlewaresConfig,
   MiddlewareVerb,
   ParserConfig,
@@ -24,10 +24,10 @@ export function defineMiddlewares<
     bodyParser?: ParserConfig
     additionalDataValidator?: ZodRawShape
     // eslint-disable-next-line space-before-function-paren
-    middlewares?: (<Req extends MedusaRequest>(
+    middlewares?: (<Req extends vikraiRequest>(
       req: Req,
-      res: MedusaResponse,
-      next: MedusaNextFunction
+      res: vikraiResponse,
+      next: vikraiNextFunction
     ) => any)[]
   }
 >(
@@ -54,3 +54,4 @@ export function defineMiddlewares<
     }),
   }
 }
+

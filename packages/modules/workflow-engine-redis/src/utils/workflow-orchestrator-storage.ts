@@ -11,16 +11,16 @@ import {
   TransactionOptions,
   TransactionStep,
   TransactionStepError,
-} from "@medusajs/framework/orchestration"
-import { Logger, ModulesSdkTypes } from "@medusajs/framework/types"
+} from "@vikrai/framework/orchestration"
+import { Logger, ModulesSdkTypes } from "@vikrai/framework/types"
 import {
   isDefined,
   isPresent,
-  MedusaError,
+  vikraiError,
   promiseAll,
   TransactionState,
   TransactionStepState,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 import { WorkflowOrchestratorService } from "@services"
 import { Queue, RepeatOptions, Worker } from "bullmq"
 import Redis from "ioredis"
@@ -35,7 +35,7 @@ enum JobType {
 export class RedisDistributedTransactionStorage
   implements IDistributedTransactionStorage, IDistributedSchedulerStorage
 {
-  private workflowExecutionService_: ModulesSdkTypes.IMedusaInternalService<any>
+  private workflowExecutionService_: ModulesSdkTypes.IvikraiInternalService<any>
   private logger_: Logger
   private workflowOrchestratorService_: WorkflowOrchestratorService
 
@@ -59,7 +59,7 @@ export class RedisDistributedTransactionStorage
     logger,
     isWorkerMode,
   }: {
-    workflowExecutionService: ModulesSdkTypes.IMedusaInternalService<any>
+    workflowExecutionService: ModulesSdkTypes.IvikraiInternalService<any>
     redisConnection: Redis
     redisWorkerConnection: Redis
     redisQueueName: string
@@ -212,7 +212,7 @@ export class RedisDistributedTransactionStorage
         logOnError: true,
       })
     } catch (e) {
-      if (e instanceof MedusaError && e.type === MedusaError.Types.NOT_FOUND) {
+      if (e instanceof vikraiError && e.type === vikraiError.Types.NOT_FOUND) {
         this.logger_?.warn(
           `Tried to execute a scheduled workflow with ID ${jobId} that does not exist, removing it from the scheduler.`
         )
@@ -393,8 +393,8 @@ export class RedisDistributedTransactionStorage
       const actionResult = result?.pop()
       const isOk = !!actionResult?.pop()
       if (!isOk) {
-        throw new MedusaError(
-          MedusaError.Types.INVALID_ARGUMENT,
+        throw new vikraiError(
+          vikraiError.Types.INVALID_ARGUMENT,
           "Transaction already started for transactionId: " +
             data.flow.transactionId
         )
@@ -715,3 +715,4 @@ export class RedisDistributedTransactionStorage
     }
   }
 }
+

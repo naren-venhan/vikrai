@@ -1,13 +1,13 @@
-import { MedusaContainer } from "@medusajs/types"
-import { Modules, composeMessage } from "@medusajs/utils"
-import { medusaIntegrationTestRunner } from "@medusajs/test-utils"
+import { vikraiContainer } from "@vikrai/types"
+import { Modules, composeMessage } from "@vikrai/utils"
+import { vikraiIntegrationTestRunner } from "@vikrai/test-utils"
 import testEventPayloadHandlerMock from "../../src/subscribers/test-event-payload"
 
 jest.setTimeout(30000)
 
-medusaIntegrationTestRunner({
+vikraiIntegrationTestRunner({
   testSuite: ({ getContainer }) => {
-    let container!: MedusaContainer
+    let container!: vikraiContainer
 
     describe("EventBusModule", () => {
       beforeAll(() => {
@@ -48,3 +48,4 @@ medusaIntegrationTestRunner({
     })
   },
 })
+

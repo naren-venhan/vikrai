@@ -1,5 +1,6 @@
-import { Container } from "@medusajs/ui"
+import { Container } from "@vikrai/ui"
 
 export default function ContainerDemo() {
   return <Container>Content</Container>
 }
+

@@ -1,4 +1,4 @@
-import { Container, Heading, Text, clx } from "@medusajs/ui"
+import { Container, Heading, Text, clx } from "@vikrai/ui"
 import { CSSProperties, ComponentPropsWithoutRef } from "react"
 
 type SkeletonProps = {
@@ -325,3 +325,4 @@ export const TwoColumnPageSkeleton = ({
     </div>
   )
 }
+

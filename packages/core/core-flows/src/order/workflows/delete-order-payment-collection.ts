@@ -1,14 +1,14 @@
-import { PaymentCollectionDTO } from "@medusajs/framework/types"
+import { PaymentCollectionDTO } from "@vikrai/framework/types"
 import {
-  MedusaError,
+  vikraiError,
   Modules,
   PaymentCollectionStatus,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 import {
   WorkflowData,
   createStep,
   createWorkflow,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { removeRemoteLinkStep, useRemoteQueryStep } from "../../common"
 
 /**
@@ -18,8 +18,8 @@ export const throwUnlessStatusIsNotPaid = createStep(
   "validate-payment-collection",
   ({ paymentCollection }: { paymentCollection: PaymentCollectionDTO }) => {
     if (paymentCollection.status !== PaymentCollectionStatus.NOT_PAID) {
-      throw new MedusaError(
-        MedusaError.Types.NOT_ALLOWED,
+      throw new vikraiError(
+        vikraiError.Types.NOT_ALLOWED,
         `Can only delete payment collections where status is not_paid`
       )
     }
@@ -40,7 +40,7 @@ export const deleteOrderPaymentCollectionsId =
   "delete-order-payment-collectionworkflow"
 /**
  * This workflow deletes one or more payment collections of an order. It's used by the 
- * [Delete Payment Collection API Route](https://docs.medusajs.com/api/admin#payment-collections_deletepaymentcollectionsid).
+ * [Delete Payment Collection API Route](https://docs.vikrai.com/api/admin#payment-collections_deletepaymentcollectionsid).
  * 
  * You can use this workflow within your customizations or your own custom workflows, allowing you to wrap custom logic around
  * deleting a payment collection of an order.
@@ -75,3 +75,4 @@ export const deleteOrderPaymentCollections = createWorkflow(
     })
   }
 )
+

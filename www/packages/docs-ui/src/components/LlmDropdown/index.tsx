@@ -3,7 +3,7 @@
 import React, { useRef, useState } from "react"
 import { useAiAssistant, useSiteConfig } from "../../providers"
 import { usePathname } from "next/navigation"
-import { AiAssistent, Book } from "@medusajs/icons"
+import { AiAssistent, Book } from "@vikrai/icons"
 import { DropdownMenu, Menu } from "../Menu"
 import { MarkdownIcon } from "../Icons/Markdown"
 import { useAiAssistantChat } from "../../providers/AiAssistant/Chat"
@@ -67,3 +67,4 @@ export const LlmDropdown = () => {
     />
   )
 }
+

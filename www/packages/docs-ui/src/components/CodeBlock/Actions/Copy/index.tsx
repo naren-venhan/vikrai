@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from "react"
 import { CopyButton } from "../../../.."
 import clsx from "clsx"
-import { CheckMini, SquareTwoStack } from "@medusajs/icons"
+import { CheckMini, SquareTwoStack } from "@vikrai/icons"
 
 export type CodeBlockCopyActionProps = {
   source: string
@@ -25,9 +25,9 @@ export const CodeBlockCopyAction = ({
   }, [copied])
 
   const iconClassName = [
-    "text-medusa-contrast-fg-secondary",
-    "group-hover:text-medusa-contrast-fg-primary",
-    "group-focus:text-medusa-contrast-fg-primary",
+    "text-vikrai-contrast-fg-secondary",
+    "group-hover:text-vikrai-contrast-fg-primary",
+    "group-focus:text-vikrai-contrast-fg-primary",
   ]
 
   return (
@@ -39,7 +39,7 @@ export const CodeBlockCopyAction = ({
       tooltipInnerClassName={clsx(
         inHeader && "flex",
         "h-fit rounded-docs_sm",
-        "group-hover:bg-medusa-contrast-bg-base-hover group-focus:bg-medusa-contrast-bg-base-hover"
+        "group-hover:bg-vikrai-contrast-bg-base-hover group-focus:bg-vikrai-contrast-bg-base-hover"
       )}
       onCopy={() => setCopied(true)}
     >
@@ -48,3 +48,4 @@ export const CodeBlockCopyAction = ({
     </CopyButton>
   )
 }
+

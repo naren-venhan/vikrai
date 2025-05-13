@@ -1,8 +1,8 @@
-import { ExclamationCircle } from "@medusajs/icons"
-import { Button, Container, Heading, Text, toast } from "@medusajs/ui"
+import { ExclamationCircle } from "@vikrai/icons"
+import { Button, Container, Heading, Text, toast } from "@vikrai/ui"
 import { useTranslation } from "react-i18next"
 
-import { HttpTypes } from "@medusajs/types"
+import { HttpTypes } from "@vikrai/types"
 import { useNavigate } from "react-router-dom"
 import { useCancelClaimRequest } from "../../../../../hooks/api/claims"
 
@@ -77,3 +77,4 @@ export const ActiveOrderClaimSection = ({
     </div>
   )
 }
+

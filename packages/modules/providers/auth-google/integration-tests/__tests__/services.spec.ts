@@ -1,4 +1,4 @@
-import { generateJwtToken, MedusaError } from "@medusajs/framework/utils"
+import { generateJwtToken, vikraiError } from "@vikrai/framework/utils"
 import { GoogleAuthService } from "../../src/services/google"
 import { http, HttpResponse } from "msw"
 import { setupServer } from "msw/node"
@@ -10,8 +10,8 @@ const sampleIdPayload = {
   azp: "199301612397-l1lrg08vd6dvu98r43l7ul0ri2rd2b6r.apps.googleusercontent.com",
   aud: "199301612397-l1lrg08vd6dvu98r43l7ul0ri2rd2b6r.apps.googleusercontent.com",
   sub: "113664482950786663866",
-  hd: "medusajs.com",
-  email: "test@medusajs.com",
+  hd: "vikrai.com",
+  email: "test@vikrai.com",
   email_verified: true,
   at_hash: "7DKi89ceSj-Bii1m_V1Pew",
   name: "Test Admin",
@@ -221,7 +221,7 @@ describe("Google auth provider", () => {
     const authServiceSpies = {
       ...defaultSpies,
       retrieve: jest.fn().mockImplementation(() => {
-        throw new MedusaError(MedusaError.Types.NOT_FOUND, "Not found")
+        throw new vikraiError(vikraiError.Types.NOT_FOUND, "Not found")
       }),
       create: jest.fn().mockImplementation(() => {
         return {
@@ -317,3 +317,4 @@ describe("Google auth provider", () => {
     })
   })
 })
+

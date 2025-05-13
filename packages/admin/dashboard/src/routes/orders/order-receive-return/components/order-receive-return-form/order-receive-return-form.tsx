@@ -1,7 +1,7 @@
 import { zodResolver } from "@hookform/resolvers/zod"
-import { ArrowRight } from "@medusajs/icons"
-import { AdminOrder, AdminReturn } from "@medusajs/types"
-import { Alert, Button, Input, Switch, Text, toast } from "@medusajs/ui"
+import { ArrowRight } from "@vikrai/icons"
+import { AdminOrder, AdminReturn } from "@vikrai/types"
+import { Alert, Button, Input, Switch, Text, toast } from "@vikrai/ui"
 import { useEffect, useMemo } from "react"
 import { useForm } from "react-hook-form"
 import { useTranslation } from "react-i18next"
@@ -383,3 +383,4 @@ export function OrderReceiveReturnForm({
     </RouteDrawer.Form>
   )
 }
+

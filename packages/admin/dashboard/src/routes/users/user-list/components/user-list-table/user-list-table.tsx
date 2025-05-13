@@ -1,11 +1,11 @@
-import { HttpTypes } from "@medusajs/types"
-import { Container, createDataTableColumnHelper } from "@medusajs/ui"
+import { HttpTypes } from "@vikrai/types"
+import { Container, createDataTableColumnHelper } from "@vikrai/ui"
 import { keepPreviousData } from "@tanstack/react-query"
 import { useMemo } from "react"
 import { useTranslation } from "react-i18next"
 import { useNavigate } from "react-router-dom"
 
-import { PencilSquare } from "@medusajs/icons"
+import { PencilSquare } from "@vikrai/icons"
 import { DataTable } from "../../../../../components/data-table"
 import { useDataTableDateColumns } from "../../../../../components/data-table/helpers/general/use-data-table-date-columns"
 import { useDataTableDateFilters } from "../../../../../components/data-table/helpers/general/use-data-table-date-filters"
@@ -129,3 +129,4 @@ const useFilters = () => {
     return dateFilters
   }, [dateFilters])
 }
+

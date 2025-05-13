@@ -1,6 +1,6 @@
-import { DeleteEntityInput } from "@medusajs/framework/modules-sdk"
-import { Modules } from "@medusajs/framework/utils"
-import { StepResponse, createStep } from "@medusajs/framework/workflows-sdk"
+import { DeleteEntityInput } from "@vikrai/framework/modules-sdk"
+import { Modules } from "@vikrai/framework/utils"
+import { StepResponse, createStep } from "@vikrai/framework/workflows-sdk"
 
 /**
  * The IDs of stock locations to delete.
@@ -34,3 +34,4 @@ export const deleteStockLocationsStep = createStep(
     await service.restoreStockLocations(deletedLocationIds)
   }
 )
+

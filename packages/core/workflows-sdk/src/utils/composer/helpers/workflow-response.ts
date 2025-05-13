@@ -1,4 +1,4 @@
-import { OrchestrationUtils } from "@medusajs/utils"
+import { OrchestrationUtils } from "@vikrai/utils"
 import { WorkflowData, WorkflowDataProperties } from "../type"
 
 /**
@@ -8,8 +8,8 @@ export class WorkflowResponse<
   TResult,
   const THooks extends readonly unknown[] = []
 > {
-  __type: typeof OrchestrationUtils.SymbolMedusaWorkflowResponse =
-    OrchestrationUtils.SymbolMedusaWorkflowResponse
+  __type: typeof OrchestrationUtils.SymbolvikraiWorkflowResponse =
+    OrchestrationUtils.SymbolvikraiWorkflowResponse
 
   constructor(
     public $result:
@@ -23,3 +23,4 @@ export class WorkflowResponse<
     public options?: { hooks: THooks }
   ) {}
 }
+

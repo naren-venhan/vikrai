@@ -1,5 +1,5 @@
-import { createStep } from "@medusajs/framework/workflows-sdk"
-import { OrderChangeDTO, OrderDTO } from "@medusajs/types"
+import { createStep } from "@vikrai/framework/workflows-sdk"
+import { OrderChangeDTO, OrderDTO } from "@vikrai/types"
 import { throwIfOrderChangeIsNotActive } from "../../order/utils/order-validation"
 import { throwIfNotDraftOrder } from "../utils/validation"
 
@@ -25,8 +25,8 @@ export const validateDraftOrderChangeStepId = "validate-draft-order-change"
  * 
  * :::note
  * 
- * You can retrieve a draft order and its change's details using [Query](https://docs.medusajs.com/learn/fundamentals/module-links/query),
- * or [useQueryGraphStep](https://docs.medusajs.com/resources/references/medusa-workflows/steps/useQueryGraphStep).
+ * You can retrieve a draft order and its change's details using [Query](https://docs.vikrai.com/learn/fundamentals/module-links/query),
+ * or [useQueryGraphStep](https://docs.vikrai.com/resources/references/vikrai-workflows/steps/useQueryGraphStep).
  * 
  * :::
  * 
@@ -49,3 +49,4 @@ export const validateDraftOrderChangeStep = createStep(
     throwIfOrderChangeIsNotActive({ orderChange })
   }
 )
+

@@ -1,4 +1,4 @@
-import { RemoteQueryFunction } from "@medusajs/types"
+import { RemoteQueryFunction } from "@vikrai/types"
 
 /**
  * The computed inventory availability for variants in a given sales channel.
@@ -188,3 +188,4 @@ const getDataForComputation = async (
 
   return { variantInventoriesMap, locationIds }
 }
+

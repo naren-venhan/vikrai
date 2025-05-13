@@ -1,4 +1,4 @@
-import { PencilSquare, Trash } from "@medusajs/icons"
+import { PencilSquare, Trash } from "@vikrai/icons"
 import {
   Button,
   Checkbox,
@@ -6,13 +6,13 @@ import {
   Heading,
   toast,
   usePrompt,
-} from "@medusajs/ui"
+} from "@vikrai/ui"
 import { RowSelectionState, createColumnHelper } from "@tanstack/react-table"
 import { useMemo, useState } from "react"
 import { useTranslation } from "react-i18next"
 import { Link } from "react-router-dom"
 
-import { HttpTypes, SalesChannelDTO } from "@medusajs/types"
+import { HttpTypes, SalesChannelDTO } from "@vikrai/types"
 import { keepPreviousData } from "@tanstack/react-query"
 import { ActionMenu } from "../../../../../components/common/action-menu"
 import { _DataTable } from "../../../../../components/table/data-table"
@@ -253,3 +253,4 @@ const ProductListCellActions = ({
     />
   )
 }
+

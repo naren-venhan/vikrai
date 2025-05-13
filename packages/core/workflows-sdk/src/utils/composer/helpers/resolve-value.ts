@@ -1,4 +1,4 @@
-import { deepCopy, OrchestrationUtils, promiseAll } from "@medusajs/utils"
+import { deepCopy, OrchestrationUtils, promiseAll } from "@vikrai/utils"
 
 async function resolveProperty(property, transactionContext) {
   const { invoke: invokeRes } = transactionContext
@@ -8,7 +8,7 @@ async function resolveProperty(property, transactionContext) {
   if (property?.__type === OrchestrationUtils.SymbolInputReference) {
     res = transactionContext.payload
   } else if (
-    property?.__type === OrchestrationUtils.SymbolMedusaWorkflowResponse
+    property?.__type === OrchestrationUtils.SymbolvikraiWorkflowResponse
   ) {
     res = await resolveValue(property.$result, transactionContext)
   } else if (
@@ -80,3 +80,4 @@ export async function resolveValue(input, transactionContext) {
 
   return result && JSON.parse(JSON.stringify(result))
 }
+

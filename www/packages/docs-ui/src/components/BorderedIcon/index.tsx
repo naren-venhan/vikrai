@@ -1,6 +1,6 @@
 import React from "react"
 import clsx from "clsx"
-import { IconProps } from "@medusajs/icons/dist/types"
+import { IconProps } from "@vikrai/icons/dist/types"
 import Image from "next/image"
 
 export type BorderedIconProps = {
@@ -27,7 +27,7 @@ export const BorderedIcon = ({
   return (
     <span
       className={clsx(
-        "rounded-docs_sm p-docs_0.125 bg-medusa-bg-base inline-flex items-center justify-center",
+        "rounded-docs_sm p-docs_0.125 bg-vikrai-bg-base inline-flex items-center justify-center",
         "shadow-border-base dark:shadow-border-base-dark",
         iconWrapperClassName
       )}
@@ -45,7 +45,7 @@ export const BorderedIcon = ({
         {IconComponent && (
           <IconComponent
             className={clsx(
-              "text-medusa-fg-subtle rounded-docs_xs",
+              "text-vikrai-fg-subtle rounded-docs_xs",
               iconClassName,
               "bordered-icon",
               iconColorClassName
@@ -56,3 +56,4 @@ export const BorderedIcon = ({
     </span>
   )
 }
+

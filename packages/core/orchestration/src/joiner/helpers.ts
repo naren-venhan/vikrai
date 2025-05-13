@@ -1,4 +1,4 @@
-import { RemoteJoinerQuery } from "@medusajs/types"
+import { RemoteJoinerQuery } from "@vikrai/types"
 
 export function toRemoteJoinerQuery(
   obj: any,
@@ -87,3 +87,4 @@ export function toRemoteJoinerQuery(
 
   return extractRecursive(obj)
 }
+

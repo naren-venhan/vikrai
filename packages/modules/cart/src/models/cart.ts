@@ -1,4 +1,4 @@
-import { model } from "@medusajs/framework/utils"
+import { model } from "@vikrai/framework/utils"
 import Address from "./address"
 import CreditLine from "./credit-line"
 import LineItem from "./line-item"
@@ -78,3 +78,4 @@ const Cart = model
   ])
 
 export default Cart
+

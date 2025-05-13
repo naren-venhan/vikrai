@@ -1,4 +1,4 @@
-import { Button, usePrompt } from "@medusajs/ui"
+import { Button, usePrompt } from "@vikrai/ui"
 
 export default function usePromptDemo() {
   const dialog = usePrompt()
@@ -15,3 +15,4 @@ export default function usePromptDemo() {
 
   return <Button onClick={async () => deleteEntity()}>Delete Entity</Button>
 }
+

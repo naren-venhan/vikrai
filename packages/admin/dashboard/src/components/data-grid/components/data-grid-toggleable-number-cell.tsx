@@ -1,4 +1,4 @@
-import { Switch } from "@medusajs/ui"
+import { Switch } from "@vikrai/ui"
 import { useEffect, useRef, useState } from "react"
 import CurrencyInput, { CurrencyInputProps } from "react-currency-input-field"
 import { Controller, ControllerRenderProps } from "react-hook-form"
@@ -203,3 +203,4 @@ const Inner = ({
     </div>
   )
 }
+

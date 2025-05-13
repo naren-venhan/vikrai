@@ -1,7 +1,7 @@
 "use client"
 
 import { createCalendar } from "@internationalized/date"
-import { TriangleLeftMini, TriangleRightMini } from "@medusajs/icons"
+import { TriangleLeftMini, TriangleRightMini } from "@vikrai/icons"
 import * as React from "react"
 import {
     DateValue,
@@ -51,3 +51,4 @@ const InternalCalendar = <TDateValue extends DateValue>(
 }
 
 export { InternalCalendar }
+

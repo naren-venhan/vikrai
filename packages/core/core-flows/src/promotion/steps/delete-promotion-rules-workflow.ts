@@ -1,5 +1,5 @@
-import { RemovePromotionRulesWorkflowDTO } from "@medusajs/framework/types"
-import { StepResponse, createStep } from "@medusajs/framework/workflows-sdk"
+import { RemovePromotionRulesWorkflowDTO } from "@vikrai/framework/types"
+import { StepResponse, createStep } from "@vikrai/framework/workflows-sdk"
 import { deletePromotionRulesWorkflow } from "../workflows/delete-promotion-rules"
 
 export const deletePromotionRulesWorkflowStepId =
@@ -32,3 +32,4 @@ export const deletePromotionRulesWorkflowStep = createStep(
     await deletePromotionRulesWorkflow(container).cancel({ transaction })
   }
 )
+

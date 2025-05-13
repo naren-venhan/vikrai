@@ -1,5 +1,5 @@
-import { FulfillmentDTO } from "@medusajs/framework/types"
-import { MedusaError } from "@medusajs/framework/utils"
+import { FulfillmentDTO } from "@vikrai/framework/types"
+import { vikraiError } from "@vikrai/framework/utils"
 import {
   StepResponse,
   WorkflowData,
@@ -7,7 +7,7 @@ import {
   createStep,
   createWorkflow,
   transform,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { useRemoteQueryStep } from "../../common"
 import { updateFulfillmentWorkflow } from "./update-fulfillment"
 
@@ -19,8 +19,8 @@ export const validateFulfillmentDeliverabilityStepId =
  * 
  * :::note
  * 
- * You can retrieve a fulfillment's details using [Query](https://docs.medusajs.com/learn/fundamentals/module-links/query),
- * or [useQueryGraphStep](https://docs.medusajs.com/resources/references/medusa-workflows/steps/useQueryGraphStep).
+ * You can retrieve a fulfillment's details using [Query](https://docs.vikrai.com/learn/fundamentals/module-links/query),
+ * or [useQueryGraphStep](https://docs.vikrai.com/resources/references/vikrai-workflows/steps/useQueryGraphStep).
  * 
  * :::
  * 
@@ -34,15 +34,15 @@ export const validateFulfillmentDeliverabilityStep = createStep(
   validateFulfillmentDeliverabilityStepId,
   async (fulfillment: FulfillmentDTO) => {
     if (fulfillment.canceled_at) {
-      throw new MedusaError(
-        MedusaError.Types.NOT_ALLOWED,
+      throw new vikraiError(
+        vikraiError.Types.NOT_ALLOWED,
         "Cannot deliver an already canceled fulfillment"
       )
     }
 
     if (fulfillment.delivered_at) {
-      throw new MedusaError(
-        MedusaError.Types.NOT_ALLOWED,
+      throw new vikraiError(
+        vikraiError.Types.NOT_ALLOWED,
         "Fulfillment has already been marked delivered"
       )
     }
@@ -104,3 +104,4 @@ export const markFulfillmentAsDeliveredWorkflow = createWorkflow(
     )
   }
 )
+

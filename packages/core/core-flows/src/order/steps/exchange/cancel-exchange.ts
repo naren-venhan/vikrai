@@ -1,9 +1,9 @@
 import {
   CancelOrderExchangeDTO,
   IOrderModuleService,
-} from "@medusajs/framework/types"
-import { Modules } from "@medusajs/framework/utils"
-import { StepResponse, createStep } from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/types"
+import { Modules } from "@vikrai/framework/utils"
+import { StepResponse, createStep } from "@vikrai/framework/workflows-sdk"
 
 export const cancelOrderExchangeStepId = "cancel-order-swap"
 /**
@@ -27,3 +27,4 @@ export const cancelOrderExchangeStep = createStep(
     await service.revertLastVersion(orderId)
   }
 )
+

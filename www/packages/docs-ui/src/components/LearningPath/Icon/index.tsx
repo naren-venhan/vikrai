@@ -18,7 +18,7 @@ export const LearningPathIcon = ({
   return (
     <div
       className={clsx(
-        "rounded-full shadow-elevation-card-rest dark:shadow-elevation-card-rest-dark w-docs_3 h-docs_3 bg-medusa-bg-base",
+        "rounded-full shadow-elevation-card-rest dark:shadow-elevation-card-rest-dark w-docs_3 h-docs_3 bg-vikrai-bg-base",
         "flex justify-center items-center flex-none",
         className
       )}
@@ -30,3 +30,4 @@ export const LearningPathIcon = ({
     </div>
   )
 }
+

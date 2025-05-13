@@ -1,4 +1,4 @@
-import { HttpTypes } from "@medusajs/types"
+import { HttpTypes } from "@vikrai/types"
 import { Client } from "../client"
 import { ClientHeaders } from "../types"
 
@@ -16,7 +16,7 @@ export class OrderEdit {
 
   /**
    * This method creates an order edit request. It sends a HTTP request to the
-   * [Create Order Edit](https://docs.medusajs.com/api/admin#order-edits_postorderedits)
+   * [Create Order Edit](https://docs.vikrai.com/api/admin#order-edits_postorderedits)
    * API route.
    * 
    * @param body - The order edit's details.
@@ -50,7 +50,7 @@ export class OrderEdit {
 
   /**
    * This method changes an order edit to requested. It sends a request to the
-   * [Request Order Edit](https://docs.medusajs.com/api/admin#order-edits_postordereditsidrequest)
+   * [Request Order Edit](https://docs.vikrai.com/api/admin#order-edits_postordereditsidrequest)
    * API route.
    * 
    * @param id - The order edit's ID.
@@ -81,7 +81,7 @@ export class OrderEdit {
 
   /**
    * This method confirms an order edit and applies it on the order. It sends a request
-   * to the [Confirm Order Edit](https://docs.medusajs.com/api/admin#order-edits_postordereditsidconfirm)
+   * to the [Confirm Order Edit](https://docs.vikrai.com/api/admin#order-edits_postordereditsidconfirm)
    * API route.
    * 
    * @param id - The order edit's ID.
@@ -112,7 +112,7 @@ export class OrderEdit {
 
   /**
    * This method cancels a requested order edit. It sends a request to the
-   * [Cancel Order Edit](https://docs.medusajs.com/api/admin#order-edits_deleteordereditsid)
+   * [Cancel Order Edit](https://docs.vikrai.com/api/admin#order-edits_deleteordereditsid)
    * API route.
    * 
    * @param id - The order edit's ID.
@@ -144,7 +144,7 @@ export class OrderEdit {
   /**
    * This method adds items to an order edit. These items will have the action `ITEM_ADD`.
    * 
-   * The method sends a request to the [Add Items](https://docs.medusajs.com/api/admin#order-edits_postordereditsiditems)
+   * The method sends a request to the [Add Items](https://docs.vikrai.com/api/admin#order-edits_postordereditsiditems)
    * API route.
    * 
    * @param id - The order edit's ID.
@@ -185,7 +185,7 @@ export class OrderEdit {
 
   /**
    * This method updates the quantity and other details of an item in an order. It sends a request to the
-   * [Update Item Quantity](https://docs.medusajs.com/api/admin#order-edits_postordereditsiditemsitemitem_id)
+   * [Update Item Quantity](https://docs.vikrai.com/api/admin#order-edits_postordereditsiditemsitemitem_id)
    * API route.
    * 
    * @param id - The order edit's ID.
@@ -232,7 +232,7 @@ export class OrderEdit {
    * You can check the action's name using its `action` property, and use the value of the `id` property.
    * 
    * It sends a request
-   * to the [Update Item](https://docs.medusajs.com/api/admin#order-edits_postordereditsiditemsaction_id)
+   * to the [Update Item](https://docs.vikrai.com/api/admin#order-edits_postordereditsiditemsaction_id)
    * API route.
    * 
    * @param id - The order edit's ID.
@@ -309,3 +309,4 @@ export class OrderEdit {
     )
   }
 }
+

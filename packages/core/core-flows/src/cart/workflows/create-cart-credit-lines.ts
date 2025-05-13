@@ -1,13 +1,13 @@
 import {
   CartCreditLineDTO,
   CreateCartCreditLineDTO,
-} from "@medusajs/framework/types"
-import { Modules } from "@medusajs/framework/utils"
+} from "@vikrai/framework/types"
+import { Modules } from "@vikrai/framework/utils"
 import {
   WorkflowData,
   WorkflowResponse,
   createWorkflow,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { createEntitiesStep } from "../../common/steps/create-entities"
 
 export const createCartCreditLinesWorkflowId = "create-cart-credit-lines"
@@ -26,3 +26,4 @@ export const createCartCreditLinesWorkflow = createWorkflow(
     return new WorkflowResponse(creditLines)
   }
 )
+

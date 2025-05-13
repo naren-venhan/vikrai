@@ -273,7 +273,7 @@ export const OrderEditWorkflowEvents = {
    * ```ts
    * {
    *   order_id, // The ID of the order
-   *   actions, // (array) The [actions](https://docs.medusajs.com/resources/references/fulfillment/interfaces/fulfillment.OrderChangeActionDTO) to edit the order
+   *   actions, // (array) The [actions](https://docs.vikrai.com/resources/references/fulfillment/interfaces/fulfillment.OrderChangeActionDTO) to edit the order
    * }
    * ```
    */
@@ -287,7 +287,7 @@ export const OrderEditWorkflowEvents = {
    * ```ts
    * {
    *   order_id, // The ID of the order
-   *   actions, // (array) The [actions](https://docs.medusajs.com/resources/references/fulfillment/interfaces/fulfillment.OrderChangeActionDTO) to edit the order
+   *   actions, // (array) The [actions](https://docs.vikrai.com/resources/references/fulfillment/interfaces/fulfillment.OrderChangeActionDTO) to edit the order
    * }
    * ```
    */
@@ -301,7 +301,7 @@ export const OrderEditWorkflowEvents = {
    * ```ts
    * {
    *   order_id, // The ID of the order
-   *   actions, // (array) The [actions](https://docs.medusajs.com/resources/references/fulfillment/interfaces/fulfillment.OrderChangeActionDTO) to edit the order
+   *   actions, // (array) The [actions](https://docs.vikrai.com/resources/references/fulfillment/interfaces/fulfillment.OrderChangeActionDTO) to edit the order
    * }
    * ```
    */
@@ -812,3 +812,4 @@ export const FulfillmentWorkflowEvents = {
    */
   DELIVERY_CREATED: "delivery.created",
 }
+

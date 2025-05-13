@@ -4,7 +4,7 @@ import { Client } from "./client"
 import { Store } from "./store"
 import { Config } from "./types"
 
-class Medusa {
+class vikrai {
   public client: Client
 
   public admin: Admin
@@ -20,7 +20,7 @@ class Medusa {
   }
 }
 
-export default Medusa
+export default vikrai
 
 export { FetchError, Client } from "./client"
 export { Admin } from "./admin"
@@ -36,3 +36,4 @@ export {
   Logger,
   ServerSentEventMessage,
 } from "./types"
+

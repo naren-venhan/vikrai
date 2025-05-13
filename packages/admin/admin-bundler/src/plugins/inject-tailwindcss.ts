@@ -12,7 +12,7 @@ export const injectTailwindCSS = (
   options: InjectTailwindCSSOptions
 ): Plugin => {
   return {
-    name: "medusa:inject-tailwindcss",
+    name: "vikrai:inject-tailwindcss",
     config: () => ({
       css: {
         postcss: {
@@ -43,7 +43,7 @@ function createTailwindConfig(
 
   try {
     dashboard = path.join(
-      path.dirname(require.resolve("@medusajs/dashboard")),
+      path.dirname(require.resolve("@vikrai/dashboard")),
       "**/*.{js,ts,jsx,tsx}"
     )
   } catch (_e) {
@@ -54,7 +54,7 @@ function createTailwindConfig(
 
   try {
     ui = path.join(
-      path.dirname(require.resolve("@medusajs/ui")),
+      path.dirname(require.resolve("@vikrai/ui")),
       "**/*.{js,ts,jsx,tsx}"
     )
   } catch (_e) {
@@ -80,7 +80,7 @@ function createTailwindConfig(
   }
 
   const config: Config = {
-    presets: [require("@medusajs/ui-preset")],
+    presets: [require("@vikrai/ui-preset")],
     content: [
       html,
       root,
@@ -94,3 +94,4 @@ function createTailwindConfig(
 
   return config
 }
+

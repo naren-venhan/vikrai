@@ -5,7 +5,7 @@ import {
   BigNumberInput,
   InferEntityType,
   PromotionDTO,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 
 import { Promotion } from "@models"
 
@@ -33,3 +33,4 @@ export interface UpdateApplicationMethodDTO {
   buy_rules_min_quantity?: BigNumberInput | null
   apply_to_quantity?: BigNumberInput | null
 }
+

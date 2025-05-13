@@ -1,0 +1,10 @@
+extends: substitution
+message: "Consider using '%s' instead of '%s'."
+level: error
+ignorecase: false
+action:
+  name: replace
+swap:
+  vikrai admin: vikrai Admin
+  vikrai admin: vikrai Admin
+  vikrai Admin: vikrai Admin

@@ -17,10 +17,10 @@ export const CodeBlockHeaderWrapper = React.forwardRef<
   const bgColor = useMemo(
     () =>
       clsx(
-        blockStyle === "loud" && "bg-medusa-contrast-bg-base",
+        blockStyle === "loud" && "bg-vikrai-contrast-bg-base",
         blockStyle === "subtle" && [
-          colorMode === "light" && "bg-medusa-bg-component",
-          colorMode === "dark" && "bg-medusa-code-bg-header",
+          colorMode === "light" && "bg-vikrai-bg-component",
+          colorMode === "dark" && "bg-vikrai-code-bg-header",
         ]
       ),
     [blockStyle, colorMode]
@@ -33,8 +33,8 @@ export const CodeBlockHeaderWrapper = React.forwardRef<
         "rounded-t-docs_lg relative flex justify-between items-center",
         blockStyle === "subtle" && [
           "border border-solid border-b-0",
-          colorMode === "light" && "border-medusa-border-base",
-          colorMode === "dark" && "border-medusa-code-border",
+          colorMode === "light" && "border-vikrai-border-base",
+          colorMode === "dark" && "border-vikrai-code-border",
         ],
         bgColor
       )}
@@ -44,3 +44,4 @@ export const CodeBlockHeaderWrapper = React.forwardRef<
     </div>
   )
 })
+

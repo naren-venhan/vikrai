@@ -11,7 +11,7 @@ import {
   ExclamationCircle,
   PencilSquare,
   TriangleDownMini,
-} from "@medusajs/icons"
+} from "@vikrai/icons"
 import {
   AdminClaim,
   AdminExchange,
@@ -21,7 +21,7 @@ import {
   AdminPaymentCollection,
   AdminRegion,
   AdminReturn,
-} from "@medusajs/types"
+} from "@vikrai/types"
 import {
   Badge,
   Button,
@@ -34,9 +34,9 @@ import {
   toast,
   Tooltip,
   usePrompt,
-} from "@medusajs/ui"
+} from "@vikrai/ui"
 
-import { AdminReservation } from "@medusajs/types/src/http"
+import { AdminReservation } from "@vikrai/types/src/http"
 import { ActionMenu } from "../../../../../components/common/action-menu"
 import { Thumbnail } from "../../../../../components/common/thumbnail"
 import { useClaims } from "../../../../../hooks/api/claims"
@@ -1092,3 +1092,4 @@ const Total = ({ order }: { order: AdminOrder }) => {
     </div>
   )
 }
+

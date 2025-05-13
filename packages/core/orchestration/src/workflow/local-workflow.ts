@@ -1,13 +1,13 @@
-import { Context, LoadedModule, MedusaContainer } from "@medusajs/types"
+import { Context, LoadedModule, vikraiContainer } from "@vikrai/types"
 import {
-  createMedusaContainer,
+  createvikraiContainer,
   isDefined,
   isString,
-  MedusaContext,
-  MedusaContextType,
-  MedusaError,
-  MedusaModuleType,
-} from "@medusajs/utils"
+  vikraiContext,
+  vikraiContextType,
+  vikraiError,
+  vikraiModuleType,
+} from "@vikrai/utils"
 import { asValue } from "awilix"
 import {
   DistributedTransactionEvent,
@@ -31,30 +31,30 @@ type StepHandler = {
 }
 
 export class LocalWorkflow {
-  protected container_: MedusaContainer
+  protected container_: vikraiContainer
   protected workflowId: string
   protected flow: OrchestratorBuilder
   protected customOptions: Partial<TransactionModelOptions> = {}
   protected workflow: WorkflowDefinition
   protected handlers: Map<string, StepHandler>
-  protected medusaContext?: Context
+  protected vikraiContext?: Context
 
-  get container(): MedusaContainer {
+  get container(): vikraiContainer {
     return this.container_
   }
 
-  set container(modulesLoaded: LoadedModule[] | MedusaContainer) {
+  set container(modulesLoaded: LoadedModule[] | vikraiContainer) {
     this.resolveContainer(modulesLoaded)
   }
 
   constructor(
     workflowId: string,
-    modulesLoaded?: LoadedModule[] | MedusaContainer
+    modulesLoaded?: LoadedModule[] | vikraiContainer
   ) {
     const globalWorkflow = WorkflowManager.getWorkflow(workflowId)
     if (!globalWorkflow) {
-      throw new MedusaError(
-        MedusaError.Types.NOT_FOUND,
+      throw new vikraiError(
+        vikraiError.Types.NOT_FOUND,
         `Workflow with id "${workflowId}" not found.`
       )
     }
@@ -72,17 +72,17 @@ export class LocalWorkflow {
     this.resolveContainer(modulesLoaded)
   }
 
-  private resolveContainer(modulesLoaded?: LoadedModule[] | MedusaContainer) {
+  private resolveContainer(modulesLoaded?: LoadedModule[] | vikraiContainer) {
     let container
 
     if (!Array.isArray(modulesLoaded) && modulesLoaded) {
       if (!("cradle" in modulesLoaded)) {
-        container = createMedusaContainer(modulesLoaded)
+        container = createvikraiContainer(modulesLoaded)
       } else {
-        container = createMedusaContainer({}, modulesLoaded) // copy container
+        container = createvikraiContainer({}, modulesLoaded) // copy container
       }
     } else if (Array.isArray(modulesLoaded) && modulesLoaded.length) {
-      container = createMedusaContainer()
+      container = createvikraiContainer()
 
       for (const mod of modulesLoaded || []) {
         const keyName = mod.__definition.key
@@ -90,12 +90,12 @@ export class LocalWorkflow {
       }
     }
 
-    this.container_ = this.contextualizedMedusaModules(container)
+    this.container_ = this.contextualizedvikraiModules(container)
   }
 
-  private contextualizedMedusaModules(container) {
+  private contextualizedvikraiModules(container) {
     if (!container) {
-      return createMedusaContainer()
+      return createvikraiContainer()
     }
 
     // eslint-disable-next-line
@@ -103,7 +103,7 @@ export class LocalWorkflow {
     const originalResolver = container.resolve
     container.resolve = function (keyName, opts) {
       const resolved = originalResolver(keyName, opts)
-      if (resolved?.constructor?.__type !== MedusaModuleType) {
+      if (resolved?.constructor?.__type !== vikraiModuleType) {
         return resolved
       }
 
@@ -114,12 +114,12 @@ export class LocalWorkflow {
           }
 
           return (...args) => {
-            const ctxIndex = MedusaContext.getIndex(target, prop as string)
+            const ctxIndex = vikraiContext.getIndex(target, prop as string)
 
-            const hasContext = args[ctxIndex!]?.__type === MedusaContextType
+            const hasContext = args[ctxIndex!]?.__type === vikraiContextType
             if (!hasContext && isDefined(ctxIndex)) {
-              const context = this_.medusaContext
-              if (context?.__type === MedusaContextType) {
+              const context = this_.vikraiContext
+              if (context?.__type === vikraiContextType) {
                 delete context?.manager
                 delete context?.transactionManager
 
@@ -354,7 +354,7 @@ export class LocalWorkflow {
     if (this.flow.hasChanges) {
       this.commit()
     }
-    this.medusaContext = context
+    this.vikraiContext = context
     const { handler, orchestrator } = this.workflow
 
     const transaction = await orchestrator.beginTransaction({
@@ -381,7 +381,7 @@ export class LocalWorkflow {
   }
 
   async getRunningTransaction(uniqueTransactionId: string, context?: Context) {
-    this.medusaContext = context
+    this.vikraiContext = context
     const { handler, orchestrator } = this.workflow
 
     const transaction = await orchestrator.retrieveExistingTransaction(
@@ -399,15 +399,15 @@ export class LocalWorkflow {
     context?: Context,
     subscribe?: DistributedTransactionEvents
   ) {
-    this.medusaContext = context
+    this.vikraiContext = context
     const { orchestrator } = this.workflow
 
     const transaction = isString(transactionOrTransactionId)
       ? await this.getRunningTransaction(transactionOrTransactionId, context)
       : transactionOrTransactionId
 
-    if (this.medusaContext) {
-      this.medusaContext.eventGroupId =
+    if (this.vikraiContext) {
+      this.vikraiContext.eventGroupId =
         transaction.getFlow().metadata?.eventGroupId
     }
 
@@ -432,7 +432,7 @@ export class LocalWorkflow {
     context?: Context,
     subscribe?: DistributedTransactionEvents
   ): Promise<DistributedTransactionType> {
-    this.medusaContext = context
+    this.vikraiContext = context
     const { handler, orchestrator } = this.workflow
 
     const { cleanUpEventListeners } = this.registerEventCallbacks({
@@ -461,7 +461,7 @@ export class LocalWorkflow {
     context?: Context,
     subscribe?: DistributedTransactionEvents
   ): Promise<DistributedTransactionType> {
-    this.medusaContext = context
+    this.vikraiContext = context
     const { handler, orchestrator } = this.workflow
 
     const { cleanUpEventListeners } = this.registerEventCallbacks({
@@ -580,14 +580,15 @@ export class LocalWorkflow {
   }
 
   private onLoad(transaction: DistributedTransactionType) {
-    if (this.medusaContext) {
+    if (this.vikraiContext) {
       const flow = transaction.getFlow() ?? {}
       const metadata = (flow.metadata ??
         {}) as Required<TransactionFlow>["metadata"]
-      this.medusaContext.eventGroupId = metadata.eventGroupId
-      this.medusaContext.parentStepIdempotencyKey =
+      this.vikraiContext.eventGroupId = metadata.eventGroupId
+      this.vikraiContext.parentStepIdempotencyKey =
         metadata.parentStepIdempotencyKey
-      this.medusaContext.preventReleaseEvents = metadata?.preventReleaseEvents
+      this.vikraiContext.preventReleaseEvents = metadata?.preventReleaseEvents
     }
   }
 }
+

@@ -1,4 +1,4 @@
-import { model, OrderChangeStatus } from "@medusajs/framework/utils"
+import { model, OrderChangeStatus } from "@vikrai/framework/utils"
 import { Order } from "./order"
 import { OrderChangeAction } from "./order-change-action"
 
@@ -83,3 +83,4 @@ const _OrderChange = model
   ])
 
 export const OrderChange = _OrderChange
+

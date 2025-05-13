@@ -1,4 +1,4 @@
-import { ContainerRegistrationKeys, ModulesSdkUtils } from "@medusajs/utils"
+import { ContainerRegistrationKeys, ModulesSdkUtils } from "@vikrai/utils"
 import { asValue } from "awilix"
 import { container } from "../container"
 import { configManager } from "../config"
@@ -52,3 +52,4 @@ export function pgConnectionLoader(): ReturnType<
 
   return pgConnection
 }
+

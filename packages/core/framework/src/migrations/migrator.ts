@@ -1,4 +1,4 @@
-import { MedusaContainer } from "@medusajs/types"
+import { vikraiContainer } from "@vikrai/types"
 import { Knex } from "@mikro-orm/knex"
 import { glob } from "glob"
 import { join } from "path"
@@ -8,12 +8,12 @@ import { ContainerRegistrationKeys } from "../utils"
 export abstract class Migrator {
   protected abstract migration_table_name: string
 
-  protected container: MedusaContainer
+  protected container: vikraiContainer
   protected pgConnection: Knex<any>
 
   #alreadyLoadedPaths: Map<string, any> = new Map()
 
-  constructor({ container }: { container: MedusaContainer }) {
+  constructor({ container }: { container: vikraiContainer }) {
     this.container = container
     this.pgConnection = this.container.resolve(
       ContainerRegistrationKeys.PG_CONNECTION
@@ -161,3 +161,4 @@ export abstract class Migrator {
   abstract run(...args: any[]): Promise<any>
   abstract getPendingMigrations(migrationPaths: string[]): Promise<string[]>
 }
+

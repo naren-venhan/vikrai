@@ -3,7 +3,7 @@ post:
   summary: Confirm Product Import
   description: >-
     Confirm that a created product import should start importing the products
-    into Medusa.
+    into vikrai.
   x-authenticated: true
   parameters:
     - name: transaction_id
@@ -44,3 +44,4 @@ post:
       $ref: ../components/responses/invalid_request_error.yaml
     '500':
       $ref: ../components/responses/500_error.yaml
+

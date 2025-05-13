@@ -1,4 +1,4 @@
-import { CustomFieldModel } from "@medusajs/admin-shared"
+import { CustomFieldModel } from "@vikrai/admin-shared"
 import fs from "fs/promises"
 import {
   ExportDefaultDeclaration,
@@ -166,3 +166,4 @@ function getLink(
 
   return `${import_}.link`
 }
+

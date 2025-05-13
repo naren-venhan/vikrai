@@ -1,4 +1,4 @@
-import { Drawer, clx } from "@medusajs/ui"
+import { Drawer, clx } from "@vikrai/ui"
 import {
   ComponentPropsWithoutRef,
   PropsWithChildren,
@@ -83,3 +83,4 @@ export const StackedDrawer = Object.assign(Root, {
   Description,
   Title,
 })
+

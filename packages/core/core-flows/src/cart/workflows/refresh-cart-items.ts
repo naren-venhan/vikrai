@@ -2,7 +2,7 @@ import {
   filterObjectByKeys,
   isDefined,
   PromotionActions,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 import {
   createHook,
   createWorkflow,
@@ -10,7 +10,7 @@ import {
   when,
   WorkflowData,
   WorkflowResponse,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { useRemoteQueryStep } from "../../common/steps/use-remote-query"
 import { updateLineItemsStep } from "../steps"
 import { validateVariantPricesStep } from "../steps/validate-variant-prices"
@@ -28,7 +28,7 @@ import { refreshPaymentCollectionForCartWorkflow } from "./refresh-payment-colle
 import { updateCartPromotionsWorkflow } from "./update-cart-promotions"
 import { updateTaxLinesWorkflow } from "./update-tax-lines"
 import { upsertTaxLinesWorkflow } from "./upsert-tax-lines"
-import { AdditionalData } from "@medusajs/types"
+import { AdditionalData } from "@vikrai/types"
 import { pricingContextResult } from "../utils/schemas"
 
 /**
@@ -105,8 +105,8 @@ export const refreshCartItemsWorkflowId = "refresh-cart-items"
  * You can consume the `setPricingContext` hook to add the `location_id` context to the prices calculation:
  *
  * ```ts
- * import { refreshCartItemsWorkflow } from "@medusajs/medusa/core-flows";
- * import { StepResponse } from "@medusajs/workflows-sdk";
+ * import { refreshCartItemsWorkflow } from "@vikrai/vikrai/core-flows";
+ * import { StepResponse } from "@vikrai/workflows-sdk";
  *
  * refreshCartItemsWorkflow.hooks.setPricingContext((
  *   { cart, items, additional_data }, { container }
@@ -121,7 +121,7 @@ export const refreshCartItemsWorkflowId = "refresh-cart-items"
  *
  * :::note
  *
- * Learn more about prices calculation context in the [Prices Calculation](https://docs.medusajs.com/resources/commerce-modules/pricing/price-calculation) documentation.
+ * Learn more about prices calculation context in the [Prices Calculation](https://docs.vikrai.com/resources/commerce-modules/pricing/price-calculation) documentation.
  *
  * :::
  *
@@ -306,3 +306,4 @@ export const refreshCartItemsWorkflow = createWorkflow(
     })
   }
 )
+

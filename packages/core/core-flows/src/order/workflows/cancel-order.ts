@@ -3,14 +3,14 @@ import {
   OrderDTO,
   OrderWorkflow,
   PaymentCollectionDTO,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import {
   MathBN,
-  MedusaError,
+  vikraiError,
   OrderWorkflowEvents,
   PaymentCollectionStatus,
   deepFlatMap,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 import {
   WorkflowData,
   WorkflowResponse,
@@ -20,7 +20,7 @@ import {
   parallelize,
   transform,
   when,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { emitEventStep, useQueryGraphStep } from "../../common"
 import { updatePaymentCollectionStep } from "../../payment-collection"
 import { cancelPaymentStep } from "../../payment/steps"
@@ -50,8 +50,8 @@ export type CancelValidateOrderStepInput = {
  * 
  * :::note
  * 
- * You can retrieve an order's details using [Query](https://docs.medusajs.com/learn/fundamentals/module-links/query),
- * or [useQueryGraphStep](https://docs.medusajs.com/resources/references/medusa-workflows/steps/useQueryGraphStep).
+ * You can retrieve an order's details using [Query](https://docs.vikrai.com/learn/fundamentals/module-links/query),
+ * or [useQueryGraphStep](https://docs.vikrai.com/resources/references/vikrai-workflows/steps/useQueryGraphStep).
  * 
  * :::
  * 
@@ -84,8 +84,8 @@ export const cancelValidateOrder = createStep(
       type: string
     ) => {
       if (arr?.some(pred)) {
-        throw new MedusaError(
-          MedusaError.Types.NOT_ALLOWED,
+        throw new vikraiError(
+          vikraiError.Types.NOT_ALLOWED,
           `All ${type} must be canceled before canceling an order`
         )
       }
@@ -103,7 +103,7 @@ export const cancelOrderWorkflowId = "cancel-order"
  * any fulfillments, or if all fulfillments are canceled. The workflow will also cancel
  * any uncaptured payments, and refund any captured payments.
  * 
- * This workflow is used by the [Cancel Order Admin API Route](https://docs.medusajs.com/api/admin#orders_postordersidcancel).
+ * This workflow is used by the [Cancel Order Admin API Route](https://docs.vikrai.com/api/admin#orders_postordersidcancel).
  * 
  * This workflow has a hook that allows you to perform custom actions on the canceled order. For example, you can 
  * make changes to custom models linked to the order.
@@ -225,3 +225,4 @@ export const cancelOrderWorkflow = createWorkflow(
     })
   }
 )
+

@@ -1,5 +1,5 @@
-import { HttpTypes } from "@medusajs/types"
-import { Button, toast } from "@medusajs/ui"
+import { HttpTypes } from "@vikrai/types"
+import { Button, toast } from "@vikrai/ui"
 import { useTranslation } from "react-i18next"
 import * as zod from "zod"
 
@@ -216,3 +216,4 @@ export const ProductOrganizationForm = ({
     </RouteDrawer.Form>
   )
 }
+

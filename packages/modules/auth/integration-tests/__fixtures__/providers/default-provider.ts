@@ -3,11 +3,11 @@ import {
   AuthenticationResponse,
   AuthIdentityDTO,
   AuthIdentityProviderService,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import {
   AbstractAuthModuleProvider,
-  MedusaError,
-} from "@medusajs/framework/utils"
+  vikraiError,
+} from "@vikrai/framework/utils"
 
 export class AuthServiceFixtures extends AbstractAuthModuleProvider {
   static identifier = "plaintextpass"
@@ -42,7 +42,7 @@ export class AuthServiceFixtures extends AbstractAuthModuleProvider {
         }
       }
     } catch (error) {
-      if (error.type === MedusaError.Types.NOT_FOUND) {
+      if (error.type === vikraiError.Types.NOT_FOUND) {
         const createdAuthIdentity = await service.create({
           entity_id: email,
           provider_metadata: {
@@ -67,3 +67,4 @@ export class AuthServiceFixtures extends AbstractAuthModuleProvider {
 }
 
 export const services = [AuthServiceFixtures]
+

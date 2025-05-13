@@ -1,4 +1,4 @@
-import { model } from "@medusajs/framework/utils"
+import { model } from "@vikrai/framework/utils"
 
 export const FulfillmentAddress = model.define("fulfillment_address", {
   id: model.id({ prefix: "fuladdr" }).primaryKey(),
@@ -14,3 +14,4 @@ export const FulfillmentAddress = model.define("fulfillment_address", {
   phone: model.text().nullable(),
   metadata: model.json().nullable(),
 })
+

@@ -1,27 +1,27 @@
-# @medusajs/auth-google
+# @vikrai/auth-google
 
 ## 2.7.1
 
 ### Patch Changes
 
-- Updated dependencies [[`ee35f3ce9097832c10cdf2fd168763088e6c3fcb`](https://github.com/medusajs/medusa/commit/ee35f3ce9097832c10cdf2fd168763088e6c3fcb), [`2f6963a5fbea05537680cb1b1f6a2b9822c36325`](https://github.com/medusajs/medusa/commit/2f6963a5fbea05537680cb1b1f6a2b9822c36325), [`b8902637251e9ed4f8762ef280659bbab6d967de`](https://github.com/medusajs/medusa/commit/b8902637251e9ed4f8762ef280659bbab6d967de)]:
-  - @medusajs/framework@2.7.1
+- Updated dependencies [[`ee35f3ce9097832c10cdf2fd168763088e6c3fcb`](https://github.com/vikrai/vikrai/commit/ee35f3ce9097832c10cdf2fd168763088e6c3fcb), [`2f6963a5fbea05537680cb1b1f6a2b9822c36325`](https://github.com/vikrai/vikrai/commit/2f6963a5fbea05537680cb1b1f6a2b9822c36325), [`b8902637251e9ed4f8762ef280659bbab6d967de`](https://github.com/vikrai/vikrai/commit/b8902637251e9ed4f8762ef280659bbab6d967de)]:
+  - @vikrai/framework@2.7.1
 
 ## 2.7.0
 
 ### Patch Changes
 
-- Updated dependencies [[`ec56a8bc857a74788df6523af25914da95c4c1d8`](https://github.com/medusajs/medusa/commit/ec56a8bc857a74788df6523af25914da95c4c1d8), [`2a18a75353f872b0cb4c203afc08cfd82f778428`](https://github.com/medusajs/medusa/commit/2a18a75353f872b0cb4c203afc08cfd82f778428)]:
-  - @medusajs/framework@2.7.0
+- Updated dependencies [[`ec56a8bc857a74788df6523af25914da95c4c1d8`](https://github.com/vikrai/vikrai/commit/ec56a8bc857a74788df6523af25914da95c4c1d8), [`2a18a75353f872b0cb4c203afc08cfd82f778428`](https://github.com/vikrai/vikrai/commit/2a18a75353f872b0cb4c203afc08cfd82f778428)]:
+  - @vikrai/framework@2.7.0
 
 ## 2.6.1
 
 ### Patch Changes
 
-- [#11738](https://github.com/medusajs/medusa/pull/11738) [`3b470f41427e487c68f89b8ee8155de716ffe861`](https://github.com/medusajs/medusa/commit/3b470f41427e487c68f89b8ee8155de716ffe861) Thanks [@olivermrbl](https://github.com/olivermrbl)! - chore: Remove ranges on Medusa packages
+- [#11738](https://github.com/vikrai/vikrai/pull/11738) [`3b470f41427e487c68f89b8ee8155de716ffe861`](https://github.com/vikrai/vikrai/commit/3b470f41427e487c68f89b8ee8155de716ffe861) Thanks [@olivermrbl](https://github.com/olivermrbl)! - chore: Remove ranges on vikrai packages
 
-- Updated dependencies [[`cc1309d3709b251683a0cda0ced448f8bf9f514e`](https://github.com/medusajs/medusa/commit/cc1309d3709b251683a0cda0ced448f8bf9f514e), [`3b470f41427e487c68f89b8ee8155de716ffe861`](https://github.com/medusajs/medusa/commit/3b470f41427e487c68f89b8ee8155de716ffe861), [`20cd59e622463fbd46506275648ce681869adcdf`](https://github.com/medusajs/medusa/commit/20cd59e622463fbd46506275648ce681869adcdf)]:
-  - @medusajs/framework@2.6.1
+- Updated dependencies [[`cc1309d3709b251683a0cda0ced448f8bf9f514e`](https://github.com/vikrai/vikrai/commit/cc1309d3709b251683a0cda0ced448f8bf9f514e), [`3b470f41427e487c68f89b8ee8155de716ffe861`](https://github.com/vikrai/vikrai/commit/3b470f41427e487c68f89b8ee8155de716ffe861), [`20cd59e622463fbd46506275648ce681869adcdf`](https://github.com/vikrai/vikrai/commit/20cd59e622463fbd46506275648ce681869adcdf)]:
+  - @vikrai/framework@2.6.1
 
 ## 2.6.0
 
@@ -33,8 +33,8 @@
 
 ### Patch Changes
 
-- Updated dependencies [[`0deffe7b9b9a1055813249b17057b7bba01b78ac`](https://github.com/medusajs/medusa/commit/0deffe7b9b9a1055813249b17057b7bba01b78ac), [`cc73802ab3821d2c667942bd887efb7476205547`](https://github.com/medusajs/medusa/commit/cc73802ab3821d2c667942bd887efb7476205547), [`13fe2f6776b22c401d131f184fc3600ef4008383`](https://github.com/medusajs/medusa/commit/13fe2f6776b22c401d131f184fc3600ef4008383), [`e53b8b0a9708d2eb46258ca417b6ff6abbd5f3d9`](https://github.com/medusajs/medusa/commit/e53b8b0a9708d2eb46258ca417b6ff6abbd5f3d9)]:
-  - @medusajs/framework@2.4.0
+- Updated dependencies [[`0deffe7b9b9a1055813249b17057b7bba01b78ac`](https://github.com/vikrai/vikrai/commit/0deffe7b9b9a1055813249b17057b7bba01b78ac), [`cc73802ab3821d2c667942bd887efb7476205547`](https://github.com/vikrai/vikrai/commit/cc73802ab3821d2c667942bd887efb7476205547), [`13fe2f6776b22c401d131f184fc3600ef4008383`](https://github.com/vikrai/vikrai/commit/13fe2f6776b22c401d131f184fc3600ef4008383), [`e53b8b0a9708d2eb46258ca417b6ff6abbd5f3d9`](https://github.com/vikrai/vikrai/commit/e53b8b0a9708d2eb46258ca417b6ff6abbd5f3d9)]:
+  - @vikrai/framework@2.4.0
 
 ## 2.3.1
 
@@ -44,7 +44,7 @@
 
 ### Minor Changes
 
-- [`4f897661eb7a855a881d460c565c2da6459367eb`](https://github.com/medusajs/medusa/commit/4f897661eb7a855a881d460c565c2da6459367eb) Thanks [@olivermrbl](https://github.com/olivermrbl)! - feat: Custom callback to oauth providers
+- [`4f897661eb7a855a881d460c565c2da6459367eb`](https://github.com/vikrai/vikrai/commit/4f897661eb7a855a881d460c565c2da6459367eb) Thanks [@olivermrbl](https://github.com/olivermrbl)! - feat: Custom callback to oauth providers
 
 ## 2.1.3
 
@@ -62,7 +62,7 @@
 
 ### Patch Changes
 
-- [#10081](https://github.com/medusajs/medusa/pull/10081) [`4c983557f9483cb5ace561974b27697911cee7cc`](https://github.com/medusajs/medusa/commit/4c983557f9483cb5ace561974b27697911cee7cc) Thanks [@Furman1331](https://github.com/Furman1331)! - feature: Add email to google provider-identity metadata
+- [#10081](https://github.com/vikrai/vikrai/pull/10081) [`4c983557f9483cb5ace561974b27697911cee7cc`](https://github.com/vikrai/vikrai/commit/4c983557f9483cb5ace561974b27697911cee7cc) Thanks [@Furman1331](https://github.com/Furman1331)! - feature: Add email to google provider-identity metadata
 
 ## 2.0.4
 
@@ -70,7 +70,7 @@
 
 ### Patch Changes
 
-- [#9949](https://github.com/medusajs/medusa/pull/9949) [`cd578e89ff4cc26f2fd570c34858e44bb0143e10`](https://github.com/medusajs/medusa/commit/cd578e89ff4cc26f2fd570c34858e44bb0143e10) Thanks [@sradevski](https://github.com/sradevski)! - fix: Use sub instead of email for google entity ID
+- [#9949](https://github.com/vikrai/vikrai/pull/9949) [`cd578e89ff4cc26f2fd570c34858e44bb0143e10`](https://github.com/vikrai/vikrai/commit/cd578e89ff4cc26f2fd570c34858e44bb0143e10) Thanks [@sradevski](https://github.com/sradevski)! - fix: Use sub instead of email for google entity ID
 
 ## 2.0.2
 
@@ -80,9 +80,10 @@
 
 ### Major Changes
 
-- [#7341](https://github.com/medusajs/medusa/pull/7341) [`2e42e053d4c9d5445d227bdc268c66713aad8e2e`](https://github.com/medusajs/medusa/commit/2e42e053d4c9d5445d227bdc268c66713aad8e2e) Thanks [@olivermrbl](https://github.com/olivermrbl)! - chore: Medusa 2.0
+- [#7341](https://github.com/vikrai/vikrai/pull/7341) [`2e42e053d4c9d5445d227bdc268c66713aad8e2e`](https://github.com/vikrai/vikrai/commit/2e42e053d4c9d5445d227bdc268c66713aad8e2e) Thanks [@olivermrbl](https://github.com/olivermrbl)! - chore: vikrai 2.0
 
 ### Patch Changes
 
-- Updated dependencies [[`2e42e053d4c9d5445d227bdc268c66713aad8e2e`](https://github.com/medusajs/medusa/commit/2e42e053d4c9d5445d227bdc268c66713aad8e2e)]:
-  - @medusajs/framework@2.0.0
+- Updated dependencies [[`2e42e053d4c9d5445d227bdc268c66713aad8e2e`](https://github.com/vikrai/vikrai/commit/2e42e053d4c9d5445d227bdc268c66713aad8e2e)]:
+  - @vikrai/framework@2.0.0
+

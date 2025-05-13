@@ -1,4 +1,4 @@
-import { clx } from "@medusajs/ui"
+import { clx } from "@vikrai/ui"
 import { memo } from "react"
 import { NoRecords, NoResultsProps } from "../../common/empty-table-content"
 import { TableSkeleton } from "../../common/skeleton"
@@ -94,3 +94,4 @@ export const _DataTable = <TData,>({
     </div>
   )
 }
+

@@ -32,10 +32,10 @@ export const AiAssistantTriggerButton = () => {
     <Tooltip
       render={() => (
         <span className="flex gap-[5px] items-center">
-          <Kbd className="bg-medusa-bg-field-component border-medusa-border-strong w-[18px] h-[18px] inline-block">
+          <Kbd className="bg-vikrai-bg-field-component border-vikrai-border-strong w-[18px] h-[18px] inline-block">
             {osShortcut}
           </Kbd>
-          <Kbd className="bg-medusa-bg-field-component border-medusa-border-strong w-[18px] h-[18px] inline-block">
+          <Kbd className="bg-vikrai-bg-field-component border-vikrai-border-strong w-[18px] h-[18px] inline-block">
             i
           </Kbd>
         </span>
@@ -51,10 +51,11 @@ export const AiAssistantTriggerButton = () => {
           height={15}
           alt="AI Assistant"
         />
-        <span className="hidden md:inline-block text-medusa-fg-subtle">
+        <span className="hidden md:inline-block text-vikrai-fg-subtle">
           Ask AI
         </span>
       </Button>
     </Tooltip>
   )
 }
+

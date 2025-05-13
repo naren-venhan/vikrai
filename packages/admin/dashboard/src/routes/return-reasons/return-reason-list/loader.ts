@@ -1,7 +1,7 @@
 import {
   AdminReturnReasonListParams,
   AdminReturnReasonListResponse,
-} from "@medusajs/types"
+} from "@vikrai/types"
 
 import { returnReasonsQueryKeys } from "../../../hooks/api/return-reasons"
 import { sdk } from "../../../lib/client"
@@ -19,3 +19,4 @@ export const returnReasonListLoader = async () => {
     (await queryClient.fetchQuery(query))
   )
 }
+

@@ -1,6 +1,6 @@
-import { Trash } from "@medusajs/icons"
-import { AdminShippingProfileResponse } from "@medusajs/types"
-import { toast, usePrompt } from "@medusajs/ui"
+import { Trash } from "@vikrai/icons"
+import { AdminShippingProfileResponse } from "@vikrai/types"
+import { toast, usePrompt } from "@vikrai/ui"
 import { useTranslation } from "react-i18next"
 
 import { ActionMenu } from "../../../../../components/common/action-menu"
@@ -62,3 +62,4 @@ export const ShippingOptionsRowActions = ({
     />
   )
 }
+

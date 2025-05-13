@@ -1,226 +1,226 @@
 export const payment = [
   {
     "title": "Manage Order Payments",
-    "path": "https://docs.medusajs.com/user-guide/orders/payments"
+    "path": "https://docs.vikrai.com/user-guide/orders/payments"
   },
   {
     "title": "Customize the Stripe Integration in the Next.js Starter",
-    "path": "https://docs.medusajs.com/resources/nextjs-starter/guides/customize-stripe"
+    "path": "https://docs.vikrai.com/resources/nextjs-starter/guides/customize-stripe"
   },
   {
     "title": "Checkout Step 5: Complete Cart",
-    "path": "https://docs.medusajs.com/resources/storefront-development/checkout/complete-cart"
+    "path": "https://docs.vikrai.com/resources/storefront-development/checkout/complete-cart"
   },
   {
     "title": "Checkout Step 4: Choose Payment Provider",
-    "path": "https://docs.medusajs.com/resources/storefront-development/checkout/payment"
+    "path": "https://docs.vikrai.com/resources/storefront-development/checkout/payment"
   },
   {
     "title": "Payment with Stripe in React Storefront",
-    "path": "https://docs.medusajs.com/resources/storefront-development/checkout/payment/stripe"
+    "path": "https://docs.vikrai.com/resources/storefront-development/checkout/payment/stripe"
   },
   {
-    "title": "Implement Express Checkout with Medusa",
-    "path": "https://docs.medusajs.com/resources/storefront-development/guides/express-checkout"
+    "title": "Implement Express Checkout with vikrai",
+    "path": "https://docs.vikrai.com/resources/storefront-development/guides/express-checkout"
   },
   {
     "title": "createPaymentCollectionsStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/createPaymentCollectionsStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/createPaymentCollectionsStep"
   },
   {
     "title": "addShippingMethodToCartWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/addShippingMethodToCartWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/addShippingMethodToCartWorkflow"
   },
   {
     "title": "addToCartWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/addToCartWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/addToCartWorkflow"
   },
   {
     "title": "completeCartWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/completeCartWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/completeCartWorkflow"
   },
   {
     "title": "createCartWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createCartWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/createCartWorkflow"
   },
   {
     "title": "createPaymentCollectionForCartWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createPaymentCollectionForCartWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/createPaymentCollectionForCartWorkflow"
   },
   {
     "title": "refreshCartItemsWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/refreshCartItemsWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/refreshCartItemsWorkflow"
   },
   {
     "title": "refreshPaymentCollectionForCartWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/refreshPaymentCollectionForCartWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/refreshPaymentCollectionForCartWorkflow"
   },
   {
     "title": "transferCartCustomerWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/transferCartCustomerWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/transferCartCustomerWorkflow"
   },
   {
     "title": "updateCartWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateCartWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/updateCartWorkflow"
   },
   {
     "title": "updateLineItemInCartWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateLineItemInCartWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/updateLineItemInCartWorkflow"
   },
   {
     "title": "confirmDraftOrderEditWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/confirmDraftOrderEditWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/confirmDraftOrderEditWorkflow"
   },
   {
     "title": "requestDraftOrderEditWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/requestDraftOrderEditWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/requestDraftOrderEditWorkflow"
   },
   {
     "title": "deleteLineItemsWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/deleteLineItemsWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/deleteLineItemsWorkflow"
   },
   {
     "title": "cancelOrderWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/cancelOrderWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/cancelOrderWorkflow"
   },
   {
     "title": "confirmClaimRequestWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/confirmClaimRequestWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/confirmClaimRequestWorkflow"
   },
   {
     "title": "confirmExchangeRequestWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/confirmExchangeRequestWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/confirmExchangeRequestWorkflow"
   },
   {
     "title": "confirmOrderEditRequestWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/confirmOrderEditRequestWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/confirmOrderEditRequestWorkflow"
   },
   {
     "title": "confirmReturnRequestWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/confirmReturnRequestWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/confirmReturnRequestWorkflow"
   },
   {
     "title": "createOrUpdateOrderPaymentCollectionWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createOrUpdateOrderPaymentCollectionWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/createOrUpdateOrderPaymentCollectionWorkflow"
   },
   {
     "title": "createOrderPaymentCollectionWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createOrderPaymentCollectionWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/createOrderPaymentCollectionWorkflow"
   },
   {
     "title": "markPaymentCollectionAsPaid",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/markPaymentCollectionAsPaid"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/markPaymentCollectionAsPaid"
   },
   {
     "title": "authorizePaymentSessionStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/authorizePaymentSessionStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/authorizePaymentSessionStep"
   },
   {
     "title": "cancelPaymentStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/cancelPaymentStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/cancelPaymentStep"
   },
   {
     "title": "capturePaymentStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/capturePaymentStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/capturePaymentStep"
   },
   {
     "title": "refundPaymentStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/refundPaymentStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/refundPaymentStep"
   },
   {
     "title": "refundPaymentsStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/refundPaymentsStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/refundPaymentsStep"
   },
   {
     "title": "capturePaymentWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/capturePaymentWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/capturePaymentWorkflow"
   },
   {
     "title": "processPaymentWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/processPaymentWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/processPaymentWorkflow"
   },
   {
     "title": "refundPaymentWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/refundPaymentWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/refundPaymentWorkflow"
   },
   {
     "title": "refundPaymentsWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/refundPaymentsWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/refundPaymentsWorkflow"
   },
   {
     "title": "createPaymentAccountHolderStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/createPaymentAccountHolderStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/createPaymentAccountHolderStep"
   },
   {
     "title": "createPaymentSessionStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/createPaymentSessionStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/createPaymentSessionStep"
   },
   {
     "title": "createRefundReasonStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/createRefundReasonStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/createRefundReasonStep"
   },
   {
     "title": "deletePaymentSessionsStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/deletePaymentSessionsStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/deletePaymentSessionsStep"
   },
   {
     "title": "deleteRefundReasonsStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/deleteRefundReasonsStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/deleteRefundReasonsStep"
   },
   {
     "title": "updatePaymentCollectionStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/updatePaymentCollectionStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/updatePaymentCollectionStep"
   },
   {
     "title": "updateRefundReasonsStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/updateRefundReasonsStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/updateRefundReasonsStep"
   },
   {
     "title": "createPaymentSessionsWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createPaymentSessionsWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/createPaymentSessionsWorkflow"
   },
   {
     "title": "createRefundReasonsWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createRefundReasonsWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/createRefundReasonsWorkflow"
   },
   {
     "title": "deletePaymentSessionsWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/deletePaymentSessionsWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/deletePaymentSessionsWorkflow"
   },
   {
     "title": "deleteRefundReasonsWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/deleteRefundReasonsWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/deleteRefundReasonsWorkflow"
   },
   {
     "title": "updateRefundReasonsWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateRefundReasonsWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/updateRefundReasonsWorkflow"
   },
   {
     "title": "setRegionsPaymentProvidersStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/setRegionsPaymentProvidersStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/setRegionsPaymentProvidersStep"
   },
   {
     "title": "createRegionsWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createRegionsWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/createRegionsWorkflow"
   },
   {
     "title": "updateRegionsWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateRegionsWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/updateRegionsWorkflow"
   },
   {
     "title": "payment",
-    "path": "https://docs.medusajs.com/resources/references/js-sdk/admin/payment"
+    "path": "https://docs.vikrai.com/resources/references/js-sdk/admin/payment"
   },
   {
     "title": "paymentCollection",
-    "path": "https://docs.medusajs.com/resources/references/js-sdk/admin/paymentCollection"
+    "path": "https://docs.vikrai.com/resources/references/js-sdk/admin/paymentCollection"
   },
   {
     "title": "payment",
-    "path": "https://docs.medusajs.com/resources/references/js-sdk/store/payment"
+    "path": "https://docs.vikrai.com/resources/references/js-sdk/store/payment"
   },
   {
     "title": "Create Payment Provider",
-    "path": "https://docs.medusajs.com/resources/references/payment/provider"
+    "path": "https://docs.vikrai.com/resources/references/payment/provider"
   }
 ]

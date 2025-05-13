@@ -1,4 +1,4 @@
-import { model } from "@medusajs/framework/utils"
+import { model } from "@vikrai/framework/utils"
 
 const IndexSync = model
   .define("IndexSync", {
@@ -15,3 +15,4 @@ const IndexSync = model
   ])
 
 export default IndexSync
+

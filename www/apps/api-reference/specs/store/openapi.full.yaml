@@ -1,13 +1,13 @@
 openapi: 3.0.0
 info:
   version: 2.0.0
-  title: Medusa Storefront API
+  title: vikrai Storefront API
   license:
     name: MIT
-    url: https://github.com/medusajs/medusa/blob/master/LICENSE
+    url: https://github.com/vikrai/vikrai/blob/master/LICENSE
 servers:
   - url: http://localhost:9000
-  - url: https://api.medusajs.com
+  - url: https://api.vikrai.com
 tags:
   - name: Auth
     description: |
@@ -21,7 +21,7 @@ tags:
       These API routes allow customers to create and manage their cart, and place an order.
     externalDocs:
       description: How to implement cart functionality in a storefront.
-      url: https://docs.medusajs.com/resources/storefront-development/cart
+      url: https://docs.vikrai.com/resources/storefront-development/cart
     x-associatedSchema:
       $ref: '#/components/schemas/StoreCart'
   - name: Collections
@@ -31,7 +31,7 @@ tags:
       These API routes allow customers to browse collections and their products.
     externalDocs:
       description: How to list product collections in a storefront.
-      url: https://docs.medusajs.com/resources/storefront-development/products/collections/list
+      url: https://docs.vikrai.com/resources/storefront-development/products/collections/list
     x-associatedSchema:
       $ref: '#/components/schemas/StoreCollection'
   - name: Currencies
@@ -43,7 +43,7 @@ tags:
       These API routes allow customers to browse currencies.
     externalDocs:
       description: How to retrieve product variant prices in a storefront.
-      url: https://docs.medusajs.com/resources/storefront-development/products/price
+      url: https://docs.vikrai.com/resources/storefront-development/products/price
     x-associatedSchema:
       $ref: '#/components/schemas/StoreCurrency'
   - name: Customers
@@ -55,7 +55,7 @@ tags:
       These API routes allow customers to create and manage their accounts.
     externalDocs:
       description: How to implement customer account functionalities in a storefront.
-      url: https://docs.medusajs.com/resources/storefront-development/customers
+      url: https://docs.vikrai.com/resources/storefront-development/customers
     x-associatedSchema:
       $ref: '#/components/schemas/StoreCustomer'
   - name: Orders
@@ -72,7 +72,7 @@ tags:
       Use these API routes during checkout to set the cart's payment provider and authorize its payment session.
     externalDocs:
       description: How to implement payment during checkout.
-      url: https://docs.medusajs.com/resources/storefront-development/checkout/payment
+      url: https://docs.vikrai.com/resources/storefront-development/checkout/payment
     x-associatedSchema:
       $ref: '#/components/schemas/StorePaymentCollection'
   - name: Payment Providers
@@ -84,7 +84,7 @@ tags:
       These API routes allow customers to view available payment providers in their region.
     externalDocs:
       description: How to implement payment during checkout.
-      url: https://docs.medusajs.com/resources/storefront-development/checkout/payment
+      url: https://docs.vikrai.com/resources/storefront-development/checkout/payment
     x-associatedSchema:
       $ref: '#/components/schemas/StorePaymentProvider'
   - name: Product Categories
@@ -94,7 +94,7 @@ tags:
       These API routes allow customers to browse categories and their products.
     externalDocs:
       description: How to list product categories in a storefront.
-      url: https://docs.medusajs.com/resources/storefront-development/products/categories/list
+      url: https://docs.vikrai.com/resources/storefront-development/products/categories/list
     x-associatedSchema:
       $ref: '#/components/schemas/StoreProductCategory'
   - name: Product Tags
@@ -112,7 +112,7 @@ tags:
       These API routes allow customers to browse products.
     externalDocs:
       description: How to list products, get their prices, and more in a storefront.
-      url: https://docs.medusajs.com/resources/storefront-development/products
+      url: https://docs.vikrai.com/resources/storefront-development/products
     x-associatedSchema:
       $ref: '#/components/schemas/StoreProduct'
   - name: Regions
@@ -124,7 +124,7 @@ tags:
       Use these API routes to retrieve available regions in the store.
     externalDocs:
       description: How to retrieve and store selected region in a storefront.
-      url: https://docs.medusajs.com/resources/storefront-development/regions
+      url: https://docs.vikrai.com/resources/storefront-development/regions
     x-associatedSchema:
       $ref: '#/components/schemas/StoreRegion'
   - name: Return
@@ -150,7 +150,7 @@ tags:
       These API routes allow customers to retrieve available shipping options for their context.
     externalDocs:
       description: How to implement shipping during checkout.
-      url: https://docs.medusajs.com/resources/storefront-development/checkout/shipping
+      url: https://docs.vikrai.com/resources/storefront-development/checkout/shipping
     x-associatedSchema:
       $ref: '#/components/schemas/StoreShippingOption'
 paths:
@@ -163,7 +163,7 @@ paths:
 
         When used with a third-party provider, such as Google, the request returns a `location` property. You redirect to the specified URL in your storefront to continue authentication with the third-party service.
       externalDocs:
-        url: https://docs.medusajs.com/v2/storefront-development/customers/login#1-using-a-jwt-token
+        url: https://docs.vikrai.com/v2/storefront-development/customers/login#1-using-a-jwt-token
         description: 'Storefront development: How to login as a customer'
       x-authenticated: false
       parameters:
@@ -183,23 +183,23 @@ paths:
               description: |
                 The input data necessary for authentication. 
                 For example, for email-pass authentication, pass `email` and `password` properties. 
-                For the Google and GitHub authentication providers, you can pass `callback_url` to indicate the URL in the frontend that the customer should be redirected to after completing their authentication. This will override the provider's `callbackUrl` configurations in `medusa-config.ts`.
+                For the Google and GitHub authentication providers, you can pass `callback_url` to indicate the URL in the frontend that the customer should be redirected to after completing their authentication. This will override the provider's `callbackUrl` configurations in `vikrai-config.ts`.
       x-codeSamples:
         - lang: JavaScript
           label: JS SDK
           source: |-
-            import Medusa from "@medusajs/js-sdk"
+            import vikrai from "@vikrai/js-sdk"
 
-            let MEDUSA_BACKEND_URL = "http://localhost:9000"
+            let vikrai_BACKEND_URL = "http://localhost:9000"
 
-            if (process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL) {
-              MEDUSA_BACKEND_URL = process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL
+            if (process.env.NEXT_PUBLIC_vikrai_BACKEND_URL) {
+              vikrai_BACKEND_URL = process.env.NEXT_PUBLIC_vikrai_BACKEND_URL
             }
 
-            export const sdk = new Medusa({
-              baseUrl: MEDUSA_BACKEND_URL,
+            export const sdk = new vikrai({
+              baseUrl: vikrai_BACKEND_URL,
               debug: process.env.NODE_ENV === "development",
-              publishableKey: process.env.NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY,
+              publishableKey: process.env.NEXT_PUBLIC_vikrai_PUBLISHABLE_KEY,
             })
 
             const result = await sdk.auth.login(
@@ -255,7 +255,7 @@ paths:
         This API route is used by your storefront or frontend application when a third-party provider redirects to it after authentication. It validates the authentication with the third-party provider and, if successful, returns an authentication token. All query parameters received from the third-party provider, such as `code`, `state`, and `error`, must be passed as query parameters to this route.
         You can decode the JWT token using libraries like [react-jwt](https://www.npmjs.com/package/react-jwt) in the storefront. If the decoded data doesn't  have an `actor_id` property, then you must register the customer using the Create Customer API route passing the token in the request's Authorization header.
       externalDocs:
-        url: https://docs.medusajs.com/v2/storefront-development/customers/third-party-login
+        url: https://docs.vikrai.com/v2/storefront-development/customers/third-party-login
         description: 'Storefront development: Implement third-party (social) login.'
       x-authenticated: false
       parameters:
@@ -270,18 +270,18 @@ paths:
         - lang: JavaScript
           label: Google Provider
           source: |-
-            import Medusa from "@medusajs/js-sdk"
+            import vikrai from "@vikrai/js-sdk"
 
-            let MEDUSA_BACKEND_URL = "http://localhost:9000"
+            let vikrai_BACKEND_URL = "http://localhost:9000"
 
-            if (process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL) {
-              MEDUSA_BACKEND_URL = process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL
+            if (process.env.NEXT_PUBLIC_vikrai_BACKEND_URL) {
+              vikrai_BACKEND_URL = process.env.NEXT_PUBLIC_vikrai_BACKEND_URL
             }
 
-            export const sdk = new Medusa({
-              baseUrl: MEDUSA_BACKEND_URL,
+            export const sdk = new vikrai({
+              baseUrl: vikrai_BACKEND_URL,
               debug: process.env.NODE_ENV === "development",
-              publishableKey: process.env.NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY,
+              publishableKey: process.env.NEXT_PUBLIC_vikrai_PUBLISHABLE_KEY,
             })
 
             await sdk.auth.callback(
@@ -301,18 +301,18 @@ paths:
         - lang: TypeScript
           label: GitHub Provider
           source: |-
-            import Medusa from "@medusajs/js-sdk"
+            import vikrai from "@vikrai/js-sdk"
 
-            let MEDUSA_BACKEND_URL = "http://localhost:9000"
+            let vikrai_BACKEND_URL = "http://localhost:9000"
 
-            if (process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL) {
-              MEDUSA_BACKEND_URL = process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL
+            if (process.env.NEXT_PUBLIC_vikrai_BACKEND_URL) {
+              vikrai_BACKEND_URL = process.env.NEXT_PUBLIC_vikrai_BACKEND_URL
             }
 
-            export const sdk = new Medusa({
-              baseUrl: MEDUSA_BACKEND_URL,
+            export const sdk = new vikrai({
+              baseUrl: vikrai_BACKEND_URL,
               debug: process.env.NODE_ENV === "development",
-              publishableKey: process.env.NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY,
+              publishableKey: process.env.NEXT_PUBLIC_vikrai_PUBLISHABLE_KEY,
             })
 
             await sdk.auth.callback(
@@ -356,7 +356,7 @@ paths:
       summary: Retrieve Registration JWT Token
       description: This API route retrieves a registration JWT token of a customer that hasn't been registered yet. The token is used in the header of requests that create a customer.
       externalDocs:
-        url: https://docs.medusajs.com/v2/storefront-development/customers/register
+        url: https://docs.vikrai.com/v2/storefront-development/customers/register
         description: 'Storefront development: How to register a customer'
       x-authenticated: false
       parameters:
@@ -381,18 +381,18 @@ paths:
         - lang: JavaScript
           label: JS SDK
           source: |-
-            import Medusa from "@medusajs/js-sdk"
+            import vikrai from "@vikrai/js-sdk"
 
-            let MEDUSA_BACKEND_URL = "http://localhost:9000"
+            let vikrai_BACKEND_URL = "http://localhost:9000"
 
-            if (process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL) {
-              MEDUSA_BACKEND_URL = process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL
+            if (process.env.NEXT_PUBLIC_vikrai_BACKEND_URL) {
+              vikrai_BACKEND_URL = process.env.NEXT_PUBLIC_vikrai_BACKEND_URL
             }
 
-            export const sdk = new Medusa({
-              baseUrl: MEDUSA_BACKEND_URL,
+            export const sdk = new vikrai({
+              baseUrl: vikrai_BACKEND_URL,
               debug: process.env.NODE_ENV === "development",
-              publishableKey: process.env.NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY,
+              publishableKey: process.env.NEXT_PUBLIC_vikrai_PUBLISHABLE_KEY,
             })
 
             await sdk.auth.register(
@@ -447,12 +447,12 @@ paths:
       description: |
         Generate a reset password token for a customer. This API route doesn't reset the customer password or send them the reset instructions in a notification.
 
-        Instead, This API route emits the `auth.password_reset` event, passing it the token as a payload. You can listen to that event in a subscriber as explained in [this guide](https://docs.medusajs.com/resources/commerce-modules/auth/reset-password), then send the customer a notification. The notification is sent using a [Notification Module Provider](https://docs.medusajs.com/resources/infrastructure-modules/notification), and it should have a URL that accepts a `token` query parameter, allowing the customer to reset their password from the storefront.
+        Instead, This API route emits the `auth.password_reset` event, passing it the token as a payload. You can listen to that event in a subscriber as explained in [this guide](https://docs.vikrai.com/resources/commerce-modules/auth/reset-password), then send the customer a notification. The notification is sent using a [Notification Module Provider](https://docs.vikrai.com/resources/infrastructure-modules/notification), and it should have a URL that accepts a `token` query parameter, allowing the customer to reset their password from the storefront.
 
 
-         Use the generated token to update the customer's password using the [Reset Password API route](https://docs.medusajs.com/api/store#auth_postactor_typeauth_providerupdate).
+         Use the generated token to update the customer's password using the [Reset Password API route](https://docs.vikrai.com/api/store#auth_postactor_typeauth_providerupdate).
       externalDocs:
-        url: https://docs.medusajs.com/v2/resources/storefront-development/customers/reset-password#1-request-reset-password-page
+        url: https://docs.vikrai.com/v2/resources/storefront-development/customers/reset-password#1-request-reset-password-page
         description: 'Storefront development: How to create the request reset password page.'
       x-authenticated: false
       parameters:
@@ -475,18 +475,18 @@ paths:
         - lang: JavaScript
           label: JS SDK
           source: |-
-            import Medusa from "@medusajs/js-sdk"
+            import vikrai from "@vikrai/js-sdk"
 
-            let MEDUSA_BACKEND_URL = "http://localhost:9000"
+            let vikrai_BACKEND_URL = "http://localhost:9000"
 
-            if (process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL) {
-              MEDUSA_BACKEND_URL = process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL
+            if (process.env.NEXT_PUBLIC_vikrai_BACKEND_URL) {
+              vikrai_BACKEND_URL = process.env.NEXT_PUBLIC_vikrai_BACKEND_URL
             }
 
-            export const sdk = new Medusa({
-              baseUrl: MEDUSA_BACKEND_URL,
+            export const sdk = new vikrai({
+              baseUrl: vikrai_BACKEND_URL,
               debug: process.env.NODE_ENV === "development",
-              publishableKey: process.env.NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY,
+              publishableKey: process.env.NEXT_PUBLIC_vikrai_PUBLISHABLE_KEY,
             })
 
             sdk.auth.resetPassword(
@@ -544,9 +544,9 @@ paths:
       operationId: PostActor_typeAuth_providerUpdate
       summary: Reset a Customer's Password
       x-sidebar-summary: Reset Password
-      description: Reset a customer's password using a reset-password token generated with the [Generate Reset Password Token API route](https://docs.medusajs.com/api/store#auth_postactor_typeauth_providerresetpassword). You pass the token as a bearer token in the request's Authorization header.
+      description: Reset a customer's password using a reset-password token generated with the [Generate Reset Password Token API route](https://docs.vikrai.com/api/store#auth_postactor_typeauth_providerresetpassword). You pass the token as a bearer token in the request's Authorization header.
       externalDocs:
-        url: https://docs.medusajs.com/v2/resources/storefront-development/customers/reset-password#2-reset-password-page
+        url: https://docs.vikrai.com/v2/resources/storefront-development/customers/reset-password#2-reset-password-page
         description: 'Storefront development: How to create the reset password page.'
       x-authenticated: true
       parameters:
@@ -571,18 +571,18 @@ paths:
         - lang: JavaScript
           label: JS SDK
           source: |-
-            import Medusa from "@medusajs/js-sdk"
+            import vikrai from "@vikrai/js-sdk"
 
-            let MEDUSA_BACKEND_URL = "http://localhost:9000"
+            let vikrai_BACKEND_URL = "http://localhost:9000"
 
-            if (process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL) {
-              MEDUSA_BACKEND_URL = process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL
+            if (process.env.NEXT_PUBLIC_vikrai_BACKEND_URL) {
+              vikrai_BACKEND_URL = process.env.NEXT_PUBLIC_vikrai_BACKEND_URL
             }
 
-            export const sdk = new Medusa({
-              baseUrl: MEDUSA_BACKEND_URL,
+            export const sdk = new vikrai({
+              baseUrl: vikrai_BACKEND_URL,
               debug: process.env.NODE_ENV === "development",
-              publishableKey: process.env.NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY,
+              publishableKey: process.env.NEXT_PUBLIC_vikrai_PUBLISHABLE_KEY,
             })
 
             sdk.auth.updateProvider(
@@ -643,7 +643,7 @@ paths:
       summary: Set Authentication Session
       description: Set the cookie session ID of a customer. The customer must be previously authenticated with the `/auth/customer/{provider}` API route first, as the JWT token is required in the header of the request.
       externalDocs:
-        url: https://docs.medusajs.com/v2/storefront-development/customers/login#2-using-a-cookie-session
+        url: https://docs.vikrai.com/v2/storefront-development/customers/login#2-using-a-cookie-session
         description: 'Storefront development: How to login as a customer'
       x-authenticated: true
       x-codeSamples:
@@ -682,18 +682,18 @@ paths:
         - lang: JavaScript
           label: JS SDK
           source: |-
-            import Medusa from "@medusajs/js-sdk"
+            import vikrai from "@vikrai/js-sdk"
 
-            let MEDUSA_BACKEND_URL = "http://localhost:9000"
+            let vikrai_BACKEND_URL = "http://localhost:9000"
 
-            if (process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL) {
-              MEDUSA_BACKEND_URL = process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL
+            if (process.env.NEXT_PUBLIC_vikrai_BACKEND_URL) {
+              vikrai_BACKEND_URL = process.env.NEXT_PUBLIC_vikrai_BACKEND_URL
             }
 
-            export const sdk = new Medusa({
-              baseUrl: MEDUSA_BACKEND_URL,
+            export const sdk = new vikrai({
+              baseUrl: vikrai_BACKEND_URL,
               debug: process.env.NODE_ENV === "development",
-              publishableKey: process.env.NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY,
+              publishableKey: process.env.NEXT_PUBLIC_vikrai_PUBLISHABLE_KEY,
             })
 
             await sdk.auth.logout()
@@ -740,25 +740,25 @@ paths:
       summary: Refresh Authentication Token
       description: Refresh the authentication token of a customer. This is useful after authenticating a customer with a third-party service to ensure the token holds the new user's details, or when you don't want customers to re-login every day.
       externalDocs:
-        url: https://docs.medusajs.com/v2/storefront-development/customers/third-party-login
+        url: https://docs.vikrai.com/v2/storefront-development/customers/third-party-login
         description: 'Storefront development: Implement third-party (social) login.'
       x-authenticated: true
       x-codeSamples:
         - lang: JavaScript
           label: JS SDK
           source: |-
-            import Medusa from "@medusajs/js-sdk"
+            import vikrai from "@vikrai/js-sdk"
 
-            let MEDUSA_BACKEND_URL = "http://localhost:9000"
+            let vikrai_BACKEND_URL = "http://localhost:9000"
 
-            if (process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL) {
-              MEDUSA_BACKEND_URL = process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL
+            if (process.env.NEXT_PUBLIC_vikrai_BACKEND_URL) {
+              vikrai_BACKEND_URL = process.env.NEXT_PUBLIC_vikrai_BACKEND_URL
             }
 
-            export const sdk = new Medusa({
-              baseUrl: MEDUSA_BACKEND_URL,
+            export const sdk = new vikrai({
+              baseUrl: vikrai_BACKEND_URL,
               debug: process.env.NODE_ENV === "development",
-              publishableKey: process.env.NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY,
+              publishableKey: process.env.NEXT_PUBLIC_vikrai_PUBLISHABLE_KEY,
             })
 
             const token = await sdk.auth.refresh()
@@ -800,12 +800,12 @@ paths:
       parameters:
         - name: x-publishable-api-key
           in: header
-          description: Publishable API Key created in the Medusa Admin.
+          description: Publishable API Key created in the vikrai Admin.
           required: true
           schema:
             type: string
             externalDocs:
-              url: https://docs.medusajs.com/api/store#publishable-api-key
+              url: https://docs.vikrai.com/api/store#publishable-api-key
         - name: fields
           in: query
           description: Comma-separated fields that should be included in the returned data. if a field is prefixed with `+` it will be added to the default fields, using `-` will remove it from the default fields. without prefix it will replace the entire default fields.
@@ -833,18 +833,18 @@ paths:
         - lang: JavaScript
           label: JS SDK
           source: |-
-            import Medusa from "@medusajs/js-sdk"
+            import vikrai from "@vikrai/js-sdk"
 
-            let MEDUSA_BACKEND_URL = "http://localhost:9000"
+            let vikrai_BACKEND_URL = "http://localhost:9000"
 
-            if (process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL) {
-              MEDUSA_BACKEND_URL = process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL
+            if (process.env.NEXT_PUBLIC_vikrai_BACKEND_URL) {
+              vikrai_BACKEND_URL = process.env.NEXT_PUBLIC_vikrai_BACKEND_URL
             }
 
-            export const sdk = new Medusa({
-              baseUrl: MEDUSA_BACKEND_URL,
+            export const sdk = new vikrai({
+              baseUrl: vikrai_BACKEND_URL,
               debug: process.env.NODE_ENV === "development",
-              publishableKey: process.env.NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY,
+              publishableKey: process.env.NEXT_PUBLIC_vikrai_PUBLISHABLE_KEY,
             })
 
             sdk.store.cart.create({
@@ -909,12 +909,12 @@ paths:
             type: string
         - name: x-publishable-api-key
           in: header
-          description: Publishable API Key created in the Medusa Admin.
+          description: Publishable API Key created in the vikrai Admin.
           required: true
           schema:
             type: string
             externalDocs:
-              url: https://docs.medusajs.com/api/store#publishable-api-key
+              url: https://docs.vikrai.com/api/store#publishable-api-key
         - name: fields
           in: query
           description: Comma-separated fields that should be included in the returned data. if a field is prefixed with `+` it will be added to the default fields, using `-` will remove it from the default fields. without prefix it will replace the entire default fields.
@@ -929,18 +929,18 @@ paths:
         - lang: JavaScript
           label: JS SDK
           source: |-
-            import Medusa from "@medusajs/js-sdk"
+            import vikrai from "@vikrai/js-sdk"
 
-            let MEDUSA_BACKEND_URL = "http://localhost:9000"
+            let vikrai_BACKEND_URL = "http://localhost:9000"
 
-            if (process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL) {
-              MEDUSA_BACKEND_URL = process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL
+            if (process.env.NEXT_PUBLIC_vikrai_BACKEND_URL) {
+              vikrai_BACKEND_URL = process.env.NEXT_PUBLIC_vikrai_BACKEND_URL
             }
 
-            export const sdk = new Medusa({
-              baseUrl: MEDUSA_BACKEND_URL,
+            export const sdk = new vikrai({
+              baseUrl: vikrai_BACKEND_URL,
               debug: process.env.NODE_ENV === "development",
-              publishableKey: process.env.NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY,
+              publishableKey: process.env.NEXT_PUBLIC_vikrai_PUBLISHABLE_KEY,
             })
 
             sdk.store.cart.retrieve("cart_123")
@@ -987,12 +987,12 @@ paths:
             type: string
         - name: x-publishable-api-key
           in: header
-          description: Publishable API Key created in the Medusa Admin.
+          description: Publishable API Key created in the vikrai Admin.
           required: true
           schema:
             type: string
             externalDocs:
-              url: https://docs.medusajs.com/api/store#publishable-api-key
+              url: https://docs.vikrai.com/api/store#publishable-api-key
         - name: fields
           in: query
           description: Comma-separated fields that should be included in the returned data. if a field is prefixed with `+` it will be added to the default fields, using `-` will remove it from the default fields. without prefix it will replace the entire default fields.
@@ -1020,18 +1020,18 @@ paths:
         - lang: JavaScript
           label: JS SDK
           source: |-
-            import Medusa from "@medusajs/js-sdk"
+            import vikrai from "@vikrai/js-sdk"
 
-            let MEDUSA_BACKEND_URL = "http://localhost:9000"
+            let vikrai_BACKEND_URL = "http://localhost:9000"
 
-            if (process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL) {
-              MEDUSA_BACKEND_URL = process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL
+            if (process.env.NEXT_PUBLIC_vikrai_BACKEND_URL) {
+              vikrai_BACKEND_URL = process.env.NEXT_PUBLIC_vikrai_BACKEND_URL
             }
 
-            export const sdk = new Medusa({
-              baseUrl: MEDUSA_BACKEND_URL,
+            export const sdk = new vikrai({
+              baseUrl: vikrai_BACKEND_URL,
               debug: process.env.NODE_ENV === "development",
-              publishableKey: process.env.NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY,
+              publishableKey: process.env.NEXT_PUBLIC_vikrai_PUBLISHABLE_KEY,
             })
 
             sdk.store.cart.update("cart_123", {
@@ -1101,7 +1101,7 @@ paths:
       description: Complete a cart and place an order.
       x-authenticated: false
       externalDocs:
-        url: https://docs.medusajs.com/v2/resources/storefront-development/checkout/complete-cart
+        url: https://docs.vikrai.com/v2/resources/storefront-development/checkout/complete-cart
         description: 'Storefront guide: How to implement cart completion during checkout.'
       parameters:
         - name: id
@@ -1112,12 +1112,12 @@ paths:
             type: string
         - name: x-publishable-api-key
           in: header
-          description: Publishable API Key created in the Medusa Admin.
+          description: Publishable API Key created in the vikrai Admin.
           required: true
           schema:
             type: string
             externalDocs:
-              url: https://docs.medusajs.com/api/store#publishable-api-key
+              url: https://docs.vikrai.com/api/store#publishable-api-key
         - name: fields
           in: query
           description: Comma-separated fields that should be included in the returned data. if a field is prefixed with `+` it will be added to the default fields, using `-` will remove it from the default fields. without prefix it will replace the entire default fields.
@@ -1132,18 +1132,18 @@ paths:
         - lang: JavaScript
           label: JS SDK
           source: |-
-            import Medusa from "@medusajs/js-sdk"
+            import vikrai from "@vikrai/js-sdk"
 
-            let MEDUSA_BACKEND_URL = "http://localhost:9000"
+            let vikrai_BACKEND_URL = "http://localhost:9000"
 
-            if (process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL) {
-              MEDUSA_BACKEND_URL = process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL
+            if (process.env.NEXT_PUBLIC_vikrai_BACKEND_URL) {
+              vikrai_BACKEND_URL = process.env.NEXT_PUBLIC_vikrai_BACKEND_URL
             }
 
-            export const sdk = new Medusa({
-              baseUrl: MEDUSA_BACKEND_URL,
+            export const sdk = new vikrai({
+              baseUrl: vikrai_BACKEND_URL,
               debug: process.env.NODE_ENV === "development",
-              publishableKey: process.env.NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY,
+              publishableKey: process.env.NEXT_PUBLIC_vikrai_PUBLISHABLE_KEY,
             })
 
             sdk.store.cart.complete("cart_123")
@@ -1217,7 +1217,7 @@ paths:
                             type: string
                             title: type
                             description: |
-                              The error's type. Can be a [MedusaError type](https://docs.medusajs.com/v2/advanced-development/api-routes/errors#medusaerror-types) or `payment_authorization_error` or `payment_requires_more_error` for payment-related errors.
+                              The error's type. Can be a [vikraiError type](https://docs.vikrai.com/v2/advanced-development/api-routes/errors#vikraierror-types) or `payment_authorization_error` or `payment_requires_more_error` for payment-related errors.
         '400':
           $ref: '#/components/responses/400_error'
         '401':
@@ -1250,7 +1250,7 @@ paths:
       x-sidebar-summary: Set Customer
       description: Set the customer of the cart. This is useful when you create the cart for a guest customer, then they log in with their account.
       externalDocs:
-        url: https://docs.medusajs.com/resources/storefront-development/cart/update#set-carts-customer
+        url: https://docs.vikrai.com/resources/storefront-development/cart/update#set-carts-customer
         description: 'Storefront guide: How to set the cart''s customer.'
       x-authenticated: false
       parameters:
@@ -1262,12 +1262,12 @@ paths:
             type: string
         - name: x-publishable-api-key
           in: header
-          description: Publishable API Key created in the Medusa Admin.
+          description: Publishable API Key created in the vikrai Admin.
           required: true
           schema:
             type: string
             externalDocs:
-              url: https://docs.medusajs.com/api/store#publishable-api-key
+              url: https://docs.vikrai.com/api/store#publishable-api-key
         - name: fields
           in: query
           description: |-
@@ -1285,18 +1285,18 @@ paths:
         - lang: JavaScript
           label: JS SDK
           source: |-
-            import Medusa from "@medusajs/js-sdk"
+            import vikrai from "@vikrai/js-sdk"
 
-            let MEDUSA_BACKEND_URL = "http://localhost:9000"
+            let vikrai_BACKEND_URL = "http://localhost:9000"
 
-            if (process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL) {
-              MEDUSA_BACKEND_URL = process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL
+            if (process.env.NEXT_PUBLIC_vikrai_BACKEND_URL) {
+              vikrai_BACKEND_URL = process.env.NEXT_PUBLIC_vikrai_BACKEND_URL
             }
 
-            export const sdk = new Medusa({
-              baseUrl: MEDUSA_BACKEND_URL,
+            export const sdk = new vikrai({
+              baseUrl: vikrai_BACKEND_URL,
               debug: process.env.NODE_ENV === "development",
-              publishableKey: process.env.NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY,
+              publishableKey: process.env.NEXT_PUBLIC_vikrai_PUBLISHABLE_KEY,
             })
 
             sdk.store.cart.transferCart("cart_123")
@@ -1338,7 +1338,7 @@ paths:
       x-sidebar-summary: Add Line Item
       description: Add a product variant as a line item in the cart.
       externalDocs:
-        url: https://docs.medusajs.com/v2/resources/storefront-development/cart/manage-items#add-product-variant-to-cart
+        url: https://docs.vikrai.com/v2/resources/storefront-development/cart/manage-items#add-product-variant-to-cart
         description: 'Storefront guide: How to add a product variant to the cart.'
       x-authenticated: false
       parameters:
@@ -1350,12 +1350,12 @@ paths:
             type: string
         - name: x-publishable-api-key
           in: header
-          description: Publishable API Key created in the Medusa Admin.
+          description: Publishable API Key created in the vikrai Admin.
           required: true
           schema:
             type: string
             externalDocs:
-              url: https://docs.medusajs.com/api/store#publishable-api-key
+              url: https://docs.vikrai.com/api/store#publishable-api-key
         - name: fields
           in: query
           description: Comma-separated fields that should be included in the returned data. if a field is prefixed with `+` it will be added to the default fields, using `-` will remove it from the default fields. without prefix it will replace the entire default fields.
@@ -1375,18 +1375,18 @@ paths:
         - lang: JavaScript
           label: JS SDK
           source: |-
-            import Medusa from "@medusajs/js-sdk"
+            import vikrai from "@vikrai/js-sdk"
 
-            let MEDUSA_BACKEND_URL = "http://localhost:9000"
+            let vikrai_BACKEND_URL = "http://localhost:9000"
 
-            if (process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL) {
-              MEDUSA_BACKEND_URL = process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL
+            if (process.env.NEXT_PUBLIC_vikrai_BACKEND_URL) {
+              vikrai_BACKEND_URL = process.env.NEXT_PUBLIC_vikrai_BACKEND_URL
             }
 
-            export const sdk = new Medusa({
-              baseUrl: MEDUSA_BACKEND_URL,
+            export const sdk = new vikrai({
+              baseUrl: vikrai_BACKEND_URL,
               debug: process.env.NODE_ENV === "development",
-              publishableKey: process.env.NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY,
+              publishableKey: process.env.NEXT_PUBLIC_vikrai_PUBLISHABLE_KEY,
             })
 
             sdk.store.cart.createLineItem("cart_123", {
@@ -1446,7 +1446,7 @@ paths:
       x-sidebar-summary: Update Line Item
       description: Update a line item's details in the cart.
       externalDocs:
-        url: https://docs.medusajs.com/v2/resources/storefront-development/cart/manage-items#update-line-item-in-cart
+        url: https://docs.vikrai.com/v2/resources/storefront-development/cart/manage-items#update-line-item-in-cart
         description: 'Storefront guide: How to update a cart''s line item.'
       x-authenticated: false
       parameters:
@@ -1464,12 +1464,12 @@ paths:
             type: string
         - name: x-publishable-api-key
           in: header
-          description: Publishable API Key created in the Medusa Admin.
+          description: Publishable API Key created in the vikrai Admin.
           required: true
           schema:
             type: string
             externalDocs:
-              url: https://docs.medusajs.com/api/store#publishable-api-key
+              url: https://docs.vikrai.com/api/store#publishable-api-key
         - name: fields
           in: query
           description: Comma-separated fields that should be included in the returned data. if a field is prefixed with `+` it will be added to the default fields, using `-` will remove it from the default fields. without prefix it will replace the entire default fields.
@@ -1489,18 +1489,18 @@ paths:
         - lang: JavaScript
           label: JS SDK
           source: |-
-            import Medusa from "@medusajs/js-sdk"
+            import vikrai from "@vikrai/js-sdk"
 
-            let MEDUSA_BACKEND_URL = "http://localhost:9000"
+            let vikrai_BACKEND_URL = "http://localhost:9000"
 
-            if (process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL) {
-              MEDUSA_BACKEND_URL = process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL
+            if (process.env.NEXT_PUBLIC_vikrai_BACKEND_URL) {
+              vikrai_BACKEND_URL = process.env.NEXT_PUBLIC_vikrai_BACKEND_URL
             }
 
-            export const sdk = new Medusa({
-              baseUrl: MEDUSA_BACKEND_URL,
+            export const sdk = new vikrai({
+              baseUrl: vikrai_BACKEND_URL,
               debug: process.env.NODE_ENV === "development",
-              publishableKey: process.env.NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY,
+              publishableKey: process.env.NEXT_PUBLIC_vikrai_PUBLISHABLE_KEY,
             })
 
             sdk.store.cart.updateLineItem(
@@ -1561,7 +1561,7 @@ paths:
       x-sidebar-summary: Remove Line Item
       description: Remove a line item from a cart.
       externalDocs:
-        url: https://docs.medusajs.com/v2/resources/storefront-development/cart/manage-items#remove-line-item-from-cart
+        url: https://docs.vikrai.com/v2/resources/storefront-development/cart/manage-items#remove-line-item-from-cart
         description: 'Storefront guide: How to remove line item from cart.'
       x-authenticated: false
       parameters:
@@ -1579,12 +1579,12 @@ paths:
             type: string
         - name: x-publishable-api-key
           in: header
-          description: Publishable API Key created in the Medusa Admin.
+          description: Publishable API Key created in the vikrai Admin.
           required: true
           schema:
             type: string
             externalDocs:
-              url: https://docs.medusajs.com/api/store#publishable-api-key
+              url: https://docs.vikrai.com/api/store#publishable-api-key
         - name: fields
           in: query
           description: Comma-separated fields that should be included in the returned data. if a field is prefixed with `+` it will be added to the default fields, using `-` will remove it from the default fields. without prefix it will replace the entire default fields.
@@ -1599,18 +1599,18 @@ paths:
         - lang: JavaScript
           label: JS SDK
           source: |-
-            import Medusa from "@medusajs/js-sdk"
+            import vikrai from "@vikrai/js-sdk"
 
-            let MEDUSA_BACKEND_URL = "http://localhost:9000"
+            let vikrai_BACKEND_URL = "http://localhost:9000"
 
-            if (process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL) {
-              MEDUSA_BACKEND_URL = process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL
+            if (process.env.NEXT_PUBLIC_vikrai_BACKEND_URL) {
+              vikrai_BACKEND_URL = process.env.NEXT_PUBLIC_vikrai_BACKEND_URL
             }
 
-            export const sdk = new Medusa({
-              baseUrl: MEDUSA_BACKEND_URL,
+            export const sdk = new vikrai({
+              baseUrl: vikrai_BACKEND_URL,
               debug: process.env.NODE_ENV === "development",
-              publishableKey: process.env.NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY,
+              publishableKey: process.env.NEXT_PUBLIC_vikrai_PUBLISHABLE_KEY,
             })
 
             sdk.store.cart.deleteLineItem(
@@ -1691,12 +1691,12 @@ paths:
             type: string
         - name: x-publishable-api-key
           in: header
-          description: Publishable API Key created in the Medusa Admin.
+          description: Publishable API Key created in the vikrai Admin.
           required: true
           schema:
             type: string
             externalDocs:
-              url: https://docs.medusajs.com/api/store#publishable-api-key
+              url: https://docs.vikrai.com/api/store#publishable-api-key
         - name: fields
           in: query
           description: Comma-separated fields that should be included in the returned data. if a field is prefixed with `+` it will be added to the default fields, using `-` will remove it from the default fields. without prefix it will replace the entire default fields.
@@ -1761,12 +1761,12 @@ paths:
             type: string
         - name: x-publishable-api-key
           in: header
-          description: Publishable API Key created in the Medusa Admin.
+          description: Publishable API Key created in the vikrai Admin.
           required: true
           schema:
             type: string
             externalDocs:
-              url: https://docs.medusajs.com/api/store#publishable-api-key
+              url: https://docs.vikrai.com/api/store#publishable-api-key
         - name: fields
           in: query
           description: Comma-separated fields that should be included in the returned data. if a field is prefixed with `+` it will be added to the default fields, using `-` will remove it from the default fields. without prefix it will replace the entire default fields.
@@ -1824,7 +1824,7 @@ paths:
       x-sidebar-summary: Add Shipping Method
       description: Add a shipping method to a cart. Use this API route when the customer chooses their preferred shipping option.
       externalDocs:
-        url: https://docs.medusajs.com/v2/resources/storefront-development/checkout/shipping
+        url: https://docs.vikrai.com/v2/resources/storefront-development/checkout/shipping
         description: 'Storefront guide: How to implement shipping during checkout.'
       x-authenticated: false
       parameters:
@@ -1836,12 +1836,12 @@ paths:
             type: string
         - name: x-publishable-api-key
           in: header
-          description: Publishable API Key created in the Medusa Admin.
+          description: Publishable API Key created in the vikrai Admin.
           required: true
           schema:
             type: string
             externalDocs:
-              url: https://docs.medusajs.com/api/store#publishable-api-key
+              url: https://docs.vikrai.com/api/store#publishable-api-key
         - name: fields
           in: query
           description: Comma-separated fields that should be included in the returned data. if a field is prefixed with `+` it will be added to the default fields, using `-` will remove it from the default fields. without prefix it will replace the entire default fields.
@@ -1869,24 +1869,24 @@ paths:
                   type: object
                   description: Any additional data relevant for the third-party fulfillment provider to process the shipment.
                   externalDocs:
-                    url: https://docs.medusajs.com/v2/resources/storefront-development/checkout/shipping#data-request-body-parameter
+                    url: https://docs.vikrai.com/v2/resources/storefront-development/checkout/shipping#data-request-body-parameter
                     description: Learn more about the data parameter.
       x-codeSamples:
         - lang: JavaScript
           label: JS SDK
           source: |-
-            import Medusa from "@medusajs/js-sdk"
+            import vikrai from "@vikrai/js-sdk"
 
-            let MEDUSA_BACKEND_URL = "http://localhost:9000"
+            let vikrai_BACKEND_URL = "http://localhost:9000"
 
-            if (process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL) {
-              MEDUSA_BACKEND_URL = process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL
+            if (process.env.NEXT_PUBLIC_vikrai_BACKEND_URL) {
+              vikrai_BACKEND_URL = process.env.NEXT_PUBLIC_vikrai_BACKEND_URL
             }
 
-            export const sdk = new Medusa({
-              baseUrl: MEDUSA_BACKEND_URL,
+            export const sdk = new vikrai({
+              baseUrl: vikrai_BACKEND_URL,
               debug: process.env.NODE_ENV === "development",
-              publishableKey: process.env.NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY,
+              publishableKey: process.env.NEXT_PUBLIC_vikrai_PUBLISHABLE_KEY,
             })
 
             sdk.store.cart.addShippingMethod("cart_123", {
@@ -1955,12 +1955,12 @@ paths:
             type: string
         - name: x-publishable-api-key
           in: header
-          description: Publishable API Key created in the Medusa Admin.
+          description: Publishable API Key created in the vikrai Admin.
           required: true
           schema:
             type: string
             externalDocs:
-              url: https://docs.medusajs.com/api/store#publishable-api-key
+              url: https://docs.vikrai.com/api/store#publishable-api-key
         - name: fields
           in: query
           description: Comma-separated fields that should be included in the returned data. if a field is prefixed with `+` it will be added to the default fields, using `-` will remove it from the default fields. without prefix it will replace the entire default fields.
@@ -2007,17 +2007,17 @@ paths:
       description: Retrieve a list of collections. The collections can be filtered by fields such as `handle`. The collections can also be sorted or paginated.
       x-authenticated: false
       externalDocs:
-        url: https://docs.medusajs.com/v2/resources/storefront-development/products/collections/list
+        url: https://docs.vikrai.com/v2/resources/storefront-development/products/collections/list
         description: 'Storefront guide: How to retrieve a list of collections.'
       parameters:
         - name: x-publishable-api-key
           in: header
-          description: Publishable API Key created in the Medusa Admin.
+          description: Publishable API Key created in the vikrai Admin.
           required: true
           schema:
             type: string
             externalDocs:
-              url: https://docs.medusajs.com/api/store#publishable-api-key
+              url: https://docs.vikrai.com/api/store#publishable-api-key
         - name: fields
           in: query
           description: Comma-separated fields that should be included in the returned data. if a field is prefixed with `+` it will be added to the default fields, using `-` will remove it from the default fields. without prefix it will replace the entire default fields.
@@ -2578,18 +2578,18 @@ paths:
         - lang: JavaScript
           label: JS SDK
           source: |-
-            import Medusa from "@medusajs/js-sdk"
+            import vikrai from "@vikrai/js-sdk"
 
-            let MEDUSA_BACKEND_URL = "http://localhost:9000"
+            let vikrai_BACKEND_URL = "http://localhost:9000"
 
-            if (process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL) {
-              MEDUSA_BACKEND_URL = process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL
+            if (process.env.NEXT_PUBLIC_vikrai_BACKEND_URL) {
+              vikrai_BACKEND_URL = process.env.NEXT_PUBLIC_vikrai_BACKEND_URL
             }
 
-            export const sdk = new Medusa({
-              baseUrl: MEDUSA_BACKEND_URL,
+            export const sdk = new vikrai({
+              baseUrl: vikrai_BACKEND_URL,
               debug: process.env.NODE_ENV === "development",
-              publishableKey: process.env.NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY,
+              publishableKey: process.env.NEXT_PUBLIC_vikrai_PUBLISHABLE_KEY,
             })
 
             sdk.store.collection.list()
@@ -2658,7 +2658,7 @@ paths:
       description: Retrieve a collection by its ID. You can expand the collection's relations or select the fields that should be returned.
       x-authenticated: false
       externalDocs:
-        url: https://docs.medusajs.com/v2/resources/storefront-development/products/collections/retrieve
+        url: https://docs.vikrai.com/v2/resources/storefront-development/products/collections/retrieve
         description: 'Storefront guide: How to retrieve a collection.'
       parameters:
         - name: id
@@ -2669,12 +2669,12 @@ paths:
             type: string
         - name: x-publishable-api-key
           in: header
-          description: Publishable API Key created in the Medusa Admin.
+          description: Publishable API Key created in the vikrai Admin.
           required: true
           schema:
             type: string
             externalDocs:
-              url: https://docs.medusajs.com/api/store#publishable-api-key
+              url: https://docs.vikrai.com/api/store#publishable-api-key
         - name: fields
           in: query
           description: Comma-separated fields that should be included in the returned data. if a field is prefixed with `+` it will be added to the default fields, using `-` will remove it from the default fields. without prefix it will replace the entire default fields.
@@ -2689,18 +2689,18 @@ paths:
         - lang: JavaScript
           label: JS SDK
           source: |-
-            import Medusa from "@medusajs/js-sdk"
+            import vikrai from "@vikrai/js-sdk"
 
-            let MEDUSA_BACKEND_URL = "http://localhost:9000"
+            let vikrai_BACKEND_URL = "http://localhost:9000"
 
-            if (process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL) {
-              MEDUSA_BACKEND_URL = process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL
+            if (process.env.NEXT_PUBLIC_vikrai_BACKEND_URL) {
+              vikrai_BACKEND_URL = process.env.NEXT_PUBLIC_vikrai_BACKEND_URL
             }
 
-            export const sdk = new Medusa({
-              baseUrl: MEDUSA_BACKEND_URL,
+            export const sdk = new vikrai({
+              baseUrl: vikrai_BACKEND_URL,
               debug: process.env.NODE_ENV === "development",
-              publishableKey: process.env.NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY,
+              publishableKey: process.env.NEXT_PUBLIC_vikrai_PUBLISHABLE_KEY,
             })
 
             sdk.store.collection.retrieve("pcol_123")
@@ -2742,12 +2742,12 @@ paths:
       parameters:
         - name: x-publishable-api-key
           in: header
-          description: Publishable API Key created in the Medusa Admin.
+          description: Publishable API Key created in the vikrai Admin.
           required: true
           schema:
             type: string
             externalDocs:
-              url: https://docs.medusajs.com/api/store#publishable-api-key
+              url: https://docs.vikrai.com/api/store#publishable-api-key
         - name: fields
           in: query
           description: Comma-separated fields that should be included in the returned data. if a field is prefixed with `+` it will be added to the default fields, using `-` will remove it from the default fields. without prefix it will replace the entire default fields.
@@ -2870,12 +2870,12 @@ paths:
             type: string
         - name: x-publishable-api-key
           in: header
-          description: Publishable API Key created in the Medusa Admin.
+          description: Publishable API Key created in the vikrai Admin.
           required: true
           schema:
             type: string
             externalDocs:
-              url: https://docs.medusajs.com/api/store#publishable-api-key
+              url: https://docs.vikrai.com/api/store#publishable-api-key
         - name: fields
           in: query
           description: Comma-separated fields that should be included in the returned data. if a field is prefixed with `+` it will be added to the default fields, using `-` will remove it from the default fields. without prefix it will replace the entire default fields.
@@ -2919,18 +2919,18 @@ paths:
       summary: Register Customer
       description: Register a customer. Use the `/auth/customer/emailpass/register` API route first to retrieve the registration token and pass it in the header of the request.
       externalDocs:
-        url: https://docs.medusajs.com/v2/resources/storefront-development/customers/register
+        url: https://docs.vikrai.com/v2/resources/storefront-development/customers/register
         description: 'Storefront guide: How to register a customer.'
       x-authenticated: true
       parameters:
         - name: x-publishable-api-key
           in: header
-          description: Publishable API Key created in the Medusa Admin.
+          description: Publishable API Key created in the vikrai Admin.
           required: true
           schema:
             type: string
             externalDocs:
-              url: https://docs.medusajs.com/api/store#publishable-api-key
+              url: https://docs.vikrai.com/api/store#publishable-api-key
         - name: fields
           in: query
           description: Comma-separated fields that should be included in the returned data. if a field is prefixed with `+` it will be added to the default fields, using `-` will remove it from the default fields. without prefix it will replace the entire default fields.
@@ -2938,7 +2938,7 @@ paths:
           schema:
             type: string
             title: fields
-            description: Comma-separated fields that should be included in the returned data. if a field is prefixed with `+` it will be added to the default fields, using `-` will remove it from the default fields. without prefix it will replace the entire default fields. This API route restricts the fields that can be selected. Learn how to override the retrievable fields in the [Retrieve Custom Links](https://docs.medusajs.com/learn/fundamentals/api-routes/retrieve-custom-links) documentation.
+            description: Comma-separated fields that should be included in the returned data. if a field is prefixed with `+` it will be added to the default fields, using `-` will remove it from the default fields. without prefix it will replace the entire default fields. This API route restricts the fields that can be selected. Learn how to override the retrievable fields in the [Retrieve Custom Links](https://docs.vikrai.com/learn/fundamentals/api-routes/retrieve-custom-links) documentation.
             externalDocs:
               url: '#select-fields-and-relations'
       requestBody:
@@ -2950,18 +2950,18 @@ paths:
         - lang: JavaScript
           label: JS SDK
           source: |-
-            import Medusa from "@medusajs/js-sdk"
+            import vikrai from "@vikrai/js-sdk"
 
-            let MEDUSA_BACKEND_URL = "http://localhost:9000"
+            let vikrai_BACKEND_URL = "http://localhost:9000"
 
-            if (process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL) {
-              MEDUSA_BACKEND_URL = process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL
+            if (process.env.NEXT_PUBLIC_vikrai_BACKEND_URL) {
+              vikrai_BACKEND_URL = process.env.NEXT_PUBLIC_vikrai_BACKEND_URL
             }
 
-            export const sdk = new Medusa({
-              baseUrl: MEDUSA_BACKEND_URL,
+            export const sdk = new vikrai({
+              baseUrl: vikrai_BACKEND_URL,
               debug: process.env.NODE_ENV === "development",
-              publishableKey: process.env.NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY,
+              publishableKey: process.env.NEXT_PUBLIC_vikrai_PUBLISHABLE_KEY,
             })
 
             const token = await sdk.auth.register("customer", "emailpass", {
@@ -3038,25 +3038,25 @@ paths:
       description: Retrieve the logged-in customer. You can expand the customer's relations or select the fields that should be returned.
       x-authenticated: true
       externalDocs:
-        url: https://docs.medusajs.com/v2/resources/storefront-development/customers/retrieve
+        url: https://docs.vikrai.com/v2/resources/storefront-development/customers/retrieve
         description: 'Storefront guide: How to retrieve the logged-in customer.'
       parameters:
         - name: x-publishable-api-key
           in: header
-          description: Publishable API Key created in the Medusa Admin.
+          description: Publishable API Key created in the vikrai Admin.
           required: true
           schema:
             type: string
             externalDocs:
-              url: https://docs.medusajs.com/api/store#publishable-api-key
+              url: https://docs.vikrai.com/api/store#publishable-api-key
         - name: fields
           in: query
-          description: Comma-separated fields that should be included in the returned data. if a field is prefixed with `+` it will be added to the default fields, using `-` will remove it from the default fields. without prefix it will replace the entire default fields. This API route restricts the fields that can be selected. Learn how to override the retrievable fields in the [Retrieve Custom Links](https://docs.medusajs.com/learn/fundamentals/api-routes/retrieve-custom-links) documentation.
+          description: Comma-separated fields that should be included in the returned data. if a field is prefixed with `+` it will be added to the default fields, using `-` will remove it from the default fields. without prefix it will replace the entire default fields. This API route restricts the fields that can be selected. Learn how to override the retrievable fields in the [Retrieve Custom Links](https://docs.vikrai.com/learn/fundamentals/api-routes/retrieve-custom-links) documentation.
           required: false
           schema:
             type: string
             title: fields
-            description: Comma-separated fields that should be included in the returned data. if a field is prefixed with `+` it will be added to the default fields, using `-` will remove it from the default fields. without prefix it will replace the entire default fields. This API route restricts the fields that can be selected. Learn how to override the retrievable fields in the [Retrieve Custom Links](https://docs.medusajs.com/learn/fundamentals/api-routes/retrieve-custom-links) documentation.
+            description: Comma-separated fields that should be included in the returned data. if a field is prefixed with `+` it will be added to the default fields, using `-` will remove it from the default fields. without prefix it will replace the entire default fields. This API route restricts the fields that can be selected. Learn how to override the retrievable fields in the [Retrieve Custom Links](https://docs.vikrai.com/learn/fundamentals/api-routes/retrieve-custom-links) documentation.
             externalDocs:
               url: '#select-fields-and-relations'
       security:
@@ -3066,18 +3066,18 @@ paths:
         - lang: JavaScript
           label: JS SDK
           source: |-
-            import Medusa from "@medusajs/js-sdk"
+            import vikrai from "@vikrai/js-sdk"
 
-            let MEDUSA_BACKEND_URL = "http://localhost:9000"
+            let vikrai_BACKEND_URL = "http://localhost:9000"
 
-            if (process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL) {
-              MEDUSA_BACKEND_URL = process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL
+            if (process.env.NEXT_PUBLIC_vikrai_BACKEND_URL) {
+              vikrai_BACKEND_URL = process.env.NEXT_PUBLIC_vikrai_BACKEND_URL
             }
 
-            export const sdk = new Medusa({
-              baseUrl: MEDUSA_BACKEND_URL,
+            export const sdk = new vikrai({
+              baseUrl: vikrai_BACKEND_URL,
               debug: process.env.NODE_ENV === "development",
-              publishableKey: process.env.NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY,
+              publishableKey: process.env.NEXT_PUBLIC_vikrai_PUBLISHABLE_KEY,
             })
 
             sdk.store.customer.retrieve()
@@ -3116,18 +3116,18 @@ paths:
       summary: Update Customer
       description: Update the logged-in customer's details.
       externalDocs:
-        url: https://docs.medusajs.com/v2/resources/storefront-development/customers/profile
+        url: https://docs.vikrai.com/v2/resources/storefront-development/customers/profile
         description: 'Storefront guide: How to edit a customer''s profile.'
       x-authenticated: true
       parameters:
         - name: x-publishable-api-key
           in: header
-          description: Publishable API Key created in the Medusa Admin.
+          description: Publishable API Key created in the vikrai Admin.
           required: true
           schema:
             type: string
             externalDocs:
-              url: https://docs.medusajs.com/api/store#publishable-api-key
+              url: https://docs.vikrai.com/api/store#publishable-api-key
         - name: fields
           in: query
           description: Comma-separated fields that should be included in the returned data. if a field is prefixed with `+` it will be added to the default fields, using `-` will remove it from the default fields. without prefix it will replace the entire default fields.
@@ -3135,7 +3135,7 @@ paths:
           schema:
             type: string
             title: fields
-            description: Comma-separated fields that should be included in the returned data. if a field is prefixed with `+` it will be added to the default fields, using `-` will remove it from the default fields. without prefix it will replace the entire default fields. This API route restricts the fields that can be selected. Learn how to override the retrievable fields in the [Retrieve Custom Links](https://docs.medusajs.com/learn/fundamentals/api-routes/retrieve-custom-links) documentation.
+            description: Comma-separated fields that should be included in the returned data. if a field is prefixed with `+` it will be added to the default fields, using `-` will remove it from the default fields. without prefix it will replace the entire default fields. This API route restricts the fields that can be selected. Learn how to override the retrievable fields in the [Retrieve Custom Links](https://docs.vikrai.com/learn/fundamentals/api-routes/retrieve-custom-links) documentation.
             externalDocs:
               url: '#select-fields-and-relations'
       security:
@@ -3150,18 +3150,18 @@ paths:
         - lang: JavaScript
           label: JS SDK
           source: |-
-            import Medusa from "@medusajs/js-sdk"
+            import vikrai from "@vikrai/js-sdk"
 
-            let MEDUSA_BACKEND_URL = "http://localhost:9000"
+            let vikrai_BACKEND_URL = "http://localhost:9000"
 
-            if (process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL) {
-              MEDUSA_BACKEND_URL = process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL
+            if (process.env.NEXT_PUBLIC_vikrai_BACKEND_URL) {
+              vikrai_BACKEND_URL = process.env.NEXT_PUBLIC_vikrai_BACKEND_URL
             }
 
-            export const sdk = new Medusa({
-              baseUrl: MEDUSA_BACKEND_URL,
+            export const sdk = new vikrai({
+              baseUrl: vikrai_BACKEND_URL,
               debug: process.env.NODE_ENV === "development",
-              publishableKey: process.env.NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY,
+              publishableKey: process.env.NEXT_PUBLIC_vikrai_PUBLISHABLE_KEY,
             })
 
             sdk.store.customer.update({
@@ -3223,25 +3223,25 @@ paths:
       description: Retrieve the addresses of the logged-in customer. The addresses can be filtered by fields such as `country_code`. The addresses can also be sorted or paginated.
       x-authenticated: true
       externalDocs:
-        url: https://docs.medusajs.com/v2/resources/storefront-development/customers/addresses#list-customer-addresses
+        url: https://docs.vikrai.com/v2/resources/storefront-development/customers/addresses#list-customer-addresses
         description: 'Storefront guide: How to retrieve the logged-in customer''s addresses.'
       parameters:
         - name: x-publishable-api-key
           in: header
-          description: Publishable API Key created in the Medusa Admin.
+          description: Publishable API Key created in the vikrai Admin.
           required: true
           schema:
             type: string
             externalDocs:
-              url: https://docs.medusajs.com/api/store#publishable-api-key
+              url: https://docs.vikrai.com/api/store#publishable-api-key
         - name: fields
           in: query
-          description: Comma-separated fields that should be included in the returned data. if a field is prefixed with `+` it will be added to the default fields, using `-` will remove it from the default fields. without prefix it will replace the entire default fields. This API route restricts the fields that can be selected. Learn how to override the retrievable fields in the [Retrieve Custom Links](https://docs.medusajs.com/learn/fundamentals/api-routes/retrieve-custom-links) documentation.
+          description: Comma-separated fields that should be included in the returned data. if a field is prefixed with `+` it will be added to the default fields, using `-` will remove it from the default fields. without prefix it will replace the entire default fields. This API route restricts the fields that can be selected. Learn how to override the retrievable fields in the [Retrieve Custom Links](https://docs.vikrai.com/learn/fundamentals/api-routes/retrieve-custom-links) documentation.
           required: false
           schema:
             type: string
             title: fields
-            description: Comma-separated fields that should be included in the returned data. if a field is prefixed with `+` it will be added to the default fields, using `-` will remove it from the default fields. without prefix it will replace the entire default fields. This API route restricts the fields that can be selected. Learn how to override the retrievable fields in the [Retrieve Custom Links](https://docs.medusajs.com/learn/fundamentals/api-routes/retrieve-custom-links) documentation.
+            description: Comma-separated fields that should be included in the returned data. if a field is prefixed with `+` it will be added to the default fields, using `-` will remove it from the default fields. without prefix it will replace the entire default fields. This API route restricts the fields that can be selected. Learn how to override the retrievable fields in the [Retrieve Custom Links](https://docs.vikrai.com/learn/fundamentals/api-routes/retrieve-custom-links) documentation.
             externalDocs:
               url: '#select-fields-and-relations'
         - name: offset
@@ -3332,18 +3332,18 @@ paths:
         - lang: JavaScript
           label: JS SDK
           source: |-
-            import Medusa from "@medusajs/js-sdk"
+            import vikrai from "@vikrai/js-sdk"
 
-            let MEDUSA_BACKEND_URL = "http://localhost:9000"
+            let vikrai_BACKEND_URL = "http://localhost:9000"
 
-            if (process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL) {
-              MEDUSA_BACKEND_URL = process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL
+            if (process.env.NEXT_PUBLIC_vikrai_BACKEND_URL) {
+              vikrai_BACKEND_URL = process.env.NEXT_PUBLIC_vikrai_BACKEND_URL
             }
 
-            export const sdk = new Medusa({
-              baseUrl: MEDUSA_BACKEND_URL,
+            export const sdk = new vikrai({
+              baseUrl: vikrai_BACKEND_URL,
               debug: process.env.NODE_ENV === "development",
-              publishableKey: process.env.NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY,
+              publishableKey: process.env.NEXT_PUBLIC_vikrai_PUBLISHABLE_KEY,
             })
 
             sdk.store.customer.listAddress()
@@ -3383,26 +3383,26 @@ paths:
       x-sidebar-summary: Create Address
       description: Create an address for the logged-in customer.
       externalDocs:
-        url: https://docs.medusajs.com/v2/resources/storefront-development/customers/addresses#add-customer-address
+        url: https://docs.vikrai.com/v2/resources/storefront-development/customers/addresses#add-customer-address
         description: 'Storefront guide: How to create an address for the logged-in customer.'
       x-authenticated: true
       parameters:
         - name: x-publishable-api-key
           in: header
-          description: Publishable API Key created in the Medusa Admin.
+          description: Publishable API Key created in the vikrai Admin.
           required: true
           schema:
             type: string
             externalDocs:
-              url: https://docs.medusajs.com/api/store#publishable-api-key
+              url: https://docs.vikrai.com/api/store#publishable-api-key
         - name: fields
           in: query
-          description: Comma-separated fields that should be included in the returned data. if a field is prefixed with `+` it will be added to the default fields, using `-` will remove it from the default fields. without prefix it will replace the entire default fields. This API route restricts the fields that can be selected. Learn how to override the retrievable fields in the [Retrieve Custom Links](https://docs.medusajs.com/learn/fundamentals/api-routes/retrieve-custom-links) documentation.
+          description: Comma-separated fields that should be included in the returned data. if a field is prefixed with `+` it will be added to the default fields, using `-` will remove it from the default fields. without prefix it will replace the entire default fields. This API route restricts the fields that can be selected. Learn how to override the retrievable fields in the [Retrieve Custom Links](https://docs.vikrai.com/learn/fundamentals/api-routes/retrieve-custom-links) documentation.
           required: false
           schema:
             type: string
             title: fields
-            description: Comma-separated fields that should be included in the returned data. if a field is prefixed with `+` it will be added to the default fields, using `-` will remove it from the default fields. without prefix it will replace the entire default fields. This API route restricts the fields that can be selected. Learn how to override the retrievable fields in the [Retrieve Custom Links](https://docs.medusajs.com/learn/fundamentals/api-routes/retrieve-custom-links) documentation.
+            description: Comma-separated fields that should be included in the returned data. if a field is prefixed with `+` it will be added to the default fields, using `-` will remove it from the default fields. without prefix it will replace the entire default fields. This API route restricts the fields that can be selected. Learn how to override the retrievable fields in the [Retrieve Custom Links](https://docs.vikrai.com/learn/fundamentals/api-routes/retrieve-custom-links) documentation.
             externalDocs:
               url: '#select-fields-and-relations'
       security:
@@ -3478,18 +3478,18 @@ paths:
         - lang: JavaScript
           label: JS SDK
           source: |-
-            import Medusa from "@medusajs/js-sdk"
+            import vikrai from "@vikrai/js-sdk"
 
-            let MEDUSA_BACKEND_URL = "http://localhost:9000"
+            let vikrai_BACKEND_URL = "http://localhost:9000"
 
-            if (process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL) {
-              MEDUSA_BACKEND_URL = process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL
+            if (process.env.NEXT_PUBLIC_vikrai_BACKEND_URL) {
+              vikrai_BACKEND_URL = process.env.NEXT_PUBLIC_vikrai_BACKEND_URL
             }
 
-            export const sdk = new Medusa({
-              baseUrl: MEDUSA_BACKEND_URL,
+            export const sdk = new vikrai({
+              baseUrl: vikrai_BACKEND_URL,
               debug: process.env.NODE_ENV === "development",
-              publishableKey: process.env.NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY,
+              publishableKey: process.env.NEXT_PUBLIC_vikrai_PUBLISHABLE_KEY,
             })
 
             sdk.store.customer.createAddress({
@@ -3558,20 +3558,20 @@ paths:
             type: string
         - name: x-publishable-api-key
           in: header
-          description: Publishable API Key created in the Medusa Admin.
+          description: Publishable API Key created in the vikrai Admin.
           required: true
           schema:
             type: string
             externalDocs:
-              url: https://docs.medusajs.com/api/store#publishable-api-key
+              url: https://docs.vikrai.com/api/store#publishable-api-key
         - name: fields
           in: query
-          description: Comma-separated fields that should be included in the returned data. if a field is prefixed with `+` it will be added to the default fields, using `-` will remove it from the default fields. without prefix it will replace the entire default fields. This API route restricts the fields that can be selected. Learn how to override the retrievable fields in the [Retrieve Custom Links](https://docs.medusajs.com/learn/fundamentals/api-routes/retrieve-custom-links) documentation.
+          description: Comma-separated fields that should be included in the returned data. if a field is prefixed with `+` it will be added to the default fields, using `-` will remove it from the default fields. without prefix it will replace the entire default fields. This API route restricts the fields that can be selected. Learn how to override the retrievable fields in the [Retrieve Custom Links](https://docs.vikrai.com/learn/fundamentals/api-routes/retrieve-custom-links) documentation.
           required: false
           schema:
             type: string
             title: fields
-            description: Comma-separated fields that should be included in the returned data. if a field is prefixed with `+` it will be added to the default fields, using `-` will remove it from the default fields. without prefix it will replace the entire default fields. This API route restricts the fields that can be selected. Learn how to override the retrievable fields in the [Retrieve Custom Links](https://docs.medusajs.com/learn/fundamentals/api-routes/retrieve-custom-links) documentation.
+            description: Comma-separated fields that should be included in the returned data. if a field is prefixed with `+` it will be added to the default fields, using `-` will remove it from the default fields. without prefix it will replace the entire default fields. This API route restricts the fields that can be selected. Learn how to override the retrievable fields in the [Retrieve Custom Links](https://docs.vikrai.com/learn/fundamentals/api-routes/retrieve-custom-links) documentation.
             externalDocs:
               url: '#select-fields-and-relations'
       security:
@@ -3581,18 +3581,18 @@ paths:
         - lang: JavaScript
           label: JS SDK
           source: |-
-            import Medusa from "@medusajs/js-sdk"
+            import vikrai from "@vikrai/js-sdk"
 
-            let MEDUSA_BACKEND_URL = "http://localhost:9000"
+            let vikrai_BACKEND_URL = "http://localhost:9000"
 
-            if (process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL) {
-              MEDUSA_BACKEND_URL = process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL
+            if (process.env.NEXT_PUBLIC_vikrai_BACKEND_URL) {
+              vikrai_BACKEND_URL = process.env.NEXT_PUBLIC_vikrai_BACKEND_URL
             }
 
-            export const sdk = new Medusa({
-              baseUrl: MEDUSA_BACKEND_URL,
+            export const sdk = new vikrai({
+              baseUrl: vikrai_BACKEND_URL,
               debug: process.env.NODE_ENV === "development",
-              publishableKey: process.env.NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY,
+              publishableKey: process.env.NEXT_PUBLIC_vikrai_PUBLISHABLE_KEY,
             })
 
             sdk.store.customer.retrieveAddress(
@@ -3634,7 +3634,7 @@ paths:
       x-sidebar-summary: Update Address
       description: Update the logged-in customer's address.
       externalDocs:
-        url: https://docs.medusajs.com/v2/resources/storefront-development/customers/addresses#edit-an-address
+        url: https://docs.vikrai.com/v2/resources/storefront-development/customers/addresses#edit-an-address
         description: 'Storefront guide: How to update an address of the logged-in customer.'
       x-authenticated: true
       parameters:
@@ -3646,20 +3646,20 @@ paths:
             type: string
         - name: x-publishable-api-key
           in: header
-          description: Publishable API Key created in the Medusa Admin.
+          description: Publishable API Key created in the vikrai Admin.
           required: true
           schema:
             type: string
             externalDocs:
-              url: https://docs.medusajs.com/api/store#publishable-api-key
+              url: https://docs.vikrai.com/api/store#publishable-api-key
         - name: fields
           in: query
-          description: Comma-separated fields that should be included in the returned data. if a field is prefixed with `+` it will be added to the default fields, using `-` will remove it from the default fields. without prefix it will replace the entire default fields. This API route restricts the fields that can be selected. Learn how to override the retrievable fields in the [Retrieve Custom Links](https://docs.medusajs.com/learn/fundamentals/api-routes/retrieve-custom-links) documentation.
+          description: Comma-separated fields that should be included in the returned data. if a field is prefixed with `+` it will be added to the default fields, using `-` will remove it from the default fields. without prefix it will replace the entire default fields. This API route restricts the fields that can be selected. Learn how to override the retrievable fields in the [Retrieve Custom Links](https://docs.vikrai.com/learn/fundamentals/api-routes/retrieve-custom-links) documentation.
           required: false
           schema:
             type: string
             title: fields
-            description: Comma-separated fields that should be included in the returned data. if a field is prefixed with `+` it will be added to the default fields, using `-` will remove it from the default fields. without prefix it will replace the entire default fields. This API route restricts the fields that can be selected. Learn how to override the retrievable fields in the [Retrieve Custom Links](https://docs.medusajs.com/learn/fundamentals/api-routes/retrieve-custom-links) documentation.
+            description: Comma-separated fields that should be included in the returned data. if a field is prefixed with `+` it will be added to the default fields, using `-` will remove it from the default fields. without prefix it will replace the entire default fields. This API route restricts the fields that can be selected. Learn how to override the retrievable fields in the [Retrieve Custom Links](https://docs.vikrai.com/learn/fundamentals/api-routes/retrieve-custom-links) documentation.
             externalDocs:
               url: '#select-fields-and-relations'
       security:
@@ -3735,18 +3735,18 @@ paths:
         - lang: JavaScript
           label: JS SDK
           source: |-
-            import Medusa from "@medusajs/js-sdk"
+            import vikrai from "@vikrai/js-sdk"
 
-            let MEDUSA_BACKEND_URL = "http://localhost:9000"
+            let vikrai_BACKEND_URL = "http://localhost:9000"
 
-            if (process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL) {
-              MEDUSA_BACKEND_URL = process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL
+            if (process.env.NEXT_PUBLIC_vikrai_BACKEND_URL) {
+              vikrai_BACKEND_URL = process.env.NEXT_PUBLIC_vikrai_BACKEND_URL
             }
 
-            export const sdk = new Medusa({
-              baseUrl: MEDUSA_BACKEND_URL,
+            export const sdk = new vikrai({
+              baseUrl: vikrai_BACKEND_URL,
               debug: process.env.NODE_ENV === "development",
-              publishableKey: process.env.NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY,
+              publishableKey: process.env.NEXT_PUBLIC_vikrai_PUBLISHABLE_KEY,
             })
 
             sdk.store.customer.updateAddress(
@@ -3798,7 +3798,7 @@ paths:
       description: Remove an address of the logged-in customer.
       x-authenticated: true
       externalDocs:
-        url: https://docs.medusajs.com/v2/resources/storefront-development/customers/addresses#delete-customer-address
+        url: https://docs.vikrai.com/v2/resources/storefront-development/customers/addresses#delete-customer-address
         description: 'Storefront guide: How to delete a customer''s address.'
       parameters:
         - name: address_id
@@ -3809,20 +3809,20 @@ paths:
             type: string
         - name: x-publishable-api-key
           in: header
-          description: Publishable API Key created in the Medusa Admin.
+          description: Publishable API Key created in the vikrai Admin.
           required: true
           schema:
             type: string
             externalDocs:
-              url: https://docs.medusajs.com/api/store#publishable-api-key
+              url: https://docs.vikrai.com/api/store#publishable-api-key
         - name: fields
           in: query
-          description: Comma-separated fields that should be included in the returned data. if a field is prefixed with `+` it will be added to the default fields, using `-` will remove it from the default fields. without prefix it will replace the entire default fields. This API route restricts the fields that can be selected. Learn how to override the retrievable fields in the [Retrieve Custom Links](https://docs.medusajs.com/learn/fundamentals/api-routes/retrieve-custom-links) documentation.
+          description: Comma-separated fields that should be included in the returned data. if a field is prefixed with `+` it will be added to the default fields, using `-` will remove it from the default fields. without prefix it will replace the entire default fields. This API route restricts the fields that can be selected. Learn how to override the retrievable fields in the [Retrieve Custom Links](https://docs.vikrai.com/learn/fundamentals/api-routes/retrieve-custom-links) documentation.
           required: false
           schema:
             type: string
             title: fields
-            description: Comma-separated fields that should be included in the returned data. if a field is prefixed with `+` it will be added to the default fields, using `-` will remove it from the default fields. without prefix it will replace the entire default fields. This API route restricts the fields that can be selected. Learn how to override the retrievable fields in the [Retrieve Custom Links](https://docs.medusajs.com/learn/fundamentals/api-routes/retrieve-custom-links) documentation.
+            description: Comma-separated fields that should be included in the returned data. if a field is prefixed with `+` it will be added to the default fields, using `-` will remove it from the default fields. without prefix it will replace the entire default fields. This API route restricts the fields that can be selected. Learn how to override the retrievable fields in the [Retrieve Custom Links](https://docs.vikrai.com/learn/fundamentals/api-routes/retrieve-custom-links) documentation.
             externalDocs:
               url: '#select-fields-and-relations'
       security:
@@ -3832,18 +3832,18 @@ paths:
         - lang: JavaScript
           label: JS SDK
           source: |-
-            import Medusa from "@medusajs/js-sdk"
+            import vikrai from "@vikrai/js-sdk"
 
-            let MEDUSA_BACKEND_URL = "http://localhost:9000"
+            let vikrai_BACKEND_URL = "http://localhost:9000"
 
-            if (process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL) {
-              MEDUSA_BACKEND_URL = process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL
+            if (process.env.NEXT_PUBLIC_vikrai_BACKEND_URL) {
+              vikrai_BACKEND_URL = process.env.NEXT_PUBLIC_vikrai_BACKEND_URL
             }
 
-            export const sdk = new Medusa({
-              baseUrl: MEDUSA_BACKEND_URL,
+            export const sdk = new vikrai({
+              baseUrl: vikrai_BACKEND_URL,
               debug: process.env.NODE_ENV === "development",
-              publishableKey: process.env.NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY,
+              publishableKey: process.env.NEXT_PUBLIC_vikrai_PUBLISHABLE_KEY,
             })
 
             sdk.store.customer.deleteAddress("caddr_123")
@@ -3916,12 +3916,12 @@ paths:
       parameters:
         - name: x-publishable-api-key
           in: header
-          description: Publishable API Key created in the Medusa Admin.
+          description: Publishable API Key created in the vikrai Admin.
           required: true
           schema:
             type: string
             externalDocs:
-              url: https://docs.medusajs.com/api/store#publishable-api-key
+              url: https://docs.vikrai.com/api/store#publishable-api-key
         - name: fields
           in: query
           description: Comma-separated fields that should be included in the returned data. if a field is prefixed with `+` it will be added to the default fields, using `-` will remove it from the default fields. without prefix it will replace the entire default fields.
@@ -4031,18 +4031,18 @@ paths:
         - lang: JavaScript
           label: JS SDK
           source: |-
-            import Medusa from "@medusajs/js-sdk"
+            import vikrai from "@vikrai/js-sdk"
 
-            let MEDUSA_BACKEND_URL = "http://localhost:9000"
+            let vikrai_BACKEND_URL = "http://localhost:9000"
 
-            if (process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL) {
-              MEDUSA_BACKEND_URL = process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL
+            if (process.env.NEXT_PUBLIC_vikrai_BACKEND_URL) {
+              vikrai_BACKEND_URL = process.env.NEXT_PUBLIC_vikrai_BACKEND_URL
             }
 
-            export const sdk = new Medusa({
-              baseUrl: MEDUSA_BACKEND_URL,
+            export const sdk = new vikrai({
+              baseUrl: vikrai_BACKEND_URL,
               debug: process.env.NODE_ENV === "development",
-              publishableKey: process.env.NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY,
+              publishableKey: process.env.NEXT_PUBLIC_vikrai_PUBLISHABLE_KEY,
             })
 
             sdk.store.order.list()
@@ -4124,12 +4124,12 @@ paths:
             type: string
         - name: x-publishable-api-key
           in: header
-          description: Publishable API Key created in the Medusa Admin.
+          description: Publishable API Key created in the vikrai Admin.
           required: true
           schema:
             type: string
             externalDocs:
-              url: https://docs.medusajs.com/api/store#publishable-api-key
+              url: https://docs.vikrai.com/api/store#publishable-api-key
         - name: fields
           in: query
           description: Comma-separated fields that should be included in the returned data. if a field is prefixed with `+` it will be added to the default fields, using `-` will remove it from the default fields. without prefix it will replace the entire default fields.
@@ -4144,18 +4144,18 @@ paths:
         - lang: JavaScript
           label: JS SDK
           source: |-
-            import Medusa from "@medusajs/js-sdk"
+            import vikrai from "@vikrai/js-sdk"
 
-            let MEDUSA_BACKEND_URL = "http://localhost:9000"
+            let vikrai_BACKEND_URL = "http://localhost:9000"
 
-            if (process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL) {
-              MEDUSA_BACKEND_URL = process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL
+            if (process.env.NEXT_PUBLIC_vikrai_BACKEND_URL) {
+              vikrai_BACKEND_URL = process.env.NEXT_PUBLIC_vikrai_BACKEND_URL
             }
 
-            export const sdk = new Medusa({
-              baseUrl: MEDUSA_BACKEND_URL,
+            export const sdk = new vikrai({
+              baseUrl: vikrai_BACKEND_URL,
               debug: process.env.NODE_ENV === "development",
-              publishableKey: process.env.NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY,
+              publishableKey: process.env.NEXT_PUBLIC_vikrai_PUBLISHABLE_KEY,
             })
 
             sdk.store.order.retrieve("order_123")
@@ -4195,7 +4195,7 @@ paths:
       operationId: PostOrdersIdTransferAccept
       summary: Accept Order Transfer
       x-sidebar-summary: Accept Transfer
-      description: Accept an order to be transfered to a customer's account, which was specified when the transfer request was created. The transfer is requested previously either by the customer using the [Request Order Transfer Store API route](https://docs.medusajs.com/api/store#orders_postordersidtransferrequest), or by the admin using the [Request Order Transfer Admin API route](https://docs.medusajs.com/api/admin#orders_postordersidtransferrequest).
+      description: Accept an order to be transfered to a customer's account, which was specified when the transfer request was created. The transfer is requested previously either by the customer using the [Request Order Transfer Store API route](https://docs.vikrai.com/api/store#orders_postordersidtransferrequest), or by the admin using the [Request Order Transfer Admin API route](https://docs.vikrai.com/api/admin#orders_postordersidtransferrequest).
       x-authenticated: false
       parameters:
         - name: id
@@ -4206,12 +4206,12 @@ paths:
             type: string
         - name: x-publishable-api-key
           in: header
-          description: Publishable API Key created in the Medusa Admin.
+          description: Publishable API Key created in the vikrai Admin.
           required: true
           schema:
             type: string
             externalDocs:
-              url: https://docs.medusajs.com/api/store#publishable-api-key
+              url: https://docs.vikrai.com/api/store#publishable-api-key
         - name: fields
           in: query
           description: |-
@@ -4234,18 +4234,18 @@ paths:
         - lang: JavaScript
           label: JS SDK
           source: |-
-            import Medusa from "@medusajs/js-sdk"
+            import vikrai from "@vikrai/js-sdk"
 
-            let MEDUSA_BACKEND_URL = "http://localhost:9000"
+            let vikrai_BACKEND_URL = "http://localhost:9000"
 
-            if (process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL) {
-              MEDUSA_BACKEND_URL = process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL
+            if (process.env.NEXT_PUBLIC_vikrai_BACKEND_URL) {
+              vikrai_BACKEND_URL = process.env.NEXT_PUBLIC_vikrai_BACKEND_URL
             }
 
-            export const sdk = new Medusa({
-              baseUrl: MEDUSA_BACKEND_URL,
+            export const sdk = new vikrai({
+              baseUrl: vikrai_BACKEND_URL,
               debug: process.env.NODE_ENV === "development",
-              publishableKey: process.env.NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY,
+              publishableKey: process.env.NEXT_PUBLIC_vikrai_PUBLISHABLE_KEY,
             })
 
             sdk.store.order.acceptTransfer(
@@ -4297,7 +4297,7 @@ paths:
       operationId: PostOrdersIdTransferCancel
       summary: Cancel Order Transfer
       x-sidebar-summary: Cancel Transfer
-      description: Cancel an order transfer that the logged-in customer previously requested using the [Request Order Transfer](https://docs.medusajs.com/api/store#orders_postordersidtransferrequest) API route.
+      description: Cancel an order transfer that the logged-in customer previously requested using the [Request Order Transfer](https://docs.vikrai.com/api/store#orders_postordersidtransferrequest) API route.
       x-authenticated: true
       parameters:
         - name: id
@@ -4308,12 +4308,12 @@ paths:
             type: string
         - name: x-publishable-api-key
           in: header
-          description: Publishable API Key created in the Medusa Admin.
+          description: Publishable API Key created in the vikrai Admin.
           required: true
           schema:
             type: string
             externalDocs:
-              url: https://docs.medusajs.com/api/store#publishable-api-key
+              url: https://docs.vikrai.com/api/store#publishable-api-key
         - name: fields
           in: query
           description: |-
@@ -4331,18 +4331,18 @@ paths:
         - lang: JavaScript
           label: JS SDK
           source: |-
-            import Medusa from "@medusajs/js-sdk"
+            import vikrai from "@vikrai/js-sdk"
 
-            let MEDUSA_BACKEND_URL = "http://localhost:9000"
+            let vikrai_BACKEND_URL = "http://localhost:9000"
 
-            if (process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL) {
-              MEDUSA_BACKEND_URL = process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL
+            if (process.env.NEXT_PUBLIC_vikrai_BACKEND_URL) {
+              vikrai_BACKEND_URL = process.env.NEXT_PUBLIC_vikrai_BACKEND_URL
             }
 
-            export const sdk = new Medusa({
-              baseUrl: MEDUSA_BACKEND_URL,
+            export const sdk = new vikrai({
+              baseUrl: vikrai_BACKEND_URL,
               debug: process.env.NODE_ENV === "development",
-              publishableKey: process.env.NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY,
+              publishableKey: process.env.NEXT_PUBLIC_vikrai_PUBLISHABLE_KEY,
             })
 
             sdk.store.order.cancelTransfer(
@@ -4391,7 +4391,7 @@ paths:
       operationId: PostOrdersIdTransferDecline
       summary: Decline Order Transfer
       x-sidebar-summary: Decline Transfer
-      description: Decline an order transfer previously requested, typically by the admin user using the [Request Order Transfer Admin API route](https://docs.medusajs.com/api/admin#orders_postordersidtransferrequest).
+      description: Decline an order transfer previously requested, typically by the admin user using the [Request Order Transfer Admin API route](https://docs.vikrai.com/api/admin#orders_postordersidtransferrequest).
       x-authenticated: false
       parameters:
         - name: id
@@ -4402,12 +4402,12 @@ paths:
             type: string
         - name: x-publishable-api-key
           in: header
-          description: Publishable API Key created in the Medusa Admin.
+          description: Publishable API Key created in the vikrai Admin.
           required: true
           schema:
             type: string
             externalDocs:
-              url: https://docs.medusajs.com/api/store#publishable-api-key
+              url: https://docs.vikrai.com/api/store#publishable-api-key
         - name: fields
           in: query
           description: |-
@@ -4430,18 +4430,18 @@ paths:
         - lang: JavaScript
           label: JS SDK
           source: |-
-            import Medusa from "@medusajs/js-sdk"
+            import vikrai from "@vikrai/js-sdk"
 
-            let MEDUSA_BACKEND_URL = "http://localhost:9000"
+            let vikrai_BACKEND_URL = "http://localhost:9000"
 
-            if (process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL) {
-              MEDUSA_BACKEND_URL = process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL
+            if (process.env.NEXT_PUBLIC_vikrai_BACKEND_URL) {
+              vikrai_BACKEND_URL = process.env.NEXT_PUBLIC_vikrai_BACKEND_URL
             }
 
-            export const sdk = new Medusa({
-              baseUrl: MEDUSA_BACKEND_URL,
+            export const sdk = new vikrai({
+              baseUrl: vikrai_BACKEND_URL,
               debug: process.env.NODE_ENV === "development",
-              publishableKey: process.env.NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY,
+              publishableKey: process.env.NEXT_PUBLIC_vikrai_PUBLISHABLE_KEY,
             })
 
             sdk.store.order.declineTransfer(
@@ -4493,7 +4493,7 @@ paths:
       operationId: PostOrdersIdTransferRequest
       summary: Request Order Transfer
       x-sidebar-summery: Request Transfer
-      description: Request an order to be transfered to the logged-in customer's account. The transfer is confirmed using the [Accept Order Transfer](https://docs.medusajs.com/api/store#orders_postordersidtransferaccept) API route.
+      description: Request an order to be transfered to the logged-in customer's account. The transfer is confirmed using the [Accept Order Transfer](https://docs.vikrai.com/api/store#orders_postordersidtransferaccept) API route.
       x-authenticated: true
       parameters:
         - name: id
@@ -4504,12 +4504,12 @@ paths:
             type: string
         - name: x-publishable-api-key
           in: header
-          description: Publishable API Key created in the Medusa Admin.
+          description: Publishable API Key created in the vikrai Admin.
           required: true
           schema:
             type: string
             externalDocs:
-              url: https://docs.medusajs.com/api/store#publishable-api-key
+              url: https://docs.vikrai.com/api/store#publishable-api-key
         - name: fields
           in: query
           description: |-
@@ -4532,18 +4532,18 @@ paths:
         - lang: JavaScript
           label: JS SDK
           source: |-
-            import Medusa from "@medusajs/js-sdk"
+            import vikrai from "@vikrai/js-sdk"
 
-            let MEDUSA_BACKEND_URL = "http://localhost:9000"
+            let vikrai_BACKEND_URL = "http://localhost:9000"
 
-            if (process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL) {
-              MEDUSA_BACKEND_URL = process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL
+            if (process.env.NEXT_PUBLIC_vikrai_BACKEND_URL) {
+              vikrai_BACKEND_URL = process.env.NEXT_PUBLIC_vikrai_BACKEND_URL
             }
 
-            export const sdk = new Medusa({
-              baseUrl: MEDUSA_BACKEND_URL,
+            export const sdk = new vikrai({
+              baseUrl: vikrai_BACKEND_URL,
               debug: process.env.NODE_ENV === "development",
-              publishableKey: process.env.NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY,
+              publishableKey: process.env.NEXT_PUBLIC_vikrai_PUBLISHABLE_KEY,
             })
 
             sdk.store.order.requestTransfer(
@@ -4596,18 +4596,18 @@ paths:
       summary: Create Payment Collection
       description: Create a payment collection for a cart. This is used during checkout, where the payment collection holds the cart's payment sessions.
       externalDocs:
-        url: https://docs.medusajs.com/v2/resources/storefront-development/checkout/payment
+        url: https://docs.vikrai.com/v2/resources/storefront-development/checkout/payment
         description: 'Storefront guide: How to implement payment during checkout.'
       x-authenticated: false
       parameters:
         - name: x-publishable-api-key
           in: header
-          description: Publishable API Key created in the Medusa Admin.
+          description: Publishable API Key created in the vikrai Admin.
           required: true
           schema:
             type: string
             externalDocs:
-              url: https://docs.medusajs.com/api/store#publishable-api-key
+              url: https://docs.vikrai.com/api/store#publishable-api-key
         - name: fields
           in: query
           description: Comma-separated fields that should be included in the returned data. if a field is prefixed with `+` it will be added to the default fields, using `-` will remove it from the default fields. without prefix it will replace the entire default fields.
@@ -4627,18 +4627,18 @@ paths:
         - lang: JavaScript
           label: JS SDK
           source: |-
-            import Medusa from "@medusajs/js-sdk"
+            import vikrai from "@vikrai/js-sdk"
 
-            let MEDUSA_BACKEND_URL = "http://localhost:9000"
+            let vikrai_BACKEND_URL = "http://localhost:9000"
 
-            if (process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL) {
-              MEDUSA_BACKEND_URL = process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL
+            if (process.env.NEXT_PUBLIC_vikrai_BACKEND_URL) {
+              vikrai_BACKEND_URL = process.env.NEXT_PUBLIC_vikrai_BACKEND_URL
             }
 
-            export const sdk = new Medusa({
-              baseUrl: MEDUSA_BACKEND_URL,
+            export const sdk = new vikrai({
+              baseUrl: vikrai_BACKEND_URL,
               debug: process.env.NODE_ENV === "development",
-              publishableKey: process.env.NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY,
+              publishableKey: process.env.NEXT_PUBLIC_vikrai_PUBLISHABLE_KEY,
             })
 
             sdk.store.payment.initiatePaymentSession(
@@ -4692,7 +4692,7 @@ paths:
       x-sidebar-summary: Initialize Payment Session
       description: Initialize and add a payment session to a payment collection. This is used during checkout, where you create a payment collection for the cart, then initialize a payment session for the payment provider that the customer chooses.
       externalDocs:
-        url: https://docs.medusajs.com/v2/resources/storefront-development/checkout/payment
+        url: https://docs.vikrai.com/v2/resources/storefront-development/checkout/payment
         description: 'Storefront guide: How to implement payment during checkout.'
       x-authenticated: false
       parameters:
@@ -4704,12 +4704,12 @@ paths:
             type: string
         - name: x-publishable-api-key
           in: header
-          description: Publishable API Key created in the Medusa Admin.
+          description: Publishable API Key created in the vikrai Admin.
           required: true
           schema:
             type: string
             externalDocs:
-              url: https://docs.medusajs.com/api/store#publishable-api-key
+              url: https://docs.vikrai.com/api/store#publishable-api-key
         - name: fields
           in: query
           description: Comma-separated fields that should be included in the returned data. if a field is prefixed with `+` it will be added to the default fields, using `-` will remove it from the default fields. without prefix it will replace the entire default fields.
@@ -4765,17 +4765,17 @@ paths:
       description: Retrieve a list of payment providers. You must provide the `region_id` query parameter to retrieve the payment providers enabled in that region.
       x-authenticated: false
       externalDocs:
-        url: https://docs.medusajs.com/v2/resources/storefront-development/checkout/payment
+        url: https://docs.vikrai.com/v2/resources/storefront-development/checkout/payment
         description: 'Storefront guide: How to implement payment during checkout.'
       parameters:
         - name: x-publishable-api-key
           in: header
-          description: Publishable API Key created in the Medusa Admin.
+          description: Publishable API Key created in the vikrai Admin.
           required: true
           schema:
             type: string
             externalDocs:
-              url: https://docs.medusajs.com/api/store#publishable-api-key
+              url: https://docs.vikrai.com/api/store#publishable-api-key
         - name: fields
           in: query
           description: Comma-separated fields that should be included in the returned data. if a field is prefixed with `+` it will be added to the default fields, using `-` will remove it from the default fields. without prefix it will replace the entire default fields.
@@ -4826,18 +4826,18 @@ paths:
         - lang: JavaScript
           label: JS SDK
           source: |-
-            import Medusa from "@medusajs/js-sdk"
+            import vikrai from "@vikrai/js-sdk"
 
-            let MEDUSA_BACKEND_URL = "http://localhost:9000"
+            let vikrai_BACKEND_URL = "http://localhost:9000"
 
-            if (process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL) {
-              MEDUSA_BACKEND_URL = process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL
+            if (process.env.NEXT_PUBLIC_vikrai_BACKEND_URL) {
+              vikrai_BACKEND_URL = process.env.NEXT_PUBLIC_vikrai_BACKEND_URL
             }
 
-            export const sdk = new Medusa({
-              baseUrl: MEDUSA_BACKEND_URL,
+            export const sdk = new vikrai({
+              baseUrl: vikrai_BACKEND_URL,
               debug: process.env.NODE_ENV === "development",
-              publishableKey: process.env.NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY,
+              publishableKey: process.env.NEXT_PUBLIC_vikrai_PUBLISHABLE_KEY,
             })
 
             sdk.store.payment.listPaymentProviders({
@@ -4908,17 +4908,17 @@ paths:
       description: Retrieve a list of product categories. The product categories can be filtered by fields such as `id`. The product categories can also be sorted or paginated.
       x-authenticated: false
       externalDocs:
-        url: https://docs.medusajs.com/v2/resources/storefront-development/products/categories/list
+        url: https://docs.vikrai.com/v2/resources/storefront-development/products/categories/list
         description: 'Storefront guide: How to retrieve a list of product categories.'
       parameters:
         - name: x-publishable-api-key
           in: header
-          description: Publishable API Key created in the Medusa Admin.
+          description: Publishable API Key created in the vikrai Admin.
           required: true
           schema:
             type: string
             externalDocs:
-              url: https://docs.medusajs.com/api/store#publishable-api-key
+              url: https://docs.vikrai.com/api/store#publishable-api-key
         - name: fields
           in: query
           description: Comma-separated fields that should be included in the returned data. if a field is prefixed with `+` it will be added to the default fields, using `-` will remove it from the default fields. without prefix it will replace the entire default fields.
@@ -5535,18 +5535,18 @@ paths:
         - lang: JavaScript
           label: JS SDK
           source: |-
-            import Medusa from "@medusajs/js-sdk"
+            import vikrai from "@vikrai/js-sdk"
 
-            let MEDUSA_BACKEND_URL = "http://localhost:9000"
+            let vikrai_BACKEND_URL = "http://localhost:9000"
 
-            if (process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL) {
-              MEDUSA_BACKEND_URL = process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL
+            if (process.env.NEXT_PUBLIC_vikrai_BACKEND_URL) {
+              vikrai_BACKEND_URL = process.env.NEXT_PUBLIC_vikrai_BACKEND_URL
             }
 
-            export const sdk = new Medusa({
-              baseUrl: MEDUSA_BACKEND_URL,
+            export const sdk = new vikrai({
+              baseUrl: vikrai_BACKEND_URL,
               debug: process.env.NODE_ENV === "development",
-              publishableKey: process.env.NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY,
+              publishableKey: process.env.NEXT_PUBLIC_vikrai_PUBLISHABLE_KEY,
             })
 
             sdk.store.category.list()
@@ -5586,7 +5586,7 @@ paths:
       description: Retrieve a product category by its ID. You can expand the product category's relations or select the fields that should be returned.
       x-authenticated: false
       externalDocs:
-        url: https://docs.medusajs.com/v2/resources/storefront-development/products/categories/retrieve
+        url: https://docs.vikrai.com/v2/resources/storefront-development/products/categories/retrieve
         description: 'Storefront guide: How to retrieve a product category.'
       parameters:
         - name: id
@@ -5597,12 +5597,12 @@ paths:
             type: string
         - name: x-publishable-api-key
           in: header
-          description: Publishable API Key created in the Medusa Admin.
+          description: Publishable API Key created in the vikrai Admin.
           required: true
           schema:
             type: string
             externalDocs:
-              url: https://docs.medusajs.com/api/store#publishable-api-key
+              url: https://docs.vikrai.com/api/store#publishable-api-key
         - name: fields
           in: query
           description: Comma-separated fields that should be included in the returned data. if a field is prefixed with `+` it will be added to the default fields, using `-` will remove it from the default fields. without prefix it will replace the entire default fields.
@@ -5633,18 +5633,18 @@ paths:
         - lang: JavaScript
           label: JS SDK
           source: |-
-            import Medusa from "@medusajs/js-sdk"
+            import vikrai from "@vikrai/js-sdk"
 
-            let MEDUSA_BACKEND_URL = "http://localhost:9000"
+            let vikrai_BACKEND_URL = "http://localhost:9000"
 
-            if (process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL) {
-              MEDUSA_BACKEND_URL = process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL
+            if (process.env.NEXT_PUBLIC_vikrai_BACKEND_URL) {
+              vikrai_BACKEND_URL = process.env.NEXT_PUBLIC_vikrai_BACKEND_URL
             }
 
-            export const sdk = new Medusa({
-              baseUrl: MEDUSA_BACKEND_URL,
+            export const sdk = new vikrai({
+              baseUrl: vikrai_BACKEND_URL,
               debug: process.env.NODE_ENV === "development",
-              publishableKey: process.env.NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY,
+              publishableKey: process.env.NEXT_PUBLIC_vikrai_PUBLISHABLE_KEY,
             })
 
             sdk.store.category.retrieve("pcat_123")
@@ -5686,12 +5686,12 @@ paths:
       parameters:
         - name: x-publishable-api-key
           in: header
-          description: Publishable API Key created in the Medusa Admin.
+          description: Publishable API Key created in the vikrai Admin.
           required: true
           schema:
             type: string
             externalDocs:
-              url: https://docs.medusajs.com/api/store#publishable-api-key
+              url: https://docs.vikrai.com/api/store#publishable-api-key
         - name: fields
           in: query
           description: |-
@@ -6295,12 +6295,12 @@ paths:
             type: string
         - name: x-publishable-api-key
           in: header
-          description: Publishable API Key created in the Medusa Admin.
+          description: Publishable API Key created in the vikrai Admin.
           required: true
           schema:
             type: string
             externalDocs:
-              url: https://docs.medusajs.com/api/store#publishable-api-key
+              url: https://docs.vikrai.com/api/store#publishable-api-key
         - name: fields
           in: query
           description: |-
@@ -6350,12 +6350,12 @@ paths:
       parameters:
         - name: x-publishable-api-key
           in: header
-          description: Publishable API Key created in the Medusa Admin.
+          description: Publishable API Key created in the vikrai Admin.
           required: true
           schema:
             type: string
             externalDocs:
-              url: https://docs.medusajs.com/api/store#publishable-api-key
+              url: https://docs.vikrai.com/api/store#publishable-api-key
         - name: fields
           in: query
           description: |-
@@ -6959,12 +6959,12 @@ paths:
             type: string
         - name: x-publishable-api-key
           in: header
-          description: Publishable API Key created in the Medusa Admin.
+          description: Publishable API Key created in the vikrai Admin.
           required: true
           schema:
             type: string
             externalDocs:
-              url: https://docs.medusajs.com/api/store#publishable-api-key
+              url: https://docs.vikrai.com/api/store#publishable-api-key
         - name: fields
           in: query
           description: |-
@@ -7012,17 +7012,17 @@ paths:
       description: Retrieve a list of products. The products can be filtered by fields such as `id`. The products can also be sorted or paginated.
       x-authenticated: false
       externalDocs:
-        url: https://docs.medusajs.com/v2/resources/storefront-development/products/price
+        url: https://docs.vikrai.com/v2/resources/storefront-development/products/price
         description: 'Storefront guide: How to retrieve a product variants'' prices.'
       parameters:
         - name: x-publishable-api-key
           in: header
-          description: Publishable API Key created in the Medusa Admin.
+          description: Publishable API Key created in the vikrai Admin.
           required: true
           schema:
             type: string
             externalDocs:
-              url: https://docs.medusajs.com/api/store#publishable-api-key
+              url: https://docs.vikrai.com/api/store#publishable-api-key
         - name: fields
           in: query
           description: Comma-separated fields that should be included in the returned data. if a field is prefixed with `+` it will be added to the default fields, using `-` will remove it from the default fields. without prefix it will replace the entire default fields.
@@ -7148,7 +7148,7 @@ paths:
           schema:
             description: Filter by a collection's ID to retrieve the products in it.
             externalDocs:
-              url: https://docs.medusajs.com/v2/resources/storefront-development/products/collections/products
+              url: https://docs.vikrai.com/v2/resources/storefront-development/products/collections/products
               description: 'Storefront guide: Retrieve a collection''s products.'
             items:
               type: string
@@ -7655,7 +7655,7 @@ paths:
             title: region_id
             description: The ID of the region the products are being viewed from. This is required if you're retrieving product variant prices with taxes.
             externalDocs:
-              url: https://docs.medusajs.com/v2/resources/storefront-development/products/price/examples/tax-price
+              url: https://docs.vikrai.com/v2/resources/storefront-development/products/price/examples/tax-price
               description: 'Storefront guide: How to show product variants'' prices with taxes.'
         - name: province
           in: query
@@ -7741,18 +7741,18 @@ paths:
         - lang: JavaScript
           label: JS SDK
           source: |-
-            import Medusa from "@medusajs/js-sdk"
+            import vikrai from "@vikrai/js-sdk"
 
-            let MEDUSA_BACKEND_URL = "http://localhost:9000"
+            let vikrai_BACKEND_URL = "http://localhost:9000"
 
-            if (process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL) {
-              MEDUSA_BACKEND_URL = process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL
+            if (process.env.NEXT_PUBLIC_vikrai_BACKEND_URL) {
+              vikrai_BACKEND_URL = process.env.NEXT_PUBLIC_vikrai_BACKEND_URL
             }
 
-            export const sdk = new Medusa({
-              baseUrl: MEDUSA_BACKEND_URL,
+            export const sdk = new vikrai({
+              baseUrl: vikrai_BACKEND_URL,
               debug: process.env.NODE_ENV === "development",
-              publishableKey: process.env.NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY,
+              publishableKey: process.env.NEXT_PUBLIC_vikrai_PUBLISHABLE_KEY,
             })
 
             sdk.store.product.list()
@@ -7821,7 +7821,7 @@ paths:
       description: Retrieve a product by its ID. You can expand the product's relations or select the fields that should be returned.
       x-authenticated: false
       externalDocs:
-        url: https://docs.medusajs.com/v2/resources/storefront-development/products/price
+        url: https://docs.vikrai.com/v2/resources/storefront-development/products/price
         description: 'Storefront guide: How to retrieve a product variants'' prices.'
       parameters:
         - name: id
@@ -7832,12 +7832,12 @@ paths:
             type: string
         - name: x-publishable-api-key
           in: header
-          description: Publishable API Key created in the Medusa Admin.
+          description: Publishable API Key created in the vikrai Admin.
           required: true
           schema:
             type: string
             externalDocs:
-              url: https://docs.medusajs.com/api/store#publishable-api-key
+              url: https://docs.vikrai.com/api/store#publishable-api-key
         - name: fields
           in: query
           description: Comma-separated fields that should be included in the returned data. if a field is prefixed with `+` it will be added to the default fields, using `-` will remove it from the default fields. without prefix it will replace the entire default fields.
@@ -7857,7 +7857,7 @@ paths:
             title: region_id
             description: The ID of the region the product is being viewed from. This is required if you're retrieving product variant prices with taxes.
             externalDocs:
-              url: https://docs.medusajs.com/v2/resources/storefront-development/products/price/examples/tax-price
+              url: https://docs.vikrai.com/v2/resources/storefront-development/products/price/examples/tax-price
               description: 'Storefront guide: How to show product variants'' prices with taxes.'
         - name: country_code
           in: query
@@ -7921,18 +7921,18 @@ paths:
         - lang: JavaScript
           label: JS SDK
           source: |-
-            import Medusa from "@medusajs/js-sdk"
+            import vikrai from "@vikrai/js-sdk"
 
-            let MEDUSA_BACKEND_URL = "http://localhost:9000"
+            let vikrai_BACKEND_URL = "http://localhost:9000"
 
-            if (process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL) {
-              MEDUSA_BACKEND_URL = process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL
+            if (process.env.NEXT_PUBLIC_vikrai_BACKEND_URL) {
+              vikrai_BACKEND_URL = process.env.NEXT_PUBLIC_vikrai_BACKEND_URL
             }
 
-            export const sdk = new Medusa({
-              baseUrl: MEDUSA_BACKEND_URL,
+            export const sdk = new vikrai({
+              baseUrl: vikrai_BACKEND_URL,
               debug: process.env.NODE_ENV === "development",
-              publishableKey: process.env.NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY,
+              publishableKey: process.env.NEXT_PUBLIC_vikrai_PUBLISHABLE_KEY,
             })
 
             sdk.store.product.retrieve("prod_123")
@@ -7972,17 +7972,17 @@ paths:
       description: Retrieve a list of regions. The regions can be filtered by fields such as `id`. The regions can also be sorted or paginated.
       x-authenticated: false
       externalDocs:
-        url: https://docs.medusajs.com/v2/resources/storefront-development/regions/list
+        url: https://docs.vikrai.com/v2/resources/storefront-development/regions/list
         description: 'Storefront guide: How to retrieve a list of regions.'
       parameters:
         - name: x-publishable-api-key
           in: header
-          description: Publishable API Key created in the Medusa Admin.
+          description: Publishable API Key created in the vikrai Admin.
           required: true
           schema:
             type: string
             externalDocs:
-              url: https://docs.medusajs.com/api/store#publishable-api-key
+              url: https://docs.vikrai.com/api/store#publishable-api-key
         - name: fields
           in: query
           description: Comma-separated fields that should be included in the returned data. if a field is prefixed with `+` it will be added to the default fields, using `-` will remove it from the default fields. without prefix it will replace the entire default fields.
@@ -8095,18 +8095,18 @@ paths:
         - lang: JavaScript
           label: JS SDK
           source: |-
-            import Medusa from "@medusajs/js-sdk"
+            import vikrai from "@vikrai/js-sdk"
 
-            let MEDUSA_BACKEND_URL = "http://localhost:9000"
+            let vikrai_BACKEND_URL = "http://localhost:9000"
 
-            if (process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL) {
-              MEDUSA_BACKEND_URL = process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL
+            if (process.env.NEXT_PUBLIC_vikrai_BACKEND_URL) {
+              vikrai_BACKEND_URL = process.env.NEXT_PUBLIC_vikrai_BACKEND_URL
             }
 
-            export const sdk = new Medusa({
-              baseUrl: MEDUSA_BACKEND_URL,
+            export const sdk = new vikrai({
+              baseUrl: vikrai_BACKEND_URL,
               debug: process.env.NODE_ENV === "development",
-              publishableKey: process.env.NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY,
+              publishableKey: process.env.NEXT_PUBLIC_vikrai_PUBLISHABLE_KEY,
             })
 
             sdk.store.region.list()
@@ -8183,12 +8183,12 @@ paths:
             type: string
         - name: x-publishable-api-key
           in: header
-          description: Publishable API Key created in the Medusa Admin.
+          description: Publishable API Key created in the vikrai Admin.
           required: true
           schema:
             type: string
             externalDocs:
-              url: https://docs.medusajs.com/api/store#publishable-api-key
+              url: https://docs.vikrai.com/api/store#publishable-api-key
         - name: fields
           in: query
           description: Comma-separated fields that should be included in the returned data. if a field is prefixed with `+` it will be added to the default fields, using `-` will remove it from the default fields. without prefix it will replace the entire default fields.
@@ -8203,18 +8203,18 @@ paths:
         - lang: JavaScript
           label: JS SDK
           source: |-
-            import Medusa from "@medusajs/js-sdk"
+            import vikrai from "@vikrai/js-sdk"
 
-            let MEDUSA_BACKEND_URL = "http://localhost:9000"
+            let vikrai_BACKEND_URL = "http://localhost:9000"
 
-            if (process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL) {
-              MEDUSA_BACKEND_URL = process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL
+            if (process.env.NEXT_PUBLIC_vikrai_BACKEND_URL) {
+              vikrai_BACKEND_URL = process.env.NEXT_PUBLIC_vikrai_BACKEND_URL
             }
 
-            export const sdk = new Medusa({
-              baseUrl: MEDUSA_BACKEND_URL,
+            export const sdk = new vikrai({
+              baseUrl: vikrai_BACKEND_URL,
               debug: process.env.NODE_ENV === "development",
-              publishableKey: process.env.NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY,
+              publishableKey: process.env.NEXT_PUBLIC_vikrai_PUBLISHABLE_KEY,
             })
 
             sdk.store.region.retrieve("reg_123")
@@ -8311,12 +8311,12 @@ paths:
       parameters:
         - name: x-publishable-api-key
           in: header
-          description: Publishable API Key created in the Medusa Admin.
+          description: Publishable API Key created in the vikrai Admin.
           required: true
           schema:
             type: string
             externalDocs:
-              url: https://docs.medusajs.com/api/store#publishable-api-key
+              url: https://docs.vikrai.com/api/store#publishable-api-key
   /store/return-reasons:
     get:
       operationId: GetReturnReasons
@@ -8326,12 +8326,12 @@ paths:
       parameters:
         - name: x-publishable-api-key
           in: header
-          description: Publishable API Key created in the Medusa Admin.
+          description: Publishable API Key created in the vikrai Admin.
           required: true
           schema:
             type: string
             externalDocs:
-              url: https://docs.medusajs.com/api/store#publishable-api-key
+              url: https://docs.vikrai.com/api/store#publishable-api-key
         - name: fields
           in: query
           description: Comma-separated fields that should be included in the returned data. if a field is prefixed with `+` it will be added to the default fields, using `-` will remove it from the default fields. without prefix it will replace the entire default fields.
@@ -8441,12 +8441,12 @@ paths:
             type: string
         - name: x-publishable-api-key
           in: header
-          description: Publishable API Key created in the Medusa Admin.
+          description: Publishable API Key created in the vikrai Admin.
           required: true
           schema:
             type: string
             externalDocs:
-              url: https://docs.medusajs.com/api/store#publishable-api-key
+              url: https://docs.vikrai.com/api/store#publishable-api-key
         - name: fields
           in: query
           description: Comma-separated fields that should be included in the returned data. if a field is prefixed with `+` it will be added to the default fields, using `-` will remove it from the default fields. without prefix it will replace the entire default fields.
@@ -8493,18 +8493,18 @@ paths:
 
         The shipping options also be sorted or paginated.
       externalDocs:
-        url: https://docs.medusajs.com/v2/resources/storefront-development/checkout/shipping
+        url: https://docs.vikrai.com/v2/resources/storefront-development/checkout/shipping
         description: 'Storefront guide: How to implement shipping during checkout.'
       x-authenticated: false
       parameters:
         - name: x-publishable-api-key
           in: header
-          description: Publishable API Key created in the Medusa Admin.
+          description: Publishable API Key created in the vikrai Admin.
           required: true
           schema:
             type: string
             externalDocs:
-              url: https://docs.medusajs.com/api/store#publishable-api-key
+              url: https://docs.vikrai.com/api/store#publishable-api-key
         - name: fields
           in: query
           description: Comma-separated fields that should be included in the returned data. if a field is prefixed with `+` it will be added to the default fields, using `-` will remove it from the default fields. without prefix it will replace the entire default fields.
@@ -8583,18 +8583,18 @@ paths:
         - lang: JavaScript
           label: JS SDK
           source: |-
-            import Medusa from "@medusajs/js-sdk"
+            import vikrai from "@vikrai/js-sdk"
 
-            let MEDUSA_BACKEND_URL = "http://localhost:9000"
+            let vikrai_BACKEND_URL = "http://localhost:9000"
 
-            if (process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL) {
-              MEDUSA_BACKEND_URL = process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL
+            if (process.env.NEXT_PUBLIC_vikrai_BACKEND_URL) {
+              vikrai_BACKEND_URL = process.env.NEXT_PUBLIC_vikrai_BACKEND_URL
             }
 
-            export const sdk = new Medusa({
-              baseUrl: MEDUSA_BACKEND_URL,
+            export const sdk = new vikrai({
+              baseUrl: vikrai_BACKEND_URL,
               debug: process.env.NODE_ENV === "development",
-              publishableKey: process.env.NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY,
+              publishableKey: process.env.NEXT_PUBLIC_vikrai_PUBLISHABLE_KEY,
             })
 
             sdk.store.fulfillment.listCartOptions({
@@ -8646,12 +8646,12 @@ paths:
             type: string
         - name: x-publishable-api-key
           in: header
-          description: Publishable API Key created in the Medusa Admin.
+          description: Publishable API Key created in the vikrai Admin.
           required: true
           schema:
             type: string
             externalDocs:
-              url: https://docs.medusajs.com/api/store#publishable-api-key
+              url: https://docs.vikrai.com/api/store#publishable-api-key
         - name: fields
           in: query
           description: |-
@@ -8682,23 +8682,23 @@ paths:
                   type: object
                   description: Custom data that's useful for the fulfillment provider to calculate the price.
                   externalDocs:
-                    url: https://docs.medusajs.com/resources/commerce-modules/fulfillment/shipping-option#data-property
+                    url: https://docs.vikrai.com/resources/commerce-modules/fulfillment/shipping-option#data-property
       x-codeSamples:
         - lang: JavaScript
           label: JS SDK
           source: |-
-            import Medusa from "@medusajs/js-sdk"
+            import vikrai from "@vikrai/js-sdk"
 
-            let MEDUSA_BACKEND_URL = "http://localhost:9000"
+            let vikrai_BACKEND_URL = "http://localhost:9000"
 
-            if (process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL) {
-              MEDUSA_BACKEND_URL = process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL
+            if (process.env.NEXT_PUBLIC_vikrai_BACKEND_URL) {
+              vikrai_BACKEND_URL = process.env.NEXT_PUBLIC_vikrai_BACKEND_URL
             }
 
-            export const sdk = new Medusa({
-              baseUrl: MEDUSA_BACKEND_URL,
+            export const sdk = new vikrai({
+              baseUrl: vikrai_BACKEND_URL,
               debug: process.env.NODE_ENV === "development",
-              publishableKey: process.env.NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY,
+              publishableKey: process.env.NEXT_PUBLIC_vikrai_PUBLISHABLE_KEY,
             })
 
             sdk.store.fulfillment.calculate("so_123", {
@@ -9470,7 +9470,7 @@ components:
         manage_inventory:
           type: boolean
           title: manage_inventory
-          description: Whether the Medusa application manages the variant's inventory. If disabled, the product variant is always considered in stock.
+          description: Whether the vikrai application manages the variant's inventory. If disabled, the product variant is always considered in stock.
         variant_rank:
           type: number
           title: variant_rank
@@ -9682,7 +9682,7 @@ components:
           type: array
           description: The claim's transactions.
           externalDocs:
-            url: https://docs.medusajs.com/v2/resources/commerce-modules/order/transactions
+            url: https://docs.vikrai.com/v2/resources/commerce-modules/order/transactions
             description: Learn more about transactions of orders and associated models.
           items:
             $ref: '#/components/schemas/BaseOrderTransaction'
@@ -10134,7 +10134,7 @@ components:
           type: object
           description: Any data useful for the fulfillment provider to handle the fulfillment.
           externalDocs:
-            url: https://docs.medusajs.com/v2/resources/commerce-modules/fulfillment/shipping-option#data-property
+            url: https://docs.vikrai.com/v2/resources/commerce-modules/fulfillment/shipping-option#data-property
             description: Learn more about the data property.
         packed_at:
           type: string
@@ -10629,7 +10629,7 @@ components:
         manage_inventory:
           type: boolean
           title: manage_inventory
-          description: Whether Medusa manages the variant's inventory quantity. If disabled, the product variant is always considered in stock.
+          description: Whether vikrai manages the variant's inventory quantity. If disabled, the product variant is always considered in stock.
         variant_rank:
           type: number
           title: variant_rank
@@ -10690,7 +10690,7 @@ components:
         required_quantity:
           type: number
           title: required_quantity
-          description: The number of units a single quantity is equivalent to. For example, if a customer orders one quantity of the variant, Medusa checks the availability of the quantity multiplied by the value set for `required_quantity`. When the customer orders the quantity, Medusa reserves the ordered quantity multiplied by the value set for `required_quantity`.
+          description: The number of units a single quantity is equivalent to. For example, if a customer orders one quantity of the variant, vikrai checks the availability of the quantity multiplied by the value set for `required_quantity`. When the customer orders the quantity, vikrai reserves the ordered quantity multiplied by the value set for `required_quantity`.
     AdminCreateProductVariantPrice:
       type: object
       description: The details of a variant's price.
@@ -10968,7 +10968,7 @@ components:
           type: object
           description: The shipping option's data, useful for the fulfillment provider handling its processing.
           externalDocs:
-            url: https://docs.medusajs.com/v2/resources/commerce-modules/fulfillment/shipping-option#data-property
+            url: https://docs.vikrai.com/v2/resources/commerce-modules/fulfillment/shipping-option#data-property
         price_type:
           type: string
           description: The shipping option's price type. If `flat`, the shipping option has a fixed price set in `prices`. Otherwise, the shipping option's price is calculated by the fulfillment provider.
@@ -11162,7 +11162,7 @@ components:
           title: is_combinable
           description: Whether the tax rate should be combined with parent rates.
           externalDocs:
-            url: https://docs.medusajs.com/v2/resources/commerce-modules/tax/tax-rates-and-rules#combinable-tax-rates
+            url: https://docs.vikrai.com/v2/resources/commerce-modules/tax/tax-rates-and-rules#combinable-tax-rates
         metadata:
           type: object
           description: The tax rate's metadata, used to store custom key-value pairs.
@@ -11233,7 +11233,7 @@ components:
               type: boolean
               description: Whether the tax rate should be combined with parent rates.
               externalDocs:
-                url: https://docs.medusajs.com/v2/resources/commerce-modules/tax/tax-rates-and-rules#combinable-tax-rates
+                url: https://docs.vikrai.com/v2/resources/commerce-modules/tax/tax-rates-and-rules#combinable-tax-rates
             metadata:
               type: object
               description: The default tax rate's metadata, used to store custom key-value pairs.
@@ -12827,7 +12827,7 @@ components:
                     type: object
                     description: The data relevant for the fulfillment provider to process this shipment.
                     externalDocs:
-                      url: https://docs.medusajs.com/v2/resources/commerce-modules/order/concepts#data-property
+                      url: https://docs.vikrai.com/v2/resources/commerce-modules/order/concepts#data-property
                   metadata:
                     type: object
                     description: The shipping method's metadata, can hold custom key-value pairs.
@@ -13198,7 +13198,7 @@ components:
           type: array
           description: The exchange's transactions.
           externalDocs:
-            url: https://docs.medusajs.com/v2/resources/commerce-modules/order/transactions
+            url: https://docs.vikrai.com/v2/resources/commerce-modules/order/transactions
           items:
             $ref: '#/components/schemas/BaseOrderTransaction'
         metadata:
@@ -13441,7 +13441,7 @@ components:
           type: object
           description: The fulfillment's data, useful for the third-party provider handling the fulfillment.
           externalDocs:
-            url: https://docs.medusajs.com/v2/resources/commerce-modules/fulfillment/shipping-option#data-property
+            url: https://docs.vikrai.com/v2/resources/commerce-modules/fulfillment/shipping-option#data-property
         metadata:
           type: object
           description: The fulfillment's metadata, can hold custom key-value pairs.
@@ -14906,7 +14906,7 @@ components:
           type: object
           description: Data useful for the fulfillment provider handling it. This is taken from the associated shipping option.
           externalDocs:
-            url: https://docs.medusajs.com/v2/resources/commerce-modules/fulfillment/shipping-option#data-property
+            url: https://docs.vikrai.com/v2/resources/commerce-modules/fulfillment/shipping-option#data-property
         provider_id:
           type: string
           title: provider_id
@@ -15533,7 +15533,7 @@ components:
                     type: object
                     description: The data relevant for the fulfillment provider to process this shipment.
                     externalDocs:
-                      url: https://docs.medusajs.com/v2/resources/commerce-modules/order/concepts#data-property
+                      url: https://docs.vikrai.com/v2/resources/commerce-modules/order/concepts#data-property
                   metadata:
                     type: object
                     description: The shipping method's metadata, can hold custom key-value pairs.
@@ -15913,7 +15913,7 @@ components:
           type: object
           description: The shipping method's data, useful for fulfillment provider handling its fulfillment.
           externalDocs:
-            url: https://docs.medusajs.com/v2/resources/commerce-modules/fulfillment/shipping-option#data-property
+            url: https://docs.vikrai.com/v2/resources/commerce-modules/fulfillment/shipping-option#data-property
         metadata:
           type: object
           description: The shipping method's metadata, can hold custom key-value pairs.
@@ -16005,7 +16005,7 @@ components:
           type: object
           description: The payment's data, useful for processing by the payment provider.
           externalDocs:
-            url: https://docs.medusajs.com/v2/resources/commerce-modules/payment/payment#whats-a-payment
+            url: https://docs.vikrai.com/v2/resources/commerce-modules/payment/payment#whats-a-payment
         created_at:
           type: string
           format: date-time
@@ -16185,7 +16185,7 @@ components:
           type: object
           description: The payment session's data, useful for the payment provider processing the payment.
           externalDocs:
-            url: https://docs.medusajs.com/v2/resources/commerce-modules/payment/payment-session#data-property
+            url: https://docs.vikrai.com/v2/resources/commerce-modules/payment/payment-session#data-property
         context:
           type: object
           description: The context around the payment, such as the customer's details.
@@ -18148,7 +18148,7 @@ components:
         manage_inventory:
           type: boolean
           title: manage_inventory
-          description: Whether the Medusa application manages the variant's inventory quantity and availablility. If disabled, the variant is always considered in stock.
+          description: Whether the vikrai application manages the variant's inventory quantity and availablility. If disabled, the variant is always considered in stock.
         inventory_quantity:
           type: number
           title: inventory_quantity
@@ -19351,7 +19351,7 @@ components:
           type: object
           description: The shipping option's data, useful for the fulfillment provider handling fulfillments created from this option.
           externalDocs:
-            url: https://docs.medusajs.com/v2/resources/commerce-modules/fulfillment/shipping-option#data-property
+            url: https://docs.vikrai.com/v2/resources/commerce-modules/fulfillment/shipping-option#data-property
         metadata:
           type: object
           description: The shipping option's metadata, can hold custom key-value pairs.
@@ -20061,7 +20061,7 @@ components:
           title: is_combinable
           description: Whether the tax rate should be combined with parent rates.
           externalDocs:
-            url: https://docs.medusajs.com/v2/resources/commerce-modules/tax/tax-rates-and-rules#combinable-tax-rates
+            url: https://docs.vikrai.com/v2/resources/commerce-modules/tax/tax-rates-and-rules#combinable-tax-rates
         is_default:
           type: boolean
           title: is_default
@@ -20877,7 +20877,7 @@ components:
         manage_inventory:
           type: boolean
           title: manage_inventory
-          description: Whether the Medusa application manages the variant's inventory. If disabled, the product variant is always considered in stock.
+          description: Whether the vikrai application manages the variant's inventory. If disabled, the product variant is always considered in stock.
         variant_rank:
           type: number
           title: variant_rank
@@ -21201,7 +21201,7 @@ components:
           title: is_combinable
           description: Whether the tax rate should be combined with parent rates.
           externalDocs:
-            url: https://docs.medusajs.com/v2/resources/commerce-modules/tax/tax-rates-and-rules#combinable-tax-rates
+            url: https://docs.vikrai.com/v2/resources/commerce-modules/tax/tax-rates-and-rules#combinable-tax-rates
         metadata:
           type: object
           description: The tax rate's metadata, can hold custom key-value pairs.
@@ -21251,7 +21251,7 @@ components:
         required_quantity:
           type: number
           title: required_quantity
-          description: The number of units a single quantity is equivalent to. For example, if a customer orders one quantity of the variant, Medusa checks the availability of the quantity multiplied by the value set for `required_quantity`. When the customer orders the quantity, Medusa reserves the ordered quantity multiplied by the value set for `required_quantity`.
+          description: The number of units a single quantity is equivalent to. For example, if a customer orders one quantity of the variant, vikrai checks the availability of the quantity multiplied by the value set for `required_quantity`. When the customer orders the quantity, vikrai reserves the ordered quantity multiplied by the value set for `required_quantity`.
     AdminUpsertStockLocationAddress:
       type: object
       description: The details of the stock location address to create.
@@ -22249,7 +22249,7 @@ components:
           type: object
           description: The shipping method's data, useful for fulfillment handling by third-party services.
           externalDocs:
-            url: https://docs.medusajs.com/resources/commerce-modules/cart/concepts#data-property
+            url: https://docs.vikrai.com/resources/commerce-modules/cart/concepts#data-property
         metadata:
           type: object
           description: The shipping method's metadata, can hold custom key-value pairs.
@@ -22968,7 +22968,7 @@ components:
           type: object
           description: Data useful for the fulfillment provider handling it. This is taken from the associated shipping option.
           externalDocs:
-            url: https://docs.medusajs.com/v2/resources/commerce-modules/fulfillment/shipping-option#data-property
+            url: https://docs.vikrai.com/v2/resources/commerce-modules/fulfillment/shipping-option#data-property
         provider_id:
           type: string
           title: provider_id
@@ -23508,7 +23508,7 @@ components:
           type: object
           description: The shipping method's data, useful for fulfillment provider handling its fulfillment.
           externalDocs:
-            url: https://docs.medusajs.com/v2/resources/commerce-modules/fulfillment/shipping-option#data-property
+            url: https://docs.vikrai.com/v2/resources/commerce-modules/fulfillment/shipping-option#data-property
         metadata:
           type: object
           description: The shipping method's metadata, can hold custom key-value pairs.
@@ -23817,7 +23817,7 @@ components:
           type: object
           description: The payment's data, useful for processing by the payment provider.
           externalDocs:
-            url: https://docs.medusajs.com/v2/resources/commerce-modules/payment/payment#whats-a-payment
+            url: https://docs.vikrai.com/v2/resources/commerce-modules/payment/payment#whats-a-payment
         created_at:
           type: string
           format: date-time
@@ -23983,7 +23983,7 @@ components:
           type: object
           description: The payment session's data, useful for the payment provider processing the payment.
           externalDocs:
-            url: https://docs.medusajs.com/resources/commerce-modules/payment/payment-session#data-property
+            url: https://docs.vikrai.com/resources/commerce-modules/payment/payment-session#data-property
         context:
           type: object
           description: The context around the payment, such as the customer's details.
@@ -24506,7 +24506,7 @@ components:
         manage_inventory:
           type: boolean
           title: manage_inventory
-          description: Whether the Medusa application manages the variant's inventory quantity and availablility. If disabled, the variant is always considered in stock.
+          description: Whether the vikrai application manages the variant's inventory quantity and availablility. If disabled, the variant is always considered in stock.
         inventory_quantity:
           type: number
           title: inventory_quantity
@@ -26113,7 +26113,7 @@ components:
           type: array
           description: The claim's transactions.
           externalDocs:
-            url: https://docs.medusajs.com/v2/resources/commerce-modules/order/transactions
+            url: https://docs.vikrai.com/v2/resources/commerce-modules/order/transactions
             description: Learn more about transactions of orders and associated models.
           items:
             $ref: '#/components/schemas/OrderTransaction'
@@ -26272,7 +26272,7 @@ components:
           type: array
           description: The exchange's transactions.
           externalDocs:
-            url: https://docs.medusajs.com/v2/resources/commerce-modules/order/transactions
+            url: https://docs.vikrai.com/v2/resources/commerce-modules/order/transactions
           items:
             $ref: '#/components/schemas/OrderTransaction'
         metadata:
@@ -26834,7 +26834,7 @@ components:
           type: object
           description: The shipping method's data, useful for the fulfillment provider handling the fulfillment.
           externalDocs:
-            url: https://docs.medusajs.com/v2/resources/commerce-modules/order/concepts#data-property
+            url: https://docs.vikrai.com/v2/resources/commerce-modules/order/concepts#data-property
         metadata:
           type: object
           description: The shipping method's metadata, can hold custom key-value pairs.
@@ -27298,7 +27298,7 @@ components:
           title: is_calculated_price_tax_inclusive
           description: Whether the calculated price is tax inclusive.
           externalDocs:
-            url: https://docs.medusajs.com/resources/commerce-modules/pricing/tax-inclusive-pricing
+            url: https://docs.vikrai.com/resources/commerce-modules/pricing/tax-inclusive-pricing
         calculated_amount:
           type: number
           title: calculated_amount
@@ -27320,7 +27320,7 @@ components:
           title: is_original_price_tax_inclusive
           description: Whether the original price is tax inclusive.
           externalDocs:
-            url: https://docs.medusajs.com/resources/commerce-modules/pricing/tax-inclusive-pricing
+            url: https://docs.vikrai.com/resources/commerce-modules/pricing/tax-inclusive-pricing
         original_amount:
           type: number
           title: original_amount
@@ -28123,7 +28123,7 @@ components:
           type: object
           description: The shipping method's data, useful for fulfillment handling by third-party services.
           externalDocs:
-            url: https://docs.medusajs.com/v2/resources/commerce-modules/cart/concepts#data-property
+            url: https://docs.vikrai.com/v2/resources/commerce-modules/cart/concepts#data-property
         metadata:
           type: object
           description: The shipping method's metadata, can hold custom key-value pairs.
@@ -28410,7 +28410,7 @@ components:
           type: object
           description: The shipping option's data, useful for the provider handling fulfillment.
           externalDocs:
-            url: https://docs.medusajs.com/v2/resources/commerce-modules/fulfillment/shipping-option#data-property
+            url: https://docs.vikrai.com/v2/resources/commerce-modules/fulfillment/shipping-option#data-property
         prices:
           type: array
           description: The shipping option's prices.
@@ -28961,7 +28961,7 @@ components:
           type: object
           description: Any data necessary for the payment provider to process the payment.
           externalDocs:
-            url: https://docs.medusajs.com/v2/resources/commerce-modules/payment/payment-session#data-property
+            url: https://docs.vikrai.com/v2/resources/commerce-modules/payment/payment-session#data-property
             description: Learn more about the payment session's data property
       x-schemaName: StoreInitializePaymentSession
     StoreOrder:
@@ -29329,7 +29329,7 @@ components:
           type: object
           description: Data useful for the fulfillment provider handling it. This is taken from the associated shipping option.
           externalDocs:
-            url: https://docs.medusajs.com/v2/resources/commerce-modules/fulfillment/shipping-option#data-property
+            url: https://docs.vikrai.com/v2/resources/commerce-modules/fulfillment/shipping-option#data-property
         provider_id:
           type: string
           title: provider_id
@@ -33437,7 +33437,7 @@ components:
           type: object
           description: The shipping method's data, useful for fulfillment provider handling its fulfillment.
           externalDocs:
-            url: https://docs.medusajs.com/v2/resources/commerce-modules/fulfillment/shipping-option#data-property
+            url: https://docs.vikrai.com/v2/resources/commerce-modules/fulfillment/shipping-option#data-property
         metadata:
           type: object
           description: The shipping method's metadata, can hold custom key-value pairs.
@@ -35216,7 +35216,7 @@ components:
           type: object
           description: The payment session's data, useful for the payment provider processing the payment.
           externalDocs:
-            url: https://docs.medusajs.com/v2/resources/commerce-modules/payment/payment-session#data-property
+            url: https://docs.vikrai.com/v2/resources/commerce-modules/payment/payment-session#data-property
         context:
           type: object
           description: The context around the payment, such as the customer's details.
@@ -35961,16 +35961,16 @@ components:
         manage_inventory:
           type: boolean
           title: manage_inventory
-          description: Whether Medusa manages the variant's inventory. If disabled, the variant is always considered in stock.
+          description: Whether vikrai manages the variant's inventory. If disabled, the variant is always considered in stock.
           externalDocs:
-            url: https://docs.medusajs.com/v2/resources/storefront-development/products/inventory
+            url: https://docs.vikrai.com/v2/resources/storefront-development/products/inventory
             description: 'Storefront guide: How to retrieve a product variant''s inventory details.'
         inventory_quantity:
           type: number
           title: inventory_quantity
           description: The variant's inventory quantity. This property is only available if you pass `+variants.inventory_quantity` in the `fields` query parameter.
           externalDocs:
-            url: https://docs.medusajs.com/v2/resources/storefront-development/products/inventory
+            url: https://docs.vikrai.com/v2/resources/storefront-development/products/inventory
             description: 'Storefront guide: How to retrieve a product variant''s inventory details.'
         variant_rank:
           type: number
@@ -36324,7 +36324,7 @@ components:
           type: object
           description: The shipping option's data, useful for the provider handling fulfillment.
           externalDocs:
-            url: https://docs.medusajs.com/v2/resources/commerce-modules/fulfillment/shipping-option#data-property
+            url: https://docs.vikrai.com/v2/resources/commerce-modules/fulfillment/shipping-option#data-property
         metadata:
           type: object
           description: The shipping option's metadata, can hold custom key-value pairs.
@@ -36744,3 +36744,4 @@ components:
       x-displayName: Reset Password Token
       scheme: bearer
       x-is-auth: false
+

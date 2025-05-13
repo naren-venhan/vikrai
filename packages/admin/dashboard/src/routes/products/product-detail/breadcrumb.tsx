@@ -1,4 +1,4 @@
-import { HttpTypes } from "@medusajs/types"
+import { HttpTypes } from "@vikrai/types"
 import { UIMatch } from "react-router-dom"
 import { useProduct } from "../../../hooks/api"
 import { PRODUCT_DETAIL_FIELDS } from "./constants"
@@ -27,3 +27,4 @@ export const ProductDetailBreadcrumb = (
 
   return <span>{product.title}</span>
 }
+

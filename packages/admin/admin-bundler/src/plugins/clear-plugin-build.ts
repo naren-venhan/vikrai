@@ -7,7 +7,7 @@ interface ClearPluginBuildOptions {
 }
 
 export const clearPluginBuild = (options: ClearPluginBuildOptions): Plugin => ({
-  name: "medusa:clear-plugin-build",
+  name: "vikrai:clear-plugin-build",
   buildStart: async () => {
     const adminDir = path.join(options.outDir, "admin")
     try {
@@ -17,3 +17,4 @@ export const clearPluginBuild = (options: ClearPluginBuildOptions): Plugin => ({
     }
   },
 })
+

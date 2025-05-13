@@ -1,11 +1,11 @@
 {
-  "name": "@medusajs/locking-postgres",
+  "name": "@vikrai/locking-postgres",
   "version": "2.7.1",
-  "description": "Postgres Advisory Locks for Medusa",
+  "description": "Postgres Advisory Locks for vikrai",
   "main": "dist/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/medusajs/medusa",
+    "url": "https://github.com/vikrai/vikrai",
     "directory": "packages/modules/providers/locking-postgres"
   },
   "files": [
@@ -17,10 +17,10 @@
   "engines": {
     "node": ">=20"
   },
-  "author": "Medusa",
+  "author": "vikrai",
   "license": "MIT",
   "devDependencies": {
-    "@medusajs/framework": "2.7.1",
+    "@vikrai/framework": "2.7.1",
     "@mikro-orm/cli": "6.4.3",
     "@mikro-orm/core": "6.4.3",
     "@mikro-orm/migrations": "6.4.3",
@@ -32,7 +32,7 @@
     "typescript": "^5.6.2"
   },
   "peerDependencies": {
-    "@medusajs/framework": "2.7.1"
+    "@vikrai/framework": "2.7.1"
   },
   "scripts": {
     "watch": "tsc --build --watch",
@@ -41,13 +41,14 @@
     "build": "rimraf dist && tsc --build && npm run resolve:aliases",
     "test": "jest --passWithNoTests src",
     "test:integration": "jest --forceExit -- integration-tests/**/__tests__/**/*.spec.ts",
-    "migration:initial": " MIKRO_ORM_CLI_CONFIG=./mikro-orm.config.dev.ts medusa-mikro-orm migration:create --initial -n InitialSetupMigration",
-    "migration:create": " MIKRO_ORM_CLI_CONFIG=./mikro-orm.config.dev.ts medusa-mikro-orm migration:create",
-    "migration:up": " MIKRO_ORM_CLI_CONFIG=./mikro-orm.config.dev.ts medusa-mikro-orm migration:up",
-    "orm:cache:clear": " MIKRO_ORM_CLI_CONFIG=./mikro-orm.config.dev.ts medusa-mikro-orm cache:clear"
+    "migration:initial": " MIKRO_ORM_CLI_CONFIG=./mikro-orm.config.dev.ts vikrai-mikro-orm migration:create --initial -n InitialSetupMigration",
+    "migration:create": " MIKRO_ORM_CLI_CONFIG=./mikro-orm.config.dev.ts vikrai-mikro-orm migration:create",
+    "migration:up": " MIKRO_ORM_CLI_CONFIG=./mikro-orm.config.dev.ts vikrai-mikro-orm migration:up",
+    "orm:cache:clear": " MIKRO_ORM_CLI_CONFIG=./mikro-orm.config.dev.ts vikrai-mikro-orm cache:clear"
   },
   "keywords": [
-    "medusa-providers",
-    "medusa-providers-locking"
+    "vikrai-providers",
+    "vikrai-providers-locking"
   ]
 }
+

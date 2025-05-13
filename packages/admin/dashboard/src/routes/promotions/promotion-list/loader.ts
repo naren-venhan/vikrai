@@ -1,4 +1,4 @@
-import { HttpTypes } from "@medusajs/types"
+import { HttpTypes } from "@vikrai/types"
 import { QueryClient } from "@tanstack/react-query"
 import { promotionsQueryKeys } from "../../../hooks/api/promotions"
 import { sdk } from "../../../lib/client"
@@ -25,3 +25,4 @@ export const promotionsLoader = (client: QueryClient) => {
     )
   }
 }
+

@@ -1,5 +1,6 @@
-import { medusaVitePlugin } from "./plugin"
-import type { MedusaVitePlugin } from "./types"
+import { vikraiVitePlugin } from "./plugin"
+import type { vikraiVitePlugin } from "./types"
 
-export default medusaVitePlugin
-export type { MedusaVitePlugin }
+export default vikraiVitePlugin
+export type { vikraiVitePlugin }
+

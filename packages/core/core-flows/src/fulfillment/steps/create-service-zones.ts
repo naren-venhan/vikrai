@@ -1,9 +1,9 @@
 import {
   CreateServiceZoneDTO,
   IFulfillmentModuleService,
-} from "@medusajs/framework/types"
-import { Modules } from "@medusajs/framework/utils"
-import { StepResponse, createStep } from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/types"
+import { Modules } from "@vikrai/framework/utils"
+import { StepResponse, createStep } from "@vikrai/framework/workflows-sdk"
 
 /**
  * The service zones to create.
@@ -40,3 +40,4 @@ export const createServiceZonesStep = createStep(
     await service.deleteServiceZones(createdServiceZones)
   }
 )
+

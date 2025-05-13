@@ -1,9 +1,9 @@
 import {
   IPromotionModuleService,
   UsageComputedActions,
-} from "@medusajs/framework/types"
-import { Modules } from "@medusajs/framework/utils"
-import { StepResponse, createStep } from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/types"
+import { Modules } from "@vikrai/framework/utils"
+import { StepResponse, createStep } from "@vikrai/framework/workflows-sdk"
 
 export const registerUsageStepId = "register-usage"
 /**
@@ -36,3 +36,4 @@ export const registerUsageStep = createStep(
     await promotionModule.revertUsage(revertData)
   }
 )
+

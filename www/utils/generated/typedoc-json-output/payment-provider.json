@@ -27,7 +27,7 @@
 							"fileName": "utils/src/payment/abstract-payment-provider.ts",
 							"line": 52,
 							"character": 9,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/payment/abstract-payment-provider.ts#L52"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/payment/abstract-payment-provider.ts#L52"
 						}
 					],
 					"signatures": [
@@ -45,7 +45,7 @@
 									},
 									{
 										"kind": "code",
-										"text": "`medusa-config.ts`"
+										"text": "`vikrai-config.ts`"
 									},
 									{
 										"kind": "text",
@@ -58,7 +58,7 @@
 										"content": [
 											{
 												"kind": "code",
-												"text": "```ts\nclass MyPaymentProviderService extends AbstractPaymentProvider<Options> {\n  static validateOptions(options: Record<any, any>) {\n    if (!options.apiKey) {\n      throw new MedusaError(\n        MedusaError.Types.INVALID_DATA,\n        \"API key is required in the provider's options.\"\n      )\n    }\n  }\n}\n```"
+												"text": "```ts\nclass MyPaymentProviderService extends AbstractPaymentProvider<Options> {\n  static validateOptions(options: Record<any, any>) {\n    if (!options.apiKey) {\n      throw new vikraiError(\n        vikraiError.Types.INVALID_DATA,\n        \"API key is required in the provider's options.\"\n      )\n    }\n  }\n}\n```"
 											}
 										]
 									}
@@ -69,7 +69,7 @@
 									"fileName": "utils/src/payment/abstract-payment-provider.ts",
 									"line": 52,
 									"character": 9,
-									"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/payment/abstract-payment-provider.ts#L52"
+									"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/payment/abstract-payment-provider.ts#L52"
 								}
 							],
 							"parameters": [
@@ -128,7 +128,7 @@
 							"fileName": "utils/src/payment/abstract-payment-provider.ts",
 							"line": 102,
 							"character": 2,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/payment/abstract-payment-provider.ts#L102"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/payment/abstract-payment-provider.ts#L102"
 						}
 					],
 					"signatures": [
@@ -142,7 +142,7 @@
 								"summary": [
 									{
 										"kind": "text",
-										"text": "The constructor allows you to access resources from the [module's container](https://docs.medusajs.com/learn/fundamentals/modules/container)\nusing the first parameter, and the module's options using the second parameter.\n\n:::note\n\nA module's options are passed when you register it in the Medusa application.\n\n:::"
+										"text": "The constructor allows you to access resources from the [module's container](https://docs.vikrai.com/learn/fundamentals/modules/container)\nusing the first parameter, and the module's options using the second parameter.\n\n:::note\n\nA module's options are passed when you register it in the vikrai application.\n\n:::"
 									}
 								],
 								"blockTags": [
@@ -151,7 +151,7 @@
 										"content": [
 											{
 												"kind": "code",
-												"text": "```ts\nimport { AbstractPaymentProvider } from \"@medusajs/framework/utils\"\nimport { Logger } from \"@medusajs/framework/types\"\n\ntype Options = {\n  apiKey: string\n}\n\ntype InjectedDependencies = {\n  logger: Logger\n}\n\nclass MyPaymentProviderService extends AbstractPaymentProvider<Options> {\n  protected logger_: Logger\n  protected options_: Options\n  // assuming you're initializing a client\n  protected client\n\n  constructor(\n    container: InjectedDependencies,\n    options: Options\n  ) {\n    super(container, options)\n\n    this.logger_ = container.logger\n    this.options_ = options\n\n    // TODO initialize your client\n  }\n  // ...\n}\n\nexport default MyPaymentProviderService\n```"
+												"text": "```ts\nimport { AbstractPaymentProvider } from \"@vikrai/framework/utils\"\nimport { Logger } from \"@vikrai/framework/types\"\n\ntype Options = {\n  apiKey: string\n}\n\ntype InjectedDependencies = {\n  logger: Logger\n}\n\nclass MyPaymentProviderService extends AbstractPaymentProvider<Options> {\n  protected logger_: Logger\n  protected options_: Options\n  // assuming you're initializing a client\n  protected client\n\n  constructor(\n    container: InjectedDependencies,\n    options: Options\n  ) {\n    super(container, options)\n\n    this.logger_ = container.logger\n    this.options_ = options\n\n    // TODO initialize your client\n  }\n  // ...\n}\n\nexport default MyPaymentProviderService\n```"
 											}
 										]
 									}
@@ -162,7 +162,7 @@
 									"fileName": "utils/src/payment/abstract-payment-provider.ts",
 									"line": 102,
 									"character": 2,
-									"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/payment/abstract-payment-provider.ts#L102"
+									"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/payment/abstract-payment-provider.ts#L102"
 								}
 							],
 							"typeParameters": [
@@ -245,13 +245,13 @@
 										"type": "reference",
 										"target": 44066,
 										"name": "TConfig",
-										"package": "@medusajs/utils",
+										"package": "@vikrai/utils",
 										"qualifiedName": "AbstractPaymentProvider.TConfig",
 										"refersToTypeParameter": true
 									}
 								],
 								"name": "AbstractPaymentProvider",
-								"package": "@medusajs/utils"
+								"package": "@vikrai/utils"
 							}
 						}
 					]
@@ -297,7 +297,7 @@
 							},
 							{
 								"kind": "code",
-								"text": "`medusa-config.ts`"
+								"text": "`vikrai-config.ts`"
 							},
 							{
 								"kind": "text",
@@ -321,7 +321,7 @@
 							"fileName": "utils/src/payment/abstract-payment-provider.ts",
 							"line": 137,
 							"character": 16,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/payment/abstract-payment-provider.ts#L137"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/payment/abstract-payment-provider.ts#L137"
 						}
 					],
 					"type": {
@@ -342,7 +342,7 @@
 							"fileName": "utils/src/payment/abstract-payment-provider.ts",
 							"line": 188,
 							"character": 11,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/payment/abstract-payment-provider.ts#L188"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/payment/abstract-payment-provider.ts#L188"
 						}
 					],
 					"signatures": [
@@ -374,7 +374,7 @@
 									},
 									{
 										"kind": "text",
-										"text": ", which automatically executed this method after authorization.\n- The merchant requests to capture the payment after its associated payment session was authorized.\n- A webhook event occurred that instructs the payment provider to capture the payment session. Learn more about handing webhook events in [this guide](https://docs.medusajs.com/resources/commerce-modules/payment/webhook-events).\n\nIn this method, use the third-party provider to capture the payment."
+										"text": ", which automatically executed this method after authorization.\n- The merchant requests to capture the payment after its associated payment session was authorized.\n- A webhook event occurred that instructs the payment provider to capture the payment session. Learn more about handing webhook events in [this guide](https://docs.vikrai.com/resources/commerce-modules/payment/webhook-events).\n\nIn this method, use the third-party provider to capture the payment."
 									}
 								],
 								"blockTags": [
@@ -400,7 +400,7 @@
 										"content": [
 											{
 												"kind": "code",
-												"text": "```ts\n// other imports...\nimport {\n  CapturePaymentInput,\n  CapturePaymentOutput,\n} from \"@medusajs/framework/types\"\n\nclass MyPaymentProviderService extends AbstractPaymentProvider<\n  Options\n> {\n  async capturePayment(\n    input: CapturePaymentInput\n  ): Promise<CapturePaymentOutput> {\n    const externalId = input.data?.id\n\n      // assuming you have a client that captures the payment\n    const newData = await this.client.capturePayment(externalId)\n    return {data: newData}\n  }\n  // ...\n}\n```"
+												"text": "```ts\n// other imports...\nimport {\n  CapturePaymentInput,\n  CapturePaymentOutput,\n} from \"@vikrai/framework/types\"\n\nclass MyPaymentProviderService extends AbstractPaymentProvider<\n  Options\n> {\n  async capturePayment(\n    input: CapturePaymentInput\n  ): Promise<CapturePaymentOutput> {\n    const externalId = input.data?.id\n\n      // assuming you have a client that captures the payment\n    const newData = await this.client.capturePayment(externalId)\n    return {data: newData}\n  }\n  // ...\n}\n```"
 											}
 										]
 									}
@@ -411,7 +411,7 @@
 									"fileName": "utils/src/payment/abstract-payment-provider.ts",
 									"line": 188,
 									"character": 11,
-									"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/payment/abstract-payment-provider.ts#L188"
+									"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/payment/abstract-payment-provider.ts#L188"
 								}
 							],
 							"parameters": [
@@ -444,7 +444,7 @@
 											"qualifiedName": "CapturePaymentInput"
 										},
 										"name": "CapturePaymentInput",
-										"package": "@medusajs/types"
+										"package": "@vikrai/types"
 									}
 								}
 							],
@@ -462,7 +462,7 @@
 											"qualifiedName": "CapturePaymentOutput"
 										},
 										"name": "CapturePaymentOutput",
-										"package": "@medusajs/types"
+										"package": "@vikrai/types"
 									}
 								],
 								"name": "Promise",
@@ -494,7 +494,7 @@
 							"fileName": "utils/src/payment/abstract-payment-provider.ts",
 							"line": 233,
 							"character": 11,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/payment/abstract-payment-provider.ts#L233"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/payment/abstract-payment-provider.ts#L233"
 						}
 					],
 					"signatures": [
@@ -518,7 +518,7 @@
 									},
 									{
 										"kind": "text",
-										"text": " method.\n\nRefer to [this guide](https://docs.medusajs.com/resources/commerce-modules/payment/payment-flow#3-authorize-payment-session)\nto learn more about how this fits into the payment flow and how to handle required actions.\n\nTo automatically capture the payment after authorization, return the status "
+										"text": " method.\n\nRefer to [this guide](https://docs.vikrai.com/resources/commerce-modules/payment/payment-flow#3-authorize-payment-session)\nto learn more about how this fits into the payment flow and how to handle required actions.\n\nTo automatically capture the payment after authorization, return the status "
 									},
 									{
 										"kind": "code",
@@ -552,7 +552,7 @@
 										"content": [
 											{
 												"kind": "code",
-												"text": "```ts\n// other imports...\nimport {\n  AuthorizePaymentInput,\n  AuthorizePaymentOutput,\n  PaymentSessionStatus\n} from \"@medusajs/framework/types\"\n\n\nclass MyPaymentProviderService extends AbstractPaymentProvider<\n  Options\n> {\n  async authorizePayment(\n    input: AuthorizePaymentInput\n  ): Promise<AuthorizePaymentOutput> {\n    const externalId = input.data?.id\n\n    // assuming you have a client that authorizes the payment\n    const paymentData = await this.client.authorizePayment(externalId)\n\n    return {\n      data: paymentData,\n      status: \"authorized\"\n    }\n  }\n\n  // ...\n}\n```"
+												"text": "```ts\n// other imports...\nimport {\n  AuthorizePaymentInput,\n  AuthorizePaymentOutput,\n  PaymentSessionStatus\n} from \"@vikrai/framework/types\"\n\n\nclass MyPaymentProviderService extends AbstractPaymentProvider<\n  Options\n> {\n  async authorizePayment(\n    input: AuthorizePaymentInput\n  ): Promise<AuthorizePaymentOutput> {\n    const externalId = input.data?.id\n\n    // assuming you have a client that authorizes the payment\n    const paymentData = await this.client.authorizePayment(externalId)\n\n    return {\n      data: paymentData,\n      status: \"authorized\"\n    }\n  }\n\n  // ...\n}\n```"
 											}
 										]
 									}
@@ -563,7 +563,7 @@
 									"fileName": "utils/src/payment/abstract-payment-provider.ts",
 									"line": 233,
 									"character": 11,
-									"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/payment/abstract-payment-provider.ts#L233"
+									"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/payment/abstract-payment-provider.ts#L233"
 								}
 							],
 							"parameters": [
@@ -596,7 +596,7 @@
 											"qualifiedName": "AuthorizePaymentInput"
 										},
 										"name": "AuthorizePaymentInput",
-										"package": "@medusajs/types"
+										"package": "@vikrai/types"
 									}
 								}
 							],
@@ -614,7 +614,7 @@
 											"qualifiedName": "AuthorizePaymentOutput"
 										},
 										"name": "AuthorizePaymentOutput",
-										"package": "@medusajs/types"
+										"package": "@vikrai/types"
 									}
 								],
 								"name": "Promise",
@@ -646,7 +646,7 @@
 							"fileName": "utils/src/payment/abstract-payment-provider.ts",
 							"line": 267,
 							"character": 11,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/payment/abstract-payment-provider.ts#L267"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/payment/abstract-payment-provider.ts#L267"
 						}
 					],
 					"signatures": [
@@ -686,7 +686,7 @@
 										"content": [
 											{
 												"kind": "code",
-												"text": "```ts\n// other imports...\nimport {\n  PaymentProviderError,\n  PaymentProviderSessionResponse,\n} from \"@medusajs/framework/types\"\n\n\nclass MyPaymentProviderService extends AbstractPaymentProvider<\n  Options\n> {\n  async cancelPayment(\n    input: CancelPaymentInput\n  ): Promise<CancelPaymentOutput> {\n    const externalId = input.data?.id\n\n    // assuming you have a client that cancels the payment\n    const paymentData = await this.client.cancelPayment(externalId)\n    return { data: paymentData }\n  }\n\n  // ...\n}\n```"
+												"text": "```ts\n// other imports...\nimport {\n  PaymentProviderError,\n  PaymentProviderSessionResponse,\n} from \"@vikrai/framework/types\"\n\n\nclass MyPaymentProviderService extends AbstractPaymentProvider<\n  Options\n> {\n  async cancelPayment(\n    input: CancelPaymentInput\n  ): Promise<CancelPaymentOutput> {\n    const externalId = input.data?.id\n\n    // assuming you have a client that cancels the payment\n    const paymentData = await this.client.cancelPayment(externalId)\n    return { data: paymentData }\n  }\n\n  // ...\n}\n```"
 											}
 										]
 									}
@@ -697,7 +697,7 @@
 									"fileName": "utils/src/payment/abstract-payment-provider.ts",
 									"line": 267,
 									"character": 11,
-									"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/payment/abstract-payment-provider.ts#L267"
+									"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/payment/abstract-payment-provider.ts#L267"
 								}
 							],
 							"parameters": [
@@ -730,7 +730,7 @@
 											"qualifiedName": "CancelPaymentInput"
 										},
 										"name": "CancelPaymentInput",
-										"package": "@medusajs/types"
+										"package": "@vikrai/types"
 									}
 								}
 							],
@@ -748,7 +748,7 @@
 											"qualifiedName": "CancelPaymentOutput"
 										},
 										"name": "CancelPaymentOutput",
-										"package": "@medusajs/types"
+										"package": "@vikrai/types"
 									}
 								],
 								"name": "Promise",
@@ -780,7 +780,7 @@
 							"fileName": "utils/src/payment/abstract-payment-provider.ts",
 							"line": 312,
 							"character": 11,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/payment/abstract-payment-provider.ts#L312"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/payment/abstract-payment-provider.ts#L312"
 						}
 					],
 					"signatures": [
@@ -820,7 +820,7 @@
 										"content": [
 											{
 												"kind": "code",
-												"text": "```ts\n// other imports...\nimport {\n  InitiatePaymentInput,\n  InitiatePaymentOutput,\n} from \"@medusajs/framework/types\"\n\n\nclass MyPaymentProviderService extends AbstractPaymentProvider<\n  Options\n> {\n  async initiatePayment(\n    input: InitiatePaymentInput\n  ): Promise<InitiatePaymentOutput> {\n    const {\n      amount,\n      currency_code,\n      context: customerDetails\n    } = input\n\n    // assuming you have a client that initializes the payment\n    const response = await this.client.init(\n      amount, currency_code, customerDetails\n    )\n\n    return {\n      id: response.id,\n      data: response,\n    }\n  }\n\n  // ...\n}\n```"
+												"text": "```ts\n// other imports...\nimport {\n  InitiatePaymentInput,\n  InitiatePaymentOutput,\n} from \"@vikrai/framework/types\"\n\n\nclass MyPaymentProviderService extends AbstractPaymentProvider<\n  Options\n> {\n  async initiatePayment(\n    input: InitiatePaymentInput\n  ): Promise<InitiatePaymentOutput> {\n    const {\n      amount,\n      currency_code,\n      context: customerDetails\n    } = input\n\n    // assuming you have a client that initializes the payment\n    const response = await this.client.init(\n      amount, currency_code, customerDetails\n    )\n\n    return {\n      id: response.id,\n      data: response,\n    }\n  }\n\n  // ...\n}\n```"
 											}
 										]
 									}
@@ -831,7 +831,7 @@
 									"fileName": "utils/src/payment/abstract-payment-provider.ts",
 									"line": 312,
 									"character": 11,
-									"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/payment/abstract-payment-provider.ts#L312"
+									"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/payment/abstract-payment-provider.ts#L312"
 								}
 							],
 							"parameters": [
@@ -856,7 +856,7 @@
 											"qualifiedName": "InitiatePaymentInput"
 										},
 										"name": "InitiatePaymentInput",
-										"package": "@medusajs/types"
+										"package": "@vikrai/types"
 									}
 								}
 							],
@@ -874,7 +874,7 @@
 											"qualifiedName": "InitiatePaymentOutput"
 										},
 										"name": "InitiatePaymentOutput",
-										"package": "@medusajs/types"
+										"package": "@vikrai/types"
 									}
 								],
 								"name": "Promise",
@@ -906,7 +906,7 @@
 							"fileName": "utils/src/payment/abstract-payment-provider.ts",
 							"line": 348,
 							"character": 11,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/payment/abstract-payment-provider.ts#L348"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/payment/abstract-payment-provider.ts#L348"
 						}
 					],
 					"signatures": [
@@ -946,7 +946,7 @@
 										"content": [
 											{
 												"kind": "code",
-												"text": "```ts\n// other imports...\nimport {\n  DeletePaymentInput,\n  DeletePaymentOutput,\n} from \"@medusajs/framework/types\"\n\n\nclass MyPaymentProviderService extends AbstractPaymentProvider<\n  Options\n> {\n  async deletePayment(\n    input: DeletePaymentInput\n  ): Promise<DeletePaymentOutput> {\n    const externalId = input.data?.id\n\n    // assuming you have a client that cancels the payment\n    await this.client.cancelPayment(externalId)\n    return {}\n  }\n\n  // ...\n}\n```"
+												"text": "```ts\n// other imports...\nimport {\n  DeletePaymentInput,\n  DeletePaymentOutput,\n} from \"@vikrai/framework/types\"\n\n\nclass MyPaymentProviderService extends AbstractPaymentProvider<\n  Options\n> {\n  async deletePayment(\n    input: DeletePaymentInput\n  ): Promise<DeletePaymentOutput> {\n    const externalId = input.data?.id\n\n    // assuming you have a client that cancels the payment\n    await this.client.cancelPayment(externalId)\n    return {}\n  }\n\n  // ...\n}\n```"
 											}
 										]
 									}
@@ -957,7 +957,7 @@
 									"fileName": "utils/src/payment/abstract-payment-provider.ts",
 									"line": 348,
 									"character": 11,
-									"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/payment/abstract-payment-provider.ts#L348"
+									"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/payment/abstract-payment-provider.ts#L348"
 								}
 							],
 							"parameters": [
@@ -990,7 +990,7 @@
 											"qualifiedName": "DeletePaymentInput"
 										},
 										"name": "DeletePaymentInput",
-										"package": "@medusajs/types"
+										"package": "@vikrai/types"
 									}
 								}
 							],
@@ -1008,7 +1008,7 @@
 											"qualifiedName": "DeletePaymentOutput"
 										},
 										"name": "DeletePaymentOutput",
-										"package": "@medusajs/types"
+										"package": "@vikrai/types"
 									}
 								],
 								"name": "Promise",
@@ -1040,7 +1040,7 @@
 							"fileName": "utils/src/payment/abstract-payment-provider.ts",
 							"line": 393,
 							"character": 11,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/payment/abstract-payment-provider.ts#L393"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/payment/abstract-payment-provider.ts#L393"
 						}
 					],
 					"signatures": [
@@ -1080,7 +1080,7 @@
 										"content": [
 											{
 												"kind": "code",
-												"text": "```ts\n// other imports...\nimport {\n  GetPaymentStatusInput,\n  GetPaymentStatusOutput,\n  PaymentSessionStatus\n} from \"@medusajs/framework/types\"\n\n\nclass MyPaymentProviderService extends AbstractPaymentProvider<\n  Options\n> {\n  async getPaymentStatus(\n    input: GetPaymentStatusInput\n  ): Promise<GetPaymentStatusOutput> {\n    const externalId = input.data?.id\n\n    // assuming you have a client that retrieves the payment status\n    const status = await this.client.getStatus(externalId)\n\n    switch (status) {\n      case \"requires_capture\":\n          return {status: \"authorized\"}\n        case \"success\":\n          return {status: \"captured\"}\n        case \"canceled\":\n          return {status: \"canceled\"}\n        default:\n          return {status: \"pending\"}\n     }\n  }\n\n  // ...\n}\n```"
+												"text": "```ts\n// other imports...\nimport {\n  GetPaymentStatusInput,\n  GetPaymentStatusOutput,\n  PaymentSessionStatus\n} from \"@vikrai/framework/types\"\n\n\nclass MyPaymentProviderService extends AbstractPaymentProvider<\n  Options\n> {\n  async getPaymentStatus(\n    input: GetPaymentStatusInput\n  ): Promise<GetPaymentStatusOutput> {\n    const externalId = input.data?.id\n\n    // assuming you have a client that retrieves the payment status\n    const status = await this.client.getStatus(externalId)\n\n    switch (status) {\n      case \"requires_capture\":\n          return {status: \"authorized\"}\n        case \"success\":\n          return {status: \"captured\"}\n        case \"canceled\":\n          return {status: \"canceled\"}\n        default:\n          return {status: \"pending\"}\n     }\n  }\n\n  // ...\n}\n```"
 											}
 										]
 									}
@@ -1091,7 +1091,7 @@
 									"fileName": "utils/src/payment/abstract-payment-provider.ts",
 									"line": 393,
 									"character": 11,
-									"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/payment/abstract-payment-provider.ts#L393"
+									"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/payment/abstract-payment-provider.ts#L393"
 								}
 							],
 							"parameters": [
@@ -1124,7 +1124,7 @@
 											"qualifiedName": "GetPaymentStatusInput"
 										},
 										"name": "GetPaymentStatusInput",
-										"package": "@medusajs/types"
+										"package": "@vikrai/types"
 									}
 								}
 							],
@@ -1142,7 +1142,7 @@
 											"qualifiedName": "GetPaymentStatusOutput"
 										},
 										"name": "GetPaymentStatusOutput",
-										"package": "@medusajs/types"
+										"package": "@vikrai/types"
 									}
 								],
 								"name": "Promise",
@@ -1174,7 +1174,7 @@
 							"fileName": "utils/src/payment/abstract-payment-provider.ts",
 							"line": 430,
 							"character": 11,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/payment/abstract-payment-provider.ts#L430"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/payment/abstract-payment-provider.ts#L430"
 						}
 					],
 					"signatures": [
@@ -1214,7 +1214,7 @@
 										"content": [
 											{
 												"kind": "code",
-												"text": "```ts\n// other imports...\nimport {\n  RefundPaymentInput,\n  RefundPaymentOutput,\n} from \"@medusajs/framework/types\"\n\n\nclass MyPaymentProviderService extends AbstractPaymentProvider<\n  Options\n> {\n  async refundPayment(\n    input: RefundPaymentInput\n  ): Promise<RefundPaymentOutput> {\n    const externalId = input.data?.id\n\n    // assuming you have a client that refunds the payment\n    const newData = await this.client.refund(\n        externalId,\n        input.amount\n      )\n\n    return {data: newData}\n  }\n  // ...\n}\n```"
+												"text": "```ts\n// other imports...\nimport {\n  RefundPaymentInput,\n  RefundPaymentOutput,\n} from \"@vikrai/framework/types\"\n\n\nclass MyPaymentProviderService extends AbstractPaymentProvider<\n  Options\n> {\n  async refundPayment(\n    input: RefundPaymentInput\n  ): Promise<RefundPaymentOutput> {\n    const externalId = input.data?.id\n\n    // assuming you have a client that refunds the payment\n    const newData = await this.client.refund(\n        externalId,\n        input.amount\n      )\n\n    return {data: newData}\n  }\n  // ...\n}\n```"
 											}
 										]
 									}
@@ -1225,7 +1225,7 @@
 									"fileName": "utils/src/payment/abstract-payment-provider.ts",
 									"line": 430,
 									"character": 11,
-									"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/payment/abstract-payment-provider.ts#L430"
+									"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/payment/abstract-payment-provider.ts#L430"
 								}
 							],
 							"parameters": [
@@ -1258,7 +1258,7 @@
 											"qualifiedName": "RefundPaymentInput"
 										},
 										"name": "RefundPaymentInput",
-										"package": "@medusajs/types"
+										"package": "@vikrai/types"
 									}
 								}
 							],
@@ -1276,7 +1276,7 @@
 											"qualifiedName": "RefundPaymentOutput"
 										},
 										"name": "RefundPaymentOutput",
-										"package": "@medusajs/types"
+										"package": "@vikrai/types"
 									}
 								],
 								"name": "Promise",
@@ -1308,7 +1308,7 @@
 							"fileName": "utils/src/payment/abstract-payment-provider.ts",
 							"line": 462,
 							"character": 11,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/payment/abstract-payment-provider.ts#L462"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/payment/abstract-payment-provider.ts#L462"
 						}
 					],
 					"signatures": [
@@ -1340,7 +1340,7 @@
 										"content": [
 											{
 												"kind": "code",
-												"text": "```ts\n// other imports...\nimport {\n  RetrievePaymentInput,\n  RetrievePaymentOutput,\n} from \"@medusajs/framework/types\"\n\n\nclass MyPaymentProviderService extends AbstractPaymentProvider<\n  Options\n> {\n  async retrievePayment(\n    input: RetrievePaymentInput\n  ): Promise<RetrievePaymentOutput> {\n    const externalId = input.data?.id\n\n    // assuming you have a client that retrieves the payment\n    return await this.client.retrieve(externalId)\n  }\n  // ...\n}\n```"
+												"text": "```ts\n// other imports...\nimport {\n  RetrievePaymentInput,\n  RetrievePaymentOutput,\n} from \"@vikrai/framework/types\"\n\n\nclass MyPaymentProviderService extends AbstractPaymentProvider<\n  Options\n> {\n  async retrievePayment(\n    input: RetrievePaymentInput\n  ): Promise<RetrievePaymentOutput> {\n    const externalId = input.data?.id\n\n    // assuming you have a client that retrieves the payment\n    return await this.client.retrieve(externalId)\n  }\n  // ...\n}\n```"
 											}
 										]
 									}
@@ -1351,7 +1351,7 @@
 									"fileName": "utils/src/payment/abstract-payment-provider.ts",
 									"line": 462,
 									"character": 11,
-									"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/payment/abstract-payment-provider.ts#L462"
+									"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/payment/abstract-payment-provider.ts#L462"
 								}
 							],
 							"parameters": [
@@ -1384,7 +1384,7 @@
 											"qualifiedName": "RetrievePaymentInput"
 										},
 										"name": "RetrievePaymentInput",
-										"package": "@medusajs/types"
+										"package": "@vikrai/types"
 									}
 								}
 							],
@@ -1402,7 +1402,7 @@
 											"qualifiedName": "RetrievePaymentOutput"
 										},
 										"name": "RetrievePaymentOutput",
-										"package": "@medusajs/types"
+										"package": "@vikrai/types"
 									}
 								],
 								"name": "Promise",
@@ -1434,7 +1434,7 @@
 							"fileName": "utils/src/payment/abstract-payment-provider.ts",
 							"line": 510,
 							"character": 11,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/payment/abstract-payment-provider.ts#L510"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/payment/abstract-payment-provider.ts#L510"
 						}
 					],
 					"signatures": [
@@ -1484,7 +1484,7 @@
 										"content": [
 											{
 												"kind": "code",
-												"text": "```ts\n// other imports...\nimport {\n  UpdatePaymentInput,\n  UpdatePaymentOutput,\n} from \"@medusajs/framework/types\"\n\n\nclass MyPaymentProviderService extends AbstractPaymentProvider<\n  Options\n> {\n  async updatePayment(\n    input: UpdatePaymentInput\n  ): Promise<UpdatePaymentOutput> {\n    const { amount, currency_code, context } = input\n    const externalId = input.data?.id\n\n    // Validate context.customer\n    if (!context || !context.customer) {\n      throw new Error(\"Context must include a valid customer.\");\n    }\n\n    // assuming you have a client that updates the payment\n    const response = await this.client.update(\n      externalId,\n        {\n          amount,\n          currency_code,\n          context.customer\n        }\n      )\n\n    return response\n  }\n\n  // ...\n}\n```"
+												"text": "```ts\n// other imports...\nimport {\n  UpdatePaymentInput,\n  UpdatePaymentOutput,\n} from \"@vikrai/framework/types\"\n\n\nclass MyPaymentProviderService extends AbstractPaymentProvider<\n  Options\n> {\n  async updatePayment(\n    input: UpdatePaymentInput\n  ): Promise<UpdatePaymentOutput> {\n    const { amount, currency_code, context } = input\n    const externalId = input.data?.id\n\n    // Validate context.customer\n    if (!context || !context.customer) {\n      throw new Error(\"Context must include a valid customer.\");\n    }\n\n    // assuming you have a client that updates the payment\n    const response = await this.client.update(\n      externalId,\n        {\n          amount,\n          currency_code,\n          context.customer\n        }\n      )\n\n    return response\n  }\n\n  // ...\n}\n```"
 											}
 										]
 									}
@@ -1495,7 +1495,7 @@
 									"fileName": "utils/src/payment/abstract-payment-provider.ts",
 									"line": 510,
 									"character": 11,
-									"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/payment/abstract-payment-provider.ts#L510"
+									"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/payment/abstract-payment-provider.ts#L510"
 								}
 							],
 							"parameters": [
@@ -1528,7 +1528,7 @@
 											"qualifiedName": "UpdatePaymentInput"
 										},
 										"name": "UpdatePaymentInput",
-										"package": "@medusajs/types"
+										"package": "@vikrai/types"
 									}
 								}
 							],
@@ -1546,7 +1546,7 @@
 											"qualifiedName": "UpdatePaymentOutput"
 										},
 										"name": "UpdatePaymentOutput",
-										"package": "@medusajs/types"
+										"package": "@vikrai/types"
 									}
 								],
 								"name": "Promise",
@@ -1578,7 +1578,7 @@
 							"fileName": "utils/src/payment/abstract-payment-provider.ts",
 							"line": 584,
 							"character": 11,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/payment/abstract-payment-provider.ts#L584"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/payment/abstract-payment-provider.ts#L584"
 						}
 					],
 					"signatures": [
@@ -1592,7 +1592,7 @@
 								"summary": [
 									{
 										"kind": "text",
-										"text": "This method is executed when a webhook event is received from the third-party payment provider. Use it\nto process the action of the payment provider.\n\nLearn more in [this documentation](https://docs.medusajs.com/resources/commerce-modules/payment/webhook-events)"
+										"text": "This method is executed when a webhook event is received from the third-party payment provider. Use it\nto process the action of the payment provider.\n\nLearn more in [this documentation](https://docs.vikrai.com/resources/commerce-modules/payment/webhook-events)"
 									}
 								],
 								"blockTags": [
@@ -1617,7 +1617,7 @@
 											},
 											{
 												"kind": "text",
-												"text": ", the payment is captured within Medusa as well.\nIf the "
+												"text": ", the payment is captured within vikrai as well.\nIf the "
 											},
 											{
 												"kind": "code",
@@ -1633,7 +1633,7 @@
 											},
 											{
 												"kind": "text",
-												"text": ", the associated payment session is authorized within Medusa."
+												"text": ", the associated payment session is authorized within vikrai."
 											}
 										]
 									},
@@ -1642,7 +1642,7 @@
 										"content": [
 											{
 												"kind": "code",
-												"text": "```ts\n// other imports...\nimport {\n  BigNumber\n} from \"@medusajs/framework/utils\"\nimport {\n  ProviderWebhookPayload,\n  WebhookActionResult\n} from \"@medusajs/framework/types\"\n\n\nclass MyPaymentProviderService extends AbstractPaymentProvider<\n  Options\n> {\n  async getWebhookActionAndData(\n    payload: ProviderWebhookPayload[\"payload\"]\n  ): Promise<WebhookActionResult> {\n    const {\n      data,\n      rawData,\n      headers\n    } = payload\n\n    try {\n      switch(data.event_type) {\n        case \"authorized_amount\":\n          return {\n            action: \"authorized\",\n            data: {\n              session_id: (data.metadata as Record<string, any>).session_id,\n              amount: new BigNumber(data.amount as number)\n            }\n          }\n        case \"success\":\n          return {\n            action: \"captured\",\n            data: {\n              session_id: (data.metadata as Record<string, any>).session_id,\n              amount: new BigNumber(data.amount as number)\n            }\n          }\n        default:\n          return {\n            action: \"not_supported\"\n          }\n      }\n    } catch (e) {\n      return {\n        action: \"failed\",\n        data: {\n          session_id: (data.metadata as Record<string, any>).session_id,\n          amount: new BigNumber(data.amount as number)\n        }\n      }\n    }\n  }\n\n  // ...\n}\n```"
+												"text": "```ts\n// other imports...\nimport {\n  BigNumber\n} from \"@vikrai/framework/utils\"\nimport {\n  ProviderWebhookPayload,\n  WebhookActionResult\n} from \"@vikrai/framework/types\"\n\n\nclass MyPaymentProviderService extends AbstractPaymentProvider<\n  Options\n> {\n  async getWebhookActionAndData(\n    payload: ProviderWebhookPayload[\"payload\"]\n  ): Promise<WebhookActionResult> {\n    const {\n      data,\n      rawData,\n      headers\n    } = payload\n\n    try {\n      switch(data.event_type) {\n        case \"authorized_amount\":\n          return {\n            action: \"authorized\",\n            data: {\n              session_id: (data.metadata as Record<string, any>).session_id,\n              amount: new BigNumber(data.amount as number)\n            }\n          }\n        case \"success\":\n          return {\n            action: \"captured\",\n            data: {\n              session_id: (data.metadata as Record<string, any>).session_id,\n              amount: new BigNumber(data.amount as number)\n            }\n          }\n        default:\n          return {\n            action: \"not_supported\"\n          }\n      }\n    } catch (e) {\n      return {\n        action: \"failed\",\n        data: {\n          session_id: (data.metadata as Record<string, any>).session_id,\n          amount: new BigNumber(data.amount as number)\n        }\n      }\n    }\n  }\n\n  // ...\n}\n```"
 											}
 										]
 									}
@@ -1653,7 +1653,7 @@
 									"fileName": "utils/src/payment/abstract-payment-provider.ts",
 									"line": 584,
 									"character": 11,
-									"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/payment/abstract-payment-provider.ts#L584"
+									"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/payment/abstract-payment-provider.ts#L584"
 								}
 							],
 							"parameters": [
@@ -1839,7 +1839,7 @@
 											"qualifiedName": "WebhookActionResult"
 										},
 										"name": "WebhookActionResult",
-										"package": "@medusajs/types"
+										"package": "@vikrai/types"
 									}
 								],
 								"name": "Promise",
@@ -1894,7 +1894,7 @@
 					"fileName": "utils/src/payment/abstract-payment-provider.ts",
 					"line": 25,
 					"character": 22,
-					"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/payment/abstract-payment-provider.ts#L25"
+					"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/payment/abstract-payment-provider.ts#L25"
 				}
 			],
 			"typeParameters": [
@@ -1933,7 +1933,7 @@
 						"qualifiedName": "IPaymentProvider"
 					},
 					"name": "IPaymentProvider",
-					"package": "@medusajs/types"
+					"package": "@vikrai/types"
 				}
 			]
 		}
@@ -1946,7 +1946,7 @@
 			]
 		}
 	],
-	"packageName": "@medusajs/utils",
+	"packageName": "@vikrai/utils",
 	"symbolIdMap": {
 		"44054": {
 			"sourceFileName": "../../../../packages/core/utils/src/payment/abstract-payment-provider.ts",
@@ -2138,3 +2138,4 @@
 		}
 	}
 }
+

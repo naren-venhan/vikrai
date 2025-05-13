@@ -122,14 +122,14 @@ export const SidebarItemLink = ({
             "block w-full rounded-docs_sm",
             !isTitleOneWord && "break-words",
             active && [
-              "bg-medusa-bg-base",
+              "bg-vikrai-bg-base",
               "shadow-elevation-card-rest dark:shadow-elevation-card-rest-dark",
-              "text-medusa-fg-base",
+              "text-vikrai-fg-base",
             ],
             !active && [
-              !nested && "text-medusa-fg-subtle",
-              nested && "text-medusa-fg-muted",
-              "hover:bg-medusa-bg-base-hover lg:hover:bg-medusa-bg-subtle-hover",
+              !nested && "text-vikrai-fg-subtle",
+              nested && "text-vikrai-fg-muted",
+              "hover:bg-vikrai-bg-base-hover lg:hover:bg-vikrai-bg-subtle-hover",
             ],
             "text-compact-small-plus",
             "flex justify-between items-center gap-[6px]",
@@ -174,3 +174,4 @@ export const SidebarItemLink = ({
     </li>
   )
 }
+

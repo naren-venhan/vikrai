@@ -3,7 +3,7 @@ import { join } from "node:path"
 import outdent from "outdent"
 
 export async function writeStaticFiles(plugins?: string[]) {
-  const outDir = join(process.cwd(), ".medusa/client")
+  const outDir = join(process.cwd(), ".vikrai/client")
 
   await mkdir(outDir, { recursive: true })
 
@@ -18,7 +18,7 @@ export async function writeStaticFiles(plugins?: string[]) {
 
 async function writeCSSFile(outDir: string) {
   const css = outdent`
-    @import "@medusajs/dashboard/css";
+    @import "@vikrai/dashboard/css";
 
     @tailwind base;
     @tailwind components;
@@ -34,7 +34,7 @@ function getPluginName(index: number) {
 
 async function writeEntryFile(outDir: string, plugins?: string[]) {
   const entry = outdent`
-    import App from "@medusajs/dashboard";
+    import App from "@vikrai/dashboard";
     import React from "react";
     import ReactDOM from "react-dom/client";
     import "./index.css";
@@ -46,7 +46,7 @@ async function writeEntryFile(outDir: string, plugins?: string[]) {
     let root = null
 
     if (!root) {
-      root = ReactDOM.createRoot(document.getElementById("medusa"))
+      root = ReactDOM.createRoot(document.getElementById("vikrai"))
     }
 
     
@@ -84,7 +84,7 @@ async function writeHTMLFile(outDir: string) {
         </head>
 
         <body>
-            <div id="medusa"></div>
+            <div id="vikrai"></div>
             <script type="module" src="./entry.jsx"></script>
         </body>
     </html>
@@ -92,3 +92,4 @@ async function writeHTMLFile(outDir: string) {
 
   await writeFile(join(outDir, "index.html"), html)
 }
+

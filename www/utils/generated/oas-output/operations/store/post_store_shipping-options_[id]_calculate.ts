@@ -13,12 +13,12 @@
  *       type: string
  *   - name: x-publishable-api-key
  *     in: header
- *     description: Publishable API Key created in the Medusa Admin.
+ *     description: Publishable API Key created in the vikrai Admin.
  *     required: true
  *     schema:
  *       type: string
  *       externalDocs:
- *         url: https://docs.medusajs.com/api/store#publishable-api-key
+ *         url: https://docs.vikrai.com/api/store#publishable-api-key
  *   - name: fields
  *     in: query
  *     description: |-
@@ -50,23 +50,23 @@
  *             type: object
  *             description: Custom data that's useful for the fulfillment provider to calculate the price.
  *             externalDocs:
- *               url: https://docs.medusajs.com/resources/commerce-modules/fulfillment/shipping-option#data-property
+ *               url: https://docs.vikrai.com/resources/commerce-modules/fulfillment/shipping-option#data-property
  * x-codeSamples:
  *   - lang: JavaScript
  *     label: JS SDK
  *     source: |-
- *       import Medusa from "@medusajs/js-sdk"
+ *       import vikrai from "@vikrai/js-sdk"
  * 
- *       let MEDUSA_BACKEND_URL = "http://localhost:9000"
+ *       let vikrai_BACKEND_URL = "http://localhost:9000"
  * 
- *       if (process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL) {
- *         MEDUSA_BACKEND_URL = process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL
+ *       if (process.env.NEXT_PUBLIC_vikrai_BACKEND_URL) {
+ *         vikrai_BACKEND_URL = process.env.NEXT_PUBLIC_vikrai_BACKEND_URL
  *       }
  * 
- *       export const sdk = new Medusa({
- *         baseUrl: MEDUSA_BACKEND_URL,
+ *       export const sdk = new vikrai({
+ *         baseUrl: vikrai_BACKEND_URL,
  *         debug: process.env.NODE_ENV === "development",
- *         publishableKey: process.env.NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY,
+ *         publishableKey: process.env.NEXT_PUBLIC_vikrai_PUBLISHABLE_KEY,
  *       })
  * 
  *       sdk.store.fulfillment.calculate("so_123", {

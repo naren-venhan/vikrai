@@ -12,18 +12,18 @@ const pkgs = [
     .map((p) => p.replace(/^\./, `<rootDir>`)),
 ].flat(Infinity)
 
-const reMedusa = /medusa$/
-const medusaDir = pkgs.find((p) => reMedusa.exec(p))
-const medusaBuildDirs = [`dist`].map((dir) => path.join(medusaDir, dir))
+const reVikrai = /vikrai$/
+const vikraiDir = pkgs.find((p) => reVikrai.exec(p))
+const vikraiBuildDirs = [`dist`].map((dir) => path.join(vikraiDir, dir))
 const builtTestsDirs = pkgs
   .filter((p) => fs.existsSync(path.join(p, `src`)))
   .map((p) => path.join(p, `__tests__`))
 const distDirs = pkgs.map((p) => path.join(p, `dist`))
 const ignoreDirs = [].concat(
-  medusaBuildDirs,
+  vikraiBuildDirs,
   builtTestsDirs,
   distDirs,
-  "<rootDir>/packages/medusa-react/*"
+  "<rootDir>/packages/vikrai-react/*"
 )
 
 const coverageDirs = pkgs.map((p) => path.join(p, `src/**/*.js`))
@@ -41,7 +41,13 @@ module.exports = {
     "<rootDir>/packages/modules/*/jest.config.js",
     "<rootDir>/packages/modules/providers/*/jest.config.js",
   ],
-  modulePathIgnorePatterns: ignoreDirs,
+  modulePathIgnorePatterns: [
+    ...pkgs.map((p) => path.join(p, "dist")),
+    vikraiBuildDirs,
+    "<rootDir>/.yarn",
+    "<rootDir>/node_modules",
+    "<rootDir>/packages/vikrai-react/*"
+  ],
   coveragePathIgnorePatterns: ignoreDirs,
   testPathIgnorePatterns: [
     `<rootDir>/examples/`,

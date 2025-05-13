@@ -1,7 +1,7 @@
-import { IPaymentModuleService } from "@medusajs/framework/types"
+import { IPaymentModuleService } from "@vikrai/framework/types"
 
-import { moduleIntegrationTestRunner } from "@medusajs/test-utils"
-import { Modules } from "@medusajs/framework/utils"
+import { moduleIntegrationTestRunner } from "@vikrai/test-utils"
+import { Modules } from "@vikrai/framework/utils"
 
 jest.setTimeout(30000)
 
@@ -46,3 +46,4 @@ moduleIntegrationTestRunner<IPaymentModuleService>({
     })
   },
 })
+

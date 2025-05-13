@@ -2,18 +2,18 @@ import {
   configLoader,
   container,
   logger,
-  MedusaAppLoader,
-} from "@medusajs/framework"
-import { MedusaAppOutput, MedusaModule } from "@medusajs/framework/modules-sdk"
-import { ContainerRegistrationKeys, Modules } from "@medusajs/framework/utils"
-import { initDb, TestDatabaseUtils } from "@medusajs/test-utils"
-import { IndexTypes, ModulesSdkTypes } from "@medusajs/types"
+  vikraiAppLoader,
+} from "@vikrai/framework"
+import { vikraiAppOutput, vikraiModule } from "@vikrai/framework/modules-sdk"
+import { ContainerRegistrationKeys, Modules } from "@vikrai/framework/utils"
+import { initDb, TestDatabaseUtils } from "@vikrai/test-utils"
+import { IndexTypes, ModulesSdkTypes } from "@vikrai/types"
 import { Configuration } from "@utils"
 import { asValue } from "awilix"
 import path from "path"
 import { setTimeout } from "timers/promises"
 import { EventBusServiceMock } from "../__fixtures__"
-import { dbName } from "../__fixtures__/medusa-config"
+import { dbName } from "../__fixtures__/vikrai-config"
 import { updateRemovedSchema } from "../__fixtures__/update-removed-schema"
 import { updatedSchema } from "../__fixtures__/updated-schema"
 
@@ -27,14 +27,14 @@ const dbUtils = TestDatabaseUtils.dbTestUtilFactory()
 jest.setTimeout(300000)
 
 let isFirstTime = true
-let medusaAppLoader!: MedusaAppLoader
+let vikraiAppLoader!: vikraiAppLoader
 let index: IndexTypes.IIndexService
 
 const beforeAll_ = async () => {
   try {
     await configLoader(
       path.join(__dirname, "./../__fixtures__"),
-      "medusa-config"
+      "vikrai-config"
     )
 
     console.log(`Creating database ${dbName}`)
@@ -46,19 +46,19 @@ const beforeAll_ = async () => {
       [ContainerRegistrationKeys.PG_CONNECTION]: asValue(dbUtils.pgConnection_),
     })
 
-    medusaAppLoader = new MedusaAppLoader()
+    vikraiAppLoader = new vikraiAppLoader()
 
     // Migrations
-    await medusaAppLoader.runModulesMigrations()
-    const linkPlanner = await medusaAppLoader.getLinksExecutionPlanner()
+    await vikraiAppLoader.runModulesMigrations()
+    const linkPlanner = await vikraiAppLoader.getLinksExecutionPlanner()
     const plan = await linkPlanner.createPlan()
     await linkPlanner.executePlan(plan)
 
     // Clear partially loaded instances
-    MedusaModule.clearInstances()
+    vikraiModule.clearInstances()
 
     // Bootstrap modules
-    const globalApp = await medusaAppLoader.load()
+    const globalApp = await vikraiAppLoader.load()
     container.register({
       [ContainerRegistrationKeys.QUERY]: asValue(queryMock),
       [ContainerRegistrationKeys.REMOTE_QUERY]: asValue(queryMock),
@@ -86,7 +86,7 @@ const beforeEach_ = async () => {
   }
 
   try {
-    await medusaAppLoader.runModulesLoader()
+    await vikraiAppLoader.runModulesLoader()
   } catch (error) {
     console.error("Error runner modules loaders", error?.message)
     throw error
@@ -103,17 +103,17 @@ const afterEach_ = async () => {
 }
 
 describe("IndexModuleService syncIndexConfig", function () {
-  let medusaApp: MedusaAppOutput
-  let indexMetadataService: ModulesSdkTypes.IMedusaInternalService<any>
-  let indexSyncService: ModulesSdkTypes.IMedusaInternalService<any>
-  let dataSynchronizer: ModulesSdkTypes.IMedusaInternalService<any>
+  let vikraiApp: vikraiAppOutput
+  let indexMetadataService: ModulesSdkTypes.IvikraiInternalService<any>
+  let indexSyncService: ModulesSdkTypes.IvikraiInternalService<any>
+  let dataSynchronizer: ModulesSdkTypes.IvikraiInternalService<any>
   let onApplicationPrepareShutdown!: () => Promise<void>
   let onApplicationShutdown!: () => Promise<void>
 
   beforeAll(async () => {
-    medusaApp = await beforeAll_()
-    onApplicationPrepareShutdown = medusaApp.onApplicationPrepareShutdown
-    onApplicationShutdown = medusaApp.onApplicationShutdown
+    vikraiApp = await beforeAll_()
+    onApplicationPrepareShutdown = vikraiApp.onApplicationPrepareShutdown
+    onApplicationShutdown = vikraiApp.onApplicationShutdown
   })
 
   afterAll(async () => {
@@ -317,3 +317,4 @@ describe("IndexModuleService syncIndexConfig", function () {
     expect(spyDataSynchronizer_).toHaveBeenCalledTimes(1)
   })
 })
+

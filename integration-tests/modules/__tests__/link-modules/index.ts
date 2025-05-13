@@ -1,11 +1,11 @@
-import { getMigrationPlanner, initialize } from "@medusajs/link-modules"
-import { MedusaModule } from "@medusajs/modules-sdk"
-import { medusaIntegrationTestRunner } from "@medusajs/test-utils"
-import { ModuleJoinerConfig } from "@medusajs/types"
+import { getMigrationPlanner, initialize } from "@vikrai/link-modules"
+import { vikraiModule } from "@vikrai/modules-sdk"
+import { vikraiIntegrationTestRunner } from "@vikrai/test-utils"
+import { ModuleJoinerConfig } from "@vikrai/types"
 
 jest.setTimeout(5000000)
 
-medusaIntegrationTestRunner({
+vikraiIntegrationTestRunner({
   testSuite: ({ dbConfig: { clientUrl } }) => {
     let DB_URL
     let links
@@ -53,7 +53,7 @@ medusaIntegrationTestRunner({
         },
       }
 
-      jest.spyOn(MedusaModule, "getLoadedModules").mockImplementation((() => {
+      jest.spyOn(vikraiModule, "getLoadedModules").mockImplementation((() => {
         return [
           {
             moduleA: {
@@ -270,3 +270,4 @@ medusaIntegrationTestRunner({
     })
   },
 })
+

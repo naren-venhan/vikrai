@@ -7,7 +7,7 @@ post:
     chooses their preferred shipping option.
   externalDocs:
     url: >-
-      https://docs.medusajs.com/v2/resources/storefront-development/checkout/shipping
+      https://docs.vikrai.com/v2/resources/storefront-development/checkout/shipping
     description: 'Storefront guide: How to implement shipping during checkout.'
   x-authenticated: false
   parameters:
@@ -19,12 +19,12 @@ post:
         type: string
     - name: x-publishable-api-key
       in: header
-      description: Publishable API Key created in the Medusa Admin.
+      description: Publishable API Key created in the vikrai Admin.
       required: true
       schema:
         type: string
         externalDocs:
-          url: https://docs.medusajs.com/api/store#publishable-api-key
+          url: https://docs.vikrai.com/api/store#publishable-api-key
     - name: fields
       in: query
       description: >-
@@ -63,7 +63,7 @@ post:
                 provider to process the shipment.
               externalDocs:
                 url: >-
-                  https://docs.medusajs.com/v2/resources/storefront-development/checkout/shipping#data-request-body-parameter
+                  https://docs.vikrai.com/v2/resources/storefront-development/checkout/shipping#data-request-body-parameter
                 description: Learn more about the data parameter.
   x-codeSamples:
     - lang: JavaScript
@@ -106,3 +106,4 @@ post:
         ```
       description: Emitted when a cart's details are updated.
       deprecated: false
+

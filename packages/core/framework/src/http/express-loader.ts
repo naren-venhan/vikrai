@@ -7,12 +7,12 @@ import morgan from "morgan"
 import path from "path"
 import { logger } from "../logger"
 import { configManager } from "../config"
-import { MedusaRequest, MedusaResponse } from "./types"
-import { dynamicImport } from "@medusajs/utils"
+import { vikraiRequest, vikraiResponse } from "./types"
+import { dynamicImport } from "@vikrai/utils"
 
 const NOISY_ENDPOINTS_CHUNKS = ["@fs", "@id", "@vite", "@react", "node_modules"]
 
-const isHealthCheck = (req: MedusaRequest) => req.path === "/health"
+const isHealthCheck = (req: vikraiRequest) => req.path === "/health"
 
 export async function expressLoader({ app }: { app: Express }): Promise<{
   app: Express
@@ -79,7 +79,7 @@ export async function expressLoader({ app }: { app: Express }): Promise<{
    * Method to skip logging HTTP requests. We skip in test environment
    * and also exclude files served by vite during development
    */
-  function shouldSkipHttpLog(req: MedusaRequest, res: MedusaResponse) {
+  function shouldSkipHttpLog(req: vikraiRequest, res: vikraiResponse) {
     return (
       isTest ||
       isHealthCheck(req) ||
@@ -153,3 +153,4 @@ export async function expressLoader({ app }: { app: Express }): Promise<{
 
   return { app, shutdown }
 }
+

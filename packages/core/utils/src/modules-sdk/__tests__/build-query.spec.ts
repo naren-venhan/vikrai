@@ -1,4 +1,4 @@
-import { FindConfig } from "@medusajs/types"
+import { FindConfig } from "@vikrai/types"
 import { SoftDeletableFilterKey } from "../../dal/mikro-orm/mikro-orm-soft-deletable-filter"
 import { buildQuery } from "../build-query"
 
@@ -108,3 +108,4 @@ describe("buildQuery", () => {
     expect(result.options).toHaveProperty("customOption", "value")
   })
 })
+

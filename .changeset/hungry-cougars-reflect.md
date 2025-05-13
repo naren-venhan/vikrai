@@ -1,9 +1,10 @@
 ---
-"@medusajs/dashboard": patch
-"@medusajs/js-sdk": patch
-"@medusajs/tax": patch
-"@medusajs/types": patch
-"@medusajs/medusa": patch
+"@vikrai/dashboard": patch
+"@vikrai/js-sdk": patch
+"@vikrai/tax": patch
+"@vikrai/types": patch
+"@vikrai/vikrai": patch
 ---
 
-feat(dashboard, js-sdk, medusa, tax, types): custom tax providers
+feat(dashboard, js-sdk, vikrai, tax, types): custom tax providers
+

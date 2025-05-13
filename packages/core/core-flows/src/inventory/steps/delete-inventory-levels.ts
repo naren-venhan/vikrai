@@ -1,7 +1,7 @@
-import { IInventoryService } from "@medusajs/framework/types"
-import { StepResponse, createStep } from "@medusajs/framework/workflows-sdk"
+import { IInventoryService } from "@vikrai/framework/types"
+import { StepResponse, createStep } from "@vikrai/framework/workflows-sdk"
 
-import { Modules } from "@medusajs/framework/utils"
+import { Modules } from "@vikrai/framework/utils"
 
 /**
  * The IDs of inventory levels to delete.
@@ -31,3 +31,4 @@ export const deleteInventoryLevelsStep = createStep(
     await service.restoreInventoryLevels(prevLevelIds)
   }
 )
+

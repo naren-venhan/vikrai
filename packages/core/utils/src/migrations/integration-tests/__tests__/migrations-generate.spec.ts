@@ -165,7 +165,7 @@ describe("Generate migrations", () => {
     expect(await fs.exists(run1.fileName))
     expect(await fs.exists(".snapshot-foo.json")).toBeFalsy()
     expect(
-      await fs.exists(".snapshot-medusa-my-test-generate.json")
+      await fs.exists(".snapshot-vikrai-my-test-generate.json")
     ).toBeTruthy()
 
     const Car = model.define("Car", {
@@ -181,3 +181,4 @@ describe("Generate migrations", () => {
     expect(run1.fileName).not.toEqual(run2.fileName)
   })
 })
+

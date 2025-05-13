@@ -1,4 +1,4 @@
-import { model } from "@medusajs/framework/utils"
+import { model } from "@vikrai/framework/utils"
 
 const PricePreference = model
   .define("PricePreference", {
@@ -17,3 +17,4 @@ const PricePreference = model
   ])
 
 export default PricePreference
+

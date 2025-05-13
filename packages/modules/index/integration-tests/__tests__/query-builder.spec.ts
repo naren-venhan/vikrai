@@ -2,18 +2,18 @@ import {
   configLoader,
   container,
   logger,
-  MedusaAppLoader,
-} from "@medusajs/framework"
-import { MedusaAppOutput, MedusaModule } from "@medusajs/framework/modules-sdk"
-import { IndexTypes } from "@medusajs/framework/types"
-import { ContainerRegistrationKeys, Modules } from "@medusajs/framework/utils"
-import { initDb, TestDatabaseUtils } from "@medusajs/test-utils"
+  vikraiAppLoader,
+} from "@vikrai/framework"
+import { vikraiAppOutput, vikraiModule } from "@vikrai/framework/modules-sdk"
+import { IndexTypes } from "@vikrai/framework/types"
+import { ContainerRegistrationKeys, Modules } from "@vikrai/framework/utils"
+import { initDb, TestDatabaseUtils } from "@vikrai/test-utils"
 import { EntityManager } from "@mikro-orm/postgresql"
 import { IndexData, IndexRelation } from "@models"
 import { asValue } from "awilix"
 import path from "path"
 import { EventBusServiceMock } from "../__fixtures__"
-import { dbName } from "../__fixtures__/medusa-config"
+import { dbName } from "../__fixtures__/vikrai-config"
 
 const eventBusMock = new EventBusServiceMock()
 const queryMock = jest.fn().mockReturnValue({
@@ -25,13 +25,13 @@ const dbUtils = TestDatabaseUtils.dbTestUtilFactory()
 jest.setTimeout(300000)
 
 let isFirstTime = true
-let medusaAppLoader!: MedusaAppLoader
+let vikraiAppLoader!: vikraiAppLoader
 
 const beforeAll_ = async () => {
   try {
     await configLoader(
       path.join(__dirname, "./../__fixtures__"),
-      "medusa-config"
+      "vikrai-config"
     )
 
     console.log(`Creating database ${dbName}`)
@@ -44,19 +44,19 @@ const beforeAll_ = async () => {
       [ContainerRegistrationKeys.PG_CONNECTION]: asValue(dbUtils.pgConnection_),
     })
 
-    medusaAppLoader = new MedusaAppLoader(container as any)
+    vikraiAppLoader = new vikraiAppLoader(container as any)
 
     // Migrations
-    await medusaAppLoader.runModulesMigrations()
-    const linkPlanner = await medusaAppLoader.getLinksExecutionPlanner()
+    await vikraiAppLoader.runModulesMigrations()
+    const linkPlanner = await vikraiAppLoader.getLinksExecutionPlanner()
     const plan = await linkPlanner.createPlan()
     await linkPlanner.executePlan(plan)
 
     // Clear partially loaded instances
-    MedusaModule.clearInstances()
+    vikraiModule.clearInstances()
 
     // Bootstrap modules
-    const globalApp = await medusaAppLoader.load()
+    const globalApp = await vikraiAppLoader.load()
 
     const index = container.resolve(Modules.INDEX)
 
@@ -82,7 +82,7 @@ const beforeEach_ = async () => {
   }
 
   try {
-    await medusaAppLoader.runModulesLoader()
+    await vikraiAppLoader.runModulesLoader()
   } catch (error) {
     console.error("Error runner modules loaders", error?.message)
     throw error
@@ -99,15 +99,15 @@ const afterEach_ = async () => {
 }
 
 describe("IndexModuleService query", function () {
-  let medusaApp: MedusaAppOutput
+  let vikraiApp: vikraiAppOutput
   let module: IndexTypes.IIndexService
   let onApplicationPrepareShutdown!: () => Promise<void>
   let onApplicationShutdown!: () => Promise<void>
 
   beforeAll(async () => {
-    medusaApp = await beforeAll_()
-    onApplicationPrepareShutdown = medusaApp.onApplicationPrepareShutdown
-    onApplicationShutdown = medusaApp.onApplicationShutdown
+    vikraiApp = await beforeAll_()
+    onApplicationPrepareShutdown = vikraiApp.onApplicationPrepareShutdown
+    onApplicationShutdown = vikraiApp.onApplicationShutdown
   })
 
   afterAll(async () => {
@@ -119,10 +119,10 @@ describe("IndexModuleService query", function () {
   beforeEach(async () => {
     await beforeEach_()
 
-    module = medusaApp.sharedContainer!.resolve(Modules.INDEX)
+    module = vikraiApp.sharedContainer!.resolve(Modules.INDEX)
 
     const manager = (
-      (medusaApp.sharedContainer!.resolve(Modules.INDEX) as any).container_
+      (vikraiApp.sharedContainer!.resolve(Modules.INDEX) as any).container_
         .manager as EntityManager
     ).fork()
 
@@ -928,3 +928,4 @@ describe("IndexModuleService query", function () {
     ])
   })
 })
+

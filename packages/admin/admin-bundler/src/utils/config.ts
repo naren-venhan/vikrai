@@ -1,4 +1,4 @@
-import { VIRTUAL_MODULES } from "@medusajs/admin-shared"
+import { VIRTUAL_MODULES } from "@vikrai/admin-shared"
 import path from "path"
 import type { InlineConfig } from "vite"
 import { injectTailwindCSS } from "../plugins/inject-tailwindcss"
@@ -10,12 +10,12 @@ export async function getViteConfig(
 ): Promise<InlineConfig> {
   const { searchForWorkspaceRoot, mergeConfig } = await import("vite")
   const { default: react } = await import("@vitejs/plugin-react")
-  const { default: medusa } = await import("@medusajs/admin-vite-plugin")
+  const { default: vikrai } = await import("@vikrai/admin-vite-plugin")
 
   const getPort = await import("get-port")
   const hmrPort = await getPort.default()
 
-  const root = path.resolve(process.cwd(), ".medusa/client")
+  const root = path.resolve(process.cwd(), ".vikrai/client")
 
   const backendUrl = options.backendUrl ?? ""
   const storefrontUrl = options.storefrontUrl ?? ""
@@ -33,9 +33,9 @@ export async function getViteConfig(
         "react/jsx-runtime",
         "react-dom/client",
         "react-router-dom",
-        "@medusajs/ui",
-        "@medusajs/dashboard",
-        "@medusajs/js-sdk",
+        "@vikrai/ui",
+        "@vikrai/dashboard",
+        "@vikrai/js-sdk",
         "@tanstack/react-query",
       ],
       exclude: [...VIRTUAL_MODULES],
@@ -63,7 +63,7 @@ export async function getViteConfig(
         plugins: options.plugins,
       }),
       react(),
-      medusa({
+      vikrai({
         sources: options.sources,
       }),
     ],
@@ -76,3 +76,4 @@ export async function getViteConfig(
 
   return baseConfig
 }
+

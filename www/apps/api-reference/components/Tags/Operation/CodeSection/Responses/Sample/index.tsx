@@ -41,7 +41,7 @@ const TagsOperationCodeSectionResponsesSample = ({
                   examples.find((ex) => ex.value === event.target.value)
                 )
               }
-              className="border-medusa-border-base my-1 w-full rounded-sm border p-0.5"
+              className="border-vikrai-border-base my-1 w-full rounded-sm border p-0.5"
             >
               {examples.map((example, index) => (
                 <option value={example.value} key={index}>
@@ -72,3 +72,4 @@ export default TagsOperationCodeSectionResponsesSample
 const getLanguageFromMedia = (media: string) => {
   return media.substring(media.indexOf("/"))
 }
+

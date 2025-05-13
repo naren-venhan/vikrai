@@ -1,5 +1,5 @@
-import { medusaIntegrationTestRunner } from "@medusajs/test-utils"
-import { Modules } from "@medusajs/utils"
+import { vikraiIntegrationTestRunner } from "@vikrai/test-utils"
+import { Modules } from "@vikrai/utils"
 import {
   adminHeaders,
   createAdminUser,
@@ -10,7 +10,7 @@ import { createOrderSeeder } from "../../fixtures/order"
 
 jest.setTimeout(300000)
 
-medusaIntegrationTestRunner({
+vikraiIntegrationTestRunner({
   testSuite: ({ dbConnection, getContainer, api }) => {
     describe("Transfer Order flow (Admin)", () => {
       let order
@@ -195,7 +195,7 @@ medusaIntegrationTestRunner({
             "/admin/customers",
             {
               first_name: "guest",
-              email: "guest@medusajs.com",
+              email: "guest@vikrai.com",
             },
             adminHeaders
           )
@@ -215,7 +215,7 @@ medusaIntegrationTestRunner({
         expect(err.response.data).toEqual(
           expect.objectContaining({
             type: "invalid_data",
-            message: `Cannot transfer order: ${order.id} to a guest customer account: guest@medusajs.com`,
+            message: `Cannot transfer order: ${order.id} to a guest customer account: guest@vikrai.com`,
           })
         )
       })
@@ -667,3 +667,4 @@ medusaIntegrationTestRunner({
     })
   },
 })
+

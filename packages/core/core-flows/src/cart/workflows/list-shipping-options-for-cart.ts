@@ -4,22 +4,22 @@ import {
   transform,
   WorkflowData,
   WorkflowResponse,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { useQueryGraphStep, validatePresenceOfStep } from "../../common"
 import { useRemoteQueryStep } from "../../common/steps/use-remote-query"
 import { cartFieldsForPricingContext } from "../utils/fields"
 import {
   AdditionalData,
   ListShippingOptionsForCartWorkflowInput,
-} from "@medusajs/types"
-import { isDefined } from "@medusajs/framework/utils"
+} from "@vikrai/types"
+import { isDefined } from "@vikrai/framework/utils"
 import { pricingContextResult } from "../utils/schemas"
 
 export const listShippingOptionsForCartWorkflowId =
   "list-shipping-options-for-cart"
 /**
  * This workflow lists the shipping options of a cart. It's executed by the
- * [List Shipping Options Store API Route](https://docs.medusajs.com/api/store#shipping-options_getshippingoptions).
+ * [List Shipping Options Store API Route](https://docs.vikrai.com/api/store#shipping-options_getshippingoptions).
  *
  * :::note
  *
@@ -59,8 +59,8 @@ export const listShippingOptionsForCartWorkflowId =
  * You can consume the `setPricingContext` hook to add the `location_id` context to the prices calculation:
  * 
  * ```ts
- * import { listShippingOptionsForCartWorkflow } from "@medusajs/medusa/core-flows";
- * import { StepResponse } from "@medusajs/workflows-sdk";
+ * import { listShippingOptionsForCartWorkflow } from "@vikrai/vikrai/core-flows";
+ * import { StepResponse } from "@vikrai/workflows-sdk";
  * 
  * listShippingOptionsForCartWorkflow.hooks.setPricingContext((
  *   { cart, fulfillmentSetIds, additional_data }, { container }
@@ -75,7 +75,7 @@ export const listShippingOptionsForCartWorkflowId =
  * 
  * :::note
  * 
- * Learn more about prices calculation context in the [Prices Calculation](https://docs.medusajs.com/resources/commerce-modules/pricing/price-calculation) documentation.
+ * Learn more about prices calculation context in the [Prices Calculation](https://docs.vikrai.com/resources/commerce-modules/pricing/price-calculation) documentation.
  * 
  * :::
  */
@@ -274,3 +274,4 @@ export const listShippingOptionsForCartWorkflow = createWorkflow(
     })
   }
 )
+

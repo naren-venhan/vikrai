@@ -1,4 +1,4 @@
-import { MedusaError } from "@medusajs/framework/utils"
+import { vikraiError } from "@vikrai/framework/utils"
 import Scrypt from "scrypt-kdf"
 import { EmailPassAuthService } from "../../src/services/emailpass"
 jest.setTimeout(100000)
@@ -119,7 +119,7 @@ describe("Email password auth provider", () => {
   it("creates a new auth identity if it doesn't exist", async () => {
     const authServiceSpies = {
       retrieve: jest.fn().mockImplementation(() => {
-        throw new MedusaError(MedusaError.Types.NOT_FOUND, "Not found")
+        throw new vikraiError(vikraiError.Types.NOT_FOUND, "Not found")
       }),
       create: jest.fn().mockImplementation(() => {
         return {
@@ -185,7 +185,7 @@ describe("Email password auth provider", () => {
   it("throws if auth identity with email doesn't exist", async () => {
     const authServiceSpies = {
       retrieve: jest.fn().mockImplementation(() => {
-        throw new MedusaError(MedusaError.Types.NOT_FOUND, "Not found")
+        throw new vikraiError(vikraiError.Types.NOT_FOUND, "Not found")
       }),
       create: jest.fn().mockImplementation(() => {}),
     }
@@ -200,3 +200,4 @@ describe("Email password auth provider", () => {
     expect(resp.error).toEqual("Invalid email or password")
   })
 })
+

@@ -1,14 +1,14 @@
-import { ConfigModule, PluginDetails } from "@medusajs/types"
+import { ConfigModule, PluginDetails } from "@vikrai/types"
 import fs from "fs/promises"
 import path from "path"
 import { isString } from "./is-string"
 import { readDir } from "./read-dir-recursive"
 
-const MEDUSA_APP_SOURCE_PATH = "src"
-const MEDUSA_PLUGIN_SOURCE_PATH = ".medusa/server/src"
-const MEDUSA_PLUGIN_OPTIONS_FILE_PATH =
-  ".medusa/server/medusa-plugin-options.json"
-export const MEDUSA_PROJECT_NAME = "project-plugin"
+const vikrai_APP_SOURCE_PATH = "src"
+const vikrai_PLUGIN_SOURCE_PATH = ".vikrai/server/src"
+const vikrai_PLUGIN_OPTIONS_FILE_PATH =
+  ".vikrai/server/vikrai-plugin-options.json"
+export const vikrai_PROJECT_NAME = "project-plugin"
 
 function createPluginId(name: string): string {
   return name
@@ -45,7 +45,7 @@ async function resolvePluginPkgFile(
 }
 
 /**
- * Reads the "medusa-plugin-options.json" file from the plugin root
+ * Reads the "vikrai-plugin-options.json" file from the plugin root
  * directory and returns its contents as an object.
  */
 async function resolvePluginOptions(
@@ -53,7 +53,7 @@ async function resolvePluginOptions(
 ): Promise<Record<string, any>> {
   try {
     const contents = await fs.readFile(
-      path.join(pluginRootDir, MEDUSA_PLUGIN_OPTIONS_FILE_PATH),
+      path.join(pluginRootDir, vikrai_PLUGIN_OPTIONS_FILE_PATH),
       "utf-8"
     )
     return JSON.parse(contents)
@@ -83,7 +83,7 @@ async function resolvePlugin(
 
   const name = pkgJSON.contents.name || pluginPath
 
-  const resolve = path.join(resolvedPath, MEDUSA_PLUGIN_SOURCE_PATH)
+  const resolve = path.join(resolvedPath, vikrai_PLUGIN_SOURCE_PATH)
   const pluginStaticOptions = await resolvePluginOptions(resolvedPath)
   const modules = await readDir(path.join(resolve, "modules"), {
     ignoreMissing: true,
@@ -113,7 +113,7 @@ async function resolvePlugin(
     admin: adminConfig,
     modules: modules.map((mod) => {
       return {
-        resolve: `${pluginPath}/${MEDUSA_PLUGIN_SOURCE_PATH}/modules/${mod.name}`,
+        resolve: `${pluginPath}/${vikrai_PLUGIN_SOURCE_PATH}/modules/${mod.name}`,
         options: pluginOptions,
       }
     }),
@@ -123,7 +123,7 @@ async function resolvePlugin(
 export async function getResolvedPlugins(
   rootDirectory: string,
   configModule: ConfigModule,
-  isMedusaProject = false
+  isvikraiProject = false
 ): Promise<PluginDetails[]> {
   const resolved = await Promise.all(
     (configModule?.plugins || []).map(async (plugin) => {
@@ -134,12 +134,12 @@ export async function getResolvedPlugins(
     })
   )
 
-  if (isMedusaProject) {
-    const extensionDirectory = path.join(rootDirectory, MEDUSA_APP_SOURCE_PATH)
+  if (isvikraiProject) {
+    const extensionDirectory = path.join(rootDirectory, vikrai_APP_SOURCE_PATH)
     resolved.push({
       resolve: extensionDirectory,
-      name: MEDUSA_PROJECT_NAME,
-      id: createPluginId(MEDUSA_PROJECT_NAME),
+      name: vikrai_PROJECT_NAME,
+      id: createPluginId(vikrai_PROJECT_NAME),
       admin: {
         type: "local",
         resolve: path.join(extensionDirectory, "admin"),
@@ -151,3 +151,4 @@ export async function getResolvedPlugins(
 
   return resolved
 }
+

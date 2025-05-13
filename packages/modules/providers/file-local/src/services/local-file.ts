@@ -1,8 +1,8 @@
-import { FileTypes, LocalFileServiceOptions } from "@medusajs/framework/types"
+import { FileTypes, LocalFileServiceOptions } from "@vikrai/framework/types"
 import {
   AbstractFileProviderService,
-  MedusaError,
-} from "@medusajs/framework/utils"
+  vikraiError,
+} from "@vikrai/framework/utils"
 import { createReadStream } from "fs"
 import fs from "fs/promises"
 import path from "path"
@@ -31,12 +31,12 @@ export class LocalFileService extends AbstractFileProviderService {
     file: FileTypes.ProviderUploadFileDTO
   ): Promise<FileTypes.ProviderFileResultDTO> {
     if (!file) {
-      throw new MedusaError(MedusaError.Types.INVALID_DATA, `No file provided`)
+      throw new vikraiError(vikraiError.Types.INVALID_DATA, `No file provided`)
     }
 
     if (!file.filename) {
-      throw new MedusaError(
-        MedusaError.Types.INVALID_DATA,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_DATA,
         `No filename provided`
       )
     }
@@ -117,8 +117,8 @@ export class LocalFileService extends AbstractFileProviderService {
     try {
       await fs.access(filePath, fs.constants.F_OK)
     } catch {
-      throw new MedusaError(
-        MedusaError.Types.NOT_FOUND,
+      throw new vikraiError(
+        vikraiError.Types.NOT_FOUND,
         `File with key ${file.fileKey} not found`
       )
     }
@@ -128,7 +128,7 @@ export class LocalFileService extends AbstractFileProviderService {
 
   /**
    * Returns the pre-signed URL that the client (frontend) can use to trigger
-   * a file upload. In this case, the Medusa backend will implement the
+   * a file upload. In this case, the vikrai backend will implement the
    * "/upload" endpoint to perform the file upload.
    *
    * Since, we do not want the client to perform link detection on the frontend
@@ -145,8 +145,8 @@ export class LocalFileService extends AbstractFileProviderService {
     fileData: FileTypes.ProviderGetPresignedUploadUrlDTO
   ): Promise<FileTypes.ProviderFileResultDTO> {
     if (!fileData?.filename) {
-      throw new MedusaError(
-        MedusaError.Types.INVALID_DATA,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_DATA,
         `No filename provided`
       )
     }
@@ -188,3 +188,4 @@ export class LocalFileService extends AbstractFileProviderService {
     return relativePath
   }
 }
+

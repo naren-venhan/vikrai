@@ -1,4 +1,4 @@
-import { BigNumberInput, CartLikeWithTotals } from "@medusajs/types"
+import { BigNumberInput, CartLikeWithTotals } from "@vikrai/types"
 import { BigNumber } from "../big-number"
 import { calculateCreditLinesTotal } from "../credit-lines"
 import { GetItemTotalInput, getLineItemsTotals } from "../line-item"
@@ -273,3 +273,4 @@ export function decorateCartTotals(
 
   return cart
 }
+

@@ -1,4 +1,4 @@
-import { HttpTypes } from "@medusajs/types"
+import { HttpTypes } from "@vikrai/types"
 import { Client } from "../client"
 import { ClientHeaders } from "../types"
 
@@ -16,7 +16,7 @@ export class RefundReason {
 
   /**
    * This method retrieves a list of refund reasons. It sends a request to the 
-   * [List Refund Reasons](https://docs.medusajs.com/api/admin#refund-reasons_getrefundreasons)
+   * [List Refund Reasons](https://docs.vikrai.com/api/admin#refund-reasons_getrefundreasons)
    * API route.
    * 
    * @param query - Filters and pagination configurations.
@@ -59,7 +59,7 @@ export class RefundReason {
    * })
    * ```
    * 
-   * Learn more about the `fields` property in the [API reference](https://docs.medusajs.com/api/admin#select-fields-and-relations).
+   * Learn more about the `fields` property in the [API reference](https://docs.vikrai.com/api/admin#select-fields-and-relations).
    * 
    */
   async list(query?: HttpTypes.RefundReasonFilters, headers?: ClientHeaders) {
@@ -72,3 +72,4 @@ export class RefundReason {
     )
   }
 }
+

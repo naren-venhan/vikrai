@@ -1,5 +1,5 @@
-import { MedusaError, isPresent } from "@medusajs/framework/utils"
-import { createStep } from "@medusajs/framework/workflows-sdk"
+import { vikraiError, isPresent } from "@vikrai/framework/utils"
+import { createStep } from "@vikrai/framework/workflows-sdk"
 
 /**
  * The details of the line items to validate.
@@ -53,10 +53,11 @@ export const validateLineItemPricesStep = createStep(
     }
 
     if (priceNotFound.length > 0) {
-      throw new MedusaError(
-        MedusaError.Types.INVALID_DATA,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_DATA,
         `Items ${priceNotFound.join(", ")} do not have a price`
       )
     }
   }
 )
+

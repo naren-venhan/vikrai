@@ -7,13 +7,13 @@ import {
   LineItemTaxLineDTO,
   ProductDTO,
   ProductVariantDTO,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import {
   isDefined,
   isPresent,
   MathBN,
   PriceListType,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 
 interface PrepareItemLineItemInput {
   title?: string
@@ -198,3 +198,4 @@ export function prepareAdjustmentsData(data: CreateOrderAdjustmentDTO[]) {
     provider_id: d.promotion_id,
   }))
 }
+

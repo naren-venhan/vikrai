@@ -1,4 +1,4 @@
-import { PromotionTypeValues } from "@medusajs/framework/types"
+import { PromotionTypeValues } from "@vikrai/framework/types"
 
 export interface CreatePromotionDTO {
   code: string
@@ -14,3 +14,4 @@ export interface UpdatePromotionDTO {
   is_automatic?: boolean
   campaign_id?: string | null
 }
+

@@ -273,7 +273,7 @@ export interface CreateAccountHolderDTO {
    */
   context: PaymentProviderContext & {
     /**
-     * The customer information from Medusa.
+     * The customer information from vikrai.
      */
     customer: PaymentCustomerDTO
   }
@@ -295,7 +295,7 @@ export interface UpdateAccountHolderDTO {
    */
   context: PaymentProviderContext & {
     /**
-     * The account holder information from Medusa.
+     * The account holder information from vikrai.
      */
     account_holder: PaymentAccountHolderDTO
   }
@@ -389,3 +389,4 @@ export interface CreatePaymentMethodDTO {
    */
   context: PaymentProviderContext
 }
+

@@ -1,4 +1,4 @@
-import { Label, Switch } from "@medusajs/ui"
+import { Label, Switch } from "@vikrai/ui"
 
 export default function SwitchSmall() {
   return (
@@ -10,3 +10,4 @@ export default function SwitchSmall() {
     </div>
   )
 }
+

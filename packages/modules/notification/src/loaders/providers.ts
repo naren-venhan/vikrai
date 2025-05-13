@@ -1,14 +1,14 @@
-import { moduleProviderLoader } from "@medusajs/framework/modules-sdk"
+import { moduleProviderLoader } from "@vikrai/framework/modules-sdk"
 import {
   LoaderOptions,
   ModuleProvider,
   ModulesSdkTypes,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import {
   ContainerRegistrationKeys,
   lowerCaseFirst,
   promiseAll,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 import { NotificationProvider } from "@models"
 import { NotificationProviderService } from "@services"
 import {
@@ -64,7 +64,7 @@ async function syncDatabaseProviders({
   const providerServiceRegistrationKey = lowerCaseFirst(
     NotificationProviderService.name
   )
-  const providerService: ModulesSdkTypes.IMedusaInternalService<
+  const providerService: ModulesSdkTypes.IvikraiInternalService<
     typeof NotificationProvider
   > = container.resolve(providerServiceRegistrationKey)
 
@@ -133,3 +133,4 @@ function validateProviders(providers: { channels: string[] }[]) {
     })
   })
 }
+

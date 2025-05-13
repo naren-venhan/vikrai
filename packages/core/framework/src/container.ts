@@ -1,4 +1,5 @@
 export * from "./types/container"
-import { createMedusaContainer } from "@medusajs/utils"
+import { createvikraiContainer } from "@vikrai/utils"
 
-export const container = createMedusaContainer()
+export const container = createvikraiContainer()
+

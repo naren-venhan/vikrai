@@ -17,7 +17,7 @@ import {
   FirstSeenCell,
   FirstSeenHeader,
 } from "../../../components/table/table-cells/customer/first-seen-cell"
-import { HttpTypes } from "@medusajs/types"
+import { HttpTypes } from "@vikrai/types"
 
 const columnHelper = createColumnHelper<HttpTypes.AdminCustomer>()
 
@@ -49,3 +49,4 @@ export const useCustomerTableColumns = () => {
     []
   )
 }
+

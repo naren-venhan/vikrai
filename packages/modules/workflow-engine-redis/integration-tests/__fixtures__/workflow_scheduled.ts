@@ -1,9 +1,9 @@
-import { SchedulerOptions } from "@medusajs/framework/orchestration"
+import { SchedulerOptions } from "@vikrai/framework/orchestration"
 import {
   createStep,
   createWorkflow,
   StepResponse,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 
 export const createScheduled = (
   name: string,
@@ -31,3 +31,4 @@ export const createScheduled = (
 
   return workflowScheduledStepInvoke
 }
+

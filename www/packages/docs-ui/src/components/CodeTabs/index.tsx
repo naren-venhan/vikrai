@@ -171,10 +171,10 @@ export const CodeTabs = ({
   const bgColor = useMemo(
     () =>
       clsx(
-        blockStyle === "loud" && "bg-medusa-contrast-bg-base",
+        blockStyle === "loud" && "bg-vikrai-contrast-bg-base",
         blockStyle === "subtle" && [
-          colorMode === "light" && "bg-medusa-bg-component",
-          colorMode === "dark" && "bg-medusa-code-bg-header",
+          colorMode === "light" && "bg-vikrai-bg-component",
+          colorMode === "dark" && "bg-vikrai-code-bg-header",
         ]
       ),
     [blockStyle, colorMode]
@@ -253,12 +253,12 @@ export const CodeTabs = ({
         <span
           className={clsx(
             "xs:absolute xs:transition-all xs:duration-200 xs:ease-ease xs:bottom-0",
-            blockStyle === "loud" && "bg-medusa-contrast-fg-primary h-px",
+            blockStyle === "loud" && "bg-vikrai-contrast-fg-primary h-px",
             blockStyle === "subtle" && [
               colorMode === "light" &&
-                "xs:border-medusa-border-base xs:bg-medusa-bg-base",
+                "xs:border-vikrai-border-base xs:bg-vikrai-bg-base",
               colorMode === "dark" &&
-                "xs:border-medusa-code-border xs:bg-medusa-code-bg-base",
+                "xs:border-vikrai-code-border xs:bg-vikrai-code-bg-base",
             ]
           )}
           ref={codeTabSelectorRef}
@@ -307,3 +307,4 @@ export const CodeTabs = ({
     </div>
   )
 }
+

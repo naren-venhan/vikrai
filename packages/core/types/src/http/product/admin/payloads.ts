@@ -105,7 +105,7 @@ export interface AdminCreateProductVariant {
    */
   allow_backorder?: boolean
   /**
-   * Whether Medusa manages the variant's inventory. If disabled,
+   * Whether vikrai manages the variant's inventory. If disabled,
    * the variant is always considered in stock.
    */
   manage_inventory?: boolean
@@ -321,7 +321,7 @@ export interface AdminUpdateProductVariant {
    */
   allow_backorder?: boolean
   /**
-   * Whether Medusa should manage the variant's inventory. If disabled,
+   * Whether vikrai should manage the variant's inventory. If disabled,
    * the variant is always considered in stock.
    */
   manage_inventory?: boolean
@@ -530,8 +530,8 @@ export interface AdminUpdateProductOption {
 
 interface AdminCreateProductVariantInventoryItem {
   /**
-   * The number of units a single quantity is equivalent to. For example, if a customer orders one quantity of the variant, Medusa checks the availability of the quantity multiplied by the
-   * value set for `required_quantity`. When the customer orders the quantity, Medusa reserves the ordered quantity multiplied by the value set for `required_quantity`.
+   * The number of units a single quantity is equivalent to. For example, if a customer orders one quantity of the variant, vikrai checks the availability of the quantity multiplied by the
+   * value set for `required_quantity`. When the customer orders the quantity, vikrai reserves the ordered quantity multiplied by the value set for `required_quantity`.
    */
   required_quantity: number
   /**
@@ -546,8 +546,8 @@ interface AdminCreateProductVariantInventoryItem {
 
 interface AdminUpdateProductVariantInventoryItem {
   /**
-   * The number of units a single quantity is equivalent to. For example, if a customer orders one quantity of the variant, Medusa checks the availability of the quantity multiplied by the
-   * value set for `required_quantity`. When the customer orders the quantity, Medusa reserves the ordered quantity multiplied by the value set for `required_quantity`.
+   * The number of units a single quantity is equivalent to. For example, if a customer orders one quantity of the variant, vikrai checks the availability of the quantity multiplied by the
+   * value set for `required_quantity`. When the customer orders the quantity, vikrai reserves the ordered quantity multiplied by the value set for `required_quantity`.
    */
   required_quantity: number
   /**
@@ -597,3 +597,4 @@ export interface AdminImportProductsRequest {
    */
   mime_type: string
 }
+

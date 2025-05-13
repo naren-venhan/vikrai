@@ -1,4 +1,4 @@
-import { defineJoinerConfig, Modules } from "@medusajs/framework/utils"
+import { defineJoinerConfig, Modules } from "@vikrai/framework/utils"
 
 export const joinerConfig = defineJoinerConfig(Modules.API_KEY, {
   linkableKeys: {
@@ -6,3 +6,4 @@ export const joinerConfig = defineJoinerConfig(Modules.API_KEY, {
     publishable_key_id: "ApiKey",
   },
 })
+

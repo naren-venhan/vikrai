@@ -2,14 +2,14 @@ import {
   ChangeActionType,
   OrderChangeStatus,
   PromotionActions,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 import {
   createWorkflow,
   transform,
   WorkflowData,
   WorkflowResponse,
-} from "@medusajs/framework/workflows-sdk"
-import { OrderChangeDTO, OrderDTO, PromotionDTO } from "@medusajs/types"
+} from "@vikrai/framework/workflows-sdk"
+import { OrderChangeDTO, OrderDTO, PromotionDTO } from "@vikrai/types"
 import { useRemoteQueryStep } from "../../common"
 import {
   createOrderChangeActionsWorkflow,
@@ -39,7 +39,7 @@ export interface RemoveDraftOrderPromotionsWorkflowInput {
 
 /**
  * This workflow removes promotions from a draft order edit. It's used by the
- * [Remove Promotions from Draft Order Edit Admin API Route](https://docs.medusajs.com/api/admin#draft-orders_deletedraftordersideditpromotions).
+ * [Remove Promotions from Draft Order Edit Admin API Route](https://docs.vikrai.com/api/admin#draft-orders_deletedraftordersideditpromotions).
  * 
  * You can use this workflow within your customizations or your own custom workflows, allowing you to wrap custom logic around
  * removing promotions from a draft order edit.
@@ -131,3 +131,4 @@ export const removeDraftOrderPromotionsWorkflow = createWorkflow(
     return new WorkflowResponse(previewOrderChangeStep(input.order_id))
   }
 )
+

@@ -1,6 +1,6 @@
-import { JoinerServiceConfig, ModuleJoinerConfig } from "@medusajs/types"
-import { isObject, isString } from "@medusajs/utils"
-import { MedusaModule } from "../medusa-module"
+import { JoinerServiceConfig, ModuleJoinerConfig } from "@vikrai/types"
+import { isObject, isString } from "@vikrai/utils"
+import { vikraiModule } from "../vikrai-module"
 
 const joinerConfigMapCache = new Map()
 
@@ -26,7 +26,7 @@ export function parseAndAssignFilters(
   },
   entitiesMap: Map<string, any>
 ) {
-  const joinerConfigs = MedusaModule.getAllJoinerConfigs()
+  const joinerConfigs = vikraiModule.getAllJoinerConfigs()
 
   for (const [filterKey, filterValue] of Object.entries(filters)) {
     /*let entryAlias!: JoinerServiceConfigAlias*/
@@ -287,3 +287,4 @@ function isFieldAliasNestedRelationHelper({
 
   return isFieldAliasNestedRelation
 }
+

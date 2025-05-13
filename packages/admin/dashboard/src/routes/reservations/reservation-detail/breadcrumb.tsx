@@ -1,4 +1,4 @@
-import { HttpTypes } from "@medusajs/types"
+import { HttpTypes } from "@vikrai/types"
 import { UIMatch } from "react-router-dom"
 
 import { useReservationItem } from "../../../hooks/api"
@@ -27,3 +27,4 @@ export const ReservationDetailBreadcrumb = (
 
   return <span>{display}</span>
 }
+

@@ -19,7 +19,7 @@
 					},
 					{
 						"kind": "code",
-						"text": "```ts\nimport { Logger } from \"@medusajs/framework/types\"\nimport { AbstractFileProviderService } from \"@medusajs/framework/utils\"\n\ntype InjectedDependencies = {\n  logger: Logger\n}\n\ntype Options = {\n  apiKey: string\n}\n\nclass MyFileProviderService extends AbstractFileProviderService {\n  protected logger_: Logger\n  protected options_: Options\n  static identifier = \"my-file\"\n  // assuming you're initializing a client\n  protected client\n\n  constructor (\n    { logger }: InjectedDependencies,\n    options: Options\n  ) {\n    super()\n\n    this.logger_ = logger\n    this.options_ = options\n\n    // assuming you're initializing a client\n    this.client = new Client(options)\n  }\n}\n\nexport default MyFileProviderService\n```"
+						"text": "```ts\nimport { Logger } from \"@vikrai/framework/types\"\nimport { AbstractFileProviderService } from \"@vikrai/framework/utils\"\n\ntype InjectedDependencies = {\n  logger: Logger\n}\n\ntype Options = {\n  apiKey: string\n}\n\nclass MyFileProviderService extends AbstractFileProviderService {\n  protected logger_: Logger\n  protected options_: Options\n  static identifier = \"my-file\"\n  // assuming you're initializing a client\n  protected client\n\n  constructor (\n    { logger }: InjectedDependencies,\n    options: Options\n  ) {\n    super()\n\n    this.logger_ = logger\n    this.options_ = options\n\n    // assuming you're initializing a client\n    this.client = new Client(options)\n  }\n}\n\nexport default MyFileProviderService\n```"
 					}
 				]
 			},
@@ -64,7 +64,7 @@
 							},
 							{
 								"kind": "code",
-								"text": "`medusa-config.ts`"
+								"text": "`vikrai-config.ts`"
 							},
 							{
 								"kind": "text",
@@ -88,7 +88,7 @@
 							"fileName": "abstract-file-provider.ts",
 							"line": 61,
 							"character": 9,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/file/abstract-file-provider.ts#L61"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/file/abstract-file-provider.ts#L61"
 						}
 					],
 					"type": {
@@ -109,7 +109,7 @@
 							"fileName": "abstract-file-provider.ts",
 							"line": 83,
 							"character": 9,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/file/abstract-file-provider.ts#L83"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/file/abstract-file-provider.ts#L83"
 						}
 					],
 					"signatures": [
@@ -127,7 +127,7 @@
 									},
 									{
 										"kind": "code",
-										"text": "`medusa-config.ts`"
+										"text": "`vikrai-config.ts`"
 									},
 									{
 										"kind": "text",
@@ -140,7 +140,7 @@
 										"content": [
 											{
 												"kind": "code",
-												"text": "```ts\nclass MyFileProviderService extends AbstractFileProviderService {\n  static validateOptions(options: Record<any, any>) {\n    if (!options.apiKey) {\n      throw new MedusaError(\n        MedusaError.Types.INVALID_DATA,\n        \"API key is required in the provider's options.\"\n      )\n    }\n  }\n}\n```"
+												"text": "```ts\nclass MyFileProviderService extends AbstractFileProviderService {\n  static validateOptions(options: Record<any, any>) {\n    if (!options.apiKey) {\n      throw new vikraiError(\n        vikraiError.Types.INVALID_DATA,\n        \"API key is required in the provider's options.\"\n      )\n    }\n  }\n}\n```"
 											}
 										]
 									}
@@ -151,7 +151,7 @@
 									"fileName": "abstract-file-provider.ts",
 									"line": 83,
 									"character": 9,
-									"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/file/abstract-file-provider.ts#L83"
+									"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/file/abstract-file-provider.ts#L83"
 								}
 							],
 							"parameters": [
@@ -214,7 +214,7 @@
 								"type": "reference",
 								"target": 40872,
 								"name": "AbstractFileProviderService",
-								"package": "@medusajs/utils"
+								"package": "@vikrai/utils"
 							}
 						}
 					]
@@ -230,7 +230,7 @@
 							"fileName": "abstract-file-provider.ts",
 							"line": 120,
 							"character": 8,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/file/abstract-file-provider.ts#L120"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/file/abstract-file-provider.ts#L120"
 						}
 					],
 					"signatures": [
@@ -273,7 +273,7 @@
 									"fileName": "abstract-file-provider.ts",
 									"line": 120,
 									"character": 8,
-									"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/file/abstract-file-provider.ts#L120"
+									"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/file/abstract-file-provider.ts#L120"
 								}
 							],
 							"parameters": [
@@ -298,7 +298,7 @@
 											"qualifiedName": "ProviderUploadFileDTO"
 										},
 										"name": "ProviderUploadFileDTO",
-										"package": "@medusajs/types"
+										"package": "@vikrai/types"
 									}
 								}
 							],
@@ -316,7 +316,7 @@
 											"qualifiedName": "ProviderFileResultDTO"
 										},
 										"name": "ProviderFileResultDTO",
-										"package": "@medusajs/types"
+										"package": "@vikrai/types"
 									}
 								],
 								"name": "Promise",
@@ -346,7 +346,7 @@
 							"fileName": "abstract-file-provider.ts",
 							"line": 144,
 							"character": 8,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/file/abstract-file-provider.ts#L144"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/file/abstract-file-provider.ts#L144"
 						}
 					],
 					"signatures": [
@@ -389,7 +389,7 @@
 									"fileName": "abstract-file-provider.ts",
 									"line": 144,
 									"character": 8,
-									"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/file/abstract-file-provider.ts#L144"
+									"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/file/abstract-file-provider.ts#L144"
 								}
 							],
 							"parameters": [
@@ -414,7 +414,7 @@
 											"qualifiedName": "ProviderDeleteFileDTO"
 										},
 										"name": "ProviderDeleteFileDTO",
-										"package": "@medusajs/types"
+										"package": "@vikrai/types"
 									}
 								}
 							],
@@ -457,7 +457,7 @@
 							"fileName": "abstract-file-provider.ts",
 							"line": 172,
 							"character": 8,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/file/abstract-file-provider.ts#L172"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/file/abstract-file-provider.ts#L172"
 						}
 					],
 					"signatures": [
@@ -500,7 +500,7 @@
 									"fileName": "abstract-file-provider.ts",
 									"line": 172,
 									"character": 8,
-									"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/file/abstract-file-provider.ts#L172"
+									"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/file/abstract-file-provider.ts#L172"
 								}
 							],
 							"parameters": [
@@ -525,7 +525,7 @@
 											"qualifiedName": "ProviderGetFileDTO"
 										},
 										"name": "ProviderGetFileDTO",
-										"package": "@medusajs/types"
+										"package": "@vikrai/types"
 									}
 								}
 							],
@@ -586,7 +586,7 @@
 					"fileName": "abstract-file-provider.ts",
 					"line": 49,
 					"character": 13,
-					"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/file/abstract-file-provider.ts#L49"
+					"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/utils/src/file/abstract-file-provider.ts#L49"
 				}
 			],
 			"implementedTypes": [
@@ -597,7 +597,7 @@
 						"qualifiedName": "IFileProvider"
 					},
 					"name": "IFileProvider",
-					"package": "@medusajs/types"
+					"package": "@vikrai/types"
 				}
 			]
 		}
@@ -610,7 +610,7 @@
 			]
 		}
 	],
-	"packageName": "@medusajs/utils",
+	"packageName": "@vikrai/utils",
 	"symbolIdMap": {
 		"40871": {
 			"sourceFileName": "../../../../packages/core/utils/src/file/abstract-file-provider.ts",
@@ -682,3 +682,4 @@
 		}
 	}
 }
+

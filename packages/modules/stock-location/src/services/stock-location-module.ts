@@ -15,31 +15,31 @@ import {
   UpdateStockLocationInput,
   UpsertStockLocationAddressInput,
   UpsertStockLocationInput,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import {
   InjectManager,
   InjectTransactionManager,
   isString,
-  MedusaContext,
-  MedusaService,
+  vikraiContext,
+  vikraiService,
   Modules,
   promiseAll,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 import { joinerConfig } from "../joiner-config"
 import { StockLocation, StockLocationAddress } from "../models"
 
 type InjectedDependencies = {
   [Modules.EVENT_BUS]: IEventBusService
   baseRepository: DAL.RepositoryService
-  stockLocationService: ModulesSdkTypes.IMedusaInternalService<any>
-  stockLocationAddressService: ModulesSdkTypes.IMedusaInternalService<any>
+  stockLocationService: ModulesSdkTypes.IvikraiInternalService<any>
+  stockLocationAddressService: ModulesSdkTypes.IvikraiInternalService<any>
 }
 
 /**
  * Service for managing stock locations.
  */
 export default class StockLocationModuleService
-  extends MedusaService<{
+  extends vikraiService<{
     StockLocation: { dto: StockLocationTypes.StockLocationDTO }
     StockLocationAddress: { dto: StockLocationTypes.StockLocationAddressDTO }
   }>({ StockLocation, StockLocationAddress })
@@ -47,10 +47,10 @@ export default class StockLocationModuleService
 {
   protected readonly eventBusModuleService_: IEventBusService
   protected baseRepository_: DAL.RepositoryService
-  protected readonly stockLocationService_: ModulesSdkTypes.IMedusaInternalService<
+  protected readonly stockLocationService_: ModulesSdkTypes.IvikraiInternalService<
     InferEntityType<typeof StockLocation>
   >
-  protected readonly stockLocationAddressService_: ModulesSdkTypes.IMedusaInternalService<
+  protected readonly stockLocationAddressService_: ModulesSdkTypes.IvikraiInternalService<
     InferEntityType<typeof StockLocationAddress>
   >
 
@@ -90,7 +90,7 @@ export default class StockLocationModuleService
   // @ts-expect-error
   async createStockLocations(
     data: CreateStockLocationInput | CreateStockLocationInput[],
-    @MedusaContext() context: Context = {}
+    @vikraiContext() context: Context = {}
   ): Promise<
     StockLocationTypes.StockLocationDTO | StockLocationTypes.StockLocationDTO[]
   > {
@@ -109,7 +109,7 @@ export default class StockLocationModuleService
   @InjectTransactionManager()
   async createStockLocations_(
     data: CreateStockLocationInput[],
-    @MedusaContext() context: Context = {}
+    @vikraiContext() context: Context = {}
   ): Promise<InferEntityType<typeof StockLocation>[]> {
     return await this.stockLocationService_.create(data, context)
   }
@@ -126,7 +126,7 @@ export default class StockLocationModuleService
   @InjectManager()
   async upsertStockLocations(
     data: UpsertStockLocationInput | UpsertStockLocationInput[],
-    @MedusaContext() context: Context = {}
+    @vikraiContext() context: Context = {}
   ): Promise<
     StockLocationTypes.StockLocationDTO | StockLocationTypes.StockLocationDTO[]
   > {
@@ -143,7 +143,7 @@ export default class StockLocationModuleService
   @InjectTransactionManager()
   async upsertStockLocations_(
     input: UpsertStockLocationInput[],
-    @MedusaContext() context: Context = {}
+    @vikraiContext() context: Context = {}
   ) {
     const toUpdate = input.filter(
       (location): location is UpdateStockLocationInput => !!location.id
@@ -191,7 +191,7 @@ export default class StockLocationModuleService
   async updateStockLocations(
     idOrSelector: string | FilterableStockLocationProps,
     data: UpdateStockLocationInput | UpdateStockLocationInput[],
-    @MedusaContext() context: Context = {}
+    @vikraiContext() context: Context = {}
   ): Promise<
     StockLocationTypes.StockLocationDTO | StockLocationTypes.StockLocationDTO[]
   > {
@@ -219,7 +219,7 @@ export default class StockLocationModuleService
       | UpdateStockLocationInput[]
       | UpdateStockLocationInput
       | { data: any; selector: FilterableStockLocationProps },
-    @MedusaContext() context: Context = {}
+    @vikraiContext() context: Context = {}
   ): Promise<
     | InferEntityType<typeof StockLocation>[]
     | InferEntityType<typeof StockLocation>
@@ -244,7 +244,7 @@ export default class StockLocationModuleService
     data:
       | (StockLocationAddressInput & { id: string })
       | (StockLocationAddressInput & { id: string })[],
-    @MedusaContext() context: Context = {}
+    @vikraiContext() context: Context = {}
   ) {
     const input = Array.isArray(data) ? data : [data]
 
@@ -261,7 +261,7 @@ export default class StockLocationModuleService
   @InjectTransactionManager()
   private async updateStockLocationAddresses_(
     input: (StockLocationAddressInput & { id: string })[],
-    @MedusaContext() context: Context
+    @vikraiContext() context: Context
   ) {
     return await this.stockLocationAddressService_.update(input, context)
   }
@@ -278,7 +278,7 @@ export default class StockLocationModuleService
   @InjectManager()
   async upsertStockLocationAddresses(
     data: UpsertStockLocationAddressInput | UpsertStockLocationAddressInput[],
-    @MedusaContext() context: Context = {}
+    @vikraiContext() context: Context = {}
   ): Promise<
     | StockLocationTypes.StockLocationAddressDTO
     | StockLocationTypes.StockLocationAddressDTO[]
@@ -296,7 +296,7 @@ export default class StockLocationModuleService
   @InjectTransactionManager()
   async upsertStockLocationAddresses_(
     input: UpsertStockLocationAddressInput[],
-    @MedusaContext() context: Context = {}
+    @vikraiContext() context: Context = {}
   ) {
     const toUpdate = input.filter(
       (location): location is UpdateStockLocationAddressInput => !!location.id
@@ -324,3 +324,4 @@ export default class StockLocationModuleService
     return (await promiseAll(operations)).flat()
   }
 }
+

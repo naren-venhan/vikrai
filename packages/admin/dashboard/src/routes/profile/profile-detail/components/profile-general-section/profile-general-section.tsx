@@ -1,6 +1,6 @@
-import { PencilSquare } from "@medusajs/icons"
-import { HttpTypes } from "@medusajs/types"
-import { Container, Heading, Text } from "@medusajs/ui"
+import { PencilSquare } from "@vikrai/icons"
+import { HttpTypes } from "@vikrai/types"
+import { Container, Heading, Text } from "@vikrai/ui"
 import { useTranslation } from "react-i18next"
 import { ActionMenu } from "../../../../../components/common/action-menu"
 import { languages } from "../../../../../i18n/languages"
@@ -74,3 +74,4 @@ export const ProfileGeneralSection = ({ user }: ProfileGeneralSectionProps) => {
     </Container>
   )
 }
+

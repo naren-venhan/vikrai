@@ -1,190 +1,190 @@
 export const tax = [
   {
     "title": "Manage Tax Regions",
-    "path": "https://docs.medusajs.com/user-guide/settings/tax-regions"
+    "path": "https://docs.vikrai.com/user-guide/settings/tax-regions"
   },
   {
     "title": "Get Variant Price with Taxes",
-    "path": "https://docs.medusajs.com/resources/commerce-modules/product/guides/price-with-taxes"
+    "path": "https://docs.vikrai.com/resources/commerce-modules/product/guides/price-with-taxes"
   },
   {
     "title": "Example: Show Price with Taxes",
-    "path": "https://docs.medusajs.com/resources/storefront-development/products/price/examples/tax-price"
+    "path": "https://docs.vikrai.com/resources/storefront-development/products/price/examples/tax-price"
   },
   {
     "title": "addShippingMethodToCartWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/addShippingMethodToCartWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/addShippingMethodToCartWorkflow"
   },
   {
     "title": "addToCartWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/addToCartWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/addToCartWorkflow"
   },
   {
     "title": "createCartWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createCartWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/createCartWorkflow"
   },
   {
     "title": "refreshCartItemsWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/refreshCartItemsWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/refreshCartItemsWorkflow"
   },
   {
     "title": "transferCartCustomerWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/transferCartCustomerWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/transferCartCustomerWorkflow"
   },
   {
     "title": "updateCartWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateCartWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/updateCartWorkflow"
   },
   {
     "title": "updateLineItemInCartWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateLineItemInCartWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/updateLineItemInCartWorkflow"
   },
   {
     "title": "updateTaxLinesWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateTaxLinesWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/updateTaxLinesWorkflow"
   },
   {
     "title": "addDraftOrderItemsWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/addDraftOrderItemsWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/addDraftOrderItemsWorkflow"
   },
   {
     "title": "addDraftOrderShippingMethodsWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/addDraftOrderShippingMethodsWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/addDraftOrderShippingMethodsWorkflow"
   },
   {
     "title": "removeDraftOrderShippingMethodWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/removeDraftOrderShippingMethodWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/removeDraftOrderShippingMethodWorkflow"
   },
   {
     "title": "updateDraftOrderShippingMethodWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateDraftOrderShippingMethodWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/updateDraftOrderShippingMethodWorkflow"
   },
   {
     "title": "deleteLineItemsWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/deleteLineItemsWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/deleteLineItemsWorkflow"
   },
   {
     "title": "createClaimShippingMethodWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createClaimShippingMethodWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/createClaimShippingMethodWorkflow"
   },
   {
     "title": "createExchangeShippingMethodWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createExchangeShippingMethodWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/createExchangeShippingMethodWorkflow"
   },
   {
     "title": "createOrderEditShippingMethodWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createOrderEditShippingMethodWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/createOrderEditShippingMethodWorkflow"
   },
   {
     "title": "createOrderWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createOrderWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/createOrderWorkflow"
   },
   {
     "title": "createReturnShippingMethodWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createReturnShippingMethodWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/createReturnShippingMethodWorkflow"
   },
   {
     "title": "orderClaimAddNewItemWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/orderClaimAddNewItemWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/orderClaimAddNewItemWorkflow"
   },
   {
     "title": "orderEditAddNewItemWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/orderEditAddNewItemWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/orderEditAddNewItemWorkflow"
   },
   {
     "title": "orderExchangeAddNewItemWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/orderExchangeAddNewItemWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/orderExchangeAddNewItemWorkflow"
   },
   {
     "title": "updateOrderTaxLinesWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateOrderTaxLinesWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/updateOrderTaxLinesWorkflow"
   },
   {
     "title": "createTaxRateRulesStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/createTaxRateRulesStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/createTaxRateRulesStep"
   },
   {
     "title": "createTaxRatesStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/createTaxRatesStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/createTaxRatesStep"
   },
   {
     "title": "createTaxRegionsStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/createTaxRegionsStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/createTaxRegionsStep"
   },
   {
     "title": "deleteTaxRateRulesStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/deleteTaxRateRulesStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/deleteTaxRateRulesStep"
   },
   {
     "title": "deleteTaxRatesStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/deleteTaxRatesStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/deleteTaxRatesStep"
   },
   {
     "title": "deleteTaxRegionsStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/deleteTaxRegionsStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/deleteTaxRegionsStep"
   },
   {
     "title": "getItemTaxLinesStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/getItemTaxLinesStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/getItemTaxLinesStep"
   },
   {
     "title": "listTaxRateRuleIdsStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/listTaxRateRuleIdsStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/listTaxRateRuleIdsStep"
   },
   {
     "title": "updateTaxRatesStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/updateTaxRatesStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/updateTaxRatesStep"
   },
   {
     "title": "updateTaxRegionsStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/updateTaxRegionsStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/updateTaxRegionsStep"
   },
   {
     "title": "createTaxRateRulesWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createTaxRateRulesWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/createTaxRateRulesWorkflow"
   },
   {
     "title": "createTaxRatesWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createTaxRatesWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/createTaxRatesWorkflow"
   },
   {
     "title": "createTaxRegionsWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createTaxRegionsWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/createTaxRegionsWorkflow"
   },
   {
     "title": "deleteTaxRateRulesWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/deleteTaxRateRulesWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/deleteTaxRateRulesWorkflow"
   },
   {
     "title": "deleteTaxRatesWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/deleteTaxRatesWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/deleteTaxRatesWorkflow"
   },
   {
     "title": "deleteTaxRegionsWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/deleteTaxRegionsWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/deleteTaxRegionsWorkflow"
   },
   {
     "title": "setTaxRateRulesWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/setTaxRateRulesWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/setTaxRateRulesWorkflow"
   },
   {
     "title": "updateTaxRatesWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateTaxRatesWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/updateTaxRatesWorkflow"
   },
   {
     "title": "updateTaxRegionsWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateTaxRegionsWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/updateTaxRegionsWorkflow"
   },
   {
     "title": "taxRate",
-    "path": "https://docs.medusajs.com/resources/references/js-sdk/admin/taxRate"
+    "path": "https://docs.vikrai.com/resources/references/js-sdk/admin/taxRate"
   },
   {
     "title": "taxRegion",
-    "path": "https://docs.medusajs.com/resources/references/js-sdk/admin/taxRegion"
+    "path": "https://docs.vikrai.com/resources/references/js-sdk/admin/taxRegion"
   },
   {
     "title": "Create Tax Provider",
-    "path": "https://docs.medusajs.com/resources/references/tax/provider"
+    "path": "https://docs.vikrai.com/resources/references/tax/provider"
   }
 ]

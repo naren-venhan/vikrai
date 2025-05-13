@@ -25,7 +25,7 @@ export async function serve(options: ServeOptions) {
 
   if (!indexExists) {
     throw new Error(
-      `Could not find index.html in the admin build directory. Make sure to run 'medusa build' before starting the server.`
+      `Could not find index.html in the admin build directory. Make sure to run 'vikrai build' before starting the server.`
     )
   }
 
@@ -54,3 +54,4 @@ export async function serve(options: ServeOptions) {
 
   return router
 }
+

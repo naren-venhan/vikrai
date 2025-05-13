@@ -1,4 +1,4 @@
-import { HttpTypes } from "@medusajs/types"
+import { HttpTypes } from "@vikrai/types"
 import { UIMatch } from "react-router-dom"
 import { useShippingProfile } from "../../../hooks/api/shipping-profiles"
 
@@ -25,3 +25,4 @@ export const ShippingProfileDetailBreadcrumb = (
 
   return <span>{shipping_profile.name}</span>
 }
+

@@ -1,13 +1,13 @@
 import zod from "zod"
 import { join } from "path"
-import { dynamicImport, FileSystem } from "@medusajs/utils"
+import { dynamicImport, FileSystem } from "@vikrai/utils"
 
 import { logger } from "../logger"
 import {
   type MiddlewaresConfig,
   type BodyParserConfigRoute,
   type MiddlewareDescriptor,
-  type MedusaErrorHandlerFunction,
+  type vikraiErrorHandlerFunction,
   type AdditionalDataValidatorRoute,
   HTTP_METHODS,
 } from "./types"
@@ -26,7 +26,7 @@ export class MiddlewareFileLoader {
   /**
    * Global error handler exported from the middleware file loader
    */
-  #errorHandler?: MedusaErrorHandlerFunction
+  #errorHandler?: vikraiErrorHandlerFunction
 
   /**
    * Middleware collected manually or by scanning directories
@@ -195,3 +195,4 @@ export class MiddlewareFileLoader {
     return this.#additionalDataValidatorRoutes
   }
 }
+

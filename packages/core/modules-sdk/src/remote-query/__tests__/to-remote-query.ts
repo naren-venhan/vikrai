@@ -1,12 +1,12 @@
-import { QueryContext } from "@medusajs/utils"
-import { MedusaModule } from "../../medusa-module"
+import { QueryContext } from "@vikrai/utils"
+import { vikraiModule } from "../../vikrai-module"
 import { getEntitiesMap } from "../__fixtures__/get-entities-map"
 import "../__fixtures__/parse-filters"
 import "../__fixtures__/remote-query-type"
 import { toRemoteQuery } from "../to-remote-query"
 
 const entitiesMap = getEntitiesMap(
-  MedusaModule.getAllJoinerConfigs()
+  vikraiModule.getAllJoinerConfigs()
     .map((m) => m.schema)
     .join("\n")
 )
@@ -327,3 +327,4 @@ describe("toRemoteQuery", () => {
     })
   })
 })
+

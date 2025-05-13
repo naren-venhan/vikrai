@@ -4,9 +4,9 @@ import {
   IPricingModuleService,
   IRegionModuleService,
   PriceRule,
-} from "@medusajs/framework/types"
-import { isString, Modules } from "@medusajs/framework/utils"
-import { createStep, StepResponse } from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/types"
+import { isString, Modules } from "@vikrai/framework/utils"
+import { createStep, StepResponse } from "@vikrai/framework/workflows-sdk"
 
 /**
  * The data to create price sets for a currency code.
@@ -129,7 +129,7 @@ export const createShippingOptionsPriceSetsStepId =
  * :::note
  * 
  * Learn more about adding rules to the shipping option's prices in the Pricing Module's 
- * [Price Rules](https://docs.medusajs.com/resources/commerce-modules/pricing/price-rules) documentation.
+ * [Price Rules](https://docs.vikrai.com/resources/commerce-modules/pricing/price-rules) documentation.
  * 
  * :::
  */
@@ -202,3 +202,4 @@ export const createShippingOptionsPriceSetsStep = createStep(
     await pricingService.deletePriceSets(priceSetIds)
   }
 )
+

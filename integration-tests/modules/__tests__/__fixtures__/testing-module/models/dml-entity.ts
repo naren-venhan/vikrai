@@ -1,6 +1,7 @@
-import { model } from "@medusajs/utils"
+import { model } from "@vikrai/utils"
 
 export const dmlEntity = model.define("dmlEntity", {
   id: model.id().primaryKey(),
   name: model.text(),
 })
+

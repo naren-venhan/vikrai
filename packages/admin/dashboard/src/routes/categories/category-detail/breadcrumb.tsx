@@ -1,4 +1,4 @@
-import { HttpTypes } from "@medusajs/types"
+import { HttpTypes } from "@vikrai/types"
 import { UIMatch } from "react-router-dom"
 import { useProductCategory } from "../../../hooks/api"
 
@@ -27,3 +27,4 @@ export const CategoryDetailBreadcrumb = (
 
   return <span>{product_category.name}</span>
 }
+

@@ -4,13 +4,13 @@ import {
   transform,
   WorkflowData,
   WorkflowResponse,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 
 import {
   FilterableInventoryLevelProps,
   InventoryLevelDTO,
-} from "@medusajs/framework/types"
-import { deduplicate, MedusaError, Modules } from "@medusajs/framework/utils"
+} from "@vikrai/framework/types"
+import { deduplicate, vikraiError, Modules } from "@vikrai/framework/utils"
 import { useRemoteQueryStep } from "../../common"
 import { deleteEntitiesStep } from "../../common/steps/delete-entities"
 
@@ -36,8 +36,8 @@ export type ValidateInventoryLevelsDeleteStepInput = {
  * 
  * :::note
  * 
- * You can retrieve an inventory level's details using [Query](https://docs.medusajs.com/learn/fundamentals/module-links/query),
- * or [useQueryGraphStep](https://docs.medusajs.com/resources/references/medusa-workflows/steps/useQueryGraphStep).
+ * You can retrieve an inventory level's details using [Query](https://docs.vikrai.com/learn/fundamentals/module-links/query),
+ * or [useQueryGraphStep](https://docs.vikrai.com/resources/references/vikrai-workflows/steps/useQueryGraphStep).
  * 
  * :::
  * 
@@ -65,8 +65,8 @@ export const validateInventoryLevelsDelete = createStep(
       const locationIds = deduplicate(
         undeleteableDueToReservation.map((item) => item.location_id)
       )
-      throw new MedusaError(
-        MedusaError.Types.NOT_ALLOWED,
+      throw new vikraiError(
+        vikraiError.Types.NOT_ALLOWED,
         `Cannot remove Inventory Levels for ${locationIds.join(
           ", "
         )} because there are reserved or incoming items at the locations`
@@ -81,8 +81,8 @@ export const validateInventoryLevelsDelete = createStep(
       const locationIds = deduplicate(
         undeleteableDueToStock.map((item) => item.location_id)
       )
-      throw new MedusaError(
-        MedusaError.Types.NOT_ALLOWED,
+      throw new vikraiError(
+        vikraiError.Types.NOT_ALLOWED,
         `Cannot remove Inventory Levels for ${locationIds.join(
           ", "
         )} because there are stocked items at the locations. Use force flag to delete anyway.`
@@ -107,7 +107,7 @@ export const deleteInventoryLevelsWorkflowId =
   "delete-inventory-levels-workflow"
 /**
  * This workflow deletes one or more inventory levels. It's used by the
- * [Delete Inventory Levels Admin API Route](https://docs.medusajs.com/api/admin#inventory-items_deleteinventoryitemsidlocationlevelslocation_id).
+ * [Delete Inventory Levels Admin API Route](https://docs.vikrai.com/api/admin#inventory-items_deleteinventoryitemsidlocationlevelslocation_id).
  * 
  * You can use this workflow within your own customizations or custom workflows, allowing you
  * to delete inventory levels in your custom flows.
@@ -160,3 +160,4 @@ export const deleteInventoryLevelsWorkflow = createWorkflow(
     return new WorkflowResponse(void 0)
   }
 )
+

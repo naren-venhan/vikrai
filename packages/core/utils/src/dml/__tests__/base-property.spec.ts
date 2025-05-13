@@ -1,4 +1,4 @@
-import { PropertyMetadata } from "@medusajs/types"
+import { PropertyMetadata } from "@vikrai/types"
 import { expectTypeOf } from "expect-type"
 import { BaseProperty } from "../properties/base"
 import { TextProperty } from "../properties/text"
@@ -125,3 +125,4 @@ describe("Base property", () => {
     })
   })
 })
+

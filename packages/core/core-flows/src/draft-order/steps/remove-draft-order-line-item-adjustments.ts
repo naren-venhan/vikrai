@@ -1,6 +1,6 @@
-import { Modules } from "@medusajs/framework/utils"
-import { createStep, StepResponse } from "@medusajs/framework/workflows-sdk"
-import { IOrderModuleService } from "@medusajs/types"
+import { Modules } from "@vikrai/framework/utils"
+import { createStep, StepResponse } from "@vikrai/framework/workflows-sdk"
+import { IOrderModuleService } from "@vikrai/types"
 export const removeDraftOrderLineItemAdjustmentsStepId =
   "remove-draft-order-line-item-adjustments"
 
@@ -58,3 +58,4 @@ export const removeDraftOrderLineItemAdjustmentsStep = createStep(
     )
   }
 )
+

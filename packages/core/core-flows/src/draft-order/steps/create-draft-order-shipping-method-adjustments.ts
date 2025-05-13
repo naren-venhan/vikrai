@@ -1,9 +1,9 @@
-import { Modules } from "@medusajs/framework/utils"
-import { createStep, StepResponse } from "@medusajs/framework/workflows-sdk"
+import { Modules } from "@vikrai/framework/utils"
+import { createStep, StepResponse } from "@vikrai/framework/workflows-sdk"
 import {
   CreateShippingMethodAdjustmentDTO,
   IOrderModuleService,
-} from "@medusajs/types"
+} from "@vikrai/types"
 
 export const createDraftOrderShippingMethodAdjustmentsStepId =
   "create-draft-order-shipping-method-adjustments"
@@ -72,3 +72,4 @@ export const createDraftOrderShippingMethodAdjustmentsStep = createStep(
     )
   }
 )
+

@@ -2,8 +2,8 @@ import {
   AccountHolderDTO,
   CustomerDTO,
   PaymentSessionDTO,
-} from "@medusajs/framework/types"
-import { isPresent, Modules } from "@medusajs/framework/utils"
+} from "@vikrai/framework/types"
+import { isPresent, Modules } from "@vikrai/framework/utils"
 import {
   createWorkflow,
   parallelize,
@@ -11,7 +11,7 @@ import {
   when,
   WorkflowData,
   WorkflowResponse,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { createRemoteLinkStep, useRemoteQueryStep } from "../../common"
 import {
   createPaymentAccountHolderStep,
@@ -38,7 +38,7 @@ export interface CreatePaymentSessionsWorkflowInput {
   customer_id?: string
   /**
    * Custom data relevant for the payment provider to process the payment session.
-   * Learn more in [this documentation](https://docs.medusajs.com/resources/commerce-modules/payment/payment-session#data-property).
+   * Learn more in [this documentation](https://docs.vikrai.com/resources/commerce-modules/payment/payment-session#data-property).
    */
   data?: Record<string, unknown>
 
@@ -52,7 +52,7 @@ export interface CreatePaymentSessionsWorkflowInput {
 export const createPaymentSessionsWorkflowId = "create-payment-sessions"
 /**
  * This workflow creates payment sessions. It's used by the
- * [Initialize Payment Session Store API Route](https://docs.medusajs.com/api/store#payment-collections_postpaymentcollectionsidpaymentsessions).
+ * [Initialize Payment Session Store API Route](https://docs.vikrai.com/api/store#payment-collections_postpaymentcollectionsidpaymentsessions).
  *
  * You can use this workflow within your own customizations or custom workflows, allowing you
  * to create payment sessions in your custom flows.
@@ -208,3 +208,4 @@ export const createPaymentSessionsWorkflow = createWorkflow(
     return new WorkflowResponse(created)
   }
 )
+

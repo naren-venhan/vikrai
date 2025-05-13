@@ -4,7 +4,7 @@ import { Link } from "docs-ui"
 const HomepageLinksSection = () => {
   const sections: SectionProps[] = [
     {
-      title: "Customize Medusa Application",
+      title: "Customize vikrai Application",
       links: [
         {
           href: "/learn/installation",
@@ -15,7 +15,7 @@ const HomepageLinksSection = () => {
           text: "Build a Module",
         },
         {
-          href: "https://docs.medusajs.com/resources/integrations",
+          href: "https://docs.vikrai.com/resources/integrations",
           text: "Browse third-party integrations",
         },
       ],
@@ -32,7 +32,7 @@ const HomepageLinksSection = () => {
           text: "Add a UI Route",
         },
         {
-          href: "https://docs.medusajs.com/ui",
+          href: "https://docs.vikrai.com/ui",
           text: "Browse the UI component library",
         },
       ],
@@ -41,15 +41,15 @@ const HomepageLinksSection = () => {
       title: "Storefront Development",
       links: [
         {
-          href: "https://docs.medusajs.com/resources/nextjs-starter",
+          href: "https://docs.vikrai.com/resources/nextjs-starter",
           text: "Explore our storefront starter",
         },
         {
-          href: "https://docs.medusajs.com/resources/storefront-development",
+          href: "https://docs.vikrai.com/resources/storefront-development",
           text: "Build a custom storefront",
         },
         {
-          href: "https://docs.medusajs.com/ui",
+          href: "https://docs.vikrai.com/ui",
           text: "Browse the UI component library",
         },
       ],
@@ -59,7 +59,7 @@ const HomepageLinksSection = () => {
     <div
       className={clsx(
         "hidden lg:block py-4 w-full",
-        "border-y border-medusa-border-base xl:mx-auto"
+        "border-y border-vikrai-border-base xl:mx-auto"
       )}
     >
       <div className="flex gap-4 flex-wrap xl:mx-auto xl:max-w-[1136px] w-full px-4 xl:px-0">
@@ -82,7 +82,7 @@ type SectionProps = {
 const Section = ({ title, links }: SectionProps) => {
   return (
     <div className="flex flex-col gap-0.5 flex-1">
-      <h3 className="text-h3 text-medusa-fg-base">{title}</h3>
+      <h3 className="text-h3 text-vikrai-fg-base">{title}</h3>
       {links.map((link, index) => (
         <Link
           key={index}
@@ -98,3 +98,4 @@ const Section = ({ title, links }: SectionProps) => {
 }
 
 export default HomepageLinksSection
+

@@ -1,6 +1,6 @@
-import { CreateOrderTransactionDTO } from "@medusajs/framework/types"
-import { Modules } from "@medusajs/framework/utils"
-import { StepResponse, createStep } from "@medusajs/framework/workflows-sdk"
+import { CreateOrderTransactionDTO } from "@vikrai/framework/types"
+import { Modules } from "@vikrai/framework/utils"
+import { StepResponse, createStep } from "@vikrai/framework/workflows-sdk"
 
 /**
  * The transaction(s) to add to the order.
@@ -67,3 +67,4 @@ export const addOrderTransactionStep = createStep(
     await service.deleteOrderTransactions(id)
   }
 )
+

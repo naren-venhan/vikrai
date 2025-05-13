@@ -2,14 +2,14 @@ import {
   BigNumberInput,
   ComputeActionItemLine,
   PromotionTypes,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import {
   ApplicationMethodTargetType,
   ComputedActions,
   MathBN,
-  MedusaError,
+  vikraiError,
   PromotionType,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 import { areRulesValidForContext } from "../validations"
 import { computeActionForBudgetExceeded } from "./usage"
 
@@ -51,8 +51,8 @@ export function getComputedActionsForBuyGet(
   const computedActions: PromotionTypes.ComputeActions[] = []
 
   if (!itemsContext) {
-    throw new MedusaError(
-      MedusaError.Types.INVALID_DATA,
+    throw new vikraiError(
+      vikraiError.Types.INVALID_DATA,
       `"items" should be present as an array in the context to compute actions`
     )
   }
@@ -330,3 +330,4 @@ export function sortByBuyGetType(a, b) {
     return 0 // If types are different (and not BuyGet), keep original order
   }
 }
+

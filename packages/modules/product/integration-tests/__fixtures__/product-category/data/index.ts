@@ -1,4 +1,4 @@
-import { kebabCase } from "@medusajs/framework/utils"
+import { kebabCase } from "@vikrai/framework/utils"
 
 export const productCategoriesData = [
   {
@@ -206,3 +206,4 @@ export const eletronicsCategoriesData = [
     ...entry,
   }
 })
+

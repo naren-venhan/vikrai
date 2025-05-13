@@ -1,6 +1,6 @@
-import { PencilSquare } from "@medusajs/icons"
-import { AdminStore } from "@medusajs/types"
-import { Badge, Container, Heading, Text } from "@medusajs/ui"
+import { PencilSquare } from "@vikrai/icons"
+import { AdminStore } from "@vikrai/types"
+import { Badge, Container, Heading, Text } from "@vikrai/ui"
 import { useTranslation } from "react-i18next"
 
 import { Link } from "react-router-dom"
@@ -140,3 +140,4 @@ export const StoreGeneralSection = ({ store }: StoreGeneralSectionProps) => {
     </Container>
   )
 }
+

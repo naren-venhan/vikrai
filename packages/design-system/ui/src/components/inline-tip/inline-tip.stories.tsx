@@ -26,7 +26,7 @@ export const Info: Story = {
     variant: "info",
     label: "Info",
     children:
-      "You can always install the storefront at a later point. Medusa is a headless backend, so it operates without a storefront by default. You can connect any storefront to it. The Next.js Starter storefront is a good option to use, but you can also build your own storefront later on.",
+      "You can always install the storefront at a later point. vikrai is a headless backend, so it operates without a storefront by default. You can connect any storefront to it. The Next.js Starter storefront is a good option to use, but you can also build your own storefront later on.",
   },
 }
 
@@ -35,7 +35,7 @@ export const Warning: Story = {
     variant: "warning",
     label: "Warning",
     children:
-      "If you have multiple storage plugins configured, the last plugin declared in the medusa-config.js file will be used.",
+      "If you have multiple storage plugins configured, the last plugin declared in the vikrai-config.js file will be used.",
   },
 }
 
@@ -44,7 +44,7 @@ export const Error: Story = {
     variant: "error",
     label: "Don'ts",
     children:
-      "Don’t use data models if you want to store simple key-value pairs related to a Medusa data model. Instead, use the metadata field that modles have, which is an object of custom key-value pairs.",
+      "Don’t use data models if you want to store simple key-value pairs related to a vikrai data model. Instead, use the metadata field that modles have, which is an object of custom key-value pairs.",
   },
 }
 
@@ -56,3 +56,4 @@ export const Success: Story = {
       "Use data models when you want to store data related to your customization in the database.",
   },
 }
+

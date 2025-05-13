@@ -1,12 +1,12 @@
-import { AdditionalData } from "@medusajs/framework/types"
-import { OrderWorkflowEvents } from "@medusajs/framework/utils"
+import { AdditionalData } from "@vikrai/framework/types"
+import { OrderWorkflowEvents } from "@vikrai/framework/utils"
 import {
   WorkflowData,
   WorkflowResponse,
   createHook,
   createWorkflow,
   transform,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { emitEventStep } from "../../common/steps/emit-event"
 import { completeOrdersStep } from "../steps"
 
@@ -22,7 +22,7 @@ export type CompleteOrdersWorkflowInput = {
 
 export const completeOrderWorkflowId = "complete-order-workflow"
 /**
- * This workflow marks one or more orders as completed. It's used by the [Complete Cart Admin API Route](https://docs.medusajs.com/api/admin#orders_postordersidcomplete).
+ * This workflow marks one or more orders as completed. It's used by the [Complete Cart Admin API Route](https://docs.vikrai.com/api/admin#orders_postordersidcomplete).
  * 
  * This workflow has a hook that allows you to perform custom actions on the completed orders. For example, you can pass under `additional_data` custom data that 
  * allows you to update custom data models linked to the orders.
@@ -70,3 +70,4 @@ export const completeOrderWorkflow = createWorkflow(
     })
   }
 )
+

@@ -1,6 +1,6 @@
 "use client"
 
-import { CheckMini, ChevronRightMini, EllipseMiniSolid } from "@medusajs/icons"
+import { CheckMini, ChevronRightMini, EllipseMiniSolid } from "@vikrai/icons"
 import { DropdownMenu as RadixDropdownMenu } from "radix-ui"
 import * as React from "react"
 
@@ -287,3 +287,4 @@ const DropdownMenu = Object.assign(Root, {
 })
 
 export { DropdownMenu }
+

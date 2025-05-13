@@ -1,4 +1,4 @@
-import { WorkflowData, createWorkflow } from "@medusajs/framework/workflows-sdk"
+import { WorkflowData, createWorkflow } from "@vikrai/framework/workflows-sdk"
 import { refreshCartItemsWorkflow } from "../../cart/workflows/refresh-cart-items"
 import { deleteLineItemsStep } from "../steps/delete-line-items"
 
@@ -19,7 +19,7 @@ export type DeleteLineItemsWorkflowInput = {
 export const deleteLineItemsWorkflowId = "delete-line-items"
 /**
  * This workflow deletes line items from a cart. It's used by the
- * [Delete Line Item Store API Route](https://docs.medusajs.com/api/store#carts_deletecartsidlineitemsline_id).
+ * [Delete Line Item Store API Route](https://docs.vikrai.com/api/store#carts_deletecartsidlineitemsline_id).
  * 
  * You can use this workflow within your customizations or your own custom workflows, allowing you to
  * delete line items from a cart within your custom flows.
@@ -47,3 +47,4 @@ export const deleteLineItemsWorkflow = createWorkflow(
     })
   }
 )
+

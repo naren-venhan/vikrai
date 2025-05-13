@@ -1,4 +1,4 @@
-import { ITaxModuleService } from "@medusajs/framework/types"
+import { ITaxModuleService } from "@vikrai/framework/types"
 
 /**
  * Setup for this specific test
@@ -244,3 +244,4 @@ export const setupTaxStructure = async (service: ITaxModuleService) => {
     },
   }
 }
+

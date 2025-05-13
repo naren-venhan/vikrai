@@ -1,6 +1,6 @@
-import { ISalesChannelModuleService } from "@medusajs/framework/types"
-import { Modules } from "@medusajs/framework/utils"
-import { StepResponse, createStep } from "@medusajs/framework/workflows-sdk"
+import { ISalesChannelModuleService } from "@vikrai/framework/types"
+import { Modules } from "@vikrai/framework/utils"
+import { StepResponse, createStep } from "@vikrai/framework/workflows-sdk"
 
 /**
  * The IDs of the sales channels to delete.
@@ -34,3 +34,4 @@ export const deleteSalesChannelsStep = createStep(
     await service.restoreSalesChannels(prevSalesChannelIds)
   }
 )
+

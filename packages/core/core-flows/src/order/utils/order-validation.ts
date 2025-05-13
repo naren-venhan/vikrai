@@ -4,18 +4,18 @@ import {
   OrderLineItemDTO,
   OrderWorkflow,
   ReturnDTO,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import {
-  MedusaError,
+  vikraiError,
   OrderStatus,
   arrayDifference,
   isPresent,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 
 export function throwIfOrderIsCancelled({ order }: { order: OrderDTO }) {
   if (order.status === OrderStatus.CANCELED) {
-    throw new MedusaError(
-      MedusaError.Types.INVALID_DATA,
+    throw new vikraiError(
+      vikraiError.Types.INVALID_DATA,
       `Order with id ${order.id} has been canceled.`
     )
   }
@@ -33,8 +33,8 @@ export function throwIfItemsDoesNotExistsInOrder({
   const diff = arrayDifference(inputItemIds, orderItemIds)
 
   if (diff.length) {
-    throw new MedusaError(
-      MedusaError.Types.INVALID_DATA,
+    throw new vikraiError(
+      vikraiError.Types.INVALID_DATA,
       `Items with ids ${diff.join(", ")} does not exist in order with id ${
         order.id
       }.`
@@ -66,8 +66,8 @@ export function throwIfItemsAreNotGroupedByShippingRequirement({
   }
 
   if (itemsWithShipping.length && itemsWithoutShipping.length) {
-    throw new MedusaError(
-      MedusaError.Types.INVALID_DATA,
+    throw new vikraiError(
+      vikraiError.Types.INVALID_DATA,
       `Fulfillment can only be created entirely with items with shipping or items without shipping. Split this request into 2 fulfillments.`
     )
   }
@@ -78,8 +78,8 @@ export function throwIfIsCancelled(
   type: string
 ) {
   if (obj.canceled_at) {
-    throw new MedusaError(
-      MedusaError.Types.INVALID_DATA,
+    throw new vikraiError(
+      vikraiError.Types.INVALID_DATA,
       `${type} with id ${obj.id} has been canceled.`
     )
   }
@@ -91,8 +91,8 @@ export function throwIfOrderChangeIsNotActive({
   orderChange: OrderChangeDTO
 }) {
   if (!isPresent(orderChange)) {
-    throw new MedusaError(
-      MedusaError.Types.INVALID_DATA,
+    throw new vikraiError(
+      vikraiError.Types.INVALID_DATA,
       `An active Order Change is required to proceed`
     )
   }
@@ -102,8 +102,8 @@ export function throwIfOrderChangeIsNotActive({
     orderChange.confirmed_at ||
     orderChange.declined_at
   ) {
-    throw new MedusaError(
-      MedusaError.Types.INVALID_DATA,
+    throw new vikraiError(
+      vikraiError.Types.INVALID_DATA,
       `Order change ${orderChange?.id} is not active to be modified`
     )
   }
@@ -121,11 +121,12 @@ export function throwIfItemsDoesNotExistsInReturn({
   const diff = arrayDifference(inputItemIds, orderReturnItemIds)
 
   if (diff.length) {
-    throw new MedusaError(
-      MedusaError.Types.INVALID_DATA,
+    throw new vikraiError(
+      vikraiError.Types.INVALID_DATA,
       `Items with ids ${diff.join(", ")} does not exist in Return with id ${
         orderReturn.id
       }.`
     )
   }
 }
+

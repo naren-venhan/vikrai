@@ -9,7 +9,7 @@ import {
   NullableModifier,
   PrimaryKeyModifier,
   TextProperty,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 
 import { ServiceZone } from "./service-zone"
 
@@ -51,3 +51,4 @@ export const GeoZone = model
       where: "deleted_at IS NULL",
     },
   ]) as unknown as DmlEntity<DMLEntitySchemaBuilder<GeoZoneSchema>, "GeoZone">
+

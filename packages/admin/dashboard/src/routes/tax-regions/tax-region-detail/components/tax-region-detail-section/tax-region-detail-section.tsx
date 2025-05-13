@@ -1,5 +1,5 @@
-import { HttpTypes } from "@medusajs/types"
-import { Badge, Container, Tooltip } from "@medusajs/ui"
+import { HttpTypes } from "@vikrai/types"
+import { Badge, Container, Tooltip } from "@vikrai/ui"
 import { useTranslation } from "react-i18next"
 
 import { TaxRateLine } from "../../../common/components/tax-rate-line"
@@ -39,3 +39,4 @@ export const TaxRegionDetailSection = ({
     </Container>
   )
 }
+

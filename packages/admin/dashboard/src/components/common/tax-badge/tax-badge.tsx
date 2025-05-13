@@ -1,5 +1,5 @@
-import { TaxExclusive, TaxInclusive } from "@medusajs/icons"
-import { Tooltip } from "@medusajs/ui"
+import { TaxExclusive, TaxInclusive } from "@vikrai/icons"
+import { Tooltip } from "@vikrai/ui"
 import { useTranslation } from "react-i18next"
 
 type IncludesTaxTooltipProps = {
@@ -28,3 +28,4 @@ export const IncludesTaxTooltip = ({
     </Tooltip>
   )
 }
+

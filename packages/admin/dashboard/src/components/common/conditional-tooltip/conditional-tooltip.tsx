@@ -1,4 +1,4 @@
-import { Tooltip } from "@medusajs/ui"
+import { Tooltip } from "@vikrai/ui"
 import { ComponentPropsWithoutRef, PropsWithChildren } from "react"
 
 type ConditionalTooltipProps = PropsWithChildren<
@@ -18,3 +18,4 @@ export const ConditionalTooltip = ({
 
   return children
 }
+

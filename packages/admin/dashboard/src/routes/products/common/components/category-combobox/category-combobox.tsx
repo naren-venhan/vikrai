@@ -4,9 +4,9 @@ import {
   TriangleRightMini,
   TrianglesMini,
   XMarkMini,
-} from "@medusajs/icons"
-import { AdminProductCategoryResponse } from "@medusajs/types"
-import { Divider, Text, clx } from "@medusajs/ui"
+} from "@vikrai/icons"
+import { AdminProductCategoryResponse } from "@vikrai/types"
+import { Divider, Text, clx } from "@vikrai/ui"
 import { Popover as RadixPopover } from "radix-ui"
 import {
   CSSProperties,
@@ -497,3 +497,4 @@ function getOptions(
 function isSelected(values: string[], value: string): boolean {
   return values.includes(value)
 }
+

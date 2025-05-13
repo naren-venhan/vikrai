@@ -1,4 +1,4 @@
-import { trackFeatureFlag } from "@medusajs/telemetry"
+import { trackFeatureFlag } from "@vikrai/telemetry"
 import {
   ContainerRegistrationKeys,
   dynamicImport,
@@ -9,7 +9,7 @@ import {
   isTruthy,
   objectFromStringPath,
   readDirRecursive,
-} from "@medusajs/utils"
+} from "@vikrai/utils"
 import { asFunction } from "awilix"
 import { join, normalize } from "path"
 import { configManager } from "../config"
@@ -39,12 +39,12 @@ function registerFlag(
     from = "environment"
     const envVal = process.env[flag.env_key]
 
-    // MEDUSA_FF_ANALYTICS="true"
+    // vikrai_FF_ANALYTICS="true"
     flagConfig[flag.key] = isTruthy(process.env[flag.env_key])
 
     const parsedFromEnv = isString(envVal) ? envVal.split(",") : []
 
-    // MEDUSA_FF_WORKFLOWS=createProducts,deleteProducts
+    // vikrai_FF_WORKFLOWS=createProducts,deleteProducts
     if (parsedFromEnv.length > 1) {
       flagConfig[flag.key] = objectFromStringPath(parsedFromEnv)
     }
@@ -126,3 +126,4 @@ export async function featureFlagsLoader(
 
   return featureFlagRouter
 }
+

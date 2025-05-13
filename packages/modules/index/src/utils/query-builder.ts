@@ -1,10 +1,10 @@
-import { IndexTypes } from "@medusajs/framework/types"
+import { IndexTypes } from "@vikrai/framework/types"
 import {
   isDefined,
   isObject,
   isString,
   unflattenObjectKeys,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 import { Knex } from "@mikro-orm/knex"
 import { OrderBy, QueryFormat, QueryOptions, Select } from "@types"
 
@@ -1073,3 +1073,4 @@ export class QueryBuilder {
     return Object.values(maps[rootKey] ?? {})
   }
 }
+

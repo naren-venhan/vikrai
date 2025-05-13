@@ -1,5 +1,5 @@
-import { ModuleJoinerConfig } from "@medusajs/framework/types"
-import { LINKS, Modules } from "@medusajs/framework/utils"
+import { ModuleJoinerConfig } from "@vikrai/framework/types"
+import { LINKS, Modules } from "@vikrai/framework/utils"
 
 export const SalesChannelLocation: ModuleJoinerConfig = {
   serviceName: LINKS.SalesChannelLocation,
@@ -76,3 +76,4 @@ export const SalesChannelLocation: ModuleJoinerConfig = {
     },
   ],
 }
+

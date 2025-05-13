@@ -1,9 +1,9 @@
-import { InventoryLevelDTO, InventoryTypes } from "@medusajs/framework/types"
+import { InventoryLevelDTO, InventoryTypes } from "@vikrai/framework/types"
 import {
   WorkflowData,
   WorkflowResponse,
   createWorkflow,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 
 import { updateInventoryLevelsStep } from "../steps/update-inventory-levels"
 
@@ -26,7 +26,7 @@ export const updateInventoryLevelsWorkflowId =
   "update-inventory-levels-workflow"
 /**
  * This workflow updates one or more inventory levels. It's used by the
- * [Update Inventory Level Admin API Route](https://docs.medusajs.com/api/admin#inventory-items_postinventoryitemsidlocationlevelslocation_id).
+ * [Update Inventory Level Admin API Route](https://docs.vikrai.com/api/admin#inventory-items_postinventoryitemsidlocationlevelslocation_id).
  * 
  * You can use this workflow within your own customizations or custom workflows, allowing you
  * to update inventory levels in your custom flows.
@@ -58,3 +58,4 @@ export const updateInventoryLevelsWorkflow = createWorkflow(
     return new WorkflowResponse(updateInventoryLevelsStep(input.updates))
   }
 )
+

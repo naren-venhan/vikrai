@@ -1,9 +1,9 @@
 import {
   IOrderModuleService,
   RegisterOrderDeliveryDTO,
-} from "@medusajs/framework/types"
-import { ModuleRegistrationName } from "@medusajs/framework/utils"
-import { StepResponse, createStep } from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/types"
+import { ModuleRegistrationName } from "@vikrai/framework/utils"
+import { StepResponse, createStep } from "@vikrai/framework/workflows-sdk"
 
 export const registerOrderDeliveryStepId = "register-order-delivery"
 /**
@@ -32,3 +32,4 @@ export const registerOrderDeliveryStep = createStep(
     await service.revertLastVersion(orderId)
   }
 )
+

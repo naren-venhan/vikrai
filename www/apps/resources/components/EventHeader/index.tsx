@@ -1,6 +1,6 @@
 "use client"
 
-import { Brackets, CheckCircle, SquareTwoStack, Tag } from "@medusajs/icons"
+import { Brackets, CheckCircle, SquareTwoStack, Tag } from "@vikrai/icons"
 import {
   DropdownMenu,
   H2,
@@ -76,3 +76,4 @@ export const EventHeader = ({
     </div>
   )
 }
+

@@ -1,5 +1,5 @@
-import { XMarkMini } from "@medusajs/icons"
-import { IconButton, Text } from "@medusajs/ui"
+import { XMarkMini } from "@vikrai/icons"
+import { IconButton, Text } from "@vikrai/ui"
 
 type TargetItemProps = {
   index: number
@@ -24,3 +24,4 @@ export const TargetItem = ({ index, label, onRemove }: TargetItemProps) => {
     </div>
   )
 }
+

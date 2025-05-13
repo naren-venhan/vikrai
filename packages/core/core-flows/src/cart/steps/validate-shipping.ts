@@ -1,11 +1,11 @@
-import { MedusaError } from "@medusajs/framework/utils"
+import { vikraiError } from "@vikrai/framework/utils"
 import {
   CartLineItemDTO,
   CartWorkflowDTO,
   ProductVariantDTO,
   ShippingOptionDTO,
-} from "@medusajs/types"
-import { createStep, StepResponse } from "@medusajs/workflows-sdk"
+} from "@vikrai/types"
+import { createStep, StepResponse } from "@vikrai/workflows-sdk"
 
 /**
  * The data to validate shipping data when cart is completed.
@@ -41,8 +41,8 @@ export const validateShippingStepId = "validate-shipping"
  *
  * :::note
  *
- * You can retrieve cart or shipping option's details using [Query](https://docs.medusajs.com/learn/fundamentals/module-links/query),
- * or [useQueryGraphStep](https://docs.medusajs.com/resources/references/medusa-workflows/steps/useQueryGraphStep).
+ * You can retrieve cart or shipping option's details using [Query](https://docs.vikrai.com/learn/fundamentals/module-links/query),
+ * or [useQueryGraphStep](https://docs.vikrai.com/resources/references/vikrai-workflows/steps/useQueryGraphStep).
  *
  * :::
  *
@@ -85,8 +85,8 @@ export const validateShippingStep = createStep(
     const cartShippingMethods = cart.shipping_methods || []
 
     if (cartItemsWithShipping.length > 0 && cartShippingMethods.length === 0) {
-      throw new MedusaError(
-        MedusaError.Types.INVALID_DATA,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_DATA,
         "No shipping method selected but the cart contains items that require shipping."
       )
     }
@@ -104,8 +104,8 @@ export const validateShippingStep = createStep(
     )
 
     if (missingShippingPorfiles.length > 0) {
-      throw new MedusaError(
-        MedusaError.Types.INVALID_DATA,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_DATA,
         "The cart items require shipping profiles that are not satisfied by the current shipping methods"
       )
     }
@@ -113,3 +113,4 @@ export const validateShippingStep = createStep(
     return new StepResponse(void 0)
   }
 )
+

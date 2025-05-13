@@ -1,4 +1,4 @@
-import { medusaIntegrationTestRunner } from "@medusajs/test-utils"
+import { vikraiIntegrationTestRunner } from "@vikrai/test-utils"
 import {
   ICartModuleService,
   IFulfillmentModuleService,
@@ -9,8 +9,8 @@ import {
   ISalesChannelModuleService,
   IStockLocationServiceNext,
   ITaxModuleService,
-} from "@medusajs/types"
-import { ContainerRegistrationKeys, Modules } from "@medusajs/utils"
+} from "@vikrai/types"
+import { ContainerRegistrationKeys, Modules } from "@vikrai/utils"
 import {
   adminHeaders,
   createAdminUser,
@@ -19,9 +19,9 @@ import { setupTaxStructure } from "../fixtures"
 
 jest.setTimeout(100000)
 
-const env = { MEDUSA_FF_MEDUSA_V2: true }
+const env = { vikrai_FF_vikrai_V2: true }
 
-medusaIntegrationTestRunner({
+vikraiIntegrationTestRunner({
   env,
   testSuite: ({ dbConnection, getContainer, api }) => {
     let appContainer
@@ -389,3 +389,4 @@ medusaIntegrationTestRunner({
     })
   },
 })
+

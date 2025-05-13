@@ -1,12 +1,12 @@
-import { AdditionalData, CreateCustomerDTO } from "@medusajs/framework/types"
-import { CustomerWorkflowEvents } from "@medusajs/framework/utils"
+import { AdditionalData, CreateCustomerDTO } from "@vikrai/framework/types"
+import { CustomerWorkflowEvents } from "@vikrai/framework/utils"
 import {
   WorkflowData,
   WorkflowResponse,
   createHook,
   createWorkflow,
   transform,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { emitEventStep } from "../../common/steps/emit-event"
 import { createCustomersStep } from "../steps"
 
@@ -22,9 +22,9 @@ export type CreateCustomersWorkflowInput = {
 
 export const createCustomersWorkflowId = "create-customers"
 /**
- * This workflow creates one or more customers. It's used by the [Create Customer Admin API Route](https://docs.medusajs.com/api/admin#customers_postcustomers).
+ * This workflow creates one or more customers. It's used by the [Create Customer Admin API Route](https://docs.vikrai.com/api/admin#customers_postcustomers).
  * 
- * This workflow has a hook that allows you to perform custom actions on the created customer. You can see an example in [this guide](https://docs.medusajs.com/resources/commerce-modules/customer/extend).
+ * This workflow has a hook that allows you to perform custom actions on the created customer. You can see an example in [this guide](https://docs.vikrai.com/resources/commerce-modules/customer/extend).
  * 
  * You can also use this workflow within your customizations or your own custom workflows, allowing you to wrap custom logic around creating customers.
  * 
@@ -79,3 +79,4 @@ export const createCustomersWorkflow = createWorkflow(
     })
   }
 )
+

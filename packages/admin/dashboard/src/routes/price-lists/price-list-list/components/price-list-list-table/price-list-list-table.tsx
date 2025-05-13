@@ -1,4 +1,4 @@
-import { Button, Container, Heading, Text } from "@medusajs/ui"
+import { Button, Container, Heading, Text } from "@vikrai/ui"
 import { keepPreviousData } from "@tanstack/react-query"
 import { useTranslation } from "react-i18next"
 import { Link } from "react-router-dom"
@@ -74,3 +74,4 @@ export const PriceListListTable = () => {
     </Container>
   )
 }
+

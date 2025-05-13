@@ -1,6 +1,6 @@
-import { IPromotionModuleService } from "@medusajs/framework/types"
-import { Modules } from "@medusajs/framework/utils"
-import { moduleIntegrationTestRunner, SuiteOptions } from "@medusajs/test-utils"
+import { IPromotionModuleService } from "@vikrai/framework/types"
+import { Modules } from "@vikrai/framework/utils"
+import { moduleIntegrationTestRunner, SuiteOptions } from "@vikrai/test-utils"
 import { createCampaigns } from "../../../__fixtures__/campaigns"
 import { createDefaultPromotion } from "../../../__fixtures__/promotion"
 
@@ -127,3 +127,4 @@ moduleIntegrationTestRunner({
     })
   },
 })
+

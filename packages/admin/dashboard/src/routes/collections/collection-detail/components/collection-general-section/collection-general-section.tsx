@@ -1,6 +1,6 @@
-import { PencilSquare, Trash } from "@medusajs/icons"
-import { HttpTypes } from "@medusajs/types"
-import { Container, Heading, Text, usePrompt } from "@medusajs/ui"
+import { PencilSquare, Trash } from "@vikrai/icons"
+import { HttpTypes } from "@vikrai/types"
+import { Container, Heading, Text, usePrompt } from "@vikrai/ui"
 import { useTranslation } from "react-i18next"
 import { ActionMenu } from "../../../../../components/common/action-menu"
 import { useDeleteCollection } from "../../../../../hooks/api/collections"
@@ -74,3 +74,4 @@ export const CollectionGeneralSection = ({
     </Container>
   )
 }
+

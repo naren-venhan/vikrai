@@ -3,7 +3,7 @@
 import clsx from "clsx"
 import React from "react"
 import { CollapsibleReturn } from "../../../../hooks"
-import { Button } from "@medusajs/ui"
+import { Button } from "@vikrai/ui"
 
 export type CodeBlockCollapsibleButtonProps = {
   type: "start" | "end"
@@ -28,8 +28,8 @@ export const CodeBlockCollapsibleButton = ({
         <Button
           className={clsx(
             "font-base w-full p-docs_0.5 !shadow-none z-10",
-            "bg-medusa-contrast-button hover:bg-medusa-contrast-button-hover",
-            "txt-compact-xsmall text-medusa-contrast-fg-secondary",
+            "bg-vikrai-contrast-button hover:bg-vikrai-contrast-button-hover",
+            "txt-compact-xsmall text-vikrai-contrast-fg-secondary",
             type === "start" && "rounded-t-docs_DEFAULT rounded-b-none",
             className
           )}
@@ -42,8 +42,8 @@ export const CodeBlockCollapsibleButton = ({
         <Button
           className={clsx(
             "font-base w-full p-docs_0.5 !shadow-none z-10",
-            "bg-medusa-contrast-button hover:bg-medusa-contrast-button-hover",
-            "txt-compact-xsmall text-medusa-contrast-fg-secondary",
+            "bg-vikrai-contrast-button hover:bg-vikrai-contrast-button-hover",
+            "txt-compact-xsmall text-vikrai-contrast-fg-secondary",
             "rounded-t-none rounded-b-docs_DEFAULT",
             className
           )}
@@ -55,3 +55,4 @@ export const CodeBlockCollapsibleButton = ({
     </>
   )
 }
+

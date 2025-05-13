@@ -1,4 +1,4 @@
-import { PromotionRuleResponse } from "@medusajs/types"
+import { PromotionRuleResponse } from "@vikrai/types"
 
 export const generateRuleAttributes = (rules?: PromotionRuleResponse[]) =>
   (rules || []).map((rule) => ({
@@ -15,3 +15,4 @@ export const generateRuleAttributes = (rules?: PromotionRuleResponse[]) =>
           : rule.values
         : rule?.values?.map((v: { value: string }) => v.value!),
   }))
+

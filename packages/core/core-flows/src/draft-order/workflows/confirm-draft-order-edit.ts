@@ -2,13 +2,13 @@ import {
   ChangeActionType,
   MathBN,
   OrderChangeStatus,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 import {
   createWorkflow,
   transform,
   WorkflowResponse,
-} from "@medusajs/framework/workflows-sdk"
-import { BigNumberInput, OrderChangeDTO, OrderDTO } from "@medusajs/types"
+} from "@vikrai/framework/workflows-sdk"
+import { BigNumberInput, OrderChangeDTO, OrderDTO } from "@vikrai/types"
 import { reserveInventoryStep } from "../../cart"
 import { prepareConfirmInventoryInput } from "../../cart/utils/prepare-confirm-inventory-input"
 import { useRemoteQueryStep } from "../../common"
@@ -35,7 +35,7 @@ export interface ConfirmDraftOrderEditWorkflowInput {
 
 /**
  * This workflow confirms a draft order edit. It's used by the
- * [Confirm Draft Order Edit Admin API Route](https://docs.medusajs.com/api/admin#draft-orders_postdraftordersideditconfirm).
+ * [Confirm Draft Order Edit Admin API Route](https://docs.vikrai.com/api/admin#draft-orders_postdraftordersideditconfirm).
  * 
  * You can use this workflow within your customizations or your own custom workflows, allowing you to wrap custom logic around
  * confirming a draft order edit.
@@ -240,3 +240,4 @@ export const confirmDraftOrderEditWorkflow = createWorkflow(
     return new WorkflowResponse(orderPreview)
   }
 )
+

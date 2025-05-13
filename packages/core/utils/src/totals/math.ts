@@ -1,4 +1,4 @@
-import { BigNumberInput, BigNumberRawValue } from "@medusajs/types"
+import { BigNumberInput, BigNumberRawValue } from "@vikrai/types"
 import { BigNumber as BigNumberJS } from "bignumber.js"
 import { isDefined } from "../common"
 import { BigNumber } from "./big-number"
@@ -110,3 +110,4 @@ export class MathBN {
     return num1.isEqualTo(num2)
   }
 }
+

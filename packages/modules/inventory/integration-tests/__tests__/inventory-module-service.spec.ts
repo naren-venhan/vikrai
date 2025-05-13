@@ -1,4 +1,4 @@
-import { IInventoryService, InventoryItemDTO } from "@medusajs/framework/types"
+import { IInventoryService, InventoryItemDTO } from "@vikrai/framework/types"
 import {
   BigNumber,
   CommonEvents,
@@ -6,11 +6,11 @@ import {
   InventoryEvents,
   Module,
   Modules,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 import {
   MockEventBusService,
   moduleIntegrationTestRunner,
-} from "@medusajs/test-utils"
+} from "@vikrai/test-utils"
 import { InventoryModuleService } from "../../src/services"
 
 jest.setTimeout(100000)
@@ -1123,3 +1123,4 @@ moduleIntegrationTestRunner<IInventoryService>({
     })
   },
 })
+

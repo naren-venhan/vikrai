@@ -1,4 +1,4 @@
-import { model } from "@medusajs/framework/utils"
+import { model } from "@vikrai/framework/utils"
 import PromotionRule from "./promotion-rule"
 
 const PromotionRuleValue = model.define(
@@ -13,3 +13,4 @@ const PromotionRuleValue = model.define(
 )
 
 export default PromotionRuleValue
+

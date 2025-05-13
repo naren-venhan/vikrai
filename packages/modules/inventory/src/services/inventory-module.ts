@@ -11,7 +11,7 @@ import {
   ReservationItemDTO,
   RestoreReturn,
   SoftDeleteReturn,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import {
   arrayDifference,
   BigNumber,
@@ -23,13 +23,13 @@ import {
   isDefined,
   isString,
   MathBN,
-  MedusaContext,
-  MedusaError,
-  MedusaService,
+  vikraiContext,
+  vikraiError,
+  vikraiService,
   moduleEventBuilderFactory,
   Modules,
   partitionArray,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 import { InventoryItem, InventoryLevel, ReservationItem } from "@models"
 import { joinerConfig } from "../joiner-config"
 import { applyEntityHooks } from "../utils/apply-decorators"
@@ -37,9 +37,9 @@ import InventoryLevelService from "./inventory-level"
 
 type InjectedDependencies = {
   baseRepository: DAL.RepositoryService
-  inventoryItemService: ModulesSdkTypes.IMedusaInternalService<any>
+  inventoryItemService: ModulesSdkTypes.IvikraiInternalService<any>
   inventoryLevelService: InventoryLevelService
-  reservationItemService: ModulesSdkTypes.IMedusaInternalService<any>
+  reservationItemService: ModulesSdkTypes.IvikraiInternalService<any>
 }
 
 type InventoryItemCheckLevel = {
@@ -53,7 +53,7 @@ type InventoryItemCheckLevel = {
 applyEntityHooks()
 
 export default class InventoryModuleService
-  extends MedusaService<{
+  extends vikraiService<{
     InventoryItem: {
       dto: InventoryTypes.InventoryItemDTO
     }
@@ -72,10 +72,10 @@ export default class InventoryModuleService
 {
   protected baseRepository_: DAL.RepositoryService
 
-  protected readonly inventoryItemService_: ModulesSdkTypes.IMedusaInternalService<
+  protected readonly inventoryItemService_: ModulesSdkTypes.IvikraiInternalService<
     typeof InventoryItem
   >
-  protected readonly reservationItemService_: ModulesSdkTypes.IMedusaInternalService<
+  protected readonly reservationItemService_: ModulesSdkTypes.IvikraiInternalService<
     typeof ReservationItem
   >
   protected readonly inventoryLevelService_: InventoryLevelService
@@ -171,7 +171,7 @@ export default class InventoryModuleService
         })
         .join(", ")
 
-      throw new MedusaError(MedusaError.Types.NOT_FOUND, error)
+      throw new vikraiError(vikraiError.Types.NOT_FOUND, error)
     }
 
     if (validateQuantityAtLocation) {
@@ -187,8 +187,8 @@ export default class InventoryModuleService
         const level = locations?.get(item.location_id)!
 
         if (MathBN.lt(level.available_quantity, item.quantity!)) {
-          throw new MedusaError(
-            MedusaError.Types.NOT_ALLOWED,
+          throw new vikraiError(
+            vikraiError.Types.NOT_ALLOWED,
             `Not enough stock available for item ${item.inventory_item_id} at location ${item.location_id}`
           )
         }
@@ -242,7 +242,7 @@ export default class InventoryModuleService
     input:
       | InventoryTypes.CreateReservationItemInput[]
       | InventoryTypes.CreateReservationItemInput,
-    @MedusaContext() context: Context = {}
+    @vikraiContext() context: Context = {}
   ): Promise<
     InventoryTypes.ReservationItemDTO[] | InventoryTypes.ReservationItemDTO
   > {
@@ -273,7 +273,7 @@ export default class InventoryModuleService
   @InjectTransactionManager()
   async createReservationItems_(
     input: InventoryTypes.CreateReservationItemInput[],
-    @MedusaContext() context: Context = {}
+    @vikraiContext() context: Context = {}
   ): Promise<InferEntityType<typeof ReservationItem>[]> {
     const inventoryLevels = await this.ensureInventoryLevels(
       input.map(
@@ -341,7 +341,7 @@ export default class InventoryModuleService
     input:
       | InventoryTypes.CreateInventoryItemInput
       | InventoryTypes.CreateInventoryItemInput[],
-    @MedusaContext() context: Context = {}
+    @vikraiContext() context: Context = {}
   ): Promise<
     InventoryTypes.InventoryItemDTO | InventoryTypes.InventoryItemDTO[]
   > {
@@ -372,7 +372,7 @@ export default class InventoryModuleService
   @InjectTransactionManager()
   async createInventoryItems_(
     input: InventoryTypes.CreateInventoryItemInput[],
-    @MedusaContext() context: Context = {}
+    @vikraiContext() context: Context = {}
   ): Promise<InventoryTypes.InventoryItemDTO[]> {
     return await this.inventoryItemService_.create(input)
   }
@@ -395,7 +395,7 @@ export default class InventoryModuleService
     input:
       | InventoryTypes.CreateInventoryLevelInput[]
       | InventoryTypes.CreateInventoryLevelInput,
-    @MedusaContext() context: Context = {}
+    @vikraiContext() context: Context = {}
   ): Promise<
     InventoryTypes.InventoryLevelDTO[] | InventoryTypes.InventoryLevelDTO
   > {
@@ -427,7 +427,7 @@ export default class InventoryModuleService
   @InjectTransactionManager()
   async createInventoryLevels_(
     input: InventoryTypes.CreateInventoryLevelInput[],
-    @MedusaContext() context: Context = {}
+    @vikraiContext() context: Context = {}
   ): Promise<InferEntityType<typeof InventoryLevel>[]> {
     return await this.inventoryLevelService_.create(input, context)
   }
@@ -450,7 +450,7 @@ export default class InventoryModuleService
     input:
       | InventoryTypes.UpdateInventoryItemInput
       | InventoryTypes.UpdateInventoryItemInput[],
-    @MedusaContext() context: Context = {}
+    @vikraiContext() context: Context = {}
   ): Promise<
     InventoryTypes.InventoryItemDTO | InventoryTypes.InventoryItemDTO[]
   > {
@@ -484,7 +484,7 @@ export default class InventoryModuleService
     input: (Partial<InventoryTypes.CreateInventoryItemInput> & {
       id: string
     })[],
-    @MedusaContext() context: Context = {}
+    @vikraiContext() context: Context = {}
   ): Promise<InferEntityType<typeof InventoryItem>[]> {
     return await this.inventoryItemService_.update(input, context)
   }
@@ -493,7 +493,7 @@ export default class InventoryModuleService
   @EmitEvents()
   async deleteInventoryItemLevelByLocationId(
     locationId: string | string[],
-    @MedusaContext() context: Context = {}
+    @vikraiContext() context: Context = {}
   ): Promise<[object[], Record<string, unknown[]>]> {
     const result = await this.inventoryLevelService_.softDelete(
       { location_id: locationId },
@@ -524,7 +524,7 @@ export default class InventoryModuleService
   async deleteInventoryLevel(
     inventoryItemId: string,
     locationId: string,
-    @MedusaContext() context: Context = {}
+    @vikraiContext() context: Context = {}
   ): Promise<void> {
     const [inventoryLevel] = await this.inventoryLevelService_.list(
       { inventory_item_id: inventoryItemId, location_id: locationId },
@@ -567,7 +567,7 @@ export default class InventoryModuleService
     updates:
       | InventoryTypes.UpdateInventoryLevelInput[]
       | InventoryTypes.UpdateInventoryLevelInput,
-    @MedusaContext() context: Context = {}
+    @vikraiContext() context: Context = {}
   ): Promise<
     InventoryTypes.InventoryLevelDTO | InventoryTypes.InventoryLevelDTO[]
   > {
@@ -599,7 +599,7 @@ export default class InventoryModuleService
   @InjectTransactionManager()
   async updateInventoryLevels_(
     updates: InventoryTypes.UpdateInventoryLevelInput[],
-    @MedusaContext() context: Context = {}
+    @vikraiContext() context: Context = {}
   ) {
     const inventoryLevels = await this.ensureInventoryLevels(
       updates.map(({ location_id, inventory_item_id }) => ({
@@ -652,7 +652,7 @@ export default class InventoryModuleService
     input:
       | InventoryTypes.UpdateReservationItemInput
       | InventoryTypes.UpdateReservationItemInput[],
-    @MedusaContext() context: Context = {}
+    @vikraiContext() context: Context = {}
   ): Promise<
     InventoryTypes.ReservationItemDTO | InventoryTypes.ReservationItemDTO[]
   > {
@@ -681,7 +681,7 @@ export default class InventoryModuleService
   @InjectTransactionManager()
   async updateReservationItems_(
     input: (InventoryTypes.UpdateReservationItemInput & { id: string })[],
-    @MedusaContext() context: Context = {}
+    @vikraiContext() context: Context = {}
   ): Promise<InferEntityType<typeof ReservationItem>[]> {
     const ids = input.map((u) => u.id)
     const reservationItems = await this.listReservationItems(
@@ -696,8 +696,8 @@ export default class InventoryModuleService
     )
 
     if (diff.length) {
-      throw new MedusaError(
-        MedusaError.Types.INVALID_DATA,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_DATA,
         `Reservation item with id ${diff.join(", ")} not found`
       )
     }
@@ -812,7 +812,7 @@ export default class InventoryModuleService
   async softDeleteReservationItems(
     ids: string | string[],
     config?: SoftDeleteReturn<string>,
-    @MedusaContext() context: Context = {}
+    @vikraiContext() context: Context = {}
   ): Promise<void> {
     const reservations: InventoryTypes.ReservationItemDTO[] =
       await super.listReservationItems({ id: ids }, {}, context)
@@ -836,7 +836,7 @@ export default class InventoryModuleService
   async restoreReservationItems(
     ids: string | string[],
     config?: RestoreReturn<string>,
-    @MedusaContext() context: Context = {}
+    @vikraiContext() context: Context = {}
   ): Promise<void> {
     const reservations: InventoryTypes.ReservationItemDTO[] =
       await super.listReservationItems({ id: ids }, {}, context)
@@ -853,7 +853,7 @@ export default class InventoryModuleService
   @EmitEvents()
   async deleteReservationItemByLocationId(
     locationId: string | string[],
-    @MedusaContext() context: Context = {}
+    @vikraiContext() context: Context = {}
   ): Promise<void> {
     const reservations: InventoryTypes.ReservationItemDTO[] =
       await this.listReservationItems({ location_id: locationId }, {}, context)
@@ -889,7 +889,7 @@ export default class InventoryModuleService
   @EmitEvents()
   async deleteReservationItemsByLineItem(
     lineItemId: string | string[],
-    @MedusaContext() context: Context = {}
+    @vikraiContext() context: Context = {}
   ): Promise<void> {
     const reservations: InventoryTypes.ReservationItemDTO[] =
       await this.listReservationItems({ line_item_id: lineItemId }, {}, context)
@@ -925,7 +925,7 @@ export default class InventoryModuleService
   @EmitEvents()
   async restoreReservationItemsByLineItem(
     lineItemId: string | string[],
-    @MedusaContext() context: Context = {}
+    @vikraiContext() context: Context = {}
   ): Promise<void> {
     const reservations: InventoryTypes.ReservationItemDTO[] =
       await this.listReservationItems({ line_item_id: lineItemId }, {}, context)
@@ -982,7 +982,7 @@ export default class InventoryModuleService
     inventoryItemIdOrData: string | any,
     locationId?: string | Context,
     adjustment?: BigNumberInput,
-    @MedusaContext() context: Context = {}
+    @vikraiContext() context: Context = {}
   ): Promise<
     InventoryTypes.InventoryLevelDTO | InventoryTypes.InventoryLevelDTO[]
   > {
@@ -1033,7 +1033,7 @@ export default class InventoryModuleService
     inventoryItemId: string,
     locationId: string,
     adjustment: BigNumberInput,
-    @MedusaContext() context: Context = {}
+    @vikraiContext() context: Context = {}
   ): Promise<InferEntityType<typeof InventoryLevel>> {
     const inventoryLevel = await this.retrieveInventoryLevelByItemAndLocation(
       inventoryItemId,
@@ -1059,7 +1059,7 @@ export default class InventoryModuleService
   async retrieveInventoryLevelByItemAndLocation(
     inventoryItemId: string,
     locationId: string,
-    @MedusaContext() context: Context = {}
+    @vikraiContext() context: Context = {}
   ): Promise<InventoryTypes.InventoryLevelDTO> {
     const [inventoryLevel] = await this.listInventoryLevels(
       { inventory_item_id: inventoryItemId, location_id: locationId },
@@ -1068,8 +1068,8 @@ export default class InventoryModuleService
     )
 
     if (!inventoryLevel) {
-      throw new MedusaError(
-        MedusaError.Types.NOT_FOUND,
+      throw new vikraiError(
+        vikraiError.Types.NOT_FOUND,
         `Inventory level for item ${inventoryItemId} and location ${locationId} not found`
       )
     }
@@ -1089,7 +1089,7 @@ export default class InventoryModuleService
   async retrieveAvailableQuantity(
     inventoryItemId: string,
     locationIds: string[],
-    @MedusaContext() context: Context = {}
+    @vikraiContext() context: Context = {}
   ): Promise<BigNumber> {
     if (locationIds.length === 0) {
       return new BigNumber(0)
@@ -1125,7 +1125,7 @@ export default class InventoryModuleService
   async retrieveStockedQuantity(
     inventoryItemId: string,
     locationIds: string[],
-    @MedusaContext() context: Context = {}
+    @vikraiContext() context: Context = {}
   ): Promise<BigNumber> {
     if (locationIds.length === 0) {
       return new BigNumber(0)
@@ -1162,7 +1162,7 @@ export default class InventoryModuleService
   async retrieveReservedQuantity(
     inventoryItemId: string,
     locationIds: string[],
-    @MedusaContext() context: Context = {}
+    @vikraiContext() context: Context = {}
   ): Promise<BigNumber> {
     // Throws if item does not exist
     await this.inventoryItemService_.retrieve(
@@ -1200,7 +1200,7 @@ export default class InventoryModuleService
     inventoryItemId: string,
     locationIds: string[],
     quantity: BigNumberInput,
-    @MedusaContext() context: Context = {}
+    @vikraiContext() context: Context = {}
   ): Promise<boolean> {
     const availableQuantity = await this.retrieveAvailableQuantity(
       inventoryItemId,
@@ -1283,3 +1283,4 @@ export default class InventoryModuleService
     await this.inventoryLevelService_.update(levelAdjustmentUpdates, context)
   }
 }
+

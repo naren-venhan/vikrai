@@ -1,13 +1,13 @@
-import { IWorkflowEngineService } from "@medusajs/framework/types"
-import { Modules } from "@medusajs/framework/utils"
+import { IWorkflowEngineService } from "@vikrai/framework/types"
+import { Modules } from "@vikrai/framework/utils"
 import {
   createStep,
   createWorkflow,
   StepResponse,
   transform,
   WorkflowResponse,
-} from "@medusajs/framework/workflows-sdk"
-import { moduleIntegrationTestRunner } from "@medusajs/test-utils"
+} from "@vikrai/framework/workflows-sdk"
+import { moduleIntegrationTestRunner } from "@vikrai/test-utils"
 import { setTimeout as setTimeoutSync } from "timers"
 import { setTimeout } from "timers/promises"
 import { ulid } from "ulid"
@@ -35,7 +35,7 @@ moduleIntegrationTestRunner<IWorkflowEngineService>({
       url: "localhost:6379",
     },
   },
-  testSuite: ({ service: workflowOrcModule, medusaApp }) => {
+  testSuite: ({ service: workflowOrcModule, vikraiApp }) => {
     describe("Testing race condition of the workflow during retry", () => {
       it("should prevent race continuation of the workflow during retryIntervalAwaiting in background execution", (done) => {
         const transactionId = "transaction_id"
@@ -217,3 +217,4 @@ moduleIntegrationTestRunner<IWorkflowEngineService>({
     })
   },
 })
+

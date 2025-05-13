@@ -4,7 +4,7 @@ import React, { useCallback, useRef, useState } from "react"
 import { useSelect } from "@/hooks"
 import clsx from "clsx"
 import { SelectDropdown, SelectProps } from ".."
-import { TriangleDownMini } from "@medusajs/icons"
+import { TriangleDownMini } from "@vikrai/icons"
 
 export const SelectBadge = ({
   value,
@@ -60,7 +60,7 @@ export const SelectBadge = ({
       <>
         <span
           className={clsx(
-            "text-compact-x-small-plus text-medusa-tag-neutral-text"
+            "text-compact-x-small-plus text-vikrai-tag-neutral-text"
           )}
         >
           {str}
@@ -76,12 +76,12 @@ export const SelectBadge = ({
     <div className={clsx("relative w-fit", className)}>
       <div
         className={clsx(
-          "border-medusa-tag-neutral-border rounded-docs_sm border border-solid",
-          "h-fit cursor-pointer pl-docs_0.25 pr-[3px] text-medusa-tag-neutral-text",
-          "bg-medusa-tag-neutral-bg",
+          "border-vikrai-tag-neutral-border rounded-docs_sm border border-solid",
+          "h-fit cursor-pointer pl-docs_0.25 pr-[3px] text-vikrai-tag-neutral-text",
+          "bg-vikrai-tag-neutral-bg",
           "flex items-center gap-[3px] whitespace-nowrap",
-          "text-medusa-fg-subtle",
-          open && "bg-medusa-tag-neutral-bg-hover"
+          "text-vikrai-fg-subtle",
+          open && "bg-vikrai-tag-neutral-bg-hover"
         )}
         ref={ref}
         onClick={(e) => {
@@ -91,7 +91,7 @@ export const SelectBadge = ({
         }}
       >
         {getSelectedText()}
-        <TriangleDownMini className="text-medusa-tag-neutral-icon" />
+        <TriangleDownMini className="text-vikrai-tag-neutral-icon" />
       </div>
       <input
         type="hidden"
@@ -117,3 +117,4 @@ export const SelectBadge = ({
 }
 
 export default SelectBadge
+

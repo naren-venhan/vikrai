@@ -1,7 +1,7 @@
-import { IStoreModuleService } from "@medusajs/framework/types"
-import { Module, Modules } from "@medusajs/framework/utils"
+import { IStoreModuleService } from "@vikrai/framework/types"
+import { Module, Modules } from "@vikrai/framework/utils"
 import { StoreModuleService } from "@services"
-import { moduleIntegrationTestRunner } from "@medusajs/test-utils"
+import { moduleIntegrationTestRunner } from "@vikrai/test-utils"
 import { createStoreFixture } from "../__fixtures__"
 
 jest.setTimeout(100000)
@@ -190,3 +190,4 @@ moduleIntegrationTestRunner<IStoreModuleService>({
     })
   },
 })
+

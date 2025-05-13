@@ -11,15 +11,15 @@ import {
   InternalModuleDeclaration,
   ModuleJoinerConfig,
   ModulesSdkTypes,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 
 import {
   InjectManager,
   InjectTransactionManager,
   isString,
-  MedusaContext,
-  MedusaService,
-} from "@medusajs/framework/utils"
+  vikraiContext,
+  vikraiService,
+} from "@vikrai/framework/utils"
 import { EntityManager } from "@mikro-orm/core"
 import {
   Customer,
@@ -31,14 +31,14 @@ import { joinerConfig } from "../joiner-config"
 
 type InjectedDependencies = {
   baseRepository: DAL.RepositoryService
-  customerService: ModulesSdkTypes.IMedusaInternalService<any>
-  customerAddressService: ModulesSdkTypes.IMedusaInternalService<any>
-  customerGroupService: ModulesSdkTypes.IMedusaInternalService<any>
-  customerGroupCustomerService: ModulesSdkTypes.IMedusaInternalService<any>
+  customerService: ModulesSdkTypes.IvikraiInternalService<any>
+  customerAddressService: ModulesSdkTypes.IvikraiInternalService<any>
+  customerGroupService: ModulesSdkTypes.IvikraiInternalService<any>
+  customerGroupCustomerService: ModulesSdkTypes.IvikraiInternalService<any>
 }
 
 export default class CustomerModuleService
-  extends MedusaService<{
+  extends vikraiService<{
     CustomerAddress: { dto: CustomerAddressDTO }
     Customer: { dto: CustomerDTO }
     CustomerGroup: { dto: CustomerGroupDTO }
@@ -52,16 +52,16 @@ export default class CustomerModuleService
   implements ICustomerModuleService
 {
   protected baseRepository_: DAL.RepositoryService
-  protected customerService_: ModulesSdkTypes.IMedusaInternalService<
+  protected customerService_: ModulesSdkTypes.IvikraiInternalService<
     InferEntityType<typeof Customer>
   >
-  protected customerAddressService_: ModulesSdkTypes.IMedusaInternalService<
+  protected customerAddressService_: ModulesSdkTypes.IvikraiInternalService<
     InferEntityType<typeof CustomerAddress>
   >
-  protected customerGroupService_: ModulesSdkTypes.IMedusaInternalService<
+  protected customerGroupService_: ModulesSdkTypes.IvikraiInternalService<
     InferEntityType<typeof CustomerGroup>
   >
-  protected customerGroupCustomerService_: ModulesSdkTypes.IMedusaInternalService<
+  protected customerGroupCustomerService_: ModulesSdkTypes.IvikraiInternalService<
     InferEntityType<typeof CustomerGroupCustomer>
   >
 
@@ -105,7 +105,7 @@ export default class CustomerModuleService
     dataOrArray:
       | CustomerTypes.CreateCustomerDTO
       | CustomerTypes.CreateCustomerDTO[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<CustomerTypes.CustomerDTO | CustomerTypes.CustomerDTO[]> {
     const customers = await this.createCustomers_(dataOrArray, sharedContext)
 
@@ -123,7 +123,7 @@ export default class CustomerModuleService
     dataOrArray:
       | CustomerTypes.CreateCustomerDTO
       | CustomerTypes.CreateCustomerDTO[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<CustomerTypes.CustomerDTO[]> {
     const data = Array.isArray(dataOrArray) ? dataOrArray : [dataOrArray]
     const customerAttributes = data.map(({ addresses, ...rest }) => {
@@ -180,7 +180,7 @@ export default class CustomerModuleService
   async updateCustomers(
     idsOrSelector: string | string[] | CustomerTypes.FilterableCustomerProps,
     data: CustomerTypes.CustomerUpdatableFields,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ) {
     let updateData:
       | CustomerTypes.UpdateCustomerDTO
@@ -239,7 +239,7 @@ export default class CustomerModuleService
     dataOrArrayOfData:
       | CustomerTypes.CreateCustomerGroupDTO
       | CustomerTypes.CreateCustomerGroupDTO[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ) {
     const groups = await this.customerGroupService_.create(
       dataOrArrayOfData,
@@ -280,7 +280,7 @@ export default class CustomerModuleService
       | string[]
       | CustomerTypes.FilterableCustomerGroupProps,
     data: CustomerTypes.CustomerGroupUpdatableFields,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ) {
     let updateData:
       | CustomerTypes.UpdateCustomerGroupDTO
@@ -335,7 +335,7 @@ export default class CustomerModuleService
   @InjectTransactionManager()
   async addCustomerToGroup(
     data: CustomerTypes.GroupCustomerPair | CustomerTypes.GroupCustomerPair[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<{ id: string } | { id: string }[]> {
     const groupCustomers = await this.customerGroupCustomerService_.create(
       data,
@@ -370,7 +370,7 @@ export default class CustomerModuleService
     data:
       | CustomerTypes.CreateCustomerAddressDTO
       | CustomerTypes.CreateCustomerAddressDTO[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<
     CustomerTypes.CustomerAddressDTO | CustomerTypes.CustomerAddressDTO[]
   > {
@@ -392,7 +392,7 @@ export default class CustomerModuleService
     data:
       | CustomerTypes.CreateCustomerAddressDTO
       | CustomerTypes.CreateCustomerAddressDTO[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ) {
     return await this.customerAddressService_.create(
       Array.isArray(data) ? data : [data],
@@ -427,7 +427,7 @@ export default class CustomerModuleService
       | string[]
       | CustomerTypes.FilterableCustomerAddressProps,
     data: CustomerTypes.UpdateCustomerAddressDTO,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ) {
     let updateData:
       | CustomerTypes.UpdateCustomerAddressDTO[]
@@ -484,7 +484,7 @@ export default class CustomerModuleService
   @InjectTransactionManager()
   async removeCustomerFromGroup(
     data: CustomerTypes.GroupCustomerPair | CustomerTypes.GroupCustomerPair[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<void> {
     const pairs = Array.isArray(data) ? data : [data]
     const groupCustomers = await this.customerGroupCustomerService_.list({
@@ -501,3 +501,4 @@ export default class CustomerModuleService
     await em.flush()
   }
 }
+

@@ -2,25 +2,25 @@ import {
   DistributedTransactionType,
   TransactionState,
   WorkflowManager,
-} from "@medusajs/framework/orchestration"
+} from "@vikrai/framework/orchestration"
 import {
   Context,
   IWorkflowEngineService,
   RemoteQueryFunction,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import {
   Module,
   Modules,
   promiseAll,
   TransactionHandlerType,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 import {
   createStep,
   createWorkflow,
   StepResponse,
   WorkflowResponse,
-} from "@medusajs/framework/workflows-sdk"
-import { moduleIntegrationTestRunner } from "@medusajs/test-utils"
+} from "@vikrai/framework/workflows-sdk"
+import { moduleIntegrationTestRunner } from "@vikrai/test-utils"
 import { WorkflowsModuleService } from "@services"
 import { asFunction } from "awilix"
 import { ulid } from "ulid"
@@ -57,12 +57,12 @@ const failTrap = (done) => {
 moduleIntegrationTestRunner<IWorkflowEngineService>({
   moduleName: Modules.WORKFLOW_ENGINE,
   resolve: __dirname + "/../..",
-  testSuite: ({ service: workflowOrcModule, medusaApp }) => {
+  testSuite: ({ service: workflowOrcModule, vikraiApp }) => {
     describe("Workflow Orchestrator module", function () {
       let query: RemoteQueryFunction
 
       beforeEach(() => {
-        query = medusaApp.query
+        query = vikraiApp.query
       })
 
       it(`should export the appropriate linkable configuration`, () => {
@@ -735,3 +735,4 @@ moduleIntegrationTestRunner<IWorkflowEngineService>({
     })
   },
 })
+

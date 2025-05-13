@@ -1,7 +1,7 @@
-import { PencilSquare, Trash } from "@medusajs/icons"
+import { PencilSquare, Trash } from "@vikrai/icons"
 
-import { InventoryTypes } from "@medusajs/types"
-import { usePrompt } from "@medusajs/ui"
+import { InventoryTypes } from "@vikrai/types"
+import { usePrompt } from "@vikrai/ui"
 import { useTranslation } from "react-i18next"
 import { ActionMenu } from "../../../../../components/common/action-menu"
 import { useDeleteInventoryItemLevel } from "../../../../../hooks/api/inventory"
@@ -60,3 +60,4 @@ export const LocationActions = ({
     />
   )
 }
+

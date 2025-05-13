@@ -1,7 +1,7 @@
 import {
   CustomFieldModel,
   isValidCustomFieldModel,
-} from "@medusajs/admin-shared"
+} from "@vikrai/admin-shared"
 import {
   ExportDefaultDeclaration,
   isCallExpression,
@@ -114,3 +114,4 @@ export function validateLink(
 
   return true
 }
+

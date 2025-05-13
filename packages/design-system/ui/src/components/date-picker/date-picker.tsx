@@ -5,7 +5,7 @@ import {
   CalendarDateTime,
   getLocalTimeZone,
 } from "@internationalized/date"
-import { CalendarMini, Clock, XMarkMini } from "@medusajs/icons"
+import { CalendarMini, Clock, XMarkMini } from "@vikrai/icons"
 import { cva } from "cva"
 import * as React from "react"
 import {
@@ -242,3 +242,4 @@ function convertProps(
 }
 
 export { DatePicker, type Granularity }
+

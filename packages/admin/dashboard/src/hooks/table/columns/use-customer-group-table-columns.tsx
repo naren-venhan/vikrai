@@ -6,7 +6,7 @@ import {
   TextCell,
   TextHeader,
 } from "../../../components/table/table-cells/common/text-cell"
-import { HttpTypes } from "@medusajs/types"
+import { HttpTypes } from "@vikrai/types"
 
 const columnHelper = createColumnHelper<HttpTypes.AdminCustomerGroup>()
 
@@ -31,3 +31,4 @@ export const useCustomerGroupTableColumns = () => {
     [t]
   )
 }
+

@@ -1,5 +1,5 @@
-import { ApiKeyType } from "@medusajs/utils"
-import { medusaIntegrationTestRunner } from "@medusajs/test-utils"
+import { ApiKeyType } from "@vikrai/utils"
+import { vikraiIntegrationTestRunner } from "@vikrai/test-utils"
 import {
   adminHeaders,
   createAdminUser,
@@ -7,7 +7,7 @@ import {
 
 jest.setTimeout(50000)
 
-medusaIntegrationTestRunner({
+vikraiIntegrationTestRunner({
   env: {},
   testSuite: ({ dbConnection, getContainer, api }) => {
     describe("API Keys - Admin", () => {
@@ -447,3 +447,4 @@ medusaIntegrationTestRunner({
     })
   },
 })
+

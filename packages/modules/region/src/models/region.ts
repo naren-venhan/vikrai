@@ -1,4 +1,4 @@
-import { model } from "@medusajs/framework/utils"
+import { model } from "@vikrai/framework/utils"
 import RegionCountry from "./country"
 
 export default model.define("region", {
@@ -9,3 +9,4 @@ export default model.define("region", {
   countries: model.hasMany(() => RegionCountry),
   metadata: model.json().nullable(),
 })
+

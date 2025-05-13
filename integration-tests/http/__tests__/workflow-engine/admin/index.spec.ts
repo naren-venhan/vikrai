@@ -4,9 +4,9 @@ import {
   StepResponse,
   WorkflowData,
   WorkflowResponse,
-} from "@medusajs/framework/workflows-sdk"
-import { medusaIntegrationTestRunner } from "@medusajs/test-utils"
-import { Modules } from "@medusajs/utils"
+} from "@vikrai/framework/workflows-sdk"
+import { vikraiIntegrationTestRunner } from "@vikrai/test-utils"
+import { Modules } from "@vikrai/utils"
 import {
   adminHeaders,
   createAdminUser,
@@ -14,7 +14,7 @@ import {
 
 jest.setTimeout(300000)
 
-medusaIntegrationTestRunner({
+vikraiIntegrationTestRunner({
   testSuite: ({ dbConnection, getContainer, api }) => {
     let container
 
@@ -92,3 +92,4 @@ medusaIntegrationTestRunner({
     })
   },
 })
+

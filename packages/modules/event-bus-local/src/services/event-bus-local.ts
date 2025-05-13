@@ -3,11 +3,11 @@ import {
   EventBusTypes,
   InternalModuleDeclaration,
   Logger,
-  MedusaContainer,
+  vikraiContainer,
   Message,
   Subscriber,
-} from "@medusajs/framework/types"
-import { AbstractEventBusModuleService } from "@medusajs/framework/utils"
+} from "@vikrai/framework/types"
+import { AbstractEventBusModuleService } from "@vikrai/framework/utils"
 import { EventEmitter } from "events"
 import { setTimeout } from "timers/promises"
 
@@ -27,7 +27,7 @@ export default class LocalEventBusService extends AbstractEventBusModuleService 
   protected groupedEventsMap_: StagingQueueType
 
   constructor(
-    { logger }: MedusaContainer & InjectedDependencies,
+    { logger }: vikraiContainer & InjectedDependencies,
     moduleOptions = {},
     moduleDeclaration: InternalModuleDeclaration
   ) {
@@ -166,3 +166,4 @@ export default class LocalEventBusService extends AbstractEventBusModuleService 
     return this
   }
 }
+

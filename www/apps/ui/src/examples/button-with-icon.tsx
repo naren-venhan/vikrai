@@ -1,5 +1,5 @@
-import { PlusMini } from "@medusajs/icons"
-import { Button } from "@medusajs/ui"
+import { PlusMini } from "@vikrai/icons"
+import { Button } from "@vikrai/ui"
 
 export default function ButtonWithIcon() {
   return (
@@ -8,3 +8,4 @@ export default function ButtonWithIcon() {
     </Button>
   )
 }
+

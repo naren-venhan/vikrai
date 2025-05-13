@@ -1,4 +1,4 @@
-import { Button, Toaster, toast } from "@medusajs/ui"
+import { Button, Toaster, toast } from "@vikrai/ui"
 
 export default function ToasterWarning() {
   return (
@@ -17,3 +17,4 @@ export default function ToasterWarning() {
     </>
   )
 }
+

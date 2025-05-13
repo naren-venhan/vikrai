@@ -21,7 +21,8 @@ export type RedisCacheModuleOptions = {
 
   /**
    * Prefix for event keys
-   * @default `medusa:`
+   * @default `vikrai:`
    */
   namespace?: string
 }
+

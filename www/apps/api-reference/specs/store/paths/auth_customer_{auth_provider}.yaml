@@ -11,7 +11,7 @@ post:
     continue authentication with the third-party service.
   externalDocs:
     url: >-
-      https://docs.medusajs.com/v2/storefront-development/customers/login#1-using-a-jwt-token
+      https://docs.vikrai.com/v2/storefront-development/customers/login#1-using-a-jwt-token
     description: 'Storefront development: How to login as a customer'
   x-authenticated: false
   parameters:
@@ -38,7 +38,7 @@ post:
             `callback_url` to indicate the URL in the frontend that the customer
             should be redirected to after completing their authentication. This
             will override the provider's `callbackUrl` configurations in
-            `medusa-config.ts`.
+            `vikrai-config.ts`.
   x-codeSamples:
     - lang: JavaScript
       label: JS SDK
@@ -71,3 +71,4 @@ post:
       $ref: ../components/responses/invalid_request_error.yaml
     '500':
       $ref: ../components/responses/500_error.yaml
+

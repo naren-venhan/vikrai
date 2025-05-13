@@ -1,10 +1,10 @@
-import { IUserModuleService } from "@medusajs/framework/types"
-import { Module, Modules, UserEvents } from "@medusajs/framework/utils"
+import { IUserModuleService } from "@vikrai/framework/types"
+import { Module, Modules, UserEvents } from "@vikrai/framework/utils"
 import { UserModuleService } from "@services"
 import {
   MockEventBusService,
   moduleIntegrationTestRunner,
-} from "@medusajs/test-utils"
+} from "@vikrai/test-utils"
 
 jest.setTimeout(30000)
 
@@ -270,3 +270,4 @@ moduleIntegrationTestRunner<IUserModuleService>({
     })
   },
 })
+

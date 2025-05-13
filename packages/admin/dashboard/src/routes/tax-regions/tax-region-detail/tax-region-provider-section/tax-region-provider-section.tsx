@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next"
-import { HttpTypes } from "@medusajs/types"
-import { Container, Heading } from "@medusajs/ui"
+import { HttpTypes } from "@vikrai/types"
+import { Container, Heading } from "@vikrai/ui"
 
 import { formatProvider } from "../../../../lib/format-provider"
 
@@ -26,3 +26,4 @@ export function TaxRegionProviderSection({
     </Container>
   )
 }
+

@@ -1,7 +1,7 @@
 import type {
   IDistributedSchedulerStorage,
   SchedulerOptions,
-} from "@medusajs/orchestration"
+} from "@vikrai/orchestration"
 
 export class MockSchedulerStorage implements IDistributedSchedulerStorage {
   async schedule(
@@ -19,3 +19,4 @@ export class MockSchedulerStorage implements IDistributedSchedulerStorage {
     return await Promise.resolve()
   }
 }
+

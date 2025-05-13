@@ -1,4 +1,4 @@
-import { BigNumberRawValue } from "@medusajs/types"
+import { BigNumberRawValue } from "@vikrai/types"
 import { Entity, MikroORM, PrimaryKey } from "@mikro-orm/core"
 import { defineConfig } from "@mikro-orm/postgresql"
 import { BigNumber } from "../../../totals/big-number"
@@ -79,3 +79,4 @@ describe("@MikroOrmBigNumberProperty", () => {
     expect(testAmount.raw_amount).toEqual({ value: "300", precision: 5 })
   })
 })
+

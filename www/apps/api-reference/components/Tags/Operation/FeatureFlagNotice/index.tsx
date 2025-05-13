@@ -20,7 +20,7 @@ const TagsOperationFeatureFlagNotice = ({
           To use this {type}, make sure to
           <br />
           <Link
-            href="https://docs.medusajs.com/development/feature-flags/toggle"
+            href="https://docs.vikrai.com/development/feature-flags/toggle"
             target="__blank"
           >
             enable its feature flag: <code>{featureFlag}</code>
@@ -37,3 +37,4 @@ const TagsOperationFeatureFlagNotice = ({
 }
 
 export default TagsOperationFeatureFlagNotice
+

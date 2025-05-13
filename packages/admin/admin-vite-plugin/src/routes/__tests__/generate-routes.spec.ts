@@ -22,7 +22,7 @@ vi.mock("fs/promises", () => ({
 
 const mockFileContents = [
   `
-    import { defineRouteConfig } from "@medusajs/admin-sdk"
+    import { defineRouteConfig } from "@vikrai/admin-sdk"
 
     const Page = () => {
         return <div>Page 1</div>
@@ -36,7 +36,7 @@ const mockFileContents = [
     export default Page
     `,
   `
-    import { defineRouteConfig } from "@medusajs/admin-sdk"
+    import { defineRouteConfig } from "@vikrai/admin-sdk"
 
     const Page = () => {
         return <div>Page 2</div>
@@ -66,7 +66,7 @@ const expectedRoutesWithoutLoaders = `
 const mockFileContentsWithParallel = [
   // Parent route
   `
-    import { defineRouteConfig } from "@medusajs/admin-sdk"
+    import { defineRouteConfig } from "@vikrai/admin-sdk"
     const Page = () => {
         return <div>Brands</div>
     }
@@ -77,7 +77,7 @@ const mockFileContentsWithParallel = [
   `,
   // Parallel route
   `
-    import { defineRouteConfig } from "@medusajs/admin-sdk"
+    import { defineRouteConfig } from "@vikrai/admin-sdk"
     const Page = () => {
         return <div>Create Brand</div>
     }
@@ -105,7 +105,7 @@ const expectedRoutesWithParallel = `
 
 const mockFileContentsWithHandleLoader = [
   `
-    import { defineRouteConfig } from "@medusajs/admin-sdk"
+    import { defineRouteConfig } from "@vikrai/admin-sdk"
 
     const Page = () => {
         return <div>Page 1</div>
@@ -126,7 +126,7 @@ const mockFileContentsWithHandleLoader = [
     export default Page
   `,
   `
-    import { defineRouteConfig } from "@medusajs/admin-sdk"
+    import { defineRouteConfig } from "@vikrai/admin-sdk"
 
     const Page = () => {
         return <div>Page 2</div>
@@ -163,8 +163,8 @@ const expectedRoutesWithHandleLoader = `
 describe("generateRoutes", () => {
   it("should generate routes", async () => {
     const mockFiles = [
-      "Users/user/medusa/src/admin/routes/one/page.tsx",
-      "Users/user/medusa/src/admin/routes/two/page.tsx",
+      "Users/user/vikrai/src/admin/routes/one/page.tsx",
+      "Users/user/vikrai/src/admin/routes/two/page.tsx",
     ]
     vi.mocked(utils.crawl).mockResolvedValue(mockFiles)
 
@@ -175,7 +175,7 @@ describe("generateRoutes", () => {
     vi.mocked(fs.stat).mockRejectedValue(new Error("File not found"))
 
     const result = await generateRoutes(
-      new Set(["Users/user/medusa/src/admin"])
+      new Set(["Users/user/vikrai/src/admin"])
     )
     expect(utils.normalizeString(result.code)).toEqual(
       utils.normalizeString(expectedRoutesWithoutLoaders)
@@ -183,8 +183,8 @@ describe("generateRoutes", () => {
   })
   it("should handle windows paths", async () => {
     const mockFiles = [
-      "C:\\medusa\\src\\admin\\routes\\one\\page.tsx",
-      "C:\\medusa\\src\\admin\\routes\\two\\page.tsx",
+      "C:\\vikrai\\src\\admin\\routes\\one\\page.tsx",
+      "C:\\vikrai\\src\\admin\\routes\\two\\page.tsx",
     ]
     vi.mocked(utils.crawl).mockResolvedValue(mockFiles)
 
@@ -194,7 +194,7 @@ describe("generateRoutes", () => {
 
     vi.mocked(fs.stat).mockRejectedValue(new Error("File not found"))
 
-    const result = await generateRoutes(new Set(["C:\\medusa\\src\\admin"]))
+    const result = await generateRoutes(new Set(["C:\\vikrai\\src\\admin"]))
 
     expect(utils.normalizeString(result.code)).toEqual(
       utils.normalizeString(expectedRoutesWithoutLoaders)
@@ -202,8 +202,8 @@ describe("generateRoutes", () => {
   })
   it("should handle parallel routes", async () => {
     const mockFiles = [
-      "Users/user/medusa/src/admin/routes/brands/page.tsx",
-      "Users/user/medusa/src/admin/routes/brands/@create/page.tsx",
+      "Users/user/vikrai/src/admin/routes/brands/page.tsx",
+      "Users/user/vikrai/src/admin/routes/brands/@create/page.tsx",
     ]
     vi.mocked(utils.crawl).mockResolvedValue(mockFiles)
 
@@ -216,7 +216,7 @@ describe("generateRoutes", () => {
     vi.mocked(fs.stat).mockRejectedValue(new Error("File not found"))
 
     const result = await generateRoutes(
-      new Set(["Users/user/medusa/src/admin"])
+      new Set(["Users/user/vikrai/src/admin"])
     )
     expect(utils.normalizeString(result.code)).toEqual(
       utils.normalizeString(expectedRoutesWithParallel)
@@ -224,8 +224,8 @@ describe("generateRoutes", () => {
   })
   it("should handle parallel routes with windows paths", async () => {
     const mockFiles = [
-      "C:\\medusa\\src\\admin\\routes\\brands\\page.tsx",
-      "C:\\medusa\\src\\admin\\routes\\brands\\@create\\page.tsx",
+      "C:\\vikrai\\src\\admin\\routes\\brands\\page.tsx",
+      "C:\\vikrai\\src\\admin\\routes\\brands\\@create\\page.tsx",
     ]
     vi.mocked(utils.crawl).mockResolvedValue(mockFiles)
 
@@ -237,7 +237,7 @@ describe("generateRoutes", () => {
 
     vi.mocked(fs.stat).mockRejectedValue(new Error("File not found"))
 
-    const result = await generateRoutes(new Set(["C:\\medusa\\src\\admin"]))
+    const result = await generateRoutes(new Set(["C:\\vikrai\\src\\admin"]))
 
     expect(utils.normalizeString(result.code)).toEqual(
       utils.normalizeString(expectedRoutesWithParallel)
@@ -245,8 +245,8 @@ describe("generateRoutes", () => {
   })
   it("should handle routes with handle and loader exports", async () => {
     const mockFiles = [
-      "Users/user/medusa/src/admin/routes/one/page.tsx",
-      "Users/user/medusa/src/admin/routes/two/page.tsx",
+      "Users/user/vikrai/src/admin/routes/one/page.tsx",
+      "Users/user/vikrai/src/admin/routes/two/page.tsx",
     ]
     vi.mocked(utils.crawl).mockResolvedValue(mockFiles)
 
@@ -259,7 +259,7 @@ describe("generateRoutes", () => {
     vi.mocked(fs.stat).mockRejectedValue(new Error("File not found"))
 
     const result = await generateRoutes(
-      new Set(["Users/user/medusa/src/admin"])
+      new Set(["Users/user/vikrai/src/admin"])
     )
 
     expect(utils.normalizeString(result.code)).toEqual(
@@ -267,3 +267,4 @@ describe("generateRoutes", () => {
     )
   })
 })
+

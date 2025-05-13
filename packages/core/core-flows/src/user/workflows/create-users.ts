@@ -1,11 +1,11 @@
-import { UserDTO, UserWorkflow } from "@medusajs/framework/types"
-import { UserWorkflowEvents } from "@medusajs/framework/utils"
+import { UserDTO, UserWorkflow } from "@vikrai/framework/types"
+import { UserWorkflowEvents } from "@vikrai/framework/utils"
 import {
   WorkflowData,
   WorkflowResponse,
   createWorkflow,
   transform,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { emitEventStep } from "../../common/steps/emit-event"
 import { createUsersStep } from "../steps"
 
@@ -16,7 +16,7 @@ export const createUsersWorkflowId = "create-users-workflow"
  * 
  * You can attach an auth identity to each user to allow the user to log in using the 
  * {@link setAuthAppMetadataStep}. Learn more about auth identities in
- * [this documentation](https://docs.medusajs.com/resources/commerce-modules/auth/auth-identity-and-actor-types).
+ * [this documentation](https://docs.vikrai.com/resources/commerce-modules/auth/auth-identity-and-actor-types).
  * 
  * You can use this workflow within your customizations or your own custom workflows, allowing you to 
  * create users within your custom flows.
@@ -58,3 +58,4 @@ export const createUsersWorkflow = createWorkflow(
     return new WorkflowResponse(createdUsers)
   }
 )
+

@@ -1,6 +1,6 @@
-import { Component, PencilSquare, Trash } from "@medusajs/icons"
-import { HttpTypes } from "@medusajs/types"
-import { Badge, Container, Heading, usePrompt } from "@medusajs/ui"
+import { Component, PencilSquare, Trash } from "@vikrai/icons"
+import { HttpTypes } from "@vikrai/types"
+import { Badge, Container, Heading, usePrompt } from "@vikrai/ui"
 import { useTranslation } from "react-i18next"
 import { useNavigate } from "react-router-dom"
 
@@ -95,3 +95,4 @@ export function VariantGeneralSection({ variant }: VariantGeneralSectionProps) {
     </Container>
   )
 }
+

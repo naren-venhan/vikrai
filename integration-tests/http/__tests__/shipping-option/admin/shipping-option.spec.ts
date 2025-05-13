@@ -1,5 +1,5 @@
-import { medusaIntegrationTestRunner } from "@medusajs/test-utils"
-import { RuleOperator } from "@medusajs/utils"
+import { vikraiIntegrationTestRunner } from "@vikrai/test-utils"
+import { RuleOperator } from "@vikrai/utils"
 import {
   adminHeaders,
   createAdminUser,
@@ -8,7 +8,7 @@ import {
 jest.setTimeout(50000)
 
 // BREAKING: Shipping setup has significantly changed from v1, exact migration needs more investigation
-medusaIntegrationTestRunner({
+vikraiIntegrationTestRunner({
   testSuite: ({ dbConnection, getContainer, api }) => {
     describe("Admin: Shipping Option API", () => {
       let shippingProfile
@@ -985,3 +985,4 @@ medusaIntegrationTestRunner({
     })
   },
 })
+

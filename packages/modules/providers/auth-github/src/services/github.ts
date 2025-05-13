@@ -5,11 +5,11 @@ import {
   AuthIdentityProviderService,
   GithubAuthProviderOptions,
   Logger,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import {
   AbstractAuthModuleProvider,
-  MedusaError,
-} from "@medusajs/framework/utils"
+  vikraiError,
+} from "@vikrai/framework/utils"
 
 type InjectedDependencies = {
   logger: Logger
@@ -49,8 +49,8 @@ export class GithubAuthService extends AbstractAuthModuleProvider {
   }
 
   async register(_): Promise<AuthenticationResponse> {
-    throw new MedusaError(
-      MedusaError.Types.NOT_ALLOWED,
+    throw new vikraiError(
+      vikraiError.Types.NOT_ALLOWED,
       "Github does not support registration. Use method `authenticate` instead."
     )
   }
@@ -116,8 +116,8 @@ export class GithubAuthService extends AbstractAuthModuleProvider {
         },
       }).then((r) => {
         if (!r.ok) {
-          throw new MedusaError(
-            MedusaError.Types.INVALID_DATA,
+          throw new vikraiError(
+            vikraiError.Types.INVALID_DATA,
             `Could not exchange token, ${r.status}, ${r.statusText}`
           )
         }
@@ -190,7 +190,7 @@ export class GithubAuthService extends AbstractAuthModuleProvider {
         user_metadata: userMetadata,
       })
     } catch (error) {
-      if (error.type === MedusaError.Types.NOT_FOUND) {
+      if (error.type === vikraiError.Types.NOT_FOUND) {
         const createdAuthIdentity = await authIdentityService.create({
           entity_id,
           user_metadata: userMetadata,
@@ -218,3 +218,4 @@ export class GithubAuthService extends AbstractAuthModuleProvider {
     return { success: true, location: authUrl.toString() }
   }
 }
+

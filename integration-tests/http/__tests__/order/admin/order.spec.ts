@@ -1,5 +1,5 @@
-import { medusaIntegrationTestRunner } from "@medusajs/test-utils"
-import { ModuleRegistrationName } from "@medusajs/utils"
+import { vikraiIntegrationTestRunner } from "@vikrai/test-utils"
+import { ModuleRegistrationName } from "@vikrai/utils"
 import {
   adminHeaders,
   createAdminUser,
@@ -11,7 +11,7 @@ import { createOrderSeeder } from "../../fixtures/order"
 
 jest.setTimeout(300000)
 
-medusaIntegrationTestRunner({
+vikraiIntegrationTestRunner({
   testSuite: ({ dbConnection, getContainer, api }) => {
     let order, seeder, inventoryItemOverride3, productOverride3, shippingProfile
 
@@ -2315,3 +2315,4 @@ medusaIntegrationTestRunner({
     })
   },
 })
+

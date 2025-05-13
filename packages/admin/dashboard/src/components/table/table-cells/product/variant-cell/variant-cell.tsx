@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next"
 
 import { PlaceholderCell } from "../../common/placeholder-cell"
-import { HttpTypes } from "@medusajs/types"
+import { HttpTypes } from "@vikrai/types"
 
 type VariantCellProps = {
   variants?: HttpTypes.AdminProductVariant[] | null
@@ -32,3 +32,4 @@ export const VariantHeader = () => {
     </div>
   )
 }
+

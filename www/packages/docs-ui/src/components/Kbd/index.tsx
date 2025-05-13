@@ -14,11 +14,11 @@ export const Kbd = ({
   return (
     <kbd
       className={clsx(
-        "rounded-docs_xs border-solid border border-medusa-border-base",
+        "rounded-docs_xs border-solid border border-vikrai-border-base",
         "inline-flex items-center justify-center",
         "px-docs_0.25",
-        "bg-medusa-bg-field",
-        "text-medusa-fg-base",
+        "bg-vikrai-bg-field",
+        "text-vikrai-fg-base",
         "font-base shadow-none",
         variant === "small"
           ? "text-compact-x-small"
@@ -31,3 +31,4 @@ export const Kbd = ({
     </kbd>
   )
 }
+

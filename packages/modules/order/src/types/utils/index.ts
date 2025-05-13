@@ -2,7 +2,7 @@ import {
   BigNumberInput,
   CreateOrderCreditLineDTO,
   OrderCreditLineDTO,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 
 export type VirtualOrder = {
   id: string
@@ -140,3 +140,4 @@ export interface ActionTypeDefinition {
   validate?: (obj: OrderReferences) => void
   [key: string]: unknown
 }
+

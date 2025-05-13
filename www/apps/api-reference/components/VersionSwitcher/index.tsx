@@ -9,16 +9,17 @@ const VersionSwitcher = () => {
 
   return (
     <div className="flex gap-0.5 justify-center items-center">
-      <span className={clsx("text-medusa-fg-disabled")}>V1</span>
+      <span className={clsx("text-vikrai-fg-disabled")}>V1</span>
       <Toggle
         checked={true}
         onCheckedChange={() => {
           location.href = process.env.NEXT_PUBLIC_API_V1_URL + pathname
         }}
       />
-      <span className={clsx("text-medusa-fg-base")}>V2</span>
+      <span className={clsx("text-vikrai-fg-base")}>V2</span>
     </div>
   )
 }
 
 export default VersionSwitcher
+

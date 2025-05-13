@@ -1,10 +1,10 @@
 import {
   flattenObjectToKeyValuePairs,
   isPresent,
-  MedusaError,
+  vikraiError,
   MikroOrmBase,
   PriceListStatus,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 
 import {
   CalculatedPriceSetDTO,
@@ -12,7 +12,7 @@ import {
   PricingContext,
   PricingFilters,
   PricingRepositoryService,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import { Knex, SqlEntityManager } from "@mikro-orm/postgresql"
 
 export class PricingRepository
@@ -77,8 +77,8 @@ export class PricingRepository
     delete context.currency_code
 
     if (!currencyCode) {
-      throw new MedusaError(
-        MedusaError.Types.INVALID_DATA,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_DATA,
         `Method calculatePrices requires currency_code in the pricing context`
       )
     }
@@ -271,3 +271,4 @@ export class PricingRepository
     return await query
   }
 }
+

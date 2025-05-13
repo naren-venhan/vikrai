@@ -1,4 +1,4 @@
-import { DataTable, DataTableSortingState, Heading, createDataTableColumnHelper, useDataTable } from "@medusajs/ui"
+import { DataTable, DataTableSortingState, Heading, createDataTableColumnHelper, useDataTable } from "@vikrai/ui"
 import { useMemo, useState } from "react"
 
 const products = [

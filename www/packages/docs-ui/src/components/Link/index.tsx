@@ -2,7 +2,7 @@ import React from "react"
 import NextLink from "next/link"
 import type { LinkProps as NextLinkProps } from "next/link"
 import clsx from "clsx"
-import { TriangleRightMini } from "@medusajs/icons"
+import { TriangleRightMini } from "@vikrai/icons"
 
 export type LinkProps = Partial<NextLinkProps> &
   React.AllHTMLAttributes<HTMLAnchorElement> & {
@@ -27,7 +27,7 @@ export const Link = ({
       href={href || ""}
       {...rest}
       className={clsx(
-        "text-medusa-fg-interactive hover:text-medusa-fg-interactive-hover",
+        "text-vikrai-fg-interactive hover:text-vikrai-fg-interactive-hover",
         withIcon && "flex gap-0.25 items-center group",
         className
       )}
@@ -39,3 +39,4 @@ export const Link = ({
     </NextLink>
   )
 }
+

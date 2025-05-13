@@ -1,5 +1,5 @@
-import { IModuleService, ModuleJoinerConfig } from "@medusajs/types"
-import { defineJoinerConfig } from "@medusajs/utils"
+import { IModuleService, ModuleJoinerConfig } from "@vikrai/types"
+import { defineJoinerConfig } from "@vikrai/utils"
 
 export class ModuleService implements IModuleService {
   __joinerConfig(): ModuleJoinerConfig {
@@ -13,3 +13,4 @@ export class ModuleService implements IModuleService {
     })
   }
 }
+

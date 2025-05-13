@@ -1,5 +1,5 @@
-import { ILockingProvider } from "@medusajs/framework/types"
-import { isDefined, MedusaService } from "@medusajs/framework/utils"
+import { ILockingProvider } from "@vikrai/framework/types"
+import { isDefined, vikraiService } from "@vikrai/framework/utils"
 import { EntityManager } from "@mikro-orm/core"
 import { Locking } from "@models"
 
@@ -8,7 +8,7 @@ type InjectedDependencies = {
 }
 
 export class PostgresAdvisoryLockProvider
-  extends MedusaService({ Locking })
+  extends vikraiService({ Locking })
   implements ILockingProvider
 {
   static identifier = "locking-postgres"
@@ -194,3 +194,4 @@ export class PostgresAdvisoryLockProvider
     })
   }
 }
+

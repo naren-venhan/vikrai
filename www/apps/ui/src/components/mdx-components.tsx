@@ -1,6 +1,6 @@
 "use client"
 
-import { clx } from "@medusajs/ui"
+import { clx } from "@vikrai/ui"
 import { useMDXComponent } from "next-contentlayer/hooks"
 import * as React from "react"
 
@@ -34,7 +34,7 @@ const components = {
     return (
       <a
         className={clx(
-          "txt-medium text-medusa-fg-interactive hover:text-medusa-fg-interactive-hover",
+          "txt-medium text-vikrai-fg-interactive hover:text-vikrai-fg-interactive-hover",
           className
         )}
         href={href}
@@ -68,3 +68,4 @@ const Mdx = ({ code }: MdxProps) => {
 }
 
 export { Mdx, components }
+

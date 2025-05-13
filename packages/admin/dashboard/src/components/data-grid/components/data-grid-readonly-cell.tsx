@@ -1,6 +1,6 @@
 import { PropsWithChildren } from "react"
 
-import { clx } from "@medusajs/ui"
+import { clx } from "@vikrai/ui"
 import { useDataGridCellError } from "../hooks"
 import { DataGridCellProps } from "../types"
 import { DataGridRowErrorIndicator } from "./data-grid-row-error-indicator"
@@ -31,3 +31,4 @@ export const DataGridReadonlyCell = <TData, TValue = any>({
     </div>
   )
 }
+

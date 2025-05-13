@@ -1,4 +1,4 @@
-import { CreatePriceRuleDTO } from "@medusajs/framework/types"
+import { CreatePriceRuleDTO } from "@vikrai/framework/types"
 
 export * from "./data"
 
@@ -20,3 +20,4 @@ export const defaultPriceRuleData = [
     price_id: "price-set-money-amount-EUR",
   },
 ] as unknown as CreatePriceRuleDTO[]
+

@@ -1,0 +1,11 @@
+import { FlagSettings } from "@vikrai/framework/feature-flags"
+
+const TaxInclusivePricingFeatureFlag: FlagSettings = {
+  key: "tax_inclusive_pricing",
+  default_val: false,
+  env_key: "vikrai_FF_TAX_INCLUSIVE_PRICING",
+  description: "[WIP] Enable tax inclusive pricing",
+}
+
+export default TaxInclusivePricingFeatureFlag
+

@@ -55,7 +55,7 @@ properties:
     type: boolean
     title: manage_inventory
     description: >-
-      Whether the Medusa application manages the variant's inventory quantity
+      Whether the vikrai application manages the variant's inventory quantity
       and availablility. If disabled, the variant is always considered in stock.
   inventory_quantity:
     type: number
@@ -130,3 +130,4 @@ properties:
   metadata:
     type: object
     description: The variant's metadata, can hold custom key-value pairs.
+

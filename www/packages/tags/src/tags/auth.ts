@@ -1,90 +1,90 @@
 export const auth = [
   {
     "title": "Create Actor Type",
-    "path": "https://docs.medusajs.com/resources/commerce-modules/auth/create-actor-type"
+    "path": "https://docs.vikrai.com/resources/commerce-modules/auth/create-actor-type"
   },
   {
     "title": "Reset Password",
-    "path": "https://docs.medusajs.com/user-guide/reset-password"
+    "path": "https://docs.vikrai.com/user-guide/reset-password"
   },
   {
     "title": "Log-out Customer in Storefront",
-    "path": "https://docs.medusajs.com/resources/storefront-development/customers/log-out"
+    "path": "https://docs.vikrai.com/resources/storefront-development/customers/log-out"
   },
   {
     "title": "Login Customer in Storefront",
-    "path": "https://docs.medusajs.com/resources/storefront-development/customers/login"
+    "path": "https://docs.vikrai.com/resources/storefront-development/customers/login"
   },
   {
     "title": "Register Customer in Storefront",
-    "path": "https://docs.medusajs.com/resources/storefront-development/customers/register"
+    "path": "https://docs.vikrai.com/resources/storefront-development/customers/register"
   },
   {
     "title": "Reset Customer Password in Storefront",
-    "path": "https://docs.medusajs.com/resources/storefront-development/customers/reset-password"
+    "path": "https://docs.vikrai.com/resources/storefront-development/customers/reset-password"
   },
   {
     "title": "Retrieve Logged-In Customer in Storefront",
-    "path": "https://docs.medusajs.com/resources/storefront-development/customers/retrieve"
+    "path": "https://docs.vikrai.com/resources/storefront-development/customers/retrieve"
   },
   {
     "title": "Third-Party or Social Login in Storefront",
-    "path": "https://docs.medusajs.com/resources/storefront-development/customers/third-party-login"
+    "path": "https://docs.vikrai.com/resources/storefront-development/customers/third-party-login"
   },
   {
     "title": "Create Auth Provider",
-    "path": "https://docs.medusajs.com/resources/references/auth/provider"
+    "path": "https://docs.vikrai.com/resources/references/auth/provider"
   },
   {
     "title": "setAuthAppMetadataStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/setAuthAppMetadataStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/setAuthAppMetadataStep"
   },
   {
     "title": "createCustomerAccountWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createCustomerAccountWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/createCustomerAccountWorkflow"
   },
   {
     "title": "removeCustomerAccountWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/removeCustomerAccountWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/removeCustomerAccountWorkflow"
   },
   {
     "title": "acceptInviteWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/acceptInviteWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/acceptInviteWorkflow"
   },
   {
     "title": "createUserAccountWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createUserAccountWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/createUserAccountWorkflow"
   },
   {
     "title": "removeUserAccountWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/removeUserAccountWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/removeUserAccountWorkflow"
   },
   {
     "title": "callback",
-    "path": "https://docs.medusajs.com/resources/references/js-sdk/auth/callback"
+    "path": "https://docs.vikrai.com/resources/references/js-sdk/auth/callback"
   },
   {
     "title": "login",
-    "path": "https://docs.medusajs.com/resources/references/js-sdk/auth/login"
+    "path": "https://docs.vikrai.com/resources/references/js-sdk/auth/login"
   },
   {
     "title": "logout",
-    "path": "https://docs.medusajs.com/resources/references/js-sdk/auth/logout"
+    "path": "https://docs.vikrai.com/resources/references/js-sdk/auth/logout"
   },
   {
     "title": "refresh",
-    "path": "https://docs.medusajs.com/resources/references/js-sdk/auth/refresh"
+    "path": "https://docs.vikrai.com/resources/references/js-sdk/auth/refresh"
   },
   {
     "title": "register",
-    "path": "https://docs.medusajs.com/resources/references/js-sdk/auth/register"
+    "path": "https://docs.vikrai.com/resources/references/js-sdk/auth/register"
   },
   {
     "title": "resetPassword",
-    "path": "https://docs.medusajs.com/resources/references/js-sdk/auth/resetPassword"
+    "path": "https://docs.vikrai.com/resources/references/js-sdk/auth/resetPassword"
   },
   {
     "title": "updateProvider",
-    "path": "https://docs.medusajs.com/resources/references/js-sdk/auth/updateProvider"
+    "path": "https://docs.vikrai.com/resources/references/js-sdk/auth/updateProvider"
   }
 ]

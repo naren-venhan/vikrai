@@ -9,7 +9,7 @@ export const useIsExternalLink = ({ href }: UseIsExternalLinkProps) => {
     return (
       href &&
       !href.startsWith("/") &&
-      !href.startsWith("https://docs.medusajs.com") &&
+      !href.startsWith("https://docs.vikrai.com") &&
       !href.startsWith("http://localhost:") &&
       !href.startsWith("#")
     )
@@ -17,3 +17,4 @@ export const useIsExternalLink = ({ href }: UseIsExternalLinkProps) => {
 
   return isExternal
 }
+

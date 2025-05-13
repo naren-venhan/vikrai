@@ -1,6 +1,6 @@
 import { join } from "path"
 import { Modules } from "./definition"
-import type { LoadedModule } from "@medusajs/types"
+import type { LoadedModule } from "@vikrai/types"
 import { FileSystem } from "../common/file-system"
 import { toCamelCase } from "../common/to-camel-case"
 import { upperCaseFirst } from "../common/upper-case-first"
@@ -47,7 +47,7 @@ const SERVICES_INTERFACES = {
  * - Or an absolute path using `require.resolve`
  *
  * In case of a relative import, we mutate the path to resolve properly
- * when the output file is inside the ".medusa/types" directory.
+ * when the output file is inside the ".vikrai/types" directory.
  * For example:
  *
  * => "./src/modules/brand" will become "../../src/modules/brand"
@@ -93,7 +93,7 @@ export async function generateContainerTypes(
 
         if (SERVICES_INTERFACES[key]) {
           result.imports.push(
-            `import type { ${SERVICES_INTERFACES[key]} } from '@medusajs/framework/types'`
+            `import type { ${SERVICES_INTERFACES[key]} } from '@vikrai/framework/types'`
           )
           result.mappings.push(`${interfaceKey}: ${SERVICES_INTERFACES[key]}`)
           return
@@ -132,7 +132,7 @@ export async function generateContainerTypes(
   const fileName = "modules-bindings.d.ts"
   const fileContents = `${imports.join(
     "\n"
-  )}\n\ndeclare module '@medusajs/framework/types' {
+  )}\n\ndeclare module '@vikrai/framework/types' {
   interface ${interfaceName} {
     ${mappings.join(",\n    ")}
   }
@@ -140,3 +140,4 @@ export async function generateContainerTypes(
 
   await fileSystem.create(fileName, fileContents)
 }
+

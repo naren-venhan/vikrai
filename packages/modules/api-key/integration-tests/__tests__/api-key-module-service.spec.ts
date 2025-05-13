@@ -1,8 +1,8 @@
-import { IApiKeyModuleService } from "@medusajs/framework/types"
-import { ApiKeyType, Module, Modules } from "@medusajs/framework/utils"
+import { IApiKeyModuleService } from "@vikrai/framework/types"
+import { ApiKeyType, Module, Modules } from "@vikrai/framework/utils"
 import { ApiKeyModuleService } from "@services"
 import crypto from "crypto"
-import { moduleIntegrationTestRunner } from "@medusajs/test-utils"
+import { moduleIntegrationTestRunner } from "@vikrai/test-utils"
 import {
   createPublishableKeyFixture,
   createSecretKeyFixture,
@@ -439,3 +439,4 @@ moduleIntegrationTestRunner<IApiKeyModuleService>({
     })
   },
 })
+

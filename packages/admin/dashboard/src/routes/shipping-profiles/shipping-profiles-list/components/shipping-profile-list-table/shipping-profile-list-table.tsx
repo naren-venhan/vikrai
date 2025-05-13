@@ -1,4 +1,4 @@
-import { Button, Container, Heading, Text } from "@medusajs/ui"
+import { Button, Container, Heading, Text } from "@vikrai/ui"
 import { Link } from "react-router-dom"
 
 import { keepPreviousData } from "@tanstack/react-query"
@@ -76,3 +76,4 @@ export const ShippingProfileListTable = () => {
     </Container>
   )
 }
+

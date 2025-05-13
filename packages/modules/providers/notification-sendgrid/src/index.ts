@@ -1,4 +1,4 @@
-import { ModuleProvider, Modules } from "@medusajs/framework/utils"
+import { ModuleProvider, Modules } from "@vikrai/framework/utils"
 import { SendgridNotificationService } from "./services/sendgrid"
 
 const services = [SendgridNotificationService]
@@ -6,3 +6,4 @@ const services = [SendgridNotificationService]
 export default ModuleProvider(Modules.NOTIFICATION, {
   services,
 })
+

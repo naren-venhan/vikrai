@@ -1,9 +1,9 @@
-import { CreateLocationFulfillmentSetWorkflowInputDTO } from "@medusajs/framework/types"
+import { CreateLocationFulfillmentSetWorkflowInputDTO } from "@vikrai/framework/types"
 import {
   WorkflowData,
   createWorkflow,
   transform,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { createFulfillmentSets } from "../../fulfillment"
 import { associateFulfillmentSetsWithLocationStep } from "../steps/associate-locations-with-fulfillment-sets"
 
@@ -11,7 +11,7 @@ export const createLocationFulfillmentSetWorkflowId =
   "create-location-fulfillment-set"
 /**
  * This workflow adds a fulfillment set to a stock location. It's used by the
- * [Add Fulfillment Set to Stock Location Admin API Route](https://docs.medusajs.com/api/admin#stock-locations_poststocklocationsidfulfillmentsets).
+ * [Add Fulfillment Set to Stock Location Admin API Route](https://docs.vikrai.com/api/admin#stock-locations_poststocklocationsidfulfillmentsets).
  * 
  * You can use this workflow within your own customizations or custom workflows, allowing you
  * to add fulfillment sets to a stock location in your custom flows.
@@ -54,3 +54,4 @@ export const createLocationFulfillmentSetWorkflow = createWorkflow(
     })
   }
 )
+

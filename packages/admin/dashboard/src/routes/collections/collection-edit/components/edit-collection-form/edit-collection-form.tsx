@@ -1,10 +1,10 @@
 import { zodResolver } from "@hookform/resolvers/zod"
-import { Button, Input, Text } from "@medusajs/ui"
+import { Button, Input, Text } from "@vikrai/ui"
 import { useForm } from "react-hook-form"
 import { useTranslation } from "react-i18next"
 import * as zod from "zod"
 
-import { HttpTypes } from "@medusajs/types"
+import { HttpTypes } from "@vikrai/types"
 import { Form } from "../../../../../components/common/form"
 import { RouteDrawer, useRouteModal } from "../../../../../components/modals"
 import { KeyboundForm } from "../../../../../components/utilities/keybound-form"
@@ -108,3 +108,4 @@ export const EditCollectionForm = ({ collection }: EditCollectionFormProps) => {
     </RouteDrawer.Form>
   )
 }
+

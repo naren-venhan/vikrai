@@ -3,7 +3,7 @@ import {
   ILockingModule,
   InternalModuleDeclaration,
   Logger,
-} from "@medusajs/types"
+} from "@vikrai/types"
 import { EntityManager } from "@mikro-orm/core"
 import { LockingDefaultProvider } from "@types"
 import LockingProviderService from "./locking-provider"
@@ -90,3 +90,4 @@ export default class LockingModuleService implements ILockingModule {
     return await provider.releaseAll(args, sharedContext)
   }
 }
+

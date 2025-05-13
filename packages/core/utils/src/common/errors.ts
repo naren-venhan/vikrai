@@ -1,8 +1,8 @@
 /**
- * @typedef MedusaErrorType
+ * @typedef vikraiErrorType
  *
  */
-export const MedusaErrorTypes = {
+export const vikraiErrorTypes = {
   /** Errors stemming from the database */
   DB_ERROR: "database_error",
   DUPLICATE_ERROR: "duplicate_error",
@@ -18,28 +18,28 @@ export const MedusaErrorTypes = {
   PAYMENT_REQUIRES_MORE_ERROR: "payment_requires_more_error",
 }
 
-export const MedusaErrorCodes = {
+export const vikraiErrorCodes = {
   INSUFFICIENT_INVENTORY: "insufficient_inventory",
   CART_INCOMPATIBLE_STATE: "cart_incompatible_state",
   UNKNOWN_MODULES: "unknown_modules",
 }
 
 /**
- * Standardized error to be used across Medusa project.
+ * Standardized error to be used across vikrai project.
  * @extends Error
  */
-export class MedusaError extends Error {
-  __isMedusaError = true
+export class vikraiError extends Error {
+  __isvikraiError = true
 
   public type: string
   public message: string
   public code?: string
   public date: Date
-  public static Types = MedusaErrorTypes
-  public static Codes = MedusaErrorCodes
+  public static Types = vikraiErrorTypes
+  public static Codes = vikraiErrorCodes
 
   /**
-   * Creates a standardized error to be used across Medusa project.
+   * Creates a standardized error to be used across vikrai project.
    * @param {string} type - type of error
    * @param {string} message - message to go along with error
    * @param {string} code - code of error
@@ -49,7 +49,7 @@ export class MedusaError extends Error {
     super(...params)
 
     if (Error.captureStackTrace) {
-      Error.captureStackTrace(this, MedusaError)
+      Error.captureStackTrace(this, vikraiError)
     }
 
     this.type = type
@@ -59,9 +59,10 @@ export class MedusaError extends Error {
   }
 
   /**
-   * Checks the object for the MedusaError type.
+   * Checks the object for the vikraiError type.
    */
-  static isMedusaError(error: any): error is MedusaError {
-    return !!error.__isMedusaError
+  static isvikraiError(error: any): error is vikraiError {
+    return !!error.__isvikraiError
   }
 }
+

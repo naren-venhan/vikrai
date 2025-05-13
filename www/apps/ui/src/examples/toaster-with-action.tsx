@@ -1,4 +1,4 @@
-import { Button, Toaster, toast } from "@medusajs/ui"
+import { Button, Toaster, toast } from "@vikrai/ui"
 
 export default function ToasterWithAction() {
   return (
@@ -22,3 +22,4 @@ export default function ToasterWithAction() {
     </>
   )
 }
+

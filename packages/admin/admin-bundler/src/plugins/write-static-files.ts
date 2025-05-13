@@ -9,9 +9,10 @@ export const writeStaticFiles = (
   options: WriteStaticFilesPluginOptions
 ): Plugin => {
   return {
-    name: "medusa:write-static-files",
+    name: "vikrai:write-static-files",
     buildStart: async (ctx) => {
       await writeStaticFilesUtils(options.plugins)
     },
   }
 }
+

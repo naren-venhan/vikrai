@@ -1,4 +1,4 @@
-import { Input, Label, clx } from "@medusajs/ui"
+import { Input, Label, clx } from "@vikrai/ui"
 import { debounce } from "lodash"
 import { Popover as RadixPopover } from "radix-ui"
 import { ChangeEvent, useCallback, useEffect, useState } from "react"
@@ -123,3 +123,4 @@ export const StringFilter = ({
     </RadixPopover.Root>
   )
 }
+

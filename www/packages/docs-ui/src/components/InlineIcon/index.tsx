@@ -1,5 +1,5 @@
 import React from "react"
-import { IconProps } from "@medusajs/icons/dist/types"
+import { IconProps } from "@vikrai/icons/dist/types"
 import clsx from "clsx"
 
 type InlineIconProps = IconProps & {
@@ -12,10 +12,11 @@ export const InlineIcon = ({ Icon, alt, ...props }: InlineIconProps) => {
     <Icon
       {...props}
       className={clsx(
-        "text-medusa-fg-subtle inline-block align-middle",
+        "text-vikrai-fg-subtle inline-block align-middle",
         props.className
       )}
       aria-label={alt}
     />
   )
 }
+

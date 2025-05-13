@@ -1,8 +1,8 @@
 import {
   ChangeActionType,
   MathBN,
-  MedusaError,
-} from "@medusajs/framework/utils"
+  vikraiError,
+} from "@vikrai/framework/utils"
 import { OrderChangeProcessing } from "../calculate-order-change"
 import { setActionReference } from "../set-action-reference"
 
@@ -47,23 +47,23 @@ OrderChangeProcessing.registerActionType(ChangeActionType.ITEM_UPDATE, {
   validate({ action, currentOrder }) {
     const refId = action.details?.reference_id
     if (refId == null) {
-      throw new MedusaError(
-        MedusaError.Types.INVALID_DATA,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_DATA,
         "Reference ID is required."
       )
     }
 
     const existing = currentOrder.items.find((item) => item.id === refId)
     if (!existing) {
-      throw new MedusaError(
-        MedusaError.Types.INVALID_DATA,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_DATA,
         `Item ID "${refId}" not found.`
       )
     }
 
     if (action.details?.quantity == null) {
-      throw new MedusaError(
-        MedusaError.Types.INVALID_DATA,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_DATA,
         `Quantity of item ${refId} is required.`
       )
     }
@@ -76,10 +76,11 @@ OrderChangeProcessing.registerActionType(ChangeActionType.ITEM_UPDATE, {
     )
 
     if (lower) {
-      throw new MedusaError(
-        MedusaError.Types.INVALID_DATA,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_DATA,
         `Item ${refId} has already been fulfilled and quantity cannot be lower than ${existing.detail?.fulfilled_quantity}.`
       )
     }
   },
 })
+

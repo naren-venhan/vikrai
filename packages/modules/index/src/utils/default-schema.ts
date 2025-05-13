@@ -1,4 +1,4 @@
-import { Modules } from "@medusajs/utils"
+import { Modules } from "@vikrai/utils"
 
 export const defaultSchema = `
   type Product @Listeners(values: ["${Modules.PRODUCT}.product.created", "${Modules.PRODUCT}.product.updated", "${Modules.PRODUCT}.product.deleted"]) {
@@ -36,3 +36,4 @@ export const defaultSchema = `
     is_disabled: Boolean
   }
 `
+

@@ -3,7 +3,7 @@ import {
   moduleEventBuilderFactory,
   Modules,
   NotificationEvents,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 
 export const eventBuilders = {
   createdNotification: moduleEventBuilderFactory({
@@ -13,3 +13,4 @@ export const eventBuilders = {
     eventName: NotificationEvents.NOTIFICATION_CREATED,
   }),
 }
+

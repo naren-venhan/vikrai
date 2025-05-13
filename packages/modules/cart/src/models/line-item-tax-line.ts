@@ -1,4 +1,4 @@
-import { model } from "@medusajs/framework/utils"
+import { model } from "@vikrai/framework/utils"
 import LineItem from "./line-item"
 
 const LineItemTaxLine = model
@@ -34,3 +34,4 @@ const LineItemTaxLine = model
   ])
 
 export default LineItemTaxLine
+

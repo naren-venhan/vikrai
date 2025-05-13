@@ -1,4 +1,4 @@
-import { Button, FocusModal, Heading, Input, Label, Text } from "@medusajs/ui"
+import { Button, FocusModal, Heading, Input, Label, Text } from "@vikrai/ui"
 
 export default function FocusModalDemo() {
   return (
@@ -31,3 +31,4 @@ export default function FocusModalDemo() {
     </FocusModal>
   )
 }
+

@@ -1,6 +1,6 @@
-import { CreateOrderDTO, IOrderModuleService } from "@medusajs/framework/types"
-import { ClaimType, Modules } from "@medusajs/framework/utils"
-import { SuiteOptions, moduleIntegrationTestRunner } from "@medusajs/test-utils"
+import { CreateOrderDTO, IOrderModuleService } from "@vikrai/framework/types"
+import { ClaimType, Modules } from "@vikrai/framework/utils"
+import { SuiteOptions, moduleIntegrationTestRunner } from "@vikrai/test-utils"
 
 jest.setTimeout(1000000)
 
@@ -243,3 +243,4 @@ moduleIntegrationTestRunner({
     })
   },
 })
+

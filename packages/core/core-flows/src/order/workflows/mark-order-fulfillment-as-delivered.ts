@@ -6,8 +6,8 @@ import {
   OrderLineItemDTO,
   ProductVariantDTO,
   RegisterOrderDeliveryDTO,
-} from "@medusajs/framework/types"
-import { FulfillmentWorkflowEvents, MathBN, Modules } from "@medusajs/framework/utils"
+} from "@vikrai/framework/types"
+import { FulfillmentWorkflowEvents, MathBN, Modules } from "@vikrai/framework/utils"
 import {
   WorkflowData,
   WorkflowResponse,
@@ -15,7 +15,7 @@ import {
   createWorkflow,
   parallelize,
   transform,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { emitEventStep, useRemoteQueryStep } from "../../common"
 import { markFulfillmentAsDeliveredWorkflow } from "../../fulfillment"
 import { registerOrderDeliveryStep } from "../steps/register-delivery"
@@ -63,8 +63,8 @@ export const orderFulfillmentDeliverablilityValidationStepId =
  *
  * :::note
  *
- * You can retrieve an order and fulfillment's details using [Query](https://docs.medusajs.com/learn/fundamentals/module-links/query),
- * or [useQueryGraphStep](https://docs.medusajs.com/resources/references/medusa-workflows/steps/useQueryGraphStep).
+ * You can retrieve an order and fulfillment's details using [Query](https://docs.vikrai.com/learn/fundamentals/module-links/query),
+ * or [useQueryGraphStep](https://docs.vikrai.com/resources/references/vikrai-workflows/steps/useQueryGraphStep).
  *
  * :::
  *
@@ -193,7 +193,7 @@ export const markOrderFulfillmentAsDeliveredWorkflowId =
   "mark-order-fulfillment-as-delivered-workflow"
 /**
  * This workflow marks a fulfillment in an order as delivered. It's used by the
- * [Mark Fulfillment as Delivered Admin API Route](https://docs.medusajs.com/api/admin#orders_postordersidfulfillmentsfulfillment_idmarkasdelivered).
+ * [Mark Fulfillment as Delivered Admin API Route](https://docs.vikrai.com/api/admin#orders_postordersidfulfillmentsfulfillment_idmarkasdelivered).
  *
  * You can use this workflow within your customizations or your own custom workflows, allowing you to wrap custom logic around
  * marking a fulfillment as delivered.
@@ -268,3 +268,4 @@ export const markOrderFulfillmentAsDeliveredWorkflow = createWorkflow(
     return new WorkflowResponse(void 0)
   }
 )
+

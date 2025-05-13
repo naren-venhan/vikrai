@@ -1,4 +1,4 @@
-import { HttpTypes } from "@medusajs/types"
+import { HttpTypes } from "@vikrai/types"
 import { useEffect } from "react"
 import { UseFormReturn, useWatch } from "react-hook-form"
 import { DataGrid } from "../../../../../components/data-grid"
@@ -92,3 +92,4 @@ export const PriceListPricesForm = ({
     </div>
   )
 }
+

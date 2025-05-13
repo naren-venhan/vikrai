@@ -2,7 +2,7 @@ import { createColumnHelper } from "@tanstack/react-table"
 import { useMemo } from "react"
 import { useTranslation } from "react-i18next"
 
-import { TaxRateResponse } from "@medusajs/types"
+import { TaxRateResponse } from "@vikrai/types"
 import {
   TextCell,
   TextHeader,
@@ -53,3 +53,4 @@ export const useTaxRateTableColumns = () => {
     []
   )
 }
+

@@ -1,6 +1,6 @@
 import clsx from "clsx"
 import { Card, IconHeadline, Link, WindowPaintbrushIcon } from "docs-ui"
-import { Book } from "@medusajs/icons"
+import { Book } from "@vikrai/icons"
 import { basePathUrl } from "../../../utils/base-path-url"
 import HomepageCodeTabs from "../CodeTabs"
 
@@ -20,7 +20,7 @@ const HomepageTopSection = () => {
       />
       <div
         className={clsx(
-          "absolute h-full lg:h-[calc(50%-32px)] border-b border-medusa-border-base",
+          "absolute h-full lg:h-[calc(50%-32px)] border-b border-vikrai-border-base",
           "left-0 top-0 w-full z-1 bg-cover bg-repeat",
           "bg-bg-stripes dark:bg-bg-stripes-dark"
         )}
@@ -37,8 +37,8 @@ const HomepageTopSection = () => {
         <div className="flex flex-col gap-1.5 pt-1 xs:pt-4 lg:py-4">
           <div className="flex flex-col gap-[10px]">
             <IconHeadline title="Documentation" icon={<Book />} />
-            <h2 className="text-medusa-fg-base text-h1 text-pretty w-full md:w-2/3 lg:w-full">
-              Learn how to build Medusa projects. Explore our guides.
+            <h2 className="text-vikrai-fg-base text-h1 text-pretty w-full md:w-2/3 lg:w-full">
+              Learn how to build vikrai projects. Explore our guides.
             </h2>
           </div>
           <Card
@@ -58,12 +58,12 @@ const HomepageTopSection = () => {
             title="Optimized for Customizations"
             icon={<WindowPaintbrushIcon />}
           />
-          <h2 className="text-medusa-fg-base text-h1 text-pretty">
+          <h2 className="text-vikrai-fg-base text-h1 text-pretty">
             A digital commerce platform with a built-in framework for
             customizations.
           </h2>
-          <span className="text-small-plus text-medusa-fg-subtle">
-            Unlike other platforms, the Medusa Framework allows you to easily
+          <span className="text-small-plus text-vikrai-fg-subtle">
+            Unlike other platforms, the vikrai Framework allows you to easily
             customize and extend the behavior of your commerce platform to
             always fit your business needs.
           </span>
@@ -81,3 +81,4 @@ const HomepageTopSection = () => {
 }
 
 export default HomepageTopSection
+

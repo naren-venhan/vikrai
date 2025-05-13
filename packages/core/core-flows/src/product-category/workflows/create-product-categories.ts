@@ -1,15 +1,15 @@
 import {
   ProductCategoryDTO,
   ProductCategoryWorkflow,
-} from "@medusajs/framework/types"
-import { ProductCategoryWorkflowEvents } from "@medusajs/framework/utils"
+} from "@vikrai/framework/types"
+import { ProductCategoryWorkflowEvents } from "@vikrai/framework/utils"
 import {
   createHook,
   createWorkflow,
   transform,
   WorkflowData,
   WorkflowResponse,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { emitEventStep } from "../../common"
 import { createProductCategoriesStep } from "../steps"
 
@@ -21,7 +21,7 @@ export type CreateProductCategoriesWorkflowOutput = ProductCategoryDTO[]
 export const createProductCategoriesWorkflowId = "create-product-categories"
 /**
  * This workflow creates one or more product categories. It's used by the
- * [Create Product Category Admin API Route](https://docs.medusajs.com/api/admin#product-categories_postproductcategories).
+ * [Create Product Category Admin API Route](https://docs.vikrai.com/api/admin#product-categories_postproductcategories).
  *
  * You can use this workflow within your customizations or your own custom workflows, allowing you to
  * create product categories within your custom flows.
@@ -73,3 +73,4 @@ export const createProductCategoriesWorkflow = createWorkflow(
     })
   }
 )
+

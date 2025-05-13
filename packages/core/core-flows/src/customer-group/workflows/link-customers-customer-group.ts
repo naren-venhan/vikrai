@@ -1,5 +1,5 @@
-import { LinkWorkflowInput } from "@medusajs/framework/types"
-import { WorkflowData, createWorkflow } from "@medusajs/framework/workflows-sdk"
+import { LinkWorkflowInput } from "@vikrai/framework/types"
+import { WorkflowData, createWorkflow } from "@vikrai/framework/workflows-sdk"
 import { linkCustomersToCustomerGroupStep } from "../steps"
 
 /**
@@ -15,7 +15,7 @@ export const linkCustomersToCustomerGroupWorkflowId =
   "link-customers-to-customer-group"
 /**
  * This workflow manages the customers of a customer group. It's used by the 
- * [Manage Customers of Group Admin API Route](https://docs.medusajs.com/api/admin#customer-groups_postcustomergroupsidcustomers).
+ * [Manage Customers of Group Admin API Route](https://docs.vikrai.com/api/admin#customer-groups_postcustomergroupsidcustomers).
  * 
  * You can use this workflow within your customizations or your own custom workflows, allowing you to
  * manage the customers of a customer group within your custom flows.
@@ -40,3 +40,4 @@ export const linkCustomersToCustomerGroupWorkflow = createWorkflow(
     return linkCustomersToCustomerGroupStep(input)
   }
 )
+

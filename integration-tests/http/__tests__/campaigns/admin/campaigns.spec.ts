@@ -1,9 +1,9 @@
-import { medusaIntegrationTestRunner } from "@medusajs/test-utils"
+import { vikraiIntegrationTestRunner } from "@vikrai/test-utils"
 import {
   CampaignBudgetType,
   PromotionStatus,
   PromotionType,
-} from "@medusajs/utils"
+} from "@vikrai/utils"
 import { createAdminUser } from "../../../../helpers/create-admin-user"
 
 jest.setTimeout(50000)
@@ -76,12 +76,12 @@ const promotionData = {
   ],
 }
 
-const env = { MEDUSA_FF_MEDUSA_V2: true }
+const env = { vikrai_FF_vikrai_V2: true }
 const adminHeaders = {
-  headers: { "x-medusa-access-token": "test_token" },
+  headers: { "x-vikrai-access-token": "test_token" },
 }
 
-medusaIntegrationTestRunner({
+vikraiIntegrationTestRunner({
   env,
   testSuite: ({ dbConnection, getContainer, api }) => {
     describe("Admin Campaigns API", () => {
@@ -413,3 +413,4 @@ medusaIntegrationTestRunner({
     })
   },
 })
+

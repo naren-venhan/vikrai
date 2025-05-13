@@ -1,5 +1,5 @@
-import { Context } from "@medusajs/framework/types"
-import { BigNumber, ModulesSdkUtils } from "@medusajs/framework/utils"
+import { Context } from "@vikrai/framework/types"
+import { BigNumber, ModulesSdkUtils } from "@vikrai/framework/utils"
 import { applyEntityHooks } from "../utils/apply-decorators"
 
 import { InventoryLevel } from "@models"
@@ -9,7 +9,7 @@ type InjectedDependencies = {
   inventoryLevelRepository: InventoryLevelRepository
 }
 
-export default class InventoryLevelService extends ModulesSdkUtils.MedusaInternalService<
+export default class InventoryLevelService extends ModulesSdkUtils.vikraiInternalService<
   InjectedDependencies,
   typeof InventoryLevel
 >(InventoryLevel) {
@@ -70,3 +70,4 @@ export default class InventoryLevelService extends ModulesSdkUtils.MedusaInterna
 }
 
 applyEntityHooks()
+

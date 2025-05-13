@@ -2,7 +2,7 @@ import {
   DmlEntity,
   DMLEntitySchemaBuilder,
   model,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 import { OrderClaim } from "./claim"
 import { OrderExchange } from "./exchange"
 import { Order } from "./order"
@@ -90,3 +90,4 @@ export const OrderTransaction = _OrderTransaction as DmlEntity<
   DMLEntitySchemaBuilder<(typeof _OrderTransaction)["schema"]>,
   "OrderTransaction"
 >
+

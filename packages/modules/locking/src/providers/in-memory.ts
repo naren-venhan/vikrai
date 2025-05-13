@@ -1,5 +1,5 @@
-import { ILockingProvider } from "@medusajs/framework/types"
-import { isDefined } from "@medusajs/framework/utils"
+import { ILockingProvider } from "@vikrai/framework/types"
+import { isDefined } from "@vikrai/framework/utils"
 
 type LockInfo = {
   ownerId: string | null
@@ -197,3 +197,4 @@ export class InMemoryLockingProvider implements ILockingProvider {
     })
   }
 }
+

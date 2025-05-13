@@ -5,4 +5,5 @@ export {
   HttpCompressionOptions,
   ConfigModule,
   PluginDetails,
-} from "@medusajs/types"
+} from "@vikrai/types"
+

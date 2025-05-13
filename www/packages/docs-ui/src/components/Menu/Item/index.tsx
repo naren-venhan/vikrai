@@ -17,8 +17,8 @@ export const MenuItem = ({ item, onClick }: MenuItemProps) => {
         className={clsx(
           "flex py-docs_0.25 px-docs_0.5",
           "gap-docs_0.5 rounded-docs_xs",
-          "hover:bg-medusa-bg-component-hover",
-          "text-medusa-fg-base"
+          "hover:bg-vikrai-bg-component-hover",
+          "text-vikrai-fg-base"
         )}
         href={item.link}
         onClick={() => onClick?.(item)}
@@ -26,7 +26,7 @@ export const MenuItem = ({ item, onClick }: MenuItemProps) => {
         rel={item.openInNewTab ? "noopener noreferrer" : undefined}
       >
         {item.icon && (
-          <span className="text-medusa-fg-subtle mt-[2.5px] block">
+          <span className="text-vikrai-fg-subtle mt-[2.5px] block">
             {item.icon}
           </span>
         )}
@@ -35,3 +35,4 @@ export const MenuItem = ({ item, onClick }: MenuItemProps) => {
     </div>
   )
 }
+

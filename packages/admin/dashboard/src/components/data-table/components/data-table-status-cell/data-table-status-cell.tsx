@@ -1,4 +1,4 @@
-import { clx } from "@medusajs/ui"
+import { clx } from "@vikrai/ui"
 import { PropsWithChildren } from "react"
 
 type DataTableStatusCellProps = PropsWithChildren<{
@@ -33,3 +33,4 @@ export const DataTableStatusCell = ({
     </div>
   )
 }
+

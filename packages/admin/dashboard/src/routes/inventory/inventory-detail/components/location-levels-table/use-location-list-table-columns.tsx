@@ -1,4 +1,4 @@
-import { InventoryTypes, StockLocationDTO } from "@medusajs/types"
+import { InventoryTypes, StockLocationDTO } from "@vikrai/types"
 
 import { createColumnHelper } from "@tanstack/react-table"
 import { useMemo } from "react"
@@ -95,3 +95,4 @@ export const useLocationListTableColumns = () => {
     [t]
   )
 }
+

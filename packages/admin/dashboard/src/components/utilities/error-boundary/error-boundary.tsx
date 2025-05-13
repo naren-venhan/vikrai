@@ -1,5 +1,5 @@
-import { ExclamationCircle } from "@medusajs/icons"
-import { Text } from "@medusajs/ui"
+import { ExclamationCircle } from "@vikrai/icons"
+import { Text } from "@vikrai/ui"
 import { useTranslation } from "react-i18next"
 import { Navigate, useLocation, useRouteError } from "react-router-dom"
 
@@ -73,3 +73,4 @@ export const ErrorBoundary = () => {
     </div>
   )
 }
+

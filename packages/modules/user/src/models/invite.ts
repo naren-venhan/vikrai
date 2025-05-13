@@ -1,4 +1,4 @@
-import { model } from "@medusajs/framework/utils"
+import { model } from "@vikrai/framework/utils"
 
 export const Invite = model
   .define("invite", {
@@ -20,3 +20,4 @@ export const Invite = model
       where: "deleted_at IS NULL",
     },
   ])
+

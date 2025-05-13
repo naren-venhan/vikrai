@@ -2,7 +2,7 @@ import {
   WorkflowData,
   WorkflowResponse,
   createWorkflow,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import {
   deletePaymentSessionsStep,
   validateDeletedPaymentSessionsStep,
@@ -51,3 +51,4 @@ export const deletePaymentSessionsWorkflow = createWorkflow(
     return new WorkflowResponse(idsDeleted)
   }
 )
+

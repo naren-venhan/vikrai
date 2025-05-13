@@ -1,4 +1,4 @@
-import { LoaderOptions, Logger, ModulesSdkTypes } from "@medusajs/types"
+import { LoaderOptions, Logger, ModulesSdkTypes } from "@vikrai/types"
 import { mikroOrmCreateConnection } from "../../dal"
 import { loadDatabaseConfig } from "../load-module-database-config"
 import { Migrations } from "../../migrations"
@@ -55,3 +55,4 @@ export function buildMigrationScript({ moduleName, pathToMigrations }) {
     }
   }
 }
+

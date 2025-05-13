@@ -2,7 +2,7 @@ import {
   IProductModuleService,
   ProductCategoryDTO,
   ProductTagDTO,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import {
   CommonEvents,
   composeMessage,
@@ -10,7 +10,7 @@ import {
   Modules,
   ProductEvents,
   ProductStatus,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 import {
   Product,
   ProductCategory,
@@ -22,7 +22,7 @@ import {
 import {
   MockEventBusService,
   moduleIntegrationTestRunner,
-} from "@medusajs/test-utils"
+} from "@vikrai/test-utils"
 import { UpdateProductInput } from "@types"
 import {
   buildProductAndRelationsData,
@@ -1679,3 +1679,4 @@ moduleIntegrationTestRunner<IProductModuleService>({
     })
   },
 })
+

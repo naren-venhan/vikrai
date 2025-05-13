@@ -1,4 +1,4 @@
-import { BigNumberInput } from "@medusajs/framework/types"
+import { BigNumberInput } from "@vikrai/framework/types"
 
 export interface CreateLineItemAdjustmentDTO {
   item_id: string
@@ -13,3 +13,4 @@ export interface UpdateLineItemAdjustmentDTO
   extends Partial<CreateLineItemAdjustmentDTO> {
   id: string
 }
+

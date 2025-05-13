@@ -1,4 +1,4 @@
-import { RemoteJoinerQuery } from "@medusajs/types"
+import { RemoteJoinerQuery } from "@vikrai/types"
 import {
   ArgumentNode,
   DirectiveNode,
@@ -193,3 +193,4 @@ export class GraphQLParser {
     return remoteJoinConfig
   }
 }
+

@@ -1,4 +1,4 @@
-import { OrderStatus } from "@medusajs/framework/utils"
+import { OrderStatus } from "@vikrai/framework/utils"
 
 export interface CreateOrderDTO {
   region_id?: string
@@ -23,3 +23,4 @@ export interface UpdateOrderDTO {
   no_notification?: boolean
   metadata?: Record<string, unknown> | null
 }
+

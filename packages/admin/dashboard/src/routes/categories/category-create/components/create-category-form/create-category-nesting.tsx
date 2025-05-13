@@ -1,5 +1,5 @@
 import { UniqueIdentifier } from "@dnd-kit/core"
-import { Badge } from "@medusajs/ui"
+import { Badge } from "@vikrai/ui"
 import { useMemo, useState } from "react"
 import { UseFormReturn, useWatch } from "react-hook-form"
 
@@ -112,3 +112,4 @@ export const CreateCategoryNesting = ({
     />
   )
 }
+

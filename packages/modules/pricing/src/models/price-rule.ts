@@ -1,4 +1,4 @@
-import { model, PricingRuleOperator } from "@medusajs/framework/utils"
+import { model, PricingRuleOperator } from "@vikrai/framework/utils"
 import Price from "./price"
 
 const PriceRule = model
@@ -33,3 +33,4 @@ const PriceRule = model
   ])
 
 export default PriceRule
+

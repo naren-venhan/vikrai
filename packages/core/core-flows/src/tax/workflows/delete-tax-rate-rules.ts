@@ -2,7 +2,7 @@ import {
   WorkflowData,
   WorkflowResponse,
   createWorkflow,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { deleteTaxRateRulesStep } from "../steps"
 
 /**
@@ -18,7 +18,7 @@ export type DeleteTaxRateRulesWorkflowInput = {
 export const deleteTaxRateRulesWorkflowId = "delete-tax-rate-rules"
 /**
  * This workflow deletes one or more tax rate rules. It's used by the
- * [Remove Rule of Tax Rate Admin API Route](https://docs.medusajs.com/api/admin#tax-rates_deletetaxratesidrulesrule_id).
+ * [Remove Rule of Tax Rate Admin API Route](https://docs.vikrai.com/api/admin#tax-rates_deletetaxratesidrulesrule_id).
  * 
  * You can use this workflow within your own customizations or custom workflows, allowing you
  * to delete tax rate rules in your custom flows.
@@ -43,3 +43,4 @@ export const deleteTaxRateRulesWorkflow = createWorkflow(
     return new WorkflowResponse(deleteTaxRateRulesStep(input.ids))
   }
 )
+

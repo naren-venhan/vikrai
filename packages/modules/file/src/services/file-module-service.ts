@@ -9,11 +9,11 @@ import {
   FilterableFileProps,
   FindConfig,
   ModuleJoinerConfig,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 
 import { joinerConfig } from "../joiner-config"
 import FileProviderService from "./file-provider-service"
-import { MedusaError } from "@medusajs/framework/utils"
+import { vikraiError } from "@vikrai/framework/utils"
 
 type InjectedDependencies = {
   fileProviderService: FileProviderService
@@ -106,8 +106,8 @@ export default class FileModuleService implements FileTypes.IFileModuleService {
   ): Promise<FileDTO[]> {
     const id = Array.isArray(filters?.id) ? filters?.id?.[0] : filters?.id
     if (!id) {
-      throw new MedusaError(
-        MedusaError.Types.INVALID_DATA,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_DATA,
         "Listing of files is only supported when filtering by ID."
       )
     }
@@ -135,8 +135,8 @@ export default class FileModuleService implements FileTypes.IFileModuleService {
   ): Promise<[FileDTO[], number]> {
     const id = Array.isArray(filters?.id) ? filters?.id?.[0] : filters?.id
     if (!id) {
-      throw new MedusaError(
-        MedusaError.Types.INVALID_DATA,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_DATA,
         "Listing and counting of files is only supported when filtering by ID."
       )
     }
@@ -182,3 +182,4 @@ export default class FileModuleService implements FileTypes.IFileModuleService {
     return this.fileProviderService_.getAsBuffer({ fileKey: id })
   }
 }
+

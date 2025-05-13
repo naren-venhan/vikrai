@@ -24,7 +24,7 @@
 					"fileName": "workflows-sdk/src/utils/composer/create-hook.ts",
 					"line": 13,
 					"character": 12,
-					"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/create-hook.ts#L13"
+					"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/create-hook.ts#L13"
 				}
 			],
 			"typeParameters": [
@@ -74,7 +74,7 @@
 									"fileName": "workflows-sdk/src/utils/composer/create-hook.ts",
 									"line": 14,
 									"character": 2,
-									"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/create-hook.ts#L14"
+									"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/create-hook.ts#L14"
 								}
 							],
 							"type": {
@@ -86,7 +86,7 @@
 										"qualifiedName": "SymbolWorkflowHook"
 									},
 									"name": "OrchestrationUtils.SymbolWorkflowHook",
-									"package": "@medusajs/utils",
+									"package": "@vikrai/utils",
 									"qualifiedName": "SymbolWorkflowHook",
 									"preferValues": true
 								}
@@ -103,14 +103,14 @@
 									"fileName": "workflows-sdk/src/utils/composer/create-hook.ts",
 									"line": 15,
 									"character": 2,
-									"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/create-hook.ts#L15"
+									"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/create-hook.ts#L15"
 								}
 							],
 							"type": {
 								"type": "reference",
 								"target": 55664,
 								"name": "Name",
-								"package": "@medusajs/workflows-sdk",
+								"package": "@vikrai/workflows-sdk",
 								"refersToTypeParameter": true
 							}
 						},
@@ -125,7 +125,7 @@
 									"fileName": "workflows-sdk/src/utils/composer/create-hook.ts",
 									"line": 20,
 									"character": 2,
-									"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/create-hook.ts#L20"
+									"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/create-hook.ts#L20"
 								}
 							],
 							"signatures": [
@@ -148,7 +148,7 @@
 											"fileName": "workflows-sdk/src/utils/composer/create-hook.ts",
 											"line": 20,
 											"character": 2,
-											"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/create-hook.ts#L20"
+											"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/create-hook.ts#L20"
 										}
 									],
 									"type": {
@@ -162,7 +162,7 @@
 												"type": "reference",
 												"target": 55666,
 												"name": "Output",
-												"package": "@medusajs/workflows-sdk",
+												"package": "@vikrai/workflows-sdk",
 												"refersToTypeParameter": true
 											}
 										]
@@ -189,14 +189,14 @@
 									"fileName": "workflows-sdk/src/utils/composer/create-hook.ts",
 									"line": 28,
 									"character": 2,
-									"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/create-hook.ts#L28"
+									"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/create-hook.ts#L28"
 								}
 							],
 							"type": {
 								"type": "reference",
 								"target": 55666,
 								"name": "Output",
-								"package": "@medusajs/workflows-sdk",
+								"package": "@vikrai/workflows-sdk",
 								"refersToTypeParameter": true
 							}
 						},
@@ -211,14 +211,14 @@
 									"fileName": "workflows-sdk/src/utils/composer/create-hook.ts",
 									"line": 29,
 									"character": 2,
-									"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/create-hook.ts#L29"
+									"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/create-hook.ts#L29"
 								}
 							],
 							"type": {
 								"type": "reference",
 								"target": 55665,
 								"name": "Input",
-								"package": "@medusajs/workflows-sdk",
+								"package": "@vikrai/workflows-sdk",
 								"refersToTypeParameter": true
 							}
 						}
@@ -245,7 +245,7 @@
 							"fileName": "workflows-sdk/src/utils/composer/create-hook.ts",
 							"line": 13,
 							"character": 55,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/create-hook.ts#L13"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/create-hook.ts#L13"
 						}
 					]
 				}
@@ -262,7 +262,7 @@
 					"fileName": "workflows-sdk/src/utils/composer/create-hook.ts",
 					"line": 67,
 					"character": 16,
-					"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/create-hook.ts#L67"
+					"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/create-hook.ts#L67"
 				}
 			],
 			"signatures": [
@@ -276,7 +276,7 @@
 						"summary": [
 							{
 								"kind": "text",
-								"text": "Expose a hook in your workflow where you can inject custom functionality as a step function.\n\nA handler hook can later be registered to consume the hook and perform custom functionality.\n\nLearn more in [this documentation](https://docs.medusajs.com/learn/fundamentals/workflows/workflow-hooks)."
+								"text": "Expose a hook in your workflow where you can inject custom functionality as a step function.\n\nA handler hook can later be registered to consume the hook and perform custom functionality.\n\nLearn more in [this documentation](https://docs.vikrai.com/learn/fundamentals/workflows/workflow-hooks)."
 							}
 						],
 						"blockTags": [
@@ -294,7 +294,7 @@
 								"content": [
 									{
 										"kind": "code",
-										"text": "```ts\nimport {\n  createStep,\n  createHook,\n  createWorkflow,\n  WorkflowResponse,\n} from \"@medusajs/framework/workflows-sdk\"\nimport { createProductStep } from \"./steps/create-product\"\n\nexport const myWorkflow = createWorkflow(\n  \"my-workflow\",\n  function (input) {\n    const product = createProductStep(input)\n    const productCreatedHook = createHook(\n      \"productCreated\",\n      { productId: product.id }\n    )\n\n    return new WorkflowResponse(product, {\n      hooks: [productCreatedHook],\n    })\n  }\n)\n```"
+										"text": "```ts\nimport {\n  createStep,\n  createHook,\n  createWorkflow,\n  WorkflowResponse,\n} from \"@vikrai/framework/workflows-sdk\"\nimport { createProductStep } from \"./steps/create-product\"\n\nexport const myWorkflow = createWorkflow(\n  \"my-workflow\",\n  function (input) {\n    const product = createProductStep(input)\n    const productCreatedHook = createHook(\n      \"productCreated\",\n      { productId: product.id }\n    )\n\n    return new WorkflowResponse(product, {\n      hooks: [productCreatedHook],\n    })\n  }\n)\n```"
 									}
 								]
 							}
@@ -305,7 +305,7 @@
 							"fileName": "workflows-sdk/src/utils/composer/create-hook.ts",
 							"line": 67,
 							"character": 16,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/create-hook.ts#L67"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/create-hook.ts#L67"
 						}
 					],
 					"typeParameters": [
@@ -354,7 +354,7 @@
 								"type": "reference",
 								"target": 55648,
 								"name": "Name",
-								"package": "@medusajs/workflows-sdk",
+								"package": "@vikrai/workflows-sdk",
 								"refersToTypeParameter": true
 							}
 						},
@@ -376,7 +376,7 @@
 								"type": "reference",
 								"target": 55649,
 								"name": "TInvokeInput",
-								"package": "@medusajs/workflows-sdk",
+								"package": "@vikrai/workflows-sdk",
 								"refersToTypeParameter": true
 							}
 						},
@@ -408,7 +408,7 @@
 													"fileName": "workflows-sdk/src/utils/composer/create-hook.ts",
 													"line": 71,
 													"character": 4,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/create-hook.ts#L71"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/create-hook.ts#L71"
 												}
 											],
 											"type": {
@@ -422,7 +422,7 @@
 														"type": "reference",
 														"target": 55650,
 														"name": "TInvokeOutput",
-														"package": "@medusajs/workflows-sdk",
+														"package": "@vikrai/workflows-sdk",
 														"refersToTypeParameter": true
 													},
 													{
@@ -438,7 +438,7 @@
 														"type": "reference",
 														"target": 55650,
 														"name": "TInvokeOutput",
-														"package": "@medusajs/workflows-sdk",
+														"package": "@vikrai/workflows-sdk",
 														"refersToTypeParameter": true
 													}
 												],
@@ -460,7 +460,7 @@
 											"fileName": "workflows-sdk/src/utils/composer/create-hook.ts",
 											"line": 70,
 											"character": 11,
-											"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/create-hook.ts#L70"
+											"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/create-hook.ts#L70"
 										}
 									]
 								}
@@ -476,26 +476,26 @@
 								"type": "reference",
 								"target": 55648,
 								"name": "Name",
-								"package": "@medusajs/workflows-sdk",
+								"package": "@vikrai/workflows-sdk",
 								"refersToTypeParameter": true
 							},
 							{
 								"type": "reference",
 								"target": 55649,
 								"name": "TInvokeInput",
-								"package": "@medusajs/workflows-sdk",
+								"package": "@vikrai/workflows-sdk",
 								"refersToTypeParameter": true
 							},
 							{
 								"type": "reference",
 								"target": 55650,
 								"name": "TInvokeOutput",
-								"package": "@medusajs/workflows-sdk",
+								"package": "@vikrai/workflows-sdk",
 								"refersToTypeParameter": true
 							}
 						],
 						"name": "Hook",
-						"package": "@medusajs/workflows-sdk"
+						"package": "@vikrai/workflows-sdk"
 					}
 				}
 			]
@@ -519,7 +519,7 @@
 					"fileName": "workflows-sdk/src/utils/composer/create-step.ts",
 					"line": 29,
 					"character": 12,
-					"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/create-step.ts#L29"
+					"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/create-step.ts#L29"
 				}
 			],
 			"typeParameters": [
@@ -582,7 +582,7 @@
 							"fileName": "workflows-sdk/src/utils/composer/create-step.ts",
 							"line": 29,
 							"character": 58,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/create-step.ts#L29"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/create-step.ts#L29"
 						}
 					],
 					"signatures": [
@@ -625,7 +625,7 @@
 										"type": "reference",
 										"target": 55562,
 										"name": "TInput",
-										"package": "@medusajs/workflows-sdk",
+										"package": "@vikrai/workflows-sdk",
 										"refersToTypeParameter": true
 									}
 								},
@@ -639,7 +639,7 @@
 										"type": "reference",
 										"target": 55822,
 										"name": "StepExecutionContext",
-										"package": "@medusajs/workflows-sdk"
+										"package": "@vikrai/workflows-sdk"
 									}
 								}
 							],
@@ -658,7 +658,7 @@
 												"type": "reference",
 												"target": 55563,
 												"name": "TOutput",
-												"package": "@medusajs/workflows-sdk",
+												"package": "@vikrai/workflows-sdk",
 												"refersToTypeParameter": true
 											},
 											{
@@ -667,7 +667,7 @@
 													"type": "reference",
 													"target": 55564,
 													"name": "TCompensateInput",
-													"package": "@medusajs/workflows-sdk",
+													"package": "@vikrai/workflows-sdk",
 													"refersToTypeParameter": true
 												},
 												"extendsType": {
@@ -678,20 +678,20 @@
 													"type": "reference",
 													"target": 55563,
 													"name": "TOutput",
-													"package": "@medusajs/workflows-sdk",
+													"package": "@vikrai/workflows-sdk",
 													"refersToTypeParameter": true
 												},
 												"falseType": {
 													"type": "reference",
 													"target": 55564,
 													"name": "TCompensateInput",
-													"package": "@medusajs/workflows-sdk",
+													"package": "@vikrai/workflows-sdk",
 													"refersToTypeParameter": true
 												}
 											}
 										],
 										"name": "StepResponse",
-										"package": "@medusajs/workflows-sdk"
+										"package": "@vikrai/workflows-sdk"
 									},
 									{
 										"type": "reference",
@@ -715,7 +715,7 @@
 																"type": "reference",
 																"target": 55563,
 																"name": "TOutput",
-																"package": "@medusajs/workflows-sdk",
+																"package": "@vikrai/workflows-sdk",
 																"refersToTypeParameter": true
 															},
 															{
@@ -724,7 +724,7 @@
 																	"type": "reference",
 																	"target": 55564,
 																	"name": "TCompensateInput",
-																	"package": "@medusajs/workflows-sdk",
+																	"package": "@vikrai/workflows-sdk",
 																	"refersToTypeParameter": true
 																},
 																"extendsType": {
@@ -735,20 +735,20 @@
 																	"type": "reference",
 																	"target": 55563,
 																	"name": "TOutput",
-																	"package": "@medusajs/workflows-sdk",
+																	"package": "@vikrai/workflows-sdk",
 																	"refersToTypeParameter": true
 																},
 																"falseType": {
 																	"type": "reference",
 																	"target": 55564,
 																	"name": "TCompensateInput",
-																	"package": "@medusajs/workflows-sdk",
+																	"package": "@vikrai/workflows-sdk",
 																	"refersToTypeParameter": true
 																}
 															}
 														],
 														"name": "StepResponse",
-														"package": "@medusajs/workflows-sdk"
+														"package": "@vikrai/workflows-sdk"
 													}
 												]
 											}
@@ -782,7 +782,7 @@
 					"fileName": "workflows-sdk/src/utils/composer/create-step.ts",
 					"line": 57,
 					"character": 12,
-					"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/create-step.ts#L57"
+					"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/create-step.ts#L57"
 				}
 			],
 			"typeParameters": [
@@ -815,7 +815,7 @@
 							"fileName": "workflows-sdk/src/utils/composer/create-step.ts",
 							"line": 57,
 							"character": 30,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/create-step.ts#L57"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/create-step.ts#L57"
 						}
 					],
 					"signatures": [
@@ -853,7 +853,7 @@
 												"type": "reference",
 												"target": 55570,
 												"name": "T",
-												"package": "@medusajs/workflows-sdk",
+												"package": "@vikrai/workflows-sdk",
 												"refersToTypeParameter": true
 											},
 											{
@@ -873,7 +873,7 @@
 										"type": "reference",
 										"target": 55822,
 										"name": "StepExecutionContext",
-										"package": "@medusajs/workflows-sdk"
+										"package": "@vikrai/workflows-sdk"
 									}
 								}
 							],
@@ -917,7 +917,7 @@
 					"fileName": "workflows-sdk/src/utils/composer/create-step.ts",
 					"line": 68,
 					"character": 12,
-					"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/create-step.ts#L68"
+					"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/create-step.ts#L68"
 				}
 			],
 			"type": {
@@ -945,7 +945,7 @@
 											"fileName": "workflows-sdk/src/utils/composer/create-step.ts",
 											"line": 68,
 											"character": 32,
-											"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/create-step.ts#L68"
+											"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/create-step.ts#L68"
 										}
 									],
 									"type": {
@@ -967,7 +967,7 @@
 									"fileName": "workflows-sdk/src/utils/composer/create-step.ts",
 									"line": 68,
 									"character": 30,
-									"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/create-step.ts#L68"
+									"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/create-step.ts#L68"
 								}
 							]
 						}
@@ -986,7 +986,7 @@
 									"qualifiedName": "TransactionStepsDefinition"
 								},
 								"name": "TransactionStepsDefinition",
-								"package": "@medusajs/orchestration"
+								"package": "@vikrai/orchestration"
 							},
 							{
 								"type": "union",
@@ -1030,7 +1030,7 @@
 							"fileName": "workflows-sdk/src/utils/composer/create-step.ts",
 							"line": 81,
 							"character": 2,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/create-step.ts#L81"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/create-step.ts#L81"
 						}
 					],
 					"type": {
@@ -1051,7 +1051,7 @@
 							"fileName": "workflows-sdk/src/utils/composer/create-step.ts",
 							"line": 82,
 							"character": 2,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/create-step.ts#L82"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/create-step.ts#L82"
 						}
 					],
 					"type": {
@@ -1061,7 +1061,7 @@
 							"qualifiedName": "TransactionStepsDefinition"
 						},
 						"name": "TransactionStepsDefinition",
-						"package": "@medusajs/orchestration"
+						"package": "@vikrai/orchestration"
 					}
 				},
 				{
@@ -1077,14 +1077,14 @@
 							"fileName": "workflows-sdk/src/utils/composer/create-step.ts",
 							"line": 83,
 							"character": 2,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/create-step.ts#L83"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/create-step.ts#L83"
 						}
 					],
 					"type": {
 						"type": "reference",
 						"target": 55580,
 						"name": "TStepInputs",
-						"package": "@medusajs/workflows-sdk",
+						"package": "@vikrai/workflows-sdk",
 						"qualifiedName": "ApplyStepOptions.TStepInputs",
 						"refersToTypeParameter": true
 					}
@@ -1100,7 +1100,7 @@
 							"fileName": "workflows-sdk/src/utils/composer/create-step.ts",
 							"line": 84,
 							"character": 2,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/create-step.ts#L84"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/create-step.ts#L84"
 						}
 					],
 					"type": {
@@ -1111,7 +1111,7 @@
 								"type": "reference",
 								"target": 55581,
 								"name": "TInvokeInput",
-								"package": "@medusajs/workflows-sdk",
+								"package": "@vikrai/workflows-sdk",
 								"qualifiedName": "ApplyStepOptions.TInvokeInput",
 								"refersToTypeParameter": true
 							},
@@ -1119,7 +1119,7 @@
 								"type": "reference",
 								"target": 55582,
 								"name": "TInvokeResultOutput",
-								"package": "@medusajs/workflows-sdk",
+								"package": "@vikrai/workflows-sdk",
 								"qualifiedName": "ApplyStepOptions.TInvokeResultOutput",
 								"refersToTypeParameter": true
 							},
@@ -1127,13 +1127,13 @@
 								"type": "reference",
 								"target": 55583,
 								"name": "TInvokeResultCompensateInput",
-								"package": "@medusajs/workflows-sdk",
+								"package": "@vikrai/workflows-sdk",
 								"qualifiedName": "ApplyStepOptions.TInvokeResultCompensateInput",
 								"refersToTypeParameter": true
 							}
 						],
 						"name": "InvokeFn",
-						"package": "@medusajs/workflows-sdk"
+						"package": "@vikrai/workflows-sdk"
 					}
 				},
 				{
@@ -1149,7 +1149,7 @@
 							"fileName": "workflows-sdk/src/utils/composer/create-step.ts",
 							"line": 89,
 							"character": 2,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/create-step.ts#L89"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/create-step.ts#L89"
 						}
 					],
 					"type": {
@@ -1160,13 +1160,13 @@
 								"type": "reference",
 								"target": 55583,
 								"name": "TInvokeResultCompensateInput",
-								"package": "@medusajs/workflows-sdk",
+								"package": "@vikrai/workflows-sdk",
 								"qualifiedName": "ApplyStepOptions.TInvokeResultCompensateInput",
 								"refersToTypeParameter": true
 							}
 						],
 						"name": "CompensateFn",
-						"package": "@medusajs/workflows-sdk"
+						"package": "@vikrai/workflows-sdk"
 					}
 				}
 			],
@@ -1187,7 +1187,7 @@
 					"fileName": "workflows-sdk/src/utils/composer/create-step.ts",
 					"line": 73,
 					"character": 17,
-					"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/create-step.ts#L73"
+					"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/create-step.ts#L73"
 				}
 			],
 			"typeParameters": [
@@ -1207,7 +1207,7 @@
 								"type": "reference",
 								"target": 55581,
 								"name": "TInvokeInput",
-								"package": "@medusajs/workflows-sdk",
+								"package": "@vikrai/workflows-sdk",
 								"qualifiedName": "ApplyStepOptions.TInvokeInput",
 								"refersToTypeParameter": true
 							}
@@ -1225,21 +1225,21 @@
 											"qualifiedName": "K"
 										},
 										"name": "K",
-										"package": "@medusajs/workflows-sdk",
+										"package": "@vikrai/workflows-sdk",
 										"refersToTypeParameter": true
 									},
 									"objectType": {
 										"type": "reference",
 										"target": 55581,
 										"name": "TInvokeInput",
-										"package": "@medusajs/workflows-sdk",
+										"package": "@vikrai/workflows-sdk",
 										"qualifiedName": "ApplyStepOptions.TInvokeInput",
 										"refersToTypeParameter": true
 									}
 								}
 							],
 							"name": "WorkflowData",
-							"package": "@medusajs/workflows-sdk"
+							"package": "@vikrai/workflows-sdk"
 						}
 					}
 				},
@@ -1277,7 +1277,7 @@
 					"fileName": "workflows-sdk/src/utils/composer/create-step.ts",
 					"line": 370,
 					"character": 16,
-					"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/create-step.ts#L370"
+					"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/create-step.ts#L370"
 				}
 			],
 			"signatures": [
@@ -1329,7 +1329,7 @@
 								"content": [
 									{
 										"kind": "code",
-										"text": "```ts\nimport {\n  createStep,\n  StepResponse\n} from \"@medusajs/framework/workflows-sdk\"\n\ninterface CreateProductInput {\n  title: string\n}\n\nexport const createProductStep = createStep(\n  \"createProductStep\",\n  async function (\n    input: CreateProductInput,\n    { container }\n  ) {\n    const productModuleService = container.resolve(\n      \"product\"\n    )\n    const product = await productModuleService.createProducts(input)\n    return new StepResponse({\n      product\n    }, {\n      product_id: product.id\n    })\n  },\n  async function (\n    input,\n    { container }\n  ) {\n    if (!input) {\n      return\n    }\n    const productModuleService = container.resolve(\n      \"product\"\n    )\n    await productModuleService.deleteProducts([input.product_id])\n  }\n)\n```"
+										"text": "```ts\nimport {\n  createStep,\n  StepResponse\n} from \"@vikrai/framework/workflows-sdk\"\n\ninterface CreateProductInput {\n  title: string\n}\n\nexport const createProductStep = createStep(\n  \"createProductStep\",\n  async function (\n    input: CreateProductInput,\n    { container }\n  ) {\n    const productModuleService = container.resolve(\n      \"product\"\n    )\n    const product = await productModuleService.createProducts(input)\n    return new StepResponse({\n      product\n    }, {\n      product_id: product.id\n    })\n  },\n  async function (\n    input,\n    { container }\n  ) {\n    if (!input) {\n      return\n    }\n    const productModuleService = container.resolve(\n      \"product\"\n    )\n    await productModuleService.deleteProducts([input.product_id])\n  }\n)\n```"
 									}
 								]
 							}
@@ -1340,7 +1340,7 @@
 							"fileName": "workflows-sdk/src/utils/composer/create-step.ts",
 							"line": 370,
 							"character": 16,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/create-step.ts#L370"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/create-step.ts#L370"
 						}
 					],
 					"typeParameters": [
@@ -1435,7 +1435,7 @@
 																	"fileName": "workflows-sdk/src/utils/composer/create-step.ts",
 																	"line": 380,
 																	"character": 9,
-																	"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/create-step.ts#L380"
+																	"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/create-step.ts#L380"
 																}
 															],
 															"type": {
@@ -1457,7 +1457,7 @@
 															"fileName": "workflows-sdk/src/utils/composer/create-step.ts",
 															"line": 380,
 															"character": 7,
-															"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/create-step.ts#L380"
+															"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/create-step.ts#L380"
 														}
 													]
 												}
@@ -1476,7 +1476,7 @@
 															"qualifiedName": "TransactionStepsDefinition"
 														},
 														"name": "TransactionStepsDefinition",
-														"package": "@medusajs/orchestration"
+														"package": "@vikrai/orchestration"
 													},
 													{
 														"type": "union",
@@ -1546,26 +1546,26 @@
 										"type": "reference",
 										"target": 55549,
 										"name": "TInvokeInput",
-										"package": "@medusajs/workflows-sdk",
+										"package": "@vikrai/workflows-sdk",
 										"refersToTypeParameter": true
 									},
 									{
 										"type": "reference",
 										"target": 55550,
 										"name": "TInvokeResultOutput",
-										"package": "@medusajs/workflows-sdk",
+										"package": "@vikrai/workflows-sdk",
 										"refersToTypeParameter": true
 									},
 									{
 										"type": "reference",
 										"target": 55551,
 										"name": "TInvokeResultCompensateInput",
-										"package": "@medusajs/workflows-sdk",
+										"package": "@vikrai/workflows-sdk",
 										"refersToTypeParameter": true
 									}
 								],
 								"name": "InvokeFn",
-								"package": "@medusajs/workflows-sdk"
+								"package": "@vikrai/workflows-sdk"
 							}
 						},
 						{
@@ -1618,12 +1618,12 @@
 										"type": "reference",
 										"target": 55551,
 										"name": "TInvokeResultCompensateInput",
-										"package": "@medusajs/workflows-sdk",
+										"package": "@vikrai/workflows-sdk",
 										"refersToTypeParameter": true
 									}
 								],
 								"name": "CompensateFn",
-								"package": "@medusajs/workflows-sdk"
+								"package": "@vikrai/workflows-sdk"
 							}
 						}
 					],
@@ -1635,19 +1635,19 @@
 								"type": "reference",
 								"target": 55549,
 								"name": "TInvokeInput",
-								"package": "@medusajs/workflows-sdk",
+								"package": "@vikrai/workflows-sdk",
 								"refersToTypeParameter": true
 							},
 							{
 								"type": "reference",
 								"target": 55550,
 								"name": "TInvokeResultOutput",
-								"package": "@medusajs/workflows-sdk",
+								"package": "@vikrai/workflows-sdk",
 								"refersToTypeParameter": true
 							}
 						],
 						"name": "StepFunction",
-						"package": "@medusajs/workflows-sdk"
+						"package": "@vikrai/workflows-sdk"
 					}
 				}
 			]
@@ -1663,7 +1663,7 @@
 					"fileName": "workflows-sdk/src/utils/composer/create-workflow.ts",
 					"line": 88,
 					"character": 16,
-					"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/create-workflow.ts#L88"
+					"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/create-workflow.ts#L88"
 				}
 			],
 			"signatures": [
@@ -1731,7 +1731,7 @@
 								"content": [
 									{
 										"kind": "code",
-										"text": "```ts\nimport {\n  createWorkflow,\n  WorkflowResponse\n} from \"@medusajs/framework/workflows-sdk\"\nimport { MedusaRequest, MedusaResponse } from \"@medusajs/framework/http\"\nimport {\n  createProductStep,\n  getProductStep,\n} from \"./steps\"\n\ninterface WorkflowInput {\n title: string\n}\n\nconst myWorkflow = createWorkflow(\n  \"my-workflow\",\n  (input: WorkflowInput) => {\n   // Everything here will be executed and resolved later\n   // during the execution. Including the data access.\n\n    const product = createProductStep(input)\n    return new WorkflowResponse(getProductStep(product.id))\n  }\n)\n\nexport async function GET(\n  req: MedusaRequest,\n  res: MedusaResponse\n) {\n  const { result: product } = await myWorkflow(req.scope)\n    .run({\n      input: {\n        title: \"Shirt\"\n      }\n    })\n\n  res.json({\n    product\n  })\n}\n```"
+										"text": "```ts\nimport {\n  createWorkflow,\n  WorkflowResponse\n} from \"@vikrai/framework/workflows-sdk\"\nimport { vikraiRequest, vikraiResponse } from \"@vikrai/framework/http\"\nimport {\n  createProductStep,\n  getProductStep,\n} from \"./steps\"\n\ninterface WorkflowInput {\n title: string\n}\n\nconst myWorkflow = createWorkflow(\n  \"my-workflow\",\n  (input: WorkflowInput) => {\n   // Everything here will be executed and resolved later\n   // during the execution. Including the data access.\n\n    const product = createProductStep(input)\n    return new WorkflowResponse(getProductStep(product.id))\n  }\n)\n\nexport async function GET(\n  req: vikraiRequest,\n  res: vikraiResponse\n) {\n  const { result: product } = await myWorkflow(req.scope)\n    .run({\n      input: {\n        title: \"Shirt\"\n      }\n    })\n\n  res.json({\n    product\n  })\n}\n```"
 									}
 								]
 							}
@@ -1742,7 +1742,7 @@
 							"fileName": "workflows-sdk/src/utils/composer/create-workflow.ts",
 							"line": 88,
 							"character": 16,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/create-workflow.ts#L88"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/create-workflow.ts#L88"
 						}
 					],
 					"typeParameters": [
@@ -1844,7 +1844,7 @@
 																	"fileName": "workflows-sdk/src/utils/composer/create-workflow.ts",
 																	"line": 92,
 																	"character": 28,
-																	"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/create-workflow.ts#L92"
+																	"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/create-workflow.ts#L92"
 																}
 															],
 															"type": {
@@ -1866,7 +1866,7 @@
 															"fileName": "workflows-sdk/src/utils/composer/create-workflow.ts",
 															"line": 92,
 															"character": 26,
-															"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/create-workflow.ts#L92"
+															"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/create-workflow.ts#L92"
 														}
 													]
 												}
@@ -1878,7 +1878,7 @@
 													"qualifiedName": "TransactionModelOptions"
 												},
 												"name": "TransactionModelOptions",
-												"package": "@medusajs/orchestration"
+												"package": "@vikrai/orchestration"
 											}
 										]
 									}
@@ -1940,7 +1940,7 @@
 											"fileName": "workflows-sdk/src/utils/composer/create-workflow.ts",
 											"line": 98,
 											"character": 12,
-											"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/create-workflow.ts#L98"
+											"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/create-workflow.ts#L98"
 										}
 									],
 									"signatures": [
@@ -1955,7 +1955,7 @@
 													"fileName": "workflows-sdk/src/utils/composer/create-workflow.ts",
 													"line": 98,
 													"character": 12,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/create-workflow.ts#L98"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/create-workflow.ts#L98"
 												}
 											],
 											"parameters": [
@@ -1973,12 +1973,12 @@
 																"type": "reference",
 																"target": 55586,
 																"name": "TData",
-																"package": "@medusajs/workflows-sdk",
+																"package": "@vikrai/workflows-sdk",
 																"refersToTypeParameter": true
 															}
 														],
 														"name": "WorkflowData",
-														"package": "@medusajs/workflows-sdk"
+														"package": "@vikrai/workflows-sdk"
 													}
 												}
 											],
@@ -1997,19 +1997,19 @@
 																"type": "reference",
 																"target": 55587,
 																"name": "TResult",
-																"package": "@medusajs/workflows-sdk",
+																"package": "@vikrai/workflows-sdk",
 																"refersToTypeParameter": true
 															},
 															{
 																"type": "reference",
 																"target": 55588,
 																"name": "THooks",
-																"package": "@medusajs/workflows-sdk",
+																"package": "@vikrai/workflows-sdk",
 																"refersToTypeParameter": true
 															}
 														],
 														"name": "WorkflowResponse",
-														"package": "@medusajs/workflows-sdk"
+														"package": "@vikrai/workflows-sdk"
 													}
 												]
 											}
@@ -2027,26 +2027,26 @@
 								"type": "reference",
 								"target": 55586,
 								"name": "TData",
-								"package": "@medusajs/workflows-sdk",
+								"package": "@vikrai/workflows-sdk",
 								"refersToTypeParameter": true
 							},
 							{
 								"type": "reference",
 								"target": 55587,
 								"name": "TResult",
-								"package": "@medusajs/workflows-sdk",
+								"package": "@vikrai/workflows-sdk",
 								"refersToTypeParameter": true
 							},
 							{
 								"type": "reference",
 								"target": 55588,
 								"name": "THooks",
-								"package": "@medusajs/workflows-sdk",
+								"package": "@vikrai/workflows-sdk",
 								"refersToTypeParameter": true
 							}
 						],
 						"name": "ReturnWorkflow",
-						"package": "@medusajs/workflows-sdk"
+						"package": "@vikrai/workflows-sdk"
 					}
 				}
 			]
@@ -2085,7 +2085,7 @@
 							"fileName": "workflows-sdk/src/utils/composer/helpers/step-response.ts",
 							"line": 28,
 							"character": 2,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/helpers/step-response.ts#L28"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/helpers/step-response.ts#L28"
 						}
 					],
 					"signatures": [
@@ -2108,7 +2108,7 @@
 									"fileName": "workflows-sdk/src/utils/composer/helpers/step-response.ts",
 									"line": 28,
 									"character": 2,
-									"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/helpers/step-response.ts#L28"
+									"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/helpers/step-response.ts#L28"
 								}
 							],
 							"typeParameters": [
@@ -2161,7 +2161,7 @@
 										"type": "reference",
 										"target": 55609,
 										"name": "TOutput",
-										"package": "@medusajs/workflows-sdk",
+										"package": "@vikrai/workflows-sdk",
 										"qualifiedName": "StepResponse.TOutput",
 										"refersToTypeParameter": true
 									}
@@ -2188,7 +2188,7 @@
 										"type": "reference",
 										"target": 55609,
 										"name": "TOutput",
-										"package": "@medusajs/workflows-sdk",
+										"package": "@vikrai/workflows-sdk",
 										"qualifiedName": "StepResponse.TOutput",
 										"refersToTypeParameter": true
 									}
@@ -2221,7 +2221,7 @@
 										"type": "reference",
 										"target": 55610,
 										"name": "TCompensateInput",
-										"package": "@medusajs/workflows-sdk",
+										"package": "@vikrai/workflows-sdk",
 										"qualifiedName": "StepResponse.TCompensateInput",
 										"refersToTypeParameter": true
 									}
@@ -2235,7 +2235,7 @@
 										"type": "reference",
 										"target": 55609,
 										"name": "TOutput",
-										"package": "@medusajs/workflows-sdk",
+										"package": "@vikrai/workflows-sdk",
 										"qualifiedName": "StepResponse.TOutput",
 										"refersToTypeParameter": true
 									},
@@ -2243,13 +2243,13 @@
 										"type": "reference",
 										"target": 55610,
 										"name": "TCompensateInput",
-										"package": "@medusajs/workflows-sdk",
+										"package": "@vikrai/workflows-sdk",
 										"qualifiedName": "StepResponse.TCompensateInput",
 										"refersToTypeParameter": true
 									}
 								],
 								"name": "StepResponse",
-								"package": "@medusajs/workflows-sdk"
+								"package": "@vikrai/workflows-sdk"
 							}
 						}
 					]
@@ -2267,7 +2267,7 @@
 							"fileName": "workflows-sdk/src/utils/composer/helpers/step-response.ts",
 							"line": 118,
 							"character": 9,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/helpers/step-response.ts#L118"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/helpers/step-response.ts#L118"
 						}
 					],
 					"signatures": [
@@ -2290,7 +2290,7 @@
 										"content": [
 											{
 												"kind": "code",
-												"text": "```ts\nimport { Product } from \"@medusajs/medusa\"\nimport {\n  createStep,\n  StepResponse,\n  createWorkflow\n} from \"@medusajs/workflows-sdk\"\n\ninterface CreateProductInput {\n  title: string\n}\n\nexport const createProductStep = createStep(\n  \"createProductStep\",\n  async function (\n    input: CreateProductInput,\n    context\n  ) {\n    const productService = context.container.resolve(\n      \"productService\"\n    )\n\n    try {\n      const product = await productService.createProducts(input)\n      return new StepResponse({\n        product\n      }, {\n        product_id: product.id\n      })\n    } catch (e) {\n      return StepResponse.permanentFailure(`Couldn't create the product: ${e}`)\n    }\n  }\n)\n\ninterface WorkflowInput {\n title: string\n}\n\nconst myWorkflow = createWorkflow<\n    WorkflowInput,\n    Product\n  >(\"my-workflow\", (input) => {\n   // Everything here will be executed and resolved later\n   // during the execution. Including the data access.\n\n    const product = createProductStep(input)\n  }\n)\n\nmyWorkflow()\n  .run({\n    input: {\n      title: \"Shirt\"\n    }\n  })\n  .then(({ errors, result }) => {\n    if (errors.length) {\n      errors.forEach((err) => {\n        if (typeof err.error === \"object\" && \"message\" in err.error) {\n          console.error(err.error.message)\n        } else {\n          console.error(err.error)\n        }\n      })\n    }\n    console.log(result)\n  })\n```"
+												"text": "```ts\nimport { Product } from \"@vikrai/vikrai\"\nimport {\n  createStep,\n  StepResponse,\n  createWorkflow\n} from \"@vikrai/workflows-sdk\"\n\ninterface CreateProductInput {\n  title: string\n}\n\nexport const createProductStep = createStep(\n  \"createProductStep\",\n  async function (\n    input: CreateProductInput,\n    context\n  ) {\n    const productService = context.container.resolve(\n      \"productService\"\n    )\n\n    try {\n      const product = await productService.createProducts(input)\n      return new StepResponse({\n        product\n      }, {\n        product_id: product.id\n      })\n    } catch (e) {\n      return StepResponse.permanentFailure(`Couldn't create the product: ${e}`)\n    }\n  }\n)\n\ninterface WorkflowInput {\n title: string\n}\n\nconst myWorkflow = createWorkflow<\n    WorkflowInput,\n    Product\n  >(\"my-workflow\", (input) => {\n   // Everything here will be executed and resolved later\n   // during the execution. Including the data access.\n\n    const product = createProductStep(input)\n  }\n)\n\nmyWorkflow()\n  .run({\n    input: {\n      title: \"Shirt\"\n    }\n  })\n  .then(({ errors, result }) => {\n    if (errors.length) {\n      errors.forEach((err) => {\n        if (typeof err.error === \"object\" && \"message\" in err.error) {\n          console.error(err.error.message)\n        } else {\n          console.error(err.error)\n        }\n      })\n    }\n    console.log(result)\n  })\n```"
 											}
 										]
 									}
@@ -2301,7 +2301,7 @@
 									"fileName": "workflows-sdk/src/utils/composer/helpers/step-response.ts",
 									"line": 118,
 									"character": 9,
-									"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/helpers/step-response.ts#L118"
+									"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/helpers/step-response.ts#L118"
 								}
 							],
 							"parameters": [
@@ -2359,7 +2359,7 @@
 							"fileName": "workflows-sdk/src/utils/composer/helpers/step-response.ts",
 							"line": 128,
 							"character": 9,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/helpers/step-response.ts#L128"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/helpers/step-response.ts#L128"
 						}
 					],
 					"signatures": [
@@ -2374,7 +2374,7 @@
 									"fileName": "workflows-sdk/src/utils/composer/helpers/step-response.ts",
 									"line": 128,
 									"character": 9,
-									"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/helpers/step-response.ts#L128"
+									"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/helpers/step-response.ts#L128"
 								}
 							],
 							"type": {
@@ -2384,7 +2384,7 @@
 									"qualifiedName": "SkipStepResponse"
 								},
 								"name": "SkipStepResponse",
-								"package": "@medusajs/orchestration"
+								"package": "@vikrai/orchestration"
 							}
 						}
 					]
@@ -2410,7 +2410,7 @@
 					"fileName": "workflows-sdk/src/utils/composer/helpers/step-response.ts",
 					"line": 15,
 					"character": 13,
-					"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/helpers/step-response.ts#L15"
+					"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/helpers/step-response.ts#L15"
 				}
 			],
 			"typeParameters": [
@@ -2463,7 +2463,7 @@
 						"type": "reference",
 						"target": 55609,
 						"name": "TOutput",
-						"package": "@medusajs/workflows-sdk",
+						"package": "@vikrai/workflows-sdk",
 						"qualifiedName": "StepResponse.TOutput",
 						"refersToTypeParameter": true
 					}
@@ -2496,14 +2496,14 @@
 							"fileName": "workflows-sdk/src/utils/composer/helpers/workflow-response.ts",
 							"line": 11,
 							"character": 2,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/helpers/workflow-response.ts#L11"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/helpers/workflow-response.ts#L11"
 						}
 					],
 					"type": {
 						"type": "intrinsic",
 						"name": "string"
 					},
-					"defaultValue": "OrchestrationUtils.SymbolMedusaWorkflowResponse"
+					"defaultValue": "OrchestrationUtils.SymbolvikraiWorkflowResponse"
 				},
 				{
 					"id": 55631,
@@ -2516,7 +2516,7 @@
 							"fileName": "workflows-sdk/src/utils/composer/helpers/workflow-response.ts",
 							"line": 14,
 							"character": 2,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/helpers/workflow-response.ts#L14"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/helpers/workflow-response.ts#L14"
 						}
 					],
 					"signatures": [
@@ -2531,7 +2531,7 @@
 									"fileName": "workflows-sdk/src/utils/composer/helpers/workflow-response.ts",
 									"line": 14,
 									"character": 2,
-									"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/helpers/workflow-response.ts#L14"
+									"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/helpers/workflow-response.ts#L14"
 								}
 							],
 							"typeParameters": [
@@ -2584,13 +2584,13 @@
 														"type": "reference",
 														"target": 55633,
 														"name": "TResult",
-														"package": "@medusajs/workflows-sdk",
+														"package": "@vikrai/workflows-sdk",
 														"qualifiedName": "WorkflowResponse.TResult",
 														"refersToTypeParameter": true
 													}
 												],
 												"name": "WorkflowData",
-												"package": "@medusajs/workflows-sdk"
+												"package": "@vikrai/workflows-sdk"
 											},
 											{
 												"type": "mapped",
@@ -2624,14 +2624,14 @@
 																	"qualifiedName": "K"
 																},
 																"name": "K",
-																"package": "@medusajs/workflows-sdk",
+																"package": "@vikrai/workflows-sdk",
 																"refersToTypeParameter": true
 															},
 															"objectType": {
 																"type": "reference",
 																"target": 55633,
 																"name": "TResult",
-																"package": "@medusajs/workflows-sdk",
+																"package": "@vikrai/workflows-sdk",
 																"qualifiedName": "WorkflowResponse.TResult",
 																"refersToTypeParameter": true
 															}
@@ -2649,21 +2649,21 @@
 																			"qualifiedName": "K"
 																		},
 																		"name": "K",
-																		"package": "@medusajs/workflows-sdk",
+																		"package": "@vikrai/workflows-sdk",
 																		"refersToTypeParameter": true
 																	},
 																	"objectType": {
 																		"type": "reference",
 																		"target": 55633,
 																		"name": "TResult",
-																		"package": "@medusajs/workflows-sdk",
+																		"package": "@vikrai/workflows-sdk",
 																		"qualifiedName": "WorkflowResponse.TResult",
 																		"refersToTypeParameter": true
 																	}
 																}
 															],
 															"name": "WorkflowDataProperties",
-															"package": "@medusajs/workflows-sdk"
+															"package": "@vikrai/workflows-sdk"
 														},
 														{
 															"type": "reference",
@@ -2678,21 +2678,21 @@
 																			"qualifiedName": "K"
 																		},
 																		"name": "K",
-																		"package": "@medusajs/workflows-sdk",
+																		"package": "@vikrai/workflows-sdk",
 																		"refersToTypeParameter": true
 																	},
 																	"objectType": {
 																		"type": "reference",
 																		"target": 55633,
 																		"name": "TResult",
-																		"package": "@medusajs/workflows-sdk",
+																		"package": "@vikrai/workflows-sdk",
 																		"qualifiedName": "WorkflowResponse.TResult",
 																		"refersToTypeParameter": true
 																	}
 																}
 															],
 															"name": "WorkflowData",
-															"package": "@medusajs/workflows-sdk"
+															"package": "@vikrai/workflows-sdk"
 														}
 													]
 												}
@@ -2728,14 +2728,14 @@
 															"fileName": "workflows-sdk/src/utils/composer/helpers/workflow-response.ts",
 															"line": 23,
 															"character": 23,
-															"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/helpers/workflow-response.ts#L23"
+															"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/helpers/workflow-response.ts#L23"
 														}
 													],
 													"type": {
 														"type": "reference",
 														"target": 55634,
 														"name": "THooks",
-														"package": "@medusajs/workflows-sdk",
+														"package": "@vikrai/workflows-sdk",
 														"qualifiedName": "WorkflowResponse.THooks",
 														"refersToTypeParameter": true
 													}
@@ -2754,7 +2754,7 @@
 													"fileName": "workflows-sdk/src/utils/composer/helpers/workflow-response.ts",
 													"line": 23,
 													"character": 21,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/helpers/workflow-response.ts#L23"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/helpers/workflow-response.ts#L23"
 												}
 											]
 										}
@@ -2769,7 +2769,7 @@
 										"type": "reference",
 										"target": 55633,
 										"name": "TResult",
-										"package": "@medusajs/workflows-sdk",
+										"package": "@vikrai/workflows-sdk",
 										"qualifiedName": "WorkflowResponse.TResult",
 										"refersToTypeParameter": true
 									},
@@ -2777,13 +2777,13 @@
 										"type": "reference",
 										"target": 55634,
 										"name": "THooks",
-										"package": "@medusajs/workflows-sdk",
+										"package": "@vikrai/workflows-sdk",
 										"qualifiedName": "WorkflowResponse.THooks",
 										"refersToTypeParameter": true
 									}
 								],
 								"name": "WorkflowResponse",
-								"package": "@medusajs/workflows-sdk"
+								"package": "@vikrai/workflows-sdk"
 							}
 						}
 					]
@@ -2801,7 +2801,7 @@
 							"fileName": "workflows-sdk/src/utils/composer/helpers/workflow-response.ts",
 							"line": 15,
 							"character": 11,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/helpers/workflow-response.ts#L15"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/helpers/workflow-response.ts#L15"
 						}
 					],
 					"type": {
@@ -2815,13 +2815,13 @@
 										"type": "reference",
 										"target": 55633,
 										"name": "TResult",
-										"package": "@medusajs/workflows-sdk",
+										"package": "@vikrai/workflows-sdk",
 										"qualifiedName": "WorkflowResponse.TResult",
 										"refersToTypeParameter": true
 									}
 								],
 								"name": "WorkflowData",
-								"package": "@medusajs/workflows-sdk"
+								"package": "@vikrai/workflows-sdk"
 							},
 							{
 								"type": "mapped",
@@ -2855,14 +2855,14 @@
 													"qualifiedName": "K"
 												},
 												"name": "K",
-												"package": "@medusajs/workflows-sdk",
+												"package": "@vikrai/workflows-sdk",
 												"refersToTypeParameter": true
 											},
 											"objectType": {
 												"type": "reference",
 												"target": 55633,
 												"name": "TResult",
-												"package": "@medusajs/workflows-sdk",
+												"package": "@vikrai/workflows-sdk",
 												"qualifiedName": "WorkflowResponse.TResult",
 												"refersToTypeParameter": true
 											}
@@ -2880,21 +2880,21 @@
 															"qualifiedName": "K"
 														},
 														"name": "K",
-														"package": "@medusajs/workflows-sdk",
+														"package": "@vikrai/workflows-sdk",
 														"refersToTypeParameter": true
 													},
 													"objectType": {
 														"type": "reference",
 														"target": 55633,
 														"name": "TResult",
-														"package": "@medusajs/workflows-sdk",
+														"package": "@vikrai/workflows-sdk",
 														"qualifiedName": "WorkflowResponse.TResult",
 														"refersToTypeParameter": true
 													}
 												}
 											],
 											"name": "WorkflowDataProperties",
-											"package": "@medusajs/workflows-sdk"
+											"package": "@vikrai/workflows-sdk"
 										},
 										{
 											"type": "reference",
@@ -2909,21 +2909,21 @@
 															"qualifiedName": "K"
 														},
 														"name": "K",
-														"package": "@medusajs/workflows-sdk",
+														"package": "@vikrai/workflows-sdk",
 														"refersToTypeParameter": true
 													},
 													"objectType": {
 														"type": "reference",
 														"target": 55633,
 														"name": "TResult",
-														"package": "@medusajs/workflows-sdk",
+														"package": "@vikrai/workflows-sdk",
 														"qualifiedName": "WorkflowResponse.TResult",
 														"refersToTypeParameter": true
 													}
 												}
 											],
 											"name": "WorkflowData",
-											"package": "@medusajs/workflows-sdk"
+											"package": "@vikrai/workflows-sdk"
 										}
 									]
 								}
@@ -2945,7 +2945,7 @@
 							"fileName": "workflows-sdk/src/utils/composer/helpers/workflow-response.ts",
 							"line": 23,
 							"character": 11,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/helpers/workflow-response.ts#L23"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/helpers/workflow-response.ts#L23"
 						}
 					],
 					"type": {
@@ -2968,14 +2968,14 @@
 											"fileName": "workflows-sdk/src/utils/composer/helpers/workflow-response.ts",
 											"line": 23,
 											"character": 23,
-											"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/helpers/workflow-response.ts#L23"
+											"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/helpers/workflow-response.ts#L23"
 										}
 									],
 									"type": {
 										"type": "reference",
 										"target": 55634,
 										"name": "THooks",
-										"package": "@medusajs/workflows-sdk",
+										"package": "@vikrai/workflows-sdk",
 										"qualifiedName": "WorkflowResponse.THooks",
 										"refersToTypeParameter": true
 									}
@@ -2994,7 +2994,7 @@
 									"fileName": "workflows-sdk/src/utils/composer/helpers/workflow-response.ts",
 									"line": 23,
 									"character": 21,
-									"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/helpers/workflow-response.ts#L23"
+									"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/helpers/workflow-response.ts#L23"
 								}
 							]
 						}
@@ -3022,7 +3022,7 @@
 					"fileName": "workflows-sdk/src/utils/composer/helpers/workflow-response.ts",
 					"line": 7,
 					"character": 13,
-					"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/helpers/workflow-response.ts#L7"
+					"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/helpers/workflow-response.ts#L7"
 				}
 			],
 			"typeParameters": [
@@ -3069,7 +3069,7 @@
 					"fileName": "workflows-sdk/src/utils/composer/parallelize.ts",
 					"line": 44,
 					"character": 16,
-					"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/parallelize.ts#L44"
+					"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/parallelize.ts#L44"
 				}
 			],
 			"signatures": [
@@ -3101,7 +3101,7 @@
 								"content": [
 									{
 										"kind": "code",
-										"text": "```ts\nimport {\n  createWorkflow,\n  parallelize,\n  WorkflowResponse\n} from \"@medusajs/framework/workflows-sdk\"\nimport {\n  createProductStep,\n  createPricesStep,\n  attachProductToSalesChannelStep\n} from \"./steps\"\n\ninterface WorkflowInput {\n  title: string\n}\n\nconst myWorkflow = createWorkflow(\n  \"my-workflow\",\n  (input: WorkflowInput) => {\n   const product = createProductStep(input)\n\n   const [prices, productSalesChannel] = parallelize(\n     createPricesStep(product),\n     attachProductToSalesChannelStep(product)\n   )\n\n   return new WorkflowResponse({\n    prices,\n    productSalesChannel\n   })\n }\n)\n```"
+										"text": "```ts\nimport {\n  createWorkflow,\n  parallelize,\n  WorkflowResponse\n} from \"@vikrai/framework/workflows-sdk\"\nimport {\n  createProductStep,\n  createPricesStep,\n  attachProductToSalesChannelStep\n} from \"./steps\"\n\ninterface WorkflowInput {\n  title: string\n}\n\nconst myWorkflow = createWorkflow(\n  \"my-workflow\",\n  (input: WorkflowInput) => {\n   const product = createProductStep(input)\n\n   const [prices, productSalesChannel] = parallelize(\n     createPricesStep(product),\n     attachProductToSalesChannelStep(product)\n   )\n\n   return new WorkflowResponse({\n    prices,\n    productSalesChannel\n   })\n }\n)\n```"
 									}
 								]
 							}
@@ -3112,7 +3112,7 @@
 							"fileName": "workflows-sdk/src/utils/composer/parallelize.ts",
 							"line": 44,
 							"character": 16,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/parallelize.ts#L44"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/parallelize.ts#L44"
 						}
 					],
 					"typeParameters": [
@@ -3143,7 +3143,7 @@
 											"type": "reference",
 											"target": 55782,
 											"name": "WorkflowData",
-											"package": "@medusajs/workflows-sdk"
+											"package": "@vikrai/workflows-sdk"
 										}
 									]
 								}
@@ -3163,7 +3163,7 @@
 								"type": "reference",
 								"target": 55669,
 								"name": "TResult",
-								"package": "@medusajs/workflows-sdk",
+								"package": "@vikrai/workflows-sdk",
 								"refersToTypeParameter": true
 							}
 						}
@@ -3172,7 +3172,7 @@
 						"type": "reference",
 						"target": 55669,
 						"name": "TResult",
-						"package": "@medusajs/workflows-sdk",
+						"package": "@vikrai/workflows-sdk",
 						"refersToTypeParameter": true
 					}
 				}
@@ -3189,7 +3189,7 @@
 					"fileName": "workflows-sdk/src/utils/composer/transform.ts",
 					"line": 63,
 					"character": 16,
-					"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/transform.ts#L63"
+					"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/transform.ts#L63"
 				}
 			],
 			"signatures": [
@@ -3247,7 +3247,7 @@
 								"content": [
 									{
 										"kind": "code",
-										"text": "```ts\nimport {\n  createWorkflow,\n  transform,\n  WorkflowResponse\n} from \"@medusajs/framework/workflows-sdk\"\nimport { step1, step2 } from \"./steps\"\n\ntype WorkflowInput = {\n  name: string\n}\n\nconst myWorkflow = createWorkflow(\n  \"hello-world\",\n  (input: WorkflowInput) => {\n    const str1 = step1(input)\n    const str2 = step2(input)\n\n    const message = transform({\n      str1,\n      str2\n    }, (input) => `${input.str1}${input.str2}`)\n\n    return new WorkflowResponse(message)\n})\n```"
+										"text": "```ts\nimport {\n  createWorkflow,\n  transform,\n  WorkflowResponse\n} from \"@vikrai/framework/workflows-sdk\"\nimport { step1, step2 } from \"./steps\"\n\ntype WorkflowInput = {\n  name: string\n}\n\nconst myWorkflow = createWorkflow(\n  \"hello-world\",\n  (input: WorkflowInput) => {\n    const str1 = step1(input)\n    const str2 = step2(input)\n\n    const message = transform({\n      str1,\n      str2\n    }, (input) => `${input.str1}${input.str2}`)\n\n    return new WorkflowResponse(message)\n})\n```"
 									}
 								]
 							}
@@ -3258,7 +3258,7 @@
 							"fileName": "workflows-sdk/src/utils/composer/transform.ts",
 							"line": 63,
 							"character": 16,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/transform.ts#L63"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/transform.ts#L63"
 						}
 					],
 					"typeParameters": [
@@ -3279,7 +3279,7 @@
 										"type": "reference",
 										"target": 55782,
 										"name": "WorkflowData",
-										"package": "@medusajs/workflows-sdk"
+										"package": "@vikrai/workflows-sdk"
 									}
 								]
 							}
@@ -3311,7 +3311,7 @@
 								"type": "reference",
 								"target": 55673,
 								"name": "T",
-								"package": "@medusajs/workflows-sdk",
+								"package": "@vikrai/workflows-sdk",
 								"refersToTypeParameter": true
 							}
 						},
@@ -3353,19 +3353,19 @@
 												"type": "reference",
 												"target": 55673,
 												"name": "T",
-												"package": "@medusajs/workflows-sdk",
+												"package": "@vikrai/workflows-sdk",
 												"refersToTypeParameter": true
 											},
 											{
 												"type": "reference",
 												"target": 55674,
 												"name": "RFinal",
-												"package": "@medusajs/workflows-sdk",
+												"package": "@vikrai/workflows-sdk",
 												"refersToTypeParameter": true
 											}
 										],
 										"name": "Func1",
-										"package": "@medusajs/workflows-sdk"
+										"package": "@vikrai/workflows-sdk"
 									}
 								]
 							}
@@ -3379,12 +3379,12 @@
 								"type": "reference",
 								"target": 55674,
 								"name": "RFinal",
-								"package": "@medusajs/workflows-sdk",
+								"package": "@vikrai/workflows-sdk",
 								"refersToTypeParameter": true
 							}
 						],
 						"name": "WorkflowData",
-						"package": "@medusajs/workflows-sdk"
+						"package": "@vikrai/workflows-sdk"
 					}
 				}
 			]
@@ -3400,7 +3400,7 @@
 					"fileName": "workflows-sdk/src/utils/composer/type.ts",
 					"line": 15,
 					"character": 12,
-					"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L15"
+					"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L15"
 				}
 			],
 			"typeParameters": [
@@ -3445,7 +3445,7 @@
 							"fileName": "workflows-sdk/src/utils/composer/type.ts",
 							"line": 16,
 							"character": 2,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L16"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L16"
 						}
 					],
 					"signatures": [
@@ -3466,7 +3466,7 @@
 										"type": "reference",
 										"target": 55790,
 										"name": "CreateWorkflowComposerContext",
-										"package": "@medusajs/workflows-sdk"
+										"package": "@vikrai/workflows-sdk"
 									}
 								}
 							],
@@ -3478,12 +3478,12 @@
 										"type": "reference",
 										"target": 55732,
 										"name": "TOutput",
-										"package": "@medusajs/workflows-sdk",
+										"package": "@vikrai/workflows-sdk",
 										"refersToTypeParameter": true
 									}
 								],
 								"name": "WorkflowData",
-								"package": "@medusajs/workflows-sdk"
+								"package": "@vikrai/workflows-sdk"
 							}
 						}
 					]
@@ -3501,7 +3501,7 @@
 					"fileName": "workflows-sdk/src/utils/composer/type.ts",
 					"line": 18,
 					"character": 12,
-					"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L18"
+					"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L18"
 				}
 			],
 			"typeParameters": [
@@ -3533,7 +3533,7 @@
 									"fileName": "workflows-sdk/src/utils/composer/type.ts",
 									"line": 19,
 									"character": 2,
-									"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L19"
+									"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L19"
 								}
 							],
 							"signatures": [
@@ -3548,7 +3548,7 @@
 											"fileName": "workflows-sdk/src/utils/composer/type.ts",
 											"line": 19,
 											"character": 2,
-											"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L19"
+											"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L19"
 										}
 									],
 									"parameters": [
@@ -3583,7 +3583,7 @@
 																			"fileName": "workflows-sdk/src/utils/composer/type.ts",
 																			"line": 20,
 																			"character": 14,
-																			"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L20"
+																			"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L20"
 																		}
 																	],
 																	"type": {
@@ -3605,7 +3605,7 @@
 																	"fileName": "workflows-sdk/src/utils/composer/type.ts",
 																	"line": 20,
 																	"character": 12,
-																	"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L20"
+																	"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L20"
 																}
 															]
 														}
@@ -3624,7 +3624,7 @@
 																	"qualifiedName": "TransactionStepsDefinition"
 																},
 																"name": "TransactionStepsDefinition",
-																"package": "@medusajs/orchestration"
+																"package": "@vikrai/orchestration"
 															},
 															{
 																"type": "union",
@@ -3659,12 +3659,12 @@
 												"type": "reference",
 												"target": 55740,
 												"name": "TOutput",
-												"package": "@medusajs/workflows-sdk",
+												"package": "@vikrai/workflows-sdk",
 												"refersToTypeParameter": true
 											}
 										],
 										"name": "WorkflowData",
-										"package": "@medusajs/workflows-sdk"
+										"package": "@vikrai/workflows-sdk"
 									}
 								}
 							]
@@ -3683,7 +3683,7 @@
 							"fileName": "workflows-sdk/src/utils/composer/type.ts",
 							"line": 18,
 							"character": 48,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L18"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L18"
 						}
 					]
 				}
@@ -3700,7 +3700,7 @@
 					"fileName": "workflows-sdk/src/utils/composer/type.ts",
 					"line": 28,
 					"character": 12,
-					"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L28"
+					"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L28"
 				}
 			],
 			"type": {
@@ -3716,7 +3716,7 @@
 							"fileName": "workflows-sdk/src/utils/composer/type.ts",
 							"line": 28,
 							"character": 26,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L28"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L28"
 						}
 					],
 					"signatures": [
@@ -3784,7 +3784,7 @@
 					"fileName": "workflows-sdk/src/utils/composer/type.ts",
 					"line": 53,
 					"character": 12,
-					"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L53"
+					"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L53"
 				}
 			],
 			"type": {
@@ -3807,7 +3807,7 @@
 									"fileName": "workflows-sdk/src/utils/composer/type.ts",
 									"line": 53,
 									"character": 21,
-									"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L53"
+									"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L53"
 								}
 							],
 							"type": {
@@ -3829,7 +3829,7 @@
 							"fileName": "workflows-sdk/src/utils/composer/type.ts",
 							"line": 53,
 							"character": 19,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L53"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L53"
 						}
 					]
 				}
@@ -3854,7 +3854,7 @@
 					"fileName": "workflows-sdk/src/utils/composer/type.ts",
 					"line": 61,
 					"character": 12,
-					"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L61"
+					"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L61"
 				}
 			],
 			"typeParameters": [
@@ -3909,12 +3909,12 @@
 									"type": "reference",
 									"target": 55775,
 									"name": "TInput",
-									"package": "@medusajs/workflows-sdk",
+									"package": "@vikrai/workflows-sdk",
 									"refersToTypeParameter": true
 								}
 							],
 							"name": "KeysOfUnion",
-							"package": "@medusajs/workflows-sdk"
+							"package": "@vikrai/workflows-sdk"
 						},
 						"extendsType": {
 							"type": "tuple"
@@ -3932,7 +3932,7 @@
 										"fileName": "workflows-sdk/src/utils/composer/type.ts",
 										"line": 66,
 										"character": 4,
-										"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L66"
+										"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L66"
 									}
 								],
 								"signatures": [
@@ -3947,7 +3947,7 @@
 												"fileName": "workflows-sdk/src/utils/composer/type.ts",
 												"line": 67,
 												"character": 6,
-												"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L67"
+												"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L67"
 											}
 										],
 										"type": {
@@ -3959,7 +3959,7 @@
 														"type": "reference",
 														"target": 55776,
 														"name": "TOutput",
-														"package": "@medusajs/workflows-sdk",
+														"package": "@vikrai/workflows-sdk",
 														"refersToTypeParameter": true
 													},
 													{
@@ -4001,7 +4001,7 @@
 																			"fileName": "workflows-sdk/src/utils/composer/type.ts",
 																			"line": 53,
 																			"character": 21,
-																			"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L53"
+																			"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L53"
 																		}
 																	],
 																	"type": {
@@ -4023,7 +4023,7 @@
 																	"fileName": "workflows-sdk/src/utils/composer/type.ts",
 																	"line": 91,
 																	"character": 4,
-																	"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L91"
+																	"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L91"
 																}
 															]
 														}
@@ -4032,7 +4032,7 @@
 														"type": "reference",
 														"target": 55745,
 														"name": "Void",
-														"package": "@medusajs/workflows-sdk"
+														"package": "@vikrai/workflows-sdk"
 													},
 													{
 														"type": "reference",
@@ -4042,11 +4042,11 @@
 																"type": "reference",
 																"target": 55745,
 																"name": "Void",
-																"package": "@medusajs/workflows-sdk"
+																"package": "@vikrai/workflows-sdk"
 															}
 														],
 														"name": "WorkflowDataProperties",
-														"package": "@medusajs/workflows-sdk"
+														"package": "@vikrai/workflows-sdk"
 													},
 													{
 														"type": "reflection",
@@ -4068,7 +4068,7 @@
 																			"fileName": "workflows-sdk/src/utils/composer/type.ts",
 																			"line": 97,
 																			"character": 4,
-																			"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L97"
+																			"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L97"
 																		}
 																	],
 																	"signatures": [
@@ -4083,7 +4083,7 @@
 																					"fileName": "workflows-sdk/src/utils/composer/type.ts",
 																					"line": 97,
 																					"character": 4,
-																					"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L97"
+																					"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L97"
 																				}
 																			],
 																			"parameters": [
@@ -4118,7 +4118,7 @@
 																													"fileName": "workflows-sdk/src/utils/composer/type.ts",
 																													"line": 98,
 																													"character": 16,
-																													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L98"
+																													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L98"
 																												}
 																											],
 																											"type": {
@@ -4140,7 +4140,7 @@
 																											"fileName": "workflows-sdk/src/utils/composer/type.ts",
 																											"line": 98,
 																											"character": 14,
-																											"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L98"
+																											"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L98"
 																										}
 																									]
 																								}
@@ -4159,7 +4159,7 @@
 																											"qualifiedName": "TransactionStepsDefinition"
 																										},
 																										"name": "TransactionStepsDefinition",
-																										"package": "@medusajs/orchestration"
+																										"package": "@vikrai/orchestration"
 																									},
 																									{
 																										"type": "union",
@@ -4194,11 +4194,11 @@
 																						"type": "reference",
 																						"target": 55745,
 																						"name": "Void",
-																						"package": "@medusajs/workflows-sdk"
+																						"package": "@vikrai/workflows-sdk"
 																					}
 																				],
 																				"name": "WorkflowData",
-																				"package": "@medusajs/workflows-sdk"
+																				"package": "@vikrai/workflows-sdk"
 																			}
 																		}
 																	]
@@ -4217,7 +4217,7 @@
 																	"fileName": "workflows-sdk/src/utils/composer/type.ts",
 																	"line": 96,
 																	"character": 30,
-																	"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L96"
+																	"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L96"
 																}
 															]
 														}
@@ -4230,12 +4230,12 @@
 																"type": "reference",
 																"target": 55776,
 																"name": "TOutput",
-																"package": "@medusajs/workflows-sdk",
+																"package": "@vikrai/workflows-sdk",
 																"refersToTypeParameter": true
 															}
 														],
 														"name": "StepFunctionReturnConfig",
-														"package": "@medusajs/workflows-sdk"
+														"package": "@vikrai/workflows-sdk"
 													}
 												]
 											},
@@ -4248,7 +4248,7 @@
 															"type": "reference",
 															"target": 55776,
 															"name": "TOutput",
-															"package": "@medusajs/workflows-sdk",
+															"package": "@vikrai/workflows-sdk",
 															"refersToTypeParameter": true
 														},
 														"extendsType": {
@@ -4260,7 +4260,7 @@
 																	"qualifiedName": "Item"
 																},
 																"name": "Item",
-																"package": "@medusajs/workflows-sdk",
+																"package": "@vikrai/workflows-sdk",
 																"refersToTypeParameter": true
 															}
 														},
@@ -4276,7 +4276,7 @@
 																			"qualifiedName": "Item"
 																		},
 																		"name": "Item",
-																		"package": "@medusajs/workflows-sdk",
+																		"package": "@vikrai/workflows-sdk",
 																		"refersToTypeParameter": true
 																	},
 																	{
@@ -4290,12 +4290,12 @@
 																					"qualifiedName": "Item"
 																				},
 																				"name": "Item",
-																				"package": "@medusajs/workflows-sdk",
+																				"package": "@vikrai/workflows-sdk",
 																				"refersToTypeParameter": true
 																			}
 																		],
 																		"name": "WorkflowData",
-																		"package": "@medusajs/workflows-sdk"
+																		"package": "@vikrai/workflows-sdk"
 																	}
 																]
 															}
@@ -4306,7 +4306,7 @@
 																"type": "reference",
 																"target": 55776,
 																"name": "TOutput",
-																"package": "@medusajs/workflows-sdk",
+																"package": "@vikrai/workflows-sdk",
 																"refersToTypeParameter": true
 															},
 															"extendsType": {
@@ -4357,7 +4357,7 @@
 																				}
 																			],
 																			"name": "WorkflowData",
-																			"package": "@medusajs/workflows-sdk"
+																			"package": "@vikrai/workflows-sdk"
 																		}
 																	]
 																}
@@ -4369,7 +4369,7 @@
 																		"type": "reference",
 																		"target": 55776,
 																		"name": "TOutput",
-																		"package": "@medusajs/workflows-sdk",
+																		"package": "@vikrai/workflows-sdk",
 																		"refersToTypeParameter": true
 																	},
 																	{
@@ -4380,12 +4380,12 @@
 																				"type": "reference",
 																				"target": 55776,
 																				"name": "TOutput",
-																				"package": "@medusajs/workflows-sdk",
+																				"package": "@vikrai/workflows-sdk",
 																				"refersToTypeParameter": true
 																			}
 																		],
 																		"name": "WorkflowDataProperties",
-																		"package": "@medusajs/workflows-sdk"
+																		"package": "@vikrai/workflows-sdk"
 																	}
 																]
 															}
@@ -4395,7 +4395,7 @@
 														"type": "reference",
 														"target": 55776,
 														"name": "TOutput",
-														"package": "@medusajs/workflows-sdk",
+														"package": "@vikrai/workflows-sdk",
 														"refersToTypeParameter": true
 													},
 													{
@@ -4406,12 +4406,12 @@
 																"type": "reference",
 																"target": 55776,
 																"name": "TOutput",
-																"package": "@medusajs/workflows-sdk",
+																"package": "@vikrai/workflows-sdk",
 																"refersToTypeParameter": true
 															}
 														],
 														"name": "WorkflowDataProperties",
-														"package": "@medusajs/workflows-sdk"
+														"package": "@vikrai/workflows-sdk"
 													},
 													{
 														"type": "reflection",
@@ -4433,7 +4433,7 @@
 																			"fileName": "workflows-sdk/src/utils/composer/type.ts",
 																			"line": 97,
 																			"character": 4,
-																			"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L97"
+																			"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L97"
 																		}
 																	],
 																	"signatures": [
@@ -4448,7 +4448,7 @@
 																					"fileName": "workflows-sdk/src/utils/composer/type.ts",
 																					"line": 97,
 																					"character": 4,
-																					"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L97"
+																					"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L97"
 																				}
 																			],
 																			"parameters": [
@@ -4483,7 +4483,7 @@
 																													"fileName": "workflows-sdk/src/utils/composer/type.ts",
 																													"line": 98,
 																													"character": 16,
-																													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L98"
+																													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L98"
 																												}
 																											],
 																											"type": {
@@ -4505,7 +4505,7 @@
 																											"fileName": "workflows-sdk/src/utils/composer/type.ts",
 																											"line": 98,
 																											"character": 14,
-																											"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L98"
+																											"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L98"
 																										}
 																									]
 																								}
@@ -4524,7 +4524,7 @@
 																											"qualifiedName": "TransactionStepsDefinition"
 																										},
 																										"name": "TransactionStepsDefinition",
-																										"package": "@medusajs/orchestration"
+																										"package": "@vikrai/orchestration"
 																									},
 																									{
 																										"type": "union",
@@ -4559,12 +4559,12 @@
 																						"type": "reference",
 																						"target": 55776,
 																						"name": "TOutput",
-																						"package": "@medusajs/workflows-sdk",
+																						"package": "@vikrai/workflows-sdk",
 																						"refersToTypeParameter": true
 																					}
 																				],
 																				"name": "WorkflowData",
-																				"package": "@medusajs/workflows-sdk"
+																				"package": "@vikrai/workflows-sdk"
 																			}
 																		}
 																	]
@@ -4583,7 +4583,7 @@
 																	"fileName": "workflows-sdk/src/utils/composer/type.ts",
 																	"line": 96,
 																	"character": 30,
-																	"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L96"
+																	"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L96"
 																}
 															]
 														}
@@ -4596,12 +4596,12 @@
 																"type": "reference",
 																"target": 55776,
 																"name": "TOutput",
-																"package": "@medusajs/workflows-sdk",
+																"package": "@vikrai/workflows-sdk",
 																"refersToTypeParameter": true
 															}
 														],
 														"name": "StepFunctionReturnConfig",
-														"package": "@medusajs/workflows-sdk"
+														"package": "@vikrai/workflows-sdk"
 													}
 												]
 											}
@@ -4623,7 +4623,7 @@
 										"fileName": "workflows-sdk/src/utils/composer/type.ts",
 										"line": 72,
 										"character": 4,
-										"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L72"
+										"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L72"
 									}
 								],
 								"signatures": [
@@ -4638,7 +4638,7 @@
 												"fileName": "workflows-sdk/src/utils/composer/type.ts",
 												"line": 73,
 												"character": 6,
-												"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L73"
+												"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L73"
 											}
 										],
 										"parameters": [
@@ -4655,7 +4655,7 @@
 															"type": "reference",
 															"target": 55775,
 															"name": "TInput",
-															"package": "@medusajs/workflows-sdk",
+															"package": "@vikrai/workflows-sdk",
 															"refersToTypeParameter": true
 														},
 														{
@@ -4666,12 +4666,12 @@
 																	"type": "reference",
 																	"target": 55775,
 																	"name": "TInput",
-																	"package": "@medusajs/workflows-sdk",
+																	"package": "@vikrai/workflows-sdk",
 																	"refersToTypeParameter": true
 																}
 															],
 															"name": "WorkflowData",
-															"package": "@medusajs/workflows-sdk"
+															"package": "@vikrai/workflows-sdk"
 														}
 													]
 												}
@@ -4686,7 +4686,7 @@
 														"type": "reference",
 														"target": 55776,
 														"name": "TOutput",
-														"package": "@medusajs/workflows-sdk",
+														"package": "@vikrai/workflows-sdk",
 														"refersToTypeParameter": true
 													},
 													"extendsType": {
@@ -4698,7 +4698,7 @@
 																"qualifiedName": "Item"
 															},
 															"name": "Item",
-															"package": "@medusajs/workflows-sdk",
+															"package": "@vikrai/workflows-sdk",
 															"refersToTypeParameter": true
 														}
 													},
@@ -4714,7 +4714,7 @@
 																		"qualifiedName": "Item"
 																	},
 																	"name": "Item",
-																	"package": "@medusajs/workflows-sdk",
+																	"package": "@vikrai/workflows-sdk",
 																	"refersToTypeParameter": true
 																},
 																{
@@ -4728,12 +4728,12 @@
 																				"qualifiedName": "Item"
 																			},
 																			"name": "Item",
-																			"package": "@medusajs/workflows-sdk",
+																			"package": "@vikrai/workflows-sdk",
 																			"refersToTypeParameter": true
 																		}
 																	],
 																	"name": "WorkflowData",
-																	"package": "@medusajs/workflows-sdk"
+																	"package": "@vikrai/workflows-sdk"
 																}
 															]
 														}
@@ -4744,7 +4744,7 @@
 															"type": "reference",
 															"target": 55776,
 															"name": "TOutput",
-															"package": "@medusajs/workflows-sdk",
+															"package": "@vikrai/workflows-sdk",
 															"refersToTypeParameter": true
 														},
 														"extendsType": {
@@ -4783,7 +4783,7 @@
 																				"qualifiedName": "Key"
 																			},
 																			"name": "Key",
-																			"package": "@medusajs/workflows-sdk",
+																			"package": "@vikrai/workflows-sdk",
 																			"refersToTypeParameter": true
 																		},
 																		"objectType": {
@@ -4796,7 +4796,7 @@
 																				}
 																			],
 																			"name": "TOutput",
-																			"package": "@medusajs/workflows-sdk",
+																			"package": "@vikrai/workflows-sdk",
 																			"refersToTypeParameter": true
 																		}
 																	},
@@ -4817,7 +4817,7 @@
 																			}
 																		],
 																		"name": "WorkflowData",
-																		"package": "@medusajs/workflows-sdk"
+																		"package": "@vikrai/workflows-sdk"
 																	}
 																]
 															}
@@ -4829,7 +4829,7 @@
 																	"type": "reference",
 																	"target": 55776,
 																	"name": "TOutput",
-																	"package": "@medusajs/workflows-sdk",
+																	"package": "@vikrai/workflows-sdk",
 																	"refersToTypeParameter": true
 																},
 																{
@@ -4840,12 +4840,12 @@
 																			"type": "reference",
 																			"target": 55776,
 																			"name": "TOutput",
-																			"package": "@medusajs/workflows-sdk",
+																			"package": "@vikrai/workflows-sdk",
 																			"refersToTypeParameter": true
 																		}
 																	],
 																	"name": "WorkflowDataProperties",
-																	"package": "@medusajs/workflows-sdk"
+																	"package": "@vikrai/workflows-sdk"
 																}
 															]
 														}
@@ -4855,7 +4855,7 @@
 													"type": "reference",
 													"target": 55776,
 													"name": "TOutput",
-													"package": "@medusajs/workflows-sdk",
+													"package": "@vikrai/workflows-sdk",
 													"refersToTypeParameter": true
 												},
 												{
@@ -4866,12 +4866,12 @@
 															"type": "reference",
 															"target": 55776,
 															"name": "TOutput",
-															"package": "@medusajs/workflows-sdk",
+															"package": "@vikrai/workflows-sdk",
 															"refersToTypeParameter": true
 														}
 													],
 													"name": "WorkflowDataProperties",
-													"package": "@medusajs/workflows-sdk"
+													"package": "@vikrai/workflows-sdk"
 												},
 												{
 													"type": "reflection",
@@ -4893,7 +4893,7 @@
 																		"fileName": "workflows-sdk/src/utils/composer/type.ts",
 																		"line": 97,
 																		"character": 4,
-																		"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L97"
+																		"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L97"
 																	}
 																],
 																"signatures": [
@@ -4908,7 +4908,7 @@
 																				"fileName": "workflows-sdk/src/utils/composer/type.ts",
 																				"line": 97,
 																				"character": 4,
-																				"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L97"
+																				"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L97"
 																			}
 																		],
 																		"parameters": [
@@ -4943,7 +4943,7 @@
 																												"fileName": "workflows-sdk/src/utils/composer/type.ts",
 																												"line": 98,
 																												"character": 16,
-																												"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L98"
+																												"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L98"
 																											}
 																										],
 																										"type": {
@@ -4965,7 +4965,7 @@
 																										"fileName": "workflows-sdk/src/utils/composer/type.ts",
 																										"line": 98,
 																										"character": 14,
-																										"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L98"
+																										"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L98"
 																									}
 																								]
 																							}
@@ -4984,7 +4984,7 @@
 																										"qualifiedName": "TransactionStepsDefinition"
 																									},
 																									"name": "TransactionStepsDefinition",
-																									"package": "@medusajs/orchestration"
+																									"package": "@vikrai/orchestration"
 																								},
 																								{
 																									"type": "union",
@@ -5019,12 +5019,12 @@
 																					"type": "reference",
 																					"target": 55776,
 																					"name": "TOutput",
-																					"package": "@medusajs/workflows-sdk",
+																					"package": "@vikrai/workflows-sdk",
 																					"refersToTypeParameter": true
 																				}
 																			],
 																			"name": "WorkflowData",
-																			"package": "@medusajs/workflows-sdk"
+																			"package": "@vikrai/workflows-sdk"
 																		}
 																	}
 																]
@@ -5043,7 +5043,7 @@
 																"fileName": "workflows-sdk/src/utils/composer/type.ts",
 																"line": 96,
 																"character": 30,
-																"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L96"
+																"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L96"
 															}
 														]
 													}
@@ -5056,12 +5056,12 @@
 															"type": "reference",
 															"target": 55776,
 															"name": "TOutput",
-															"package": "@medusajs/workflows-sdk",
+															"package": "@vikrai/workflows-sdk",
 															"refersToTypeParameter": true
 														}
 													],
 													"name": "StepFunctionReturnConfig",
-													"package": "@medusajs/workflows-sdk"
+													"package": "@vikrai/workflows-sdk"
 												}
 											]
 										}
@@ -5078,12 +5078,12 @@
 								"type": "reference",
 								"target": 55776,
 								"name": "TOutput",
-								"package": "@medusajs/workflows-sdk",
+								"package": "@vikrai/workflows-sdk",
 								"refersToTypeParameter": true
 							}
 						],
 						"name": "WorkflowDataProperties",
-						"package": "@medusajs/workflows-sdk"
+						"package": "@vikrai/workflows-sdk"
 					}
 				]
 			}
@@ -5099,7 +5099,7 @@
 					"fileName": "workflows-sdk/src/utils/composer/type.ts",
 					"line": 78,
 					"character": 12,
-					"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L78"
+					"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L78"
 				}
 			],
 			"typeParameters": [
@@ -5135,7 +5135,7 @@
 									"fileName": "workflows-sdk/src/utils/composer/type.ts",
 									"line": 79,
 									"character": 2,
-									"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L79"
+									"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L79"
 								}
 							],
 							"type": {
@@ -5154,7 +5154,7 @@
 									"fileName": "workflows-sdk/src/utils/composer/type.ts",
 									"line": 80,
 									"character": 2,
-									"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L80"
+									"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L80"
 								}
 							],
 							"type": {
@@ -5177,7 +5177,7 @@
 							"fileName": "workflows-sdk/src/utils/composer/type.ts",
 							"line": 78,
 							"character": 50,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L78"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L78"
 						}
 					]
 				}
@@ -5202,7 +5202,7 @@
 					"fileName": "workflows-sdk/src/utils/composer/type.ts",
 					"line": 88,
 					"character": 12,
-					"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L88"
+					"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L88"
 				}
 			],
 			"typeParameters": [
@@ -5235,7 +5235,7 @@
 							"type": "reference",
 							"target": 55789,
 							"name": "T",
-							"package": "@medusajs/workflows-sdk",
+							"package": "@vikrai/workflows-sdk",
 							"refersToTypeParameter": true
 						},
 						"extendsType": {
@@ -5257,7 +5257,7 @@
 											"qualifiedName": "Item"
 										},
 										"name": "Item",
-										"package": "@medusajs/workflows-sdk",
+										"package": "@vikrai/workflows-sdk",
 										"refersToTypeParameter": true
 									},
 									{
@@ -5271,12 +5271,12 @@
 													"qualifiedName": "Item"
 												},
 												"name": "Item",
-												"package": "@medusajs/workflows-sdk",
+												"package": "@vikrai/workflows-sdk",
 												"refersToTypeParameter": true
 											}
 										],
 										"name": "WorkflowData",
-										"package": "@medusajs/workflows-sdk"
+										"package": "@vikrai/workflows-sdk"
 									}
 								]
 							}
@@ -5287,7 +5287,7 @@
 								"type": "reference",
 								"target": 55789,
 								"name": "T",
-								"package": "@medusajs/workflows-sdk",
+								"package": "@vikrai/workflows-sdk",
 								"refersToTypeParameter": true
 							},
 							"extendsType": {
@@ -5304,7 +5304,7 @@
 										"type": "reference",
 										"target": 55789,
 										"name": "T",
-										"package": "@medusajs/workflows-sdk",
+										"package": "@vikrai/workflows-sdk",
 										"refersToTypeParameter": true
 									}
 								},
@@ -5320,14 +5320,14 @@
 													"qualifiedName": "Key"
 												},
 												"name": "Key",
-												"package": "@medusajs/workflows-sdk",
+												"package": "@vikrai/workflows-sdk",
 												"refersToTypeParameter": true
 											},
 											"objectType": {
 												"type": "reference",
 												"target": 55789,
 												"name": "T",
-												"package": "@medusajs/workflows-sdk",
+												"package": "@vikrai/workflows-sdk",
 												"refersToTypeParameter": true
 											}
 										},
@@ -5344,20 +5344,20 @@
 															"qualifiedName": "Key"
 														},
 														"name": "Key",
-														"package": "@medusajs/workflows-sdk",
+														"package": "@vikrai/workflows-sdk",
 														"refersToTypeParameter": true
 													},
 													"objectType": {
 														"type": "reference",
 														"target": 55789,
 														"name": "T",
-														"package": "@medusajs/workflows-sdk",
+														"package": "@vikrai/workflows-sdk",
 														"refersToTypeParameter": true
 													}
 												}
 											],
 											"name": "WorkflowData",
-											"package": "@medusajs/workflows-sdk"
+											"package": "@vikrai/workflows-sdk"
 										}
 									]
 								}
@@ -5369,7 +5369,7 @@
 										"type": "reference",
 										"target": 55789,
 										"name": "T",
-										"package": "@medusajs/workflows-sdk",
+										"package": "@vikrai/workflows-sdk",
 										"refersToTypeParameter": true
 									},
 									{
@@ -5380,12 +5380,12 @@
 												"type": "reference",
 												"target": 55789,
 												"name": "T",
-												"package": "@medusajs/workflows-sdk",
+												"package": "@vikrai/workflows-sdk",
 												"refersToTypeParameter": true
 											}
 										],
 										"name": "WorkflowDataProperties",
-										"package": "@medusajs/workflows-sdk"
+										"package": "@vikrai/workflows-sdk"
 									}
 								]
 							}
@@ -5395,7 +5395,7 @@
 						"type": "reference",
 						"target": 55789,
 						"name": "T",
-						"package": "@medusajs/workflows-sdk",
+						"package": "@vikrai/workflows-sdk",
 						"refersToTypeParameter": true
 					},
 					{
@@ -5406,12 +5406,12 @@
 								"type": "reference",
 								"target": 55789,
 								"name": "T",
-								"package": "@medusajs/workflows-sdk",
+								"package": "@vikrai/workflows-sdk",
 								"refersToTypeParameter": true
 							}
 						],
 						"name": "WorkflowDataProperties",
-						"package": "@medusajs/workflows-sdk"
+						"package": "@vikrai/workflows-sdk"
 					},
 					{
 						"type": "reflection",
@@ -5433,7 +5433,7 @@
 											"fileName": "workflows-sdk/src/utils/composer/type.ts",
 											"line": 97,
 											"character": 4,
-											"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L97"
+											"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L97"
 										}
 									],
 									"signatures": [
@@ -5448,7 +5448,7 @@
 													"fileName": "workflows-sdk/src/utils/composer/type.ts",
 													"line": 97,
 													"character": 4,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L97"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L97"
 												}
 											],
 											"parameters": [
@@ -5483,7 +5483,7 @@
 																					"fileName": "workflows-sdk/src/utils/composer/type.ts",
 																					"line": 98,
 																					"character": 16,
-																					"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L98"
+																					"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L98"
 																				}
 																			],
 																			"type": {
@@ -5505,7 +5505,7 @@
 																			"fileName": "workflows-sdk/src/utils/composer/type.ts",
 																			"line": 98,
 																			"character": 14,
-																			"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L98"
+																			"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L98"
 																		}
 																	]
 																}
@@ -5524,7 +5524,7 @@
 																			"qualifiedName": "TransactionStepsDefinition"
 																		},
 																		"name": "TransactionStepsDefinition",
-																		"package": "@medusajs/orchestration"
+																		"package": "@vikrai/orchestration"
 																	},
 																	{
 																		"type": "union",
@@ -5559,12 +5559,12 @@
 														"type": "reference",
 														"target": 55789,
 														"name": "T",
-														"package": "@medusajs/workflows-sdk",
+														"package": "@vikrai/workflows-sdk",
 														"refersToTypeParameter": true
 													}
 												],
 												"name": "WorkflowData",
-												"package": "@medusajs/workflows-sdk"
+												"package": "@vikrai/workflows-sdk"
 											}
 										}
 									]
@@ -5583,7 +5583,7 @@
 									"fileName": "workflows-sdk/src/utils/composer/type.ts",
 									"line": 96,
 									"character": 30,
-									"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L96"
+									"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L96"
 								}
 							]
 						}
@@ -5602,7 +5602,7 @@
 					"fileName": "workflows-sdk/src/utils/composer/type.ts",
 					"line": 105,
 					"character": 12,
-					"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L105"
+					"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L105"
 				}
 			],
 			"type": {
@@ -5625,7 +5625,7 @@
 									"fileName": "workflows-sdk/src/utils/composer/type.ts",
 									"line": 106,
 									"character": 2,
-									"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L106"
+									"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L106"
 								}
 							],
 							"type": {
@@ -5644,7 +5644,7 @@
 									"fileName": "workflows-sdk/src/utils/composer/type.ts",
 									"line": 107,
 									"character": 2,
-									"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L107"
+									"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L107"
 								}
 							],
 							"type": {
@@ -5667,7 +5667,7 @@
 													"fileName": "workflows-sdk/src/utils/composer/type.ts",
 													"line": 108,
 													"character": 4,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L108"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L108"
 												}
 											],
 											"type": {
@@ -5689,7 +5689,7 @@
 													"fileName": "workflows-sdk/src/utils/composer/type.ts",
 													"line": 109,
 													"character": 4,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L109"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L109"
 												}
 											],
 											"type": {
@@ -5715,7 +5715,7 @@
 											"fileName": "workflows-sdk/src/utils/composer/type.ts",
 											"line": 107,
 											"character": 10,
-											"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L107"
+											"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L107"
 										}
 									]
 								}
@@ -5732,7 +5732,7 @@
 									"fileName": "workflows-sdk/src/utils/composer/type.ts",
 									"line": 111,
 									"character": 2,
-									"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L111"
+									"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L111"
 								}
 							],
 							"type": {
@@ -5750,7 +5750,7 @@
 										"type": "reference",
 										"target": 55741,
 										"name": "HookHandler",
-										"package": "@medusajs/workflows-sdk"
+										"package": "@vikrai/workflows-sdk"
 									}
 								],
 								"name": "Record",
@@ -5768,7 +5768,7 @@
 									"fileName": "workflows-sdk/src/utils/composer/type.ts",
 									"line": 112,
 									"character": 2,
-									"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L112"
+									"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L112"
 								}
 							],
 							"type": {
@@ -5787,7 +5787,7 @@
 									"fileName": "workflows-sdk/src/utils/composer/type.ts",
 									"line": 113,
 									"character": 2,
-									"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L113"
+									"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L113"
 								}
 							],
 							"type": {
@@ -5797,7 +5797,7 @@
 									"qualifiedName": "OrchestratorBuilder"
 								},
 								"name": "OrchestratorBuilder",
-								"package": "@medusajs/orchestration"
+								"package": "@vikrai/orchestration"
 							}
 						},
 						{
@@ -5811,7 +5811,7 @@
 									"fileName": "workflows-sdk/src/utils/composer/type.ts",
 									"line": 114,
 									"character": 2,
-									"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L114"
+									"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L114"
 								}
 							],
 							"type": {
@@ -5830,7 +5830,7 @@
 									"fileName": "workflows-sdk/src/utils/composer/type.ts",
 									"line": 115,
 									"character": 2,
-									"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L115"
+									"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L115"
 								}
 							],
 							"type": {
@@ -5840,7 +5840,7 @@
 									"qualifiedName": "WorkflowHandler"
 								},
 								"name": "WorkflowHandler",
-								"package": "@medusajs/orchestration"
+								"package": "@vikrai/orchestration"
 							}
 						},
 						{
@@ -5854,7 +5854,7 @@
 									"fileName": "workflows-sdk/src/utils/composer/type.ts",
 									"line": 116,
 									"character": 2,
-									"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L116"
+									"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L116"
 								}
 							],
 							"type": {
@@ -5870,7 +5870,7 @@
 											"fileName": "workflows-sdk/src/utils/composer/type.ts",
 											"line": 116,
 											"character": 14,
-											"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L116"
+											"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L116"
 										}
 									],
 									"signatures": [
@@ -5904,7 +5904,7 @@
 														"type": "reference",
 														"target": 55728,
 														"name": "StepFunctionResult",
-														"package": "@medusajs/workflows-sdk"
+														"package": "@vikrai/workflows-sdk"
 													}
 												}
 											],
@@ -5916,12 +5916,12 @@
 														"type": "reference",
 														"target": 55806,
 														"name": "TOutput",
-														"package": "@medusajs/workflows-sdk",
+														"package": "@vikrai/workflows-sdk",
 														"refersToTypeParameter": true
 													}
 												],
 												"name": "WorkflowData",
-												"package": "@medusajs/workflows-sdk"
+												"package": "@vikrai/workflows-sdk"
 											}
 										}
 									]
@@ -5939,7 +5939,7 @@
 									"fileName": "workflows-sdk/src/utils/composer/type.ts",
 									"line": 119,
 									"character": 2,
-									"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L119"
+									"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L119"
 								}
 							],
 							"type": {
@@ -5955,7 +5955,7 @@
 											"fileName": "workflows-sdk/src/utils/composer/type.ts",
 											"line": 119,
 											"character": 14,
-											"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L119"
+											"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L119"
 										}
 									],
 									"signatures": [
@@ -5996,7 +5996,7 @@
 																	"fileName": "workflows-sdk/src/utils/composer/type.ts",
 																	"line": 119,
 																	"character": 33,
-																	"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L119"
+																	"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L119"
 																}
 															],
 															"signatures": [
@@ -6010,7 +6010,7 @@
 																		"type": "reference",
 																		"target": 55741,
 																		"name": "HookHandler",
-																		"package": "@medusajs/workflows-sdk"
+																		"package": "@vikrai/workflows-sdk"
 																	}
 																}
 															]
@@ -6038,7 +6038,7 @@
 									"fileName": "workflows-sdk/src/utils/composer/type.ts",
 									"line": 120,
 									"character": 2,
-									"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L120"
+									"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L120"
 								}
 							],
 							"type": {
@@ -6054,7 +6054,7 @@
 											"fileName": "workflows-sdk/src/utils/composer/type.ts",
 											"line": 120,
 											"character": 21,
-											"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L120"
+											"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L120"
 										}
 									],
 									"signatures": [
@@ -6080,7 +6080,7 @@
 																	"type": "reference",
 																	"target": 55782,
 																	"name": "WorkflowData",
-																	"package": "@medusajs/workflows-sdk"
+																	"package": "@vikrai/workflows-sdk"
 																},
 																{
 																	"type": "intrinsic",
@@ -6095,7 +6095,7 @@
 															"type": "reference",
 															"target": 55782,
 															"name": "WorkflowData",
-															"package": "@medusajs/workflows-sdk"
+															"package": "@vikrai/workflows-sdk"
 														}
 													}
 												}
@@ -6120,7 +6120,7 @@
 																	"fileName": "workflows-sdk/src/utils/composer/type.ts",
 																	"line": 123,
 																	"character": 8,
-																	"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L123"
+																	"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L123"
 																}
 															],
 															"signatures": [
@@ -6141,7 +6141,7 @@
 																				"type": "reference",
 																				"target": 55790,
 																				"name": "CreateWorkflowComposerContext",
-																				"package": "@medusajs/workflows-sdk"
+																				"package": "@vikrai/workflows-sdk"
 																			}
 																		}
 																	],
@@ -6149,7 +6149,7 @@
 																		"type": "reference",
 																		"target": 55821,
 																		"name": "TOutput",
-																		"package": "@medusajs/workflows-sdk",
+																		"package": "@vikrai/workflows-sdk",
 																		"refersToTypeParameter": true
 																	}
 																}
@@ -6162,7 +6162,7 @@
 												"type": "reference",
 												"target": 55821,
 												"name": "TOutput",
-												"package": "@medusajs/workflows-sdk",
+												"package": "@vikrai/workflows-sdk",
 												"refersToTypeParameter": true
 											}
 										}
@@ -6193,7 +6193,7 @@
 							"fileName": "workflows-sdk/src/utils/composer/type.ts",
 							"line": 105,
 							"character": 44,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L105"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L105"
 						}
 					]
 				}
@@ -6233,7 +6233,7 @@
 							"fileName": "workflows-sdk/src/utils/composer/type.ts",
 							"line": 134,
 							"character": 2,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L134"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L134"
 						}
 					],
 					"type": {
@@ -6260,7 +6260,7 @@
 							"fileName": "workflows-sdk/src/utils/composer/type.ts",
 							"line": 139,
 							"character": 2,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L139"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L139"
 						}
 					],
 					"type": {
@@ -6287,7 +6287,7 @@
 							"fileName": "workflows-sdk/src/utils/composer/type.ts",
 							"line": 144,
 							"character": 2,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L144"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L144"
 						}
 					],
 					"type": {
@@ -6316,7 +6316,7 @@
 							"fileName": "workflows-sdk/src/utils/composer/type.ts",
 							"line": 149,
 							"character": 2,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L149"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L149"
 						}
 					],
 					"type": {
@@ -6345,7 +6345,7 @@
 							"fileName": "workflows-sdk/src/utils/composer/type.ts",
 							"line": 154,
 							"character": 2,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L154"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L154"
 						}
 					],
 					"type": {
@@ -6372,7 +6372,7 @@
 							"fileName": "workflows-sdk/src/utils/composer/type.ts",
 							"line": 159,
 							"character": 2,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L159"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L159"
 						}
 					],
 					"type": {
@@ -6399,7 +6399,7 @@
 							"fileName": "workflows-sdk/src/utils/composer/type.ts",
 							"line": 164,
 							"character": 2,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L164"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L164"
 						}
 					],
 					"type": {
@@ -6435,17 +6435,17 @@
 							"fileName": "workflows-sdk/src/utils/composer/type.ts",
 							"line": 169,
 							"character": 2,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L169"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L169"
 						}
 					],
 					"type": {
 						"type": "reference",
 						"target": {
-							"sourceFileName": "../../../../packages/core/types/src/common/medusa-container.ts",
-							"qualifiedName": "MedusaContainer"
+							"sourceFileName": "../../../../packages/core/types/src/common/vikrai-container.ts",
+							"qualifiedName": "vikraiContainer"
 						},
-						"name": "MedusaContainer",
-						"package": "@medusajs/types"
+						"name": "vikraiContainer",
+						"package": "@vikrai/types"
 					}
 				},
 				{
@@ -6467,7 +6467,7 @@
 							"fileName": "workflows-sdk/src/utils/composer/type.ts",
 							"line": 173,
 							"character": 2,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L173"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L173"
 						}
 					],
 					"type": {
@@ -6477,7 +6477,7 @@
 							"qualifiedName": "TransactionMetadata"
 						},
 						"name": "TransactionMetadata",
-						"package": "@medusajs/orchestration"
+						"package": "@vikrai/orchestration"
 					}
 				},
 				{
@@ -6500,7 +6500,7 @@
 							"fileName": "workflows-sdk/src/utils/composer/type.ts",
 							"line": 177,
 							"character": 2,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L177"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L177"
 						}
 					],
 					"type": {
@@ -6510,7 +6510,7 @@
 							"qualifiedName": "Context"
 						},
 						"name": "Context",
-						"package": "@medusajs/types"
+						"package": "@vikrai/types"
 					}
 				},
 				{
@@ -6534,7 +6534,7 @@
 							"fileName": "workflows-sdk/src/utils/composer/type.ts",
 							"line": 181,
 							"character": 2,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L181"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L181"
 						}
 					],
 					"type": {
@@ -6563,7 +6563,7 @@
 							"fileName": "workflows-sdk/src/utils/composer/type.ts",
 							"line": 185,
 							"character": 2,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L185"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L185"
 						}
 					],
 					"type": {
@@ -6582,7 +6582,7 @@
 							"fileName": "workflows-sdk/src/utils/composer/type.ts",
 							"line": 193,
 							"character": 2,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L193"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L193"
 						}
 					],
 					"signatures": [
@@ -6605,7 +6605,7 @@
 									"fileName": "workflows-sdk/src/utils/composer/type.ts",
 									"line": 193,
 									"character": 2,
-									"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L193"
+									"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L193"
 								}
 							],
 							"parameters": [
@@ -6681,7 +6681,7 @@
 					"fileName": "workflows-sdk/src/utils/composer/type.ts",
 					"line": 130,
 					"character": 17,
-					"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L130"
+					"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L130"
 				}
 			]
 		},
@@ -6696,7 +6696,7 @@
 					"fileName": "workflows-sdk/src/utils/composer/type.ts",
 					"line": 196,
 					"character": 12,
-					"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L196"
+					"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L196"
 				}
 			],
 			"type": {
@@ -6706,7 +6706,7 @@
 						"type": "reference",
 						"target": 55822,
 						"name": "StepExecutionContext",
-						"package": "@medusajs/workflows-sdk"
+						"package": "@vikrai/workflows-sdk"
 					},
 					{
 						"type": "reference",
@@ -6715,7 +6715,7 @@
 							"qualifiedName": "TransactionContext"
 						},
 						"name": "OriginalWorkflowTransactionContext",
-						"package": "@medusajs/orchestration",
+						"package": "@vikrai/orchestration",
 						"qualifiedName": "TransactionContext"
 					},
 					{
@@ -6738,7 +6738,7 @@
 											"fileName": "workflows-sdk/src/utils/composer/type.ts",
 											"line": 198,
 											"character": 4,
-											"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L198"
+											"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L198"
 										}
 									],
 									"type": {
@@ -6754,7 +6754,7 @@
 													"fileName": "workflows-sdk/src/utils/composer/type.ts",
 													"line": 198,
 													"character": 12,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L198"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L198"
 												}
 											],
 											"indexSignatures": [
@@ -6769,7 +6769,7 @@
 															"fileName": "workflows-sdk/src/utils/composer/type.ts",
 															"line": 198,
 															"character": 14,
-															"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L198"
+															"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L198"
 														}
 													],
 													"parameters": [
@@ -6805,7 +6805,7 @@
 																			"fileName": "workflows-sdk/src/utils/composer/type.ts",
 																			"line": 198,
 																			"character": 31,
-																			"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L198"
+																			"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L198"
 																		}
 																	],
 																	"type": {
@@ -6827,7 +6827,7 @@
 																	"fileName": "workflows-sdk/src/utils/composer/type.ts",
 																	"line": 198,
 																	"character": 29,
-																	"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L198"
+																	"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L198"
 																}
 															]
 														}
@@ -6851,7 +6851,7 @@
 									"fileName": "workflows-sdk/src/utils/composer/type.ts",
 									"line": 197,
 									"character": 39,
-									"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L197"
+									"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L197"
 								}
 							]
 						}
@@ -6904,11 +6904,11 @@
 							},
 							{
 								"kind": "text",
-								"text": "\n\nTo specify the container of the workflow, you can pass it as an argument to the call of the exported workflow. This is necessary when executing the workflow\nwithin a Medusa resource such as an API Route or a Subscriber.\n\nFor example:\n\n"
+								"text": "\n\nTo specify the container of the workflow, you can pass it as an argument to the call of the exported workflow. This is necessary when executing the workflow\nwithin a vikrai resource such as an API Route or a Subscriber.\n\nFor example:\n\n"
 							},
 							{
 								"kind": "code",
-								"text": "```ts\nimport type {\n  MedusaRequest,\n  MedusaResponse\n} from \"@medusajs/medusa\";\nimport myWorkflow from \"../../../workflows/hello-world\";\n\nexport async function GET(\n  req: MedusaRequest,\n  res: MedusaResponse\n) {\n  const { result } = await myWorkflow(req.scope)\n    .run({\n      input: {\n        name: req.query.name as string\n      }\n    })\n\n  res.send(result)\n}\n```"
+								"text": "```ts\nimport type {\n  vikraiRequest,\n  vikraiResponse\n} from \"@vikrai/vikrai\";\nimport myWorkflow from \"../../../workflows/hello-world\";\n\nexport async function GET(\n  req: vikraiRequest,\n  res: vikraiResponse\n) {\n  const { result } = await myWorkflow(req.scope)\n    .run({\n      input: {\n        name: req.query.name as string\n      }\n    })\n\n  res.send(result)\n}\n```"
 							}
 						]
 					}
@@ -6919,7 +6919,7 @@
 					"fileName": "workflows-sdk/src/utils/composer/type.ts",
 					"line": 248,
 					"character": 12,
-					"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L248"
+					"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L248"
 				}
 			],
 			"typeParameters": [
@@ -6968,7 +6968,7 @@
 									"fileName": "workflows-sdk/src/utils/composer/type.ts",
 									"line": 248,
 									"character": 67,
-									"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L248"
+									"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L248"
 								}
 							],
 							"signatures": [
@@ -6983,7 +6983,7 @@
 											"fileName": "workflows-sdk/src/utils/composer/type.ts",
 											"line": 249,
 											"character": 2,
-											"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L249"
+											"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L249"
 										}
 									],
 									"typeParameters": [
@@ -7025,11 +7025,11 @@
 													{
 														"type": "reference",
 														"target": {
-															"sourceFileName": "../../../../packages/core/types/src/common/medusa-container.ts",
-															"qualifiedName": "MedusaContainer"
+															"sourceFileName": "../../../../packages/core/types/src/common/vikrai-container.ts",
+															"qualifiedName": "vikraiContainer"
 														},
-														"name": "MedusaContainer",
-														"package": "@medusajs/types"
+														"name": "vikraiContainer",
+														"package": "@vikrai/types"
 													},
 													{
 														"type": "array",
@@ -7062,7 +7062,7 @@
 																				"qualifiedName": "ModuleJoinerConfig"
 																			},
 																			"name": "ModuleJoinerConfig",
-																			"package": "@medusajs/types"
+																			"package": "@vikrai/types"
 																		}
 																	},
 																	{
@@ -7085,7 +7085,7 @@
 																				"qualifiedName": "ModuleDefinition"
 																			},
 																			"name": "ModuleDefinition",
-																			"package": "@medusajs/types"
+																			"package": "@vikrai/types"
 																		}
 																	}
 																],
@@ -7129,7 +7129,7 @@
 															"qualifiedName": "LocalWorkflow"
 														},
 														"name": "LocalWorkflow",
-														"package": "@medusajs/orchestration"
+														"package": "@vikrai/orchestration"
 													},
 													{
 														"type": "union",
@@ -7167,33 +7167,33 @@
 														"type": "reference",
 														"target": 55877,
 														"name": "TData",
-														"package": "@medusajs/workflows-sdk",
+														"package": "@vikrai/workflows-sdk",
 														"refersToTypeParameter": true
 													},
 													{
 														"type": "reference",
 														"target": 55878,
 														"name": "TResult",
-														"package": "@medusajs/workflows-sdk",
+														"package": "@vikrai/workflows-sdk",
 														"refersToTypeParameter": true
 													},
 													{
 														"type": "reference",
 														"target": 55850,
 														"name": "TDataOverride",
-														"package": "@medusajs/workflows-sdk",
+														"package": "@vikrai/workflows-sdk",
 														"refersToTypeParameter": true
 													},
 													{
 														"type": "reference",
 														"target": 55851,
 														"name": "TResultOverride",
-														"package": "@medusajs/workflows-sdk",
+														"package": "@vikrai/workflows-sdk",
 														"refersToTypeParameter": true
 													}
 												],
 												"name": "ExportedWorkflow",
-												"package": "@medusajs/workflows-sdk"
+												"package": "@vikrai/workflows-sdk"
 											}
 										]
 									}
@@ -7220,7 +7220,7 @@
 										"summary": [
 											{
 												"kind": "text",
-												"text": "This method executes the workflow as a step. Useful when running a workflow within another.\n\nLearn more in [this documentation](https://docs.medusajs.com/learn/fundamentals/workflows/execute-another-workflow)."
+												"text": "This method executes the workflow as a step. Useful when running a workflow within another.\n\nLearn more in [this documentation](https://docs.vikrai.com/learn/fundamentals/workflows/execute-another-workflow)."
 											}
 										]
 									},
@@ -7229,7 +7229,7 @@
 											"fileName": "workflows-sdk/src/utils/composer/type.ts",
 											"line": 265,
 											"character": 2,
-											"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L265"
+											"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L265"
 										}
 									],
 									"type": {
@@ -7245,7 +7245,7 @@
 													"fileName": "workflows-sdk/src/utils/composer/type.ts",
 													"line": 265,
 													"character": 13,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L265"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L265"
 												}
 											],
 											"signatures": [
@@ -7304,7 +7304,7 @@
 																					"fileName": "workflows-sdk/src/utils/composer/type.ts",
 																					"line": 271,
 																					"character": 4,
-																					"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L271"
+																					"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L271"
 																				}
 																			],
 																			"type": {
@@ -7314,7 +7314,7 @@
 																						"type": "reference",
 																						"target": 55877,
 																						"name": "TData",
-																						"package": "@medusajs/workflows-sdk",
+																						"package": "@vikrai/workflows-sdk",
 																						"refersToTypeParameter": true
 																					},
 																					{
@@ -7325,12 +7325,12 @@
 																								"type": "reference",
 																								"target": 55877,
 																								"name": "TData",
-																								"package": "@medusajs/workflows-sdk",
+																								"package": "@vikrai/workflows-sdk",
 																								"refersToTypeParameter": true
 																							}
 																						],
 																						"name": "WorkflowData",
-																						"package": "@medusajs/workflows-sdk"
+																						"package": "@vikrai/workflows-sdk"
 																					}
 																				]
 																			}
@@ -7349,7 +7349,7 @@
 																			"fileName": "workflows-sdk/src/utils/composer/type.ts",
 																			"line": 267,
 																			"character": 5,
-																			"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L267"
+																			"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L267"
 																		}
 																	]
 																}
@@ -7371,19 +7371,19 @@
 																		"type": "reference",
 																		"target": 55877,
 																		"name": "TData",
-																		"package": "@medusajs/workflows-sdk",
+																		"package": "@vikrai/workflows-sdk",
 																		"refersToTypeParameter": true
 																	},
 																	{
 																		"type": "reference",
 																		"target": 55878,
 																		"name": "TResult",
-																		"package": "@medusajs/workflows-sdk",
+																		"package": "@vikrai/workflows-sdk",
 																		"refersToTypeParameter": true
 																	}
 																],
 																"name": "StepFunction",
-																"package": "@medusajs/workflows-sdk"
+																"package": "@vikrai/workflows-sdk"
 															}
 														],
 														"name": "ReturnType",
@@ -7413,7 +7413,7 @@
 											"fileName": "workflows-sdk/src/utils/composer/type.ts",
 											"line": 279,
 											"character": 2,
-											"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L279"
+											"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L279"
 										}
 									],
 									"type": {
@@ -7429,7 +7429,7 @@
 													"fileName": "workflows-sdk/src/utils/composer/type.ts",
 													"line": 279,
 													"character": 7,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L279"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L279"
 												}
 											],
 											"signatures": [
@@ -7518,33 +7518,33 @@
 																					"type": "reference",
 																					"target": 55877,
 																					"name": "TData",
-																					"package": "@medusajs/workflows-sdk",
+																					"package": "@vikrai/workflows-sdk",
 																					"refersToTypeParameter": true
 																				},
 																				{
 																					"type": "reference",
 																					"target": 55878,
 																					"name": "TResult",
-																					"package": "@medusajs/workflows-sdk",
+																					"package": "@vikrai/workflows-sdk",
 																					"refersToTypeParameter": true
 																				},
 																				{
 																					"type": "reference",
 																					"target": 55867,
 																					"name": "TDataOverride",
-																					"package": "@medusajs/workflows-sdk",
+																					"package": "@vikrai/workflows-sdk",
 																					"refersToTypeParameter": true
 																				},
 																				{
 																					"type": "reference",
 																					"target": 55868,
 																					"name": "TResultOverride",
-																					"package": "@medusajs/workflows-sdk",
+																					"package": "@vikrai/workflows-sdk",
 																					"refersToTypeParameter": true
 																				}
 																			],
 																			"name": "ExportedWorkflow",
-																			"package": "@medusajs/workflows-sdk"
+																			"package": "@vikrai/workflows-sdk"
 																		}
 																	}
 																],
@@ -7577,33 +7577,33 @@
 																			"type": "reference",
 																			"target": 55877,
 																			"name": "TData",
-																			"package": "@medusajs/workflows-sdk",
+																			"package": "@vikrai/workflows-sdk",
 																			"refersToTypeParameter": true
 																		},
 																		{
 																			"type": "reference",
 																			"target": 55878,
 																			"name": "TResult",
-																			"package": "@medusajs/workflows-sdk",
+																			"package": "@vikrai/workflows-sdk",
 																			"refersToTypeParameter": true
 																		},
 																		{
 																			"type": "reference",
 																			"target": 55867,
 																			"name": "TDataOverride",
-																			"package": "@medusajs/workflows-sdk",
+																			"package": "@vikrai/workflows-sdk",
 																			"refersToTypeParameter": true
 																		},
 																		{
 																			"type": "reference",
 																			"target": 55868,
 																			"name": "TResultOverride",
-																			"package": "@medusajs/workflows-sdk",
+																			"package": "@vikrai/workflows-sdk",
 																			"refersToTypeParameter": true
 																		}
 																	],
 																	"name": "ExportedWorkflow",
-																	"package": "@medusajs/workflows-sdk"
+																	"package": "@vikrai/workflows-sdk"
 																}
 															}
 														],
@@ -7634,7 +7634,7 @@
 											"fileName": "workflows-sdk/src/utils/composer/type.ts",
 											"line": 289,
 											"character": 2,
-											"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L289"
+											"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L289"
 										}
 									],
 									"type": {
@@ -7650,7 +7650,7 @@
 													"fileName": "workflows-sdk/src/utils/composer/type.ts",
 													"line": 289,
 													"character": 11,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L289"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L289"
 												}
 											],
 											"signatures": [
@@ -7688,7 +7688,7 @@
 											"fileName": "workflows-sdk/src/utils/composer/type.ts",
 											"line": 293,
 											"character": 2,
-											"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L293"
+											"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L293"
 										}
 									],
 									"type": {
@@ -7704,7 +7704,7 @@
 													"fileName": "workflows-sdk/src/utils/composer/type.ts",
 													"line": 293,
 													"character": 10,
-													"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L293"
+													"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L293"
 												}
 											],
 											"signatures": [
@@ -7728,7 +7728,7 @@
 																	"qualifiedName": "TransactionModelOptions"
 																},
 																"name": "TransactionModelOptions",
-																"package": "@medusajs/orchestration"
+																"package": "@vikrai/orchestration"
 															}
 														}
 													],
@@ -7751,7 +7751,7 @@
 										"summary": [
 											{
 												"kind": "text",
-												"text": "The workflow's exposed hooks, used to register a handler to consume the hook.\n\nLearn more in [this documentation](https://docs.medusajs.com/learn/fundamentals/workflows/workflow-hooks#how-to-consume-a-hook)."
+												"text": "The workflow's exposed hooks, used to register a handler to consume the hook.\n\nLearn more in [this documentation](https://docs.vikrai.com/learn/fundamentals/workflows/workflow-hooks#how-to-consume-a-hook)."
 											}
 										]
 									},
@@ -7760,7 +7760,7 @@
 											"fileName": "workflows-sdk/src/utils/composer/type.ts",
 											"line": 299,
 											"character": 2,
-											"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L299"
+											"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L299"
 										}
 									],
 									"type": {
@@ -7774,12 +7774,12 @@
 												"type": "reference",
 												"target": 55879,
 												"name": "THooks",
-												"package": "@medusajs/workflows-sdk",
+												"package": "@vikrai/workflows-sdk",
 												"refersToTypeParameter": true
 											}
 										],
 										"name": "ConvertHooksToFunctions",
-										"package": "@medusajs/workflows-sdk"
+										"package": "@vikrai/workflows-sdk"
 									}
 								}
 							],
@@ -7800,7 +7800,7 @@
 									"fileName": "workflows-sdk/src/utils/composer/type.ts",
 									"line": 256,
 									"character": 4,
-									"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L256"
+									"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L256"
 								}
 							]
 						}
@@ -7838,7 +7838,7 @@
 					"fileName": "workflows-sdk/src/utils/composer/type.ts",
 					"line": 308,
 					"character": 12,
-					"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L308"
+					"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/workflows-sdk/src/utils/composer/type.ts#L308"
 				}
 			],
 			"typeParameters": [
@@ -7866,7 +7866,7 @@
 							}
 						],
 						"name": "ReturnWorkflow",
-						"package": "@medusajs/workflows-sdk"
+						"package": "@vikrai/workflows-sdk"
 					}
 				}
 			],
@@ -7876,7 +7876,7 @@
 					"type": "reference",
 					"target": 55881,
 					"name": "T",
-					"package": "@medusajs/workflows-sdk",
+					"package": "@vikrai/workflows-sdk",
 					"refersToTypeParameter": true
 				},
 				"extendsType": {
@@ -7897,7 +7897,7 @@
 						}
 					],
 					"name": "ReturnWorkflow",
-					"package": "@medusajs/workflows-sdk"
+					"package": "@vikrai/workflows-sdk"
 				},
 				"trueType": {
 					"type": "reference",
@@ -7906,7 +7906,7 @@
 						"qualifiedName": "TData"
 					},
 					"name": "TData",
-					"package": "@medusajs/workflows-sdk",
+					"package": "@vikrai/workflows-sdk",
 					"refersToTypeParameter": true
 				},
 				"falseType": {
@@ -7962,7 +7962,7 @@
 			]
 		}
 	],
-	"packageName": "@medusajs/workflows-sdk",
+	"packageName": "@vikrai/workflows-sdk",
 	"symbolIdMap": {
 		"55539": {
 			"sourceFileName": "../../../../packages/core/workflows-sdk/src/utils/composer/index.ts",
@@ -9030,3 +9030,4 @@
 		}
 	}
 }
+

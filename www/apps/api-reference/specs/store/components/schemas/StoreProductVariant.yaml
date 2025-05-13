@@ -95,11 +95,11 @@ properties:
     type: boolean
     title: manage_inventory
     description: >-
-      Whether Medusa manages the variant's inventory. If disabled, the variant
+      Whether vikrai manages the variant's inventory. If disabled, the variant
       is always considered in stock.
     externalDocs:
       url: >-
-        https://docs.medusajs.com/v2/resources/storefront-development/products/inventory
+        https://docs.vikrai.com/v2/resources/storefront-development/products/inventory
       description: 'Storefront guide: How to retrieve a product variant''s inventory details.'
   inventory_quantity:
     type: number
@@ -109,7 +109,7 @@ properties:
       pass `+variants.inventory_quantity` in the `fields` query parameter.
     externalDocs:
       url: >-
-        https://docs.medusajs.com/v2/resources/storefront-development/products/inventory
+        https://docs.vikrai.com/v2/resources/storefront-development/products/inventory
       description: 'Storefront guide: How to retrieve a product variant''s inventory details.'
   variant_rank:
     type: number
@@ -138,3 +138,4 @@ required:
   - upc
   - allow_backorder
   - manage_inventory
+

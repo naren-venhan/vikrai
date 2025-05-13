@@ -5,9 +5,9 @@ import {
   ItemTaxLineDTO,
   OrderDTO,
   ShippingTaxLineDTO,
-} from "@medusajs/framework/types"
-import { Modules, promiseAll } from "@medusajs/framework/utils"
-import { StepResponse, createStep } from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/types"
+import { Modules, promiseAll } from "@vikrai/framework/utils"
+import { StepResponse, createStep } from "@vikrai/framework/workflows-sdk"
 
 /**
  * The details of setting tax lines for an order's items and shipping methods.
@@ -33,8 +33,8 @@ export const setOrderTaxLinesForItemsStepId = "set-order-tax-lines-for-items"
  *
  * :::note
  *
- * You can retrieve an order's details using [Query](https://docs.medusajs.com/learn/fundamentals/module-links/query),
- * or [useQueryGraphStep](https://docs.medusajs.com/resources/references/medusa-workflows/steps/useQueryGraphStep).
+ * You can retrieve an order's details using [Query](https://docs.vikrai.com/learn/fundamentals/module-links/query),
+ * or [useQueryGraphStep](https://docs.vikrai.com/resources/references/vikrai-workflows/steps/useQueryGraphStep).
  *
  * :::
  *
@@ -160,3 +160,4 @@ function normalizeShippingTaxLinesForOrder(
     shipping_method_id: taxLine.shipping_line_id,
   }))
 }
+

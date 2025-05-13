@@ -1,4 +1,4 @@
-import { ConfigModule } from "@medusajs/types"
+import { ConfigModule } from "@vikrai/types"
 
 export const customersGlobalMiddlewareMock = jest.fn()
 export const customersCreateMiddlewareMock = jest.fn()
@@ -19,3 +19,4 @@ export const config = {
   featureFlags: {},
   plugins: [],
 } satisfies Partial<ConfigModule>
+

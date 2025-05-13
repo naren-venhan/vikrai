@@ -1,190 +1,190 @@
 export const cart = [
   {
     "title": "Extend Cart",
-    "path": "https://docs.medusajs.com/resources/commerce-modules/cart/extend"
+    "path": "https://docs.vikrai.com/resources/commerce-modules/cart/extend"
   },
   {
-    "title": "Implement Custom Line Item Pricing in Medusa",
-    "path": "https://docs.medusajs.com/resources/examples/guides/custom-item-price"
+    "title": "Implement Custom Line Item Pricing in vikrai",
+    "path": "https://docs.vikrai.com/resources/examples/guides/custom-item-price"
   },
   {
     "title": "Implement Quote Management",
-    "path": "https://docs.medusajs.com/resources/examples/guides/quote-management"
+    "path": "https://docs.vikrai.com/resources/examples/guides/quote-management"
   },
   {
     "title": "Send Abandoned Cart Notification",
-    "path": "https://docs.medusajs.com/resources/how-to-tutorials/tutorials/abandoned-cart"
+    "path": "https://docs.vikrai.com/resources/how-to-tutorials/tutorials/abandoned-cart"
   },
   {
     "title": "Implement Loyalty Points",
-    "path": "https://docs.medusajs.com/resources/how-to-tutorials/tutorials/loyalty-points"
+    "path": "https://docs.vikrai.com/resources/how-to-tutorials/tutorials/loyalty-points"
   },
   {
     "title": "Implement Bundled Products",
-    "path": "https://docs.medusajs.com/resources/recipes/bundled-products/examples/standard"
+    "path": "https://docs.vikrai.com/resources/recipes/bundled-products/examples/standard"
   },
   {
     "title": "Create Cart Context in Storefront",
-    "path": "https://docs.medusajs.com/resources/storefront-development/cart/context"
+    "path": "https://docs.vikrai.com/resources/storefront-development/cart/context"
   },
   {
     "title": "Create Cart in Storefront",
-    "path": "https://docs.medusajs.com/resources/storefront-development/cart/create"
+    "path": "https://docs.vikrai.com/resources/storefront-development/cart/create"
   },
   {
     "title": "Manage Cart's Items in Storefront",
-    "path": "https://docs.medusajs.com/resources/storefront-development/cart/manage-items"
+    "path": "https://docs.vikrai.com/resources/storefront-development/cart/manage-items"
   },
   {
     "title": "Retrieve Cart in Storefront",
-    "path": "https://docs.medusajs.com/resources/storefront-development/cart/retrieve"
+    "path": "https://docs.vikrai.com/resources/storefront-development/cart/retrieve"
   },
   {
     "title": "Show Cart Totals",
-    "path": "https://docs.medusajs.com/resources/storefront-development/cart/totals"
+    "path": "https://docs.vikrai.com/resources/storefront-development/cart/totals"
   },
   {
     "title": "Update Cart in Storefront",
-    "path": "https://docs.medusajs.com/resources/storefront-development/cart/update"
+    "path": "https://docs.vikrai.com/resources/storefront-development/cart/update"
   },
   {
     "title": "Checkout Step 2: Set Address",
-    "path": "https://docs.medusajs.com/resources/storefront-development/checkout/address"
+    "path": "https://docs.vikrai.com/resources/storefront-development/checkout/address"
   },
   {
     "title": "Checkout Step 5: Complete Cart",
-    "path": "https://docs.medusajs.com/resources/storefront-development/checkout/complete-cart"
+    "path": "https://docs.vikrai.com/resources/storefront-development/checkout/complete-cart"
   },
   {
     "title": "Checkout Step 1: Enter Email",
-    "path": "https://docs.medusajs.com/resources/storefront-development/checkout/email"
+    "path": "https://docs.vikrai.com/resources/storefront-development/checkout/email"
   },
   {
     "title": "Checkout Step 4: Choose Payment Provider",
-    "path": "https://docs.medusajs.com/resources/storefront-development/checkout/payment"
+    "path": "https://docs.vikrai.com/resources/storefront-development/checkout/payment"
   },
   {
     "title": "Payment with Stripe in React Storefront",
-    "path": "https://docs.medusajs.com/resources/storefront-development/checkout/payment/stripe"
+    "path": "https://docs.vikrai.com/resources/storefront-development/checkout/payment/stripe"
   },
   {
     "title": "Checkout Step 3: Choose Shipping Method",
-    "path": "https://docs.medusajs.com/resources/storefront-development/checkout/shipping"
+    "path": "https://docs.vikrai.com/resources/storefront-development/checkout/shipping"
   },
   {
-    "title": "Implement Express Checkout with Medusa",
-    "path": "https://docs.medusajs.com/resources/storefront-development/guides/express-checkout"
+    "title": "Implement Express Checkout with vikrai",
+    "path": "https://docs.vikrai.com/resources/storefront-development/guides/express-checkout"
   },
   {
     "title": "addShippingMethodToCartStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/addShippingMethodToCartStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/addShippingMethodToCartStep"
   },
   {
     "title": "createCartsStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/createCartsStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/createCartsStep"
   },
   {
     "title": "createLineItemAdjustmentsStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/createLineItemAdjustmentsStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/createLineItemAdjustmentsStep"
   },
   {
     "title": "createLineItemsStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/createLineItemsStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/createLineItemsStep"
   },
   {
     "title": "createShippingMethodAdjustmentsStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/createShippingMethodAdjustmentsStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/createShippingMethodAdjustmentsStep"
   },
   {
     "title": "getLineItemActionsStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/getLineItemActionsStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/getLineItemActionsStep"
   },
   {
     "title": "removeLineItemAdjustmentsStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/removeLineItemAdjustmentsStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/removeLineItemAdjustmentsStep"
   },
   {
     "title": "removeShippingMethodAdjustmentsStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/removeShippingMethodAdjustmentsStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/removeShippingMethodAdjustmentsStep"
   },
   {
     "title": "removeShippingMethodFromCartStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/removeShippingMethodFromCartStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/removeShippingMethodFromCartStep"
   },
   {
     "title": "setTaxLinesForItemsStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/setTaxLinesForItemsStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/setTaxLinesForItemsStep"
   },
   {
     "title": "updateCartsStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/updateCartsStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/updateCartsStep"
   },
   {
     "title": "updateLineItemsStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/updateLineItemsStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/updateLineItemsStep"
   },
   {
     "title": "updateShippingMethodsStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/updateShippingMethodsStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/updateShippingMethodsStep"
   },
   {
     "title": "addShippingMethodToCartWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/addShippingMethodToCartWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/addShippingMethodToCartWorkflow"
   },
   {
     "title": "addToCartWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/addToCartWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/addToCartWorkflow"
   },
   {
     "title": "completeCartWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/completeCartWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/completeCartWorkflow"
   },
   {
     "title": "createCartWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createCartWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/createCartWorkflow"
   },
   {
     "title": "refreshCartItemsWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/refreshCartItemsWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/refreshCartItemsWorkflow"
   },
   {
     "title": "refreshCartShippingMethodsWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/refreshCartShippingMethodsWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/refreshCartShippingMethodsWorkflow"
   },
   {
     "title": "transferCartCustomerWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/transferCartCustomerWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/transferCartCustomerWorkflow"
   },
   {
     "title": "updateCartPromotionsWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateCartPromotionsWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/updateCartPromotionsWorkflow"
   },
   {
     "title": "updateCartWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateCartWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/updateCartWorkflow"
   },
   {
     "title": "updateLineItemInCartWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateLineItemInCartWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/updateLineItemInCartWorkflow"
   },
   {
     "title": "updateTaxLinesWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateTaxLinesWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/updateTaxLinesWorkflow"
   },
   {
     "title": "deleteLineItemsStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/deleteLineItemsStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/deleteLineItemsStep"
   },
   {
     "title": "updateLineItemsStepWithSelector",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/updateLineItemsStepWithSelector"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/updateLineItemsStepWithSelector"
   },
   {
     "title": "deleteLineItemsWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/deleteLineItemsWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/deleteLineItemsWorkflow"
   },
   {
     "title": "cart",
-    "path": "https://docs.medusajs.com/resources/references/js-sdk/store/cart"
+    "path": "https://docs.vikrai.com/resources/references/js-sdk/store/cart"
   }
 ]

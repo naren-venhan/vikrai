@@ -1,4 +1,4 @@
-import { HttpTypes } from "@medusajs/types"
+import { HttpTypes } from "@vikrai/types"
 import { UIMatch } from "react-router-dom"
 
 import { usePriceList } from "../../../hooks/api"
@@ -21,3 +21,4 @@ export const PriceListDetailBreadcrumb = (
 
   return <span>{price_list.title}</span>
 }
+

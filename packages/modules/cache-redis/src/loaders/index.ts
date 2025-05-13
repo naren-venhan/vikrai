@@ -1,4 +1,4 @@
-import { LoaderOptions } from "@medusajs/framework/types"
+import { LoaderOptions } from "@vikrai/framework/types"
 import { asValue } from "awilix"
 import Redis from "ioredis"
 import { RedisCacheModuleOptions } from "../types"
@@ -35,3 +35,4 @@ export default async ({
     cacheRedisConnection: asValue(connection),
   })
 }
+

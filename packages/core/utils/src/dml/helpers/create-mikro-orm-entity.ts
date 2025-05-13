@@ -5,7 +5,7 @@ import type {
   IDmlEntity,
   Infer,
   PropertyType,
-} from "@medusajs/types"
+} from "@vikrai/types"
 import { Entity, Filter } from "@mikro-orm/core"
 
 import {
@@ -174,3 +174,4 @@ export const toMikroOrmEntities = function <T extends any[]>(entities: T) {
     [K in keyof T]: T[K] extends IDmlEntity<any, any> ? Infer<T[K]> : T[K]
   }
 }
+

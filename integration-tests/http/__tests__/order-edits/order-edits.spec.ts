@@ -1,21 +1,21 @@
-import { medusaIntegrationTestRunner } from "@medusajs/test-utils"
+import { vikraiIntegrationTestRunner } from "@vikrai/test-utils"
 import {
   ContainerRegistrationKeys,
   Modules,
   OrderChangeStatus,
   RuleOperator,
-} from "@medusajs/utils"
+} from "@vikrai/utils"
 import {
   adminHeaders,
   createAdminUser,
   generatePublishableKey,
   generateStoreHeaders,
 } from "../../../helpers/create-admin-user"
-import { medusaTshirtProduct } from "../../__fixtures__/product"
+import { vikraiTshirtProduct } from "../../__fixtures__/product"
 
 jest.setTimeout(30000)
 
-medusaIntegrationTestRunner({
+vikraiIntegrationTestRunner({
   testSuite: ({ dbConnection, getContainer, api }) => {
     let order
     let taxLine
@@ -616,7 +616,7 @@ medusaIntegrationTestRunner({
         product = (
           await api.post(
             "/admin/products",
-            { ...medusaTshirtProduct },
+            { ...vikraiTshirtProduct },
             adminHeaders
           )
         ).data.product
@@ -713,3 +713,4 @@ medusaIntegrationTestRunner({
     })
   },
 })
+

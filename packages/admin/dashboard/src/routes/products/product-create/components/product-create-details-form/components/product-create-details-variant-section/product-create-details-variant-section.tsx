@@ -1,4 +1,4 @@
-import { XMarkMini } from "@medusajs/icons"
+import { XMarkMini } from "@vikrai/icons"
 import {
   Alert,
   Button,
@@ -11,7 +11,7 @@ import {
   Label,
   Text,
   clx,
-} from "@medusajs/ui"
+} from "@vikrai/ui"
 import {
   Controller,
   FieldArrayWithId,
@@ -533,3 +533,4 @@ export const ProductCreateVariantsSection = ({
     </div>
   )
 }
+

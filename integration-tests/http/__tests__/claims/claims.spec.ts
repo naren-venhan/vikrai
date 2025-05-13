@@ -1,11 +1,11 @@
-import { medusaIntegrationTestRunner } from "@medusajs/test-utils"
+import { vikraiIntegrationTestRunner } from "@vikrai/test-utils"
 import {
   ClaimReason,
   ClaimType,
   ContainerRegistrationKeys,
   Modules,
   RuleOperator,
-} from "@medusajs/utils"
+} from "@vikrai/utils"
 import {
   adminHeaders,
   createAdminUser,
@@ -14,7 +14,7 @@ import { setupTaxStructure } from "../../../modules/__tests__/fixtures"
 
 jest.setTimeout(30000)
 
-medusaIntegrationTestRunner({
+vikraiIntegrationTestRunner({
   testSuite: ({ dbConnection, getContainer, api }) => {
     let baseClaim
     let order, order2
@@ -1440,3 +1440,4 @@ medusaIntegrationTestRunner({
     })
   },
 })
+

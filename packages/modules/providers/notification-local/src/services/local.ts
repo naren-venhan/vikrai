@@ -2,11 +2,11 @@ import {
   LocalNotificationServiceOptions,
   Logger,
   NotificationTypes,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import {
   AbstractNotificationProviderService,
-  MedusaError,
-} from "@medusajs/framework/utils"
+  vikraiError,
+} from "@vikrai/framework/utils"
 
 type InjectedDependencies = {
   logger: Logger
@@ -32,8 +32,8 @@ export class LocalNotificationService extends AbstractNotificationProviderServic
     notification: NotificationTypes.ProviderSendNotificationDTO
   ): Promise<NotificationTypes.ProviderSendNotificationResultsDTO> {
     if (!notification) {
-      throw new MedusaError(
-        MedusaError.Types.INVALID_DATA,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_DATA,
         `No notification information provided`
       )
     }
@@ -47,3 +47,4 @@ export class LocalNotificationService extends AbstractNotificationProviderServic
     return {}
   }
 }
+

@@ -1,6 +1,6 @@
-import { INotificationModuleService } from "@medusajs/framework/types"
-import { Modules } from "@medusajs/framework/utils"
-import { StepResponse, createStep } from "@medusajs/framework/workflows-sdk"
+import { INotificationModuleService } from "@vikrai/framework/types"
+import { Modules } from "@vikrai/framework/utils"
+import { StepResponse, createStep } from "@vikrai/framework/workflows-sdk"
 
 /**
  * The notifications to send.
@@ -71,3 +71,4 @@ export const sendNotificationsStep = createStep(
   }
   // Most of the notifications are irreversible, so we can't compensate notifications reliably
 )
+

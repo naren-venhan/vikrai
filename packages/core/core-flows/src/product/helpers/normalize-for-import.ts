@@ -1,6 +1,6 @@
-import { ProductTypes } from "@medusajs/framework/types"
-import { HttpTypes, RegionTypes } from "@medusajs/framework/types"
-import { MedusaError, lowerCaseFirst } from "@medusajs/framework/utils"
+import { ProductTypes } from "@vikrai/framework/types"
+import { HttpTypes, RegionTypes } from "@vikrai/framework/types"
+import { vikraiError, lowerCaseFirst } from "@vikrai/framework/utils"
 
 // We want to convert the csv data format to a standard DTO format.
 export const normalizeForImport = (
@@ -118,8 +118,8 @@ const normalizeProductForImport = (
     if (normalizedKey.startsWith("product_tag_")) {
       const tag = tagsMap.get(normalizedValue)
       if (!tag) {
-        throw new MedusaError(
-          MedusaError.Types.INVALID_DATA,
+        throw new vikraiError(
+          vikraiError.Types.INVALID_DATA,
           `Tag with value ${normalizedValue} not found`
         )
       }
@@ -189,8 +189,8 @@ const normalizeVariantForImport = (
         const regionName = priceKey.split("_").slice(0, -1).join(" ")
         const region = regionsMap.get(regionName)
         if (!region) {
-          throw new MedusaError(
-            MedusaError.Types.INVALID_DATA,
+          throw new vikraiError(
+            vikraiError.Types.INVALID_DATA,
             `Region with name ${regionName} not found`
           )
         }
@@ -231,15 +231,15 @@ const normalizeVariantForImport = (
   response["options"] = Array.from(options.values()).reduce(
     (agg: Record<string, string>, option) => {
       if (!option.name) {
-        throw new MedusaError(
-          MedusaError.Types.INVALID_DATA,
+        throw new vikraiError(
+          vikraiError.Types.INVALID_DATA,
           `Missing option name for product with handle ${rawProduct["Product Handle"]}`
         )
       }
 
       if (!option.value) {
-        throw new MedusaError(
-          MedusaError.Types.INVALID_DATA,
+        throw new vikraiError(
+          vikraiError.Types.INVALID_DATA,
           `Missing option value for product with handle ${rawProduct["Product Handle"]} and option ${option.name}`
         )
       }
@@ -277,3 +277,4 @@ const getNormalizedValue = (key: string, value: any): any => {
 const snakecaseKey = (key: string): string => {
   return key.split(" ").map(lowerCaseFirst).join("_")
 }
+

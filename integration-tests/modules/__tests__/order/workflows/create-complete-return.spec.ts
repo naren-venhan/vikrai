@@ -1,9 +1,9 @@
 import {
   createAndCompleteReturnOrderWorkflow,
   createShippingOptionsWorkflow,
-} from "@medusajs/core-flows"
-import { RemoteLink } from "@medusajs/modules-sdk"
-import { medusaIntegrationTestRunner } from "@medusajs/test-utils"
+} from "@vikrai/core-flows"
+import { RemoteLink } from "@vikrai/modules-sdk"
+import { vikraiIntegrationTestRunner } from "@vikrai/test-utils"
 import {
   FulfillmentSetDTO,
   FulfillmentWorkflow,
@@ -15,17 +15,17 @@ import {
   RegionDTO,
   ShippingOptionDTO,
   StockLocationDTO,
-} from "@medusajs/types"
+} from "@vikrai/types"
 import {
   ContainerRegistrationKeys,
   Modules,
   RuleOperator,
   remoteQueryObjectFromString,
-} from "@medusajs/utils"
+} from "@vikrai/utils"
 
 jest.setTimeout(500000)
 
-const env = { MEDUSA_FF_MEDUSA_V2: true }
+const env = { vikrai_FF_vikrai_V2: true }
 const providerId = "manual_test-provider"
 
 async function prepareDataFixtures({ container }) {
@@ -354,7 +354,7 @@ async function createOrderFixture({ container, product }) {
   return order
 }
 
-medusaIntegrationTestRunner({
+vikraiIntegrationTestRunner({
   env,
   testSuite: ({ getContainer }) => {
     let container
@@ -571,3 +571,4 @@ medusaIntegrationTestRunner({
     })
   },
 })
+

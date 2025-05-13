@@ -23,7 +23,7 @@ properties:
     description: Whether the calculated price is tax inclusive.
     externalDocs:
       url: >-
-        https://docs.medusajs.com/resources/commerce-modules/pricing/tax-inclusive-pricing
+        https://docs.vikrai.com/resources/commerce-modules/pricing/tax-inclusive-pricing
   calculated_amount:
     type: number
     title: calculated_amount
@@ -48,7 +48,7 @@ properties:
     description: Whether the original price is tax inclusive.
     externalDocs:
       url: >-
-        https://docs.medusajs.com/resources/commerce-modules/pricing/tax-inclusive-pricing
+        https://docs.vikrai.com/resources/commerce-modules/pricing/tax-inclusive-pricing
   original_amount:
     type: number
     title: original_amount
@@ -130,3 +130,4 @@ properties:
     type: number
     title: original_amount_without_tax
     description: The original amount without taxes.
+

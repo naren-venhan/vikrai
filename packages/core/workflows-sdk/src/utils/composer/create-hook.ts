@@ -1,5 +1,5 @@
 import { type ZodSchema } from "zod"
-import { OrchestrationUtils } from "@medusajs/utils"
+import { OrchestrationUtils } from "@vikrai/utils"
 import type { CreateWorkflowComposerContext } from "./type"
 import { CompensateFn, createStep, InvokeFn } from "./create-step"
 import { createStepHandler } from "./helpers/create-step-handler"
@@ -34,7 +34,7 @@ export type Hook<Name extends string, Input, Output> = {
  *
  * A handler hook can later be registered to consume the hook and perform custom functionality.
  *
- * Learn more in [this documentation](https://docs.medusajs.com/learn/fundamentals/workflows/workflow-hooks).
+ * Learn more in [this documentation](https://docs.vikrai.com/learn/fundamentals/workflows/workflow-hooks).
  *
  * @param name - The hook's name. This is used when the hook handler is registered to consume the workflow.
  * @param input - The input to pass to the hook handler.
@@ -46,7 +46,7 @@ export type Hook<Name extends string, Input, Output> = {
  *   createHook,
  *   createWorkflow,
  *   WorkflowResponse,
- * } from "@medusajs/framework/workflows-sdk"
+ * } from "@vikrai/framework/workflows-sdk"
  * import { createProductStep } from "./steps/create-product"
  *
  * export const myWorkflow = createWorkflow(
@@ -72,7 +72,7 @@ export function createHook<Name extends string, TInvokeInput, TInvokeOutput>(
   } = {}
 ): Hook<Name, TInvokeInput, TInvokeOutput> {
   const context = global[
-    OrchestrationUtils.SymbolMedusaWorkflowComposerContext
+    OrchestrationUtils.SymbolvikraiWorkflowComposerContext
   ] as CreateWorkflowComposerContext
 
   const getHookResultStep = createStep(
@@ -140,3 +140,4 @@ export function createHook<Name extends string, TInvokeInput, TInvokeOutput>(
     },
   } as Hook<Name, TInvokeInput, TInvokeOutput>
 }
+

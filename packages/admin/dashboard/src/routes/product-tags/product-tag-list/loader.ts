@@ -1,4 +1,4 @@
-import { HttpTypes } from "@medusajs/types"
+import { HttpTypes } from "@vikrai/types"
 import { LoaderFunctionArgs } from "react-router-dom"
 
 import { productTagsQueryKeys } from "../../../hooks/api"
@@ -32,3 +32,4 @@ export const productTagListLoader = async ({ request }: LoaderFunctionArgs) => {
     (await queryClient.fetchQuery(query))
   )
 }
+

@@ -1,6 +1,6 @@
-import { Modules } from "@medusajs/framework/utils"
-import { createStep, StepResponse } from "@medusajs/framework/workflows-sdk"
-import { IOrderModuleService, OrderDTO } from "@medusajs/types"
+import { Modules } from "@vikrai/framework/utils"
+import { createStep, StepResponse } from "@vikrai/framework/workflows-sdk"
+import { IOrderModuleService, OrderDTO } from "@vikrai/types"
 
 /**
  * The details of the draft order to get the promotion context for.
@@ -17,8 +17,8 @@ export interface GetDraftOrderPromotionContextStepInput {
  * 
  * :::note
  * 
- * You can retrieve a draft order's details using [Query](https://docs.medusajs.com/learn/fundamentals/module-links/query),
- * or [useQueryGraphStep](https://docs.medusajs.com/resources/references/medusa-workflows/steps/useQueryGraphStep).
+ * You can retrieve a draft order's details using [Query](https://docs.vikrai.com/learn/fundamentals/module-links/query),
+ * or [useQueryGraphStep](https://docs.vikrai.com/resources/references/vikrai-workflows/steps/useQueryGraphStep).
  * 
  * :::
  * 
@@ -46,3 +46,4 @@ export const getDraftOrderPromotionContextStep = createStep(
     return new StepResponse(orderWithPreviewItemsAndAShipping)
   }
 )
+

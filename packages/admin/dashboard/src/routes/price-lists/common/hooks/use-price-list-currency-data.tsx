@@ -1,4 +1,4 @@
-import { HttpTypes } from "@medusajs/types"
+import { HttpTypes } from "@vikrai/types"
 import { useRegions } from "../../../../hooks/api/regions"
 import { useStore } from "../../../../hooks/api/store"
 import { usePricePreferences } from "../../../../hooks/api/price-preferences"
@@ -77,3 +77,4 @@ export const usePriceListCurrencyData = (): UsePriceListCurrencyDataReturn => {
 
   return { regions, currencies, pricePreferences, isReady }
 }
+

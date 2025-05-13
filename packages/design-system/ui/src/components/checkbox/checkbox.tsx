@@ -1,6 +1,6 @@
 "use client"
 
-import { CheckMini, MinusMini } from "@medusajs/icons"
+import { CheckMini, MinusMini } from "@vikrai/icons"
 import { Checkbox as RadixCheckbox } from "radix-ui"
 import * as React from "react"
 
@@ -46,3 +46,4 @@ const Checkbox = React.forwardRef<
 Checkbox.displayName = "Checkbox"
 
 export { Checkbox }
+

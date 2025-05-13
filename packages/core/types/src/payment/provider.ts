@@ -13,7 +13,7 @@ export type PaymentAddressDTO = Partial<AddressDTO>
  */
 export type PaymentCustomerDTO = {
   /**
-   * The ID of the customer in Medusa.
+   * The ID of the customer in vikrai.
    */
   id: string
   /**
@@ -73,7 +73,7 @@ export type PaymentProviderContext = {
   account_holder?: PaymentAccountHolderDTO
 
   /**
-   * The customer information from Medusa.
+   * The customer information from vikrai.
    */
   customer?: PaymentCustomerDTO
 
@@ -281,19 +281,19 @@ export interface CancelPaymentOutput extends PaymentProviderOutput {}
 
 /**
  * The result of creating an account holder in the third-party payment provider. The `data`
- * property is stored as-is in Medusa's account holder's `data` property.
+ * property is stored as-is in vikrai's account holder's `data` property.
  */
 export interface CreateAccountHolderOutput extends PaymentProviderOutput {
   /**
    * The ID of the account holder in the payment provider.
-   * This is stored in Medusa's account holder in the `external_id` property.
+   * This is stored in vikrai's account holder in the `external_id` property.
    */
   id: string
 }
 
 /**
  * The result of updating an account holder in the third-party payment provider. The `data`
- * property is stored as-is in Medusa's account holder's `data` property.
+ * property is stored as-is in vikrai's account holder's `data` property.
  */
 export interface UpdateAccountHolderOutput extends PaymentProviderOutput {}
 
@@ -391,15 +391,15 @@ export interface IPaymentProvider {
   cancelPayment(data: CancelPaymentInput): Promise<CancelPaymentOutput>
 
   /**
-   * This method is used when creating an account holder in Medusa, allowing you to create
+   * This method is used when creating an account holder in vikrai, allowing you to create
    * the equivalent account in the third-party service. An account holder is useful to
    * later save payment methods, such as credit cards, for a customer in the
    * third-party payment provider using the {@link savePaymentMethod} method.
    *
-   * The returned data will be stored in the account holder created in Medusa. For example,
+   * The returned data will be stored in the account holder created in vikrai. For example,
    * the returned `id` property will be stored in the account holder's `external_id` property.
    *
-   * Medusa creates an account holder when a payment session initialized for a registered customer.
+   * vikrai creates an account holder when a payment session initialized for a registered customer.
    *
    * @param data - Input data including the details of the account holder to create.
    * @returns The result of creating the account holder. If an error occurs, throw it.
@@ -407,7 +407,7 @@ export interface IPaymentProvider {
    * @version 2.5.0
    *
    * @example
-   * import { MedusaError } from "@medusajs/framework/utils"
+   * import { vikraiError } from "@vikrai/framework/utils"
    *
    * class MyPaymentProviderService extends AbstractPaymentProvider<
    *  Options
@@ -420,8 +420,8 @@ export interface IPaymentProvider {
    *   }
    *
    *   if (!customer) {
-   *     throw new MedusaError(
-   *       MedusaError.Types.INVALID_DATA,
+   *     throw new vikraiError(
+   *       vikraiError.Types.INVALID_DATA,
    *       "Missing customer data."
    *     )
    *   }
@@ -443,10 +443,10 @@ export interface IPaymentProvider {
   ): Promise<CreateAccountHolderOutput>
 
   /**
-   * This method is used when updating an account holder in Medusa, allowing you to update
+   * This method is used when updating an account holder in vikrai, allowing you to update
    * the equivalent account in the third-party service.
    *
-   * The returned data will be stored in the account holder created in Medusa. For example,
+   * The returned data will be stored in the account holder created in vikrai. For example,
    * the returned `id` property will be stored in the account holder's `external_id` property.
    *
    * @param data - Input data including the details of the account holder to update.
@@ -455,7 +455,7 @@ export interface IPaymentProvider {
    * @version 2.5.1
    *
    * @example
-   * import { MedusaError } from "@medusajs/framework/utils"
+   * import { vikraiError } from "@vikrai/framework/utils"
    *
    * class MyPaymentProviderService extends AbstractPaymentProvider<
    *  Options
@@ -464,8 +464,8 @@ export interface IPaymentProvider {
    *   const { account_holder, customer } = context
    *
    *   if (!account_holder?.data?.id) {
-   *     throw new MedusaError(
-   *       MedusaError.Types.INVALID_DATA,
+   *     throw new vikraiError(
+   *       vikraiError.Types.INVALID_DATA,
    *       "Missing account holder ID."
    *     )
    *   }
@@ -487,7 +487,7 @@ export interface IPaymentProvider {
   ): Promise<UpdateAccountHolderOutput>
 
   /**
-   * This method is used when an account holder is deleted in Medusa, allowing you
+   * This method is used when an account holder is deleted in vikrai, allowing you
    * to also delete the equivalent account holder in the third-party service.
    *
    * @param data - Input data including the details of the account holder to delete.
@@ -496,7 +496,7 @@ export interface IPaymentProvider {
    * @version 2.5.0
    *
    * @example
-   * import { MedusaError } from "@medusajs/framework/utils"
+   * import { vikraiError } from "@vikrai/framework/utils"
    *
    * class MyPaymentProviderService extends AbstractPaymentProvider<
    *  Options
@@ -505,8 +505,8 @@ export interface IPaymentProvider {
    *     const { account_holder } = context
    *     const accountHolderId = account_holder?.data?.id as string | undefined
    *     if (!accountHolderId) {
-   *       throw new MedusaError(
-   *         MedusaError.Types.INVALID_DATA,
+   *       throw new vikraiError(
+   *         vikraiError.Types.INVALID_DATA,
    *         "Missing account holder ID."
    *       )
    *     }
@@ -535,7 +535,7 @@ export interface IPaymentProvider {
    * @returns The list of payment methods saved for the account holder. If an error occurs, throw it.
    *
    * @example
-   * import { MedusaError } from "@medusajs/framework/utils"
+   * import { vikraiError } from "@vikrai/framework/utils"
    *
    * class MyPaymentProviderService extends AbstractPaymentProvider<
    *   Options
@@ -545,8 +545,8 @@ export interface IPaymentProvider {
    *     const accountHolderId = account_holder?.data?.id as string | undefined
    *
    *     if (!accountHolderId) {
-   *       throw new MedusaError(
-   *         MedusaError.Types.INVALID_DATA,
+   *       throw new vikraiError(
+   *         vikraiError.Types.INVALID_DATA,
    *         "Missing account holder ID."
    *       )
    *     }
@@ -578,7 +578,7 @@ export interface IPaymentProvider {
    * @returns The result of saving the payment method. If an error occurs, throw it.
    *
    * @example
-   * import { MedusaError } from "@medusajs/framework/utils"
+   * import { vikraiError } from "@vikrai/framework/utils"
    *
    * class MyPaymentProviderService extends AbstractPaymentProvider<
    *   Options
@@ -589,8 +589,8 @@ export interface IPaymentProvider {
    *       | undefined
    *
    *     if (!accountHolderId) {
-   *       throw new MedusaError(
-   *         MedusaError.Types.INVALID_DATA,
+   *       throw new vikraiError(
+   *         vikraiError.Types.INVALID_DATA,
    *         "Missing account holder ID."
    *       )
    *     }
@@ -618,3 +618,4 @@ export interface IPaymentProvider {
     data: ProviderWebhookPayload["payload"]
   ): Promise<WebhookActionResult>
 }
+

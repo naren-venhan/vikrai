@@ -2,14 +2,14 @@ import {
   BigNumberInput,
   OrderDTO,
   OrderSummaryDTO,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import {
   BigNumber,
   ChangeActionType,
   MathBN,
   isPresent,
   transformPropertiesToBigNumber,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 import {
   ActionTypeDefinition,
   EVENT_STATUS,
@@ -304,3 +304,4 @@ export function calculateOrderChange({
     order: calc.getCurrentOrder(),
   }
 }
+

@@ -1,6 +1,6 @@
-import { TriangleRightMini } from "@medusajs/icons"
-import { AdminProductCategoryResponse } from "@medusajs/types"
-import { IconButton, Text, clx } from "@medusajs/ui"
+import { TriangleRightMini } from "@vikrai/icons"
+import { AdminProductCategoryResponse } from "@vikrai/types"
+import { IconButton, Text, clx } from "@vikrai/ui"
 import { createColumnHelper } from "@tanstack/react-table"
 import { useMemo } from "react"
 import { useTranslation } from "react-i18next"
@@ -114,3 +114,4 @@ export const useCategoryTableColumns = () => {
     [t]
   )
 }
+

@@ -1,4 +1,4 @@
-import { PriceListStatus, PricingTypes } from "@medusajs/framework/types"
+import { PriceListStatus, PricingTypes } from "@vikrai/framework/types"
 
 export interface CreatePriceListDTO extends PricingTypes.CreatePriceListDTO {
   rules_count?: number
@@ -34,3 +34,4 @@ export interface UpdatePricePreferenceInput
   extends PricingTypes.UpdatePricePreferenceDTO {
   id: string
 }
+

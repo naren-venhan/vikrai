@@ -5,7 +5,7 @@ import {
   AdminOrderLineItem,
   DateComparisonOperator,
   NumericalComparisonOperator,
-} from "@medusajs/types"
+} from "@vikrai/types"
 
 import { useTranslation } from "react-i18next"
 import { _DataTable } from "../../../../../components/table/data-table"
@@ -282,3 +282,4 @@ const filterByNumber = (
     return isValid
   })
 }
+

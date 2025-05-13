@@ -1,8 +1,8 @@
 {
-  "name": "@medusajs/admin-bundler",
+  "name": "@vikrai/admin-bundler",
   "version": "2.7.1",
-  "description": "Bundler for the Medusa admin dashboard.",
-  "author": "Kasper Kristensen <kasper@medusajs.com>",
+  "description": "Bundler for the vikrai admin dashboard.",
+  "author": "Kasper Kristensen <kasper@vikrai.com>",
   "scripts": {
     "build": "tsup"
   },
@@ -10,7 +10,7 @@
   "types": "./dist/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/medusajs/medusa",
+    "url": "https://github.com/vikrai/vikrai",
     "directory": "packages/admin/admin-bundler"
   },
   "files": [
@@ -18,16 +18,16 @@
     "package.json"
   ],
   "devDependencies": {
-    "@medusajs/types": "2.7.1",
+    "@vikrai/types": "2.7.1",
     "@types/compression": "^1.7.5",
     "express": "^4.21.0",
     "tsup": "^8.0.1",
     "typescript": "^5.3.3"
   },
   "dependencies": {
-    "@medusajs/admin-shared": "2.7.1",
-    "@medusajs/admin-vite-plugin": "2.7.1",
-    "@medusajs/dashboard": "2.7.1",
+    "@vikrai/admin-shared": "2.7.1",
+    "@vikrai/admin-vite-plugin": "2.7.1",
+    "@vikrai/dashboard": "2.7.1",
     "@vitejs/plugin-react": "^4.2.1",
     "autoprefixer": "^10.4.16",
     "compression": "^1.7.4",
@@ -41,3 +41,4 @@
   },
   "packageManager": "yarn@3.2.1"
 }
+

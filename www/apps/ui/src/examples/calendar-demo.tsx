@@ -1,4 +1,4 @@
-import { Calendar } from "@medusajs/ui"
+import { Calendar } from "@vikrai/ui"
 import * as React from "react"
 
 export default function CalendarDemo() {
@@ -6,3 +6,4 @@ export default function CalendarDemo() {
 
   return <Calendar value={date} onChange={setDate} />
 }
+

@@ -5,7 +5,7 @@ import {
   when,
   WorkflowData,
   WorkflowResponse,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 
 const step1 = createStep(
   {
@@ -50,3 +50,4 @@ createWorkflow("wf-when", function (input: { callSubFlow: boolean }) {
 
   return new WorkflowResponse(step3(subWorkflowRes.result))
 })
+

@@ -105,11 +105,11 @@ const customOptions: Record<string, Partial<TypeDocOptions>> = {
     tsConfigName: "types.json",
     name: "locking",
   }),
-  medusa: getOptions({
-    entryPointPath: "packages/medusa/src/index.ts",
-    tsConfigName: "medusa.json",
-    name: "medusa",
-    jsonFileName: "0-medusa",
+  vikrai: getOptions({
+    entryPointPath: "packages/vikrai/src/index.ts",
+    tsConfigName: "vikrai.json",
+    name: "vikrai",
+    jsonFileName: "0-vikrai",
     enableInternalResolve: true,
     exclude: [
       ...(baseOptions.exclude || []),
@@ -127,7 +127,7 @@ const customOptions: Record<string, Partial<TypeDocOptions>> = {
       "**/services/*.ts",
       "**/strategies/**",
       "**/subscribers/*.ts",
-      `${path.join(rootPathPrefix, "packages", "medusa", "src", "utils")}/**`,
+      `${path.join(rootPathPrefix, "packages", "vikrai", "src", "utils")}/**`,
       "**/joiner-config.ts",
       "**/modules-config.ts",
     ],
@@ -218,3 +218,4 @@ const customOptions: Record<string, Partial<TypeDocOptions>> = {
 }
 
 export default customOptions
+

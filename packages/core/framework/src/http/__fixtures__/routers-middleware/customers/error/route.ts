@@ -1,6 +1,7 @@
 import { Request, Response } from "express"
-import { MedusaError } from "@medusajs/utils"
+import { vikraiError } from "@vikrai/utils"
 
 export const GET = async (req: Request, res: Response) => {
-  throw new MedusaError(MedusaError.Types.NOT_ALLOWED, "Not allowed")
+  throw new vikraiError(vikraiError.Types.NOT_ALLOWED, "Not allowed")
 }
+

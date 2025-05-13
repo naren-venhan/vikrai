@@ -1,15 +1,15 @@
-import { IFulfillmentModuleService } from "@medusajs/types"
-import { Modules } from "@medusajs/utils"
+import { IFulfillmentModuleService } from "@vikrai/types"
+import { Modules } from "@vikrai/utils"
 import {
   adminHeaders,
   createAdminUser,
 } from "../../../../helpers/create-admin-user"
 
-const { medusaIntegrationTestRunner } = require("@medusajs/test-utils")
+const { vikraiIntegrationTestRunner } = require("@vikrai/test-utils")
 
 jest.setTimeout(30000)
 
-medusaIntegrationTestRunner({
+vikraiIntegrationTestRunner({
   testSuite: ({ dbConnection, getContainer, api }) => {
     let fulfillmentSet1
 
@@ -349,3 +349,4 @@ medusaIntegrationTestRunner({
     })
   },
 })
+

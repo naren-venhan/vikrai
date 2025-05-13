@@ -1,8 +1,8 @@
-import { HttpTypes } from "@medusajs/types"
+import { HttpTypes } from "@vikrai/types"
 import { useMemo } from "react"
 import { useTranslation } from "react-i18next"
 
-import { createDataTableColumnHelper, Tooltip } from "@medusajs/ui"
+import { createDataTableColumnHelper, Tooltip } from "@vikrai/ui"
 import { DataTableStatusCell } from "../../components/data-table-status-cell/data-table-status-cell"
 import { useDataTableDateColumns } from "../general/use-data-table-date-columns"
 
@@ -59,3 +59,4 @@ export const useSalesChannelTableColumns = () => {
     [t, dateColumns]
   )
 }
+

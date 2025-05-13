@@ -1,6 +1,6 @@
-import { ArrowUturnLeft, DocumentSeries, XCircle } from "@medusajs/icons"
-import { AdminOrderLineItem } from "@medusajs/types"
-import { Badge, Input, Text, toast } from "@medusajs/ui"
+import { ArrowUturnLeft, DocumentSeries, XCircle } from "@vikrai/icons"
+import { AdminOrderLineItem } from "@vikrai/types"
+import { Badge, Input, Text, toast } from "@vikrai/ui"
 import { useTranslation } from "react-i18next"
 
 import { ActionMenu } from "../../../../../components/common/action-menu"
@@ -229,3 +229,4 @@ function OrderEditItem({ item, currencyCode, orderId }: OrderEditItemProps) {
 }
 
 export { OrderEditItem }
+

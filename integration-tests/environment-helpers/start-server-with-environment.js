@@ -24,7 +24,7 @@ const startServerWithEnvironment = async ({
     })
   }
 
-  const medusaProcess = await setupServer({
+  const vikraiProcess = await setupServer({
     cwd,
     verbose,
     redisUrl,
@@ -32,7 +32,8 @@ const startServerWithEnvironment = async ({
     env,
   })
 
-  return [medusaProcess, dbConnection]
+  return [vikraiProcess, dbConnection]
 }
 
 export default startServerWithEnvironment
+

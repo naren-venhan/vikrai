@@ -1,4 +1,4 @@
-import { Logger, MedusaContainer, ModuleResolution } from "@medusajs/types"
+import { Logger, vikraiContainer, ModuleResolution } from "@vikrai/types"
 import { asValue } from "awilix"
 import { EOL } from "os"
 import { MODULE_SCOPE } from "../types"
@@ -11,7 +11,7 @@ export const moduleLoader = async ({
   migrationOnly,
   loaderOnly,
 }: {
-  container: MedusaContainer
+  container: vikraiContainer
   moduleResolutions: Record<string, ModuleResolution>
   logger: Logger
   migrationOnly?: boolean
@@ -37,7 +37,7 @@ export const moduleLoader = async ({
 }
 
 async function loadModule(
-  container: MedusaContainer,
+  container: vikraiContainer,
   resolution: ModuleResolution,
   logger: Logger,
   migrationOnly?: boolean,
@@ -87,3 +87,4 @@ async function loadModule(
     loaderOnly,
   })
 }
+

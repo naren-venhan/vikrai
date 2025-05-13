@@ -1,4 +1,4 @@
-import type { PropertyType } from "@medusajs/types"
+import type { PropertyType } from "@vikrai/types"
 import { DmlEntity } from "../entity"
 import { parseEntityName } from "./entity-builder/parse-entity-name"
 import { setGraphQLRelationship } from "./graphql-builder/set-relationship"
@@ -84,3 +84,4 @@ export const toGraphQLSchema = <T extends any[]>(entities: T): string => {
 
   return gqlSchemas.join("\n")
 }
+

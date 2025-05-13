@@ -1,11 +1,11 @@
-import { CreateOrderCreditLineDTO, OrderDTO } from "@medusajs/framework/types"
+import { CreateOrderCreditLineDTO, OrderDTO } from "@vikrai/framework/types"
 import {
   ChangeActionType,
   MathBN,
-  MedusaError,
+  vikraiError,
   OrderChangeStatus,
   OrderChangeType,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 import {
   WorkflowData,
   WorkflowResponse,
@@ -13,7 +13,7 @@ import {
   createStep,
   createWorkflow,
   transform,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { useQueryGraphStep } from "../../common"
 import { confirmOrderChanges } from "../steps/confirm-order-changes"
 import { createOrderChangeStep } from "../steps/create-order-change"
@@ -34,22 +34,22 @@ export const validateOrderCreditLinesStep = createStep(
     }, MathBN.convert(0))
 
     if (MathBN.eq(pendingDifference, 0)) {
-      throw new MedusaError(
-        MedusaError.Types.INVALID_DATA,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_DATA,
         `Can only create credit lines if the order has a positive or negative pending difference`
       )
     }
 
     if (MathBN.gt(pendingDifference, 0) && MathBN.lt(creditLinesAmount, 0)) {
-      throw new MedusaError(
-        MedusaError.Types.INVALID_DATA,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_DATA,
         `Can only create positive credit lines if the order has a positive pending difference`
       )
     }
 
     if (MathBN.lt(pendingDifference, 0) && MathBN.gt(creditLinesAmount, 0)) {
-      throw new MedusaError(
-        MedusaError.Types.INVALID_DATA,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_DATA,
         `Can only create negative credit lines if the order has a negative pending difference`
       )
     }
@@ -61,8 +61,8 @@ export const validateOrderCreditLinesStep = createStep(
           pendingDifference.multipliedBy(-1)
         )
       ) {
-        throw new MedusaError(
-          MedusaError.Types.INVALID_DATA,
+        throw new vikraiError(
+          vikraiError.Types.INVALID_DATA,
           `Cannot create more negative credit lines with amount more than the pending difference`
         )
       }
@@ -70,8 +70,8 @@ export const validateOrderCreditLinesStep = createStep(
 
     if (MathBN.gt(pendingDifference, 0)) {
       if (MathBN.gt(creditLinesAmount, pendingDifference)) {
-        throw new MedusaError(
-          MedusaError.Types.INVALID_DATA,
+        throw new vikraiError(
+          vikraiError.Types.INVALID_DATA,
           `Cannot create more positive credit lines with amount more than the pending difference`
         )
       }
@@ -168,3 +168,4 @@ export const createOrderCreditLinesWorkflow = createWorkflow(
     return new WorkflowResponse(orderChanges.credit_lines)
   }
 )
+

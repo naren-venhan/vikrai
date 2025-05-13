@@ -1,4 +1,4 @@
-import { WorkflowData, createWorkflow } from "@medusajs/framework/workflows-sdk"
+import { WorkflowData, createWorkflow } from "@vikrai/framework/workflows-sdk"
 import { deleteServiceZonesStep } from "../steps"
 
 /**
@@ -14,7 +14,7 @@ export type DeleteServiceZonesWorkflowInput = {
 export const deleteServiceZonesWorkflowId = "delete-service-zones-workflow"
 /**
  * This workflow deletes one or more service zones. It's used by the
- * [Remove Service Zones from Fulfillment Set Admin API Route](https://docs.medusajs.com/api/admin#fulfillment-sets_deletefulfillmentsetsidservicezoneszone_id).
+ * [Remove Service Zones from Fulfillment Set Admin API Route](https://docs.vikrai.com/api/admin#fulfillment-sets_deletefulfillmentsetsidservicezoneszone_id).
  * 
  * You can use this workflow within your own customizations or custom workflows, allowing you to
  * delete service zones within your custom flows.
@@ -37,3 +37,4 @@ export const deleteServiceZonesWorkflow = createWorkflow(
     deleteServiceZonesStep(input.ids)
   }
 )
+

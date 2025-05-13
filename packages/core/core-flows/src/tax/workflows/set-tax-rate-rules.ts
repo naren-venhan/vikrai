@@ -1,10 +1,10 @@
-import { CreateTaxRateRuleDTO, TaxRateRuleDTO } from "@medusajs/framework/types"
+import { CreateTaxRateRuleDTO, TaxRateRuleDTO } from "@vikrai/framework/types"
 import {
   WorkflowData,
   WorkflowResponse,
   createWorkflow,
   transform,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import {
   createTaxRateRulesStep,
   deleteTaxRateRulesStep,
@@ -80,3 +80,4 @@ export const setTaxRateRulesWorkflow = createWorkflow(
     return new WorkflowResponse(createTaxRateRulesStep(rulesWithRateId))
   }
 )
+

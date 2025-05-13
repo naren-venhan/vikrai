@@ -1,42 +1,42 @@
 export const notification = [
   {
     "title": "Handle Password Reset Event",
-    "path": "https://docs.medusajs.com/resources/commerce-modules/auth/reset-password"
+    "path": "https://docs.vikrai.com/resources/commerce-modules/auth/reset-password"
   },
   {
     "title": "Abandoned Cart Notification",
-    "path": "https://docs.medusajs.com/resources/how-to-tutorials/tutorials/abandoned-cart"
+    "path": "https://docs.vikrai.com/resources/how-to-tutorials/tutorials/abandoned-cart"
   },
   {
     "title": "Send Notification",
-    "path": "https://docs.medusajs.com/resources/infrastructure-modules/notification/send-notification"
+    "path": "https://docs.vikrai.com/resources/infrastructure-modules/notification/send-notification"
   },
   {
     "title": "notifyOnFailureStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/notifyOnFailureStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/notifyOnFailureStep"
   },
   {
     "title": "sendNotificationsStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/sendNotificationsStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/sendNotificationsStep"
   },
   {
     "title": "exportProductsWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/exportProductsWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/exportProductsWorkflow"
   },
   {
     "title": "importProductsWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/importProductsWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/importProductsWorkflow"
   },
   {
     "title": "notification",
-    "path": "https://docs.medusajs.com/resources/references/js-sdk/admin/notification"
+    "path": "https://docs.vikrai.com/resources/references/js-sdk/admin/notification"
   },
   {
     "title": "Create Notification Provider",
-    "path": "https://docs.medusajs.com/resources/references/notification-provider-module"
+    "path": "https://docs.vikrai.com/resources/references/notification-provider-module"
   },
   {
     "title": "Use Notification Module",
-    "path": "https://docs.medusajs.com/resources/references/notification-service"
+    "path": "https://docs.vikrai.com/resources/references/notification-service"
   }
 ]

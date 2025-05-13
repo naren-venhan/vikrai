@@ -1,10 +1,10 @@
-import { Modules } from "@medusajs/framework/utils"
+import { Modules } from "@vikrai/framework/utils"
 import {
   WorkflowData,
   WorkflowResponse,
   createWorkflow,
   transform,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { createRemoteLinkStep, useRemoteQueryStep } from "../../common"
 import { createPaymentCollectionsStep } from "../../cart"
 
@@ -26,7 +26,7 @@ export const createOrderPaymentCollectionWorkflowId =
   "create-order-payment-collection"
 /**
  * This workflow creates a payment collection for an order. It's used by the
- * [Create Payment Collection Admin API Route](https://docs.medusajs.com/api/admin#payment-collections_postpaymentcollections).
+ * [Create Payment Collection Admin API Route](https://docs.vikrai.com/api/admin#payment-collections_postpaymentcollections).
  * 
  * You can use this workflow within your customizations or your own custom workflows, allowing you to wrap custom logic around
  * creating a payment collection for an order.
@@ -92,3 +92,4 @@ export const createOrderPaymentCollectionWorkflow = createWorkflow(
     return new WorkflowResponse(createdPaymentCollections)
   }
 )
+

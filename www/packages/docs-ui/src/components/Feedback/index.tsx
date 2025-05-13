@@ -14,7 +14,7 @@ import {
   InputText,
   DottedSeparator,
 } from "@/components"
-import { ChatBubbleLeftRight, ThumbDown, ThumbUp } from "@medusajs/icons"
+import { ChatBubbleLeftRight, ThumbDown, ThumbUp } from "@vikrai/icons"
 import Link from "next/link"
 import { useSiteConfig } from "../../providers"
 
@@ -70,7 +70,7 @@ export const Feedback = ({
   const [positiveFeedback, setPositiveFeedback] = useState(false)
   const [message, setMessage] = useState("")
   const [steps, setSteps] = useState("")
-  const [medusaVersion, setMedusaVersion] = useState("")
+  const [vikraiVersion, setvikraiVersion] = useState("")
   const [errorFix, setErrorFix] = useState("")
   const [contactInfo, setContactInfo] = useState("")
   const nodeRef = submittedFeedback
@@ -110,7 +110,7 @@ export const Feedback = ({
         message: message?.length ? message : null,
         os: window.navigator.userAgent,
         steps,
-        medusaVersion,
+        vikraiVersion,
         errorFix,
         contactInfo,
         ...extraData,
@@ -163,7 +163,7 @@ export const Feedback = ({
                 )}
                 ref={inlineFeedbackRef}
               >
-                <Label className={"text-compact-small text-medusa-fg-base"}>
+                <Label className={"text-compact-small text-vikrai-fg-base"}>
                   {question}
                 </Label>
                 <div
@@ -180,8 +180,8 @@ export const Feedback = ({
                     )}
                     variant="transparent-clear"
                   >
-                    <ThumbUp className="text-medusa-fg-subtle" />
-                    <span className="text-medusa-fg-base text-compact-small-plus flex-1">
+                    <ThumbUp className="text-vikrai-fg-subtle" />
+                    <span className="text-vikrai-fg-base text-compact-small-plus flex-1">
                       {positiveBtn}
                     </span>
                   </Button>
@@ -193,8 +193,8 @@ export const Feedback = ({
                     )}
                     variant="transparent-clear"
                   >
-                    <ThumbDown className="text-medusa-fg-subtle" />
-                    <span className="text-medusa-fg-base text-compact-small-plus flex-1">
+                    <ThumbDown className="text-vikrai-fg-subtle" />
+                    <span className="text-vikrai-fg-base text-compact-small-plus flex-1">
                       {negativeBtn}
                     </span>
                   </Button>
@@ -208,8 +208,8 @@ export const Feedback = ({
                         "text-left md:text-center"
                       )}
                     >
-                      <ChatBubbleLeftRight className="text-medusa-fg-subtle" />
-                      <span className="text-medusa-fg-base text-compact-small-plus flex-1">
+                      <ChatBubbleLeftRight className="text-vikrai-fg-subtle" />
+                      <span className="text-vikrai-fg-base text-compact-small-plus flex-1">
                         Report Issue
                       </span>
                       <Link
@@ -249,15 +249,15 @@ export const Feedback = ({
                       </div>
                       <div className="flex flex-col gap-docs_0.5">
                         <Label>
-                          If applicable, what version of Medusa are you using?
+                          If applicable, what version of vikrai are you using?
                           If a plugin is related to the error, please provide a
                           version of that as well.
                         </Label>
                         <TextArea
                           rows={4}
-                          value={medusaVersion}
-                          onChange={(e) => setMedusaVersion(e.target.value)}
-                          placeholder="@medusajs/medusa: vX"
+                          value={vikraiVersion}
+                          onChange={(e) => setvikraiVersion(e.target.value)}
+                          placeholder="@vikrai/vikrai: vX"
                         />
                       </div>
                       <div className="flex flex-col gap-docs_0.5">
@@ -269,7 +269,7 @@ export const Feedback = ({
                           rows={4}
                           value={errorFix}
                           onChange={(e) => setErrorFix(e.target.value)}
-                          placeholder="@medusajs/medusa: vX"
+                          placeholder="@vikrai/vikrai: vX"
                         />
                       </div>
                       <div className="flex flex-col gap-docs_0.5">
@@ -319,3 +319,4 @@ export const Feedback = ({
     </div>
   )
 }
+

@@ -1,0 +1,167 @@
+{
+  "name": "@vikrai/vikrai",
+  "version": "2.7.1",
+  "description": "Building blocks for digital commerce",
+  "main": "dist/index.js",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": "./dist/index.js",
+    "./types": "./dist/types/index.js",
+    "./utils": "./dist/utils/index.js",
+    "./api/*": "./dist/api/*.js",
+    "./subscribers/*": "./dist/subscribers/*.js",
+    "./jobs/*": "./dist/jobs/*.js",
+    "./core-flows": "./dist/core-flows/index.js",
+    "./loaders/*": "./dist/loaders/*.js",
+    "./commands/*": "./dist/commands/*.js",
+    "./*": "./dist/modules/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vikrai/vikrai",
+    "directory": "packages/vikrai"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist",
+    "oas",
+    "!dist/**/__tests__",
+    "!dist/**/__mocks__",
+    "!dist/**/__fixtures__"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "author": "Sebastian Rindom",
+  "license": "MIT",
+  "scripts": {
+    "watch": "tsc --build --watch",
+    "build": "rimraf dist && tsc --build",
+    "serve": "node dist/app.js",
+    "test": "jest --runInBand --bail --forceExit --testPathIgnorePatterns='/integration-tests/' -- src/**/__tests__/**/*.ts",
+    "test:integration": "jest --forceExit -- src/**/integration-tests/**/__tests__/**/*.ts"
+  },
+  "devDependencies": {
+    "@vikrai/framework": "2.7.1",
+    "@opentelemetry/instrumentation-pg": "^0.52.0",
+    "@opentelemetry/resources": "^2.0.0",
+    "@opentelemetry/sdk-node": "^0.200.0",
+    "@opentelemetry/sdk-trace-node": "^2.0.0",
+    "@swc/core": "1.5.7",
+    "@swc/helpers": "^0.5.11",
+    "@swc/jest": "^0.2.36",
+    "@types/express": "^4.17.17",
+    "@types/jsonwebtoken": "^8.5.9",
+    "@types/lodash": "^4.14.191",
+    "@types/multer": "^1.4.7",
+    "jest": "^29.7.0",
+    "rimraf": "^5.0.1",
+    "supertest": "^4.0.2",
+    "typescript": "^5.6.2",
+    "yalc": "1.0.0-pre.53"
+  },
+  "dependencies": {
+    "@inquirer/checkbox": "^2.3.11",
+    "@inquirer/input": "^2.2.9",
+    "@vikrai/admin-bundler": "2.7.1",
+    "@vikrai/api-key": "2.7.1",
+    "@vikrai/auth": "2.7.1",
+    "@vikrai/auth-emailpass": "2.7.1",
+    "@vikrai/auth-github": "2.7.1",
+    "@vikrai/auth-google": "2.7.1",
+    "@vikrai/cache-inmemory": "2.7.1",
+    "@vikrai/cache-redis": "2.7.1",
+    "@vikrai/cart": "2.7.1",
+    "@vikrai/core-flows": "2.7.1",
+    "@vikrai/currency": "2.7.1",
+    "@vikrai/customer": "2.7.1",
+    "@vikrai/event-bus-local": "2.7.1",
+    "@vikrai/event-bus-redis": "2.7.1",
+    "@vikrai/file": "2.7.1",
+    "@vikrai/file-local": "2.7.1",
+    "@vikrai/file-s3": "2.7.1",
+    "@vikrai/fulfillment": "2.7.1",
+    "@vikrai/fulfillment-manual": "2.7.1",
+    "@vikrai/index": "2.7.1",
+    "@vikrai/inventory": "2.7.1",
+    "@vikrai/link-modules": "2.7.1",
+    "@vikrai/locking": "2.7.1",
+    "@vikrai/locking-postgres": "2.7.1",
+    "@vikrai/locking-redis": "2.7.1",
+    "@vikrai/notification": "2.7.1",
+    "@vikrai/notification-local": "2.7.1",
+    "@vikrai/notification-sendgrid": "2.7.1",
+    "@vikrai/order": "2.7.1",
+    "@vikrai/payment": "2.7.1",
+    "@vikrai/payment-stripe": "2.7.1",
+    "@vikrai/pricing": "2.7.1",
+    "@vikrai/product": "2.7.1",
+    "@vikrai/promotion": "2.7.1",
+    "@vikrai/region": "2.7.1",
+    "@vikrai/sales-channel": "2.7.1",
+    "@vikrai/stock-location": "2.7.1",
+    "@vikrai/store": "2.7.1",
+    "@vikrai/tax": "2.7.1",
+    "@vikrai/telemetry": "2.7.1",
+    "@vikrai/user": "2.7.1",
+    "@vikrai/workflow-engine-inmemory": "2.7.1",
+    "@vikrai/workflow-engine-redis": "2.7.1",
+    "@opentelemetry/api": "^1.9.0",
+    "boxen": "^5.0.1",
+    "chalk": "^4.0.0",
+    "chokidar": "^3.4.2",
+    "compression": "^1.7.4",
+    "express": "^4.21.0",
+    "fs-exists-cached": "^1.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "lodash": "^4.17.21",
+    "multer": "^1.4.5-lts.1",
+    "node-schedule": "^2.1.1",
+    "qs": "^6.11.2",
+    "request-ip": "^3.3.0",
+    "slugify": "^1.6.6",
+    "uuid": "^9.0.0",
+    "zod": "3.22.4"
+  },
+  "peerDependencies": {
+    "@vikrai/framework": "2.7.1",
+    "@mikro-orm/core": "6.4.3",
+    "@mikro-orm/knex": "6.4.3",
+    "@mikro-orm/migrations": "6.4.3",
+    "@mikro-orm/postgresql": "6.4.3",
+    "@opentelemetry/instrumentation-pg": "^0.52.0",
+    "@opentelemetry/resources": "^2.0.0",
+    "@opentelemetry/sdk-node": "^0.200.0",
+    "@opentelemetry/sdk-trace-node": "^2.0.0",
+    "@swc/core": "1.5.7",
+    "awilix": "^8.0.1",
+    "react-dom": "^18.0.0",
+    "yalc": "1.0.0-pre.53"
+  },
+  "peerDependenciesMeta": {
+    "@opentelemetry/instrumentation-pg": {
+      "optional": true
+    },
+    "@opentelemetry/resources": {
+      "optional": true
+    },
+    "@opentelemetry/sdk-node": {
+      "optional": true
+    },
+    "@opentelemetry/sdk-trace-node": {
+      "optional": true
+    },
+    "@swc/core": {
+      "optional": true
+    },
+    "react-dom": {
+      "optional": true
+    },
+    "yalc": {
+      "optional": true
+    }
+  },
+  "gitHead": "cd1f5afa5aa8c0b15ea957008ee19f1d695cbd2e"
+}

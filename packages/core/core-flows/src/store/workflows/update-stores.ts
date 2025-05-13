@@ -1,11 +1,11 @@
-import { StoreDTO, StoreWorkflow } from "@medusajs/framework/types"
+import { StoreDTO, StoreWorkflow } from "@vikrai/framework/types"
 import {
   WorkflowData,
   WorkflowResponse,
   createWorkflow,
   transform,
   when,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { updateStoresStep } from "../steps"
 import { updatePricePreferencesAsArrayStep } from "../../pricing"
 
@@ -17,7 +17,7 @@ export type UpdateStoresWorkflowOutput = StoreDTO[]
 export const updateStoresWorkflowId = "update-stores"
 /**
  * This workflow updates stores matching the specified filters. It's used by the
- * [Update Store Admin API Route](https://docs.medusajs.com/api/admin#stores_poststoresid).
+ * [Update Store Admin API Route](https://docs.vikrai.com/api/admin#stores_poststoresid).
  * 
  * You can use this workflow within your customizations or your own custom workflows, allowing you to
  * update stores within your custom flows.
@@ -86,3 +86,4 @@ export const updateStoresWorkflow = createWorkflow(
     return new WorkflowResponse(stores)
   }
 )
+

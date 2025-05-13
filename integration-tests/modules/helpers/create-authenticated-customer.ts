@@ -1,4 +1,4 @@
-import { CreateCustomerDTO } from "@medusajs/types"
+import { CreateCustomerDTO } from "@vikrai/types"
 
 export const createAuthenticatedCustomer = async (
   api: any,
@@ -37,3 +37,4 @@ export const createAuthenticatedCustomer = async (
 
   return { customer, jwt: signin.data.token }
 }
+

@@ -1,13 +1,13 @@
-import { createDefaultsWorkflow } from "@medusajs/core-flows"
+import { createDefaultsWorkflow } from "@vikrai/core-flows"
 import {
   IRegionModuleService,
   IStoreModuleService,
-  MedusaContainer,
-} from "@medusajs/framework/types"
-import { Modules } from "@medusajs/framework/utils"
+  vikraiContainer,
+} from "@vikrai/framework/types"
+import { Modules } from "@vikrai/framework/utils"
 
 export const seedStorefrontDefaults = async (
-  container: MedusaContainer,
+  container: vikraiContainer,
   defaultCurrency: string = "usd"
 ) => {
   const regionModule: IRegionModuleService = container.resolve(Modules.REGION)
@@ -35,3 +35,4 @@ export const seedStorefrontDefaults = async (
     store,
   }
 }
+

@@ -1,6 +1,6 @@
 import { zodResolver } from "@hookform/resolvers/zod"
-import { MagnifyingGlass } from "@medusajs/icons"
-import { HttpTypes } from "@medusajs/types"
+import { MagnifyingGlass } from "@vikrai/icons"
+import { HttpTypes } from "@vikrai/types"
 import {
   Button,
   Divider,
@@ -12,7 +12,7 @@ import {
   Text,
   clx,
   toast,
-} from "@medusajs/ui"
+} from "@vikrai/ui"
 import { useFieldArray, useForm, useWatch } from "react-hook-form"
 import { useTranslation } from "react-i18next"
 import { z } from "zod"
@@ -605,3 +605,4 @@ export const TaxRegionTaxOverrideEditForm = ({
     </RouteDrawer.Form>
   )
 }
+

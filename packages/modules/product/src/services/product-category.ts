@@ -4,16 +4,16 @@ import {
   FindConfig,
   InferEntityType,
   ProductTypes,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import {
   FreeTextSearchFilterKeyPrefix,
   InjectManager,
   InjectTransactionManager,
   isDefined,
-  MedusaContext,
-  MedusaError,
+  vikraiContext,
+  vikraiError,
   ModulesSdkUtils,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 import { ProductCategory } from "@models"
 import { ProductCategoryRepository } from "@repositories"
 import { UpdateCategoryInput } from "@types"
@@ -33,11 +33,11 @@ export default class ProductCategoryService {
   async retrieve(
     productCategoryId: string,
     config: FindConfig<ProductTypes.ProductCategoryDTO> = {},
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<InferEntityType<typeof ProductCategory>> {
     if (!isDefined(productCategoryId)) {
-      throw new MedusaError(
-        MedusaError.Types.NOT_FOUND,
+      throw new vikraiError(
+        vikraiError.Types.NOT_FOUND,
         `"productCategoryId" must be defined`
       )
     }
@@ -62,8 +62,8 @@ export default class ProductCategoryService {
     )
 
     if (!productCategories?.length) {
-      throw new MedusaError(
-        MedusaError.Types.NOT_FOUND,
+      throw new vikraiError(
+        vikraiError.Types.NOT_FOUND,
         `ProductCategory with id: ${productCategoryId} was not found`
       )
     }
@@ -75,7 +75,7 @@ export default class ProductCategoryService {
   async list(
     filters: ProductTypes.FilterableProductCategoryProps = {},
     config: FindConfig<ProductTypes.ProductCategoryDTO> = {},
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<InferEntityType<typeof ProductCategory>[]> {
     const transformOptions = {
       includeDescendantsTree: filters?.include_descendants_tree || false,
@@ -109,7 +109,7 @@ export default class ProductCategoryService {
   async listAndCount(
     filters: ProductTypes.FilterableProductCategoryProps = {},
     config: FindConfig<ProductTypes.ProductCategoryDTO> = {},
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<[InferEntityType<typeof ProductCategory>[], number]> {
     const transformOptions = {
       includeDescendantsTree: filters?.include_descendants_tree || false,
@@ -142,7 +142,7 @@ export default class ProductCategoryService {
   @InjectTransactionManager("productCategoryRepository_")
   async create(
     data: ProductTypes.CreateProductCategoryDTO[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<InferEntityType<typeof ProductCategory>[]> {
     return await (
       this.productCategoryRepository_ as unknown as ProductCategoryRepository
@@ -152,7 +152,7 @@ export default class ProductCategoryService {
   @InjectTransactionManager("productCategoryRepository_")
   async update(
     data: UpdateCategoryInput[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<InferEntityType<typeof ProductCategory>[]> {
     return await (
       this.productCategoryRepository_ as unknown as ProductCategoryRepository
@@ -162,7 +162,7 @@ export default class ProductCategoryService {
   @InjectTransactionManager("productCategoryRepository_")
   async delete(
     ids: string[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<string[]> {
     return await this.productCategoryRepository_.delete(ids, sharedContext)
   }
@@ -170,7 +170,7 @@ export default class ProductCategoryService {
   @InjectTransactionManager("productCategoryRepository_")
   async softDelete(
     ids: string[],
-    @MedusaContext() sharedContext?: Context
+    @vikraiContext() sharedContext?: Context
   ): Promise<Record<string, string[]> | void> {
     return (await (
       this.productCategoryRepository_ as unknown as ProductCategoryRepository
@@ -180,10 +180,11 @@ export default class ProductCategoryService {
   @InjectTransactionManager("productCategoryRepository_")
   async restore(
     ids: string[],
-    @MedusaContext() sharedContext?: Context
+    @vikraiContext() sharedContext?: Context
   ): Promise<Record<string, string[]> | void> {
     return (await (
       this.productCategoryRepository_ as unknown as ProductCategoryRepository
     ).restore(ids, sharedContext)) as any
   }
 }
+

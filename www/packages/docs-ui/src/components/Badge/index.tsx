@@ -34,19 +34,19 @@ export const Badge = ({
         badgeType === "default" &&
           "px-docs_0.25 py-0 rounded-docs_sm border border-solid",
         variant === "purple" &&
-          "bg-medusa-tag-purple-bg text-medusa-tag-purple-text border-medusa-tag-purple-border",
+          "bg-vikrai-tag-purple-bg text-vikrai-tag-purple-text border-vikrai-tag-purple-border",
         variant === "orange" &&
-          "bg-medusa-tag-orange-bg text-medusa-tag-orange-text border-medusa-tag-orange-border",
+          "bg-vikrai-tag-orange-bg text-vikrai-tag-orange-text border-vikrai-tag-orange-border",
         variant === "green" &&
-          "bg-medusa-tag-green-bg text-medusa-tag-green-text border-medusa-tag-green-border",
+          "bg-vikrai-tag-green-bg text-vikrai-tag-green-text border-vikrai-tag-green-border",
         variant === "blue" &&
-          "bg-medusa-tag-blue-bg text-medusa-tag-blue-text border-medusa-tag-blue-border",
+          "bg-vikrai-tag-blue-bg text-vikrai-tag-blue-text border-vikrai-tag-blue-border",
         variant === "red" &&
-          "bg-medusa-tag-red-bg text-medusa-tag-red-text border-medusa-tag-red-border",
+          "bg-vikrai-tag-red-bg text-vikrai-tag-red-text border-vikrai-tag-red-border",
         variant === "neutral" &&
-          "bg-medusa-tag-neutral-bg text-medusa-tag-neutral-text border-medusa-tag-neutral-border",
+          "bg-vikrai-tag-neutral-bg text-vikrai-tag-neutral-text border-vikrai-tag-neutral-border",
         variant === "code" &&
-          "bg-medusa-contrast-bg-subtle text-medusa-contrast-fg-secondary border-medusa-contrast-border-bot",
+          "bg-vikrai-contrast-bg-subtle text-vikrai-contrast-fg-secondary border-vikrai-contrast-border-bot",
         badgeType === "shaded" && "px-[3px] !bg-transparent relative",
         // needed for tailwind utilities
         "badge",
@@ -70,3 +70,4 @@ export const Badge = ({
     </span>
   )
 }
+

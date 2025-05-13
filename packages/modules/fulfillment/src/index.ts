@@ -1,6 +1,6 @@
 import { FulfillmentModuleService } from "@services"
 import loadProviders from "./loaders/providers"
-import { Module, Modules } from "@medusajs/framework/utils"
+import { Module, Modules } from "@vikrai/framework/utils"
 
 export default Module(Modules.FULFILLMENT, {
   service: FulfillmentModuleService,
@@ -9,3 +9,4 @@ export default Module(Modules.FULFILLMENT, {
 
 // Module options types
 export { FulfillmentModuleOptions } from "./types"
+

@@ -1,6 +1,6 @@
-import { IFulfillmentModuleService, StockLocationDTO } from "@medusajs/types"
-import { Modules } from "@medusajs/utils"
-import { medusaIntegrationTestRunner } from "@medusajs/test-utils"
+import { IFulfillmentModuleService, StockLocationDTO } from "@vikrai/types"
+import { Modules } from "@vikrai/utils"
+import { vikraiIntegrationTestRunner } from "@vikrai/test-utils"
 import { createAdminUser } from "../../../helpers/create-admin-user"
 import {
   generateCreateFulfillmentData,
@@ -10,13 +10,13 @@ import {
 
 jest.setTimeout(100000)
 
-const env = { MEDUSA_FF_MEDUSA_V2: true }
+const env = { vikrai_FF_vikrai_V2: true }
 const adminHeaders = {
-  headers: { "x-medusa-access-token": "test_token" },
+  headers: { "x-vikrai-access-token": "test_token" },
 }
 const providerId = "manual_test-provider"
 
-medusaIntegrationTestRunner({
+vikraiIntegrationTestRunner({
   env,
   testSuite: ({ getContainer, api, dbConnection }) => {
     let service: IFulfillmentModuleService
@@ -47,12 +47,12 @@ medusaIntegrationTestRunner({
     })
 
     /**
-     * The test runner run both the medusa migrations as well as the modules
+     * The test runner run both the vikrai migrations as well as the modules
      * migrations. In order to ensure the backward compatibility
      * of the migration works, we will create a full data structure.
      */
     describe("Fulfillment module migrations backward compatibility", () => {
-      it("should allow to create a full data structure after the backward compatible migration have run on top of the medusa v1 database", async () => {
+      it("should allow to create a full data structure after the backward compatible migration have run on top of the vikrai v1 database", async () => {
         await setupFullDataFulfillmentStructure(service, {
           providerId,
           locationId: location.id,
@@ -316,3 +316,4 @@ medusaIntegrationTestRunner({
     })
   },
 })
+

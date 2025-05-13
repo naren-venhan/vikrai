@@ -1,6 +1,6 @@
-import { CreateUserDTO, IUserModuleService } from "@medusajs/framework/types"
-import { Modules } from "@medusajs/framework/utils"
-import { StepResponse, createStep } from "@medusajs/framework/workflows-sdk"
+import { CreateUserDTO, IUserModuleService } from "@vikrai/framework/types"
+import { Modules } from "@vikrai/framework/utils"
+import { StepResponse, createStep } from "@vikrai/framework/workflows-sdk"
 
 export const createUsersStepId = "create-users-step"
 /**
@@ -31,3 +31,4 @@ export const createUsersStep = createStep(
     await service.deleteUsers(createdUsers.map((user) => user.id))
   }
 )
+

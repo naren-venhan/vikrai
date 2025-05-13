@@ -1,4 +1,4 @@
-import { RelationshipMetadata } from "@medusajs/types"
+import { RelationshipMetadata } from "@vikrai/types"
 import { camelToSnakeCase } from "../../../common/camel-to-snake-case"
 
 /**
@@ -10,3 +10,4 @@ export function getForeignKey(relationship: RelationshipMetadata) {
     camelToSnakeCase(`${relationship.name}Id`)
   )
 }
+

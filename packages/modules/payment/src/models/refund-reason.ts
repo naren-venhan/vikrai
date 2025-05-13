@@ -1,4 +1,4 @@
-import { model } from "@medusajs/framework/utils"
+import { model } from "@vikrai/framework/utils"
 import Refund from "./refund"
 
 const RefundReason = model.define("RefundReason", {
@@ -12,3 +12,4 @@ const RefundReason = model.define("RefundReason", {
 })
 
 export default RefundReason
+

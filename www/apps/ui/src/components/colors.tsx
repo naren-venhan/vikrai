@@ -3,7 +3,7 @@
 import React from "react"
 import { CopyButton, useColorMode } from "docs-ui"
 import { colors as allColors } from "../config/colors"
-import { clx } from "@medusajs/ui"
+import { clx } from "@vikrai/ui"
 
 type Color = {
   name: string
@@ -42,20 +42,20 @@ const ColorBlock = ({ colour, className, ...props }: ColorBlockProps) => {
       <div className="flex w-fit flex-row items-center gap-x-2">
         <div
           className={
-            "border-medusa-border-base h-[48px] w-[48px] rounded-lg border p-1"
+            "border-vikrai-border-base h-[48px] w-[48px] rounded-lg border p-1"
           }
         >
           <div
             className={clx(
-              "bg-medusa-bg-component h-full w-full animate-pulse rounded-[4px]",
+              "bg-vikrai-bg-component h-full w-full animate-pulse rounded-[4px]",
               className
             )}
             {...props}
           />
         </div>
         <div className="flex flex-col items-start">
-          <div className="bg-medusa-bg-component h-[20px] w-[85px] animate-pulse rounded-sm" />
-          <div className="bg-medusa-bg-subtle h-[20px] w-[120px] animate-pulse rounded-sm" />
+          <div className="bg-vikrai-bg-component h-[20px] w-[85px] animate-pulse rounded-sm" />
+          <div className="bg-vikrai-bg-subtle h-[20px] w-[120px] animate-pulse rounded-sm" />
         </div>
       </div>
     )
@@ -65,7 +65,7 @@ const ColorBlock = ({ colour, className, ...props }: ColorBlockProps) => {
     <div className="flex flex-row items-center gap-x-2">
       <div
         className={
-          "border-medusa-border-base h-[48px] w-[48px] rounded-lg border p-1"
+          "border-vikrai-border-base h-[48px] w-[48px] rounded-lg border p-1"
         }
       >
         <div
@@ -75,10 +75,10 @@ const ColorBlock = ({ colour, className, ...props }: ColorBlockProps) => {
         />
       </div>
       <div className="flex flex-col items-start">
-        <p className="txt-compact-xsmall-plus text-medusa-fg-basetext-start">
+        <p className="txt-compact-xsmall-plus text-vikrai-fg-basetext-start">
           {cssVarToTailwindClass(colour.name)}
         </p>
-        <p className="txt-compact-xsmall text-medusa-fg-subtle">
+        <p className="txt-compact-xsmall text-vikrai-fg-subtle">
           {colour.code}
         </p>
       </div>
@@ -148,7 +148,7 @@ const Colors = () => {
     <div>
       {Object.entries(colors).map(([section, colors]) => (
         <div className="mb-16" key={`colours-section-${section}`}>
-          <h2 className="h2-docs mb-4 mt-10 text-medusa-fg-base">
+          <h2 className="h2-docs mb-4 mt-10 text-vikrai-fg-base">
             {section.charAt(0).toUpperCase() + section.slice(1)}
           </h2>
           <hr className="mb-4" />
@@ -169,3 +169,4 @@ const Colors = () => {
 }
 
 export { Colors }
+

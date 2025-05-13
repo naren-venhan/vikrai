@@ -2,13 +2,13 @@ import {
   IPaymentModuleService,
   Logger,
   PaymentSessionDTO,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import {
   ContainerRegistrationKeys,
   Modules,
   promiseAll,
-} from "@medusajs/framework/utils"
-import { createStep, StepResponse } from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/utils"
+import { createStep, StepResponse } from "@vikrai/framework/workflows-sdk"
 
 /**
  * The data to delete payment sessions.
@@ -118,3 +118,4 @@ export const deletePaymentSessionsStep = createStep(
     }
   }
 )
+

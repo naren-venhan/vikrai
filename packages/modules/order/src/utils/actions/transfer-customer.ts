@@ -1,4 +1,4 @@
-import { ChangeActionType, MedusaError } from "@medusajs/framework/utils"
+import { ChangeActionType, vikraiError } from "@vikrai/framework/utils"
 import { OrderChangeProcessing } from "../calculate-order-change"
 import { setActionReference } from "../set-action-reference"
 
@@ -10,10 +10,11 @@ OrderChangeProcessing.registerActionType(ChangeActionType.TRANSFER_CUSTOMER, {
   },
   validate({ action }) {
     if (!action.reference_id) {
-      throw new MedusaError(
-        MedusaError.Types.INVALID_DATA,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_DATA,
         "Reference to customer ID is required"
       )
     }
   },
 })
+

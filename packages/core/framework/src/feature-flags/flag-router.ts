@@ -1,4 +1,4 @@
-import { isObject, isString } from "@medusajs/utils"
+import { isObject, isString } from "@vikrai/utils"
 import { FeatureFlagsResponse, IFlagRouter } from "./types"
 
 export class FlagRouter implements IFlagRouter {
@@ -75,3 +75,4 @@ export class FlagRouter implements IFlagRouter {
     }))
   }
 }
+

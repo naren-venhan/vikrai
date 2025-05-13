@@ -1,7 +1,7 @@
 {
-  "name": "@medusajs/workflows-sdk",
+  "name": "@vikrai/workflows-sdk",
   "version": "2.7.1",
-  "description": "Set of workflows tooling for Medusa",
+  "description": "Set of workflows tooling for vikrai",
   "main": "dist/index.js",
   "exports": {
     ".": "./dist/index.js",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/medusajs/medusa",
+    "url": "https://github.com/vikrai/vikrai",
     "directory": "packages/core/workflows-sdk"
   },
   "engines": {
@@ -24,7 +24,7 @@
     "!dist/**/__mocks__",
     "!dist/**/__fixtures__"
   ],
-  "author": "Medusa",
+  "author": "vikrai",
   "license": "MIT",
   "devDependencies": {
     "@mikro-orm/core": "6.4.3",
@@ -42,10 +42,10 @@
     "zod": "3.22.4"
   },
   "dependencies": {
-    "@medusajs/modules-sdk": "2.7.1",
-    "@medusajs/orchestration": "2.7.1",
-    "@medusajs/types": "2.7.1",
-    "@medusajs/utils": "2.7.1",
+    "@vikrai/modules-sdk": "2.7.1",
+    "@vikrai/orchestration": "2.7.1",
+    "@vikrai/types": "2.7.1",
+    "@vikrai/utils": "2.7.1",
     "ulid": "^2.3.0"
   },
   "peerDependencies": {
@@ -65,3 +65,4 @@
     "test:run": "node ./dist/utils/_playground.js"
   }
 }
+

@@ -1,11 +1,11 @@
-import { IProductModuleService } from "@medusajs/framework/types"
+import { IProductModuleService } from "@vikrai/framework/types"
 import {
   Modules,
   ProductStatus,
   toMikroORMEntity,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 import { Product, ProductOption } from "@models"
-import { moduleIntegrationTestRunner } from "@medusajs/test-utils"
+import { moduleIntegrationTestRunner } from "@vikrai/test-utils"
 
 jest.setTimeout(30000)
 
@@ -310,3 +310,4 @@ moduleIntegrationTestRunner<IProductModuleService>({
     })
   },
 })
+

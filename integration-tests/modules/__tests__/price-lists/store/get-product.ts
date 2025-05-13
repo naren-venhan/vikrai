@@ -1,5 +1,5 @@
-import { PriceListStatus, PriceListType } from "@medusajs/utils"
-import { medusaIntegrationTestRunner } from "@medusajs/test-utils"
+import { PriceListStatus, PriceListType } from "@vikrai/utils"
+import { vikraiIntegrationTestRunner } from "@vikrai/test-utils"
 import {
   createAdminUser,
   generatePublishableKey,
@@ -11,15 +11,15 @@ jest.setTimeout(50000)
 
 const adminHeaders = {
   headers: {
-    "x-medusa-access-token": "test_token",
+    "x-vikrai-access-token": "test_token",
   },
 }
 
 const env = {
-  MEDUSA_FF_MEDUSA_V2: true,
+  vikrai_FF_vikrai_V2: true,
 }
 
-medusaIntegrationTestRunner({
+vikraiIntegrationTestRunner({
   env,
   testSuite: ({ dbConnection, getContainer, api }) => {
     describe.skip("GET /store/products/:id", () => {
@@ -263,3 +263,4 @@ medusaIntegrationTestRunner({
     })
   },
 })
+

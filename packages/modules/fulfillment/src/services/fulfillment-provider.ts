@@ -12,12 +12,12 @@ import {
   IFulfillmentProvider,
   Logger,
   ValidateFulfillmentDataContext,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import {
-  MedusaError,
+  vikraiError,
   ModulesSdkUtils,
   promiseAll,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 import { FulfillmentProvider } from "@models"
 
 type InjectedDependencies = {
@@ -28,7 +28,7 @@ type InjectedDependencies = {
 
 // TODO rework DTO's
 
-export default class FulfillmentProviderService extends ModulesSdkUtils.MedusaInternalService<InjectedDependencies>(
+export default class FulfillmentProviderService extends ModulesSdkUtils.vikraiInternalService<InjectedDependencies>(
   FulfillmentProvider
 ) {
   protected readonly fulfillmentProviderRepository_: DAL.RepositoryService
@@ -48,8 +48,8 @@ export default class FulfillmentProviderService extends ModulesSdkUtils.MedusaIn
     optionName?: string
   ) {
     if (!(providerClass as any).identifier) {
-      throw new MedusaError(
-        MedusaError.Types.INVALID_ARGUMENT,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_ARGUMENT,
         `Trying to register a fulfillment provider without an identifier.`
       )
     }
@@ -152,3 +152,4 @@ Please make sure that the provider is registered in the container and it is conf
     return await provider.createReturnFulfillment(fulfillment)
   }
 }
+

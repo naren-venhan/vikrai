@@ -1,12 +1,12 @@
 "use client"
 
-import { Text } from "@medusajs/ui"
+import { Text } from "@vikrai/ui"
 import clsx from "clsx"
 import Link from "next/link"
 import React, { useEffect, useMemo, useRef, useState } from "react"
 import { WorkflowStepUi } from "types"
 import { InlineCode, MarkdownContent, Tooltip } from "../../.."
-import { Bolt, InformationCircle } from "@medusajs/icons"
+import { Bolt, InformationCircle } from "@vikrai/icons"
 import { getBrowser } from "../../../../utils"
 
 export type WorkflowDiagramNodeProps = {
@@ -86,19 +86,19 @@ export const WorkflowDiagramStepNode = ({ step }: WorkflowDiagramNodeProps) => {
       >
         <div
           className={clsx(
-            "shadow-borders-base flex w-fit bg-medusa-bg-base",
+            "shadow-borders-base flex w-fit bg-vikrai-bg-base",
             "items-center rounded-docs_sm py-docs_0.125 px-docs_0.5",
             (step.type === "hook" || step.when) && "gap-x-docs_0.125"
           )}
           data-step-id={step.name}
         >
           {step.type === "hook" && (
-            <div className="flex size-[20px] items-center justify-center text-medusa-tag-orange-icon">
+            <div className="flex size-[20px] items-center justify-center text-vikrai-tag-orange-icon">
               <Bolt />
             </div>
           )}
           {step.when && (
-            <div className="flex size-[20px] items-center justify-center text-medusa-tag-green-icon">
+            <div className="flex size-[20px] items-center justify-center text-vikrai-tag-green-icon">
               <InformationCircle />
             </div>
           )}
@@ -115,3 +115,4 @@ export const WorkflowDiagramStepNode = ({ step }: WorkflowDiagramNodeProps) => {
     </Tooltip>
   )
 }
+

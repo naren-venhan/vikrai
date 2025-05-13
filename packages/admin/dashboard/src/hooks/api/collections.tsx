@@ -1,5 +1,5 @@
-import { FetchError } from "@medusajs/js-sdk"
-import { FindParams, HttpTypes, PaginatedResponse } from "@medusajs/types"
+import { FetchError } from "@vikrai/js-sdk"
+import { FindParams, HttpTypes, PaginatedResponse } from "@vikrai/types"
 import {
   QueryKey,
   UseMutationOptions,
@@ -147,3 +147,4 @@ export const useDeleteCollection = (
     ...options,
   })
 }
+

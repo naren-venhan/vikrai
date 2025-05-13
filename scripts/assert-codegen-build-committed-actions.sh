@@ -7,8 +7,8 @@ IS_CI="${CI:-false}"
 
 if [ "$IS_CI" = true ]; then
   git config --local url."https://github.com/".insteadOf git@github.com:
-  git config --local user.name "Medusajs Bot"
-  git config --local user.email "core@medusa-commerce.com"
+  git config --local user.name "vikrai Bot"
+  git config --local user.email "core@vikrai-commerce.com"
 fi
 
 FILE_CHANGES=$(git status --porcelain=v1 | grep 'packages/generated')

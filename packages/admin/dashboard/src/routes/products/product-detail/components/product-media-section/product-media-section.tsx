@@ -1,4 +1,4 @@
-import { PencilSquare, ThumbnailBadge } from "@medusajs/icons"
+import { PencilSquare, ThumbnailBadge } from "@vikrai/icons"
 import {
   Button,
   Checkbox,
@@ -9,13 +9,13 @@ import {
   Tooltip,
   clx,
   usePrompt,
-} from "@medusajs/ui"
+} from "@vikrai/ui"
 import { useState } from "react"
 import { useTranslation } from "react-i18next"
 import { Link } from "react-router-dom"
 import { ActionMenu } from "../../../../../components/common/action-menu"
 import { useUpdateProduct } from "../../../../../hooks/api/products"
-import { HttpTypes } from "@medusajs/types"
+import { HttpTypes } from "@vikrai/types"
 
 type ProductMedisaSectionProps = {
   product: HttpTypes.AdminProduct
@@ -206,3 +206,4 @@ const getMedia = (product: Product) => {
 
   return media
 }
+

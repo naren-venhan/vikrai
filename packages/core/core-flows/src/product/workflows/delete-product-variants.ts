@@ -1,14 +1,14 @@
 import {
   Modules,
   ProductVariantWorkflowEvents,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 import {
   WorkflowData,
   WorkflowResponse,
   createHook,
   createWorkflow,
   transform,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import {
   emitEventStep,
   removeRemoteLinkStep,
@@ -30,7 +30,7 @@ export type DeleteProductVariantsWorkflowInput = {
 export const deleteProductVariantsWorkflowId = "delete-product-variants"
 /**
  * This workflow deletes one or more product variants. It's used by the 
- * [Delete Product Variants Admin API Route](https://docs.medusajs.com/api/admin#products_deleteproductsidvariantsvariant_id).
+ * [Delete Product Variants Admin API Route](https://docs.vikrai.com/api/admin#products_deleteproductsidvariantsvariant_id).
  * 
  * This workflow has a hook that allows you to perform custom actions after the product variants are deleted. For example, 
  * you can delete custom records linked to the product variants.
@@ -121,3 +121,4 @@ export const deleteProductVariantsWorkflow = createWorkflow(
     })
   }
 )
+

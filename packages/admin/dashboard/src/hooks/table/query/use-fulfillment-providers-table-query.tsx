@@ -1,4 +1,4 @@
-import { HttpTypes } from "@medusajs/types"
+import { HttpTypes } from "@vikrai/types"
 import { useQueryParams } from "../../use-query-params"
 
 type UseFulfillmentProviderTableQueryProps = {
@@ -29,3 +29,4 @@ export const useFulfillmentProvidersTableQuery = ({
     raw: queryObject,
   }
 }
+

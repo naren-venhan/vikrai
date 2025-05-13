@@ -1,4 +1,4 @@
-import { InternalModuleDeclaration } from "@medusajs/types"
+import { InternalModuleDeclaration } from "@vikrai/types"
 
 export class ModuleService {
   constructor(
@@ -7,3 +7,4 @@ export class ModuleService {
     public moduleDeclaration: InternalModuleDeclaration
   ) {}
 }
+

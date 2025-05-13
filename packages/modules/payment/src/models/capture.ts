@@ -1,4 +1,4 @@
-import { model } from "@medusajs/framework/utils"
+import { model } from "@vikrai/framework/utils"
 import Payment from "./payment"
 
 const Capture = model
@@ -19,3 +19,4 @@ const Capture = model
   ])
 
 export default Capture
+

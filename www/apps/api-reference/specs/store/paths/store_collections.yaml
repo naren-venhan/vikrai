@@ -7,17 +7,17 @@ get:
   x-authenticated: false
   externalDocs:
     url: >-
-      https://docs.medusajs.com/v2/resources/storefront-development/products/collections/list
+      https://docs.vikrai.com/v2/resources/storefront-development/products/collections/list
     description: 'Storefront guide: How to retrieve a list of collections.'
   parameters:
     - name: x-publishable-api-key
       in: header
-      description: Publishable API Key created in the Medusa Admin.
+      description: Publishable API Key created in the vikrai Admin.
       required: true
       schema:
         type: string
         externalDocs:
-          url: https://docs.medusajs.com/api/store#publishable-api-key
+          url: https://docs.vikrai.com/api/store#publishable-api-key
     - name: fields
       in: query
       description: >-
@@ -732,3 +732,4 @@ get:
       $ref: ../components/responses/invalid_request_error.yaml
     '500':
       $ref: ../components/responses/500_error.yaml
+

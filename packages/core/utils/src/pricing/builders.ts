@@ -4,7 +4,7 @@ import {
   PriceRuleDTO,
   ProductVariantDTO,
   UpdatePriceListPriceDTO,
-} from "@medusajs/types"
+} from "@vikrai/types"
 
 export function buildPriceListRules(
   priceListRules?: PriceListRuleDTO[]
@@ -75,3 +75,4 @@ export function buildPriceSetPricesForModule(
     }
   })
 }
+

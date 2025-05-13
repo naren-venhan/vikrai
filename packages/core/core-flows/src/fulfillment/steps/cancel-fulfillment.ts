@@ -1,6 +1,6 @@
-import { IFulfillmentModuleService } from "@medusajs/framework/types"
-import { Modules } from "@medusajs/framework/utils"
-import { StepResponse, createStep } from "@medusajs/framework/workflows-sdk"
+import { IFulfillmentModuleService } from "@vikrai/framework/types"
+import { Modules } from "@vikrai/framework/utils"
+import { StepResponse, createStep } from "@vikrai/framework/workflows-sdk"
 
 /**
  * The ID of the fulfillment to cancel.
@@ -23,3 +23,4 @@ export const cancelFulfillmentStep = createStep(
     return new StepResponse(void 0, id)
   }
 )
+

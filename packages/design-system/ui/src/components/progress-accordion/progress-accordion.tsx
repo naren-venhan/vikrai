@@ -5,7 +5,7 @@ import {
   CircleDottedLine,
   CircleHalfSolid,
   Plus,
-} from "@medusajs/icons"
+} from "@vikrai/icons"
 import { Accordion as RadixAccordion } from "radix-ui"
 import * as React from "react"
 
@@ -141,3 +141,4 @@ const ProgressAccordion = Object.assign(Root, {
 })
 
 export { ProgressAccordion }
+

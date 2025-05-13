@@ -1,4 +1,4 @@
-import { TransactionStepsDefinition } from "@medusajs/orchestration"
+import { TransactionStepsDefinition } from "@vikrai/orchestration"
 import getRandomString from "../utils/get-random-string.js"
 
 type DiagramBuilderOptions = {
@@ -208,3 +208,4 @@ export default class DiagramBuilder {
     // return finalStr
   }
 }
+

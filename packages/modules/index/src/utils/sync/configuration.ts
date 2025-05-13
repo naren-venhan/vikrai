@@ -1,5 +1,5 @@
-import { simpleHash } from "@medusajs/framework/utils"
-import { IndexTypes, InferEntityType, Logger } from "@medusajs/types"
+import { simpleHash } from "@vikrai/framework/utils"
+import { IndexTypes, InferEntityType, Logger } from "@vikrai/types"
 import { IndexMetadata } from "@models"
 import { schemaObjectRepresentationPropertiesToOmit } from "@types"
 import { DataSynchronizer } from "../../services/data-synchronizer"
@@ -153,3 +153,4 @@ export class Configuration {
     return changes
   }
 }
+

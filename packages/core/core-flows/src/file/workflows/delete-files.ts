@@ -1,4 +1,4 @@
-import { WorkflowData, createWorkflow } from "@medusajs/framework/workflows-sdk"
+import { WorkflowData, createWorkflow } from "@vikrai/framework/workflows-sdk"
 import { deleteFilesStep } from "../steps"
 
 export type DeleteFilesWorkflowInput = { ids: string[] }
@@ -6,9 +6,9 @@ export type DeleteFilesWorkflowInput = { ids: string[] }
 export const deleteFilesWorkflowId = "delete-files"
 /**
  * This workflow deletes one or more files. It's used by the
- * [Delete File Upload Admin API Route](https://docs.medusajs.com/api/admin#uploads_deleteuploadsid).
+ * [Delete File Upload Admin API Route](https://docs.vikrai.com/api/admin#uploads_deleteuploadsid).
  * 
- * The [File Module Provider](https://docs.medusajs.com/resources/infrastructure-modules/file) installed
+ * The [File Module Provider](https://docs.vikrai.com/resources/infrastructure-modules/file) installed
  * in your application will be used to delete the file from storage.
  * 
  * You can use this workflow within your customizations or your own custom workflows, allowing you to
@@ -32,3 +32,4 @@ export const deleteFilesWorkflow = createWorkflow(
     deleteFilesStep(input.ids)
   }
 )
+

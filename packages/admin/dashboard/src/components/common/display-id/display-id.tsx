@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next"
 import { useState } from "react"
 import copy from "copy-to-clipboard"
 
-import { clx, toast, Tooltip } from "@medusajs/ui"
+import { clx, toast, Tooltip } from "@vikrai/ui"
 
 type DisplayIdProps = {
   id: string
@@ -28,3 +28,4 @@ function DisplayId({ id, className }: DisplayIdProps) {
 }
 
 export default DisplayId
+

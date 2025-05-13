@@ -7,7 +7,7 @@ import {
   type CustomFieldFormTab,
   type CustomFieldFormZone,
   type CustomFieldModel,
-} from "@medusajs/admin-shared"
+} from "@vikrai/admin-shared"
 import fs from "fs/promises"
 import { outdent } from "outdent"
 import {
@@ -706,3 +706,4 @@ function getFormsArgument(
 
   return formProperty.value
 }
+

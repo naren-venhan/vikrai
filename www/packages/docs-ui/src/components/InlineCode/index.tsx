@@ -16,24 +16,24 @@ export const InlineCode = ({
     <CopyButton
       text={props.children as string}
       buttonClassName={clsx(
-        "bg-transparent border-0 p-0 inline text-medusa-fg-subtle group",
+        "bg-transparent border-0 p-0 inline text-vikrai-fg-subtle group",
         "font-monospace"
       )}
     >
       <code
         {...props}
         className={clsx(
-          "text-medusa-tag-neutral-text border",
+          "text-vikrai-tag-neutral-text border",
           "font-monospace text-code-label rounded-docs_sm py-0 px-[5px]",
           variant === "default" && [
-            "bg-medusa-tag-neutral-bg group-hover:bg-medusa-tag-neutral-bg-hover",
-            "group-active:bg-medusa-bg-subtle-pressed group-focus:bg-medusa-bg-subtle-pressed",
-            "border-medusa-tag-neutral-border",
+            "bg-vikrai-tag-neutral-bg group-hover:bg-vikrai-tag-neutral-bg-hover",
+            "group-active:bg-vikrai-bg-subtle-pressed group-focus:bg-vikrai-bg-subtle-pressed",
+            "border-vikrai-tag-neutral-border",
           ],
           variant === "grey-bg" && [
-            "bg-medusa-bg-switch-off group-hover:bg-medusa-bg-switch-off-hover",
-            "group-active:bg-medusa-bg-switch-off-hover group-focus:bg-medusa-switch-off-hover",
-            "border-medusa-border-strong",
+            "bg-vikrai-bg-switch-off group-hover:bg-vikrai-bg-switch-off-hover",
+            "group-active:bg-vikrai-bg-switch-off-hover group-focus:bg-vikrai-switch-off-hover",
+            "border-vikrai-border-strong",
           ],
           props.className
         )}
@@ -41,3 +41,4 @@ export const InlineCode = ({
     </CopyButton>
   )
 }
+

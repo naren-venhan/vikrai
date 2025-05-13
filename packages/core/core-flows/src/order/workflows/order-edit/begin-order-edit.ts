@@ -2,14 +2,14 @@ import {
   OrderChangeDTO,
   OrderDTO,
   OrderWorkflow,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import {
   WorkflowData,
   WorkflowResponse,
   createStep,
   createWorkflow,
   transform,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { useRemoteQueryStep } from "../../../common"
 import { createOrderChangeStep } from "../../steps/create-order-change"
 import { throwIfOrderIsCancelled } from "../../utils/order-validation"
@@ -30,8 +30,8 @@ export type BeginOrderEditValidationStepInput = {
  * 
  * :::note
  * 
- * You can retrieve an order's details using [Query](https://docs.medusajs.com/learn/fundamentals/module-links/query),
- * or [useQueryGraphStep](https://docs.medusajs.com/resources/references/medusa-workflows/steps/useQueryGraphStep).
+ * You can retrieve an order's details using [Query](https://docs.vikrai.com/learn/fundamentals/module-links/query),
+ * or [useQueryGraphStep](https://docs.vikrai.com/resources/references/vikrai-workflows/steps/useQueryGraphStep).
  * 
  * :::
  * 
@@ -53,7 +53,7 @@ export const beginOrderEditValidationStep = createStep(
 export const beginOrderEditOrderWorkflowId = "begin-order-edit-order"
 /**
  * This workflow creates an order edit request. It' used by the
- * [Create Order Edit Admin API Route](https://docs.medusajs.com/api/admin#order-edits_postorderedits).
+ * [Create Order Edit Admin API Route](https://docs.vikrai.com/api/admin#order-edits_postorderedits).
  * 
  * To request the order edit, use the {@link requestOrderEditRequestWorkflow}. The order edit is then only applied after the 
  * order edit is confirmed using the {@link confirmOrderEditRequestWorkflow}.
@@ -100,3 +100,4 @@ export const beginOrderEditOrderWorkflow = createWorkflow(
     return new WorkflowResponse(createOrderChangeStep(orderChangeInput))
   }
 )
+

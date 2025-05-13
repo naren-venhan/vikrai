@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next"
 
 import { StatusCell } from "../../common/status-cell"
-import { HttpTypes } from "@medusajs/types"
+import { HttpTypes } from "@vikrai/types"
 
 type ProductStatusCellProps = {
   status: HttpTypes.AdminProductStatus
@@ -29,3 +29,4 @@ export const ProductStatusHeader = () => {
     </div>
   )
 }
+

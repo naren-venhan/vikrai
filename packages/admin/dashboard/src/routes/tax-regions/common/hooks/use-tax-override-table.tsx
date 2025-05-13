@@ -1,4 +1,4 @@
-import { HttpTypes } from "@medusajs/types"
+import { HttpTypes } from "@vikrai/types"
 import {
   OnChangeFn,
   PaginationState,
@@ -90,3 +90,4 @@ export const useTaxOverrideTable = ({
     table,
   }
 }
+

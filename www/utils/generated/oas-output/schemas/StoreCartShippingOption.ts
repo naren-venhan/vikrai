@@ -93,7 +93,7 @@
  *     type: object
  *     description: The shipping option's data, useful for the provider handling fulfillment.
  *     externalDocs:
- *       url: https://docs.medusajs.com/v2/resources/commerce-modules/fulfillment/shipping-option#data-property
+ *       url: https://docs.vikrai.com/v2/resources/commerce-modules/fulfillment/shipping-option#data-property
  *   prices:
  *     type: array
  *     description: The shipping option's prices.
@@ -107,4 +107,5 @@
  *     description: Whether the shipping option's location doesn't have sufficient quantity for any of the cart's items.
  * 
 */
+
 

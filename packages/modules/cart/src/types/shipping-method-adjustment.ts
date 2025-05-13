@@ -1,4 +1,4 @@
-import { BigNumberInput } from "@medusajs/framework/types"
+import { BigNumberInput } from "@vikrai/framework/types"
 
 export interface CreateShippingMethodAdjustmentDTO {
   shipping_method_id: string
@@ -17,3 +17,4 @@ export interface UpdateShippingMethodAdjustmentDTO {
   promotion_id?: string
   provider_id?: string
 }
+

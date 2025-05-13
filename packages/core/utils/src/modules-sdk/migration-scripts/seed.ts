@@ -1,4 +1,4 @@
-import { LoaderOptions, Logger, ModulesSdkTypes } from "@medusajs/types"
+import { LoaderOptions, Logger, ModulesSdkTypes } from "@vikrai/types"
 import { EntitySchema } from "@mikro-orm/core"
 import { EOL } from "os"
 import { resolve } from "path"
@@ -74,3 +74,4 @@ export function buildSeedScript({
     await orm.close(true)
   }
 }
+

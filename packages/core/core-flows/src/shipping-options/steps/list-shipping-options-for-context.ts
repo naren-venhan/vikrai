@@ -2,9 +2,9 @@ import {
   FindConfig,
   IFulfillmentModuleService,
   ShippingOptionDTO,
-} from "@medusajs/framework/types"
-import { Modules } from "@medusajs/framework/utils"
-import { StepResponse, createStep } from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/types"
+import { Modules } from "@vikrai/framework/utils"
+import { StepResponse, createStep } from "@vikrai/framework/workflows-sdk"
 
 /**
  * The data to retrieve the list of shipping options.
@@ -22,7 +22,7 @@ export interface ListShippingOptionsForContextStepInput {
    * The fields and relations to select in the returned shipping options,
    * along with pagination and sorting options.
    * 
-   * Learn more in the [service factory reference](https://docs.medusajs.com/resources/service-factory-reference/methods/list).
+   * Learn more in the [service factory reference](https://docs.vikrai.com/resources/service-factory-reference/methods/list).
    */
   config?: FindConfig<ShippingOptionDTO>
 }
@@ -59,7 +59,7 @@ export const listShippingOptionsForContextStepId =
  * ```
  * 
  * Learn more about paginating records and selecting fields in the 
- * [service factory reference](https://docs.medusajs.com/resources/service-factory-reference/methods/list).
+ * [service factory reference](https://docs.vikrai.com/resources/service-factory-reference/methods/list).
  */
 export const listShippingOptionsForContextStep = createStep(
   listShippingOptionsForContextStepId,
@@ -77,3 +77,4 @@ export const listShippingOptionsForContextStep = createStep(
     return new StepResponse(shippingOptions)
   }
 )
+

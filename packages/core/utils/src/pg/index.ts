@@ -4,7 +4,7 @@
 |--------------------------------------------------------------------------
 |
 | @note
-| These utlities does not rely on an MedusaJS application and neither
+| These utlities does not rely on an vikrai application and neither
 | uses the Mikro ORM.
 | The goal here is to run DB operations without booting the application.
 |
@@ -50,3 +50,4 @@ export async function dbExists(client: Client, databaseName: string) {
   )
   return !!result.rowCount
 }
+

@@ -1,4 +1,4 @@
-import { HttpTypes } from "@medusajs/types"
+import { HttpTypes } from "@vikrai/types"
 import { Client } from "../client"
 import { ClientHeaders } from "../types"
 
@@ -16,7 +16,7 @@ export class Plugin {
   }
 
   /**
-   * This method retrieves the list of plugins installed in a Medusa application.
+   * This method retrieves the list of plugins installed in a vikrai application.
    * 
    * @param headers - Headers to pass in the request.
    * @returns The list of plugins.
@@ -37,3 +37,4 @@ export class Plugin {
     )
   }
 }
+

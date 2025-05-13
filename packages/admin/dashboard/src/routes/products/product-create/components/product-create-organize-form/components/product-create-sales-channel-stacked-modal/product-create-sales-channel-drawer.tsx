@@ -1,9 +1,9 @@
-import { HttpTypes } from "@medusajs/types"
+import { HttpTypes } from "@vikrai/types"
 import {
   Button,
   createDataTableColumnHelper,
   DataTableRowSelectionState,
-} from "@medusajs/ui"
+} from "@vikrai/ui"
 import { useEffect, useMemo, useState } from "react"
 import { UseFormReturn } from "react-hook-form"
 import { useTranslation } from "react-i18next"
@@ -158,3 +158,4 @@ const useColumns = () => {
 
   return useMemo(() => [columnHelper.select(), ...base], [base])
 }
+

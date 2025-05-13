@@ -1,4 +1,4 @@
-import { I18nProvider as Provider } from "@medusajs/ui"
+import { I18nProvider as Provider } from "@vikrai/ui"
 import { PropsWithChildren } from "react"
 import { useTranslation } from "react-i18next"
 import { languages } from "../../i18n/languages"
@@ -18,3 +18,4 @@ export const I18nProvider = ({ children }: I18nProviderProps) => {
 
   return <Provider locale={formatLocaleCode(locale)}>{children}</Provider>
 }
+

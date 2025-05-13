@@ -16,7 +16,7 @@ const PageTitleProvider = ({ children }: PageTitleProviderProps) => {
   const { displayedArea } = useArea()
 
   useEffect(() => {
-    const titleSuffix = `Medusa ${displayedArea} API Reference`
+    const titleSuffix = `vikrai ${displayedArea} API Reference`
 
     if (!activePath?.length) {
       document.title = titleSuffix
@@ -43,3 +43,4 @@ const PageTitleProvider = ({ children }: PageTitleProviderProps) => {
 }
 
 export default PageTitleProvider
+

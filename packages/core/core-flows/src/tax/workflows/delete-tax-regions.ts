@@ -2,7 +2,7 @@ import {
   WorkflowData,
   WorkflowResponse,
   createWorkflow,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { deleteTaxRegionsStep } from "../steps"
 
 /**
@@ -18,7 +18,7 @@ export type DeleteTaxRegionsWorkflowInput = {
 export const deleteTaxRegionsWorkflowId = "delete-tax-regions"
 /**
  * This workflow deletes one or more tax regions. It's used by the
- * [Delete Tax Region Admin API Route](https://docs.medusajs.com/api/admin#tax-regions_deletetaxregionsid).
+ * [Delete Tax Region Admin API Route](https://docs.vikrai.com/api/admin#tax-regions_deletetaxregionsid).
  * 
  * You can use this workflow within your own customizations or custom workflows, allowing you
  * to delete tax regions in your custom flows.
@@ -43,3 +43,4 @@ export const deleteTaxRegionsWorkflow = createWorkflow(
     return new WorkflowResponse(deleteTaxRegionsStep(input.ids))
   }
 )
+

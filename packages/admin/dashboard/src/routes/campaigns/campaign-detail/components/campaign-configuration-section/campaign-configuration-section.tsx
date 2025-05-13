@@ -1,7 +1,7 @@
-import { HttpTypes } from "@medusajs/types"
-import { Container, Heading } from "@medusajs/ui"
+import { HttpTypes } from "@vikrai/types"
+import { Container, Heading } from "@vikrai/ui"
 
-import { PencilSquare } from "@medusajs/icons"
+import { PencilSquare } from "@vikrai/icons"
 import { useTranslation } from "react-i18next"
 import { ActionMenu } from "../../../../../components/common/action-menu"
 import { DateRangeDisplay } from "../../../../../components/common/date-range-display"
@@ -41,3 +41,4 @@ export const CampaignConfigurationSection = ({
     </Container>
   )
 }
+

@@ -1,5 +1,5 @@
-import { ArrowUpDown } from "@medusajs/icons"
-import { DropdownMenu, IconButton } from "@medusajs/ui"
+import { ArrowUpDown } from "@vikrai/icons"
+import { DropdownMenu, IconButton } from "@vikrai/ui"
 import { useState } from "react"
 import { useTranslation } from "react-i18next"
 import { useSearchParams } from "react-router-dom"
@@ -146,3 +146,4 @@ export const OrderBy = ({ keys }: OrderByProps) => {
     </DropdownMenu>
   )
 }
+

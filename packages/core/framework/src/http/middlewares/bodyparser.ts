@@ -1,10 +1,10 @@
 import { memoize } from "lodash"
-import logger from "@medusajs/cli/dist/reporter"
+import logger from "@vikrai/cli/dist/reporter"
 import { json, NextFunction, RequestHandler, text, urlencoded } from "express"
 
 import type {
-  MedusaRequest,
-  MedusaResponse,
+  vikraiRequest,
+  vikraiResponse,
   MiddlewareVerb,
   ParserConfigArgs,
   MiddlewareFunction,
@@ -20,7 +20,7 @@ const parsers = {
     return json({
       limit: options?.sizeLimit,
       verify: options?.preserveRawBody
-        ? (req: MedusaRequest, res: MedusaResponse, buf: Buffer) => {
+        ? (req: vikraiRequest, res: vikraiResponse, buf: Buffer) => {
             req.rawBody = buf
           }
         : undefined,
@@ -57,8 +57,8 @@ export function createBodyParserMiddlewaresStack(
   return (["json", "text", "urlencoded"] as (keyof typeof parsers)[]).map(
     (parser) => {
       function bodyParser(
-        req: MedusaRequest,
-        res: MedusaResponse,
+        req: vikraiRequest,
+        res: vikraiResponse,
         next: NextFunction
       ) {
         const matchingRoute = routesFinder.find(
@@ -94,3 +94,4 @@ export function createBodyParserMiddlewaresStack(
     }
   )
 }
+

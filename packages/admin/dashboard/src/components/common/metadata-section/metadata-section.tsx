@@ -1,5 +1,5 @@
-import { ArrowUpRightOnBox } from "@medusajs/icons"
-import { Badge, Container, Heading, IconButton } from "@medusajs/ui"
+import { ArrowUpRightOnBox } from "@vikrai/icons"
+import { Badge, Container, Heading, IconButton } from "@vikrai/ui"
 import { useTranslation } from "react-i18next"
 import { Link } from "react-router-dom"
 
@@ -47,3 +47,4 @@ export const MetadataSection = <TData extends object>({
     </Container>
   )
 }
+

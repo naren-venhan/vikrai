@@ -1,11 +1,11 @@
-import { TransactionState } from "@medusajs/utils"
+import { TransactionState } from "@vikrai/utils"
 import { DistributedTransactionType } from "./distributed-transaction"
 import { TransactionStep } from "./transaction-step"
 export {
   TransactionHandlerType,
   TransactionState,
   TransactionStepStatus,
-} from "@medusajs/utils"
+} from "@vikrai/utils"
 
 /**
  * Defines the structure and behavior of a single step within a transaction workflow.
@@ -119,14 +119,14 @@ export type TransactionModelOptions = {
   /**
    * If true, the state of the transaction will be persisted.
    *
-   * Learn more in [this documentation](https://docs.medusajs.com/learn/fundamentals/workflows/store-executions).
+   * Learn more in [this documentation](https://docs.vikrai.com/learn/fundamentals/workflows/store-executions).
    */
   store?: boolean
 
   /**
    * The number of seconds that the workflow execution should be stored in the database.
    *
-   * Learn more in [this documentation](https://docs.medusajs.com/learn/fundamentals/workflows/store-executions).
+   * Learn more in [this documentation](https://docs.vikrai.com/learn/fundamentals/workflows/store-executions).
    */
   retentionTime?: number
 
@@ -284,3 +284,4 @@ export type TransactionFlow = {
     [key: string]: TransactionStep
   }
 }
+

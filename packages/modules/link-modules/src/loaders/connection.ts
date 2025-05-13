@@ -3,8 +3,8 @@ import {
   LoaderOptions,
   ModuleServiceInitializeCustomDataLayerOptions,
   ModuleServiceInitializeOptions,
-} from "@medusajs/framework/types"
-import { ModulesSdkUtils } from "@medusajs/framework/utils"
+} from "@vikrai/framework/types"
+import { ModulesSdkUtils } from "@vikrai/framework/utils"
 
 import { EntitySchema } from "@mikro-orm/core"
 
@@ -33,3 +33,4 @@ export function connectionLoader(entity: EntitySchema) {
     })
   }
 }
+

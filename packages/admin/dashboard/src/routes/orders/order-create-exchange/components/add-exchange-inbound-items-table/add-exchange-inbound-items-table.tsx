@@ -1,4 +1,4 @@
-import { AdminOrderLineItem, DateComparisonOperator } from "@medusajs/types"
+import { AdminOrderLineItem, DateComparisonOperator } from "@vikrai/types"
 import { OnChangeFn, RowSelectionState } from "@tanstack/react-table"
 import { useMemo, useState } from "react"
 
@@ -191,3 +191,4 @@ const defaultOperators = {
   lt: undefined,
   lte: undefined,
 }
+

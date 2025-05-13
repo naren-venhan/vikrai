@@ -1,6 +1,6 @@
-import { InformationCircle } from "@medusajs/icons"
-import { HttpTypes } from "@medusajs/types"
-import { Switch, Tooltip } from "@medusajs/ui"
+import { InformationCircle } from "@vikrai/icons"
+import { HttpTypes } from "@vikrai/types"
+import { Switch, Tooltip } from "@vikrai/ui"
 import { useCallback, useMemo } from "react"
 
 import { useTranslation } from "react-i18next"
@@ -224,3 +224,4 @@ export const useProductStockColumns = (
     [locations, getIsDisabled, t]
   )
 }
+

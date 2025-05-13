@@ -2,16 +2,16 @@ import {
   ApplicationMethodTargetTypeValues,
   PromotionRuleDTO,
   PromotionRuleOperatorValues,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import {
   ApplicationMethodTargetType,
   MathBN,
-  MedusaError,
+  vikraiError,
   PromotionRuleOperator,
   isPresent,
   isString,
   pickValueFromObject,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 import { CreatePromotionRuleDTO } from "@types"
 
 export function validatePromotionRuleAttributes(
@@ -47,7 +47,7 @@ export function validatePromotionRuleAttributes(
 
   if (!errors.length) return
 
-  throw new MedusaError(MedusaError.Types.INVALID_DATA, errors.join(", "))
+  throw new vikraiError(vikraiError.Types.INVALID_DATA, errors.join(", "))
 }
 
 export function areRulesValidForContext(
@@ -146,3 +146,4 @@ export function evaluateRuleValueCondition(
       return false
   }
 }
+

@@ -1,4 +1,4 @@
-import { Table } from "@medusajs/ui"
+import { Table } from "@vikrai/ui"
 import { useMemo, useState } from "react"
 
 type Order = {
@@ -133,3 +133,4 @@ export default function TableDemo() {
     </div>
   )
 }
+

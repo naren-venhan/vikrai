@@ -1,4 +1,4 @@
-import { toast } from "@medusajs/ui"
+import { toast } from "@vikrai/ui"
 import { useEffect, useState } from "react"
 import { useTranslation } from "react-i18next"
 import { useNavigate, useParams } from "react-router-dom"
@@ -63,3 +63,4 @@ export const OrderEditCreate = () => {
     </RouteFocusModal>
   )
 }
+

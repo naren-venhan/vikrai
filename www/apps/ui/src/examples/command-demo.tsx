@@ -1,4 +1,4 @@
-import { Badge, Command } from "@medusajs/ui"
+import { Badge, Command } from "@vikrai/ui"
 
 export default function CommandDemo() {
   return (
@@ -14,3 +14,4 @@ export default function CommandDemo() {
     </div>
   )
 }
+

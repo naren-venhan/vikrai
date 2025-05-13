@@ -1,5 +1,5 @@
-import { HttpTypes } from "@medusajs/types"
-import { Button, Container, Heading } from "@medusajs/ui"
+import { HttpTypes } from "@vikrai/types"
+import { Button, Container, Heading } from "@vikrai/ui"
 import { useTranslation } from "react-i18next"
 import { Link } from "react-router-dom"
 import { ItemLocationListTable } from "./location-levels-table/location-list-table"
@@ -24,3 +24,4 @@ export const InventoryItemLocationLevelsSection = ({
     </Container>
   )
 }
+

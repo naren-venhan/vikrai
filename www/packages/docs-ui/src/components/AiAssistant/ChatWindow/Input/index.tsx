@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react"
 import clsx from "clsx"
 import { useAiAssistantChat } from "../../../../providers/AiAssistant/Chat"
-import { ArrowUpCircleSolid } from "@medusajs/icons"
+import { ArrowUpCircleSolid } from "@vikrai/icons"
 import { useAiAssistant } from "../../../../providers"
 
 export const AiAssistantChatWindowInput = () => {
@@ -90,7 +90,7 @@ export const AiAssistantChatWindowInput = () => {
   return (
     <div
       className={clsx(
-        "px-docs_1 py-docs_0.75 border-t border-medusa-border-base"
+        "px-docs_1 py-docs_0.75 border-t border-vikrai-border-base"
       )}
     >
       <form
@@ -100,10 +100,10 @@ export const AiAssistantChatWindowInput = () => {
       >
         <textarea
           className={clsx(
-            "appearance-none text-base md:text-small placeholder:text-medusa-fg-muted",
-            "text-medusa-fg-base max-h-[210px] overflow-auto resize-none bg-transparent",
+            "appearance-none text-base md:text-small placeholder:text-vikrai-fg-muted",
+            "text-vikrai-fg-base max-h-[210px] overflow-auto resize-none bg-transparent",
             "focus:outline-none focus:ring-0 disabled:cursor-not-allowed max-h-[210px]",
-            "disabled:!bg-transparent disabled:text-medusa-fg-disabled"
+            "disabled:!bg-transparent disabled:text-vikrai-fg-disabled"
           )}
           value={question}
           onChange={(e) => setQuestion(e.target.value)}
@@ -112,13 +112,13 @@ export const AiAssistantChatWindowInput = () => {
           onTouchMove={handleTouch}
           onTouchEnd={handleTouch}
           ref={inputRef as React.RefObject<HTMLTextAreaElement | null>}
-          placeholder="Ask me a question about Medusa..."
+          placeholder="Ask me a question about vikrai..."
           disabled={loading}
         />
         <div className="flex items-center justify-end">
           <button
             className={clsx(
-              "appearance-none p-0 text-medusa-fg-base disabled:text-medusa-fg-disabled",
+              "appearance-none p-0 text-vikrai-fg-base disabled:text-vikrai-fg-disabled",
               "transition-colors"
             )}
             disabled={!question || loading}
@@ -130,3 +130,4 @@ export const AiAssistantChatWindowInput = () => {
     </div>
   )
 }
+

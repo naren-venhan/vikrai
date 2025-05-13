@@ -7,7 +7,7 @@ post:
     user, such as the Accept Invite API route.
   externalDocs:
     url: >-
-      https://docs.medusajs.com/v2/resources/commerce-modules/auth/authentication-route#1-basic-authentication-flow
+      https://docs.vikrai.com/v2/resources/commerce-modules/auth/authentication-route#1-basic-authentication-flow
     description: Learn about the basic authentication flow.
   x-authenticated: false
   parameters:
@@ -28,7 +28,7 @@ post:
             The input data necessary for authentication. For example, for
             email-pass authentication, pass `email` and `password` properties.
           example:
-            email: admin@medusa-test.com
+            email: admin@vikrai-test.com
             password: supersecret
   x-codeSamples:
     - lang: JavaScript
@@ -60,3 +60,4 @@ post:
       $ref: ../components/responses/invalid_request_error.yaml
     '500':
       $ref: ../components/responses/500_error.yaml
+

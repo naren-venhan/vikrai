@@ -1,10 +1,10 @@
 import {
   CreateStockLocationInput,
   IStockLocationService,
-} from "@medusajs/framework/types"
-import { StepResponse, createStep } from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/types"
+import { StepResponse, createStep } from "@vikrai/framework/workflows-sdk"
 
-import { Modules } from "@medusajs/framework/utils"
+import { Modules } from "@vikrai/framework/utils"
 
 /**
  * The stock locations to create.
@@ -39,3 +39,4 @@ export const createStockLocations = createStep(
     await stockLocationService.deleteStockLocations(createdStockLocationIds)
   }
 )
+

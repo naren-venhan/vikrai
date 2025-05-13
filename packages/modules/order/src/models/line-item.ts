@@ -1,4 +1,4 @@
-import { model } from "@medusajs/framework/utils"
+import { model } from "@vikrai/framework/utils"
 import { OrderLineItemAdjustment } from "./line-item-adjustment"
 import { OrderLineItemTaxLine } from "./line-item-tax-line"
 
@@ -73,3 +73,4 @@ const _OrderLineItem = model
   ])
 
 export const OrderLineItem = _OrderLineItem
+

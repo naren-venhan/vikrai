@@ -1,8 +1,8 @@
 import {
   PermanentStepFailureError,
   SkipStepResponse,
-} from "@medusajs/orchestration"
-import { OrchestrationUtils, isDefined } from "@medusajs/utils"
+} from "@vikrai/orchestration"
+import { OrchestrationUtils, isDefined } from "@vikrai/utils"
 
 /**
  * This class is used to create the response returned by a step. A step return its data by returning an instance of `StepResponse`.
@@ -47,12 +47,12 @@ export class StepResponse<TOutput, TCompensateInput = TOutput> {
    * @param message - An optional message to be logged.
    *
    * @example
-   * import { Product } from "@medusajs/medusa"
+   * import { Product } from "@vikrai/vikrai"
    * import {
    *   createStep,
    *   StepResponse,
    *   createWorkflow
-   * } from "@medusajs/workflows-sdk"
+   * } from "@vikrai/workflows-sdk"
    *
    * interface CreateProductInput {
    *   title: string
@@ -161,3 +161,4 @@ export class StepResponse<TOutput, TCompensateInput = TOutput> {
     }
   }
 }
+

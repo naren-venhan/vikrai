@@ -6,14 +6,14 @@ import {
   Logger,
   ModulesSdkTypes,
   RemoteQueryFunction,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import {
   MikroOrmBaseRepository as BaseRepository,
   ContainerRegistrationKeys,
   GraphQLUtils,
   Modules,
   ModulesSdkUtils,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 import { schemaObjectRepresentationPropertiesToOmit } from "@types"
 import {
   buildSchemaObjectRepresentation,
@@ -31,13 +31,13 @@ type InjectedDependencies = {
   [ContainerRegistrationKeys.QUERY]: RemoteQueryFunction
   storageProviderCtrOptions: unknown
   baseRepository: BaseRepository
-  indexMetadataService: ModulesSdkTypes.IMedusaInternalService<any>
-  indexSyncService: ModulesSdkTypes.IMedusaInternalService<any>
+  indexMetadataService: ModulesSdkTypes.IvikraiInternalService<any>
+  indexSyncService: ModulesSdkTypes.IvikraiInternalService<any>
   dataSynchronizer: DataSynchronizer
 }
 
 export default class IndexModuleService
-  extends ModulesSdkUtils.MedusaService({})
+  extends ModulesSdkUtils.vikraiService({})
   implements IndexTypes.IIndexService
 {
   private readonly container_: InjectedDependencies
@@ -53,11 +53,11 @@ export default class IndexModuleService
 
   protected storageProvider_: IndexTypes.StorageProvider
 
-  private get indexMetadataService_(): ModulesSdkTypes.IMedusaInternalService<any> {
+  private get indexMetadataService_(): ModulesSdkTypes.IvikraiInternalService<any> {
     return this.container_.indexMetadataService
   }
 
-  private get indexSyncService_(): ModulesSdkTypes.IMedusaInternalService<any> {
+  private get indexSyncService_(): ModulesSdkTypes.IvikraiInternalService<any> {
     return this.container_.indexSyncService
   }
 
@@ -194,3 +194,4 @@ export default class IndexModuleService
     return executableSchema
   }
 }
+

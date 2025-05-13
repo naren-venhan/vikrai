@@ -1,15 +1,15 @@
-import Medusa from "@medusajs/js-sdk"
+import vikrai from "@vikrai/js-sdk"
 
-let MEDUSA_BACKEND_URL = "http://localhost:9000"
+let vikrai_BACKEND_URL = "http://localhost:9000"
 
-if (process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL) {
-  MEDUSA_BACKEND_URL = process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL
+if (process.env.NEXT_PUBLIC_vikrai_BACKEND_URL) {
+  vikrai_BACKEND_URL = process.env.NEXT_PUBLIC_vikrai_BACKEND_URL
 }
 
-export const sdk = new Medusa({
-  baseUrl: MEDUSA_BACKEND_URL,
+export const sdk = new vikrai({
+  baseUrl: vikrai_BACKEND_URL,
   debug: process.env.NODE_ENV === "development",
-  publishableKey: process.env.NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY,
+  publishableKey: process.env.NEXT_PUBLIC_vikrai_PUBLISHABLE_KEY,
 })
 
 sdk.store.order.list()

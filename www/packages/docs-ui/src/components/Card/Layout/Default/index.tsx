@@ -1,7 +1,7 @@
 import React from "react"
 import clsx from "clsx"
 import { Badge, BorderedIcon, Link } from "@/components"
-import { ArrowUpRightOnBox, TriangleRightMini } from "@medusajs/icons"
+import { ArrowUpRightOnBox, TriangleRightMini } from "@vikrai/icons"
 import { CardProps } from "../../.."
 import { useIsExternalLink } from "../../../.."
 
@@ -36,7 +36,7 @@ export const CardDefaultLayout = ({
       return isHighlighted ? (
         <span
           key={index}
-          className="bg-medusa-tag-blue-bg px-px rounded-s-docs_xxs"
+          className="bg-vikrai-tag-blue-bg px-px rounded-s-docs_xxs"
         >
           {part}
         </span>
@@ -49,7 +49,7 @@ export const CardDefaultLayout = ({
   return (
     <div
       className={clsx(
-        "bg-medusa-bg-component w-full rounded-docs_DEFAULT",
+        "bg-vikrai-bg-component w-full rounded-docs_DEFAULT",
         "shadow-elevation-card-rest dark:shadow-elevation-card-rest-dark",
         "py-docs_0.5 px-docs_0.75 relative",
         "flex justify-start items-center gap-docs_0.75 transition-shadow",
@@ -61,7 +61,7 @@ export const CardDefaultLayout = ({
       {icon && (
         <BorderedIcon
           wrapperClassName={clsx(
-            "p-[4.5px] bg-medusa-bg-component-hover",
+            "p-[4.5px] bg-vikrai-bg-component-hover",
             iconClassName
           )}
           IconComponent={icon}
@@ -69,7 +69,7 @@ export const CardDefaultLayout = ({
       )}
       {image && (
         <BorderedIcon
-          wrapperClassName={clsx("bg-medusa-bg-base", iconClassName)}
+          wrapperClassName={clsx("bg-vikrai-bg-base", iconClassName)}
           icon={image}
         />
       )}
@@ -77,19 +77,19 @@ export const CardDefaultLayout = ({
         className={clsx("flex flex-col flex-1 overflow-auto", contentClassName)}
       >
         {title && (
-          <div className="text-small-plus text-medusa-fg-base truncate">
+          <div className="text-small-plus text-vikrai-fg-base truncate">
             {getHighlightedText(title)}
           </div>
         )}
         {text && (
-          <span className="text-small-plus text-medusa-fg-subtle">
+          <span className="text-small-plus text-vikrai-fg-subtle">
             {getHighlightedText(text)}
           </span>
         )}
         {children}
       </div>
       {badge && <Badge {...badge} />}
-      <span className="text-medusa-fg-subtle">
+      <span className="text-vikrai-fg-subtle">
         {RightIconComponent && <RightIconComponent />}
         {!RightIconComponent && isExternal && <ArrowUpRightOnBox />}
         {!RightIconComponent && !isExternal && <TriangleRightMini />}
@@ -105,3 +105,4 @@ export const CardDefaultLayout = ({
     </div>
   )
 }
+

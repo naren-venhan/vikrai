@@ -1,4 +1,4 @@
-import { DataTableEmptyStateProps } from "@medusajs/ui"
+import { DataTableEmptyStateProps } from "@vikrai/ui"
 import { useMemo } from "react"
 import { useTranslation } from "react-i18next"
 
@@ -20,3 +20,4 @@ export const useSalesChannelTableEmptyState = (): DataTableEmptyStateProps => {
     return content
   }, [t])
 }
+

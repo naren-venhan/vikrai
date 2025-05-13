@@ -1,4 +1,4 @@
-import { model, ProductUtils } from "@medusajs/framework/utils"
+import { model, ProductUtils } from "@vikrai/framework/utils"
 
 import ProductCategory from "./product-category"
 import ProductCollection from "./product-collection"
@@ -84,3 +84,4 @@ const Product = model
   ])
 
 export default Product
+

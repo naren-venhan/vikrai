@@ -97,7 +97,7 @@ export const NoteLayout = ({
       className={clsx(
         "py-[10px] px-docs_0.75 my-docs_1",
         "flex gap-docs_0.75 rounded-docs_DEFAULT items-stretch",
-        "bg-medusa-bg-component border border-medusa-border-base"
+        "bg-vikrai-bg-component border border-vikrai-border-base"
       )}
     >
       <span
@@ -105,16 +105,16 @@ export const NoteLayout = ({
           "rounded-full w-docs_0.25",
           // TODO remove once we use the new prerequisites component across docs
           (type === "default" || type === "check") &&
-            "bg-medusa-tag-neutral-icon",
-          (type === "error" || type === "warning") && "bg-medusa-tag-red-icon",
-          type === "success" && "bg-medusa-tag-green-icon",
+            "bg-vikrai-tag-neutral-icon",
+          (type === "error" || type === "warning") && "bg-vikrai-tag-red-icon",
+          type === "success" && "bg-vikrai-tag-green-icon",
           // TODO remove once all soon components are removed
-          type === "soon" && "bg-medusa-tag-blue-icon"
+          type === "soon" && "bg-vikrai-tag-blue-icon"
         )}
       ></span>
       <div className="flex-1">
-        <div className="text-small text-medusa-fg-subtle [&_ol]:!mb-0 [&_ul]:!mb-0">
-          <span className={clsx("text-small-plus text-medusa-fg-base")}>
+        <div className="text-small text-vikrai-fg-subtle [&_ol]:!mb-0 [&_ul]:!mb-0">
+          <span className={clsx("text-small-plus text-vikrai-fg-base")}>
             {title}
             {showColon ? ":" : ""}&nbsp;
           </span>
@@ -132,3 +132,4 @@ export const NoteLayout = ({
     </div>
   )
 }
+

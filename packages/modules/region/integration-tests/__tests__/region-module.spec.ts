@@ -1,6 +1,6 @@
-import { IRegionModuleService } from "@medusajs/framework/types"
-import { Module, Modules } from "@medusajs/framework/utils"
-import { moduleIntegrationTestRunner } from "@medusajs/test-utils"
+import { IRegionModuleService } from "@vikrai/framework/types"
+import { Module, Modules } from "@vikrai/framework/utils"
+import { moduleIntegrationTestRunner } from "@vikrai/test-utils"
 import { RegionModuleService } from "@services"
 
 jest.setTimeout(30000)
@@ -453,3 +453,4 @@ moduleIntegrationTestRunner<IRegionModuleService>({
     })
   },
 })
+

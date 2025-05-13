@@ -1,4 +1,4 @@
-import { InternalModuleDeclaration, LoaderOptions } from "@medusajs/types"
+import { InternalModuleDeclaration, LoaderOptions } from "@vikrai/types"
 import { mikroOrmConnectionLoader } from "./mikro-orm-connection-loader"
 
 /**
@@ -32,3 +32,4 @@ export function mikroOrmConnectionLoaderFactory({
     })
   }
 }
+

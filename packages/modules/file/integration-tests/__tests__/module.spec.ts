@@ -1,6 +1,6 @@
-import { IFileModuleService } from "@medusajs/framework/types"
-import { Module, Modules } from "@medusajs/framework/utils"
-import { moduleIntegrationTestRunner } from "@medusajs/test-utils"
+import { IFileModuleService } from "@vikrai/framework/types"
+import { Module, Modules } from "@vikrai/framework/utils"
+import { moduleIntegrationTestRunner } from "@vikrai/test-utils"
 import { FileModuleService } from "@services"
 import { resolve } from "path"
 
@@ -91,3 +91,4 @@ moduleIntegrationTestRunner<IFileModuleService>({
     })
   },
 })
+

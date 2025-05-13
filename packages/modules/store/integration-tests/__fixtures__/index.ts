@@ -1,4 +1,4 @@
-import { StoreTypes } from "@medusajs/framework/types"
+import { StoreTypes } from "@vikrai/framework/types"
 
 export const createStoreFixture: StoreTypes.CreateStoreDTO = {
   name: "Test store",
@@ -12,3 +12,4 @@ export const createStoreFixture: StoreTypes.CreateStoreDTO = {
     test: "test",
   },
 }
+

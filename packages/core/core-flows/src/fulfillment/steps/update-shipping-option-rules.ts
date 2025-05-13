@@ -2,9 +2,9 @@ import {
   IFulfillmentModuleService,
   UpdateFulfillmentShippingOptionRulesWorkflowDTO,
   UpdateShippingOptionRuleDTO,
-} from "@medusajs/framework/types"
-import { Modules } from "@medusajs/framework/utils"
-import { StepResponse, createStep } from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/types"
+import { Modules } from "@vikrai/framework/utils"
+import { StepResponse, createStep } from "@vikrai/framework/workflows-sdk"
 
 export const updateShippingOptionRulesStepId = "update-shipping-option-rules"
 /**
@@ -62,3 +62,4 @@ export const updateShippingOptionRulesStep = createStep(
     await fulfillmentModule.updateShippingOptionRules(previousRulesData)
   }
 )
+

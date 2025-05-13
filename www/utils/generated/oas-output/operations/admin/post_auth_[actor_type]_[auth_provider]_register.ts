@@ -4,7 +4,7 @@
  * summary: Retrieve Registration JWT Token
  * description: This API route retrieves a registration JWT token of a user that hasn't been registered yet. The token is used in the header of requests that create a user, such as the Accept Invite API route.
  * externalDocs:
- *   url: https://docs.medusajs.com/v2/resources/commerce-modules/auth/authentication-route#1-basic-authentication-flow
+ *   url: https://docs.vikrai.com/v2/resources/commerce-modules/auth/authentication-route#1-basic-authentication-flow
  *   description: Learn about the basic authentication flow.
  * x-authenticated: false
  * parameters:
@@ -23,15 +23,15 @@
  *         title: input
  *         description: The input data necessary for authentication. For example, for email-pass authentication, pass `email` and `password` properties.
  *         example:
- *           email: "admin@medusa-test.com"
+ *           email: "admin@vikrai-test.com"
  *           password: "supersecret"
  * x-codeSamples:
  *   - lang: JavaScript
  *     label: JS SDK
  *     source: |-
- *       import Medusa from "@medusajs/js-sdk"
+ *       import vikrai from "@vikrai/js-sdk"
  *       
- *       export const sdk = new Medusa({
+ *       export const sdk = new vikrai({
  *         baseUrl: import.meta.env.VITE_BACKEND_URL || "/",
  *         debug: import.meta.env.DEV,
  *         auth: {
@@ -59,7 +59,7 @@
  *       curl -X POST '{backend_url}/auth/user/emailpass/register' \
  *       -H 'Content-Type: application/json' \
  *       --data-raw '{
- *         "email": "admin@medusa-test.com",
+ *         "email": "admin@vikrai-test.com",
  *         "password": "supersecret"
  *       }'
  * tags:

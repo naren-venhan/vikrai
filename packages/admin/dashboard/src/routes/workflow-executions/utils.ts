@@ -1,4 +1,4 @@
-import { HttpTypes } from "@medusajs/types"
+import { HttpTypes } from "@vikrai/types"
 import { TFunction } from "i18next"
 import {
   STEP_ERROR_STATES,
@@ -101,3 +101,4 @@ export const getStepState = (
       return t("workflowExecutions.step.state.timeout")
   }
 }
+

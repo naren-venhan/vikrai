@@ -1,90 +1,90 @@
 export const user = [
   {
     "title": "Reset Password",
-    "path": "https://docs.medusajs.com/user-guide/reset-password"
+    "path": "https://docs.vikrai.com/user-guide/reset-password"
   },
   {
     "title": "Manage Profile",
-    "path": "https://docs.medusajs.com/user-guide/settings/profile"
+    "path": "https://docs.vikrai.com/user-guide/settings/profile"
   },
   {
     "title": "Manage Invites",
-    "path": "https://docs.medusajs.com/user-guide/settings/users/invites"
+    "path": "https://docs.vikrai.com/user-guide/settings/users/invites"
   },
   {
     "title": "Manage Users",
-    "path": "https://docs.medusajs.com/user-guide/settings/users"
+    "path": "https://docs.vikrai.com/user-guide/settings/users"
   },
   {
     "title": "createInviteStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/createInviteStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/createInviteStep"
   },
   {
     "title": "deleteInvitesStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/deleteInvitesStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/deleteInvitesStep"
   },
   {
     "title": "refreshInviteTokensStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/refreshInviteTokensStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/refreshInviteTokensStep"
   },
   {
     "title": "validateTokenStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/validateTokenStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/validateTokenStep"
   },
   {
     "title": "acceptInviteWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/acceptInviteWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/acceptInviteWorkflow"
   },
   {
     "title": "createInvitesWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createInvitesWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/createInvitesWorkflow"
   },
   {
     "title": "deleteInvitesWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/deleteInvitesWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/deleteInvitesWorkflow"
   },
   {
     "title": "refreshInviteTokensWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/refreshInviteTokensWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/refreshInviteTokensWorkflow"
   },
   {
     "title": "createUsersStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/createUsersStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/createUsersStep"
   },
   {
     "title": "deleteUsersStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/deleteUsersStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/deleteUsersStep"
   },
   {
     "title": "updateUsersStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/updateUsersStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/updateUsersStep"
   },
   {
     "title": "createUserAccountWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createUserAccountWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/createUserAccountWorkflow"
   },
   {
     "title": "createUsersWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createUsersWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/createUsersWorkflow"
   },
   {
     "title": "deleteUsersWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/deleteUsersWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/deleteUsersWorkflow"
   },
   {
     "title": "removeUserAccountWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/removeUserAccountWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/removeUserAccountWorkflow"
   },
   {
     "title": "updateUsersWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateUsersWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/updateUsersWorkflow"
   },
   {
     "title": "invite",
-    "path": "https://docs.medusajs.com/resources/references/js-sdk/admin/invite"
+    "path": "https://docs.vikrai.com/resources/references/js-sdk/admin/invite"
   },
   {
     "title": "user",
-    "path": "https://docs.medusajs.com/resources/references/js-sdk/admin/user"
+    "path": "https://docs.vikrai.com/resources/references/js-sdk/admin/user"
   }
 ]

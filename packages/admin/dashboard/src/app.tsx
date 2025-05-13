@@ -1,11 +1,11 @@
 import { DashboardApp } from "./dashboard-app"
 import { DashboardPlugin } from "./dashboard-app/types"
 
-import displayModule from "virtual:medusa/displays"
-import formModule from "virtual:medusa/forms"
-import menuItemModule from "virtual:medusa/menu-items"
-import routeModule from "virtual:medusa/routes"
-import widgetModule from "virtual:medusa/widgets"
+import displayModule from "virtual:vikrai/displays"
+import formModule from "virtual:vikrai/forms"
+import menuItemModule from "virtual:vikrai/menu-items"
+import routeModule from "virtual:vikrai/routes"
+import widgetModule from "virtual:vikrai/widgets"
 
 import "./index.css"
 
@@ -30,3 +30,4 @@ function App({ plugins = [] }: AppProps) {
 }
 
 export default App
+

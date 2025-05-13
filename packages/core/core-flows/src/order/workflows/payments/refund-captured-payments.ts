@@ -1,11 +1,11 @@
-import { PaymentDTO } from "@medusajs/framework/types"
-import { deepFlatMap, MathBN } from "@medusajs/framework/utils"
+import { PaymentDTO } from "@vikrai/framework/types"
+import { deepFlatMap, MathBN } from "@vikrai/framework/utils"
 import {
   createWorkflow,
   transform,
   when,
   WorkflowData,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { useQueryGraphStep } from "../../../common"
 import { refundPaymentsWorkflow } from "../../../payment/workflows/refund-payments"
 
@@ -98,3 +98,4 @@ export const refundCapturedPaymentsWorkflow = createWorkflow(
     })
   }
 )
+

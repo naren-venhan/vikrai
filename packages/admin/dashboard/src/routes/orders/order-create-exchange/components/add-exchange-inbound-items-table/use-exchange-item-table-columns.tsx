@@ -1,4 +1,4 @@
-import { Checkbox } from "@medusajs/ui"
+import { Checkbox } from "@vikrai/ui"
 import { createColumnHelper } from "@tanstack/react-table"
 import { useMemo } from "react"
 import { useTranslation } from "react-i18next"
@@ -101,3 +101,4 @@ export const useExchangeItemTableColumns = (currencyCode: string) => {
     [t, currencyCode]
   )
 }
+

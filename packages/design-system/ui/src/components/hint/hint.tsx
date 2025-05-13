@@ -1,4 +1,4 @@
-import { ExclamationCircleSolid } from "@medusajs/icons"
+import { ExclamationCircleSolid } from "@vikrai/icons"
 import { VariantProps, cva } from "cva"
 import * as React from "react"
 
@@ -49,3 +49,4 @@ const Hint = React.forwardRef<HTMLSpanElement, HintProps>(
 Hint.displayName = "Hint"
 
 export { Hint }
+

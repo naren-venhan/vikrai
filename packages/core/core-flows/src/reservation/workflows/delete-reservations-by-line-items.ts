@@ -1,4 +1,4 @@
-import { WorkflowData, createWorkflow } from "@medusajs/framework/workflows-sdk"
+import { WorkflowData, createWorkflow } from "@vikrai/framework/workflows-sdk"
 
 import { deleteReservationsByLineItemsStep } from "../steps"
 
@@ -40,3 +40,4 @@ export const deleteReservationsByLineItemsWorkflow = createWorkflow(
     return deleteReservationsByLineItemsStep(input.ids)
   }
 )
+

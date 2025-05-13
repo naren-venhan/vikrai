@@ -5,15 +5,15 @@ import {
   OrderPreviewDTO,
   OrderReturnItemDTO,
   ReturnDTO,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import {
   ChangeActionType,
-  MedusaError,
+  vikraiError,
   Modules,
   OrderChangeStatus,
   OrderWorkflowEvents,
   ReturnStatus,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 import {
   WorkflowResponse,
   createStep,
@@ -21,7 +21,7 @@ import {
   parallelize,
   transform,
   when,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import {
   createRemoteLinkStep,
   emitEventStep,
@@ -61,8 +61,8 @@ export type ConfirmReturnRequestValidationStepInput = {
  *
  * :::note
  *
- * You can retrieve an order, order change, and return details using [Query](https://docs.medusajs.com/learn/fundamentals/module-links/query),
- * or [useQueryGraphStep](https://docs.medusajs.com/resources/references/medusa-workflows/steps/useQueryGraphStep).
+ * You can retrieve an order, order change, and return details using [Query](https://docs.vikrai.com/learn/fundamentals/module-links/query),
+ * or [useQueryGraphStep](https://docs.vikrai.com/resources/references/vikrai-workflows/steps/useQueryGraphStep).
  *
  * :::
  *
@@ -105,8 +105,8 @@ const confirmIfReturnItemsArePresent = createStep(
       return
     }
 
-    throw new MedusaError(
-      MedusaError.Types.INVALID_DATA,
+    throw new vikraiError(
+      vikraiError.Types.INVALID_DATA,
       `Order return request should have at least 1 item`
     )
   }
@@ -219,7 +219,7 @@ export type ConfirmReturnRequestWorkflowInput = {
 export const confirmReturnRequestWorkflowId = "confirm-return-request"
 /**
  * This workflow confirms a return request. It's used by the
- * [Confirm Return Request Admin API Route](https://docs.medusajs.com/api/admin#returns_postreturnsidrequest).
+ * [Confirm Return Request Admin API Route](https://docs.vikrai.com/api/admin#returns_postreturnsidrequest).
  *
  * You can use this workflow within your customizations or your own custom workflows, allowing you to confirm a return request
  * in your custom flow.
@@ -377,3 +377,4 @@ export const confirmReturnRequestWorkflow = createWorkflow(
     return new WorkflowResponse(orderPreview)
   }
 )
+

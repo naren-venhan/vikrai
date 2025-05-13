@@ -2,12 +2,12 @@ import {
   FilterableOrderReturnReasonProps,
   OrderReturnReasonDTO,
   ReturnReasonUpdatableFields,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import {
   WorkflowData,
   WorkflowResponse,
   createWorkflow,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { updateReturnReasonsStep } from "../steps"
 
 /**
@@ -32,7 +32,7 @@ export type UpdateReturnReasonsWorkflowOutput = OrderReturnReasonDTO[]
 export const updateReturnReasonsWorkflowId = "update-return-reasons"
 /**
  * This workflow updates return reasons matching the specified filters. It's used by the
- * [Update Return Reason Admin API Route](https://docs.medusajs.com/api/admin#return-reasons_postreturnreasonsid).
+ * [Update Return Reason Admin API Route](https://docs.vikrai.com/api/admin#return-reasons_postreturnreasonsid).
  * 
  * You can use this workflow within your customizations or your own custom workflows, allowing you to
  * update return reasons within your custom flows.
@@ -62,3 +62,4 @@ export const updateReturnReasonsWorkflow = createWorkflow(
     return new WorkflowResponse(updateReturnReasonsStep(input))
   }
 )
+

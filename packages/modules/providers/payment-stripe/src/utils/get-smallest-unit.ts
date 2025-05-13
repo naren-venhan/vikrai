@@ -1,5 +1,5 @@
-import { BigNumberInput } from "@medusajs/framework/types"
-import { BigNumber, MathBN } from "@medusajs/framework/utils"
+import { BigNumberInput } from "@vikrai/framework/types"
+import { BigNumber, MathBN } from "@vikrai/framework/utils"
 
 function getCurrencyMultiplier(currency) {
   const currencyMultipliers = {
@@ -77,3 +77,4 @@ export function getAmountFromSmallestUnit(
   const standardAmount = new BigNumber(MathBN.div(amount, multiplier))
   return standardAmount.numeric
 }
+

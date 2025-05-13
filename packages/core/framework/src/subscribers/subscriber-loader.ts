@@ -1,5 +1,5 @@
-import { Event, IEventBusModuleService, Subscriber } from "@medusajs/types"
-import { kebabCase, Modules } from "@medusajs/utils"
+import { Event, IEventBusModuleService, Subscriber } from "@vikrai/types"
+import { kebabCase, Modules } from "@vikrai/utils"
 import { parse } from "path"
 
 import { configManager } from "../config"
@@ -202,3 +202,4 @@ export class SubscriberLoader extends ResourceLoader {
     return [...this.#subscriberDescriptors.keys()]
   }
 }
+

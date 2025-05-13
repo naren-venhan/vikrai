@@ -1,5 +1,5 @@
-import { Context } from "@medusajs/framework/types"
-import { DALUtils } from "@medusajs/framework/utils"
+import { Context } from "@vikrai/framework/types"
+import { DALUtils } from "@vikrai/framework/utils"
 
 class CustomRepository extends DALUtils.MikroOrmBaseRepository {
   constructor({ manager }) {
@@ -50,3 +50,4 @@ export class ProductTagRepository extends CustomRepository {}
 export class ProductCollectionRepository extends CustomRepository {}
 export class ProductVariantRepository extends CustomRepository {}
 export class ProductCategoryRepository extends CustomRepository {}
+

@@ -10,13 +10,13 @@ import {
   ProductVariantDTO,
   ReservationItemDTO,
   ShippingProfileDTO,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import {
   MathBN,
-  MedusaError,
+  vikraiError,
   Modules,
   OrderWorkflowEvents,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 import {
   WorkflowData,
   WorkflowResponse,
@@ -25,7 +25,7 @@ import {
   createWorkflow,
   parallelize,
   transform,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import {
   createRemoteLinkStep,
   emitEventStep,
@@ -80,8 +80,8 @@ export type CreateFulfillmentValidateOrderStepInput = {
  *
  * :::note
  *
- * You can retrieve an order's details using [Query](https://docs.medusajs.com/learn/fundamentals/module-links/query),
- * or [useQueryGraphStep](https://docs.medusajs.com/resources/references/medusa-workflows/steps/useQueryGraphStep).
+ * You can retrieve an order's details using [Query](https://docs.vikrai.com/learn/fundamentals/module-links/query),
+ * or [useQueryGraphStep](https://docs.vikrai.com/resources/references/vikrai-workflows/steps/useQueryGraphStep).
  *
  * :::
  *
@@ -103,8 +103,8 @@ export const createFulfillmentValidateOrder = createStep(
   "create-fulfillment-validate-order",
   ({ order, inputItems }: CreateFulfillmentValidateOrderStepInput) => {
     if (!inputItems.length) {
-      throw new MedusaError(
-        MedusaError.Types.INVALID_DATA,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_DATA,
         "No items to fulfill"
       )
     }
@@ -185,8 +185,8 @@ function prepareFulfillmentData({
         orderItem.variant?.product.shipping_profile?.id !==
           shippingOption.shipping_profile_id
       ) {
-        throw new MedusaError(
-          MedusaError.Types.INVALID_DATA,
+        throw new vikraiError(
+          vikraiError.Types.INVALID_DATA,
           `Shipping profile ${shippingOption.shipping_profile_id} does not match the shipping profile of the order item ${orderItem.id}`
         )
       }
@@ -235,8 +235,8 @@ function prepareFulfillmentData({
   }
 
   if (!locationId) {
-    throw new MedusaError(
-      MedusaError.Types.INVALID_DATA,
+    throw new vikraiError(
+      vikraiError.Types.INVALID_DATA,
       `Cannot create fulfillment without stock location, either provide a location or you should link the shipping option ${shippingOption.id} to a stock location.`
     )
   }
@@ -307,8 +307,8 @@ function prepareInventoryUpdate({
 
     reservations.forEach((reservation) => {
       if (MathBN.gt(inputQuantity, reservation.quantity)) {
-        throw new MedusaError(
-          MedusaError.Types.INVALID_DATA,
+        throw new vikraiError(
+          vikraiError.Types.INVALID_DATA,
           `Quantity to fulfill exceeds the reserved quantity for the item: ${item.id}`
         )
       }
@@ -359,7 +359,7 @@ export type CreateOrderFulfillmentWorkflowInput =
 
 export const createOrderFulfillmentWorkflowId = "create-order-fulfillment"
 /**
- * This workflow creates a fulfillment for an order. It's used by the [Create Order Fulfillment Admin API Route](https://docs.medusajs.com/api/admin#orders_postordersidfulfillments).
+ * This workflow creates a fulfillment for an order. It's used by the [Create Order Fulfillment Admin API Route](https://docs.vikrai.com/api/admin#orders_postordersidfulfillments).
  *
  * This workflow has a hook that allows you to perform custom actions on the created fulfillment. For example, you can pass under `additional_data` custom data that
  * allows you to create custom data models linked to the fulfillment.
@@ -585,3 +585,4 @@ export const createOrderFulfillmentWorkflow = createWorkflow(
     })
   }
 )
+

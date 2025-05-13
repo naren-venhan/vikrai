@@ -56,7 +56,7 @@ export type ListShippingOptionsForCartWithPricingWorkflowInput = {
      * Custom data relevant for the fulfillment provider that processes this shipping option.
      * It can be data relevant to calculate the shipping option's price.
      * 
-     * Learn more in [this documentation](https://docs.medusajs.com/resources/commerce-modules/fulfillment/shipping-option#data-property).
+     * Learn more in [this documentation](https://docs.vikrai.com/resources/commerce-modules/fulfillment/shipping-option#data-property).
      */
     data?: Record<string, unknown>
   }[]
@@ -125,7 +125,7 @@ export type ListShippingOptionsForCartWithPricingWorkflowOutput = {
    * Custom additional data related to the shipping option, useful for the fulfillment provider
    * to process the shipping option and calculate its price.
    * 
-   * Learn more in [this documentation](https://docs.medusajs.com/resources/commerce-modules/fulfillment/shipping-option#data-property).
+   * Learn more in [this documentation](https://docs.vikrai.com/resources/commerce-modules/fulfillment/shipping-option#data-property).
    */
   data: Record<string, unknown>
 
@@ -243,3 +243,4 @@ export type ListShippingOptionsForCartWorkflowInput = {
    */
   enabled_in_store?: boolean
 }
+

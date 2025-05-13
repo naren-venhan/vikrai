@@ -1,17 +1,17 @@
-import { medusaIntegrationTestRunner } from "@medusajs/test-utils"
-import { ICustomerModuleService } from "@medusajs/types"
-import { Modules } from "@medusajs/utils"
+import { vikraiIntegrationTestRunner } from "@vikrai/test-utils"
+import { ICustomerModuleService } from "@vikrai/types"
+import { Modules } from "@vikrai/utils"
 import {
   generatePublishableKey,
   generateStoreHeaders,
 } from "../../../../helpers/create-admin-user"
 import { createAuthenticatedCustomer } from "../../../helpers/create-authenticated-customer"
 
-const env = { MEDUSA_FF_MEDUSA_V2: true }
+const env = { vikrai_FF_vikrai_V2: true }
 
 jest.setTimeout(50000)
 
-medusaIntegrationTestRunner({
+vikraiIntegrationTestRunner({
   env,
   testSuite: ({ dbConnection, getContainer, api }) => {
     describe("DELETE /store/customers/me/addresses/:address_id", () => {
@@ -93,3 +93,4 @@ medusaIntegrationTestRunner({
     })
   },
 })
+

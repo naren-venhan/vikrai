@@ -1,4 +1,4 @@
-import { IAuthModuleService } from "@medusajs/framework/types"
+import { IAuthModuleService } from "@vikrai/framework/types"
 import { AuthIdentity } from "@models"
 
 export async function createAuthIdentities(
@@ -37,3 +37,4 @@ export async function createAuthIdentities(
 ): Promise<AuthIdentity[]> {
   return await service.createAuthIdentities(userData)
 }
+

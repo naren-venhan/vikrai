@@ -1,6 +1,6 @@
-import { PencilSquare } from "@medusajs/icons"
-import { HttpTypes } from "@medusajs/types"
-import { Container, Heading } from "@medusajs/ui"
+import { PencilSquare } from "@vikrai/icons"
+import { HttpTypes } from "@vikrai/types"
+import { Container, Heading } from "@vikrai/ui"
 import { useTranslation } from "react-i18next"
 import { ActionMenu } from "../../../../../components/common/action-menu"
 import { DateRangeDisplay } from "../../../../../components/common/date-range-display"
@@ -94,3 +94,4 @@ const CustomerGroupDisplay = ({
     </div>
   )
 }
+

@@ -2,15 +2,15 @@ import {
   AdditionalData,
   CustomerUpdatableFields,
   FilterableCustomerProps,
-} from "@medusajs/framework/types"
-import { CustomerWorkflowEvents } from "@medusajs/framework/utils"
+} from "@vikrai/framework/types"
+import { CustomerWorkflowEvents } from "@vikrai/framework/utils"
 import {
   WorkflowData,
   WorkflowResponse,
   createHook,
   createWorkflow,
   transform,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { emitEventStep } from "../../common/steps/emit-event"
 import { updateCustomersStep } from "../steps"
 
@@ -30,8 +30,8 @@ export type UpdateCustomersWorkflowInput = {
 
 export const updateCustomersWorkflowId = "update-customers"
 /**
- * This workflow updates one or more customers. It's used by the [Update Customer Admin API Route](https://docs.medusajs.com/api/admin#customers_postcustomersid) and
- * the [Update Customer Store API Route](https://docs.medusajs.com/api/store#customers_postcustomersme).
+ * This workflow updates one or more customers. It's used by the [Update Customer Admin API Route](https://docs.vikrai.com/api/admin#customers_postcustomersid) and
+ * the [Update Customer Store API Route](https://docs.vikrai.com/api/store#customers_postcustomersme).
  * 
  * This workflow has a hook that allows you to perform custom actions on the updated customer. For example, you can pass under `additional_data` custom data to update
  * custom data models linked to the customers.
@@ -89,3 +89,4 @@ export const updateCustomersWorkflow = createWorkflow(
     })
   }
 )
+

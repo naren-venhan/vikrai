@@ -1,11 +1,11 @@
-# Medusa Cache Redis
+# vikrai Cache Redis
 
-Use Redis as a Medusa cache store.
+Use Redis as a vikrai cache store.
 
 ## Installation
 
 ```
-yarn add @medusajs/cache-redis
+yarn add @vikrai/cache-redis
 ```
 
 ## Options
@@ -18,10 +18,11 @@ yarn add @medusajs/cache-redis
 
       redisOptions?: RedisOptions // Redis client options
 
-      namespace?: string          // Prefix for event keys (the default is `medusa:`)
+      namespace?: string          // Prefix for event keys (the default is `vikrai:`)
   }
 ```
 
 ### Other caching modules
 
-- [Medusa Cache In-Memory](../cache-inmemory/README.md)
+- [vikrai Cache In-Memory](../cache-inmemory/README.md)
+

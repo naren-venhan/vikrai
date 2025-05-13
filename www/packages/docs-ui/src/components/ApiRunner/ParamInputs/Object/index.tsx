@@ -22,7 +22,7 @@ export const ApiRunnerParamObjectInput = ({
   return (
     <fieldset
       className={clsx(
-        "border border-medusa-border-strong rounded",
+        "border border-vikrai-border-strong rounded",
         "p-docs_0.5"
       )}
     >
@@ -43,3 +43,4 @@ export const ApiRunnerParamObjectInput = ({
     </fieldset>
   )
 }
+

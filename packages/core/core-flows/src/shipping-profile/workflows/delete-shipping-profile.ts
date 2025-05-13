@@ -2,8 +2,8 @@ import {
   createStep,
   createWorkflow,
   WorkflowData,
-} from "@medusajs/framework/workflows-sdk"
-import { MedusaError, Modules } from "@medusajs/framework/utils"
+} from "@vikrai/framework/workflows-sdk"
+import { vikraiError, Modules } from "@vikrai/framework/utils"
 
 import { deleteShippingProfilesStep } from "../steps"
 import { removeRemoteLinkStep, useQueryGraphStep } from "../../common"
@@ -47,8 +47,8 @@ export const validateStepShippingProfileDelete = createStep(
     const { links } = data
 
     if (links.length > 0) {
-      throw new MedusaError(
-        MedusaError.Types.INVALID_DATA,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_DATA,
         `Cannot delete following shipping profiles because they are linked to products: ${links
           .map((l) => l.product_id)
           .join(", ")}`
@@ -71,7 +71,7 @@ export const deleteShippingProfileWorkflowId =
   "delete-shipping-profile-workflow"
 /**
  * This workflow deletes one or more shipping profiles. It's used by the
- * [Delete Shipping Profile Admin API Route](https://docs.medusajs.com/api/admin#shipping-profiles_deleteshippingprofilesid).
+ * [Delete Shipping Profile Admin API Route](https://docs.vikrai.com/api/admin#shipping-profiles_deleteshippingprofilesid).
  * Shipping profiles that are linked to products cannot be deleted.
  *
  * You can use this workflow within your customizations or your own custom workflows, allowing you to
@@ -109,3 +109,4 @@ export const deleteShippingProfileWorkflow = createWorkflow(
     })
   }
 )
+

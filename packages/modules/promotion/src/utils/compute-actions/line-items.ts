@@ -2,16 +2,16 @@ import {
   ApplicationMethodAllocationValues,
   BigNumberInput,
   PromotionTypes,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import {
   ApplicationMethodAllocation,
   ApplicationMethodTargetType,
   ComputedActions,
   MathBN,
-  MedusaError,
+  vikraiError,
   ApplicationMethodTargetType as TargetType,
   calculateAdjustmentAmountFromPromotion,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 import { areRulesValidForContext } from "../validations"
 import { computeActionForBudgetExceeded } from "./usage"
 
@@ -20,8 +20,8 @@ function validateContext(
   context: PromotionTypes.ComputeActionContext[TargetType]
 ) {
   if (!context) {
-    throw new MedusaError(
-      MedusaError.Types.INVALID_DATA,
+    throw new vikraiError(
+      vikraiError.Types.INVALID_DATA,
       `"${contextKey}" should be present as an array in the context for computeActions`
     )
   }
@@ -220,3 +220,4 @@ function getValidItemsForPromotion(
     )
   })
 }
+

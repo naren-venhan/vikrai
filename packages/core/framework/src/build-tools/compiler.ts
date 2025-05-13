@@ -1,20 +1,20 @@
-import type { AdminOptions, ConfigModule, Logger } from "@medusajs/types"
-import { FileSystem, getConfigFile, getResolvedPlugins } from "@medusajs/utils"
+import type { AdminOptions, ConfigModule, Logger } from "@vikrai/types"
+import { FileSystem, getConfigFile, getResolvedPlugins } from "@vikrai/utils"
 import chokidar from "chokidar"
 import { access, constants, copyFile, rm } from "fs/promises"
 import path from "path"
 import type tsStatic from "typescript"
 
 /**
- * The compiler exposes the opinionated APIs for compiling Medusa
+ * The compiler exposes the opinionated APIs for compiling vikrai
  * applications and plugins. You can perform the following
  * actions.
  *
  * - loadTSConfigFile: Load and parse the TypeScript config file. All errors
  *   will be reported using the logger.
  *
- * - buildAppBackend: Compile the Medusa application backend source code to the
- *   ".medusa/server" directory. The admin source and integration-tests are
+ * - buildAppBackend: Compile the vikrai application backend source code to the
+ *   ".vikrai/server" directory. The admin source and integration-tests are
  *   skipped.
  *
  * - buildAppFrontend: Compile the admin extensions using the "@medusjs/admin-bundler"
@@ -34,8 +34,8 @@ export class Compiler {
     this.#projectRoot = projectRoot
     this.#logger = logger
     this.#tsConfigPath = path.join(this.#projectRoot, "tsconfig.json")
-    this.#adminOnlyDistFolder = path.join(this.#projectRoot, ".medusa/admin")
-    this.#pluginsDistFolder = path.join(this.#projectRoot, ".medusa/server")
+    this.#adminOnlyDistFolder = path.join(this.#projectRoot, ".vikrai/admin")
+    this.#pluginsDistFolder = path.join(this.#projectRoot, ".vikrai/server")
     this.#backendIgnoreFiles = [
       "integration-tests",
       "test",
@@ -59,10 +59,10 @@ export class Compiler {
 
   /**
    * Returns the dist folder from the tsconfig.outDir property
-   * or uses the ".medusa/server" folder
+   * or uses the ".vikrai/server" folder
    */
   #computeDist(tsConfig: { options: { outDir?: string } }): string {
-    const distFolder = tsConfig.options.outDir ?? ".medusa/server"
+    const distFolder = tsConfig.options.outDir ?? ".vikrai/server"
     return path.isAbsolute(distFolder)
       ? distFolder
       : path.join(this.#projectRoot, distFolder)
@@ -146,15 +146,15 @@ export class Compiler {
   }
 
   /**
-   * Loads the medusa config file and prints the error to
+   * Loads the vikrai config file and prints the error to
    * the console (in case of any errors). Otherwise, the
    * file path and the parsed config is returned
    */
-  async #loadMedusaConfig() {
+  async #loadvikraiConfig() {
     const { configModule, configFilePath, error } =
-      await getConfigFile<ConfigModule>(this.#projectRoot, "medusa-config")
+      await getConfigFile<ConfigModule>(this.#projectRoot, "vikrai-config")
     if (error) {
-      this.#logger.error(`Failed to load medusa-config.(js|ts) file`)
+      this.#logger.error(`Failed to load vikrai-config.(js|ts) file`)
       this.#logger.error(error)
       return
     }
@@ -323,8 +323,8 @@ export class Compiler {
   }
 
   /**
-   * Builds the frontend source code of a Medusa application
-   * using the "@medusajs/admin-bundler" package.
+   * Builds the frontend source code of a vikrai application
+   * using the "@vikrai/admin-bundler" package.
    */
   async buildAppFrontend(
     adminOnly: boolean,
@@ -342,10 +342,10 @@ export class Compiler {
     const tracker = this.#trackDuration()
 
     /**
-     * Step 1: Load the medusa config file to read
+     * Step 1: Load the vikrai config file to read
      * admin options
      */
-    const configFile = await this.#loadMedusaConfig()
+    const configFile = await this.#loadvikraiConfig()
     if (!configFile) {
       return false
     }
@@ -356,7 +356,7 @@ export class Compiler {
      */
     if (configFile.configModule.admin.disable && !adminOnly) {
       this.#logger.info(
-        "Skipping admin build, since its disabled inside the medusa-config file"
+        "Skipping admin build, since its disabled inside the vikrai-config file"
       )
       return true
     }
@@ -367,7 +367,7 @@ export class Compiler {
      */
     if (!configFile.configModule.admin.disable && adminOnly) {
       this.#logger.warn(
-        `You are building using the flag --admin-only but the admin is enabled in your medusa-config, If you intend to host the dashboard separately you should disable the admin in your medusa config`
+        `You are building using the flag --admin-only but the admin is enabled in your vikrai-config, If you intend to host the dashboard separately you should disable the admin in your vikrai config`
       )
     }
 
@@ -418,7 +418,7 @@ export class Compiler {
    */
   async buildPluginBackend(tsConfig: tsStatic.ParsedCommandLine) {
     const tracker = this.#trackDuration()
-    const dist = ".medusa/server"
+    const dist = ".vikrai/server"
     this.#logger.info("Compiling plugin source...")
 
     /**
@@ -477,7 +477,7 @@ export class Compiler {
     ) => void
   ) {
     const fs = new FileSystem(this.#pluginsDistFolder)
-    await fs.createJson("medusa-plugin-options.json", {
+    await fs.createJson("vikrai-plugin-options.json", {
       srcDir: path.join(this.#projectRoot, "src"),
     })
 
@@ -490,7 +490,7 @@ export class Compiler {
         "dist",
         "static",
         "private",
-        ".medusa/**/*",
+        ".vikrai/**/*",
         ...this.#backendIgnoreFiles,
       ],
     })
@@ -557,3 +557,4 @@ export class Compiler {
     }
   }
 }
+

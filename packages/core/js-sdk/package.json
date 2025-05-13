@@ -1,7 +1,7 @@
 {
-  "name": "@medusajs/js-sdk",
+  "name": "@vikrai/js-sdk",
   "version": "2.7.1",
-  "description": "SDK for the Medusa API",
+  "description": "SDK for the vikrai API",
   "main": "dist/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/index.d.ts",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/medusajs/medusa",
+    "url": "https://github.com/vikrai/vikrai",
     "directory": "packages/core/js-sdk"
   },
   "engines": {
@@ -26,7 +26,7 @@
     "!dist/**/__mocks__",
     "!dist/**/__fixtures__"
   ],
-  "author": "Medusa",
+  "author": "vikrai",
   "license": "MIT",
   "devDependencies": {
     "jest": "^29.7.0",
@@ -35,7 +35,7 @@
     "typescript": "^5.6.2"
   },
   "dependencies": {
-    "@medusajs/types": "2.7.1",
+    "@vikrai/types": "2.7.1",
     "fetch-event-stream": "^0.1.5",
     "qs": "^6.12.1"
   },
@@ -45,3 +45,4 @@
     "watch": "tsc --build --watch"
   }
 }
+

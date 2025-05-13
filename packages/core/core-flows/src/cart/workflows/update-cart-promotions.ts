@@ -1,4 +1,4 @@
-import { PromotionActions } from "@medusajs/framework/utils"
+import { PromotionActions } from "@vikrai/framework/utils"
 import {
   createHook,
   createWorkflow,
@@ -7,7 +7,7 @@ import {
   when,
   WorkflowData,
   WorkflowResponse,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { useRemoteQueryStep } from "../../common"
 import {
   createLineItemAdjustmentsStep,
@@ -51,7 +51,7 @@ export const updateCartPromotionsWorkflowId = "update-cart-promotions"
 /**
  * This workflow updates a cart's promotions, applying or removing promotion codes from the cart. It also computes the adjustments
  * that need to be applied to the cart's line items and shipping methods based on the promotions applied. This workflow is used by
- * [Add Promotions Store API Route](https://docs.medusajs.com/api/store#carts_postcartsidpromotions).
+ * [Add Promotions Store API Route](https://docs.vikrai.com/api/store#carts_postcartsidpromotions).
  *
  * You can use this workflow within your own customizations or custom workflows, allowing you to update a cart's promotions within your custom flows.
  *
@@ -61,7 +61,7 @@ export const updateCartPromotionsWorkflowId = "update-cart-promotions"
  *   input: {
  *     cart_id: "cart_123",
  *     promo_codes: ["10OFF"],
- *     // imported from @medusajs/framework/utils
+ *     // imported from @vikrai/framework/utils
  *     action: PromotionActions.ADD,
  *   }
  * })
@@ -143,3 +143,4 @@ export const updateCartPromotionsWorkflow = createWorkflow(
     })
   }
 )
+

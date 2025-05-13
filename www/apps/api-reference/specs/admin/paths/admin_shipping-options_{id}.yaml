@@ -118,7 +118,7 @@ post:
                 providers.
               externalDocs:
                 url: >-
-                  https://docs.medusajs.com/v2/resources/commerce-modules/fulfillment/shipping-option#data-property
+                  https://docs.vikrai.com/v2/resources/commerce-modules/fulfillment/shipping-option#data-property
             price_type:
               type: string
               description: >
@@ -364,3 +364,4 @@ delete:
       $ref: ../components/responses/500_error.yaml
   x-workflow: deleteShippingOptionsWorkflow
   x-events: []
+

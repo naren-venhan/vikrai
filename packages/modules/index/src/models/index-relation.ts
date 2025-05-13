@@ -1,4 +1,4 @@
-import { model } from "@medusajs/framework/utils"
+import { model } from "@vikrai/framework/utils"
 
 const IndexRelation = model.define("IndexRelation", {
   id: model.autoincrement().primaryKey(),
@@ -11,3 +11,4 @@ const IndexRelation = model.define("IndexRelation", {
 })
 
 export default IndexRelation
+

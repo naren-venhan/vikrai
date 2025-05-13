@@ -2,12 +2,12 @@ import {
   CreatePromotionDTO,
   IPromotionModuleService,
   PromotionDTO,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import {
   isPresent,
   PromotionStatus,
   toMikroORMEntity,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 import { SqlEntityManager } from "@mikro-orm/postgresql"
 import { Promotion } from "@models"
 import { defaultPromotionsData } from "./data"
@@ -75,3 +75,4 @@ export async function createDefaultPromotion(
       : undefined,
   })
 }
+

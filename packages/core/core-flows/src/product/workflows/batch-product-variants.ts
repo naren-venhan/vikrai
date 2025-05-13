@@ -4,14 +4,14 @@ import {
   createWorkflow,
   parallelize,
   transform,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import {
   BatchWorkflowInput,
   BatchWorkflowOutput,
   ProductTypes,
   UpdateProductVariantWorkflowInputDTO,
   CreateProductVariantWorkflowInputDTO,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import { createProductVariantsWorkflow } from "./create-product-variants"
 import { updateProductVariantsWorkflow } from "./update-product-variants"
 import { deleteProductVariantsWorkflow } from "./delete-product-variants"
@@ -32,10 +32,10 @@ export interface BatchProductVariantsWorkflowOutput extends BatchWorkflowOutput<
 export const batchProductVariantsWorkflowId = "batch-product-variants"
 /**
  * This workflow creates, updates, and deletes product variants. It's used by the 
- * [Manage Variants in a Product Admin API Route](https://docs.medusajs.com/api/admin#products_postproductsidvariantsbatch).
+ * [Manage Variants in a Product Admin API Route](https://docs.vikrai.com/api/admin#products_postproductsidvariantsbatch).
  * 
  * You can use this workflow within your own customizations or custom workflows to manage the variants of a product. You can also
- * use this within a [seed script](https://docs.medusajs.com/learn/fundamentals/custom-cli-scripts/seed-data) or in a custom import script.
+ * use this within a [seed script](https://docs.vikrai.com/learn/fundamentals/custom-cli-scripts/seed-data) or in a custom import script.
  * 
  * @example
  * const { result } = await batchProductVariantsWorkflow(container)
@@ -106,3 +106,4 @@ export const batchProductVariantsWorkflow = createWorkflow(
     return new WorkflowResponse(response)
   }
 )
+

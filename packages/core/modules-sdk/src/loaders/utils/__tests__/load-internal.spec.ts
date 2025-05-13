@@ -1,9 +1,9 @@
-import { IModuleService, ModuleResolution } from "@medusajs/types"
+import { IModuleService, ModuleResolution } from "@vikrai/types"
 import {
-  createMedusaContainer,
+  createvikraiContainer,
   getProviderRegistrationKey,
   upperCaseFirst,
-} from "@medusajs/utils"
+} from "@vikrai/utils"
 import { join } from "path"
 import {
   ModuleWithDmlMixedWithoutJoinerConfigFixtures,
@@ -367,7 +367,7 @@ describe("load internal", () => {
         },
       }
 
-      const container = createMedusaContainer()
+      const container = createvikraiContainer()
       await loadInternalModule({
         container: container,
         resolution: moduleResolution,
@@ -419,7 +419,7 @@ describe("load internal", () => {
         },
       }
 
-      const container = createMedusaContainer()
+      const container = createvikraiContainer()
       await loadInternalModule({
         container: container,
         resolution: moduleResolution,
@@ -439,3 +439,4 @@ describe("load internal", () => {
     })
   })
 })
+

@@ -1,5 +1,5 @@
-import { Modules } from "@medusajs/framework/utils"
-import { moduleIntegrationTestRunner } from "@medusajs/test-utils"
+import { Modules } from "@vikrai/framework/utils"
+import { moduleIntegrationTestRunner } from "@vikrai/test-utils"
 import { evaluateRuleValueCondition } from "../../../../src/utils/validations/promotion-rule"
 
 moduleIntegrationTestRunner({
@@ -82,3 +82,4 @@ moduleIntegrationTestRunner({
     })
   },
 })
+

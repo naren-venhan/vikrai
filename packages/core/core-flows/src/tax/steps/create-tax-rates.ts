@@ -1,6 +1,6 @@
-import { CreateTaxRateDTO, ITaxModuleService } from "@medusajs/framework/types"
-import { Modules } from "@medusajs/framework/utils"
-import { StepResponse, createStep } from "@medusajs/framework/workflows-sdk"
+import { CreateTaxRateDTO, ITaxModuleService } from "@vikrai/framework/types"
+import { Modules } from "@vikrai/framework/utils"
+import { StepResponse, createStep } from "@vikrai/framework/workflows-sdk"
 
 export const createTaxRatesStepId = "create-tax-rates"
 /**
@@ -36,3 +36,4 @@ export const createTaxRatesStep = createStep(
     await service.deleteTaxRates(createdIds)
   }
 )
+

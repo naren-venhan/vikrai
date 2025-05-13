@@ -82,7 +82,7 @@ export interface FindConfig<Entity> {
    * An array of strings, each being relation names of the entity to retrieve in the result.
    * 
    * You can only retrieve data models defined in the same module. To retrieve linked data models
-   * from other modules, use [Query](https://docs.medusajs.com/learn/fundamentals/module-links/query) instead.
+   * from other modules, use [Query](https://docs.vikrai.com/learn/fundamentals/module-links/query) instead.
    */
   relations?: string[]
 
@@ -463,3 +463,4 @@ export type TransformObjectMethodToAsync<T extends object> = {
 export type QueryContextType = Record<string, any> & {
   __type?: "QueryContext"
 }
+

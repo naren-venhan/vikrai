@@ -1,5 +1,5 @@
-import { AdminCampaign } from "@medusajs/types"
-import { Heading, Text } from "@medusajs/ui"
+import { AdminCampaign } from "@vikrai/types"
+import { Heading, Text } from "@vikrai/ui"
 import { Fragment } from "react"
 import { useTranslation } from "react-i18next"
 
@@ -116,3 +116,4 @@ export const CampaignDetails = ({ campaign }: CampaignDetailsProps) => {
     </Fragment>
   )
 }
+

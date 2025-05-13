@@ -1,6 +1,6 @@
-import { HttpTypes, IProductModuleService } from "@medusajs/framework/types"
-import { Modules } from "@medusajs/framework/utils"
-import { StepResponse, createStep } from "@medusajs/framework/workflows-sdk"
+import { HttpTypes, IProductModuleService } from "@vikrai/framework/types"
+import { Modules } from "@vikrai/framework/utils"
+import { StepResponse, createStep } from "@vikrai/framework/workflows-sdk"
 
 /**
  * The products to group.
@@ -115,3 +115,4 @@ export const groupProductsForBatchStep = createStep(
     )
   }
 )
+

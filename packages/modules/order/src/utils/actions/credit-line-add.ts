@@ -1,9 +1,9 @@
 import {
   ChangeActionType,
   MathBN,
-  MedusaError,
-} from "@medusajs/framework/utils"
-import { CreateOrderCreditLineDTO, OrderCreditLineDTO } from "@medusajs/types"
+  vikraiError,
+} from "@vikrai/framework/utils"
+import { CreateOrderCreditLineDTO, OrderCreditLineDTO } from "@vikrai/types"
 import { OrderChangeProcessing } from "../calculate-order-change"
 import { setActionReference } from "../set-action-reference"
 
@@ -34,10 +34,11 @@ OrderChangeProcessing.registerActionType(ChangeActionType.CREDIT_LINE_ADD, {
   },
   validate({ action }) {
     if (action.amount == null) {
-      throw new MedusaError(
-        MedusaError.Types.INVALID_DATA,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_DATA,
         "Amount is required."
       )
     }
   },
 })
+

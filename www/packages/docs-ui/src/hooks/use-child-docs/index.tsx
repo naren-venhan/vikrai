@@ -18,7 +18,7 @@ import {
 import { Sidebar } from "types"
 import slugify from "slugify"
 import { MDXComponents } from "../.."
-import { ChevronDoubleRight, ExclamationCircle } from "@medusajs/icons"
+import { ChevronDoubleRight, ExclamationCircle } from "@vikrai/icons"
 import { isSidebarItemLink } from "../../utils/sidebar-utils"
 
 type HeadingComponent = (
@@ -415,11 +415,11 @@ export const useChildDocs = ({
         )}
         {!searchResult.length && (
           <div className="flex flex-col justify-center items-center gap-docs_0.75">
-            <ExclamationCircle className="text-medusa-fg-subtle" />
-            <span className="text-compact-small-plus text-medusa-fg-base text-center">
+            <ExclamationCircle className="text-vikrai-fg-subtle" />
+            <span className="text-compact-small-plus text-vikrai-fg-base text-center">
               No results found matching your query.
             </span>
-            <span className="text-compact-small text-medusa-fg-subtle text-center">
+            <span className="text-compact-small text-vikrai-fg-subtle text-center">
               Try searching with another term or clearing the search.
             </span>
           </div>
@@ -457,3 +457,4 @@ export const useChildDocs = ({
     component: getElms(),
   }
 }
+

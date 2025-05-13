@@ -1,4 +1,4 @@
-import { InlineTip } from "@medusajs/ui"
+import { InlineTip } from "@vikrai/ui"
 
 export default function InlineTipSuccess() {
   return (

@@ -1,8 +1,8 @@
 {
   "$schema": "https://unpkg.com/@changesets/config@2.0.0/schema.json",
-  "changelog": ["@changesets/changelog-github", { "repo": "medusajs/medusa" }],
+  "changelog": ["@changesets/changelog-github", { "repo": "vikrai/vikrai" }],
   "commit": false,
-  "fixed": [["@medusajs/*", "create-medusa-app", "medusa-dev-cli", "!@medusajs/ui"]],
+  "fixed": [["@vikrai/*", "create-vikrai-app", "vikrai-dev-cli", "!@vikrai/ui"]],
   "linked": [],
   "access": "public",
   "baseBranch": "develop",
@@ -15,3 +15,4 @@
     "onlyUpdatePeerDependentsWhenOutOfRange": true
   }
 }
+

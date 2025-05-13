@@ -8,13 +8,13 @@ import {
   OrderWorkflow,
   ProductVariantDTO,
   ReservationItemDTO,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import {
   MathBN,
-  MedusaError,
+  vikraiError,
   Modules,
   OrderWorkflowEvents,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 import {
   WorkflowData,
   WorkflowResponse,
@@ -23,7 +23,7 @@ import {
   createWorkflow,
   parallelize,
   transform,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { emitEventStep, useRemoteQueryStep } from "../../common"
 import { cancelFulfillmentWorkflow } from "../../fulfillment"
 import { adjustInventoryLevelsStep } from "../../inventory"
@@ -71,8 +71,8 @@ export type CancelOrderFulfillmentValidateOrderStep = {
  *
  * :::note
  *
- * You can retrieve an order and fulfillment details using [Query](https://docs.medusajs.com/learn/fundamentals/module-links/query),
- * or [useQueryGraphStep](https://docs.medusajs.com/resources/references/medusa-workflows/steps/useQueryGraphStep).
+ * You can retrieve an order and fulfillment details using [Query](https://docs.vikrai.com/learn/fundamentals/module-links/query),
+ * or [useQueryGraphStep](https://docs.vikrai.com/resources/references/vikrai-workflows/steps/useQueryGraphStep).
  *
  * :::
  *
@@ -109,15 +109,15 @@ export const cancelOrderFulfillmentValidateOrder = createStep(
     }
 
     if (fulfillment.canceled_at) {
-      throw new MedusaError(
-        MedusaError.Types.NOT_ALLOWED,
+      throw new vikraiError(
+        vikraiError.Types.NOT_ALLOWED,
         "The fulfillment is already canceled"
       )
     }
 
     if (fulfillment.shipped_at) {
-      throw new MedusaError(
-        MedusaError.Types.NOT_ALLOWED,
+      throw new vikraiError(
+        vikraiError.Types.NOT_ALLOWED,
         `The fulfillment has already been shipped. Shipped fulfillments cannot be canceled`
       )
     }
@@ -269,7 +269,7 @@ export type CancelOrderFulfillmentWorkflowInput =
 
 export const cancelOrderFulfillmentWorkflowId = "cancel-order-fulfillment"
 /**
- * This workflow cancels an order's fulfillment. It's used by the [Cancel Order's Fulfillment Admin API Route](https://docs.medusajs.com/api/admin#orders_postordersidfulfillmentsfulfillment_idcancel).
+ * This workflow cancels an order's fulfillment. It's used by the [Cancel Order's Fulfillment Admin API Route](https://docs.vikrai.com/api/admin#orders_postordersidfulfillmentsfulfillment_idcancel).
  *
  * This workflow has a hook that allows you to perform custom actions on the canceled fulfillment. For example, you can pass under `additional_data` custom data that
  * allows you to update custom data models linked to the fulfillment.
@@ -393,3 +393,4 @@ export const cancelOrderFulfillmentWorkflow = createWorkflow(
     })
   }
 )
+

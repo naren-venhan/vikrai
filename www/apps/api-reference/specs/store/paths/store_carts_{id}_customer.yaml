@@ -7,7 +7,7 @@ post:
     guest customer, then they log in with their account.
   externalDocs:
     url: >-
-      https://docs.medusajs.com/resources/storefront-development/cart/update#set-carts-customer
+      https://docs.vikrai.com/resources/storefront-development/cart/update#set-carts-customer
     description: 'Storefront guide: How to set the cart''s customer.'
   x-authenticated: false
   parameters:
@@ -19,12 +19,12 @@ post:
         type: string
     - name: x-publishable-api-key
       in: header
-      description: Publishable API Key created in the Medusa Admin.
+      description: Publishable API Key created in the vikrai Admin.
       required: true
       schema:
         type: string
         externalDocs:
-          url: https://docs.medusajs.com/api/store#publishable-api-key
+          url: https://docs.vikrai.com/api/store#publishable-api-key
     - name: fields
       in: query
       description: >-
@@ -77,3 +77,4 @@ post:
       $ref: ../components/responses/500_error.yaml
   x-workflow: transferCartCustomerWorkflow
   x-events: []
+

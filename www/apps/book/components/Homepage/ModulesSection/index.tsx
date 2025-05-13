@@ -139,7 +139,7 @@ const HomepageModulesSection = () => {
   ]
 
   return (
-    <div className="py-4 w-full border-y border-medusa-border-base">
+    <div className="py-4 w-full border-y border-vikrai-border-base">
       <div
         className={clsx(
           "flex flex-col",
@@ -152,10 +152,10 @@ const HomepageModulesSection = () => {
             title="Browse Commerce Modules"
             icon={<PuzzleColoredIcon />}
           />
-          <h2 className="text-medusa-fg-base text-h1">
-            All commerce features are provided as extendable modules in Medusa.
+          <h2 className="text-vikrai-fg-base text-h1">
+            All commerce features are provided as extendable modules in vikrai.
           </h2>
-          <span className="text-medusa-fg-subtle text-small-plus">
+          <span className="text-vikrai-fg-subtle text-small-plus">
             Click on any of the Commerce Modules below to learn more about their
             commerce features, and how to extend and use them for your custom
             use-case.
@@ -180,7 +180,7 @@ const Section = ({ title, text, modules }: SectionProps) => {
     <div
       className={clsx("flex flex-col lg:flex-row", "gap-1.5 xs:gap-2 lg:gap-4")}
     >
-      <div className="flex flex-col gap-0.5 text-medusa-fg-base w-full lg:w-1/3">
+      <div className="flex flex-col gap-0.5 text-vikrai-fg-base w-full lg:w-1/3">
         <h3 className="text-small-plus">{title}</h3>
         <span className="text-h2">{text}</span>
       </div>
@@ -201,3 +201,4 @@ const Section = ({ title, text, modules }: SectionProps) => {
 }
 
 export default HomepageModulesSection
+

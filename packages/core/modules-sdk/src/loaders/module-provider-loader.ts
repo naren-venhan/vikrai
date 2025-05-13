@@ -1,11 +1,11 @@
-import { MedusaContainer, ModuleProvider } from "@medusajs/types"
+import { vikraiContainer, ModuleProvider } from "@vikrai/types"
 import {
   dynamicImport,
   isString,
   lowerCaseFirst,
   normalizeImportPathWithSource,
   promiseAll,
-} from "@medusajs/utils"
+} from "@vikrai/utils"
 import { asFunction, Lifetime } from "awilix"
 
 export async function moduleProviderLoader({
@@ -13,11 +13,11 @@ export async function moduleProviderLoader({
   providers,
   registerServiceFn,
 }: {
-  container: MedusaContainer
+  container: vikraiContainer
   providers: ModuleProvider[]
   registerServiceFn?: (
     klass,
-    container: MedusaContainer,
+    container: vikraiContainer,
     moduleDetails: any
   ) => Promise<void>
 }) {
@@ -33,7 +33,7 @@ export async function moduleProviderLoader({
 }
 
 export async function loadModuleProvider(
-  container: MedusaContainer,
+  container: vikraiContainer,
   provider: ModuleProvider,
   registerServiceFn?: (klass, container, moduleDetails) => Promise<void>
 ) {
@@ -88,3 +88,4 @@ export async function loadModuleProvider(
     })
   )
 }
+

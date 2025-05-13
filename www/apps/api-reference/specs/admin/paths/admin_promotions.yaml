@@ -710,7 +710,7 @@ post:
                   description: The promotion's type.
                   externalDocs:
                     url: >-
-                      https://docs.medusajs.com/v2/resources/commerce-modules/promotion/concepts#what-is-a-promotion
+                      https://docs.vikrai.com/v2/resources/commerce-modules/promotion/concepts#what-is-a-promotion
                   enum:
                     - standard
                     - buyget
@@ -1054,3 +1054,4 @@ post:
       $ref: ../components/responses/500_error.yaml
   x-workflow: createPromotionsWorkflow
   x-events: []
+

@@ -1,6 +1,6 @@
-import { IFulfillmentModuleService } from "@medusajs/framework/types"
-import { Modules } from "@medusajs/framework/utils"
-import { createStep, StepResponse } from "@medusajs/framework/workflows-sdk"
+import { IFulfillmentModuleService } from "@vikrai/framework/types"
+import { Modules } from "@vikrai/framework/utils"
+import { createStep, StepResponse } from "@vikrai/framework/workflows-sdk"
 
 /**
  * The IDs of the fulfillment sets to delete.
@@ -34,3 +34,4 @@ export const deleteFulfillmentSetsStep = createStep(
     await service.restoreFulfillmentSets(prevIds)
   }
 )
+

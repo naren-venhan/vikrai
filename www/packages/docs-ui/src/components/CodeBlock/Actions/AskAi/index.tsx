@@ -36,7 +36,7 @@ export const CodeBlockAskAiAction = ({
       innerClassName={clsx(
         inHeader && "flex",
         "h-fit rounded-docs_sm",
-        "group-hover:bg-medusa-contrast-bg-base-hover group-focus:bg-medusa-contrast-bg-base-hover"
+        "group-hover:bg-vikrai-contrast-bg-base-hover group-focus:bg-vikrai-contrast-bg-base-hover"
       )}
     >
       <span
@@ -57,3 +57,4 @@ export const CodeBlockAskAiAction = ({
     </Tooltip>
   )
 }
+

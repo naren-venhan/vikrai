@@ -1,5 +1,5 @@
 import { useMemo } from "react"
-import { Checkbox } from "@medusajs/ui"
+import { Checkbox } from "@vikrai/ui"
 import { createColumnHelper } from "@tanstack/react-table"
 import { useTranslation } from "react-i18next"
 
@@ -101,3 +101,4 @@ export const useClaimItemTableColumns = (currencyCode: string) => {
     [t, currencyCode]
   )
 }
+

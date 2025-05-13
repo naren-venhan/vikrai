@@ -1,1 +1,2 @@
-# @medusajs/admin-sdk
+# @vikrai/admin-sdk
+

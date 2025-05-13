@@ -606,7 +606,7 @@
  *         manage_inventory:
  *           type: boolean
  *           title: manage_inventory
- *           description: Filter by whether the Medusa application manages the variant's inventory.
+ *           description: Filter by whether the vikrai application manages the variant's inventory.
  *         allow_backorder:
  *           type: boolean
  *           title: allow_backorder
@@ -993,9 +993,9 @@
  *   - lang: JavaScript
  *     label: JS SDK
  *     source: |-
- *       import Medusa from "@medusajs/js-sdk"
+ *       import vikrai from "@vikrai/js-sdk"
  * 
- *       export const sdk = new Medusa({
+ *       export const sdk = new vikrai({
  *         baseUrl: import.meta.env.VITE_BACKEND_URL || "/",
  *         debug: import.meta.env.DEV,
  *         auth: {
@@ -1064,4 +1064,5 @@
  *     $ref: "#/components/responses/500_error"
  * 
 */
+
 

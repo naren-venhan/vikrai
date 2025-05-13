@@ -24,7 +24,7 @@
 					"fileName": "provider.ts",
 					"line": 14,
 					"character": 12,
-					"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/tax/provider.ts#L14"
+					"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/tax/provider.ts#L14"
 				}
 			],
 			"type": {
@@ -55,7 +55,7 @@
 									"fileName": "provider.ts",
 									"line": 18,
 									"character": 2,
-									"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/tax/provider.ts#L18"
+									"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/tax/provider.ts#L18"
 								}
 							],
 							"type": {
@@ -65,7 +65,7 @@
 									"qualifiedName": "TaxableShippingDTO"
 								},
 								"name": "TaxableShippingDTO",
-								"package": "@medusajs/types"
+								"package": "@vikrai/types"
 							}
 						},
 						{
@@ -87,7 +87,7 @@
 									"fileName": "provider.ts",
 									"line": 22,
 									"character": 2,
-									"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/tax/provider.ts#L22"
+									"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/tax/provider.ts#L22"
 								}
 							],
 							"type": {
@@ -99,7 +99,7 @@
 										"qualifiedName": "TaxRateDTO"
 									},
 									"name": "TaxRateDTO",
-									"package": "@medusajs/types"
+									"package": "@vikrai/types"
 								}
 							}
 						}
@@ -118,7 +118,7 @@
 							"fileName": "provider.ts",
 							"line": 14,
 							"character": 41,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/tax/provider.ts#L14"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/tax/provider.ts#L14"
 						}
 					]
 				}
@@ -143,7 +143,7 @@
 					"fileName": "provider.ts",
 					"line": 29,
 					"character": 12,
-					"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/tax/provider.ts#L29"
+					"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/tax/provider.ts#L29"
 				}
 			],
 			"type": {
@@ -174,7 +174,7 @@
 									"fileName": "provider.ts",
 									"line": 33,
 									"character": 2,
-									"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/tax/provider.ts#L33"
+									"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/tax/provider.ts#L33"
 								}
 							],
 							"type": {
@@ -184,7 +184,7 @@
 									"qualifiedName": "TaxableItemDTO"
 								},
 								"name": "TaxableItemDTO",
-								"package": "@medusajs/types"
+								"package": "@vikrai/types"
 							}
 						},
 						{
@@ -206,7 +206,7 @@
 									"fileName": "provider.ts",
 									"line": 37,
 									"character": 2,
-									"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/tax/provider.ts#L37"
+									"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/tax/provider.ts#L37"
 								}
 							],
 							"type": {
@@ -218,7 +218,7 @@
 										"qualifiedName": "TaxRateDTO"
 									},
 									"name": "TaxRateDTO",
-									"package": "@medusajs/types"
+									"package": "@vikrai/types"
 								}
 							}
 						}
@@ -237,7 +237,7 @@
 							"fileName": "provider.ts",
 							"line": 29,
 							"character": 37,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/tax/provider.ts#L29"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/tax/provider.ts#L29"
 						}
 					]
 				}
@@ -285,7 +285,7 @@
 					},
 					{
 						"kind": "text",
-						"text": " of your tax provider to access the resources registered in the [Module Container](https://docs.medusajs.com/resources/medusa-container-resources#module-container-resources).\n\nYou can also use the constructor to initialize your integration with the third-party provider. For example, if you use a client to connect to the third-party provider’s APIs, you can initialize it in the constructor and use it in other methods in the service.\n\nAdditionally, if you’re creating your tax provider as a plugin or a module provider to be installed in any Medusa application and you want to access its options, you can access them in the second parameter of the constructor.\n\nFor example:\n\n"
+						"text": " of your tax provider to access the resources registered in the [Module Container](https://docs.vikrai.com/resources/vikrai-container-resources#module-container-resources).\n\nYou can also use the constructor to initialize your integration with the third-party provider. For example, if you use a client to connect to the third-party provider’s APIs, you can initialize it in the constructor and use it in other methods in the service.\n\nAdditionally, if you’re creating your tax provider as a plugin or a module provider to be installed in any vikrai application and you want to access its options, you can access them in the second parameter of the constructor.\n\nFor example:\n\n"
 					},
 					{
 						"kind": "code",
@@ -309,7 +309,7 @@
 							"fileName": "provider.ts",
 							"line": 143,
 							"character": 2,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/tax/provider.ts#L143"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/tax/provider.ts#L143"
 						}
 					],
 					"signatures": [
@@ -388,7 +388,7 @@
 									"fileName": "provider.ts",
 									"line": 143,
 									"character": 2,
-									"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/tax/provider.ts#L143"
+									"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/tax/provider.ts#L143"
 								}
 							],
 							"parameters": [
@@ -412,7 +412,7 @@
 											"type": "reference",
 											"target": 44160,
 											"name": "ItemTaxCalculationLine",
-											"package": "@medusajs/types"
+											"package": "@vikrai/types"
 										}
 									}
 								},
@@ -436,7 +436,7 @@
 											"type": "reference",
 											"target": 44156,
 											"name": "ShippingTaxCalculationLine",
-											"package": "@medusajs/types"
+											"package": "@vikrai/types"
 										}
 									}
 								},
@@ -461,7 +461,7 @@
 											"qualifiedName": "TaxCalculationContext"
 										},
 										"name": "TaxCalculationContext",
-										"package": "@medusajs/types"
+										"package": "@vikrai/types"
 									}
 								}
 							],
@@ -484,7 +484,7 @@
 														"qualifiedName": "ItemTaxLineDTO"
 													},
 													"name": "ItemTaxLineDTO",
-													"package": "@medusajs/types"
+													"package": "@vikrai/types"
 												},
 												{
 													"type": "reference",
@@ -493,7 +493,7 @@
 														"qualifiedName": "ShippingTaxLineDTO"
 													},
 													"name": "ShippingTaxLineDTO",
-													"package": "@medusajs/types"
+													"package": "@vikrai/types"
 												}
 											]
 										}
@@ -519,7 +519,7 @@
 					"fileName": "provider.ts",
 					"line": 81,
 					"character": 17,
-					"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/tax/provider.ts#L81"
+					"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/tax/provider.ts#L81"
 				}
 			]
 		}
@@ -539,7 +539,7 @@
 			]
 		}
 	],
-	"packageName": "@medusajs/types",
+	"packageName": "@vikrai/types",
 	"symbolIdMap": {
 		"44155": {
 			"sourceFileName": "../../../../packages/core/types/src/tax/provider.ts",
@@ -611,3 +611,4 @@
 		}
 	}
 }
+

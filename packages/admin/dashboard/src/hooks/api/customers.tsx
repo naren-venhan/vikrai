@@ -1,5 +1,5 @@
-import { FetchError } from "@medusajs/js-sdk"
-import { HttpTypes, PaginatedResponse } from "@medusajs/types"
+import { FetchError } from "@vikrai/js-sdk"
+import { HttpTypes, PaginatedResponse } from "@vikrai/types"
 import {
   QueryKey,
   UseMutationOptions,
@@ -261,3 +261,4 @@ export const useCustomerAddress = (
 
   return { ...data, ...rest }
 }
+

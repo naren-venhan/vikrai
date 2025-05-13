@@ -1,4 +1,4 @@
-import { isDefined, OrchestrationUtils } from "@medusajs/utils"
+import { isDefined, OrchestrationUtils } from "@vikrai/utils"
 import { ulid } from "ulid"
 import { createStep } from "./create-step"
 import { StepResponse } from "./helpers/step-response"
@@ -23,7 +23,7 @@ type ThenFunc = <ThenResolver extends () => any>(
  * This function allows you to execute steps only if a condition is satisfied. As you can't use if conditions in 
  * a workflow's constructor function, use `when-then` instead.
  * 
- * Learn more about why you can't use if conditions and `when-then` in [this documentation](https://docs.medusajs.com/learn/fundamentals/workflows/conditions).
+ * Learn more about why you can't use if conditions and `when-then` in [this documentation](https://docs.vikrai.com/learn/fundamentals/workflows/conditions).
  * 
  * @param values - The data to pass to the second parameter function.
  * @param condition - A function that returns a boolean value, indicating whether the steps in `then` should be executed.
@@ -33,7 +33,7 @@ type ThenFunc = <ThenResolver extends () => any>(
  *   createWorkflow,
  *   WorkflowResponse,
  *   when,
- * } from "@medusajs/framework/workflows-sdk"
+ * } from "@vikrai/framework/workflows-sdk"
  * // step imports...
  * 
  * export const workflow = createWorkflow(
@@ -94,7 +94,7 @@ export function when(...args) {
     throw new Error(`"when condition" must be a function`)
   }
 
-  global[OrchestrationUtils.SymbolMedusaWorkflowComposerCondition] = {
+  global[OrchestrationUtils.SymbolvikraiWorkflowComposerCondition] = {
     input,
     condition,
     steps: [],
@@ -114,7 +114,7 @@ export function when(...args) {
       let returnStep = ret
 
       const applyCondition =
-        global[OrchestrationUtils.SymbolMedusaWorkflowComposerCondition].steps
+        global[OrchestrationUtils.SymbolvikraiWorkflowComposerCondition].steps
 
       if (
         isDefined(ret) &&
@@ -123,7 +123,7 @@ export function when(...args) {
         if (!isDefined(name)) {
           name = "when-then-" + ulid()
           const context =
-            global[OrchestrationUtils.SymbolMedusaWorkflowComposerContext]
+            global[OrchestrationUtils.SymbolvikraiWorkflowComposerContext]
 
           console.warn(
             `${context.workflowId}: "when" name should be defined. A random one will be assigned to it, which is not recommended for production.\n`,
@@ -142,9 +142,10 @@ export function when(...args) {
         step.if(input, condition)
       }
 
-      delete global[OrchestrationUtils.SymbolMedusaWorkflowComposerCondition]
+      delete global[OrchestrationUtils.SymbolvikraiWorkflowComposerCondition]
 
       return returnStep
     },
   }
 }
+

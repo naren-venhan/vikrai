@@ -1,5 +1,5 @@
-import { FetchError } from "@medusajs/js-sdk"
-import { HttpTypes, LinkMethodRequest } from "@medusajs/types"
+import { FetchError } from "@vikrai/js-sdk"
+import { HttpTypes, LinkMethodRequest } from "@vikrai/types"
 import {
   QueryKey,
   UseMutationOptions,
@@ -135,3 +135,4 @@ export const useAddOrRemoveCampaignPromotions = (
     ...options,
   })
 }
+

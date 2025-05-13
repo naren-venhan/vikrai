@@ -1,6 +1,6 @@
-import { medusaIntegrationTestRunner } from "@medusajs/test-utils"
-import { HttpTypes } from "@medusajs/types"
-import { ModuleRegistrationName } from "@medusajs/utils"
+import { vikraiIntegrationTestRunner } from "@vikrai/test-utils"
+import { HttpTypes } from "@vikrai/types"
+import { ModuleRegistrationName } from "@vikrai/utils"
 import {
   adminHeaders,
   createAdminUser,
@@ -9,7 +9,7 @@ import { setupTaxStructure } from "../../../../modules/__tests__/fixtures"
 
 jest.setTimeout(300000)
 
-medusaIntegrationTestRunner({
+vikraiIntegrationTestRunner({
   testSuite: ({ dbConnection, getContainer, api }) => {
     let region: HttpTypes.AdminRegion
     let salesChannel: HttpTypes.AdminSalesChannel
@@ -482,3 +482,4 @@ medusaIntegrationTestRunner({
     })
   },
 })
+

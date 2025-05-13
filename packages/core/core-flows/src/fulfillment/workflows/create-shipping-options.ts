@@ -1,11 +1,11 @@
-import { FulfillmentWorkflow } from "@medusajs/framework/types"
+import { FulfillmentWorkflow } from "@vikrai/framework/types"
 import {
   createWorkflow,
   parallelize,
   transform,
   WorkflowData,
   WorkflowResponse,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import {
   createShippingOptionsPriceSetsStep,
   upsertShippingOptionsStep,
@@ -23,7 +23,7 @@ export const createShippingOptionsWorkflowId =
   "create-shipping-options-workflow"
 /**
  * This workflow creates one or more shipping options. It's used by the 
- * [Create Shipping Option Admin API Route](https://docs.medusajs.com/api/admin#shipping-options_postshippingoptions).
+ * [Create Shipping Option Admin API Route](https://docs.vikrai.com/api/admin#shipping-options_postshippingoptions).
  * 
  * You can use this workflow within your own customizations or custom workflows, allowing you to
  * create shipping options within your custom flows.
@@ -34,7 +34,7 @@ export const createShippingOptionsWorkflowId =
  * :::note
  * 
  * Learn more about adding rules to the shipping option's prices in the Pricing Module's 
- * [Price Rules](https://docs.medusajs.com/resources/commerce-modules/pricing/price-rules) documentation.
+ * [Price Rules](https://docs.vikrai.com/resources/commerce-modules/pricing/price-rules) documentation.
  * 
  * :::
  * 
@@ -68,7 +68,7 @@ export const createShippingOptionsWorkflowId =
  * 
  * :::note
  * 
- * You can calculate the shipping option's price for a cart using the [calculateShippingOptionsPricesWorkflow](https://docs.medusajs.com/resources/references/medusa-workflows/calculateShippingOptionsPricesWorkflow).
+ * You can calculate the shipping option's price for a cart using the [calculateShippingOptionsPricesWorkflow](https://docs.vikrai.com/resources/references/vikrai-workflows/calculateShippingOptionsPricesWorkflow).
  * 
  * :::
  * 
@@ -174,3 +174,4 @@ export const createShippingOptionsWorkflow = createWorkflow(
     return new WorkflowResponse(createdShippingOptions)
   }
 )
+

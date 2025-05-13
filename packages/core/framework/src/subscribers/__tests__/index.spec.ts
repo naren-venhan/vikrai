@@ -1,4 +1,4 @@
-import { Modules } from "@medusajs/utils"
+import { Modules } from "@vikrai/utils"
 import { asValue } from "awilix"
 import { join } from "path"
 import { container } from "../../container"
@@ -110,3 +110,4 @@ describe("SubscriberLoader", () => {
     )
   })
 })
+

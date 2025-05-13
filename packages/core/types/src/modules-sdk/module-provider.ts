@@ -2,11 +2,11 @@ import { Logger } from "../logger"
 import {
   Constructor,
   InternalModuleDeclaration,
-  MedusaContainer,
+  vikraiContainer,
 } from "./index"
 
 export type ProviderLoaderOptions<TOptions = Record<string, unknown>> = {
-  container: MedusaContainer
+  container: vikraiContainer
   options?: TOptions
   logger?: Logger
   moduleOptions: Record<string, unknown>
@@ -46,3 +46,4 @@ export type ModuleProvider = {
   options?: Record<string, unknown>
   is_default?: boolean
 }
+

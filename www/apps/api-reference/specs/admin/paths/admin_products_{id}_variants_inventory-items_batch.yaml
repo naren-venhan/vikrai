@@ -46,9 +46,9 @@ post:
                     description: >-
                       The number of units a single quantity is equivalent to.
                       For example, if a customer orders one quantity of the
-                      variant, Medusa checks the availability of the quantity
+                      variant, vikrai checks the availability of the quantity
                       multiplied by the value set for `required_quantity`. When
-                      the customer orders the quantity, Medusa reserves the
+                      the customer orders the quantity, vikrai reserves the
                       ordered quantity multiplied by the value set for
                       `required_quantity`.
                   inventory_item_id:
@@ -80,9 +80,9 @@ post:
                     description: >-
                       The number of units a single quantity is equivalent to.
                       For example, if a customer orders one quantity of the
-                      variant, Medusa checks the availability of the quantity
+                      variant, vikrai checks the availability of the quantity
                       multiplied by the value set for `required_quantity`. When
-                      the customer orders the quantity, Medusa reserves the
+                      the customer orders the quantity, vikrai reserves the
                       ordered quantity multiplied by the value set for
                       `required_quantity`.
                   inventory_item_id:
@@ -150,3 +150,4 @@ post:
       $ref: ../components/responses/500_error.yaml
   x-workflow: batchLinksWorkflow
   x-events: []
+

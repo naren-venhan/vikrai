@@ -1,8 +1,8 @@
 import { PriceRule } from "@models"
 
-import { CreatePriceRuleDTO } from "@medusajs/framework/types"
+import { CreatePriceRuleDTO } from "@vikrai/framework/types"
 import { SqlEntityManager } from "@mikro-orm/postgresql"
-import { toMikroORMEntity } from "@medusajs/framework/utils"
+import { toMikroORMEntity } from "@vikrai/framework/utils"
 import { defaultPriceRuleData } from "./data"
 
 export * from "./data"
@@ -33,3 +33,4 @@ export async function createPriceRules(
 
   return priceRules
 }
+

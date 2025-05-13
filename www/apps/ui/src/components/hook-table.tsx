@@ -1,4 +1,4 @@
-import { InformationCircleSolid } from "@medusajs/icons"
+import { InformationCircleSolid } from "@vikrai/icons"
 
 import { HookData, HookDataMap } from "@/types/hooks"
 import { EnumType, FunctionType, ObjectType } from "@/types/props"
@@ -59,7 +59,7 @@ const Row = ({ value, type, description }: HookData) => {
           >
             <div className="flex items-center gap-x-1">
               <span>enum</span>
-              <InformationCircleSolid className="text-medusa-fg-subtle" />
+              <InformationCircleSolid className="text-vikrai-fg-subtle" />
             </div>
           </Tooltip>
         )}
@@ -71,7 +71,7 @@ const Row = ({ value, type, description }: HookData) => {
           >
             <div className="flex items-center gap-x-1">
               <span>{type.name}</span>
-              <InformationCircleSolid className="text-medusa-fg-subtle" />
+              <InformationCircleSolid className="text-vikrai-fg-subtle" />
             </div>
           </Tooltip>
         )}
@@ -82,7 +82,7 @@ const Row = ({ value, type, description }: HookData) => {
           >
             <div className="flex items-center gap-x-1">
               <span>function</span>
-              <InformationCircleSolid className="text-medusa-fg-subtle" />
+              <InformationCircleSolid className="text-vikrai-fg-subtle" />
             </div>
           </Tooltip>
         )}
@@ -93,3 +93,4 @@ const Row = ({ value, type, description }: HookData) => {
 }
 
 export { HookTable }
+

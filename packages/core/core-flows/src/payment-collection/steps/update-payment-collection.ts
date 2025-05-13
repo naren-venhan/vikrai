@@ -2,13 +2,13 @@ import {
   FilterablePaymentCollectionProps,
   IPaymentModuleService,
   PaymentCollectionUpdatableFields,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import {
   Modules,
   getSelectsAndRelationsFromObjectArray,
   isPresent,
-} from "@medusajs/framework/utils"
-import { StepResponse, createStep } from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/utils"
+import { StepResponse, createStep } from "@vikrai/framework/workflows-sdk"
 
 /**
  * The data to update a payment collection.
@@ -86,3 +86,4 @@ export const updatePaymentCollectionStep = createStep(
     )
   }
 )
+

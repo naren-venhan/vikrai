@@ -1,5 +1,6 @@
 ---
-"@medusajs/medusa": patch
+"@vikrai/vikrai": patch
 ---
 
-fix(medusa): check if tax module is installed when running tax migration script
+fix(vikrai): check if tax module is installed when running tax migration script
+

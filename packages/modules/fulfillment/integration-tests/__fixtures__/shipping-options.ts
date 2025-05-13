@@ -1,4 +1,4 @@
-import { CreateShippingOptionDTO } from "@medusajs/framework/types"
+import { CreateShippingOptionDTO } from "@vikrai/framework/types"
 
 export function generateCreateShippingOptionsData({
   name,
@@ -39,3 +39,4 @@ export function generateCreateShippingOptionsData({
     ],
   }
 }
+

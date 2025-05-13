@@ -2,7 +2,7 @@ import {
   EntityConstructor,
   EntityIndex,
   PropertyMetadata,
-} from "@medusajs/types"
+} from "@vikrai/types"
 import { createPsqlIndexStatementHelper } from "../../../common"
 import { validateIndexFields } from "../mikro-orm/build-indexes"
 
@@ -55,3 +55,4 @@ export function applyEntityIndexes(
     entityIndexStatement.MikroORMIndex()(MikroORMEntity)
   })
 }
+

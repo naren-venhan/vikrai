@@ -2,8 +2,8 @@ import {
   Constructor,
   ILinkModule,
   ModuleJoinerConfig,
-} from "@medusajs/framework/types"
-import { isDefined } from "@medusajs/framework/utils"
+} from "@vikrai/framework/types"
+import { isDefined } from "@vikrai/framework/utils"
 import { LinkModuleService } from "@services"
 
 export function getModuleService(
@@ -36,3 +36,4 @@ export function getReadOnlyModuleService(joinerConfig: ModuleJoinerConfig) {
     }
   }
 }
+

@@ -1,7 +1,7 @@
 import {
   ModuleProviderExports,
   ModuleServiceInitializeOptions,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 
 export const FileProviderIdentifierRegistrationName =
   "file_providers_identifier"
@@ -27,3 +27,4 @@ export type FileModuleOptions = Partial<ModuleServiceInitializeOptions> & {
     options?: Record<string, unknown>
   }
 }
+

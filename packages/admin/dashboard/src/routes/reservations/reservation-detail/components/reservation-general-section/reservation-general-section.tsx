@@ -1,9 +1,9 @@
-import { AdminReservationResponse } from "@medusajs/types"
-import { Container, Heading } from "@medusajs/ui"
+import { AdminReservationResponse } from "@vikrai/types"
+import { Container, Heading } from "@vikrai/ui"
 
 import { ActionMenu } from "../../../../../components/common/action-menu"
-import { InventoryTypes } from "@medusajs/types"
-import { PencilSquare } from "@medusajs/icons"
+import { InventoryTypes } from "@vikrai/types"
+import { PencilSquare } from "@vikrai/icons"
 import { SectionRow } from "../../../../../components/common/section"
 import { useInventoryItem } from "../../../../../hooks/api/inventory"
 import { useStockLocation } from "../../../../../hooks/api/stock-locations"
@@ -88,3 +88,4 @@ export const ReservationGeneralSection = ({
     </Container>
   )
 }
+

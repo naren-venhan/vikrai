@@ -1,6 +1,6 @@
-import { IAuthModuleService } from "@medusajs/types"
-import { Modules } from "@medusajs/utils"
-import { medusaIntegrationTestRunner } from "@medusajs/test-utils"
+import { IAuthModuleService } from "@vikrai/types"
+import { Modules } from "@vikrai/utils"
+import { vikraiIntegrationTestRunner } from "@vikrai/test-utils"
 import {
   adminHeaders,
   createAdminUser,
@@ -8,7 +8,7 @@ import {
 
 jest.setTimeout(30000)
 
-medusaIntegrationTestRunner({
+vikraiIntegrationTestRunner({
   testSuite: ({ dbConnection, getContainer, api }) => {
     let user, container, authIdentity
 
@@ -30,7 +30,7 @@ medusaIntegrationTestRunner({
 
         const v2Response = {
           id: user.id,
-          email: "admin@medusa.js",
+          email: "admin@vikrai.js",
           created_at: expect.any(String),
           updated_at: expect.any(String),
         }
@@ -50,7 +50,7 @@ medusaIntegrationTestRunner({
         const v2Response = [
           expect.objectContaining({
             id: user.id,
-            email: "admin@medusa.js",
+            email: "admin@vikrai.js",
             created_at: expect.any(String),
             updated_at: expect.any(String),
           }),
@@ -74,7 +74,7 @@ medusaIntegrationTestRunner({
         expect(response.data.users).toEqual([
           expect.objectContaining({
             id: user.id,
-            email: "admin@medusa.js",
+            email: "admin@vikrai.js",
             created_at: expect.any(String),
             updated_at: expect.any(String),
           }),
@@ -361,3 +361,4 @@ medusaIntegrationTestRunner({
     })
   },
 })
+

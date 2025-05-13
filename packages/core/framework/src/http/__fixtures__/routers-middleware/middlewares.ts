@@ -1,5 +1,5 @@
 import { raw } from "express"
-import { MedusaRequest, MedusaResponse, MedusaNextFunction } from "../../types"
+import { vikraiRequest, vikraiResponse, vikraiNextFunction } from "../../types"
 import {
   customersCreateMiddlewareMock,
   customersGlobalMiddlewareMock,
@@ -10,18 +10,18 @@ import z from "zod"
 import { defineMiddlewares } from "../../utils/define-middlewares"
 
 const customersGlobalMiddleware = (
-  req: MedusaRequest,
-  res: MedusaResponse,
-  next: MedusaNextFunction
+  req: vikraiRequest,
+  res: vikraiResponse,
+  next: vikraiNextFunction
 ) => {
   customersGlobalMiddlewareMock()
   next()
 }
 
 const customersCreateMiddleware = (
-  req: MedusaRequest,
-  res: MedusaResponse,
-  next: MedusaNextFunction
+  req: vikraiRequest,
+  res: vikraiResponse,
+  next: vikraiNextFunction
 ) => {
   if (req.additionalDataValidator) {
     customersCreateMiddlewareValidatorMock()
@@ -31,9 +31,9 @@ const customersCreateMiddleware = (
 }
 
 const storeGlobal = (
-  req: MedusaRequest,
-  res: MedusaResponse,
-  next: MedusaNextFunction
+  req: vikraiRequest,
+  res: vikraiResponse,
+  next: vikraiNextFunction
 ) => {
   storeGlobalMiddlewareMock()
   next()
@@ -71,3 +71,4 @@ const middlewares = defineMiddlewares([
 ])
 
 export default middlewares
+

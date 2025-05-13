@@ -1,4 +1,4 @@
-import { ProgressAccordion, Text } from "@medusajs/ui"
+import { ProgressAccordion, Text } from "@vikrai/ui"
 
 export default function ProgressAccordionSingle() {
   return (
@@ -34,3 +34,4 @@ export default function ProgressAccordionSingle() {
     </div>
   )
 }
+

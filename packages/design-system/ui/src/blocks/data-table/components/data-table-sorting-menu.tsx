@@ -9,7 +9,7 @@ import { DropdownMenu } from "@/components/dropdown-menu"
 import { IconButton } from "@/components/icon-button"
 import { Skeleton } from "@/components/skeleton"
 import { Tooltip } from "@/components/tooltip"
-import { ArrowDownMini, ArrowUpMini, DescendingSorting } from "@medusajs/icons"
+import { ArrowDownMini, ArrowUpMini, DescendingSorting } from "@vikrai/icons"
 import * as React from "react"
 
 interface DataTableSortingMenuProps {
@@ -166,3 +166,4 @@ const DataTableSortingMenuSkeleton = () => {
 
 export { DataTableSortingMenu }
 export type { DataTableSortingMenuProps }
+

@@ -1,4 +1,4 @@
-import { model } from "@medusajs/framework/utils"
+import { model } from "@vikrai/framework/utils"
 import InventoryItem from "./inventory-item"
 
 const InventoryLevel = model
@@ -34,3 +34,4 @@ const InventoryLevel = model
   ])
 
 export default InventoryLevel
+

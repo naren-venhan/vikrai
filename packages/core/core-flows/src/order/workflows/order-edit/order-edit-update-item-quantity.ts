@@ -3,20 +3,20 @@ import {
   OrderDTO,
   OrderPreviewDTO,
   OrderWorkflow,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import {
   BigNumber,
   ChangeActionType,
   MathBN,
   OrderChangeStatus,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 import {
   WorkflowData,
   WorkflowResponse,
   createStep,
   createWorkflow,
   transform,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { useRemoteQueryStep } from "../../../common"
 import { previewOrderChangeStep } from "../../steps/preview-order-change"
 import {
@@ -45,8 +45,8 @@ export type OrderEditUpdateItemQuantityValidationStepInput = {
  * 
  * :::note
  * 
- * You can retrieve an order and order change details using [Query](https://docs.medusajs.com/learn/fundamentals/module-links/query),
- * or [useQueryGraphStep](https://docs.medusajs.com/resources/references/medusa-workflows/steps/useQueryGraphStep).
+ * You can retrieve an order and order change details using [Query](https://docs.vikrai.com/learn/fundamentals/module-links/query),
+ * or [useQueryGraphStep](https://docs.vikrai.com/resources/references/vikrai-workflows/steps/useQueryGraphStep).
  * 
  * :::
  * 
@@ -77,7 +77,7 @@ export const orderEditUpdateItemQuantityWorkflowId =
   "order-edit-update-item-quantity"
 /**
  * This workflow updates the quantity of an existing item in an order's edit. It's used by the
- * [Update Order Item Quantity Admin API Route](https://docs.medusajs.com/api/admin#order-edits_postordereditsiditemsitemitem_id).
+ * [Update Order Item Quantity Admin API Route](https://docs.vikrai.com/api/admin#order-edits_postordereditsiditemsitemitem_id).
  * 
  * You can use this workflow within your customizations or your own custom workflows, allowing you to update the quantity of an existing 
  * item in an order's edit in your custom flow.
@@ -167,3 +167,4 @@ export const orderEditUpdateItemQuantityWorkflow = createWorkflow(
     return new WorkflowResponse(previewOrderChangeStep(input.order_id))
   }
 )
+

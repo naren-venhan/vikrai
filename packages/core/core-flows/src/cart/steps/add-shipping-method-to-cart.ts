@@ -1,9 +1,9 @@
 import {
   CreateShippingMethodDTO,
   ICartModuleService,
-} from "@medusajs/framework/types"
-import { Modules } from "@medusajs/framework/utils"
-import { StepResponse, createStep } from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/types"
+import { Modules } from "@vikrai/framework/utils"
+import { StepResponse, createStep } from "@vikrai/framework/workflows-sdk"
 
 /**
  * The details of the shipping methods to add.
@@ -51,3 +51,4 @@ export const addShippingMethodToCartStep = createStep(
     await cartService.deleteShippingMethods(methods.map((m) => m.id))
   }
 )
+

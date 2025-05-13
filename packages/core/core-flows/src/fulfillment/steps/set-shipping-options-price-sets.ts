@@ -1,12 +1,12 @@
-import { Link } from "@medusajs/framework/modules-sdk"
-import { RemoteQueryFunction } from "@medusajs/framework/types"
-import { createStep, StepResponse } from "@medusajs/framework/workflows-sdk"
+import { Link } from "@vikrai/framework/modules-sdk"
+import { RemoteQueryFunction } from "@vikrai/framework/types"
+import { createStep, StepResponse } from "@vikrai/framework/workflows-sdk"
 import {
   ContainerRegistrationKeys,
   LINKS,
   Modules,
   promiseAll,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 
 /**
  * The data to set the price sets of a shipping option.
@@ -174,3 +174,4 @@ export const setShippingOptionsPriceSetsStep = createStep(
     await promiseAll(promises)
   }
 )
+

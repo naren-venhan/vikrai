@@ -1,4 +1,4 @@
-import { medusaIntegrationTestRunner } from "@medusajs/test-utils"
+import { vikraiIntegrationTestRunner } from "@vikrai/test-utils"
 import {
   adminHeaders,
   createAdminUser,
@@ -6,7 +6,7 @@ import {
 
 jest.setTimeout(30000)
 
-medusaIntegrationTestRunner({
+vikraiIntegrationTestRunner({
   testSuite: ({ dbConnection, api, getContainer }) => {
     let invite
     beforeEach(async () => {
@@ -17,7 +17,7 @@ medusaIntegrationTestRunner({
         await api.post(
           "/admin/invites",
           {
-            email: "invite@medusa-commerce.com",
+            email: "invite@vikrai-commerce.com",
           },
           adminHeaders
         )
@@ -30,7 +30,7 @@ medusaIntegrationTestRunner({
           await api.post(
             "/admin/invites",
             {
-              email: "test@medusa-commerce.com",
+              email: "test@vikrai-commerce.com",
             },
             adminHeaders
           )
@@ -38,7 +38,7 @@ medusaIntegrationTestRunner({
 
         expect(createdInvite).toEqual(
           expect.objectContaining({
-            email: "test@medusa-commerce.com",
+            email: "test@vikrai-commerce.com",
           })
         )
 
@@ -47,10 +47,10 @@ medusaIntegrationTestRunner({
 
         expect(listInvites).toEqual([
           expect.objectContaining({
-            email: "invite@medusa-commerce.com",
+            email: "invite@vikrai-commerce.com",
           }),
           expect.objectContaining({
-            email: "test@medusa-commerce.com",
+            email: "test@vikrai-commerce.com",
           }),
         ])
 
@@ -60,12 +60,12 @@ medusaIntegrationTestRunner({
 
         expect(getInvite).toEqual(
           expect.objectContaining({
-            email: "test@medusa-commerce.com",
+            email: "test@vikrai-commerce.com",
           })
         )
 
         const signup = await api.post("/auth/user/emailpass/register", {
-          email: "test@medusa-commerce.com",
+          email: "test@vikrai-commerce.com",
           password: "secret_password",
         })
 
@@ -85,7 +85,7 @@ medusaIntegrationTestRunner({
 
         expect(acceptedInvite).toEqual(
           expect.objectContaining({
-            email: "test@medusa-commerce.com",
+            email: "test@vikrai-commerce.com",
           })
         )
       })
@@ -93,7 +93,7 @@ medusaIntegrationTestRunner({
       it("should fail to accept an invite given an invalid token", async () => {
         expect.assertions(2)
         const signup = await api.post("/auth/user/emailpass/register", {
-          email: "test@medusa-commerce.com",
+          email: "test@vikrai-commerce.com",
           password: "secret_password",
         })
 
@@ -120,7 +120,7 @@ medusaIntegrationTestRunner({
 
       it("should fail to accept an already accepted invite ", async () => {
         const signup = await api.post("/auth/user/emailpass/register", {
-          email: "test@medusa-commerce.com",
+          email: "test@vikrai-commerce.com",
           password: "secret_password",
         })
 
@@ -136,7 +136,7 @@ medusaIntegrationTestRunner({
         )
 
         const signupAgain = await api.post("/auth/user/emailpass/register", {
-          email: "another-test@medusa-commerce.com",
+          email: "another-test@vikrai-commerce.com",
           password: "secret_password",
         })
 
@@ -161,7 +161,7 @@ medusaIntegrationTestRunner({
         jest.useFakeTimers()
 
         const signup = await api.post("/auth/user/emailpass/register", {
-          email: "test@medusa-commerce.com",
+          email: "test@vikrai-commerce.com",
           password: "secret_password",
         })
 
@@ -210,3 +210,4 @@ medusaIntegrationTestRunner({
     })
   },
 })
+

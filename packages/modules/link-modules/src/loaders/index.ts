@@ -2,7 +2,7 @@ import {
   JoinerRelationship,
   ModuleJoinerConfig,
   ModuleLoaderFunction,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 
 import { generateEntity } from "../utils"
 import { connectionLoader } from "./connection"
@@ -24,3 +24,4 @@ export function getLoaders({
   const entity = generateEntity(joinerConfig, primary, foreign)
   return [connectionLoader(entity), containerLoader(entity, joinerConfig)]
 }
+

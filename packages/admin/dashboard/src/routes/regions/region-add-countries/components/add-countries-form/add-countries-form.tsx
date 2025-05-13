@@ -9,8 +9,8 @@ import { useForm } from "react-hook-form"
 import { useTranslation } from "react-i18next"
 import * as zod from "zod"
 
-import { HttpTypes } from "@medusajs/types"
-import { Button, Checkbox, toast } from "@medusajs/ui"
+import { HttpTypes } from "@vikrai/types"
+import { Button, Checkbox, toast } from "@vikrai/ui"
 import {
   RouteFocusModal,
   useRouteModal,
@@ -206,3 +206,4 @@ const useColumns = () => {
     [base]
   ) as ColumnDef<HttpTypes.AdminRegionCountry>[]
 }
+

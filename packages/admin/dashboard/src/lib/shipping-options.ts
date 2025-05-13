@@ -1,4 +1,4 @@
-import { HttpTypes } from "@medusajs/types"
+import { HttpTypes } from "@vikrai/types"
 
 export function isReturnOption(shippingOption: HttpTypes.AdminShippingOption) {
   return !!shippingOption.rules?.find(
@@ -17,3 +17,4 @@ export function isOptionEnabledInStore(
       r.operator === "eq"
   )
 }
+

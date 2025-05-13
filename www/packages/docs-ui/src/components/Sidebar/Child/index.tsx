@@ -2,7 +2,7 @@
 
 import React, { useMemo } from "react"
 import clsx from "clsx"
-import { ArrowUturnLeft } from "@medusajs/icons"
+import { ArrowUturnLeft } from "@vikrai/icons"
 import { useSidebar } from "../../../providers"
 
 export const SidebarChild = () => {
@@ -29,7 +29,7 @@ export const SidebarChild = () => {
         className={clsx(
           "flex items-center justify-start my-docs_0.75 gap-[10px]",
           "border border-transparent cursor-pointer mx-docs_0.5",
-          "!text-medusa-fg-base !text-compact-small-plus"
+          "!text-vikrai-fg-base !text-compact-small-plus"
         )}
         tabIndex={-1}
       >
@@ -39,3 +39,4 @@ export const SidebarChild = () => {
     </div>
   )
 }
+

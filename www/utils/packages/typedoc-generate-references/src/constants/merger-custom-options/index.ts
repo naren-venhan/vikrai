@@ -3,8 +3,8 @@ import authProviderOptions from "./auth-provider.js"
 import fileOptions from "./file.js"
 import fulfillmentProviderOptions from "./fulfillment-provider.js"
 import helperStepsOptions from "./helper-steps.js"
-import medusaConfigOptions from "./medusa-config.js"
-import medusaOptions from "./medusa.js"
+import vikraiConfigOptions from "./vikrai-config.js"
+import vikraiOptions from "./vikrai.js"
 import notificationOptions from "./notification.js"
 import paymentProviderOptions from "./payment-provider.js"
 import searchOptions from "./search.js"
@@ -33,8 +33,8 @@ const mergerCustomOptions: FormattingOptionsType = {
   ...helperStepsOptions,
   ...jsSdkOptions,
   ...lockingOptions,
-  ...medusaConfigOptions,
-  ...medusaOptions,
+  ...vikraiConfigOptions,
+  ...vikraiOptions,
   ...notificationServiceOptions,
   ...notificationOptions,
   ...paymentProviderOptions,
@@ -44,3 +44,4 @@ const mergerCustomOptions: FormattingOptionsType = {
 }
 
 export default mergerCustomOptions
+

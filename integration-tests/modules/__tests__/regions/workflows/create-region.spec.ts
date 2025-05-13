@@ -1,23 +1,23 @@
-import { medusaIntegrationTestRunner } from "@medusajs/test-utils"
-import { createRegionsWorkflow } from "@medusajs/core-flows"
-import { MedusaContainer, RegionDTO } from "@medusajs/types"
+import { vikraiIntegrationTestRunner } from "@vikrai/test-utils"
+import { createRegionsWorkflow } from "@vikrai/core-flows"
+import { vikraiContainer, RegionDTO } from "@vikrai/types"
 import { createAdminUser } from "../../../../helpers/create-admin-user"
 import {
   ContainerRegistrationKeys,
   remoteQueryObjectFromString,
-} from "@medusajs/utils"
+} from "@vikrai/utils"
 
 jest.setTimeout(200000)
 
-const env = { MEDUSA_FF_MEDUSA_V2: true }
+const env = { vikrai_FF_vikrai_V2: true }
 const adminHeaders = {
-  headers: { "x-medusa-access-token": "test_token" },
+  headers: { "x-vikrai-access-token": "test_token" },
 }
 
-medusaIntegrationTestRunner({
+vikraiIntegrationTestRunner({
   env,
   testSuite: ({ dbConnection, getContainer, api }) => {
-    let container: MedusaContainer
+    let container: vikraiContainer
     let region: RegionDTO
 
     beforeAll(() => {
@@ -146,3 +146,4 @@ medusaIntegrationTestRunner({
     })
   },
 })
+

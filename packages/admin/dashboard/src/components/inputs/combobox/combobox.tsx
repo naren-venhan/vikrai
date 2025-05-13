@@ -14,8 +14,8 @@ import {
   PlusMini,
   TrianglesMini,
   XMarkMini,
-} from "@medusajs/icons"
-import { clx, Text } from "@medusajs/ui"
+} from "@vikrai/icons"
+import { clx, Text } from "@vikrai/ui"
 import { matchSorter } from "match-sorter"
 import {
   ComponentPropsWithoutRef,
@@ -413,3 +413,4 @@ const ComboboxImpl = <T extends Value = string>(
 }
 
 export const Combobox = genericForwardRef(ComboboxImpl)
+

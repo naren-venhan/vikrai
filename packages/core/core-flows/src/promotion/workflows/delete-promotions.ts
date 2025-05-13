@@ -3,7 +3,7 @@ import {
   createWorkflow,
   WorkflowData,
   WorkflowResponse,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { deletePromotionsStep } from "../steps"
 
 /**
@@ -19,7 +19,7 @@ export type DeletePromotionsWorkflowInput = {
 export const deletePromotionsWorkflowId = "delete-promotions"
 /**
  * This workflow deletes one or more promotions. It's used by the
- * [Delete Promotions Admin API Route](https://docs.medusajs.com/api/admin#promotions_deletepromotionsid).
+ * [Delete Promotions Admin API Route](https://docs.vikrai.com/api/admin#promotions_deletepromotionsid).
  * 
  * You can use this workflow within your own customizations or custom workflows, allowing you to
  * delete promotions within your custom flows.
@@ -49,3 +49,4 @@ export const deletePromotionsWorkflow = createWorkflow(
     })
   }
 )
+

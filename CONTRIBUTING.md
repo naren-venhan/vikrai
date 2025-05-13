@@ -1,8 +1,8 @@
 # Contributing
 
-Thank you for considering contributing to Medusa! This document will outline how to submit changes to this repository and which conventions to follow. If you are ever in doubt about anything we encourage you to reach out either by submitting an issue here or reaching out [via Discord](https://discord.gg/xpCwq3Kfn8).
+Thank you for considering contributing to vikrai! This document will outline how to submit changes to this repository and which conventions to follow. If you are ever in doubt about anything we encourage you to reach out either by submitting an issue here or reaching out [via Discord](https://discord.gg/xpCwq3Kfn8).
 
-If you're contributing to our documentation, make sure to also check out the [contribution guidelines on our documentation website](https://docs.medusajs.com/resources/contribution-guidelines/docs).
+If you're contributing to our documentation, make sure to also check out the [contribution guidelines on our documentation website](https://docs.vikrai.com/resources/contribution-guidelines/docs).
 
 ### Important
 Our core maintainers prioritize pull requests (PRs) from within our organization. External contributions are regularly triaged, but not at any fixed cadence. It varies depending on how busy the maintainers are. This is applicable to all types of PRs, so we kindly ask for your patience.
@@ -12,24 +12,24 @@ If you, as a community contributor, wish to work on more extensive features, ple
 ## Prerequisites
 
 - **You're familiar with GitHub Issues and Pull Requests**
-- **You've read the [docs](https://docs.medusajs.com).**
-- **You've setup a test project with `npx create-medusa-app@latest`**
+- **You've read the [docs](https://docs.vikrai.com).**
+- **You've setup a test project with `npx create-vikrai-app@latest`**
 
 ## Issues before PRs
 
-1. Before you start working on a change please make sure that there is an issue for what you will be working on. You can either find and [existing issue](https://github.com/medusajs/medusa/issues) or [open a new issue](https://github.com/medusajs/medusa/issues/new) if none exists. Doing this makes sure that others can contribute with thoughts or suggest alternatives, ultimately making sure that we only add changes that make
+1. Before you start working on a change please make sure that there is an issue for what you will be working on. You can either find and [existing issue](https://github.com/vikrai/vikrai/issues) or [open a new issue](https://github.com/vikrai/vikrai/issues/new) if none exists. Doing this makes sure that others can contribute with thoughts or suggest alternatives, ultimately making sure that we only add changes that make
 
-2. When you are ready to start working on a change you should first [fork the Medusa repo](https://help.github.com/en/github/getting-started-with-github/fork-a-repo) and [branch out](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-and-deleting-branches-within-your-repository) from the `develop` branch.
+2. When you are ready to start working on a change you should first [fork the vikrai repo](https://help.github.com/en/github/getting-started-with-github/fork-a-repo) and [branch out](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-and-deleting-branches-within-your-repository) from the `develop` branch.
 3. Make your changes.
-4. [Open a pull request towards the develop branch in the Medusa repo](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request-from-a-fork). Within a couple of days a Medusa team member will review, comment and eventually approve your PR.
+4. [Open a pull request towards the develop branch in the vikrai repo](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request-from-a-fork). Within a couple of days a vikrai team member will review, comment and eventually approve your PR.
 
 ## Workflow
 
 ### Branches
 
 There are currently two base branches:
-- `develop` - development of Medusa 2.0
-- `v1.x` - development of Medusa v1.x
+- `develop` - development of vikrai 2.0
+- `v1.x` - development of vikrai v1.x
 
 Note, if you wish to patch v1.x you should use `v1.x` as the base branch for your pull request. This is not the default when you clone the repository.
 
@@ -49,9 +49,9 @@ Strive towards keeping your commits small and isolated - this helps the reviewer
 
 If you wish to patch v1.x your base branch should be `v1.x`. 
 
-If your changes should result in a new version of Medusa, you will need to generate a **changelog**. Follow [this guide](https://github.com/changesets/changesets/blob/main/docs/adding-a-changeset.md) on how to generate a changeset.
+If your changes should result in a new version of vikrai, you will need to generate a **changelog**. Follow [this guide](https://github.com/changesets/changesets/blob/main/docs/adding-a-changeset.md) on how to generate a changeset.
 
-Finally, submit your branch as a pull request. Your pull request should be opened against the `develop` branch in the main Medusa repo.
+Finally, submit your branch as a pull request. Your pull request should be opened against the `develop` branch in the main vikrai repo.
 
 In your PR's description you should follow the structure:
 
@@ -81,6 +81,7 @@ All PRs should include tests for the changes that are included. We have two type
 
 ### Release
 
-The Medusa team will regularly create releases from two release branches:
-- `develop` - preview releases of Medusa 2.0
-- `v1.x` - official releases of Medusa 1.x
+The vikrai team will regularly create releases from two release branches:
+- `develop` - preview releases of vikrai 2.0
+- `v1.x` - official releases of vikrai 1.x
+

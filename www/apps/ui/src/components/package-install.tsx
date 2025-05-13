@@ -1,4 +1,4 @@
-import { clx } from "@medusajs/ui"
+import { clx } from "@vikrai/ui"
 import { CodeBlock, CodeTab, CodeTabs } from "docs-ui"
 
 type PackageInstallProps = {
@@ -38,3 +38,4 @@ const PackageInstall = ({
 }
 
 export { PackageInstall }
+

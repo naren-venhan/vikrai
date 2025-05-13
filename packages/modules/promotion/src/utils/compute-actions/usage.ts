@@ -2,12 +2,12 @@ import {
   BigNumberInput,
   CampaignBudgetExceededAction,
   PromotionDTO,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import {
   CampaignBudgetType,
   ComputedActions,
   MathBN,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 
 export function computeActionForBudgetExceeded(
   promotion: PromotionDTO,
@@ -32,3 +32,4 @@ export function computeActionForBudgetExceeded(
     }
   }
 }
+

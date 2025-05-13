@@ -1,6 +1,6 @@
-import { IOrderModuleService } from "@medusajs/framework/types"
-import { Modules } from "@medusajs/framework/utils"
-import { createStep, StepResponse } from "@medusajs/framework/workflows-sdk"
+import { IOrderModuleService } from "@vikrai/framework/types"
+import { Modules } from "@vikrai/framework/utils"
+import { createStep, StepResponse } from "@vikrai/framework/workflows-sdk"
 
 /**
  * The details of deleting order changes.
@@ -35,3 +35,4 @@ export const deleteOrderChangesStep = createStep(
     await service.restoreOrderChanges(ids)
   }
 )
+

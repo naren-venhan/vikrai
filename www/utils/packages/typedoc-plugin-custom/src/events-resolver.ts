@@ -10,12 +10,12 @@ import {
   ParameterType,
   ReflectionKind,
 } from "typedoc"
-import { MedusaEvent } from "types"
+import { vikraiEvent } from "types"
 import { getDirname } from "utils"
 
 export class EventsResolver {
   private app: Application
-  private events: MedusaEvent[] = []
+  private events: vikraiEvent[] = []
 
   constructor(app: Application) {
     this.app = app
@@ -104,3 +104,4 @@ export class EventsResolver {
     }
   }
 }
+

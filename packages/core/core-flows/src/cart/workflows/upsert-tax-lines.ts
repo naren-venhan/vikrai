@@ -1,13 +1,13 @@
 import {
   CartLineItemDTO,
   CartShippingMethodDTO,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import {
   WorkflowData,
   createWorkflow,
   transform,
   when,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { useRemoteQueryStep } from "../../common"
 import { getItemTaxLinesStep } from "../../tax/steps/get-item-tax-lines"
 import { upsertTaxLinesForItemsStep } from "../steps/upsert-tax-lines-for-items"
@@ -100,7 +100,7 @@ export type UpsertTaxLinesWorkflowInput = {
 export const upsertTaxLinesWorkflowId = "upsert-tax-lines"
 /**
  * This workflow upserts a cart's tax lines that are applied on line items and shipping methods. You can upsert the line item's quantity, unit price, and more. This workflow is executed
- * by the [Calculate Taxes Store API Route](https://docs.medusajs.com/api/store#carts_postcartsidtaxes).
+ * by the [Calculate Taxes Store API Route](https://docs.vikrai.com/api/store#carts_postcartsidtaxes).
  *
  * You can use this workflow within your own customizations or custom workflows, allowing you to upsert a cart's tax lines in your custom flows.
  *
@@ -153,3 +153,4 @@ export const upsertTaxLinesWorkflow = createWorkflow(
     })
   }
 )
+

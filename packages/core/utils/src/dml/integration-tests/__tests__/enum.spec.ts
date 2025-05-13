@@ -1,4 +1,4 @@
-import { EntityConstructor } from "@medusajs/types"
+import { EntityConstructor } from "@vikrai/types"
 import {
   CheckConstraintViolationException,
   MetadataStorage,
@@ -111,3 +111,4 @@ describe("EntityBuilder | enum", () => {
     expect(err.name).toEqual(CheckConstraintViolationException.name)
   })
 })
+

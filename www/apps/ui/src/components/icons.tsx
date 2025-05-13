@@ -1,4 +1,4 @@
-import { IconProps } from "@medusajs/icons/dist/types"
+import { IconProps } from "@vikrai/icons/dist/types"
 
 export const Figma = (props: IconProps) => {
   return (
@@ -45,3 +45,4 @@ export const Figma = (props: IconProps) => {
     </svg>
   )
 }
+

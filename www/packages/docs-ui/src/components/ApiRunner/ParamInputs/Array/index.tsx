@@ -5,7 +5,7 @@ import { ApiRunnerParamInput, ApiRunnerParamInputProps } from "../Default"
 import clsx from "clsx"
 import setObjValue from "@/utils/set-obj-value"
 import { Button } from "../../../.."
-import { Minus, Plus } from "@medusajs/icons"
+import { Minus, Plus } from "@vikrai/icons"
 
 export const ApiRunnerParamArrayInput = ({
   paramName,
@@ -41,7 +41,7 @@ export const ApiRunnerParamArrayInput = ({
   return (
     <fieldset
       className={clsx(
-        "border border-medusa-border-strong rounded",
+        "border border-vikrai-border-strong rounded",
         "p-docs_0.5"
       )}
     >
@@ -96,3 +96,4 @@ export const ApiRunnerParamArrayInput = ({
     </fieldset>
   )
 }
+

@@ -1,5 +1,5 @@
-import { PencilSquare, Trash } from "@medusajs/icons"
-import { HttpTypes } from "@medusajs/types"
+import { PencilSquare, Trash } from "@vikrai/icons"
+import { HttpTypes } from "@vikrai/types"
 import {
   Badge,
   Container,
@@ -8,7 +8,7 @@ import {
   StatusBadge,
   Text,
   usePrompt,
-} from "@medusajs/ui"
+} from "@vikrai/ui"
 import { useTranslation } from "react-i18next"
 import { useNavigate } from "react-router-dom"
 
@@ -183,3 +183,4 @@ export const PromotionGeneralSection = ({
     </Container>
   )
 }
+

@@ -4,15 +4,15 @@ import {
   CalculatedRMAShippingContext,
   CalculateShippingOptionPriceDTO,
   ShippingOptionDTO,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import {
   WorkflowResponse,
   createHook,
   createWorkflow,
   transform,
   when,
-} from "@medusajs/framework/workflows-sdk"
-import { BigNumber, ShippingOptionPriceType } from "@medusajs/framework/utils"
+} from "@vikrai/framework/workflows-sdk"
+import { BigNumber, ShippingOptionPriceType } from "@vikrai/framework/utils"
 import { calculateShippingOptionsPricesStep } from "../../fulfillment/steps"
 import { useRemoteQueryStep } from "../../common"
 import { pricingContextResult } from "../../cart/utils/schemas"
@@ -134,8 +134,8 @@ export const fetchShippingOptionsForOrderWorkflowId = "fetch-shipping-option"
  * You can consume the `setPricingContext` hook to add the `location_id` context to the prices calculation:
  * 
  * ```ts
- * import { fetchShippingOptionForOrderWorkflow } from "@medusajs/medusa/core-flows";
- * import { StepResponse } from "@medusajs/workflows-sdk";
+ * import { fetchShippingOptionForOrderWorkflow } from "@vikrai/vikrai/core-flows";
+ * import { StepResponse } from "@vikrai/workflows-sdk";
  * 
  * fetchShippingOptionForOrderWorkflow.hooks.setPricingContext((
  *   { shipping_option_id, currency_code, order_id, context, additional_data }, { container }
@@ -150,7 +150,7 @@ export const fetchShippingOptionsForOrderWorkflowId = "fetch-shipping-option"
  * 
  * :::note
  * 
- * Learn more about prices calculation context in the [Prices Calculation](https://docs.medusajs.com/resources/commerce-modules/pricing/price-calculation) documentation.
+ * Learn more about prices calculation context in the [Prices Calculation](https://docs.vikrai.com/resources/commerce-modules/pricing/price-calculation) documentation.
  * 
  * :::
  *
@@ -295,3 +295,4 @@ export const fetchShippingOptionForOrderWorkflow = createWorkflow(
     return new WorkflowResponse(result, { hooks: [setPricingContext] as const })
   }
 )
+

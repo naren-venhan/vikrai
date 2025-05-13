@@ -1,82 +1,82 @@
 export const store = [
   {
     "title": "Manage Store",
-    "path": "https://docs.medusajs.com/user-guide/settings/store"
+    "path": "https://docs.vikrai.com/user-guide/settings/store"
   },
   {
     "title": "findOneOrAnyRegionStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/findOneOrAnyRegionStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/findOneOrAnyRegionStep"
   },
   {
     "title": "findSalesChannelStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/findSalesChannelStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/findSalesChannelStep"
   },
   {
     "title": "createCartWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createCartWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/createCartWorkflow"
   },
   {
     "title": "updateCartWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateCartWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/updateCartWorkflow"
   },
   {
     "title": "createDefaultStoreStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/createDefaultStoreStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/createDefaultStoreStep"
   },
   {
     "title": "createDefaultsWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createDefaultsWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/createDefaultsWorkflow"
   },
   {
     "title": "addDraftOrderItemsWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/addDraftOrderItemsWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/addDraftOrderItemsWorkflow"
   },
   {
     "title": "addOrderLineItemsWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/addOrderLineItemsWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/addOrderLineItemsWorkflow"
   },
   {
     "title": "createOrderWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createOrderWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/createOrderWorkflow"
   },
   {
     "title": "orderClaimAddNewItemWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/orderClaimAddNewItemWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/orderClaimAddNewItemWorkflow"
   },
   {
     "title": "orderEditAddNewItemWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/orderEditAddNewItemWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/orderEditAddNewItemWorkflow"
   },
   {
     "title": "orderExchangeAddNewItemWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/orderExchangeAddNewItemWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/orderExchangeAddNewItemWorkflow"
   },
   {
     "title": "createStoresStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/createStoresStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/createStoresStep"
   },
   {
     "title": "deleteStoresStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/deleteStoresStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/deleteStoresStep"
   },
   {
     "title": "updateStoresStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/updateStoresStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/updateStoresStep"
   },
   {
     "title": "createStoresWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createStoresWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/createStoresWorkflow"
   },
   {
     "title": "deleteStoresWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/deleteStoresWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/deleteStoresWorkflow"
   },
   {
     "title": "updateStoresWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateStoresWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/updateStoresWorkflow"
   },
   {
     "title": "store",
-    "path": "https://docs.medusajs.com/resources/references/js-sdk/admin/store"
+    "path": "https://docs.vikrai.com/resources/references/js-sdk/admin/store"
   }
 ]

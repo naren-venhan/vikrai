@@ -1,4 +1,4 @@
-import { DMLSchema, EntityConstructor, EntityIndex } from "@medusajs/types"
+import { DMLSchema, EntityConstructor, EntityIndex } from "@vikrai/types"
 import { MetadataStorage } from "@mikro-orm/core"
 import { arrayDifference } from "../../../common"
 
@@ -30,3 +30,4 @@ export function validateIndexFields<TSchema extends DMLSchema>(
     )
   }
 }
+

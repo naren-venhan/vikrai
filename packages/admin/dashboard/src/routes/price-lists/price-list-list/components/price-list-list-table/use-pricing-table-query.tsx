@@ -1,4 +1,4 @@
-import { HttpTypes, PriceListStatus } from "@medusajs/types"
+import { HttpTypes, PriceListStatus } from "@vikrai/types"
 import { useQueryParams } from "../../../../../hooks/use-query-params"
 
 export const usePricingTableQuery = ({
@@ -23,3 +23,4 @@ export const usePricingTableQuery = ({
     raw,
   }
 }
+

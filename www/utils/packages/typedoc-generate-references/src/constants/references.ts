@@ -28,8 +28,8 @@ const allReferences = [
   "fulfillment-provider",
   "helper-steps",
   "js-sdk",
-  "medusa-config",
-  "medusa",
+  "vikrai-config",
+  "vikrai",
   "modules-sdk",
   "notification",
   "payment-provider",
@@ -46,3 +46,4 @@ const allReferences = [
 ]
 
 export default allReferences
+

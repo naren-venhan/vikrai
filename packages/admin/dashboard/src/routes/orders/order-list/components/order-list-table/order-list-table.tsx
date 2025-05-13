@@ -1,4 +1,4 @@
-import { Container, Heading } from "@medusajs/ui"
+import { Container, Heading } from "@vikrai/ui"
 import { keepPreviousData } from "@tanstack/react-query"
 import { useTranslation } from "react-i18next"
 
@@ -72,3 +72,4 @@ export const OrderListTable = () => {
     </Container>
   )
 }
+

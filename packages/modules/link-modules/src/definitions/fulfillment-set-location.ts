@@ -1,5 +1,5 @@
-import { ModuleJoinerConfig } from "@medusajs/framework/types"
-import { LINKS, Modules } from "@medusajs/framework/utils"
+import { ModuleJoinerConfig } from "@vikrai/framework/types"
+import { LINKS, Modules } from "@vikrai/framework/utils"
 
 export const LocationFulfillmentSet: ModuleJoinerConfig = {
   serviceName: LINKS.LocationFulfillmentSet,
@@ -71,3 +71,4 @@ export const LocationFulfillmentSet: ModuleJoinerConfig = {
     },
   ],
 }
+

@@ -3,7 +3,7 @@ import { Sidebar } from "types"
 export const sidebars: Sidebar.Sidebar[] = [
   {
     sidebar_id: "ui",
-    title: "Medusa UI",
+    title: "vikrai UI",
     items: [
       {
         type: "link",
@@ -23,8 +23,8 @@ export const sidebars: Sidebar.Sidebar[] = [
         children: [
           {
             type: "link",
-            title: "Medusa Admin Extension",
-            path: "/installation/medusa-admin-extension",
+            title: "vikrai Admin Extension",
+            path: "/installation/vikrai-admin-extension",
             isPathHref: true,
             loaded: true,
           },
@@ -377,3 +377,4 @@ export const sidebars: Sidebar.Sidebar[] = [
     ],
   },
 ]
+

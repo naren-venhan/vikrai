@@ -38,7 +38,7 @@ import {
   InitiatePaymentOutput,
   UpdateAccountHolderDTO,
   UpdateAccountHolderOutput,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import {
   BigNumber,
   InjectManager,
@@ -46,13 +46,13 @@ import {
   isPresent,
   isString,
   MathBN,
-  MedusaContext,
-  MedusaError,
+  vikraiContext,
+  vikraiError,
   ModulesSdkUtils,
   PaymentCollectionStatus,
   PaymentSessionStatus,
   promiseAll,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 import {
   AccountHolder,
   Capture,
@@ -68,12 +68,12 @@ import PaymentProviderService from "./payment-provider"
 type InjectedDependencies = {
   logger?: Logger
   baseRepository: DAL.RepositoryService
-  paymentService: ModulesSdkTypes.IMedusaInternalService<any>
-  captureService: ModulesSdkTypes.IMedusaInternalService<any>
-  refundService: ModulesSdkTypes.IMedusaInternalService<any>
-  paymentSessionService: ModulesSdkTypes.IMedusaInternalService<any>
-  paymentCollectionService: ModulesSdkTypes.IMedusaInternalService<any>
-  accountHolderService: ModulesSdkTypes.IMedusaInternalService<any>
+  paymentService: ModulesSdkTypes.IvikraiInternalService<any>
+  captureService: ModulesSdkTypes.IvikraiInternalService<any>
+  refundService: ModulesSdkTypes.IvikraiInternalService<any>
+  paymentSessionService: ModulesSdkTypes.IvikraiInternalService<any>
+  paymentCollectionService: ModulesSdkTypes.IvikraiInternalService<any>
+  accountHolderService: ModulesSdkTypes.IvikraiInternalService<any>
   paymentProviderService: PaymentProviderService
 }
 
@@ -88,7 +88,7 @@ const generateMethodForModels = {
 }
 
 export default class PaymentModuleService
-  extends ModulesSdkUtils.MedusaService<{
+  extends ModulesSdkUtils.vikraiService<{
     PaymentCollection: { dto: PaymentCollectionDTO }
     PaymentSession: { dto: PaymentSessionDTO }
     Payment: { dto: PaymentDTO }
@@ -101,23 +101,23 @@ export default class PaymentModuleService
 {
   protected baseRepository_: DAL.RepositoryService
 
-  protected paymentService_: ModulesSdkTypes.IMedusaInternalService<
+  protected paymentService_: ModulesSdkTypes.IvikraiInternalService<
     typeof Payment
   >
-  protected captureService_: ModulesSdkTypes.IMedusaInternalService<
+  protected captureService_: ModulesSdkTypes.IvikraiInternalService<
     typeof Capture
   >
-  protected refundService_: ModulesSdkTypes.IMedusaInternalService<
+  protected refundService_: ModulesSdkTypes.IvikraiInternalService<
     typeof Refund
   >
-  protected paymentSessionService_: ModulesSdkTypes.IMedusaInternalService<
+  protected paymentSessionService_: ModulesSdkTypes.IvikraiInternalService<
     typeof PaymentSession
   >
-  protected paymentCollectionService_: ModulesSdkTypes.IMedusaInternalService<
+  protected paymentCollectionService_: ModulesSdkTypes.IvikraiInternalService<
     typeof PaymentCollection
   >
   protected paymentProviderService_: PaymentProviderService
-  protected accountHolderService_: ModulesSdkTypes.IMedusaInternalService<
+  protected accountHolderService_: ModulesSdkTypes.IvikraiInternalService<
     typeof AccountHolder
   >
 
@@ -168,7 +168,7 @@ export default class PaymentModuleService
   // @ts-expect-error
   async createPaymentCollections(
     data: CreatePaymentCollectionDTO | CreatePaymentCollectionDTO[],
-    @MedusaContext() sharedContext?: Context
+    @vikraiContext() sharedContext?: Context
   ): Promise<PaymentCollectionDTO | PaymentCollectionDTO[]> {
     const input = Array.isArray(data) ? data : [data]
 
@@ -188,7 +188,7 @@ export default class PaymentModuleService
   @InjectTransactionManager()
   async createPaymentCollections_(
     data: CreatePaymentCollectionDTO[],
-    @MedusaContext() sharedContext?: Context
+    @vikraiContext() sharedContext?: Context
   ): Promise<InferEntityType<typeof PaymentCollection>[]> {
     return await this.paymentCollectionService_.create(data, sharedContext)
   }
@@ -211,7 +211,7 @@ export default class PaymentModuleService
   async updatePaymentCollections(
     idOrSelector: string | FilterablePaymentCollectionProps,
     data: PaymentCollectionUpdatableFields,
-    @MedusaContext() sharedContext?: Context
+    @vikraiContext() sharedContext?: Context
   ): Promise<PaymentCollectionDTO | PaymentCollectionDTO[]> {
     let updateData: UpdatePaymentCollectionDTO[] = []
 
@@ -251,7 +251,7 @@ export default class PaymentModuleService
   @InjectManager()
   async updatePaymentCollections_(
     data: UpdatePaymentCollectionDTO[],
-    @MedusaContext() sharedContext?: Context
+    @vikraiContext() sharedContext?: Context
   ): Promise<InferEntityType<typeof PaymentCollection>[]> {
     return await this.paymentCollectionService_.update(data, sharedContext)
   }
@@ -268,7 +268,7 @@ export default class PaymentModuleService
   @InjectManager()
   async upsertPaymentCollections(
     data: UpsertPaymentCollectionDTO | UpsertPaymentCollectionDTO[],
-    @MedusaContext() sharedContext?: Context
+    @vikraiContext() sharedContext?: Context
   ): Promise<PaymentCollectionDTO | PaymentCollectionDTO[]> {
     const input = Array.isArray(data) ? data : [data]
     const forUpdate = input.filter(
@@ -308,7 +308,7 @@ export default class PaymentModuleService
   @InjectManager()
   async completePaymentCollections(
     paymentCollectionId: string | string[],
-    @MedusaContext() sharedContext?: Context
+    @vikraiContext() sharedContext?: Context
   ): Promise<PaymentCollectionDTO | PaymentCollectionDTO[]> {
     const input = Array.isArray(paymentCollectionId)
       ? paymentCollectionId.map((id) => ({
@@ -334,7 +334,7 @@ export default class PaymentModuleService
   async createPaymentSession(
     paymentCollectionId: string,
     input: CreatePaymentSessionDTO,
-    @MedusaContext() sharedContext?: Context
+    @vikraiContext() sharedContext?: Context
   ): Promise<PaymentSessionDTO> {
     let paymentSession: InferEntityType<typeof PaymentSession> | undefined
     let providerPaymentSession: InitiatePaymentOutput | undefined
@@ -392,7 +392,7 @@ export default class PaymentModuleService
   async createPaymentSession_(
     paymentCollectionId: string,
     data: CreatePaymentSessionDTO,
-    @MedusaContext() sharedContext?: Context
+    @vikraiContext() sharedContext?: Context
   ): Promise<InferEntityType<typeof PaymentSession>> {
     const paymentSession = await this.paymentSessionService_.create(
       {
@@ -412,7 +412,7 @@ export default class PaymentModuleService
   @InjectManager()
   async updatePaymentSession(
     data: UpdatePaymentSessionDTO,
-    @MedusaContext() sharedContext?: Context
+    @vikraiContext() sharedContext?: Context
   ): Promise<PaymentSessionDTO> {
     const session = await this.paymentSessionService_.retrieve(
       data.id,
@@ -446,7 +446,7 @@ export default class PaymentModuleService
   @InjectManager()
   async deletePaymentSession(
     id: string,
-    @MedusaContext() sharedContext?: Context
+    @vikraiContext() sharedContext?: Context
   ): Promise<void> {
     const session = await this.paymentSessionService_.retrieve(
       id,
@@ -465,7 +465,7 @@ export default class PaymentModuleService
   async authorizePaymentSession(
     id: string,
     context: Record<string, unknown>,
-    @MedusaContext() sharedContext?: Context
+    @vikraiContext() sharedContext?: Context
   ): Promise<PaymentDTO> {
     const session = await this.paymentSessionService_.retrieve(
       id,
@@ -512,8 +512,8 @@ export default class PaymentModuleService
         },
         sharedContext
       )
-      throw new MedusaError(
-        MedusaError.Types.NOT_ALLOWED,
+      throw new vikraiError(
+        vikraiError.Types.NOT_ALLOWED,
         `Session: ${session.id} was not authorized with the provider.`
       )
     }
@@ -553,7 +553,7 @@ export default class PaymentModuleService
     session: InferEntityType<typeof PaymentSession>,
     data: Record<string, unknown> | undefined,
     status: PaymentSessionStatus,
-    @MedusaContext() sharedContext?: Context
+    @vikraiContext() sharedContext?: Context
   ): Promise<InferEntityType<typeof Payment>> {
     let autoCapture = false
     if (status === PaymentSessionStatus.CAPTURED) {
@@ -600,7 +600,7 @@ export default class PaymentModuleService
   @InjectManager()
   async updatePayment(
     data: UpdatePaymentDTO,
-    @MedusaContext() sharedContext?: Context
+    @vikraiContext() sharedContext?: Context
   ): Promise<PaymentDTO> {
     // NOTE: currently there is no update with the provider but maybe data could be updated
     const result = await this.paymentService_.update(data, sharedContext)
@@ -612,7 +612,7 @@ export default class PaymentModuleService
   @InjectManager()
   async capturePayment(
     data: CreateCaptureDTO,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<PaymentDTO> {
     const payment = await this.paymentService_.retrieve(
       data.payment_id,
@@ -666,14 +666,14 @@ export default class PaymentModuleService
   private async capturePayment_(
     data: CreateCaptureDTO,
     payment: InferEntityType<typeof Payment>,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<{
     isFullyCaptured: boolean
     capture?: InferEntityType<typeof Capture>
   }> {
     if (payment.canceled_at) {
-      throw new MedusaError(
-        MedusaError.Types.INVALID_DATA,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_DATA,
         `The payment: ${payment.id} has been canceled.`
       )
     }
@@ -696,8 +696,8 @@ export default class PaymentModuleService
     const remainingToCapture = MathBN.sub(authorizedAmount, capturedAmount)
 
     if (MathBN.gt(newCaptureAmount, remainingToCapture)) {
-      throw new MedusaError(
-        MedusaError.Types.INVALID_DATA,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_DATA,
         `You cannot capture more than the authorized amount substracted by what is already captured.`
       )
     }
@@ -724,7 +724,7 @@ export default class PaymentModuleService
     payment: InferEntityType<typeof Payment>,
     capture: InferEntityType<typeof Capture> | undefined,
     isFullyCaptured: boolean,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ) {
     const paymentData = await this.paymentProviderService_.capturePayment(
       payment.provider_id,
@@ -751,7 +751,7 @@ export default class PaymentModuleService
   @InjectManager()
   async refundPayment(
     data: CreateRefundDTO,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<PaymentDTO> {
     const payment = await this.paymentService_.retrieve(
       data.payment_id,
@@ -793,7 +793,7 @@ export default class PaymentModuleService
   private async refundPayment_(
     payment: InferEntityType<typeof Payment>,
     data: CreateRefundDTO,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<InferEntityType<typeof Refund>> {
     if (!data.amount) {
       data.amount = payment.amount as BigNumberInput
@@ -810,8 +810,8 @@ export default class PaymentModuleService
     const totalRefundedAmount = MathBN.add(refundedAmount, data.amount)
 
     if (MathBN.lt(capturedAmount, totalRefundedAmount)) {
-      throw new MedusaError(
-        MedusaError.Types.INVALID_DATA,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_DATA,
         `You cannot refund more than what is captured on the payment.`
       )
     }
@@ -834,7 +834,7 @@ export default class PaymentModuleService
   private async refundPaymentFromProvider_(
     payment: InferEntityType<typeof Payment>,
     refund: InferEntityType<typeof Refund>,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ) {
     const paymentData = await this.paymentProviderService_.refundPayment(
       payment.provider_id,
@@ -858,7 +858,7 @@ export default class PaymentModuleService
   @InjectManager()
   async cancelPayment(
     paymentId: string,
-    @MedusaContext() sharedContext?: Context
+    @vikraiContext() sharedContext?: Context
   ): Promise<PaymentDTO> {
     const payment = await this.paymentService_.retrieve(
       paymentId,
@@ -962,7 +962,7 @@ export default class PaymentModuleService
   async listPaymentProviders(
     filters: FilterablePaymentProviderProps = {},
     config: FindConfig<PaymentProviderDTO> = {},
-    @MedusaContext() sharedContext?: Context
+    @vikraiContext() sharedContext?: Context
   ): Promise<PaymentProviderDTO[]> {
     const providers = await this.paymentProviderService_.list(
       filters,
@@ -982,7 +982,7 @@ export default class PaymentModuleService
   async listAndCountPaymentProviders(
     filters: FilterablePaymentProviderProps = {},
     config: FindConfig<PaymentProviderDTO> = {},
-    @MedusaContext() sharedContext?: Context
+    @vikraiContext() sharedContext?: Context
   ): Promise<[PaymentProviderDTO[], number]> {
     const [providers, count] = await this.paymentProviderService_.listAndCount(
       filters,
@@ -1001,7 +1001,7 @@ export default class PaymentModuleService
   @InjectManager()
   async createAccountHolder(
     input: CreateAccountHolderDTO,
-    @MedusaContext() sharedContext?: Context
+    @vikraiContext() sharedContext?: Context
   ): Promise<AccountHolderDTO> {
     if (input.context?.account_holder) {
       return input.context.account_holder as AccountHolderDTO
@@ -1040,11 +1040,11 @@ export default class PaymentModuleService
   @InjectManager()
   async updateAccountHolder(
     input: UpdateAccountHolderDTO,
-    @MedusaContext() sharedContext?: Context
+    @vikraiContext() sharedContext?: Context
   ): Promise<AccountHolderDTO> {
     if (!input.context?.account_holder) {
-      throw new MedusaError(
-        MedusaError.Types.INVALID_DATA,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_DATA,
         "Missing account holder data while updating account holder."
       )
     }
@@ -1079,7 +1079,7 @@ export default class PaymentModuleService
   @InjectManager()
   async deleteAccountHolder(
     id: string,
-    @MedusaContext() sharedContext?: Context
+    @vikraiContext() sharedContext?: Context
   ): Promise<void> {
     const accountHolder = await this.accountHolderService_.retrieve(
       id,
@@ -1101,7 +1101,7 @@ export default class PaymentModuleService
   async listPaymentMethods(
     filters: FilterablePaymentMethodProps,
     config: FindConfig<PaymentMethodDTO> = {},
-    @MedusaContext() sharedContext?: Context
+    @vikraiContext() sharedContext?: Context
   ): Promise<PaymentMethodDTO[]> {
     const res = await this.paymentProviderService_.listPaymentMethods(
       filters.provider_id,
@@ -1119,7 +1119,7 @@ export default class PaymentModuleService
   async listAndCountPaymentMethods(
     filters: FilterablePaymentMethodProps,
     config: FindConfig<PaymentMethodDTO> = {},
-    @MedusaContext() sharedContext?: Context
+    @vikraiContext() sharedContext?: Context
   ): Promise<[PaymentMethodDTO[], number]> {
     const paymentMethods =
       await this.paymentProviderService_.listPaymentMethods(
@@ -1149,7 +1149,7 @@ export default class PaymentModuleService
   @InjectManager()
   async createPaymentMethods(
     data: CreatePaymentMethodDTO | CreatePaymentMethodDTO[],
-    @MedusaContext() sharedContext?: Context
+    @vikraiContext() sharedContext?: Context
   ): Promise<PaymentMethodDTO | PaymentMethodDTO[]> {
     const input = Array.isArray(data) ? data : [data]
 
@@ -1174,7 +1174,7 @@ export default class PaymentModuleService
   @InjectManager()
   async getWebhookActionAndData(
     eventData: ProviderWebhookPayload,
-    @MedusaContext() sharedContext?: Context
+    @vikraiContext() sharedContext?: Context
   ): Promise<WebhookActionResult> {
     const providerId = `pp_${eventData.provider}`
 
@@ -1184,3 +1184,4 @@ export default class PaymentModuleService
     )
   }
 }
+

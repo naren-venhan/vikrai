@@ -1,4 +1,4 @@
-import { DAL, FindConfig, InferRepositoryReturnType } from "@medusajs/types"
+import { DAL, FindConfig, InferRepositoryReturnType } from "@vikrai/types"
 import { deduplicate, isObject } from "../common"
 
 import { SoftDeletableFilterKey } from "../dal/mikro-orm/mikro-orm-soft-deletable-filter"
@@ -100,3 +100,4 @@ function buildWhere(
     where[prop] = value
   }
 }
+

@@ -1,4 +1,4 @@
-import { MagnifyingGlass, XMarkMini } from "@medusajs/icons"
+import { MagnifyingGlass, XMarkMini } from "@vikrai/icons"
 import {
   Button,
   DatePicker,
@@ -11,7 +11,7 @@ import {
   Text,
   Textarea,
   clx,
-} from "@medusajs/ui"
+} from "@vikrai/ui"
 import { useFieldArray, type UseFormReturn } from "react-hook-form"
 import { useTranslation } from "react-i18next"
 
@@ -323,3 +323,4 @@ export const PriceListDetailsForm = ({ form }: PriceListDetailsFormProps) => {
     </div>
   )
 }
+

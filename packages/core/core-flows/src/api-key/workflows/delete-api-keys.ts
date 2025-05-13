@@ -1,7 +1,7 @@
-import { createWorkflow, WorkflowData } from "@medusajs/framework/workflows-sdk"
+import { createWorkflow, WorkflowData } from "@vikrai/framework/workflows-sdk"
 import { removeRemoteLinkStep } from "../../common/steps/remove-remote-links"
 import { deleteApiKeysStep } from "../steps"
-import { Modules } from "@medusajs/framework/utils"
+import { Modules } from "@vikrai/framework/utils"
 
 /**
  * The data to delete API keys.
@@ -16,7 +16,7 @@ export type DeleteApiKeysWorkflowInput = {
 export const deleteApiKeysWorkflowId = "delete-api-keys"
 /**
  * This workflow deletes one or more secret or publishable API keys. It's used by the
- * [Delete API Key Admin API Route](https://docs.medusajs.com/api/admin#api-keys_deleteapikeysid).
+ * [Delete API Key Admin API Route](https://docs.vikrai.com/api/admin#api-keys_deleteapikeysid).
  * 
  * You can use this workflow within your customizations or your own custom workflows, allowing you to
  * delete API keys within your custom flows.
@@ -44,3 +44,4 @@ export const deleteApiKeysWorkflow = createWorkflow(
     })
   }
 )
+

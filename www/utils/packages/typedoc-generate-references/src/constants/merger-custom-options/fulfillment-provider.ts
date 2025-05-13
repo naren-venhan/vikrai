@@ -27,15 +27,15 @@ const fulfillmentProviderOptions: FormattingOptionsType = {
     startSections: [
       `## Understanding Fulfillment Module Provider Implementation
 
-The Fulfillment Module Provider handles processing fulfillments and shipments with a third-party provirder. However, it's not responsible for managing fulfillment concepts within Medusa, such as creating a fulfillment or its shipments. The Fulfillment Module uses your Fulfillment Module Provider within core operations.
+The Fulfillment Module Provider handles processing fulfillments and shipments with a third-party provirder. However, it's not responsible for managing fulfillment concepts within vikrai, such as creating a fulfillment or its shipments. The Fulfillment Module uses your Fulfillment Module Provider within core operations.
 
-For example, when the merchant creates a fulfillment for an order, the Fulfillment Module uses your Fulfillment Module Provider to create the fulfillment in the third-party system, then creates the fulfillment in Medusa. So, you only have to implement the third-party fulfillment processing logic in your Fulfillment Module Provider.
+For example, when the merchant creates a fulfillment for an order, the Fulfillment Module uses your Fulfillment Module Provider to create the fulfillment in the third-party system, then creates the fulfillment in vikrai. So, you only have to implement the third-party fulfillment processing logic in your Fulfillment Module Provider.
 `,
       `## 1. Create Module Provider Directory
 
 Start by creating a new directory for your module provider.
 
-If you're creating the module provider in a Medusa application, create it under the \`src/modules\` directory. For example, \`src/modules/my-fulfillment\`.
+If you're creating the module provider in a vikrai application, create it under the \`src/modules\` directory. For example, \`src/modules/my-fulfillment\`.
 
 If you're creating the module provider in a plugin, create it under the \`src/providers\` directory. For example, \`src/providers/my-fulfillment\`.
 
@@ -46,10 +46,10 @@ The rest of this guide always uses the \`src/modules/my-fulfillment\` directory 
 </Note>`,
       `## 2. Create the Fulfillment Module Provider Service
 
-Create the file \`src/modules/my-fulfillment/service.ts\` that holds the module provider's main service. It must extend the \`AbstractFulfillmentProviderService\` class imported from \`@medusajs/framework/utils\`:
+Create the file \`src/modules/my-fulfillment/service.ts\` that holds the module provider's main service. It must extend the \`AbstractFulfillmentProviderService\` class imported from \`@vikrai/framework/utils\`:
 
 \`\`\`ts title="src/modules/my-fulfillment/service.ts"
-import { AbstractFulfillmentProviderService } from "@medusajs/framework/utils"
+import { AbstractFulfillmentProviderService } from "@vikrai/framework/utils"
 
 class MyFulfillmentProviderService extends AbstractFulfillmentProviderService {
   // TODO implement methods
@@ -68,7 +68,7 @@ import MyFulfillmentProviderService from "./service"
 import { 
   ModuleProvider, 
   Modules
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 
 export default ModuleProvider(Modules.FULFILLMENT, {
   services: [MyFulfillmentProviderService],
@@ -84,19 +84,19 @@ A fulfillment module provider can have export multiple provider services, where 
 </Note>`,
       `## 4. Use Module Provider
 
-To use your Fulfillment Module Provider, add it to the \`providers\` array of the Fulfillment Module in \`medusa-config.ts\`:
+To use your Fulfillment Module Provider, add it to the \`providers\` array of the Fulfillment Module in \`vikrai-config.ts\`:
 
-\`\`\`ts title="medusa-config.ts"
+\`\`\`ts title="vikrai-config.ts"
 module.exports = defineConfig({
   // ...
   modules: [
     {
-      resolve: "@medusajs/medusa/fulfillment",
+      resolve: "@vikrai/vikrai/fulfillment",
       options: {
         providers: [
           // default provider
           {
-            resolve: "@medusajs/medusa/fulfillment-manual",
+            resolve: "@vikrai/vikrai/fulfillment-manual",
             id: "manual",
           },
           {
@@ -116,15 +116,16 @@ module.exports = defineConfig({
 `,
       `## 5. Test it Out
 
-Before you use your Fulfillment Module Provider, in the Medusa Admin:
+Before you use your Fulfillment Module Provider, in the vikrai Admin:
 
 1. Add the Fulfillment Module Provider to a location.
 2. Add in the location a delivery shipping option that uses the provider.
 
-Then, place an order, choosing the shipping option you created during checkout, and create a fulfillment in the Medusa Admin. The fulfillment is created using your provider.
+Then, place an order, choosing the shipping option you created during checkout, and create a fulfillment in the vikrai Admin. The fulfillment is created using your provider.
 `,
     ],
   },
 }
 
 export default fulfillmentProviderOptions
+

@@ -1,9 +1,9 @@
-import { LinkDefinition } from "@medusajs/framework/types"
+import { LinkDefinition } from "@vikrai/framework/types"
 import {
   WorkflowData,
   WorkflowResponse,
   createWorkflow,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { createRemoteLinkStep } from "../steps/create-remote-links"
 
 export const createLinksWorkflowId = "create-link"
@@ -13,14 +13,14 @@ export const createLinksWorkflowId = "create-link"
  * You can use this workflow within your customizations or your own custom workflows, allowing you to
  * create links within your custom flows.
  * 
- * Learn more about links in [this documentation](https://docs.medusajs.com/learn/fundamentals/module-links/link).
+ * Learn more about links in [this documentation](https://docs.vikrai.com/learn/fundamentals/module-links/link).
  * 
  * @example
  * const { result } = await createLinksWorkflow(container)
  * .run({
  *   input: [
  *     {
- *       // import { Modules } from "@medusajs/framework/utils"
+ *       // import { Modules } from "@vikrai/framework/utils"
  *       [Modules.PRODUCT]: {
  *         product_id: "prod_123",
  *       },
@@ -41,3 +41,4 @@ export const createLinksWorkflow = createWorkflow(
     return new WorkflowResponse(createRemoteLinkStep(input))
   }
 )
+

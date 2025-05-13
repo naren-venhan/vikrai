@@ -1,4 +1,4 @@
-import { Heading } from "@medusajs/ui"
+import { Heading } from "@vikrai/ui"
 import { useTranslation } from "react-i18next"
 import { useParams } from "react-router-dom"
 import { RouteDrawer } from "../../../components/modals"
@@ -66,3 +66,4 @@ export const PriceListConfiguration = () => {
     </RouteDrawer>
   )
 }
+

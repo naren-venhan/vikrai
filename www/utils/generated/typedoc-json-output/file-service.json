@@ -23,13 +23,13 @@
 							"fileName": "file/service.ts",
 							"line": 22,
 							"character": 2,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/file/service.ts#L22"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/file/service.ts#L22"
 						},
 						{
 							"fileName": "file/service.ts",
 							"line": 42,
 							"character": 2,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/file/service.ts#L42"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/file/service.ts#L42"
 						}
 					],
 					"signatures": [
@@ -72,7 +72,7 @@
 									"fileName": "file/service.ts",
 									"line": 22,
 									"character": 2,
-									"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/file/service.ts#L22"
+									"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/file/service.ts#L22"
 								}
 							],
 							"parameters": [
@@ -99,7 +99,7 @@
 												"qualifiedName": "CreateFileDTO"
 											},
 											"name": "CreateFileDTO",
-											"package": "@medusajs/types"
+											"package": "@vikrai/types"
 										}
 									}
 								},
@@ -126,7 +126,7 @@
 											"qualifiedName": "Context"
 										},
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@vikrai/types"
 									}
 								}
 							],
@@ -146,7 +146,7 @@
 												"qualifiedName": "FileDTO"
 											},
 											"name": "FileDTO",
-											"package": "@medusajs/types"
+											"package": "@vikrai/types"
 										}
 									}
 								],
@@ -193,7 +193,7 @@
 									"fileName": "file/service.ts",
 									"line": 42,
 									"character": 2,
-									"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/file/service.ts#L42"
+									"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/file/service.ts#L42"
 								}
 							],
 							"parameters": [
@@ -218,7 +218,7 @@
 											"qualifiedName": "CreateFileDTO"
 										},
 										"name": "CreateFileDTO",
-										"package": "@medusajs/types"
+										"package": "@vikrai/types"
 									}
 								},
 								{
@@ -244,7 +244,7 @@
 											"qualifiedName": "Context"
 										},
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@vikrai/types"
 									}
 								}
 							],
@@ -262,7 +262,7 @@
 											"qualifiedName": "FileDTO"
 										},
 										"name": "FileDTO",
-										"package": "@medusajs/types"
+										"package": "@vikrai/types"
 									}
 								],
 								"name": "Promise",
@@ -282,13 +282,13 @@
 							"fileName": "file/service.ts",
 							"line": 58,
 							"character": 2,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/file/service.ts#L58"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/file/service.ts#L58"
 						},
 						{
 							"fileName": "file/service.ts",
 							"line": 76,
 							"character": 2,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/file/service.ts#L76"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/file/service.ts#L76"
 						}
 					],
 					"signatures": [
@@ -331,7 +331,7 @@
 									"fileName": "file/service.ts",
 									"line": 58,
 									"character": 2,
-									"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/file/service.ts#L58"
+									"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/file/service.ts#L58"
 								}
 							],
 							"parameters": [
@@ -356,7 +356,7 @@
 											"qualifiedName": "GetUploadFileUrlDTO"
 										},
 										"name": "GetUploadFileUrlDTO",
-										"package": "@medusajs/types"
+										"package": "@vikrai/types"
 									}
 								},
 								{
@@ -382,7 +382,7 @@
 											"qualifiedName": "Context"
 										},
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@vikrai/types"
 									}
 								}
 							],
@@ -400,7 +400,7 @@
 											"qualifiedName": "UploadFileUrlDTO"
 										},
 										"name": "UploadFileUrlDTO",
-										"package": "@medusajs/types"
+										"package": "@vikrai/types"
 									}
 								],
 								"name": "Promise",
@@ -446,7 +446,7 @@
 									"fileName": "file/service.ts",
 									"line": 76,
 									"character": 2,
-									"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/file/service.ts#L76"
+									"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/file/service.ts#L76"
 								}
 							],
 							"parameters": [
@@ -473,7 +473,7 @@
 												"qualifiedName": "GetUploadFileUrlDTO"
 											},
 											"name": "GetUploadFileUrlDTO",
-											"package": "@medusajs/types"
+											"package": "@vikrai/types"
 										}
 									}
 								},
@@ -500,7 +500,7 @@
 											"qualifiedName": "Context"
 										},
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@vikrai/types"
 									}
 								}
 							],
@@ -520,7 +520,7 @@
 												"qualifiedName": "UploadFileUrlDTO"
 											},
 											"name": "UploadFileUrlDTO",
-											"package": "@medusajs/types"
+											"package": "@vikrai/types"
 										}
 									}
 								],
@@ -541,13 +541,13 @@
 							"fileName": "file/service.ts",
 							"line": 91,
 							"character": 2,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/file/service.ts#L91"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/file/service.ts#L91"
 						},
 						{
 							"fileName": "file/service.ts",
 							"line": 103,
 							"character": 2,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/file/service.ts#L103"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/file/service.ts#L103"
 						}
 					],
 					"signatures": [
@@ -590,7 +590,7 @@
 									"fileName": "file/service.ts",
 									"line": 91,
 									"character": 2,
-									"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/file/service.ts#L91"
+									"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/file/service.ts#L91"
 								}
 							],
 							"parameters": [
@@ -639,7 +639,7 @@
 											"qualifiedName": "Context"
 										},
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@vikrai/types"
 									}
 								}
 							],
@@ -698,7 +698,7 @@
 									"fileName": "file/service.ts",
 									"line": 103,
 									"character": 2,
-									"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/file/service.ts#L103"
+									"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/file/service.ts#L103"
 								}
 							],
 							"parameters": [
@@ -744,7 +744,7 @@
 											"qualifiedName": "Context"
 										},
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@vikrai/types"
 									}
 								}
 							],
@@ -777,7 +777,7 @@
 							"fileName": "file/service.ts",
 							"line": 117,
 							"character": 2,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/file/service.ts#L117"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/file/service.ts#L117"
 						}
 					],
 					"signatures": [
@@ -820,7 +820,7 @@
 									"fileName": "file/service.ts",
 									"line": 117,
 									"character": 2,
-									"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/file/service.ts#L117"
+									"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/file/service.ts#L117"
 								}
 							],
 							"parameters": [
@@ -889,11 +889,11 @@
 													"qualifiedName": "FileDTO"
 												},
 												"name": "FileDTO",
-												"package": "@medusajs/types"
+												"package": "@vikrai/types"
 											}
 										],
 										"name": "FindConfig",
-										"package": "@medusajs/types"
+										"package": "@vikrai/types"
 									}
 								},
 								{
@@ -919,7 +919,7 @@
 											"qualifiedName": "Context"
 										},
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@vikrai/types"
 									}
 								}
 							],
@@ -937,7 +937,7 @@
 											"qualifiedName": "FileDTO"
 										},
 										"name": "FileDTO",
-										"package": "@medusajs/types"
+										"package": "@vikrai/types"
 									}
 								],
 								"name": "Promise",
@@ -957,7 +957,7 @@
 							"fileName": "file/service.ts",
 							"line": 136,
 							"character": 2,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/file/service.ts#L136"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/file/service.ts#L136"
 						}
 					],
 					"signatures": [
@@ -979,7 +979,7 @@
 									},
 									{
 										"kind": "text",
-										"text": ". It doesn't retrieve multiple files, but it's added to support retrieving files with [Query](https://docs.medusajs.com/learn/fundamentals/module-links/query)."
+										"text": ". It doesn't retrieve multiple files, but it's added to support retrieving files with [Query](https://docs.vikrai.com/learn/fundamentals/module-links/query)."
 									}
 								],
 								"blockTags": [
@@ -1008,7 +1008,7 @@
 									"fileName": "file/service.ts",
 									"line": 136,
 									"character": 2,
-									"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/file/service.ts#L136"
+									"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/file/service.ts#L136"
 								}
 							],
 							"parameters": [
@@ -1035,7 +1035,7 @@
 											"qualifiedName": "FilterableFileProps"
 										},
 										"name": "FilterableFileProps",
-										"package": "@medusajs/types"
+										"package": "@vikrai/types"
 									}
 								},
 								{
@@ -1084,11 +1084,11 @@
 													"qualifiedName": "FileDTO"
 												},
 												"name": "FileDTO",
-												"package": "@medusajs/types"
+												"package": "@vikrai/types"
 											}
 										],
 										"name": "FindConfig",
-										"package": "@medusajs/types"
+										"package": "@vikrai/types"
 									}
 								},
 								{
@@ -1114,7 +1114,7 @@
 											"qualifiedName": "Context"
 										},
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@vikrai/types"
 									}
 								}
 							],
@@ -1134,7 +1134,7 @@
 												"qualifiedName": "FileDTO"
 											},
 											"name": "FileDTO",
-											"package": "@medusajs/types"
+											"package": "@vikrai/types"
 										}
 									}
 								],
@@ -1155,7 +1155,7 @@
 							"fileName": "file/service.ts",
 							"line": 155,
 							"character": 2,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/file/service.ts#L155"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/file/service.ts#L155"
 						}
 					],
 					"signatures": [
@@ -1177,7 +1177,7 @@
 									},
 									{
 										"kind": "text",
-										"text": ". It doesn't retrieve multiple files, but it's added to support retrieving files with [Query](https://docs.medusajs.com/learn/fundamentals/module-links/query)."
+										"text": ". It doesn't retrieve multiple files, but it's added to support retrieving files with [Query](https://docs.vikrai.com/learn/fundamentals/module-links/query)."
 									}
 								],
 								"blockTags": [
@@ -1206,7 +1206,7 @@
 									"fileName": "file/service.ts",
 									"line": 155,
 									"character": 2,
-									"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/file/service.ts#L155"
+									"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/file/service.ts#L155"
 								}
 							],
 							"parameters": [
@@ -1233,7 +1233,7 @@
 											"qualifiedName": "FilterableFileProps"
 										},
 										"name": "FilterableFileProps",
-										"package": "@medusajs/types"
+										"package": "@vikrai/types"
 									}
 								},
 								{
@@ -1282,11 +1282,11 @@
 													"qualifiedName": "FileDTO"
 												},
 												"name": "FileDTO",
-												"package": "@medusajs/types"
+												"package": "@vikrai/types"
 											}
 										],
 										"name": "FindConfig",
-										"package": "@medusajs/types"
+										"package": "@vikrai/types"
 									}
 								},
 								{
@@ -1312,7 +1312,7 @@
 											"qualifiedName": "Context"
 										},
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@vikrai/types"
 									}
 								}
 							],
@@ -1335,7 +1335,7 @@
 														"qualifiedName": "FileDTO"
 													},
 													"name": "FileDTO",
-													"package": "@medusajs/types"
+													"package": "@vikrai/types"
 												}
 											},
 											{
@@ -1370,7 +1370,7 @@
 					"fileName": "file/service.ts",
 					"line": 7,
 					"character": 17,
-					"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/file/service.ts#L7"
+					"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/file/service.ts#L7"
 				}
 			],
 			"extendedTypes": [
@@ -1381,7 +1381,7 @@
 						"qualifiedName": "IModuleService"
 					},
 					"name": "IModuleService",
-					"package": "@medusajs/types"
+					"package": "@vikrai/types"
 				}
 			]
 		}
@@ -1394,7 +1394,7 @@
 			]
 		}
 	],
-	"packageName": "@medusajs/types",
+	"packageName": "@vikrai/types",
 	"symbolIdMap": {
 		"56006": {
 			"sourceFileName": "../../../../packages/core/types/src/file/service.ts",
@@ -1558,3 +1558,4 @@
 		}
 	}
 }
+

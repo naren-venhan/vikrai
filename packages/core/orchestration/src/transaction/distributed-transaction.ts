@@ -1,4 +1,4 @@
-import { isDefined } from "@medusajs/utils"
+import { isDefined } from "@vikrai/utils"
 import { EventEmitter } from "events"
 import { IDistributedTransactionStorage } from "./datastore/abstract-storage"
 import { BaseInMemoryDistributedTransactionStorage } from "./datastore/base-in-memory-storage"
@@ -406,3 +406,4 @@ export {
   GlobalDistributedTransaction as DistributedTransaction,
   DistributedTransaction as DistributedTransactionType,
 }
+

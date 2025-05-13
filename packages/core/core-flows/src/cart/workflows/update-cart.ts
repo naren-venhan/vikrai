@@ -1,12 +1,12 @@
 import {
   AdditionalData,
   UpdateCartWorkflowInputDTO,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import {
   CartWorkflowEvents,
   isDefined,
-  MedusaError,
-} from "@medusajs/framework/utils"
+  vikraiError,
+} from "@vikrai/framework/utils"
 import {
   createHook,
   createWorkflow,
@@ -15,7 +15,7 @@ import {
   when,
   WorkflowData,
   WorkflowResponse,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import {
   emitEventStep,
   useQueryGraphStep,
@@ -39,7 +39,7 @@ export type UpdateCartWorkflowInput = UpdateCartWorkflowInputDTO &
 export const updateCartWorkflowId = "update-cart"
 /**
  * This workflow updates a cart and returns it. You can update the cart's region, address, and more. This workflow is executed by the
- * [Update Cart Store API Route](https://docs.medusajs.com/api/store#carts_postcartsid).
+ * [Update Cart Store API Route](https://docs.vikrai.com/api/store#carts_postcartsid).
  *
  * :::note
  *
@@ -169,8 +169,8 @@ export const updateCartWorkflow = createWorkflow(
           )
 
           if (!country) {
-            throw new MedusaError(
-              MedusaError.Types.INVALID_DATA,
+            throw new vikraiError(
+              vikraiError.Types.INVALID_DATA,
               `Country with code ${shippingAddress.country_code} is not within region ${data.region.name}`
             )
           }
@@ -295,3 +295,4 @@ export const updateCartWorkflow = createWorkflow(
     })
   }
 )
+

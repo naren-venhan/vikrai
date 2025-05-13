@@ -1,9 +1,9 @@
 import {
   arrayDifference,
   ContainerRegistrationKeys,
-  MedusaError,
-} from "@medusajs/framework/utils"
-import { createStep } from "@medusajs/framework/workflows-sdk"
+  vikraiError,
+} from "@vikrai/framework/utils"
+import { createStep } from "@vikrai/framework/workflows-sdk"
 
 /**
  * The IDs of the inventory items to validate.
@@ -33,10 +33,11 @@ export const validateInventoryItems = createStep(
     )
 
     if (diff.length > 0) {
-      throw new MedusaError(
-        MedusaError.Types.INVALID_DATA,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_DATA,
         `Inventory Items with ids: ${diff.join(", ")} was not found`
       )
     }
   }
 )
+

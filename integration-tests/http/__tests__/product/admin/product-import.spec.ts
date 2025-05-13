@@ -1,9 +1,9 @@
 import {
-  medusaIntegrationTestRunner,
+  vikraiIntegrationTestRunner,
   TestEventUtils,
-} from "@medusajs/test-utils"
-import { IEventBusModuleService } from "@medusajs/types"
-import { CommonEvents, Modules } from "@medusajs/utils"
+} from "@vikrai/test-utils"
+import { IEventBusModuleService } from "@vikrai/types"
+import { CommonEvents, Modules } from "@vikrai/utils"
 import FormData from "form-data"
 import fs from "fs/promises"
 import path from "path"
@@ -29,7 +29,7 @@ const getUploadReq = (file: { name: string; content: string }) => {
   }
 }
 
-medusaIntegrationTestRunner({
+vikraiIntegrationTestRunner({
   testSuite: ({ dbConnection, getContainer, api }) => {
     let baseCollection
     let baseType
@@ -866,3 +866,4 @@ medusaIntegrationTestRunner({
     })
   },
 })
+

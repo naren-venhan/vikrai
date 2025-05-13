@@ -1,4 +1,4 @@
-import { RelationshipMetadata } from "@medusajs/types"
+import { RelationshipMetadata } from "@vikrai/types"
 import { DmlEntity } from "../../entity"
 import { HasMany, HasOne } from "../../relations"
 import { ManyToMany as DmlManyToMany } from "../../relations/many-to-many"
@@ -68,3 +68,4 @@ export function setGraphQLRelationship(
 
   return defineRelationships(entityName, relationship, relatedEntityInfo)
 }
+

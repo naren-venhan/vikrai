@@ -15,12 +15,12 @@ get:
         type: string
     - name: x-publishable-api-key
       in: header
-      description: Publishable API Key created in the Medusa Admin.
+      description: Publishable API Key created in the vikrai Admin.
       required: true
       schema:
         type: string
         externalDocs:
-          url: https://docs.medusajs.com/api/store#publishable-api-key
+          url: https://docs.vikrai.com/api/store#publishable-api-key
     - name: fields
       in: query
       description: >-
@@ -30,7 +30,7 @@ get:
         replace the entire default fields. This API route restricts the fields
         that can be selected. Learn how to override the retrievable fields in
         the [Retrieve Custom
-        Links](https://docs.medusajs.com/learn/fundamentals/api-routes/retrieve-custom-links)
+        Links](https://docs.vikrai.com/learn/fundamentals/api-routes/retrieve-custom-links)
         documentation.
       required: false
       schema:
@@ -43,7 +43,7 @@ get:
           prefix it will replace the entire default fields. This API route
           restricts the fields that can be selected. Learn how to override the
           retrievable fields in the [Retrieve Custom
-          Links](https://docs.medusajs.com/learn/fundamentals/api-routes/retrieve-custom-links)
+          Links](https://docs.vikrai.com/learn/fundamentals/api-routes/retrieve-custom-links)
           documentation.
         externalDocs:
           url: '#select-fields-and-relations'
@@ -88,7 +88,7 @@ post:
   description: Update the logged-in customer's address.
   externalDocs:
     url: >-
-      https://docs.medusajs.com/v2/resources/storefront-development/customers/addresses#edit-an-address
+      https://docs.vikrai.com/v2/resources/storefront-development/customers/addresses#edit-an-address
     description: 'Storefront guide: How to update an address of the logged-in customer.'
   x-authenticated: true
   parameters:
@@ -100,12 +100,12 @@ post:
         type: string
     - name: x-publishable-api-key
       in: header
-      description: Publishable API Key created in the Medusa Admin.
+      description: Publishable API Key created in the vikrai Admin.
       required: true
       schema:
         type: string
         externalDocs:
-          url: https://docs.medusajs.com/api/store#publishable-api-key
+          url: https://docs.vikrai.com/api/store#publishable-api-key
     - name: fields
       in: query
       description: >-
@@ -115,7 +115,7 @@ post:
         replace the entire default fields. This API route restricts the fields
         that can be selected. Learn how to override the retrievable fields in
         the [Retrieve Custom
-        Links](https://docs.medusajs.com/learn/fundamentals/api-routes/retrieve-custom-links)
+        Links](https://docs.vikrai.com/learn/fundamentals/api-routes/retrieve-custom-links)
         documentation.
       required: false
       schema:
@@ -128,7 +128,7 @@ post:
           prefix it will replace the entire default fields. This API route
           restricts the fields that can be selected. Learn how to override the
           retrievable fields in the [Retrieve Custom
-          Links](https://docs.medusajs.com/learn/fundamentals/api-routes/retrieve-custom-links)
+          Links](https://docs.vikrai.com/learn/fundamentals/api-routes/retrieve-custom-links)
           documentation.
         externalDocs:
           url: '#select-fields-and-relations'
@@ -247,7 +247,7 @@ delete:
   x-authenticated: true
   externalDocs:
     url: >-
-      https://docs.medusajs.com/v2/resources/storefront-development/customers/addresses#delete-customer-address
+      https://docs.vikrai.com/v2/resources/storefront-development/customers/addresses#delete-customer-address
     description: 'Storefront guide: How to delete a customer''s address.'
   parameters:
     - name: address_id
@@ -258,12 +258,12 @@ delete:
         type: string
     - name: x-publishable-api-key
       in: header
-      description: Publishable API Key created in the Medusa Admin.
+      description: Publishable API Key created in the vikrai Admin.
       required: true
       schema:
         type: string
         externalDocs:
-          url: https://docs.medusajs.com/api/store#publishable-api-key
+          url: https://docs.vikrai.com/api/store#publishable-api-key
     - name: fields
       in: query
       description: >-
@@ -273,7 +273,7 @@ delete:
         replace the entire default fields. This API route restricts the fields
         that can be selected. Learn how to override the retrievable fields in
         the [Retrieve Custom
-        Links](https://docs.medusajs.com/learn/fundamentals/api-routes/retrieve-custom-links)
+        Links](https://docs.vikrai.com/learn/fundamentals/api-routes/retrieve-custom-links)
         documentation.
       required: false
       schema:
@@ -286,7 +286,7 @@ delete:
           prefix it will replace the entire default fields. This API route
           restricts the fields that can be selected. Learn how to override the
           retrievable fields in the [Retrieve Custom
-          Links](https://docs.medusajs.com/learn/fundamentals/api-routes/retrieve-custom-links)
+          Links](https://docs.vikrai.com/learn/fundamentals/api-routes/retrieve-custom-links)
           documentation.
         externalDocs:
           url: '#select-fields-and-relations'
@@ -354,3 +354,4 @@ delete:
       $ref: ../components/responses/500_error.yaml
   x-workflow: deleteCustomerAddressesWorkflow
   x-events: []
+

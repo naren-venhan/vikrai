@@ -12,8 +12,8 @@ const TagsOperationParametersNested = ({
       {...props}
       className={clsx(
         props.className,
-        "bg-medusa-bg-subtle px-1 pt-1",
-        "border-medusa-border-base my-1 rounded-sm border"
+        "bg-vikrai-bg-subtle px-1 pt-1",
+        "border-vikrai-border-base my-1 rounded-sm border"
       )}
     >
       {children}
@@ -22,3 +22,4 @@ const TagsOperationParametersNested = ({
 }
 
 export default TagsOperationParametersNested
+

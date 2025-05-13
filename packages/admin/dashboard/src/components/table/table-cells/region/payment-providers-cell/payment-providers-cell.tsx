@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next"
-import { PaymentProviderDTO } from "@medusajs/types"
+import { PaymentProviderDTO } from "@vikrai/types"
 
 import { formatProvider } from "../../../../../lib/format-provider"
 import { PlaceholderCell } from "../../common/placeholder-cell"
@@ -34,3 +34,4 @@ export const PaymentProvidersHeader = () => {
     </div>
   )
 }
+

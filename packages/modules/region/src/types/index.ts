@@ -1,4 +1,4 @@
-import { Logger, UpdateRegionDTO } from "@medusajs/framework/types"
+import { Logger, UpdateRegionDTO } from "@vikrai/framework/types"
 
 export type InitializeModuleInjectableDependencies = {
   logger?: Logger
@@ -18,3 +18,4 @@ export type CreateCountryDTO = {
 }
 
 export type UpdateRegionInput = UpdateRegionDTO & { id: string }
+

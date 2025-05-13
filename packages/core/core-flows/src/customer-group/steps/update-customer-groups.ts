@@ -2,13 +2,13 @@ import {
   CustomerGroupUpdatableFields,
   FilterableCustomerGroupProps,
   ICustomerModuleService,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import {
   Modules,
   getSelectsAndRelationsFromObjectArray,
   promiseAll,
-} from "@medusajs/framework/utils"
-import { StepResponse, createStep } from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/utils"
+import { StepResponse, createStep } from "@vikrai/framework/workflows-sdk"
 
 /**
  * The data to update customer groups.
@@ -75,3 +75,4 @@ export const updateCustomerGroupsStep = createStep(
     )
   }
 )
+

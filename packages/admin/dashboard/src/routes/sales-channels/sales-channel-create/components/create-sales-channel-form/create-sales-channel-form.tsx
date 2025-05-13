@@ -7,7 +7,7 @@ import {
   Text,
   Textarea,
   toast,
-} from "@medusajs/ui"
+} from "@vikrai/ui"
 import { useForm } from "react-hook-form"
 import { useTranslation } from "react-i18next"
 import * as zod from "zod"
@@ -150,3 +150,4 @@ export const CreateSalesChannelForm = () => {
     </RouteFocusModal.Form>
   )
 }
+

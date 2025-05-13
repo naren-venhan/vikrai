@@ -13,7 +13,7 @@ describe("Button", () => {
   it("renders a button as a link", () => {
     render(
       <Button asChild>
-        <a href="https://www.medusajs.com">Go to website</a>
+        <a href="https://www.vikrai.com">Go to website</a>
       </Button>
     )
 
@@ -21,3 +21,4 @@ describe("Button", () => {
     expect(button).toBeInTheDocument()
   })
 })
+

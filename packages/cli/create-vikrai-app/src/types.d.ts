@@ -1,0 +1,2 @@
+declare module "vikrai-telemetry"
+

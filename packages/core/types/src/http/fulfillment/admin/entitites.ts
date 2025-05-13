@@ -182,7 +182,7 @@ export interface AdminFulfillment {
   /**
    * Data useful for the fulfillment provider handling the fulfillment.
    * 
-   * Learn more in [this documentation](https://docs.medusajs.com/resources/commerce-modules/fulfillment#data-property).
+   * Learn more in [this documentation](https://docs.vikrai.com/resources/commerce-modules/fulfillment#data-property).
    */
   data: Record<string, unknown> | null
   /**
@@ -202,3 +202,4 @@ export interface AdminFulfillment {
    */
   deleted_at: string | null
 }
+

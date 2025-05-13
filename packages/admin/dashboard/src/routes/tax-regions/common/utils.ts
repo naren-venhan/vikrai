@@ -1,4 +1,4 @@
-import { HttpTypes } from "@medusajs/types"
+import { HttpTypes } from "@vikrai/types"
 
 import { TaxRateRuleTarget } from "./schemas"
 
@@ -10,3 +10,4 @@ export const createTaxRulePayload = (
     reference_id: reference.value,
   }))
 }
+

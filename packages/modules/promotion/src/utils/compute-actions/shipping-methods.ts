@@ -1,12 +1,12 @@
-import { BigNumberInput, PromotionTypes } from "@medusajs/framework/types"
+import { BigNumberInput, PromotionTypes } from "@vikrai/framework/types"
 import {
   ApplicationMethodAllocation,
   ApplicationMethodTargetType,
   ApplicationMethodType,
   ComputedActions,
   MathBN,
-  MedusaError,
-} from "@medusajs/framework/utils"
+  vikraiError,
+} from "@vikrai/framework/utils"
 import { areRulesValidForContext } from "../validations"
 import { computeActionForBudgetExceeded } from "./usage"
 
@@ -19,8 +19,8 @@ export function getComputedActionsForShippingMethods(
     []
 
   if (!shippingMethodApplicationContext) {
-    throw new MedusaError(
-      MedusaError.Types.INVALID_DATA,
+    throw new vikraiError(
+      vikraiError.Types.INVALID_DATA,
       `"shipping_methods" should be present as an array in the context for computeActions`
     )
   }
@@ -172,3 +172,4 @@ export function applyPromotionToShippingMethods(
 
   return computedActions
 }
+

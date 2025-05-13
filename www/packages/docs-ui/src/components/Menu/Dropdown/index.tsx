@@ -53,7 +53,7 @@ export const DropdownMenu = ({
         variant="transparent"
         onClick={() => changeOpenState(!open)}
         className={clsx(
-          "!p-[6px] text-medusa-fg-subtle",
+          "!p-[6px] text-vikrai-fg-subtle",
           dropdownButtonClassName
         )}
         buttonRef={ref}
@@ -74,3 +74,4 @@ export const DropdownMenu = ({
     </div>
   )
 }
+

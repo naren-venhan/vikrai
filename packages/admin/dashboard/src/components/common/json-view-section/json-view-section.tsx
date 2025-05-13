@@ -4,7 +4,7 @@ import {
   SquareTwoStack,
   TriangleDownMini,
   XMarkMini,
-} from "@medusajs/icons"
+} from "@vikrai/icons"
 import {
   Badge,
   Container,
@@ -12,7 +12,7 @@ import {
   Heading,
   IconButton,
   Kbd,
-} from "@medusajs/ui"
+} from "@vikrai/ui"
 import Primitive from "@uiw/react-json-view"
 import { CSSProperties, MouseEvent, Suspense, useState } from "react"
 import { Trans, useTranslation } from "react-i18next"
@@ -196,3 +196,4 @@ const Copied = ({ style, value }: CopiedProps) => {
     </span>
   )
 }
+

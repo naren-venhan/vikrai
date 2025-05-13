@@ -1,12 +1,12 @@
-import { medusaIntegrationTestRunner } from "@medusajs/test-utils"
-import { IStoreModuleService } from "@medusajs/types"
+import { vikraiIntegrationTestRunner } from "@vikrai/test-utils"
+import { IStoreModuleService } from "@vikrai/types"
 import {
   ApiKeyType,
   Modules,
   PriceListStatus,
   PriceListType,
   ProductStatus,
-} from "@medusajs/utils"
+} from "@vikrai/utils"
 import qs from "qs"
 import {
   adminHeaders,
@@ -19,7 +19,7 @@ import { createAuthenticatedCustomer } from "../../../../modules/helpers/create-
 
 jest.setTimeout(30000)
 
-medusaIntegrationTestRunner({
+vikraiIntegrationTestRunner({
   testSuite: ({ dbConnection, api, getContainer }) => {
     let store
     let appContainer
@@ -2723,3 +2723,4 @@ medusaIntegrationTestRunner({
     })
   },
 })
+

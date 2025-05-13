@@ -2,7 +2,7 @@ import {
   kebabCase,
   ProductStatus,
   toMikroORMEntity,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 import { SqlEntityManager } from "@mikro-orm/postgresql"
 import {
   ProductImage,
@@ -14,7 +14,7 @@ import {
 } from "@models"
 
 import ProductOption from "../../../src/models/product-option"
-import { InferEntityType } from "@medusajs/types"
+import { InferEntityType } from "@vikrai/types"
 
 export * from "./data/create-product"
 
@@ -152,3 +152,4 @@ export async function assignCategoriesToProduct(
 
   return product
 }
+

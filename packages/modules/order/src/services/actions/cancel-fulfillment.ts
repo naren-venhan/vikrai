@@ -1,5 +1,5 @@
-import { Context, OrderTypes } from "@medusajs/framework/types"
-import { ChangeActionType } from "@medusajs/framework/utils"
+import { Context, OrderTypes } from "@vikrai/framework/types"
+import { ChangeActionType } from "@vikrai/framework/utils"
 
 export async function cancelFulfillment(
   this: any,
@@ -36,3 +36,4 @@ export async function cancelFulfillment(
 
   await this.confirmOrderChange(change[0].id, sharedContext)
 }
+

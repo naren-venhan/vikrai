@@ -1,5 +1,5 @@
 import React from "react"
-import { IconProps } from "@medusajs/icons/dist/types"
+import { IconProps } from "@vikrai/icons/dist/types"
 
 export const HouseIcon = (props: IconProps) => {
   return (
@@ -21,3 +21,4 @@ export const HouseIcon = (props: IconProps) => {
     </svg>
   )
 }
+

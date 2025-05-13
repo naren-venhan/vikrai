@@ -1,5 +1,5 @@
-import { XMarkMini } from "@medusajs/icons"
-import { Badge, clx } from "@medusajs/ui"
+import { XMarkMini } from "@vikrai/icons"
+import { Badge, clx } from "@vikrai/ui"
 import { AnimatePresence, motion } from "motion/react"
 import {
   FocusEvent,
@@ -189,3 +189,4 @@ export const ChipInput = forwardRef<HTMLInputElement, ChipInputProps>(
 )
 
 ChipInput.displayName = "ChipInput"
+

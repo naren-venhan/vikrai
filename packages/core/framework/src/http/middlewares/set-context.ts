@@ -1,7 +1,7 @@
-import { MedusaNextFunction, MedusaRequest } from "../types"
+import { vikraiNextFunction, vikraiRequest } from "../types"
 
 export function setContext(context: Record<string, any>) {
-  return async (req: MedusaRequest, _, next: MedusaNextFunction) => {
+  return async (req: vikraiRequest, _, next: vikraiNextFunction) => {
     const ctx: Record<string, any> = { ...(req.context || {}) }
 
     for (const [contextKey, contextValue] of Object.entries(context || {})) {
@@ -19,3 +19,4 @@ export function setContext(context: Record<string, any>) {
     return next()
   }
 }
+

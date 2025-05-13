@@ -36,7 +36,7 @@ import {
   isLevelExceeded,
   maybeIncrementLevel,
 } from "../../utils/level-utils.js"
-import { MedusaEvent } from "types"
+import { vikraiEvent } from "types"
 
 const RES_STATUS_REGEX = /^res[\s\S]*\.status\((\d+)\)/
 
@@ -81,10 +81,10 @@ class OasKindGenerator extends FunctionKindGenerator {
     "CONNECT",
   ]
   readonly REQUEST_TYPE_NAMES = [
-    "MedusaRequest",
+    "vikraiRequest",
     "RequestWithContext",
-    "AuthenticatedMedusaRequest",
-    "MedusaStoreRequest",
+    "AuthenticatedvikraiRequest",
+    "vikraiStoreRequest",
   ]
   readonly REQUEST_CHECK_QUERY_ARGS = ["RequestWithContext"]
   // as it's not always possible to detect authenticated request
@@ -122,7 +122,7 @@ class OasKindGenerator extends FunctionKindGenerator {
       allowedAuthTypes: ["cookie_auth", "jwt_token"],
     },
   ]
-  readonly RESPONSE_TYPE_NAMES = ["MedusaResponse"]
+  readonly RESPONSE_TYPE_NAMES = ["vikraiResponse"]
   readonly FIELD_QUERY_PARAMS = ["fields", "expand"]
   readonly PAGINATION_QUERY_PARAMS = ["limit", "offset", "order"]
 
@@ -139,7 +139,7 @@ class OasKindGenerator extends FunctionKindGenerator {
   protected oasSchemaHelper: OasSchemaHelper
   protected schemaFactory: SchemaFactory
   protected typesHelper: TypesHelper
-  protected events: MedusaEvent[] = []
+  protected events: vikraiEvent[] = []
 
   constructor(options: GeneratorOptions) {
     super(options)
@@ -1354,12 +1354,12 @@ class OasKindGenerator extends FunctionKindGenerator {
       this.getParameterObject({
         type: "header",
         name: "x-publishable-api-key",
-        description: "Publishable API Key created in the Medusa Admin.",
+        description: "Publishable API Key created in the vikrai Admin.",
         required: true,
         schema: {
           type: "string",
           externalDocs: {
-            url: "https://docs.medusajs.com/api/store#publishable-api-key",
+            url: "https://docs.vikrai.com/api/store#publishable-api-key",
           },
         },
       }),
@@ -2537,7 +2537,7 @@ class OasKindGenerator extends FunctionKindGenerator {
       return
     }
 
-    // retrieve workflows imported from `@medusajs/core-flows`
+    // retrieve workflows imported from `@vikrai/core-flows`
     // since there could be multiple import statements from the
     // same package, put them in an array
     const coreFlowsImports: ts.ImportClause[] = []
@@ -2546,7 +2546,7 @@ class OasKindGenerator extends FunctionKindGenerator {
         !importNode.parent ||
         !ts.isImportDeclaration(importNode.parent) ||
         !importNode.parent.importClause?.namedBindings ||
-        importNode.getText() !== `"@medusajs/core-flows"`
+        importNode.getText() !== `"@vikrai/core-flows"`
       ) {
         return
       }
@@ -2554,7 +2554,7 @@ class OasKindGenerator extends FunctionKindGenerator {
       coreFlowsImports.push(importNode.parent.importClause)
     })
 
-    // if no imports found from `@medusajs/core-flows`, return
+    // if no imports found from `@vikrai/core-flows`, return
     if (!coreFlowsImports.length) {
       return
     }
@@ -2737,3 +2737,4 @@ class OasKindGenerator extends FunctionKindGenerator {
 }
 
 export default OasKindGenerator
+

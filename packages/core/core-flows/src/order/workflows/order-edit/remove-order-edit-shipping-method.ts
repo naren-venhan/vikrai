@@ -3,8 +3,8 @@ import {
   OrderChangeDTO,
   OrderPreviewDTO,
   OrderWorkflow,
-} from "@medusajs/framework/types"
-import { ChangeActionType, OrderChangeStatus } from "@medusajs/framework/utils"
+} from "@vikrai/framework/types"
+import { ChangeActionType, OrderChangeStatus } from "@vikrai/framework/utils"
 import {
   WorkflowData,
   WorkflowResponse,
@@ -12,7 +12,7 @@ import {
   createWorkflow,
   parallelize,
   transform,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { useRemoteQueryStep } from "../../../common"
 import { deleteOrderShippingMethods } from "../../steps"
 import { deleteOrderChangeActionsStep } from "../../steps/delete-order-change-actions"
@@ -40,8 +40,8 @@ export type RemoveOrderEditShippingMethodValidationStepInput = {
  * 
  * :::note
  * 
- * You can retrieve an order change details using [Query](https://docs.medusajs.com/learn/fundamentals/module-links/query),
- * or [useQueryGraphStep](https://docs.medusajs.com/resources/references/medusa-workflows/steps/useQueryGraphStep).
+ * You can retrieve an order change details using [Query](https://docs.vikrai.com/learn/fundamentals/module-links/query),
+ * or [useQueryGraphStep](https://docs.vikrai.com/resources/references/vikrai-workflows/steps/useQueryGraphStep).
  * 
  * :::
  * 
@@ -85,7 +85,7 @@ export const removeOrderEditShippingMethodWorkflowId =
   "remove-order-edit-shipping-method"
 /**
  * This workflow removes a shipping method of an order edit. It's used by the 
- * [Remove Shipping Method Admin API Route](https://docs.medusajs.com/api/admin#order-edits_deleteordereditsidshippingmethodaction_id).
+ * [Remove Shipping Method Admin API Route](https://docs.vikrai.com/api/admin#order-edits_deleteordereditsidshippingmethodaction_id).
  * 
  * You can use this workflow within your customizations or your own custom workflows, allowing you to remove a 
  * shipping method from an order edit in your custom flows.
@@ -147,3 +147,4 @@ export const removeOrderEditShippingMethodWorkflow = createWorkflow(
     return new WorkflowResponse(previewOrderChangeStep(input.order_id))
   }
 )
+

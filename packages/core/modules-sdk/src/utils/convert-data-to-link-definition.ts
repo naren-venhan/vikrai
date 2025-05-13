@@ -1,5 +1,5 @@
-import { LinkDefinition, LoadedModule } from "@medusajs/types"
-import { isPresent } from "@medusajs/utils"
+import { LinkDefinition, LoadedModule } from "@vikrai/types"
+import { isPresent } from "@vikrai/utils"
 
 export const convertRecordsToLinkDefinition = (
   links: object[],
@@ -34,3 +34,4 @@ export const convertRecordsToLinkDefinition = (
 
   return results
 }
+

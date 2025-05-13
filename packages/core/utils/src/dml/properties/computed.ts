@@ -1,4 +1,4 @@
-import { PropertyType } from "@medusajs/types"
+import { PropertyType } from "@vikrai/types"
 
 const IsComputedProperty = Symbol.for("isComputedProperty")
 /**
@@ -37,3 +37,4 @@ export class ComputedProperty<T, Schema extends PropertyType<T>>
     return schema
   }
 }
+

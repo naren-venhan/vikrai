@@ -21,7 +21,7 @@ export type RedisCacheModuleOptions = {
 
   /**
    * Prefix for event keys
-   * @default `medusa_lock:`
+   * @default `vikrai_lock:`
    */
   namespace?: string
 
@@ -43,3 +43,4 @@ export type RedisCacheModuleOptions = {
    */
   maximumRetryInterval?: number
 }
+

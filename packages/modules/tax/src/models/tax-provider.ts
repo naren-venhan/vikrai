@@ -1,4 +1,4 @@
-import { model } from "@medusajs/framework/utils"
+import { model } from "@vikrai/framework/utils"
 import { TaxRegion } from "@models"
 
 const TaxProvider = model.define("TaxProvider", {
@@ -10,3 +10,4 @@ const TaxProvider = model.define("TaxProvider", {
 })
 
 export default TaxProvider
+

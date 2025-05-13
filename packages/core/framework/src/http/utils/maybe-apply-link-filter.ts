@@ -1,8 +1,8 @@
-import { ContainerRegistrationKeys } from "@medusajs/utils"
+import { ContainerRegistrationKeys } from "@vikrai/utils"
 import type {
-  MedusaNextFunction,
-  MedusaRequest,
-  MedusaResponse,
+  vikraiNextFunction,
+  vikraiRequest,
+  vikraiResponse,
 } from "../types"
 
 export function maybeApplyLinkFilter({
@@ -12,9 +12,9 @@ export function maybeApplyLinkFilter({
   filterByField = "id",
 }) {
   return async function linkFilter(
-    req: MedusaRequest,
-    _: MedusaResponse,
-    next: MedusaNextFunction
+    req: vikraiRequest,
+    _: vikraiResponse,
+    next: vikraiNextFunction
   ) {
     const filterableFields = req.filterableFields
 
@@ -96,3 +96,4 @@ function transformFilterableFields(filterableFields: Record<string, unknown>) {
 
   return result
 }
+

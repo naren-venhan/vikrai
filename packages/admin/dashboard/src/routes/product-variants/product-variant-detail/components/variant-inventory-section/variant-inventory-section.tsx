@@ -1,8 +1,8 @@
 import { useTranslation } from "react-i18next"
 
-import { Buildings, Component } from "@medusajs/icons"
-import { HttpTypes } from "@medusajs/types"
-import { Container, Heading } from "@medusajs/ui"
+import { Buildings, Component } from "@vikrai/icons"
+import { HttpTypes } from "@vikrai/types"
+import { Container, Heading } from "@vikrai/ui"
 
 import { ActionMenu } from "../../../../../components/common/action-menu"
 import { _DataTable } from "../../../../../components/table/data-table"
@@ -92,3 +92,4 @@ export function InventorySectionPlaceholder() {
     </Container>
   )
 }
+

@@ -1,7 +1,7 @@
-import { DeleteEntityInput, Link } from "@medusajs/framework/modules-sdk"
-import { createStep, StepResponse } from "@medusajs/framework/workflows-sdk"
+import { DeleteEntityInput, Link } from "@vikrai/framework/modules-sdk"
+import { createStep, StepResponse } from "@vikrai/framework/workflows-sdk"
 
-import { ContainerRegistrationKeys } from "@medusajs/framework/utils"
+import { ContainerRegistrationKeys } from "@vikrai/framework/utils"
 
 type RemoveRemoteLinksStepInput = DeleteEntityInput | DeleteEntityInput[]
 
@@ -9,7 +9,7 @@ export const removeRemoteLinkStepId = "remove-remote-links"
 /**
  * This step deletes linked records of a record.
  *
- * Learn more in the [Remote Link documentation](https://docs.medusajs.com/learn/fundamentals/module-links/remote-link#cascade-delete-linked-records)
+ * Learn more in the [Remote Link documentation](https://docs.vikrai.com/learn/fundamentals/module-links/remote-link#cascade-delete-linked-records)
  *
  * @example
  * removeRemoteLinkStep([{
@@ -61,3 +61,4 @@ export const removeRemoteLinkStep = createStep(
     await link.restore(removedLinks)
   }
 )
+

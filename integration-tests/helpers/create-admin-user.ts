@@ -3,19 +3,19 @@ import {
   IApiKeyModuleService,
   IAuthModuleService,
   IUserModuleService,
-  MedusaContainer,
-} from "@medusajs/framework/types"
+  vikraiContainer,
+} from "@vikrai/framework/types"
 import {
   ApiKeyType,
   Modules,
   PUBLISHABLE_KEY_HEADER,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 import jwt from "jsonwebtoken"
 import Scrypt from "scrypt-kdf"
 import { getContainer } from "../environment-helpers/use-container"
 
 export const adminHeaders = {
-  headers: { "x-medusa-access-token": "test_token" },
+  headers: { "x-vikrai-access-token": "test_token" },
 }
 
 export const createAdminUser = async (
@@ -30,7 +30,7 @@ export const createAdminUser = async (
   const user = await userModule.createUsers({
     first_name: "Admin",
     last_name: "User",
-    email: "admin@medusa.js",
+    email: "admin@vikrai.js",
   })
 
   const hashConfig = { logN: 15, r: 8, p: 1 }
@@ -40,7 +40,7 @@ export const createAdminUser = async (
     provider_identities: [
       {
         provider: "emailpass",
-        entity_id: "admin@medusa.js",
+        entity_id: "admin@vikrai.js",
         provider_metadata: {
           password: passwordHash.toString("base64"),
         },
@@ -68,7 +68,7 @@ export const createAdminUser = async (
   return { user, authIdentity }
 }
 
-export const generatePublishableKey = async (container?: MedusaContainer) => {
+export const generatePublishableKey = async (container?: vikraiContainer) => {
   const appContainer = container ?? getContainer()!
   const apiKeyModule = appContainer.resolve<IApiKeyModuleService>(
     Modules.API_KEY
@@ -92,3 +92,4 @@ export const generateStoreHeaders = ({
     },
   }
 }
+

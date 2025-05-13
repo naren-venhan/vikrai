@@ -1,5 +1,5 @@
-import { EllipseMiniSolid } from "@medusajs/icons"
-import { DatePicker, Text, clx } from "@medusajs/ui"
+import { EllipseMiniSolid } from "@vikrai/icons"
+import { DatePicker, Text, clx } from "@vikrai/ui"
 import isEqual from "lodash/isEqual"
 import { Popover as RadixPopover } from "radix-ui"
 import { useMemo, useState } from "react"
@@ -308,3 +308,4 @@ const getDateFromComparison = (
 ) => {
   return comparison?.[key] ? new Date(comparison[key] as string) : undefined
 }
+

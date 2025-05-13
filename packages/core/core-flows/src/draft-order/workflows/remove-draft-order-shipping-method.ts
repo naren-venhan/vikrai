@@ -2,15 +2,15 @@ import {
   ChangeActionType,
   OrderChangeStatus,
   PromotionActions,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 import {
   createWorkflow,
   transform,
   when,
   WorkflowData,
   WorkflowResponse,
-} from "@medusajs/framework/workflows-sdk"
-import { OrderChangeDTO, OrderDTO } from "@medusajs/types"
+} from "@vikrai/framework/workflows-sdk"
+import { OrderChangeDTO, OrderDTO } from "@vikrai/types"
 import { useRemoteQueryStep } from "../../common"
 import {
   createOrderChangeActionsWorkflow,
@@ -40,7 +40,7 @@ export interface RemoveDraftOrderShippingMethodWorkflowInput {
 
 /**
  * This workflow removes an existing shipping method from a draft order edit. It's used by the
- * [Remove Shipping Method from Draft Order Edit Admin API Route](https://docs.medusajs.com/api/admin#draft-orders_deletedraftordersideditshippingmethodsmethodmethod_id).
+ * [Remove Shipping Method from Draft Order Edit Admin API Route](https://docs.vikrai.com/api/admin#draft-orders_deletedraftordersideditshippingmethodsmethodmethod_id).
  * 
  * You can use this workflow within your customizations or your own custom workflows, allowing you to wrap custom logic around
  * removing a shipping method from a draft order edit.
@@ -151,3 +151,4 @@ export const removeDraftOrderShippingMethodWorkflow = createWorkflow(
     return new WorkflowResponse(previewOrderChangeStep(order.id))
   }
 )
+

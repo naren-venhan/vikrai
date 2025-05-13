@@ -1,4 +1,4 @@
-import { medusaIntegrationTestRunner } from "@medusajs/test-utils"
+import { vikraiIntegrationTestRunner } from "@vikrai/test-utils"
 import {
   adminHeaders,
   createAdminUser,
@@ -7,7 +7,7 @@ import { getProductFixture } from "../../../../helpers/fixtures"
 
 jest.setTimeout(50000)
 
-medusaIntegrationTestRunner({
+vikraiIntegrationTestRunner({
   testSuite: ({ dbConnection, getContainer, api }) => {
     let baseProduct
     let baseRegion
@@ -963,3 +963,4 @@ medusaIntegrationTestRunner({
     })
   },
 })
+

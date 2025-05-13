@@ -1,4 +1,4 @@
-import { Prompt } from "@medusajs/ui"
+import { Prompt } from "@vikrai/ui"
 import { PropsWithChildren } from "react"
 import { FieldValues, UseFormReturn } from "react-hook-form"
 import { useTranslation } from "react-i18next"
@@ -86,3 +86,4 @@ export const RouteModalForm = <TFieldValues extends FieldValues = any>({
     </Form>
   )
 }
+

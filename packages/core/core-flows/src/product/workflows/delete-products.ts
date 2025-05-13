@@ -1,4 +1,4 @@
-import { Modules, ProductWorkflowEvents } from "@medusajs/framework/utils"
+import { Modules, ProductWorkflowEvents } from "@vikrai/framework/utils"
 import {
   WorkflowData,
   WorkflowResponse,
@@ -6,7 +6,7 @@ import {
   createWorkflow,
   parallelize,
   transform,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import {
   emitEventStep,
   removeRemoteLinkStep,
@@ -29,7 +29,7 @@ export type DeleteProductsWorkflowInput = {
 export const deleteProductsWorkflowId = "delete-products"
 /**
  * This workflow deletes one or more products. It's used by the
- * [Delete Products Admin API Route](https://docs.medusajs.com/api/admin#products_deleteproductsid).
+ * [Delete Products Admin API Route](https://docs.vikrai.com/api/admin#products_deleteproductsid).
  *
  * This workflow has a hook that allows you to perform custom actions after the products are deleted. For example,
  * you can delete custom records linked to the products.
@@ -131,3 +131,4 @@ export const deleteProductsWorkflow = createWorkflow(
     })
   }
 )
+

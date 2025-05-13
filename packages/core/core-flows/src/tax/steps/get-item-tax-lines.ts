@@ -11,9 +11,9 @@ import {
   TaxableItemDTO,
   TaxableShippingDTO,
   TaxCalculationContext,
-} from "@medusajs/framework/types"
-import { isDefined, MedusaError, Modules } from "@medusajs/framework/utils"
-import { createStep, StepResponse } from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/types"
+import { isDefined, vikraiError, Modules } from "@vikrai/framework/utils"
+import { createStep, StepResponse } from "@vikrai/framework/workflows-sdk"
 
 /**
  * The data to retrieve tax lines for an order or cart's line items and shipping methods.
@@ -62,8 +62,8 @@ function normalizeTaxModuleContext(
   }
 
   if (forceTaxCalculation && !address?.country_code) {
-    throw new MedusaError(
-      MedusaError.Types.INVALID_DATA,
+    throw new vikraiError(
+      vikraiError.Types.INVALID_DATA,
       `country code is required to calculate taxes`
     )
   }
@@ -132,8 +132,8 @@ export const getItemTaxLinesStepId = "get-item-tax-lines"
  *
  * :::note
  *
- * You can retrieve an order, cart, item, shipping method, and address details using [Query](https://docs.medusajs.com/learn/fundamentals/module-links/query),
- * or [useQueryGraphStep](https://docs.medusajs.com/resources/references/medusa-workflows/steps/useQueryGraphStep).
+ * You can retrieve an order, cart, item, shipping method, and address details using [Query](https://docs.vikrai.com/learn/fundamentals/module-links/query),
+ * or [useQueryGraphStep](https://docs.vikrai.com/resources/references/vikrai-workflows/steps/useQueryGraphStep).
  *
  * :::
  *
@@ -208,3 +208,4 @@ export const getItemTaxLinesStep = createStep(
     return new StepResponse(stepResponseData)
   }
 )
+

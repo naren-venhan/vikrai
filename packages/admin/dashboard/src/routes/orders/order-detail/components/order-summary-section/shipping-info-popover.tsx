@@ -1,6 +1,6 @@
-import { InformationCircleSolid } from "@medusajs/icons"
-import { AdminOrderShippingMethod } from "@medusajs/types"
-import { Badge, Tooltip } from "@medusajs/ui"
+import { InformationCircleSolid } from "@vikrai/icons"
+import { AdminOrderShippingMethod } from "@vikrai/types"
+import { Badge, Tooltip } from "@vikrai/ui"
 import { useTranslation } from "react-i18next"
 
 type ShippingInfoPopoverProps = {
@@ -46,3 +46,4 @@ function ShippingInfoPopover({ shippingMethod }: ShippingInfoPopoverProps) {
 }
 
 export default ShippingInfoPopover
+

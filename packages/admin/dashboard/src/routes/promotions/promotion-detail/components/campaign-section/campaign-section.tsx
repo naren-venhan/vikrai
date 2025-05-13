@@ -1,6 +1,6 @@
-import { ArrowUpRightOnBox, PencilSquare } from "@medusajs/icons"
-import { HttpTypes } from "@medusajs/types"
-import { Container, Heading, Text } from "@medusajs/ui"
+import { ArrowUpRightOnBox, PencilSquare } from "@vikrai/icons"
+import { HttpTypes } from "@vikrai/types"
+import { Container, Heading, Text } from "@vikrai/ui"
 import { useTranslation } from "react-i18next"
 import { useParams } from "react-router-dom"
 
@@ -90,3 +90,4 @@ export const CampaignSection = ({
     </Container>
   )
 }
+

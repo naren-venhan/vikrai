@@ -1,4 +1,4 @@
-import { BigNumberInput } from "@medusajs/types"
+import { BigNumberInput } from "@vikrai/types"
 import {
   ApplicationMethodAllocation,
   ApplicationMethodType,
@@ -147,3 +147,4 @@ export function calculateAdjustmentAmountFromPromotion(
 
   return MathBN.min(promotionValue, applicableTotal)
 }
+

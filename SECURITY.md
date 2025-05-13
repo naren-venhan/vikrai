@@ -2,16 +2,16 @@
 
 | Contact               |
 |-----------------------|
-| security@medusajs.com |
+| security@vikrai.com |
 
 
-At Medusa, we consider the security of our systems a top priority. But no matter how much effort we put into system security, there can still be vulnerabilities present.
+At vikrai, we consider the security of our systems a top priority. But no matter how much effort we put into system security, there can still be vulnerabilities present.
 
 If you discover a vulnerability, we would like to know about it so we can take steps to address it as quickly as possible. We would like to ask you to help us better protect our users and our systems.
 
 ## Reporting vulnerabilities
 
-- E-mail your findings to security@medusajs.com.
+- E-mail your findings to security@vikrai.com.
 - Do not take advantage of the vulnerability or problem you have discovered.
 - Do not reveal the problem to others until it has been resolved.
 - Do not use attacks on physical security, social engineering, distributed denial of service, spam or applications of third parties, and
@@ -26,3 +26,4 @@ What we promise:
 - In the public information concerning the problem reported, we will give your name as the discoverer of the problem (unless you desire otherwise), and
 
 We strive to resolve all problems as quickly as possible, and we would like to play an active role in the ultimate publication on the problem after it is resolved.
+

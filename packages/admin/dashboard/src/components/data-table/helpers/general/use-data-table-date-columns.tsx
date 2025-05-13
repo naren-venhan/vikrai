@@ -2,7 +2,7 @@ import {
   createDataTableColumnHelper,
   DataTableColumnDef,
   Tooltip,
-} from "@medusajs/ui"
+} from "@vikrai/ui"
 import { useMemo } from "react"
 import { useTranslation } from "react-i18next"
 import { useDate } from "../../../../hooks/use-date"
@@ -59,3 +59,4 @@ export const useDataTableDateColumns = <TData extends EntityWithDates>() => {
     ] as DataTableColumnDef<TData>[]
   }, [t, getFullDate])
 }
+

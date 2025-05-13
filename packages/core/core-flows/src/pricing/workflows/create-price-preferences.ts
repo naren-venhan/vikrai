@@ -1,9 +1,9 @@
-import { PricingWorkflow } from "@medusajs/framework/types"
+import { PricingWorkflow } from "@vikrai/framework/types"
 import {
   WorkflowData,
   WorkflowResponse,
   createWorkflow,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { createPricePreferencesStep } from "../steps"
 
 /**
@@ -14,7 +14,7 @@ export type CreatePricePreferencesWorkflowInput = PricingWorkflow.CreatePricePre
 export const createPricePreferencesWorkflowId = "create-price-preferences"
 /**
  * This workflow creates one or more price preferences. It's used by the
- * [Create Price Preferences Admin API Route](https://docs.medusajs.com/api/admin#price-preferences_postpricepreferences).
+ * [Create Price Preferences Admin API Route](https://docs.vikrai.com/api/admin#price-preferences_postpricepreferences).
  * 
  * You can use this workflow within your customizations or your own custom workflows, allowing you to 
  * create price preferences in your custom flows.
@@ -43,3 +43,4 @@ export const createPricePreferencesWorkflow = createWorkflow(
     return new WorkflowResponse(createPricePreferencesStep(input))
   }
 )
+

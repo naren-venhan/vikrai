@@ -3,8 +3,8 @@ import {
   transform,
   WorkflowData,
   WorkflowResponse,
-} from "@medusajs/framework/workflows-sdk"
-import { OrderDTO, OrderWorkflow } from "@medusajs/types"
+} from "@vikrai/framework/workflows-sdk"
+import { OrderDTO, OrderWorkflow } from "@vikrai/types"
 import { useRemoteQueryStep } from "../../common"
 import { createOrderChangeStep, previewOrderChangeStep } from "../../order"
 import { validateDraftOrderStep } from "../steps"
@@ -13,7 +13,7 @@ export const beginDraftOrderEditWorkflowId = "begin-draft-order-edit"
 
 /**
  * This workflow begins a draft order edit. It's used by the
- * [Create Draft Order Edit Admin API Route](https://docs.medusajs.com/api/admin#draft-orders_postdraftordersidedit).
+ * [Create Draft Order Edit Admin API Route](https://docs.vikrai.com/api/admin#draft-orders_postdraftordersidedit).
  * 
  * The draft order edit can later be requested using {@link requestDraftOrderEditWorkflow} or confirmed using {@link confirmDraftOrderEditWorkflow}.
  * 
@@ -60,3 +60,4 @@ export const beginDraftOrderEditWorkflow = createWorkflow(
     return new WorkflowResponse(previewOrderChangeStep(input.order_id))
   }
 )
+

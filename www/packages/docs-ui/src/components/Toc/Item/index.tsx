@@ -18,8 +18,8 @@ export const TocItem = ({ item, activeItem }: TocItemProps) => {
       <span
         className={clsx(
           "h-docs_0.125 rounded-full transition-colors",
-          isActive && "bg-medusa-fg-subtle",
-          !isActive && "bg-medusa-fg-disabled",
+          isActive && "bg-vikrai-fg-subtle",
+          !isActive && "bg-vikrai-fg-disabled",
           item.level === 2 && "w-[20px]",
           item.level === 3 && "w-[10px]",
           "block"
@@ -31,3 +31,4 @@ export const TocItem = ({ item, activeItem }: TocItemProps) => {
     </li>
   )
 }
+

@@ -3,10 +3,10 @@ import type { ZodNullable, ZodObject, ZodOptional, ZodRawShape } from "zod"
 
 import {
   FindConfig,
-  MedusaPricingContext,
+  vikraiPricingContext,
   RequestQueryFields,
-} from "@medusajs/types"
-import { MedusaContainer } from "../container"
+} from "@vikrai/types"
+import { vikraiContainer } from "../container"
 import { RestrictedFields } from "./utils/restricted-fields"
 
 /**
@@ -25,24 +25,24 @@ export const HTTP_METHODS = [
 export type RouteVerb = (typeof HTTP_METHODS)[number]
 export type MiddlewareVerb = "USE" | "ALL" | RouteVerb
 
-type SyncRouteHandler = (req: MedusaRequest, res: MedusaResponse) => void
+type SyncRouteHandler = (req: vikraiRequest, res: vikraiResponse) => void
 
 export type AsyncRouteHandler = (
-  req: MedusaRequest,
-  res: MedusaResponse
+  req: vikraiRequest,
+  res: vikraiResponse
 ) => Promise<void>
 
 export type RouteHandler = SyncRouteHandler | AsyncRouteHandler
 
 export type MiddlewareFunction =
-  | MedusaRequestHandler
+  | vikraiRequestHandler
   | ((...args: any[]) => any)
 
-export type MedusaErrorHandlerFunction = (
+export type vikraiErrorHandlerFunction = (
   error: any,
-  req: MedusaRequest,
-  res: MedusaResponse,
-  next: MedusaNextFunction
+  req: vikraiRequest,
+  res: vikraiResponse,
+  next: vikraiNextFunction
 ) => Promise<void> | void
 
 export type ParserConfigArgs = {
@@ -65,7 +65,7 @@ export type MiddlewareRoute = {
 }
 
 export type MiddlewaresConfig = {
-  errorHandler?: false | MedusaErrorHandlerFunction
+  errorHandler?: false | vikraiErrorHandlerFunction
   routes?: MiddlewareRoute[]
 }
 
@@ -114,7 +114,7 @@ export type GlobalMiddlewareDescriptor = {
   config?: MiddlewaresConfig
 }
 
-export interface MedusaRequest<
+export interface vikraiRequest<
   Body = unknown,
   QueryFields = Record<string, unknown>
 > extends Request<{ [key: string]: string }, any, Body> {
@@ -125,11 +125,11 @@ export interface MedusaRequest<
    */
   allowedProperties: string[]
   /**
-   * An object containing the select, relation, skip, take and order to be used with medusa internal services
+   * An object containing the select, relation, skip, take and order to be used with vikrai internal services
    */
   listConfig: FindConfig<unknown>
   /**
-   * An object containing the select, relation to be used with medusa internal services
+   * An object containing the select, relation to be used with vikrai internal services
    */
   retrieveConfig: FindConfig<unknown>
 
@@ -146,7 +146,7 @@ export interface MedusaRequest<
   /**
    * @deprecated Use {@link queryConfig} instead.
    */
-  remoteQueryConfig: MedusaRequest["queryConfig"]
+  remoteQueryConfig: vikraiRequest["queryConfig"]
 
   /**
    * An object containing the fields that are filterable e.g `{ id: Any<String> }`
@@ -161,7 +161,7 @@ export interface MedusaRequest<
    */
   allowed?: string[]
   errors: string[]
-  scope: MedusaContainer
+  scope: vikraiContainer
   session?: any
   rawBody?: any
   requestId?: string
@@ -171,7 +171,7 @@ export interface MedusaRequest<
   /**
    * An object that carries the context that is used to calculate prices for variants
    */
-  pricingContext?: MedusaPricingContext
+  pricingContext?: vikraiPricingContext
   /**
    * A generic context object that can be used across the request lifecycle
    */
@@ -196,28 +196,29 @@ export interface PublishableKeyContext {
   sales_channel_ids: string[]
 }
 
-export interface AuthenticatedMedusaRequest<
+export interface AuthenticatedvikraiRequest<
   Body = unknown,
   QueryFields = Record<string, unknown>
-> extends MedusaRequest<Body, QueryFields> {
+> extends vikraiRequest<Body, QueryFields> {
   auth_context: AuthContext
   publishable_key_context?: PublishableKeyContext
 }
 
-export interface MedusaStoreRequest<
+export interface vikraiStoreRequest<
   Body = unknown,
   QueryFields = Record<string, unknown>
-> extends MedusaRequest<Body, QueryFields> {
+> extends vikraiRequest<Body, QueryFields> {
   auth_context?: AuthContext
   publishable_key_context: PublishableKeyContext
 }
 
-export type MedusaResponse<Body = unknown> = Response<Body>
+export type vikraiResponse<Body = unknown> = Response<Body>
 
-export type MedusaNextFunction = NextFunction
+export type vikraiNextFunction = NextFunction
 
-export type MedusaRequestHandler<Body = unknown, Res = unknown> = (
-  req: MedusaRequest<Body>,
-  res: MedusaResponse<Res>,
-  next: MedusaNextFunction
+export type vikraiRequestHandler<Body = unknown, Res = unknown> = (
+  req: vikraiRequest<Body>,
+  res: vikraiResponse<Res>,
+  next: vikraiNextFunction
 ) => Promise<void> | void
+

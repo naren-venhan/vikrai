@@ -7,17 +7,17 @@ get:
   x-authenticated: false
   externalDocs:
     url: >-
-      https://docs.medusajs.com/v2/resources/storefront-development/products/price
+      https://docs.vikrai.com/v2/resources/storefront-development/products/price
     description: 'Storefront guide: How to retrieve a product variants'' prices.'
   parameters:
     - name: x-publishable-api-key
       in: header
-      description: Publishable API Key created in the Medusa Admin.
+      description: Publishable API Key created in the vikrai Admin.
       required: true
       schema:
         type: string
         externalDocs:
-          url: https://docs.medusajs.com/api/store#publishable-api-key
+          url: https://docs.vikrai.com/api/store#publishable-api-key
     - name: fields
       in: query
       description: >-
@@ -165,7 +165,7 @@ get:
         description: Filter by a collection's ID to retrieve the products in it.
         externalDocs:
           url: >-
-            https://docs.medusajs.com/v2/resources/storefront-development/products/collections/products
+            https://docs.vikrai.com/v2/resources/storefront-development/products/collections/products
           description: 'Storefront guide: Retrieve a collection''s products.'
         items:
           type: string
@@ -753,7 +753,7 @@ get:
           required if you're retrieving product variant prices with taxes.
         externalDocs:
           url: >-
-            https://docs.medusajs.com/v2/resources/storefront-development/products/price/examples/tax-price
+            https://docs.vikrai.com/v2/resources/storefront-development/products/price/examples/tax-price
           description: 'Storefront guide: How to show product variants'' prices with taxes.'
     - name: province
       in: query
@@ -902,3 +902,4 @@ get:
       $ref: ../components/responses/invalid_request_error.yaml
     '500':
       $ref: ../components/responses/500_error.yaml
+

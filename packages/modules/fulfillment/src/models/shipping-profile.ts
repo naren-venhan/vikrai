@@ -1,4 +1,4 @@
-import { model } from "@medusajs/framework/utils"
+import { model } from "@vikrai/framework/utils"
 
 import { ShippingOption } from "./shipping-option"
 
@@ -19,3 +19,4 @@ export const ShippingProfile = model
       where: "deleted_at IS NULL",
     },
   ])
+

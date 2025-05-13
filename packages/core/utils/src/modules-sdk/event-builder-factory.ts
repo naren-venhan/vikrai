@@ -1,4 +1,4 @@
-import { Context, EventBusTypes } from "@medusajs/types"
+import { Context, EventBusTypes } from "@vikrai/types"
 import { buildModuleResourceEventName } from "../event-bus/utils"
 
 // TODO should that move closer to the event bus? and maybe be rename to modulemoduleEventBuilderFactory
@@ -74,3 +74,4 @@ export function moduleEventBuilderFactory({
     aggregator.saveRawMessageData(messages)
   }
 }
+

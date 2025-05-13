@@ -1,5 +1,5 @@
-import { HttpTypes } from "@medusajs/types"
-import { Button } from "@medusajs/ui"
+import { HttpTypes } from "@vikrai/types"
+import { Button } from "@vikrai/ui"
 import { Table } from "@tanstack/react-table"
 import { ReactNode } from "react"
 import { Link } from "react-router-dom"
@@ -117,3 +117,4 @@ export const TaxOverrideTable = ({
     </div>
   )
 }
+

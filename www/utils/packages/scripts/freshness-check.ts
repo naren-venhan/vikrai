@@ -43,8 +43,8 @@ async function scanDirectory(startPath: string) {
     const commitResponse = await octokit.request(
       "GET /repos/{owner}/{repo}/commits",
       {
-        owner: "medusajs",
-        repo: "medusa",
+        owner: "vikrai",
+        repo: "vikrai",
         path: filePath,
         per_page: 1,
       }
@@ -174,3 +174,4 @@ function subtractMonths(numOfMonths: number, date = new Date()) {
 }
 
 void main()
+

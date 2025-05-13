@@ -1,9 +1,9 @@
-import { Modules, promiseAll } from "@medusajs/framework/utils"
+import { Modules, promiseAll } from "@vikrai/framework/utils"
 import {
   IFulfillmentModuleService,
   ValidateFulfillmentDataContext,
-} from "@medusajs/types"
-import { createStep, StepResponse } from "@medusajs/workflows-sdk"
+} from "@vikrai/types"
+import { createStep, StepResponse } from "@vikrai/workflows-sdk"
 
 /**
  * The details of the shipping methods to validate.
@@ -127,3 +127,4 @@ export const validateAndReturnShippingMethodsDataStep = createStep(
     return new StepResponse(validatedData)
   }
 )
+

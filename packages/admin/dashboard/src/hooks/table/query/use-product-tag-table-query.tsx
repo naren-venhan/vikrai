@@ -1,4 +1,4 @@
-import { HttpTypes } from "@medusajs/types"
+import { HttpTypes } from "@vikrai/types"
 import { useQueryParams } from "../../use-query-params"
 
 type UseProductTagTableQueryProps = {
@@ -30,3 +30,4 @@ export const useProductTagTableQuery = ({
     raw: queryObject,
   }
 }
+

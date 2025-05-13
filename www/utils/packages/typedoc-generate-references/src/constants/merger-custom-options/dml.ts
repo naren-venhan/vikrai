@@ -12,7 +12,7 @@ const dmlOptions: FormattingOptionsType = {
   },
   "^modules/dml/page\\.mdx": {
     reflectionDescription:
-      "This section of the documentation to Medusa's Data Model Language (DML). Refer to it for all methods and options relevant to creating data models.",
+      "This section of the documentation to vikrai's Data Model Language (DML). Refer to it for all methods and options relevant to creating data models.",
     reflectionGroups: {
       Classes: false,
       Variables: false,
@@ -23,7 +23,7 @@ const dmlOptions: FormattingOptionsType = {
       slug: "/references/data-model",
     },
     reflectionTitle: {
-      fullReplacement: "Medusa Data Model Language Reference",
+      fullReplacement: "vikrai Data Model Language Reference",
     },
     hideTocHeaders: true,
   },
@@ -122,3 +122,4 @@ const dmlOptions: FormattingOptionsType = {
 }
 
 export default dmlOptions
+

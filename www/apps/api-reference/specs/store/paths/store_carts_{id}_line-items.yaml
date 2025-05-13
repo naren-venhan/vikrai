@@ -5,7 +5,7 @@ post:
   description: Add a product variant as a line item in the cart.
   externalDocs:
     url: >-
-      https://docs.medusajs.com/v2/resources/storefront-development/cart/manage-items#add-product-variant-to-cart
+      https://docs.vikrai.com/v2/resources/storefront-development/cart/manage-items#add-product-variant-to-cart
     description: 'Storefront guide: How to add a product variant to the cart.'
   x-authenticated: false
   parameters:
@@ -17,12 +17,12 @@ post:
         type: string
     - name: x-publishable-api-key
       in: header
-      description: Publishable API Key created in the Medusa Admin.
+      description: Publishable API Key created in the vikrai Admin.
       required: true
       schema:
         type: string
         externalDocs:
-          url: https://docs.medusajs.com/api/store#publishable-api-key
+          url: https://docs.vikrai.com/api/store#publishable-api-key
     - name: fields
       in: query
       description: >-
@@ -87,3 +87,4 @@ post:
         ```
       description: Emitted when a cart's details are updated.
       deprecated: false
+

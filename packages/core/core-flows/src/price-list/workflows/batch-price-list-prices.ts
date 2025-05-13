@@ -1,14 +1,14 @@
 import {
   BatchPriceListPricesWorkflowDTO,
   BatchPriceListPricesWorkflowResult,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import {
   WorkflowData,
   WorkflowResponse,
   createWorkflow,
   parallelize,
   transform,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { createPriceListPricesWorkflow } from "./create-price-list-prices"
 import { removePriceListPricesWorkflow } from "./remove-price-list-prices"
 import { updatePriceListPricesWorkflow } from "./update-price-list-prices"
@@ -26,7 +26,7 @@ export type BatchPriceListPricesWorkflowInput = {
 export const batchPriceListPricesWorkflowId = "batch-price-list-prices"
 /**
  * This workflow manages a price list's prices by creating, updating, or removing them. It's used by the
- * [Manage Prices in Price List Admin API Route](https://docs.medusajs.com/api/admin#price-lists_postpricelistsidpricesbatch).
+ * [Manage Prices in Price List Admin API Route](https://docs.vikrai.com/api/admin#price-lists_postpricelistsidpricesbatch).
  * 
  * You can use this workflow within your customizations or your own custom workflows, allowing you to 
  * manage price lists' prices in your custom flows.
@@ -97,3 +97,4 @@ export const batchPriceListPricesWorkflow = createWorkflow(
     )
   }
 )
+

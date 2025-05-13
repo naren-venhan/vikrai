@@ -2,7 +2,7 @@ import {
   Context,
   CreateOrderChangeActionDTO,
   OrderTypes,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import {
   ChangeActionType,
   ClaimType,
@@ -12,7 +12,7 @@ import {
   isString,
   promiseAll,
   toMikroORMEntity,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 import { OrderClaim, OrderClaimItem, Return, ReturnItem } from "@models"
 
 function createClaimAndReturnEntities(em, data, order) {
@@ -363,3 +363,4 @@ export async function createClaim(
 
   return claimReference
 }
+

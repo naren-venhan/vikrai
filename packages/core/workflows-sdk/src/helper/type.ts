@@ -3,8 +3,8 @@ import {
   DistributedTransactionType,
   LocalWorkflow,
   TransactionStepError,
-} from "@medusajs/orchestration"
-import { Context, LoadedModule, MedusaContainer } from "@medusajs/types"
+} from "@vikrai/orchestration"
+import { Context, LoadedModule, vikraiContainer } from "@vikrai/types"
 
 type BaseFlowRunOptions = {
   context?: Context
@@ -12,7 +12,7 @@ type BaseFlowRunOptions = {
   throwOnError?: boolean
   logOnError?: boolean
   events?: DistributedTransactionEvents
-  container?: LoadedModule[] | MedusaContainer
+  container?: LoadedModule[] | vikraiContainer
 }
 
 export type FlowRunOptions<TData = unknown> = BaseFlowRunOptions & {
@@ -38,7 +38,7 @@ export type FlowCancelOptions = {
   throwOnError?: boolean
   logOnError?: boolean
   events?: DistributedTransactionEvents
-  container?: LoadedModule[] | MedusaContainer
+  container?: LoadedModule[] | vikraiContainer
 }
 
 /**
@@ -98,7 +98,7 @@ export type ExportedWorkflow<
 export type MainExportedWorkflow<TData = unknown, TResult = unknown> = {
   // Main function on the exported workflow
   <TDataOverride = undefined, TResultOverride = undefined>(
-    container?: LoadedModule[] | MedusaContainer
+    container?: LoadedModule[] | vikraiContainer
   ): Omit<
     LocalWorkflow,
     "run" | "registerStepSuccess" | "registerStepFailure" | "cancel"
@@ -141,3 +141,4 @@ export type MainExportedWorkflow<TData = unknown, TResult = unknown> = {
 
   cancel(args?: FlowCancelOptions): Promise<WorkflowResult>
 }
+

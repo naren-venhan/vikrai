@@ -1,6 +1,6 @@
-import { Modules } from "@medusajs/framework/utils"
-import { createStep, StepResponse } from "@medusajs/framework/workflows-sdk"
-import { BigNumberInput, IOrderModuleService } from "@medusajs/types"
+import { Modules } from "@vikrai/framework/utils"
+import { createStep, StepResponse } from "@vikrai/framework/workflows-sdk"
+import { BigNumberInput, IOrderModuleService } from "@vikrai/types"
 
 export const restoreDraftOrderShippingMethodsStepId =
   "restore-draft-order-shipping-methods"
@@ -101,3 +101,4 @@ export const restoreDraftOrderShippingMethodsStep = createStep(
     )
   }
 )
+

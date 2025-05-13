@@ -6,18 +6,18 @@ post:
     the payment collection holds the cart's payment sessions.
   externalDocs:
     url: >-
-      https://docs.medusajs.com/v2/resources/storefront-development/checkout/payment
+      https://docs.vikrai.com/v2/resources/storefront-development/checkout/payment
     description: 'Storefront guide: How to implement payment during checkout.'
   x-authenticated: false
   parameters:
     - name: x-publishable-api-key
       in: header
-      description: Publishable API Key created in the Medusa Admin.
+      description: Publishable API Key created in the vikrai Admin.
       required: true
       schema:
         type: string
         externalDocs:
-          url: https://docs.medusajs.com/api/store#publishable-api-key
+          url: https://docs.vikrai.com/api/store#publishable-api-key
     - name: fields
       in: query
       description: >-
@@ -73,3 +73,4 @@ post:
       $ref: ../components/responses/500_error.yaml
   x-workflow: createPaymentCollectionForCartWorkflow
   x-events: []
+

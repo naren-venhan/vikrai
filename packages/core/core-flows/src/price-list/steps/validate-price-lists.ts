@@ -2,13 +2,13 @@ import {
   IPricingModuleService,
   PriceListDTO,
   UpdatePriceListDTO,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import {
-  MedusaError,
+  vikraiError,
   Modules,
   arrayDifference,
-} from "@medusajs/framework/utils"
-import { StepResponse, createStep } from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/utils"
+import { StepResponse, createStep } from "@vikrai/framework/workflows-sdk"
 
 /**
  * The IDs of price lists to validate that they exist.
@@ -40,8 +40,8 @@ export const validatePriceListsStep = createStep(
     )
 
     if (diff.length) {
-      throw new MedusaError(
-        MedusaError.Types.NOT_FOUND,
+      throw new vikraiError(
+        vikraiError.Types.NOT_FOUND,
         `Price lists with id: ${diff.join(", ")} was not found`
       )
     }
@@ -55,3 +55,4 @@ export const validatePriceListsStep = createStep(
     return new StepResponse(priceListMap)
   }
 )
+

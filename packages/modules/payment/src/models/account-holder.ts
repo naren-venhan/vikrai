@@ -1,4 +1,4 @@
-import { model } from "@medusajs/framework/utils"
+import { model } from "@vikrai/framework/utils"
 
 const AccountHolder = model
   .define("AccountHolder", {
@@ -17,3 +17,4 @@ const AccountHolder = model
   ])
 
 export default AccountHolder
+

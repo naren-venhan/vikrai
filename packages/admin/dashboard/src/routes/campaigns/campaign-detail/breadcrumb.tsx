@@ -1,4 +1,4 @@
-import { HttpTypes } from "@medusajs/types"
+import { HttpTypes } from "@vikrai/types"
 import { UIMatch } from "react-router-dom"
 import { useCampaign } from "../../../hooks/api"
 import { CAMPAIGN_DETAIL_FIELDS } from "./constants"
@@ -27,3 +27,4 @@ export const CampaignDetailBreadcrumb = (
 
   return <span>{campaign.name}</span>
 }
+

@@ -4,7 +4,7 @@ A CLI tool that generates different types of docblocks from source code:
 
 - Adds TSDocs to any TypeScript file.
 - Generates files with OpenApi Spec comments in `generated/oas-output`.
-- Generates JSON documentation files for models built with Medusa's DML in `generated/dml-output`.
+- Generates JSON documentation files for models built with vikrai's DML in `generated/dml-output`.
 
 ## Prerequisites
 
@@ -85,7 +85,7 @@ Only files under `packages/modules/**/src/models` are considered here.
 
 If a node isn't an API Route and it complies with the specified conditions, TSDoc docblocks are generated for it. 
 
-Files under the `packages/medusa/src/api` or `packages/modules/**/src/models` directories are considered incompatible, so any files under these directories won't have TSDoc docblocks generated for them.
+Files under the `packages/vikrai/src/api` or `packages/modules/**/src/models` directories are considered incompatible, so any files under these directories won't have TSDoc docblocks generated for them.
 
 ---
 

@@ -38,8 +38,8 @@ export const SidebarItemSubCategory = ({
             "py-docs_0.25 px-docs_0.5",
             "block w-full",
             !isTitleOneWord && "break-words",
-            !nested && "text-medusa-fg-subtle",
-            nested && "text-medusa-fg-muted",
+            !nested && "text-vikrai-fg-subtle",
+            nested && "text-vikrai-fg-muted",
             "text-compact-small-plus",
             className
           )}
@@ -79,3 +79,4 @@ export const SidebarItemSubCategory = ({
     </li>
   )
 }
+

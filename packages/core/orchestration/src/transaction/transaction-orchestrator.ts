@@ -23,11 +23,11 @@ import {
   isErrorLike,
   isObject,
   isString,
-  MedusaError,
+  vikraiError,
   promiseAll,
   serializeError,
   TransactionStepState,
-} from "@medusajs/utils"
+} from "@vikrai/utils"
 import { EventEmitter } from "events"
 import {
   PermanentStepFailureError,
@@ -1170,8 +1170,8 @@ export class TransactionOrchestrator extends EventEmitter {
    */
   public async resume(transaction: DistributedTransactionType): Promise<void> {
     if (transaction.modelId !== this.id) {
-      throw new MedusaError(
-        MedusaError.Types.NOT_ALLOWED,
+      throw new vikraiError(
+        vikraiError.Types.NOT_ALLOWED,
         `TransactionModel "${transaction.modelId}" cannot be orchestrated by "${this.id}" model.`
       )
     }
@@ -1228,16 +1228,16 @@ export class TransactionOrchestrator extends EventEmitter {
     transaction: DistributedTransactionType
   ): Promise<void> {
     if (transaction.modelId !== this.id) {
-      throw new MedusaError(
-        MedusaError.Types.NOT_ALLOWED,
+      throw new vikraiError(
+        vikraiError.Types.NOT_ALLOWED,
         `TransactionModel "${transaction.modelId}" cannot be orchestrated by "${this.id}" model.`
       )
     }
 
     const flow = transaction.getFlow()
     if (flow.state === TransactionState.FAILED) {
-      throw new MedusaError(
-        MedusaError.Types.NOT_ALLOWED,
+      throw new vikraiError(
+        vikraiError.Types.NOT_ALLOWED,
         `Cannot revert a permanent failed transaction.`
       )
     }
@@ -1507,8 +1507,8 @@ export class TransactionOrchestrator extends EventEmitter {
       )
 
     if (!existingTransaction) {
-      throw new MedusaError(
-        MedusaError.Types.NOT_FOUND,
+      throw new vikraiError(
+        vikraiError.Types.NOT_FOUND,
         `Transaction ${transactionId} could not be found.`
       )
     }
@@ -1558,8 +1558,8 @@ export class TransactionOrchestrator extends EventEmitter {
         )
 
       if (existingTransaction === null) {
-        throw new MedusaError(
-          MedusaError.Types.NOT_FOUND,
+        throw new vikraiError(
+          vikraiError.Types.NOT_FOUND,
           `Transaction ${transactionId} could not be found.`
         )
       }
@@ -1623,8 +1623,8 @@ export class TransactionOrchestrator extends EventEmitter {
 
       await this.executeNext(curTransaction)
     } else {
-      throw new MedusaError(
-        MedusaError.Types.NOT_ALLOWED,
+      throw new vikraiError(
+        vikraiError.Types.NOT_ALLOWED,
         `Cannot skip a step when status is ${step.getStates().status}`
       )
     }
@@ -1675,8 +1675,8 @@ export class TransactionOrchestrator extends EventEmitter {
 
       await this.executeNext(curTransaction)
     } else {
-      throw new MedusaError(
-        MedusaError.Types.NOT_ALLOWED,
+      throw new vikraiError(
+        vikraiError.Types.NOT_ALLOWED,
         `Cannot set step success when status is ${step.getStates().status}`
       )
     }
@@ -1730,8 +1730,8 @@ export class TransactionOrchestrator extends EventEmitter {
 
       await this.executeNext(curTransaction)
     } else {
-      throw new MedusaError(
-        MedusaError.Types.NOT_ALLOWED,
+      throw new vikraiError(
+        vikraiError.Types.NOT_ALLOWED,
         `Cannot set step failure when status is ${step.getStates().status}`
       )
     }
@@ -1739,3 +1739,4 @@ export class TransactionOrchestrator extends EventEmitter {
     return curTransaction
   }
 }
+

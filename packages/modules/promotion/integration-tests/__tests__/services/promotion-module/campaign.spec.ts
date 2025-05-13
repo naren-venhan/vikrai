@@ -1,6 +1,6 @@
-import { IPromotionModuleService } from "@medusajs/framework/types"
-import { Modules } from "@medusajs/framework/utils"
-import { moduleIntegrationTestRunner } from "@medusajs/test-utils"
+import { IPromotionModuleService } from "@vikrai/framework/types"
+import { Modules } from "@vikrai/framework/utils"
+import { moduleIntegrationTestRunner } from "@vikrai/test-utils"
 import { CampaignBudgetType } from "../../../../../../core/utils/src/promotion/index"
 import { createCampaigns } from "../../../__fixtures__/campaigns"
 import { createPromotions } from "../../../__fixtures__/promotion"
@@ -491,3 +491,4 @@ moduleIntegrationTestRunner<IPromotionModuleService>({
     })
   },
 })
+

@@ -3,8 +3,8 @@ import {
   InferEntityType,
   Logger,
   NotificationTypes,
-} from "@medusajs/framework/types"
-import { ModulesSdkUtils } from "@medusajs/framework/utils"
+} from "@vikrai/framework/types"
+import { ModulesSdkUtils } from "@vikrai/framework/utils"
 import { NotificationProvider } from "@models"
 import { NotificationProviderRegistrationPrefix } from "@types"
 
@@ -20,7 +20,7 @@ type InjectedDependencies = {
 
 type Provider = InferEntityType<typeof NotificationProvider>
 
-export default class NotificationProviderService extends ModulesSdkUtils.MedusaInternalService<
+export default class NotificationProviderService extends ModulesSdkUtils.vikraiInternalService<
   InjectedDependencies,
   typeof NotificationProvider
 >(NotificationProvider) {
@@ -100,3 +100,4 @@ Please make sure that the provider is registered in the container and it is conf
     return await providerHandler.send(notification)
   }
 }
+

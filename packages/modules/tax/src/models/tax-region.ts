@@ -1,4 +1,4 @@
-import { model } from "@medusajs/framework/utils"
+import { model } from "@vikrai/framework/utils"
 import TaxProvider from "./tax-provider"
 import TaxRate from "./tax-rate"
 
@@ -59,3 +59,4 @@ const TaxRegion = model
     delete: ["children", "tax_rates"],
   })
 export default TaxRegion
+

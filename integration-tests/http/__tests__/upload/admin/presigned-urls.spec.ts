@@ -1,11 +1,11 @@
 import { join } from "path"
 import { readFile } from "fs/promises"
-import { medusaIntegrationTestRunner } from "@medusajs/test-utils"
+import { vikraiIntegrationTestRunner } from "@vikrai/test-utils"
 import {
   adminHeaders,
   createAdminUser,
 } from "../../../../helpers/create-admin-user"
-import { AdminUploadPreSignedUrlRequest } from "@medusajs/types"
+import { AdminUploadPreSignedUrlRequest } from "@vikrai/types"
 
 jest.setTimeout(30000)
 
@@ -26,7 +26,7 @@ const getUploadReq = (file: File) => {
   }
 }
 
-medusaIntegrationTestRunner({
+vikraiIntegrationTestRunner({
   testSuite: ({ dbConnection, getContainer, api }) => {
     beforeEach(async () => {
       await createAdminUser(dbConnection, adminHeaders, getContainer())
@@ -82,3 +82,4 @@ medusaIntegrationTestRunner({
     })
   },
 })
+

@@ -1,5 +1,5 @@
-import { promiseAll } from "@medusajs/framework/utils"
-import { ILockingProvider } from "@medusajs/types"
+import { promiseAll } from "@vikrai/framework/utils"
+import { ILockingProvider } from "@vikrai/types"
 import { RedisCacheModuleOptions } from "@types"
 import { Redis } from "ioredis"
 import { setTimeout } from "node:timers/promises"
@@ -23,7 +23,7 @@ export class RedisLockingProvider implements ILockingProvider {
 
   constructor({ redisClient, prefix }, options: RedisCacheModuleOptions) {
     this.redisClient = redisClient
-    this.keyNamePrefix = prefix ?? "medusa_lock:"
+    this.keyNamePrefix = prefix ?? "vikrai_lock:"
 
     if (!isNaN(+options?.waitLockingTimeout!)) {
       this.waitLockingTimeout = +options.waitLockingTimeout!
@@ -278,3 +278,4 @@ export class RedisLockingProvider implements ILockingProvider {
     })
   }
 }
+

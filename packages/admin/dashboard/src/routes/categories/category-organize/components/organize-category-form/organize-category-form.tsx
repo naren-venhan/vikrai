@@ -1,10 +1,10 @@
 import { useMutation } from "@tanstack/react-query"
 
 import { UniqueIdentifier } from "@dnd-kit/core"
-import { Spinner } from "@medusajs/icons"
-import { FetchError } from "@medusajs/js-sdk"
-import { HttpTypes } from "@medusajs/types"
-import { toast } from "@medusajs/ui"
+import { Spinner } from "@vikrai/icons"
+import { FetchError } from "@vikrai/js-sdk"
+import { HttpTypes } from "@vikrai/types"
+import { toast } from "@vikrai/ui"
 import { useState } from "react"
 import { RouteFocusModal } from "../../../../../components/modals"
 import {
@@ -129,3 +129,4 @@ export const OrganizeCategoryForm = () => {
     </div>
   )
 }
+

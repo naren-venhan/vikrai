@@ -1,4 +1,4 @@
-import { PropertyType } from "@medusajs/types"
+import { PropertyType } from "@vikrai/types"
 
 const IsPrimaryKeyModifier = Symbol.for("isPrimaryKeyModifier")
 /**
@@ -37,3 +37,4 @@ export class PrimaryKeyModifier<T, Schema extends PropertyType<T>>
     return schema
   }
 }
+

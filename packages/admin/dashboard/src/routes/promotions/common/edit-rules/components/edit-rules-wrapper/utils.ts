@@ -1,4 +1,4 @@
-import { PromotionRuleResponse } from "@medusajs/types"
+import { PromotionRuleResponse } from "@vikrai/types"
 
 export const getRuleValue = (rule: PromotionRuleResponse) => {
   if (rule.field_type === "number") {
@@ -7,3 +7,4 @@ export const getRuleValue = (rule: PromotionRuleResponse) => {
 
   return rule.values
 }
+

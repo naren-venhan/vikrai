@@ -1,6 +1,6 @@
 import { zodResolver } from "@hookform/resolvers/zod"
-import { HttpTypes } from "@medusajs/types"
-import { Button } from "@medusajs/ui"
+import { HttpTypes } from "@vikrai/types"
+import { Button } from "@vikrai/ui"
 import { useMemo } from "react"
 import { useForm } from "react-hook-form"
 import { useTranslation } from "react-i18next"
@@ -147,3 +147,4 @@ export const PricingEdit = ({
     </RouteFocusModal.Form>
   )
 }
+

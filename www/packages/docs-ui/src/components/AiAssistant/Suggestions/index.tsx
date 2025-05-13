@@ -18,7 +18,7 @@ export const AiAssistantSuggestions = (props: AiAssistantSuggestionsProps) => {
           {
             title: "FAQ",
             items: [
-              "What is Medusa?",
+              "What is vikrai?",
               "How can I create a module?",
               "How can I create a data model?",
               "How do I create a workflow?",
@@ -28,10 +28,10 @@ export const AiAssistantSuggestions = (props: AiAssistantSuggestionsProps) => {
           {
             title: "Recipes",
             items: [
-              "How do I build a marketplace with Medusa?",
-              "How do I build digital products with Medusa?",
-              "How do I build subscription-based purchases with Medusa?",
-              "What other recipes are available in the Medusa documentation?",
+              "How do I build a marketplace with vikrai?",
+              "How do I build digital products with vikrai?",
+              "How do I build subscription-based purchases with vikrai?",
+              "What other recipes are available in the vikrai documentation?",
             ],
           },
         ]
@@ -39,14 +39,14 @@ export const AiAssistantSuggestions = (props: AiAssistantSuggestionsProps) => {
           {
             title: "FAQ",
             items: [
-              "What is Medusa?",
-              "How can I create an ecommerce store with Medusa?",
-              "How can I build a marketplace with Medusa?",
-              "How can I build subscription-based purchases with Medusa?",
-              "How can I build digital products with Medusa?",
-              "What can I build with Medusa?",
-              "What is Medusa Admin?",
-              "How do I configure the database in Medusa?",
+              "What is vikrai?",
+              "How can I create an ecommerce store with vikrai?",
+              "How can I build a marketplace with vikrai?",
+              "How can I build subscription-based purchases with vikrai?",
+              "How can I build digital products with vikrai?",
+              "What can I build with vikrai?",
+              "What is vikrai Admin?",
+              "How do I configure the database in vikrai?",
             ],
           },
         ]
@@ -74,3 +74,4 @@ export const AiAssistantSuggestions = (props: AiAssistantSuggestionsProps) => {
     </div>
   )
 }
+

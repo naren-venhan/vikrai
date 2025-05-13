@@ -5,7 +5,7 @@ import * as React from "react"
 import type { DataTableActionColumnDefMeta } from "@/blocks/data-table/types"
 import { DropdownMenu } from "@/components/dropdown-menu"
 import { IconButton } from "@/components/icon-button"
-import { EllipsisHorizontal } from "@medusajs/icons"
+import { EllipsisHorizontal } from "@vikrai/icons"
 import { CellContext } from "@tanstack/react-table"
 
 interface DataTableActionCellProps<TData> {
@@ -81,4 +81,5 @@ DataTableActionCell.displayName = "DataTable.ActionCell"
 
 export { DataTableActionCell }
 export type { DataTableActionCellProps }
+
 

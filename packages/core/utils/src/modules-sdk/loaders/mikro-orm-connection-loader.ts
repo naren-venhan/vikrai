@@ -1,7 +1,7 @@
-import { Logger, MedusaContainer, ModulesSdkTypes } from "@medusajs/types"
+import { Logger, vikraiContainer, ModulesSdkTypes } from "@vikrai/types"
 import { PostgreSqlDriver, SqlEntityManager } from "@mikro-orm/postgresql"
 import { asValue } from "awilix"
-import { ContainerRegistrationKeys, MedusaError } from "../../common"
+import { ContainerRegistrationKeys, vikraiError } from "../../common"
 import { mikroOrmCreateConnection } from "../../dal"
 import { isSharedConnectionSymbol } from "../create-pg-connection"
 import { loadDatabaseConfig } from "../load-module-database-config"
@@ -27,7 +27,7 @@ export async function mikroOrmConnectionLoader({
 }: {
   moduleName: string
   entities: any[]
-  container: MedusaContainer
+  container: vikraiContainer
   options?:
     | ModulesSdkTypes.ModuleServiceInitializeOptions
     | ModulesSdkTypes.ModuleServiceInitializeCustomDataLayerOptions
@@ -104,8 +104,8 @@ async function loadDefault({
   pathToMigrations,
 }): Promise<SqlEntityManager<PostgreSqlDriver>> {
   if (!database) {
-    throw new MedusaError(
-      MedusaError.Types.INVALID_ARGUMENT,
+    throw new vikraiError(
+      vikraiError.Types.INVALID_ARGUMENT,
       `Database config is not present at module config "options.database"`
     )
   }
@@ -144,3 +144,4 @@ async function loadShared({ database, container, entities, pathToMigrations }) {
     manager: asValue(manager),
   })
 }
+

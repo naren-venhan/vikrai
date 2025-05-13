@@ -23,13 +23,13 @@
 							"fileName": "notification/service.ts",
 							"line": 29,
 							"character": 2,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/notification/service.ts#L29"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/notification/service.ts#L29"
 						},
 						{
 							"fileName": "notification/service.ts",
 							"line": 48,
 							"character": 2,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/notification/service.ts#L48"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/notification/service.ts#L48"
 						}
 					],
 					"signatures": [
@@ -72,7 +72,7 @@
 									"fileName": "notification/service.ts",
 									"line": 29,
 									"character": 2,
-									"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/notification/service.ts#L29"
+									"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/notification/service.ts#L29"
 								}
 							],
 							"parameters": [
@@ -99,7 +99,7 @@
 												"qualifiedName": "CreateNotificationDTO"
 											},
 											"name": "CreateNotificationDTO",
-											"package": "@medusajs/types"
+											"package": "@vikrai/types"
 										}
 									}
 								},
@@ -126,7 +126,7 @@
 											"qualifiedName": "Context"
 										},
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@vikrai/types"
 									}
 								}
 							],
@@ -146,7 +146,7 @@
 												"qualifiedName": "NotificationDTO"
 											},
 											"name": "NotificationDTO",
-											"package": "@medusajs/types"
+											"package": "@vikrai/types"
 										}
 									}
 								],
@@ -193,7 +193,7 @@
 									"fileName": "notification/service.ts",
 									"line": 48,
 									"character": 2,
-									"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/notification/service.ts#L48"
+									"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/notification/service.ts#L48"
 								}
 							],
 							"parameters": [
@@ -218,7 +218,7 @@
 											"qualifiedName": "CreateNotificationDTO"
 										},
 										"name": "CreateNotificationDTO",
-										"package": "@medusajs/types"
+										"package": "@vikrai/types"
 									}
 								},
 								{
@@ -244,7 +244,7 @@
 											"qualifiedName": "Context"
 										},
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@vikrai/types"
 									}
 								}
 							],
@@ -262,7 +262,7 @@
 											"qualifiedName": "NotificationDTO"
 										},
 										"name": "NotificationDTO",
-										"package": "@medusajs/types"
+										"package": "@vikrai/types"
 									}
 								],
 								"name": "Promise",
@@ -282,7 +282,7 @@
 							"fileName": "notification/service.ts",
 							"line": 82,
 							"character": 2,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/notification/service.ts#L82"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/notification/service.ts#L82"
 						}
 					],
 					"signatures": [
@@ -337,7 +337,7 @@
 									"fileName": "notification/service.ts",
 									"line": 82,
 									"character": 2,
-									"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/notification/service.ts#L82"
+									"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/notification/service.ts#L82"
 								}
 							],
 							"parameters": [
@@ -406,11 +406,11 @@
 													"qualifiedName": "NotificationDTO"
 												},
 												"name": "NotificationDTO",
-												"package": "@medusajs/types"
+												"package": "@vikrai/types"
 											}
 										],
 										"name": "FindConfig",
-										"package": "@medusajs/types"
+										"package": "@vikrai/types"
 									}
 								},
 								{
@@ -436,7 +436,7 @@
 											"qualifiedName": "Context"
 										},
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@vikrai/types"
 									}
 								}
 							],
@@ -454,7 +454,7 @@
 											"qualifiedName": "NotificationDTO"
 										},
 										"name": "NotificationDTO",
-										"package": "@medusajs/types"
+										"package": "@vikrai/types"
 									}
 								],
 								"name": "Promise",
@@ -474,7 +474,7 @@
 							"fileName": "notification/service.ts",
 							"line": 135,
 							"character": 2,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/notification/service.ts#L135"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/notification/service.ts#L135"
 						}
 					],
 					"signatures": [
@@ -569,7 +569,7 @@
 									"fileName": "notification/service.ts",
 									"line": 135,
 									"character": 2,
-									"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/notification/service.ts#L135"
+									"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/notification/service.ts#L135"
 								}
 							],
 							"parameters": [
@@ -596,7 +596,7 @@
 											"qualifiedName": "FilterableNotificationProps"
 										},
 										"name": "FilterableNotificationProps",
-										"package": "@medusajs/types"
+										"package": "@vikrai/types"
 									}
 								},
 								{
@@ -645,11 +645,11 @@
 													"qualifiedName": "NotificationDTO"
 												},
 												"name": "NotificationDTO",
-												"package": "@medusajs/types"
+												"package": "@vikrai/types"
 											}
 										],
 										"name": "FindConfig",
-										"package": "@medusajs/types"
+										"package": "@vikrai/types"
 									}
 								},
 								{
@@ -675,7 +675,7 @@
 											"qualifiedName": "Context"
 										},
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@vikrai/types"
 									}
 								}
 							],
@@ -695,7 +695,7 @@
 												"qualifiedName": "NotificationDTO"
 											},
 											"name": "NotificationDTO",
-											"package": "@medusajs/types"
+											"package": "@vikrai/types"
 										}
 									}
 								],
@@ -716,7 +716,7 @@
 							"fileName": "notification/service.ts",
 							"line": 191,
 							"character": 2,
-							"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/notification/service.ts#L191"
+							"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/notification/service.ts#L191"
 						}
 					],
 					"signatures": [
@@ -811,7 +811,7 @@
 									"fileName": "notification/service.ts",
 									"line": 191,
 									"character": 2,
-									"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/notification/service.ts#L191"
+									"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/notification/service.ts#L191"
 								}
 							],
 							"parameters": [
@@ -838,7 +838,7 @@
 											"qualifiedName": "FilterableNotificationProps"
 										},
 										"name": "FilterableNotificationProps",
-										"package": "@medusajs/types"
+										"package": "@vikrai/types"
 									}
 								},
 								{
@@ -887,11 +887,11 @@
 													"qualifiedName": "NotificationDTO"
 												},
 												"name": "NotificationDTO",
-												"package": "@medusajs/types"
+												"package": "@vikrai/types"
 											}
 										],
 										"name": "FindConfig",
-										"package": "@medusajs/types"
+										"package": "@vikrai/types"
 									}
 								},
 								{
@@ -917,7 +917,7 @@
 											"qualifiedName": "Context"
 										},
 										"name": "Context",
-										"package": "@medusajs/types"
+										"package": "@vikrai/types"
 									}
 								}
 							],
@@ -940,7 +940,7 @@
 														"qualifiedName": "NotificationDTO"
 													},
 													"name": "NotificationDTO",
-													"package": "@medusajs/types"
+													"package": "@vikrai/types"
 												}
 											},
 											{
@@ -973,7 +973,7 @@
 					"fileName": "notification/service.ts",
 					"line": 7,
 					"character": 17,
-					"url": "https://github.com/medusajs/medusa/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/notification/service.ts#L7"
+					"url": "https://github.com/vikrai/vikrai/blob/c53d25e44227bebb4ff4e66e9448d2066f0b7c10/packages/core/types/src/notification/service.ts#L7"
 				}
 			],
 			"extendedTypes": [
@@ -984,7 +984,7 @@
 						"qualifiedName": "IModuleService"
 					},
 					"name": "IModuleService",
-					"package": "@medusajs/types"
+					"package": "@vikrai/types"
 				}
 			]
 		}
@@ -997,7 +997,7 @@
 			]
 		}
 	],
-	"packageName": "@medusajs/types",
+	"packageName": "@vikrai/types",
 	"symbolIdMap": {
 		"56057": {
 			"sourceFileName": "../../../../packages/core/types/src/notification/service.ts",
@@ -1105,3 +1105,4 @@
 		}
 	}
 }
+

@@ -4,7 +4,7 @@ import {
   IMessageAggregator,
   Message,
   MessageAggregatorFormat,
-} from "@medusajs/types"
+} from "@vikrai/types"
 
 import { composeMessage } from "./build-event-messages"
 
@@ -145,3 +145,4 @@ export class MessageAggregator implements IMessageAggregator {
     return 0
   }
 }
+

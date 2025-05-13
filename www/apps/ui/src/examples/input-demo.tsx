@@ -1,4 +1,4 @@
-import { Input } from "@medusajs/ui"
+import { Input } from "@vikrai/ui"
 
 export default function InputDemo() {
   return (
@@ -7,3 +7,4 @@ export default function InputDemo() {
     </div>
   )
 }
+

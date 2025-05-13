@@ -7,15 +7,15 @@ import {
   OrderDTO,
   OrderPreviewDTO,
   OrderReturnItemDTO,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import {
   ChangeActionType,
-  MedusaError,
+  vikraiError,
   Modules,
   OrderChangeStatus,
   OrderWorkflowEvents,
   ReturnStatus,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 import {
   WorkflowResponse,
   createStep,
@@ -23,7 +23,7 @@ import {
   parallelize,
   transform,
   when,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { reserveInventoryStep } from "../../../cart/steps/reserve-inventory"
 import { prepareConfirmInventoryInput } from "../../../cart/utils/prepare-confirm-inventory-input"
 import {
@@ -78,8 +78,8 @@ export type ConfirmClaimRequestValidationStepInput = {
  *
  * :::note
  *
- * You can retrieve an order, order claim, and order change details using [Query](https://docs.medusajs.com/learn/fundamentals/module-links/query),
- * or [useQueryGraphStep](https://docs.medusajs.com/resources/references/medusa-workflows/steps/useQueryGraphStep).
+ * You can retrieve an order, order claim, and order change details using [Query](https://docs.vikrai.com/learn/fundamentals/module-links/query),
+ * or [useQueryGraphStep](https://docs.vikrai.com/resources/references/vikrai-workflows/steps/useQueryGraphStep).
  *
  * :::
  *
@@ -128,8 +128,8 @@ const confirmIfClaimItemsArePresent = createStep(
       return
     }
 
-    throw new MedusaError(
-      MedusaError.Types.INVALID_DATA,
+    throw new vikraiError(
+      vikraiError.Types.INVALID_DATA,
       `Order claim request should have at least 1 item`
     )
   }
@@ -271,7 +271,7 @@ export type ConfirmClaimRequestWorkflowInput = {
 export const confirmClaimRequestWorkflowId = "confirm-claim-request"
 /**
  * This workflow confirms a requested claim. It's used by the
- * [Confirm Claim Request API Route](https://docs.medusajs.com/api/admin#claims_postclaimsidrequest).
+ * [Confirm Claim Request API Route](https://docs.vikrai.com/api/admin#claims_postclaimsidrequest).
  *
  * You can use this workflow within your customizations or your own custom workflows, allowing you to confirm a claim
  * for an order in your custom flows.
@@ -519,3 +519,4 @@ export const confirmClaimRequestWorkflow = createWorkflow(
     return new WorkflowResponse(orderPreview)
   }
 )
+

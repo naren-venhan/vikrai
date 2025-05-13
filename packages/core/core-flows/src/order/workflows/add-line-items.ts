@@ -2,8 +2,8 @@ import {
   AdditionalData,
   OrderLineItemDTO,
   OrderWorkflow,
-} from "@medusajs/framework/types"
-import { isDefined, MedusaError } from "@medusajs/framework/utils"
+} from "@vikrai/framework/types"
+import { isDefined, vikraiError } from "@vikrai/framework/utils"
 import {
   createHook,
   createWorkflow,
@@ -12,7 +12,7 @@ import {
   when,
   WorkflowData,
   WorkflowResponse,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { findOneOrAnyRegionStep } from "../../cart/steps/find-one-or-any-region"
 import { findOrCreateCustomerStep } from "../../cart/steps/find-or-create-customer"
 import { findSalesChannelStep } from "../../cart/steps/find-sales-channel"
@@ -100,8 +100,8 @@ export const addOrderLineItemsWorkflowId = "order-add-line-items"
  * You can consume the `setPricingContext` hook to add the `location_id` context to the prices calculation:
  * 
  * ```ts
- * import { addOrderLineItemsWorkflow } from "@medusajs/medusa/core-flows";
- * import { StepResponse } from "@medusajs/workflows-sdk";
+ * import { addOrderLineItemsWorkflow } from "@vikrai/vikrai/core-flows";
+ * import { StepResponse } from "@vikrai/workflows-sdk";
  * 
  * addOrderLineItemsWorkflow.hooks.setPricingContext((
  *   { order, variantIds, region, customerData, additional_data }, { container }
@@ -116,7 +116,7 @@ export const addOrderLineItemsWorkflowId = "order-add-line-items"
  * 
  * :::note
  * 
- * Learn more about prices calculation context in the [Prices Calculation](https://docs.medusajs.com/resources/commerce-modules/pricing/price-calculation) documentation.
+ * Learn more about prices calculation context in the [Prices Calculation](https://docs.vikrai.com/resources/commerce-modules/pricing/price-calculation) documentation.
  * 
  * :::
  */
@@ -180,7 +180,7 @@ export const addOrderLineItemsWorkflow = createWorkflow(
       { input, region, customerData, order, setPricingContextResult },
       (data) => {
         if (!data.region) {
-          throw new MedusaError(MedusaError.Types.NOT_FOUND, "Region not found")
+          throw new vikraiError(vikraiError.Types.NOT_FOUND, "Region not found")
         }
 
         return {
@@ -231,3 +231,4 @@ export const addOrderLineItemsWorkflow = createWorkflow(
     )
   }
 )
+

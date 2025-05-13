@@ -2,8 +2,8 @@ import {
   Adjustments,
   AdjustmentsDone,
   ExclamationCircle,
-} from "@medusajs/icons"
-import { Button, DropdownMenu, clx } from "@medusajs/ui"
+} from "@vikrai/icons"
+import { Button, DropdownMenu, clx } from "@vikrai/ui"
 import {
   Cell,
   CellContext,
@@ -937,3 +937,4 @@ const DataGridRow = <TData,>({
     </div>
   )
 }
+

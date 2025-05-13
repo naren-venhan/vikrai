@@ -1,5 +1,6 @@
 ---
-"@medusajs/dashboard": patch
+"@vikrai/dashboard": patch
 ---
 
 Added missing dependencies
+

@@ -4,13 +4,13 @@ import {
   AdminOrderPreview,
   AdminReturn,
   InventoryLevelDTO,
-} from "@medusajs/types"
-import { Alert, Button, Heading, Text, toast } from "@medusajs/ui"
+} from "@vikrai/types"
+import { Alert, Button, Heading, Text, toast } from "@vikrai/ui"
 import { useEffect, useMemo, useState } from "react"
 import { useFieldArray, UseFormReturn } from "react-hook-form"
 import { useTranslation } from "react-i18next"
 
-import { HttpTypes } from "@medusajs/types"
+import { HttpTypes } from "@vikrai/types"
 import { Form } from "../../../../../components/common/form"
 import { Combobox } from "../../../../../components/inputs/combobox"
 import {
@@ -544,3 +544,4 @@ export const ExchangeInboundSection = ({
     </div>
   )
 }
+

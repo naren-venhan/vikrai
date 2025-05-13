@@ -1,7 +1,7 @@
 import { configLoader } from "../loader"
 import { join } from "path"
 import { container } from "../../container"
-import { ContainerRegistrationKeys } from "@medusajs/utils"
+import { ContainerRegistrationKeys } from "@vikrai/utils"
 
 describe("configLoader", () => {
   const entryDirectory = join(__dirname, "../__fixtures__")
@@ -13,14 +13,14 @@ describe("configLoader", () => {
 
     expect(configModule).toBeUndefined()
 
-    await configLoader(entryDirectory, "medusa-config")
+    await configLoader(entryDirectory, "vikrai-config")
 
     configModule = container.resolve(ContainerRegistrationKeys.CONFIG_MODULE)
 
     expect(configModule).toBeDefined()
     expect(configModule.projectConfig.databaseName).toBeUndefined()
 
-    await configLoader(entryDirectory, "medusa-config-2")
+    await configLoader(entryDirectory, "vikrai-config-2")
 
     configModule = container.resolve(ContainerRegistrationKeys.CONFIG_MODULE)
 
@@ -28,9 +28,9 @@ describe("configLoader", () => {
     expect(configModule.projectConfig.databaseName).toBe("foo")
     expect(configModule.projectConfig.workerMode).toBe("shared")
 
-    process.env.MEDUSA_WORKER_MODE = "worker"
+    process.env.vikrai_WORKER_MODE = "worker"
 
-    await configLoader(entryDirectory, "medusa-config-2")
+    await configLoader(entryDirectory, "vikrai-config-2")
 
     configModule = container.resolve(ContainerRegistrationKeys.CONFIG_MODULE)
 
@@ -39,3 +39,4 @@ describe("configLoader", () => {
     expect(configModule.projectConfig.workerMode).toBe("worker")
   })
 })
+

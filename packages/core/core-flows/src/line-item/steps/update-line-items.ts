@@ -1,14 +1,14 @@
 import {
   ICartModuleService,
   UpdateLineItemWithSelectorDTO,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import {
   Modules,
   getSelectsAndRelationsFromObjectArray,
   promiseAll,
   removeUndefined,
-} from "@medusajs/framework/utils"
-import { StepResponse, createStep } from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/utils"
+import { StepResponse, createStep } from "@vikrai/framework/workflows-sdk"
 
 export const updateLineItemsStepWithSelectorId =
   "update-line-items-with-selector"
@@ -67,3 +67,4 @@ export const updateLineItemsStepWithSelector = createStep(
     )
   }
 )
+

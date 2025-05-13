@@ -1,6 +1,6 @@
-import { IProductModuleService } from "@medusajs/framework/types"
-import { Modules } from "@medusajs/framework/utils"
-import { StepResponse, createStep } from "@medusajs/framework/workflows-sdk"
+import { IProductModuleService } from "@vikrai/framework/types"
+import { Modules } from "@vikrai/framework/utils"
+import { StepResponse, createStep } from "@vikrai/framework/workflows-sdk"
 
 /**
  * The IDs of the product options to delete.
@@ -29,3 +29,4 @@ export const deleteProductOptionsStep = createStep(
     await service.restoreProductOptions(prevIds)
   }
 )
+

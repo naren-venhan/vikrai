@@ -6,8 +6,8 @@ import {
   Plus,
   Trash,
   TriangleDownMini,
-} from "@medusajs/icons"
-import { HttpTypes } from "@medusajs/types"
+} from "@vikrai/icons"
+import { HttpTypes } from "@vikrai/types"
 import {
   Badge,
   Container,
@@ -18,7 +18,7 @@ import {
   Text,
   toast,
   usePrompt,
-} from "@medusajs/ui"
+} from "@vikrai/ui"
 import { useMemo, useState } from "react"
 import { useTranslation } from "react-i18next"
 import { useNavigate } from "react-router-dom"
@@ -659,3 +659,4 @@ const Actions = ({ location }: { location: HttpTypes.AdminStockLocation }) => {
     />
   )
 }
+

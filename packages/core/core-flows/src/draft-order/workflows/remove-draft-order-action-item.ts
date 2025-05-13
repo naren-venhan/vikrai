@@ -1,17 +1,17 @@
-import { OrderChangeStatus, PromotionActions } from "@medusajs/framework/utils"
+import { OrderChangeStatus, PromotionActions } from "@vikrai/framework/utils"
 import {
   createWorkflow,
   transform,
   when,
   WorkflowData,
   WorkflowResponse,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import {
   OrderChangeDTO,
   OrderDTO,
   OrderPreviewDTO,
   OrderWorkflow,
-} from "@medusajs/types"
+} from "@vikrai/types"
 import { useRemoteQueryStep } from "../../common"
 import {
   deleteOrderChangeActionsStep,
@@ -27,7 +27,7 @@ export const removeDraftOrderActionItemWorkflowId =
 
 /**
  * This workflow removes an item that was added or updated in a draft order edit. It's used by the
- * [Remove Item from Draft Order Edit Admin API Route](https://docs.medusajs.com/api/admin#draft-orders_deletedraftordersidedititemsaction_id).
+ * [Remove Item from Draft Order Edit Admin API Route](https://docs.vikrai.com/api/admin#draft-orders_deletedraftordersidedititemsaction_id).
  * 
  * You can use this workflow within your customizations or your own custom workflows, allowing you to wrap custom logic around
  * removing an item from a draft order edit.
@@ -121,3 +121,4 @@ export const removeDraftOrderActionItemWorkflow = createWorkflow(
     return new WorkflowResponse(previewOrderChangeStep(input.order_id))
   }
 )
+

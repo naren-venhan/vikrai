@@ -2,14 +2,14 @@ import {
   FilterableSalesChannelProps,
   SalesChannelDTO,
   UpdateSalesChannelDTO,
-} from "@medusajs/framework/types"
-import { SalesChannelWorkflowEvents } from "@medusajs/framework/utils"
+} from "@vikrai/framework/types"
+import { SalesChannelWorkflowEvents } from "@vikrai/framework/utils"
 import {
   WorkflowData,
   WorkflowResponse,
   createWorkflow,
   transform,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { emitEventStep } from "../../common"
 import { updateSalesChannelsStep } from "../steps/update-sales-channels"
 
@@ -35,7 +35,7 @@ export type UpdateSalesChannelsWorkflowOutput = SalesChannelDTO[]
 export const updateSalesChannelsWorkflowId = "update-sales-channels"
 /**
  * This workflow updates sales channels matching the specified conditions. It's used by the
- * [Update Sales Channel Admin API Route](https://docs.medusajs.com/api/admin#sales-channels_postsaleschannelsid).
+ * [Update Sales Channel Admin API Route](https://docs.vikrai.com/api/admin#sales-channels_postsaleschannelsid).
  * 
  * You can use this workflow within your customizations or your own custom workflows, allowing you to
  * update sales channels within your custom flows.
@@ -84,3 +84,4 @@ export const updateSalesChannelsWorkflow = createWorkflow(
     return new WorkflowResponse(updatedSalesChannels)
   }
 )
+

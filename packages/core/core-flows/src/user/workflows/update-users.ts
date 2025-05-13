@@ -1,18 +1,18 @@
-import { UserDTO, UserWorkflow } from "@medusajs/framework/types"
-import { UserWorkflowEvents } from "@medusajs/framework/utils"
+import { UserDTO, UserWorkflow } from "@vikrai/framework/types"
+import { UserWorkflowEvents } from "@vikrai/framework/utils"
 import {
   WorkflowData,
   WorkflowResponse,
   createWorkflow,
   transform,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { emitEventStep } from "../../common/steps/emit-event"
 import { updateUsersStep } from "../steps"
 
 export const updateUsersWorkflowId = "update-users-workflow"
 /**
  * This workflow updates one or more users. It's used by the
- * [Update User Admin API Route](https://docs.medusajs.com/api/admin#users_postusersid).
+ * [Update User Admin API Route](https://docs.vikrai.com/api/admin#users_postusersid).
  * 
  * You can use this workflow within your customizations or your own custom workflows, allowing you to
  * update users within your custom flows.
@@ -57,3 +57,4 @@ export const updateUsersWorkflow = createWorkflow(
     return new WorkflowResponse(updatedUsers)
   }
 )
+

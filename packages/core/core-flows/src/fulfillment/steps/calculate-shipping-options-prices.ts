@@ -1,9 +1,9 @@
 import {
   CalculateShippingOptionPriceDTO,
   IFulfillmentModuleService,
-} from "@medusajs/framework/types"
-import { Modules } from "@medusajs/framework/utils"
-import { StepResponse, createStep } from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/types"
+import { Modules } from "@vikrai/framework/utils"
+import { StepResponse, createStep } from "@vikrai/framework/workflows-sdk"
 
 /**
  * The data to calculate the prices for one or more shipping options.
@@ -48,3 +48,4 @@ export const calculateShippingOptionsPricesStep = createStep(
     return new StepResponse(prices)
   }
 )
+

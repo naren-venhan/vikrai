@@ -1,7 +1,7 @@
-import { IAuthModuleService } from "@medusajs/types"
-import { Modules } from "@medusajs/utils"
+import { IAuthModuleService } from "@vikrai/types"
+import { Modules } from "@vikrai/utils"
 import jwt from "jsonwebtoken"
-import { medusaIntegrationTestRunner } from "@medusajs/test-utils"
+import { vikraiIntegrationTestRunner } from "@vikrai/test-utils"
 import {
   adminHeaders,
   createAdminUser,
@@ -11,7 +11,7 @@ import {
 
 jest.setTimeout(30000)
 
-medusaIntegrationTestRunner({
+vikraiIntegrationTestRunner({
   testSuite: ({ dbConnection, api, getContainer }) => {
     let customer1
     let customer2
@@ -567,3 +567,4 @@ medusaIntegrationTestRunner({
     })
   },
 })
+

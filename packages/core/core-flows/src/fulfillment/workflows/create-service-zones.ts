@@ -1,9 +1,9 @@
-import { FulfillmentWorkflow, ServiceZoneDTO } from "@medusajs/framework/types"
+import { FulfillmentWorkflow, ServiceZoneDTO } from "@vikrai/framework/types"
 import {
   WorkflowData,
   WorkflowResponse,
   createWorkflow,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { createServiceZonesStep } from "../steps"
 
 /**
@@ -14,7 +14,7 @@ export type CreateServiceZonesWorkflowOutput = ServiceZoneDTO[]
 export const createServiceZonesWorkflowId = "create-service-zones-workflow"
 /**
  * This workflow creates one or more service zones. It's used by the
- * [Add Service Zone to Fulfillment Set Admin API Route](https://docs.medusajs.com/api/admin#fulfillment-sets_postfulfillmentsetsidservicezones).
+ * [Add Service Zone to Fulfillment Set Admin API Route](https://docs.vikrai.com/api/admin#fulfillment-sets_postfulfillmentsetsidservicezones).
  * 
  * You can use this workflow within your own customizations or custom workflows, allowing you to
  * create service zones within your custom flows.
@@ -50,3 +50,4 @@ export const createServiceZonesWorkflow = createWorkflow(
     return new WorkflowResponse(createServiceZonesStep(input.data))
   }
 )
+

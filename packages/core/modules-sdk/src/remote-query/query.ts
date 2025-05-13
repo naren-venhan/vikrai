@@ -9,13 +9,13 @@ import {
   RemoteQueryInput,
   RemoteQueryObjectConfig,
   RemoteQueryObjectFromStringResult,
-} from "@medusajs/types"
+} from "@vikrai/types"
 import {
-  MedusaError,
+  vikraiError,
   isObject,
   remoteQueryObjectFromString,
   unflattenObjectKeys,
-} from "@medusajs/utils"
+} from "@vikrai/utils"
 import { RemoteQuery } from "./remote-query"
 import { toRemoteQuery } from "./to-remote-query"
 
@@ -120,8 +120,8 @@ export class Query {
     options?: RemoteJoinerOptions
   ) {
     if (!isObject(queryOptions)) {
-      throw new MedusaError(
-        MedusaError.Types.INVALID_DATA,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_DATA,
         "Invalid query, expected object and received something else."
       )
     }
@@ -195,8 +195,8 @@ export class Query {
     options?: RemoteJoinerOptions
   ): Promise<GraphResultSet<TEntry>> {
     if (!this.#indexModule) {
-      throw new MedusaError(
-        MedusaError.Types.INVALID_DATA,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_DATA,
         "Index module is not loaded."
       )
     }
@@ -277,3 +277,4 @@ export function createQuery({
 
   return backwardCompatibleQuery as Omit<RemoteQueryFunction, symbol>
 }
+

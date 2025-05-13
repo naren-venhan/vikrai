@@ -3,7 +3,7 @@
 import React, { MouseEvent } from "react"
 import { useSearch } from "@/providers"
 import { Button } from "@/components"
-import { MagnifyingGlass } from "@medusajs/icons"
+import { MagnifyingGlass } from "@vikrai/icons"
 import { useKeyboardShortcut } from "@/hooks"
 
 export type SearchModalOpenerProps = {
@@ -43,7 +43,8 @@ export const SearchModalOpener = ({
       onClick={handleOpen}
       className="flex !p-[6.5px]"
     >
-      <MagnifyingGlass className="text-medusa-fg-subtle" />
+      <MagnifyingGlass className="text-vikrai-fg-subtle" />
     </Button>
   )
 }
+

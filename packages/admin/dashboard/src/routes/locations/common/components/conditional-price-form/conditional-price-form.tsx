@@ -5,7 +5,7 @@ import {
   TriangleDownMini,
   XMark,
   XMarkMini,
-} from "@medusajs/icons"
+} from "@vikrai/icons"
 import {
   Badge,
   Button,
@@ -17,7 +17,7 @@ import {
   Label,
   Text,
   Tooltip,
-} from "@medusajs/ui"
+} from "@vikrai/ui"
 import { Accordion as RadixAccordion } from "radix-ui"
 import React, { Fragment, ReactNode, useRef, useState } from "react"
 import {
@@ -711,3 +711,4 @@ const ConditionDisplay = ({
 
   return renderCondition()
 }
+

@@ -1,4 +1,4 @@
-import { model } from "@medusajs/framework/utils"
+import { model } from "@vikrai/framework/utils"
 
 export const User = model
   .define("user", {
@@ -16,3 +16,4 @@ export const User = model
       where: "deleted_at IS NULL",
     },
   ])
+

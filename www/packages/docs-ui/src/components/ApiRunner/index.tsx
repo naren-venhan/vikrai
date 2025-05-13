@@ -8,7 +8,7 @@ import { Button } from "../.."
 import { ApiMethod, ApiTestingOptions } from "types"
 import { ApiRunnerParamInputs } from "./ParamInputs"
 import clsx from "clsx"
-import { ArrowDownRightMini } from "@medusajs/icons"
+import { ArrowDownRightMini } from "@vikrai/icons"
 import { ArrowRightDownIcon } from "../Icons/ArrowRightDown"
 import { ApiRunnerFooterBackground } from "./FooterBackground"
 
@@ -78,7 +78,7 @@ export const ApiRunner = React.forwardRef<HTMLDivElement, ApiRunnerProps>(
         {manualTestTrigger && (
           <div
             className={clsx(
-              "bg-medusa-bg-component rounded-docs_DEFAULT",
+              "bg-vikrai-bg-component rounded-docs_DEFAULT",
               "shadow-elevation-card-rest dark:shadow-elevation-card-rest-dark",
               "mb-docs_0.75"
             )}
@@ -89,7 +89,7 @@ export const ApiRunner = React.forwardRef<HTMLDivElement, ApiRunnerProps>(
                 "px-docs_0.75 pb-docs_0.75 pt-docs_0.5"
               )}
             >
-              <ArrowDownRightMini className="text-medusa-fg-muted" />
+              <ArrowDownRightMini className="text-vikrai-fg-muted" />
               <div className="flex-1 flex items-center gap-docs_0.75">
                 {apiTestingOptions.pathData && (
                   <ApiRunnerParamInputs
@@ -128,11 +128,11 @@ export const ApiRunner = React.forwardRef<HTMLDivElement, ApiRunnerProps>(
                   />
                 )}
               </div>
-              <ArrowRightDownIcon className="text-medusa-fg-muted" />
+              <ArrowRightDownIcon className="text-vikrai-fg-muted" />
             </div>
             <div
               className={clsx(
-                "border-t border-medusa-border-base",
+                "border-t border-vikrai-border-base",
                 "py-docs_0.5 px-docs_0.75 relative",
                 "flex justify-end items-center gap-docs_0.5"
               )}
@@ -172,3 +172,4 @@ export const ApiRunner = React.forwardRef<HTMLDivElement, ApiRunnerProps>(
     )
   }
 )
+

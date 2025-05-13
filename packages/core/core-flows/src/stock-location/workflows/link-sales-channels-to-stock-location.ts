@@ -1,6 +1,6 @@
-import { LinkWorkflowInput } from "@medusajs/framework/types"
-import { WorkflowData, createWorkflow } from "@medusajs/framework/workflows-sdk"
-import { transform } from "@medusajs/framework/workflows-sdk"
+import { LinkWorkflowInput } from "@vikrai/framework/types"
+import { WorkflowData, createWorkflow } from "@vikrai/framework/workflows-sdk"
+import { transform } from "@vikrai/framework/workflows-sdk"
 import {
   associateLocationsWithSalesChannelsStep,
   detachLocationsFromSalesChannelsStep,
@@ -19,7 +19,7 @@ export const linkSalesChannelsToStockLocationWorkflowId =
   "link-sales-channels-to-stock-location"
 /**
  * This workflow manages the sales channels of a stock location. It's used by the
- * [Manage Sales Channels Admin API Route](https://docs.medusajs.com/api/admin#stock-locations_poststocklocationsidsaleschannels).
+ * [Manage Sales Channels Admin API Route](https://docs.vikrai.com/api/admin#stock-locations_poststocklocationsidsaleschannels).
  * 
  * You can use this workflow within your own customizations or custom workflows, allowing you
  * to manage the sales channels of a stock location in your custom flows.
@@ -59,3 +59,4 @@ export const linkSalesChannelsToStockLocationWorkflow = createWorkflow(
     detachLocationsFromSalesChannelsStep({ links: toRemove })
   }
 )
+

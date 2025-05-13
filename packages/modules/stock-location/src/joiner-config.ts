@@ -1,4 +1,4 @@
-import { defineJoinerConfig, Modules } from "@medusajs/framework/utils"
+import { defineJoinerConfig, Modules } from "@vikrai/framework/utils"
 import { StockLocation } from "./models"
 import { default as schema } from "./schema"
 
@@ -9,3 +9,4 @@ export const joinerConfig = defineJoinerConfig(Modules.STOCK_LOCATION, {
     location_id: StockLocation.name,
   },
 })
+

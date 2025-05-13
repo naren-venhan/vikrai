@@ -19,7 +19,7 @@ import {
 import { useMemo } from "react"
 import type { OpenAPI } from "types"
 import TagOperationParameters from "../../Parameters"
-import { Brackets, CheckCircle, SquareTwoStack, Tag } from "@medusajs/icons"
+import { Brackets, CheckCircle, SquareTwoStack, Tag } from "@vikrai/icons"
 
 export type TagsOperationDescriptionSectionEventsProps = {
   events: OpenAPI.OasEvents[]
@@ -36,7 +36,7 @@ const TagsOperationDescriptionSectionEvents = ({
           <span>
             The following events are emitted by the workflow used in this API
             route. You can listen to and handle these events using a{" "}
-            <Link href="https://docs.medusajs.com/learn/fundamentals/events-and-subscribers">
+            <Link href="https://docs.vikrai.com/learn/fundamentals/events-and-subscribers">
               Subscriber
             </Link>
           </span>
@@ -149,3 +149,4 @@ const TagsOperationDescriptionSectionEvent = ({
     </TabsContent>
   )
 }
+

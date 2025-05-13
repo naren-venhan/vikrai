@@ -1,6 +1,6 @@
 "use client"
 
-import { InformationCircleSolid } from "@medusajs/icons"
+import { InformationCircleSolid } from "@vikrai/icons"
 
 import { PropData, PropDataMap, PropSpecType } from "@/types/props"
 import { useCallback, useMemo } from "react"
@@ -151,7 +151,7 @@ const Row = ({
                 </MarkdownContent>
               }
             >
-              <InformationCircleSolid className="text-medusa-fg-subtle" />
+              <InformationCircleSolid className="text-vikrai-fg-subtle" />
             </Tooltip>
           )}
         </div>
@@ -169,7 +169,7 @@ const Row = ({
                 >
                   <div className="flex items-center gap-x-1">
                     <code>{typeNode.text}</code>
-                    <InformationCircleSolid className="text-medusa-fg-subtle" />
+                    <InformationCircleSolid className="text-vikrai-fg-subtle" />
                   </div>
                 </Tooltip>
               )}
@@ -194,3 +194,4 @@ const Row = ({
 }
 
 export { PropTable }
+

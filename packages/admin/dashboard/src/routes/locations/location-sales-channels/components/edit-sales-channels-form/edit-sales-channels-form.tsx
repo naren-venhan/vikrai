@@ -1,11 +1,11 @@
 import { zodResolver } from "@hookform/resolvers/zod"
-import { HttpTypes } from "@medusajs/types"
+import { HttpTypes } from "@vikrai/types"
 import {
   Button,
   createDataTableColumnHelper,
   DataTableRowSelectionState,
   toast,
-} from "@medusajs/ui"
+} from "@vikrai/ui"
 import { keepPreviousData } from "@tanstack/react-query"
 import { useMemo, useState } from "react"
 import { useForm } from "react-hook-form"
@@ -175,3 +175,4 @@ function getInitialState(location: HttpTypes.AdminStockLocation) {
     }, {} as DataTableRowSelectionState) ?? {}
   )
 }
+

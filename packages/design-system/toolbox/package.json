@@ -1,10 +1,10 @@
 {
-  "name": "@medusajs/toolbox",
+  "name": "@vikrai/toolbox",
   "private": true,
   "version": "2.7.1",
-  "description": "CLI tool for importing Figma designs for Medusa UI",
+  "description": "CLI tool for importing Figma designs for vikrai UI",
   "license": "MIT",
-  "author": "Kasper Kristensen <kasper@medusajs.com>",
+  "author": "Kasper Kristensen <kasper@vikrai.com>",
   "bin": "./bin/toolbox.js",
   "scripts": {
     "build": "tsup"
@@ -31,3 +31,4 @@
     "typescript": "5.1.6"
   }
 }
+

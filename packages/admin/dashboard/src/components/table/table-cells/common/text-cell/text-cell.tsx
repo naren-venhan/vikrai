@@ -1,4 +1,4 @@
-import { clx } from "@medusajs/ui"
+import { clx } from "@vikrai/ui"
 import { ConditionalTooltip } from "../../../../common/conditional-tooltip"
 import { PlaceholderCell } from "../placeholder-cell"
 
@@ -47,3 +47,4 @@ export const TextHeader = ({ text, align = "left" }: HeaderProps) => {
     </div>
   )
 }
+

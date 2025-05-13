@@ -20,7 +20,7 @@ import {
   PricingTypes,
   UpsertPricePreferenceDTO,
   UpsertPriceSetDTO,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import {
   arrayDifference,
   deduplicate,
@@ -32,8 +32,8 @@ import {
   isPresent,
   isString,
   MathBN,
-  MedusaContext,
-  MedusaError,
+  vikraiContext,
+  vikraiError,
   ModulesSdkUtils,
   PriceListType,
   PricingRuleOperator,
@@ -41,7 +41,7 @@ import {
   removeNullish,
   simpleHash,
   upperCaseFirst,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 
 import {
   Price,
@@ -60,12 +60,12 @@ import { joinerConfig } from "../joiner-config"
 type InjectedDependencies = {
   baseRepository: DAL.RepositoryService
   pricingRepository: PricingRepositoryService
-  priceSetService: ModulesSdkTypes.IMedusaInternalService<any>
-  priceRuleService: ModulesSdkTypes.IMedusaInternalService<any>
-  priceService: ModulesSdkTypes.IMedusaInternalService<any>
-  priceListService: ModulesSdkTypes.IMedusaInternalService<any>
-  pricePreferenceService: ModulesSdkTypes.IMedusaInternalService<any>
-  priceListRuleService: ModulesSdkTypes.IMedusaInternalService<any>
+  priceSetService: ModulesSdkTypes.IvikraiInternalService<any>
+  priceRuleService: ModulesSdkTypes.IvikraiInternalService<any>
+  priceService: ModulesSdkTypes.IvikraiInternalService<any>
+  priceListService: ModulesSdkTypes.IvikraiInternalService<any>
+  pricePreferenceService: ModulesSdkTypes.IvikraiInternalService<any>
+  priceListRuleService: ModulesSdkTypes.IvikraiInternalService<any>
 }
 
 const generateMethodForModels = {
@@ -77,7 +77,7 @@ const generateMethodForModels = {
   PricePreference,
 }
 
-const BaseClass = ModulesSdkUtils.MedusaService<{
+const BaseClass = ModulesSdkUtils.vikraiService<{
   PriceSet: { dto: PricingTypes.PriceSetDTO }
   Price: { dto: PricingTypes.PriceDTO }
   PriceRule: {
@@ -99,22 +99,22 @@ export default class PricingModuleService
   protected readonly pricingRepository_: PricingRepositoryService & {
     clearAvailableAttributes?: () => Promise<void>
   }
-  protected readonly priceSetService_: ModulesSdkTypes.IMedusaInternalService<
+  protected readonly priceSetService_: ModulesSdkTypes.IvikraiInternalService<
     InferEntityType<typeof PriceSet>
   >
-  protected readonly priceRuleService_: ModulesSdkTypes.IMedusaInternalService<
+  protected readonly priceRuleService_: ModulesSdkTypes.IvikraiInternalService<
     InferEntityType<typeof PriceRule>
   >
-  protected readonly priceService_: ModulesSdkTypes.IMedusaInternalService<
+  protected readonly priceService_: ModulesSdkTypes.IvikraiInternalService<
     InferEntityType<typeof Price>
   >
-  protected readonly priceListService_: ModulesSdkTypes.IMedusaInternalService<
+  protected readonly priceListService_: ModulesSdkTypes.IvikraiInternalService<
     InferEntityType<typeof PriceList>
   >
-  protected readonly priceListRuleService_: ModulesSdkTypes.IMedusaInternalService<
+  protected readonly priceListRuleService_: ModulesSdkTypes.IvikraiInternalService<
     InferEntityType<typeof PriceListRule>
   >
-  protected readonly pricePreferenceService_: ModulesSdkTypes.IMedusaInternalService<
+  protected readonly pricePreferenceService_: ModulesSdkTypes.IvikraiInternalService<
     InferEntityType<typeof PricePreference>
   >
 
@@ -235,7 +235,7 @@ export default class PricingModuleService
   async listPriceSets(
     filters: PricingTypes.FilterablePriceSetProps = {},
     config: FindConfig<PricingTypes.PriceSetDTO> = {},
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<PriceSetDTO[]> {
     const normalizedConfig = this.normalizePriceSetConfig(config)
     const pricingContext = this.setupCalculatedPriceConfig_(
@@ -276,7 +276,7 @@ export default class PricingModuleService
   async listAndCountPriceSets(
     filters: PricingTypes.FilterablePriceSetProps = {},
     config: FindConfig<PricingTypes.PriceSetDTO> = {},
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<[PriceSetDTO[], number]> {
     const normalizedConfig = this.normalizePriceSetConfig(config)
     const pricingContext = this.setupCalculatedPriceConfig_(
@@ -316,7 +316,7 @@ export default class PricingModuleService
   async calculatePrices(
     pricingFilters: PricingFilters,
     pricingContext: PricingContext = { context: {} },
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<PricingTypes.CalculatedPriceSet[]> {
     const results = await this.pricingRepository_.calculatePrices(
       pricingFilters,
@@ -489,7 +489,7 @@ export default class PricingModuleService
   // @ts-expect-error
   async createPriceSets(
     data: PricingTypes.CreatePriceSetDTO | PricingTypes.CreatePriceSetDTO[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<PriceSetDTO | PriceSetDTO[]> {
     const input = Array.isArray(data) ? data : [data]
     const priceSets = await this.createPriceSets_(input, sharedContext)
@@ -530,7 +530,7 @@ export default class PricingModuleService
   @EmitEvents()
   async upsertPriceSets(
     data: UpsertPriceSetDTO | UpsertPriceSetDTO[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<PriceSetDTO | PriceSetDTO[]> {
     const input = Array.isArray(data) ? data : [data]
     const forUpdate = input.filter(
@@ -579,7 +579,7 @@ export default class PricingModuleService
   async updatePriceSets(
     idOrSelector: string | PricingTypes.FilterablePriceSetProps,
     data: PricingTypes.UpdatePriceSetDTO,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<PriceSetDTO | PriceSetDTO[]> {
     let normalizedInput: ServiceTypes.UpdatePriceSetInput[] = []
     if (isString(idOrSelector)) {
@@ -617,7 +617,7 @@ export default class PricingModuleService
   @InjectTransactionManager()
   protected async updatePriceSets_(
     data: ServiceTypes.UpdatePriceSetInput[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<InferEntityType<typeof PriceSet>[]> {
     // TODO: Since money IDs are rarely passed, this will delete all previous data and insert new entries.
     // We can make the `insert` inside upsertWithReplace do an `upsert` instead to avoid this
@@ -724,15 +724,15 @@ export default class PricingModuleService
           if (Array.isArray(value)) {
             return value.map((customRule) => {
               if (!ruleOperators.includes(customRule.operator)) {
-                throw new MedusaError(
-                  MedusaError.Types.INVALID_DATA,
+                throw new vikraiError(
+                  vikraiError.Types.INVALID_DATA,
                   `operator should be one of ${ruleOperators.join(", ")}`
                 )
               }
 
               if (typeof customRule.value !== "number") {
-                throw new MedusaError(
-                  MedusaError.Types.INVALID_DATA,
+                throw new vikraiError(
+                  vikraiError.Types.INVALID_DATA,
                   `value should be a number`
                 )
               }
@@ -791,7 +791,7 @@ export default class PricingModuleService
   @EmitEvents()
   async addPrices(
     data: AddPricesDTO | AddPricesDTO[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<PricingTypes.PriceSetDTO[] | PricingTypes.PriceSetDTO> {
     const input = Array.isArray(data) ? data : [data]
 
@@ -819,7 +819,7 @@ export default class PricingModuleService
   // @ts-ignore
   async createPriceLists(
     data: PricingTypes.CreatePriceListDTO[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<PricingTypes.PriceListDTO[]> {
     const priceLists = await this.createPriceLists_(data, sharedContext)
 
@@ -837,7 +837,7 @@ export default class PricingModuleService
   // @ts-ignore
   async updatePriceLists(
     data: PricingTypes.UpdatePriceListDTO[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<PricingTypes.PriceListDTO[]> {
     const priceLists = await this.updatePriceLists_(data, sharedContext)
 
@@ -854,7 +854,7 @@ export default class PricingModuleService
   @EmitEvents()
   async updatePriceListPrices(
     data: PricingTypes.UpdatePriceListPricesDTO[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<PricingTypes.PriceDTO[]> {
     const prices = await this.updatePriceListPrices_(data, sharedContext)
 
@@ -871,7 +871,7 @@ export default class PricingModuleService
   @EmitEvents()
   async removePrices(
     ids: string[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<void> {
     try {
       await this.removePrices_(ids, sharedContext)
@@ -884,7 +884,7 @@ export default class PricingModuleService
   @EmitEvents()
   async addPriceListPrices(
     data: PricingTypes.AddPriceListPricesDTO[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<PricingTypes.PriceDTO[]> {
     const prices = await this.addPriceListPrices_(data, sharedContext)
 
@@ -901,7 +901,7 @@ export default class PricingModuleService
   @EmitEvents()
   async setPriceListRules(
     data: PricingTypes.SetPriceListRulesDTO,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<PricingTypes.PriceListDTO> {
     const [priceList] = await this.setPriceListRules_([data], sharedContext)
 
@@ -918,7 +918,7 @@ export default class PricingModuleService
   @EmitEvents()
   async removePriceListRules(
     data: PricingTypes.RemovePriceListRulesDTO,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<PricingTypes.PriceListDTO> {
     const [priceList] = await this.removePriceListRules_([data], sharedContext)
 
@@ -943,7 +943,7 @@ export default class PricingModuleService
     data:
       | PricingTypes.CreatePricePreferenceDTO
       | PricingTypes.CreatePricePreferenceDTO[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<PricePreferenceDTO | PricePreferenceDTO[]> {
     const normalized = Array.isArray(data) ? data : [data]
     const preferences = await this.createPricePreferences_(
@@ -970,7 +970,7 @@ export default class PricingModuleService
   @EmitEvents()
   async upsertPricePreferences(
     data: UpsertPricePreferenceDTO | UpsertPricePreferenceDTO[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<PricePreferenceDTO | PricePreferenceDTO[]> {
     const input = Array.isArray(data) ? data : [data]
     const forUpdate = input.filter(
@@ -1017,7 +1017,7 @@ export default class PricingModuleService
   async updatePricePreferences(
     idOrSelector: string | PricingTypes.FilterablePricePreferenceProps,
     data: PricingTypes.UpdatePricePreferenceDTO,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<PricePreferenceDTO | PricePreferenceDTO[]> {
     let normalizedInput: ServiceTypes.UpdatePricePreferenceInput[] = []
     if (isString(idOrSelector)) {
@@ -1056,7 +1056,7 @@ export default class PricingModuleService
   @InjectTransactionManager()
   protected async createPricePreferences_(
     data: PricingTypes.CreatePricePreferenceDTO[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ) {
     const preferences = await this.pricePreferenceService_.create(
       data.map((d) => ({
@@ -1072,7 +1072,7 @@ export default class PricingModuleService
   @InjectTransactionManager()
   protected async updatePricePreferences_(
     data: PricingTypes.UpdatePricePreferenceDTO[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ) {
     const preferences = await this.pricePreferenceService_.update(
       data,
@@ -1085,7 +1085,7 @@ export default class PricingModuleService
   @InjectTransactionManager()
   protected async createPriceSets_(
     data: PricingTypes.CreatePriceSetDTO[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ) {
     const input = Array.isArray(data) ? data : [data]
 
@@ -1152,7 +1152,7 @@ export default class PricingModuleService
   @InjectTransactionManager()
   protected async addPrices_(
     input: AddPricesDTO[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ) {
     const priceSets = await this.listPriceSets(
       { id: input.map((d) => d.priceSetId) },
@@ -1184,8 +1184,8 @@ export default class PricingModuleService
       const priceSet = priceSetMap.get(price.price_set_id)
 
       if (!priceSet) {
-        throw new MedusaError(
-          MedusaError.Types.INVALID_DATA,
+        throw new vikraiError(
+          vikraiError.Types.INVALID_DATA,
           `Price set with id: ${price.price_set_id} not found`
         )
       }
@@ -1210,7 +1210,7 @@ export default class PricingModuleService
   @InjectTransactionManager()
   protected async createPriceLists_(
     data: PricingTypes.CreatePriceListDTO[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ) {
     const normalized = this.normalizePriceListDate(data)
 
@@ -1323,7 +1323,7 @@ export default class PricingModuleService
   @InjectTransactionManager()
   protected async updatePriceLists_(
     data: PricingTypes.UpdatePriceListDTO[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ) {
     const existingPriceLists = await this.priceListService_.list(
       { id: data.map((d) => d.id) },
@@ -1336,8 +1336,8 @@ export default class PricingModuleService
         data.map((d) => d.id),
         existingPriceLists.map((p) => p.id)
       )
-      throw new MedusaError(
-        MedusaError.Types.INVALID_DATA,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_DATA,
         `Price lists with ids: '${diff.join(", ")}' not found`
       )
     }
@@ -1420,8 +1420,8 @@ export default class PricingModuleService
       const priceList = priceListMap.get(priceListId)
 
       if (!priceList) {
-        throw new MedusaError(
-          MedusaError.Types.INVALID_DATA,
+        throw new vikraiError(
+          vikraiError.Types.INVALID_DATA,
           `Price list with id: ${priceListId} not found`
         )
       }
@@ -1482,8 +1482,8 @@ export default class PricingModuleService
       const priceList = priceListMap.get(price.price_list_id!)
 
       if (!priceList) {
-        throw new MedusaError(
-          MedusaError.Types.INVALID_DATA,
+        throw new vikraiError(
+          vikraiError.Types.INVALID_DATA,
           `Price list with id: ${price.price_list_id} not found`
         )
       }
@@ -1753,3 +1753,4 @@ const hashPrice = (
 
   return simpleHash(JSON.stringify(data))
 }
+

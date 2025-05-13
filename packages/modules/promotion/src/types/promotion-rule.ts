@@ -1,4 +1,4 @@
-import { PromotionRuleOperatorValues } from "@medusajs/framework/types"
+import { PromotionRuleOperatorValues } from "@vikrai/framework/types"
 
 export interface CreatePromotionRuleDTO {
   description?: string | null
@@ -14,3 +14,4 @@ export enum ApplicationMethodRuleTypes {
   TARGET_RULES = "target_rules",
   BUY_RULES = "buy_rules",
 }
+

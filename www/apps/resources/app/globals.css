@@ -20,7 +20,7 @@
   }
 
   *::selection {
-    @apply bg-medusa-bg-highlight;
+    @apply bg-vikrai-bg-highlight;
   }
 
   * {

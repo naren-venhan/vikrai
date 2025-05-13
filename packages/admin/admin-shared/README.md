@@ -1,1 +1,2 @@
-# @medusajs/admin-shared
+# @vikrai/admin-shared
+

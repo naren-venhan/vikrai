@@ -3,14 +3,14 @@ import {
   SchedulerOptions,
   WorkflowManager,
   WorkflowScheduler,
-} from "@medusajs/orchestration"
-import { IEventBusModuleService } from "@medusajs/types"
+} from "@vikrai/orchestration"
+import { IEventBusModuleService } from "@vikrai/types"
 import {
   composeMessage,
-  createMedusaContainer,
+  createvikraiContainer,
   Modules,
   promiseAll,
-} from "@medusajs/utils"
+} from "@vikrai/utils"
 import { asValue } from "awilix"
 import { setTimeout } from "timers/promises"
 import {
@@ -23,7 +23,7 @@ import {
   when,
   WorkflowResponse,
 } from ".."
-import { MedusaWorkflow } from "../../../medusa-workflow"
+import { vikraiWorkflow } from "../../../vikrai-workflow"
 import { createHook } from "../create-hook"
 
 jest.setTimeout(30000)
@@ -47,7 +47,7 @@ WorkflowScheduler.setStorage(new MockSchedulerStorage())
 
 const afterEach_ = () => {
   jest.clearAllMocks()
-  MedusaWorkflow.workflows = {}
+  vikraiWorkflow.workflows = {}
   WorkflowManager.unregisterAll()
 }
 
@@ -2510,7 +2510,7 @@ describe("Workflow composer", function () {
   })
 
   it("should emit grouped events once the workflow is executed and finished", async () => {
-    const container = createMedusaContainer()
+    const container = createvikraiContainer()
     container.register({
       [Modules.EVENT_BUS]: asValue({
         releaseGroupedEvents: jest
@@ -2570,7 +2570,7 @@ describe("Workflow composer", function () {
   })
 
   it("should clear grouped events on fail state", async () => {
-    const container = createMedusaContainer()
+    const container = createvikraiContainer()
     container.register({
       [Modules.EVENT_BUS]: asValue({
         releaseGroupedEvents: jest
@@ -2839,3 +2839,4 @@ describe("Workflow composer", function () {
     })
   })
 })
+

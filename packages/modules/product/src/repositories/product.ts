@@ -1,7 +1,7 @@
 import { Product, ProductOption } from "@models"
 
-import { Context, DAL, InferEntityType } from "@medusajs/framework/types"
-import { buildQuery, DALUtils } from "@medusajs/framework/utils"
+import { Context, DAL, InferEntityType } from "@vikrai/framework/types"
+import { buildQuery, DALUtils } from "@vikrai/framework/utils"
 import { SqlEntityManager, wrap } from "@mikro-orm/postgresql"
 
 // eslint-disable-next-line max-len
@@ -117,3 +117,4 @@ export class ProductRepository extends DALUtils.mikroOrmBaseRepositoryFactory(
     }
   }
 }
+

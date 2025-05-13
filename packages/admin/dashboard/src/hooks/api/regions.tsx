@@ -1,4 +1,4 @@
-import { HttpTypes, PaginatedResponse } from "@medusajs/types"
+import { HttpTypes, PaginatedResponse } from "@vikrai/types"
 import {
   QueryKey,
   UseMutationOptions,
@@ -10,7 +10,7 @@ import { sdk } from "../../lib/client"
 import { queryClient } from "../../lib/query-client"
 import { queryKeysFactory } from "../../lib/query-key-factory"
 import { pricePreferencesQueryKeys } from "./price-preferences"
-import { FetchError } from "@medusajs/js-sdk"
+import { FetchError } from "@vikrai/js-sdk"
 
 const REGIONS_QUERY_KEY = "regions" as const
 export const regionsQueryKeys = queryKeysFactory(REGIONS_QUERY_KEY)
@@ -129,3 +129,4 @@ export const useDeleteRegion = (
     ...options,
   })
 }
+

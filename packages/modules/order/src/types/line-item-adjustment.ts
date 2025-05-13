@@ -1,4 +1,4 @@
-import { OrderTypes } from "@medusajs/framework/types"
+import { OrderTypes } from "@vikrai/framework/types"
 
 export type CreateOrderLineItemAdjustmentDTO =
   OrderTypes.CreateOrderLineItemAdjustmentDTO
@@ -7,3 +7,4 @@ export interface UpdateOrderLineItemAdjustmentDTO
   extends Partial<CreateOrderLineItemAdjustmentDTO> {
   id: string
 }
+

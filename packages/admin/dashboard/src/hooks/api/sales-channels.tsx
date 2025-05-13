@@ -1,9 +1,9 @@
-import { FetchError } from "@medusajs/js-sdk"
+import { FetchError } from "@vikrai/js-sdk"
 import {
   AdminSalesChannelListResponse,
   AdminSalesChannelResponse,
   HttpTypes,
-} from "@medusajs/types"
+} from "@vikrai/types"
 import {
   QueryKey,
   UseMutationOptions,
@@ -234,3 +234,4 @@ export const useSalesChannelAddProducts = (
     ...options,
   })
 }
+

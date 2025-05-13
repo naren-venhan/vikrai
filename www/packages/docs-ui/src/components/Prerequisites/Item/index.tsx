@@ -21,10 +21,10 @@ export const PrerequisiteItem = ({
     <Link
       href={link || "#"}
       className={clsx(
-        "bg-medusa-tag-neutral-bg text-medusa-fg-subtle",
+        "bg-vikrai-tag-neutral-bg text-vikrai-fg-subtle",
         "px-docs_0.75 py-docs_0.5 w-fit",
         "flex justify-center items-center",
-        link && "hover:bg-medusa-tag-neutral-bg-hover",
+        link && "hover:bg-vikrai-tag-neutral-bg-hover",
         "rounded-tr-docs_xl rounded-br-docs_xl",
         position === "alone" && "rounded-docs_xl",
         position === "top" && "rounded-tl-docs_xl rounded-bl-docs_DEFAULT",
@@ -41,3 +41,4 @@ export const PrerequisiteItem = ({
     </Link>
   )
 }
+

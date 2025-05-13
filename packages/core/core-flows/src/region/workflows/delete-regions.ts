@@ -1,9 +1,9 @@
-import { Modules, RegionWorkflowEvents } from "@medusajs/framework/utils"
+import { Modules, RegionWorkflowEvents } from "@vikrai/framework/utils"
 import {
   WorkflowData,
   createWorkflow,
   transform,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { emitEventStep } from "../../common/steps/emit-event"
 import { removeRemoteLinkStep } from "../../common/steps/remove-remote-links"
 import { deleteRegionsStep } from "../steps"
@@ -13,7 +13,7 @@ export type DeleteRegionsWorkflowInput = { ids: string[] }
 export const deleteRegionsWorkflowId = "delete-regions"
 /**
  * This workflow deletes one or more regions. It's used by the
- * [Delete Region Admin API Route](https://docs.medusajs.com/api/admin#regions_deleteregionsid).
+ * [Delete Region Admin API Route](https://docs.vikrai.com/api/admin#regions_deleteregionsid).
  *
  * You can use this workflow within your own customizations or custom workflows, allowing you
  * to delete regions in your custom flows.
@@ -53,3 +53,4 @@ export const deleteRegionsWorkflow = createWorkflow(
     })
   }
 )
+

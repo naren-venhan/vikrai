@@ -1,4 +1,4 @@
-import { BigNumberInput } from "@medusajs/framework/types"
+import { BigNumberInput } from "@vikrai/framework/types"
 
 interface PartialUpsertLineItemDTO {
   subtitle?: string
@@ -37,3 +37,4 @@ export interface UpdateLineItemDTO
     Partial<CreateLineItemDTO> {
   id: string
 }
+

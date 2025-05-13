@@ -1,4 +1,4 @@
-import { model } from "@medusajs/framework/utils"
+import { model } from "@vikrai/framework/utils"
 
 const IndexData = model.define("IndexData", {
   id: model.text().primaryKey(),
@@ -9,3 +9,4 @@ const IndexData = model.define("IndexData", {
 })
 
 export default IndexData
+

@@ -5,8 +5,8 @@ import {
   OrderExchangeDTO,
   OrderPreviewDTO,
   OrderWorkflow,
-} from "@medusajs/framework/types"
-import { ChangeActionType, OrderChangeStatus } from "@medusajs/framework/utils"
+} from "@vikrai/framework/types"
+import { ChangeActionType, OrderChangeStatus } from "@vikrai/framework/utils"
 import {
   WorkflowData,
   WorkflowResponse,
@@ -16,7 +16,7 @@ import {
   parallelize,
   transform,
   when,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { useRemoteQueryStep } from "../../../common"
 import {
   updateOrderChangeActionsStep,
@@ -59,8 +59,8 @@ export type UpdateExchangeShippingMethodValidationStepInput = {
  *
  * :::note
  *
- * You can retrieve an order exchange and order change details using [Query](https://docs.medusajs.com/learn/fundamentals/module-links/query),
- * or [useQueryGraphStep](https://docs.medusajs.com/resources/references/medusa-workflows/steps/useQueryGraphStep).
+ * You can retrieve an order exchange and order change details using [Query](https://docs.vikrai.com/learn/fundamentals/module-links/query),
+ * or [useQueryGraphStep](https://docs.vikrai.com/resources/references/vikrai-workflows/steps/useQueryGraphStep).
  *
  * :::
  *
@@ -113,8 +113,8 @@ export const updateExchangeShippingMethodWorkflowId =
   "update-exchange-shipping-method"
 /**
  * This workflow updates an exchange's inbound or outbound shipping method. It's used by the
- * [Update Inbound Shipping Admin API Route](https://docs.medusajs.com/api/admin#exchanges_postexchangesidinboundshippingmethodaction_id)
- * or the [Outbound Inbound Shipping Admin API Route](https://docs.medusajs.com/api/admin#exchanges_postexchangesidoutboundshippingmethodaction_id).
+ * [Update Inbound Shipping Admin API Route](https://docs.vikrai.com/api/admin#exchanges_postexchangesidinboundshippingmethodaction_id)
+ * or the [Outbound Inbound Shipping Admin API Route](https://docs.vikrai.com/api/admin#exchanges_postexchangesidoutboundshippingmethodaction_id).
  *
  * You can use this workflow within your customizations or your own custom workflows, allowing you to update an exchange's
  * inbound or outbound shipping method in your custom flow.
@@ -150,8 +150,8 @@ export const updateExchangeShippingMethodWorkflowId =
  * You can consume the `setPricingContext` hook to add the `location_id` context to the prices calculation:
  * 
  * ```ts
- * import { updateExchangeShippingMethodWorkflow } from "@medusajs/medusa/core-flows";
- * import { StepResponse } from "@medusajs/workflows-sdk";
+ * import { updateExchangeShippingMethodWorkflow } from "@vikrai/vikrai/core-flows";
+ * import { StepResponse } from "@vikrai/workflows-sdk";
  * 
  * updateExchangeShippingMethodWorkflow.hooks.setPricingContext((
  *   { order_exchange, order_change, additional_data }, { container }
@@ -166,7 +166,7 @@ export const updateExchangeShippingMethodWorkflowId =
  * 
  * :::note
  * 
- * Learn more about prices calculation context in the [Prices Calculation](https://docs.medusajs.com/resources/commerce-modules/pricing/price-calculation) documentation.
+ * Learn more about prices calculation context in the [Prices Calculation](https://docs.vikrai.com/resources/commerce-modules/pricing/price-calculation) documentation.
  * 
  * :::
  */
@@ -296,3 +296,4 @@ export const updateExchangeShippingMethodWorkflow = createWorkflow(
     )
   }
 )
+

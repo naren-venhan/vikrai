@@ -1,5 +1,5 @@
-import { OrderChangeActionDTO } from "@medusajs/framework/types"
-import { isDefined } from "@medusajs/framework/utils"
+import { OrderChangeActionDTO } from "@vikrai/framework/types"
+import { isDefined } from "@vikrai/framework/utils"
 
 export function prepareShippingMethod(relatedEntityField?: string) {
   return function (data) {
@@ -71,3 +71,4 @@ export function prepareShippingMethodUpdate({
     shippingMethod,
   }
 }
+

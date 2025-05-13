@@ -17,7 +17,7 @@
     "alwaysStrict": true,
     "skipLibCheck": true,
     "paths": {
-      "@medusajs/ui": ["./src/index.tsx"],
+      "@vikrai/ui": ["./src/index.tsx"],
       "@/components/*": ["./src/components/*"],
       "@/providers/*": ["./src/providers/*"],
       "@/hooks/*": ["./src/hooks/*"],
@@ -29,3 +29,4 @@
   "include": ["src", ".eslintrc.js"],
   "exclude": ["storybook-static", "node_modules", "dist", "build"]
 }
+

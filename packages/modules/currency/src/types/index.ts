@@ -1,6 +1,7 @@
-import { IEventBusModuleService, Logger } from "@medusajs/framework/types"
+import { IEventBusModuleService, Logger } from "@vikrai/framework/types"
 
 export type InitializeModuleInjectableDependencies = {
   logger?: Logger
   EventBus?: IEventBusModuleService
 }
+

@@ -1,4 +1,4 @@
-import { Text } from "@medusajs/ui"
+import { Text } from "@vikrai/ui"
 import { allDocs } from "contentlayer/generated"
 import { notFound } from "next/navigation"
 
@@ -60,7 +60,7 @@ export default async function DocPage(props: DocPageProps) {
   return (
     <div className="flex flex-col">
       <H1>{doc.title}</H1>
-      <Text className="text-medusa-fg-subtle mb-6" size="large">
+      <Text className="text-vikrai-fg-subtle mb-6" size="large">
         {doc.description}
       </Text>
       <div>

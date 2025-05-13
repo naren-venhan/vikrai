@@ -1,4 +1,4 @@
-import { medusaIntegrationTestRunner } from "@medusajs/test-utils"
+import { vikraiIntegrationTestRunner } from "@vikrai/test-utils"
 import {
   createAdminUser,
   adminHeaders,
@@ -6,7 +6,7 @@ import {
 
 jest.setTimeout(30000)
 
-medusaIntegrationTestRunner({
+vikraiIntegrationTestRunner({
   env: {},
   testSuite: ({ dbConnection, getContainer, api }) => {
     let pricePreference1
@@ -219,3 +219,4 @@ medusaIntegrationTestRunner({
     })
   },
 })
+

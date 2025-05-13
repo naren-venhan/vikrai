@@ -1,10 +1,10 @@
 import { isDate } from "./is-date"
-import { MedusaError } from "./errors"
+import { vikraiError } from "./errors"
 
 export const GetIsoStringFromDate = (date: Date | string) => {
   if (!isDate(date)) {
-    throw new MedusaError(
-      MedusaError.Types.INVALID_DATA,
+    throw new vikraiError(
+      vikraiError.Types.INVALID_DATA,
       `Cannot format date to ISO string: ${date}`
     )
   }
@@ -13,3 +13,4 @@ export const GetIsoStringFromDate = (date: Date | string) => {
 
   return date.toISOString()
 }
+

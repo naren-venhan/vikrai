@@ -1,5 +1,6 @@
 ---
-"@medusajs/core-flows": patch
+"@vikrai/core-flows": patch
 ---
 
 fix(core-flows): add missing remove remote links
+

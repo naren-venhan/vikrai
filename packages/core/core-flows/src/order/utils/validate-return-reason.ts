@@ -1,9 +1,9 @@
 import {
   ContainerRegistrationKeys,
-  MedusaError,
+  vikraiError,
   arrayDifference,
   remoteQueryObjectFromString,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 
 export async function validateReturnReasons(
   {
@@ -45,8 +45,8 @@ export async function validateReturnReasons(
   const hasNonExistingReasons = arrayDifference(reasonIds, reasons)
 
   if (hasNonExistingReasons.length) {
-    throw new MedusaError(
-      MedusaError.Types.INVALID_DATA,
+    throw new vikraiError(
+      vikraiError.Types.INVALID_DATA,
       `Return reason with id ${hasNonExistingReasons.join(
         ", "
       )} does not exists.`
@@ -54,11 +54,12 @@ export async function validateReturnReasons(
   }
 
   if (hasInvalidReasons.length) {
-    throw new MedusaError(
-      MedusaError.Types.INVALID_DATA,
+    throw new vikraiError(
+      vikraiError.Types.INVALID_DATA,
       `Cannot apply return reason with id ${hasInvalidReasons.join(
         ", "
       )} to order with id ${orderId}. Return reason has nested reasons.`
     )
   }
 }
+

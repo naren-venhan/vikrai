@@ -1,7 +1,7 @@
 import {
   NESTED_ROUTE_POSITIONS,
   NestedRoutePosition,
-} from "@medusajs/admin-shared"
+} from "@vikrai/admin-shared"
 import fs from "fs/promises"
 import { outdent } from "outdent"
 import {
@@ -250,3 +250,4 @@ function processConfigProperties(
 function generateRouteConfigName(index: number): string {
   return `RouteConfig${index}`
 }
+

@@ -1,4 +1,4 @@
-export type MedusaPricingContext = {
+export type vikraiPricingContext = {
   region_id?: string
   currency_code?: string
   customer_id?: string
@@ -8,3 +8,4 @@ export type MedusaPricingContext = {
     }[]
   }
 }
+

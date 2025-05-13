@@ -1,15 +1,15 @@
-import { ModulesDefinition } from "@medusajs/framework/modules-sdk"
+import { ModulesDefinition } from "@vikrai/framework/modules-sdk"
 import {
   FulfillmentSetDTO,
   IFulfillmentModuleService,
-} from "@medusajs/framework/types"
-import { Module, Modules } from "@medusajs/framework/utils"
+} from "@vikrai/framework/types"
+import { Module, Modules } from "@vikrai/framework/utils"
 import { FulfillmentModuleService, FulfillmentProviderService } from "@services"
 import {
   initModules,
   moduleIntegrationTestRunner,
   SuiteOptions,
-} from "@medusajs/test-utils"
+} from "@vikrai/test-utils"
 import { resolve } from "path"
 import { createFullDataStructure } from "../../__fixtures__"
 import { FulfillmentProviderServiceFixtures } from "../../__fixtures__/providers"
@@ -327,8 +327,8 @@ moduleIntegrationTestRunner({
           },
         }
 
-        const medusaApp = await initModules(moduleOptions)
-        shutdown = medusaApp.shutdown
+        const vikraiApp = await initModules(moduleOptions)
+        shutdown = vikraiApp.shutdown
 
         fulfillmentProviders = await MikroOrmWrapper.forkManager().execute(
           `SELECT * FROM fulfillment_provider`
@@ -395,3 +395,4 @@ moduleIntegrationTestRunner({
       })
     }),
 })
+

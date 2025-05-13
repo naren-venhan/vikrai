@@ -1,11 +1,11 @@
-import { IInventoryService, InventoryTypes } from "@medusajs/framework/types"
+import { IInventoryService, InventoryTypes } from "@vikrai/framework/types"
 import {
   convertItemResponseToUpdateRequest,
   getSelectsAndRelationsFromObjectArray,
-} from "@medusajs/framework/utils"
-import { StepResponse, createStep } from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/utils"
+import { StepResponse, createStep } from "@vikrai/framework/workflows-sdk"
 
-import { Modules } from "@medusajs/framework/utils"
+import { Modules } from "@vikrai/framework/utils"
 
 /**
  * The data to update reservation items.
@@ -64,3 +64,4 @@ export const updateReservationsStep = createStep(
     )
   }
 )
+

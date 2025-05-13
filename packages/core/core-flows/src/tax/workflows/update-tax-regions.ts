@@ -1,9 +1,9 @@
-import { TaxRegionDTO, UpdateTaxRegionDTO } from "@medusajs/framework/types"
+import { TaxRegionDTO, UpdateTaxRegionDTO } from "@vikrai/framework/types"
 import {
   WorkflowData,
   WorkflowResponse,
   createWorkflow,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { updateTaxRegionsStep } from "../steps/update-tax-regions"
 
 /**
@@ -19,7 +19,7 @@ export type UpdateTaxRegionsWorkflowOutput = TaxRegionDTO[]
 export const updateTaxRegionsWorkflowId = "update-tax-regions"
 /**
  * This workflow updates one or more tax regions. It's used by the
- * [Update Tax Regions Admin API Route](https://docs.medusajs.com/api/admin#tax-regions_posttaxregionsid).
+ * [Update Tax Regions Admin API Route](https://docs.vikrai.com/api/admin#tax-regions_posttaxregionsid).
  *
  * You can use this workflow within your own customizations or custom workflows, allowing you
  * to update tax regions in your custom flows.
@@ -47,3 +47,4 @@ export const updateTaxRegionsWorkflow = createWorkflow(
     return new WorkflowResponse(updateTaxRegionsStep(input))
   }
 )
+

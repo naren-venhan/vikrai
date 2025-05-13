@@ -1,6 +1,6 @@
-import { ILockingModule } from "@medusajs/framework/types"
-import { Modules, promiseAll } from "@medusajs/framework/utils"
-import { moduleIntegrationTestRunner } from "@medusajs/test-utils"
+import { ILockingModule } from "@vikrai/framework/types"
+import { Modules, promiseAll } from "@vikrai/framework/utils"
+import { moduleIntegrationTestRunner } from "@vikrai/test-utils"
 import { setTimeout } from "node:timers/promises"
 
 jest.setTimeout(5000)
@@ -218,3 +218,4 @@ moduleIntegrationTestRunner<ILockingModule>({
     })
   },
 })
+

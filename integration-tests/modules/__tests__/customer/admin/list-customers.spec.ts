@@ -1,18 +1,18 @@
-import { Modules } from "@medusajs/utils"
+import { Modules } from "@vikrai/utils"
 import {
   adminHeaders,
   createAdminUser,
 } from "../../../../helpers/create-admin-user"
 
-import { ICustomerModuleService } from "@medusajs/types"
+import { ICustomerModuleService } from "@vikrai/types"
 
-const { medusaIntegrationTestRunner } = require("@medusajs/test-utils")
+const { vikraiIntegrationTestRunner } = require("@vikrai/test-utils")
 
 jest.setTimeout(50000)
 
-medusaIntegrationTestRunner({
+vikraiIntegrationTestRunner({
   env: {
-    MEDUSA_FF_MEDUSA_V2: true,
+    vikrai_FF_vikrai_V2: true,
   },
   testSuite: ({ dbConnection, getContainer, api }) => {
     describe("GET /admin/customers", () => {
@@ -179,3 +179,4 @@ medusaIntegrationTestRunner({
     })
   },
 })
+

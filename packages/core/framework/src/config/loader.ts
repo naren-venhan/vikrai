@@ -1,5 +1,5 @@
 import { ConfigModule } from "./types"
-import { ContainerRegistrationKeys, getConfigFile } from "@medusajs/utils"
+import { ContainerRegistrationKeys, getConfigFile } from "@vikrai/utils"
 import { logger } from "../logger"
 import { ConfigManager } from "./config"
 import { container } from "../container"
@@ -44,3 +44,4 @@ export async function configLoader(
     baseDir: entryDirectory,
   })
 }
+

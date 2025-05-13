@@ -1,11 +1,11 @@
-import { Badge } from "@medusajs/ui"
+import { Badge } from "@vikrai/ui"
 import { ColumnDef, createColumnHelper } from "@tanstack/react-table"
 import { useMemo } from "react"
 import { useTranslation } from "react-i18next"
 import { StatusCell } from "../../../../../components/table/table-cells/common/status-cell"
 import { TransactionStepState } from "../../../types"
 import { getTransactionState, getTransactionStateColor } from "../../../utils"
-import { HttpTypes } from "@medusajs/types"
+import { HttpTypes } from "@vikrai/types"
 
 const columnHelper =
   createColumnHelper<
@@ -70,3 +70,4 @@ export const useWorkflowExecutionTableColumns = (): ColumnDef<
 }
 
 const ROOT_PREFIX = "_root"
+

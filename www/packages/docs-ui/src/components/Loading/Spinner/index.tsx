@@ -1,7 +1,7 @@
 import React from "react"
 import clsx from "clsx"
-import { Spinner } from "@medusajs/icons"
-import { IconProps } from "@medusajs/icons/dist/types"
+import { Spinner } from "@vikrai/icons"
+import { IconProps } from "@vikrai/icons/dist/types"
 
 export type SpinnerLoadingProps = {
   iconProps?: IconProps
@@ -17,3 +17,4 @@ export const SpinnerLoading = ({ iconProps }: SpinnerLoadingProps) => {
     </span>
   )
 }
+

@@ -1,9 +1,9 @@
-import { medusaIntegrationTestRunner } from "@medusajs/test-utils"
+import { vikraiIntegrationTestRunner } from "@vikrai/test-utils"
 import {
   ContainerRegistrationKeys,
   Modules,
   RuleOperator,
-} from "@medusajs/utils"
+} from "@vikrai/utils"
 import {
   adminHeaders,
   createAdminUser,
@@ -12,7 +12,7 @@ import { setupTaxStructure } from "../../../modules/__tests__/fixtures/tax"
 
 jest.setTimeout(300000)
 
-medusaIntegrationTestRunner({
+vikraiIntegrationTestRunner({
   testSuite: ({ dbConnection, getContainer, api }) => {
     let order, order2
     let returnShippingOption
@@ -775,3 +775,4 @@ medusaIntegrationTestRunner({
     })
   },
 })
+

@@ -2,9 +2,9 @@ import {
   BigNumberInput,
   IPaymentModuleService,
   PaymentProviderContext,
-} from "@medusajs/framework/types"
-import { Modules } from "@medusajs/framework/utils"
-import { StepResponse, createStep } from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/types"
+import { Modules } from "@vikrai/framework/utils"
+import { StepResponse, createStep } from "@vikrai/framework/workflows-sdk"
 
 /**
  * The data to create a payment session.
@@ -35,7 +35,7 @@ export interface CreatePaymentSessionStepInput {
   context?: PaymentProviderContext
   /**
    * Custom data relevant for the payment provider to process the payment session.
-   * Learn more in [this documentation](https://docs.medusajs.com/resources/commerce-modules/payment/payment-session#data-property).
+   * Learn more in [this documentation](https://docs.vikrai.com/resources/commerce-modules/payment/payment-session#data-property).
    */
   data?: Record<string, unknown>
 }
@@ -72,3 +72,4 @@ export const createPaymentSessionStep = createStep(
     await service.deletePaymentSession(createdSession)
   }
 )
+

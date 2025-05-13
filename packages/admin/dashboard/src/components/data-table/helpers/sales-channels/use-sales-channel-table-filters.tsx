@@ -1,5 +1,5 @@
-import { HttpTypes } from "@medusajs/types"
-import { createDataTableFilterHelper } from "@medusajs/ui"
+import { HttpTypes } from "@vikrai/types"
+import { createDataTableFilterHelper } from "@vikrai/ui"
 import { useMemo } from "react"
 import { useTranslation } from "react-i18next"
 import { useDataTableDateFilters } from "../general/use-data-table-date-filters"
@@ -31,3 +31,4 @@ export const useSalesChannelTableFilters = () => {
     [dateFilters, t]
   )
 }
+

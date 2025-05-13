@@ -1,15 +1,15 @@
 import {
   ISalesChannelModuleService,
   IStockLocationService,
-} from "@medusajs/types"
-import { Modules, remoteQueryObjectFromString } from "@medusajs/utils"
-import { medusaIntegrationTestRunner } from "@medusajs/test-utils"
+} from "@vikrai/types"
+import { Modules, remoteQueryObjectFromString } from "@vikrai/utils"
+import { vikraiIntegrationTestRunner } from "@vikrai/test-utils"
 
 jest.setTimeout(50000)
 
-const env = { MEDUSA_FF_MEDUSA_V2: true }
+const env = { vikrai_FF_vikrai_V2: true }
 
-medusaIntegrationTestRunner({
+vikraiIntegrationTestRunner({
   env,
   testSuite: ({ getContainer }) => {
     describe("Cart links", () => {
@@ -113,3 +113,4 @@ medusaIntegrationTestRunner({
     })
   },
 })
+

@@ -1,19 +1,19 @@
-import { MedusaModule } from "@medusajs/framework/modules-sdk"
+import { vikraiModule } from "@vikrai/framework/modules-sdk"
 import {
   ExternalModuleDeclaration,
   ICacheService,
   InternalModuleDeclaration,
-} from "@medusajs/framework/types"
-import { Modules } from "@medusajs/framework/utils"
+} from "@vikrai/framework/types"
+import { Modules } from "@vikrai/framework/utils"
 import { InMemoryCacheModuleOptions } from "../types"
 
 export const initialize = async (
   options?: InMemoryCacheModuleOptions | ExternalModuleDeclaration
 ): Promise<ICacheService> => {
   const serviceKey = Modules.CACHE
-  const loaded = await MedusaModule.bootstrap<ICacheService>({
+  const loaded = await vikraiModule.bootstrap<ICacheService>({
     moduleKey: serviceKey,
-    defaultPath: "@medusajs//cache-inmemory",
+    defaultPath: "@vikrai//cache-inmemory",
     declaration: options as
       | InternalModuleDeclaration
       | ExternalModuleDeclaration,
@@ -21,3 +21,4 @@ export const initialize = async (
 
   return loaded[serviceKey]
 }
+

@@ -1,5 +1,5 @@
-import { MedusaContainer } from "@medusajs/types"
-import { dynamicImport, Modules } from "@medusajs/utils"
+import { vikraiContainer } from "@vikrai/types"
+import { dynamicImport, Modules } from "@vikrai/utils"
 import { basename } from "path"
 import { logger } from "../logger"
 import { Migrator } from "./migrator"
@@ -7,7 +7,7 @@ import { Migrator } from "./migrator"
 export class MigrationScriptsMigrator extends Migrator {
   protected migration_table_name = "script_migrations"
 
-  constructor({ container }: { container: MedusaContainer }) {
+  constructor({ container }: { container: vikraiContainer }) {
     super({ container })
   }
 
@@ -111,3 +111,4 @@ export class MigrationScriptsMigrator extends Migrator {
     )
   }
 }
+

@@ -5,12 +5,12 @@ import {
   AuthIdentityProviderService,
   EmailPassAuthProviderOptions,
   Logger,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import {
   AbstractAuthModuleProvider,
   isString,
-  MedusaError,
-} from "@medusajs/framework/utils"
+  vikraiError,
+} from "@vikrai/framework/utils"
 import Scrypt from "scrypt-kdf"
 
 type InjectedDependencies = {
@@ -125,7 +125,7 @@ export class EmailPassAuthService extends AbstractAuthModuleProvider {
         entity_id: email,
       })
     } catch (error) {
-      if (error.type === MedusaError.Types.NOT_FOUND) {
+      if (error.type === vikraiError.Types.NOT_FOUND) {
         return {
           success: false,
           error: "Invalid email or password",
@@ -194,7 +194,7 @@ export class EmailPassAuthService extends AbstractAuthModuleProvider {
         error: "Identity with email already exists",
       }
     } catch (error) {
-      if (error.type === MedusaError.Types.NOT_FOUND) {
+      if (error.type === vikraiError.Types.NOT_FOUND) {
         const createdAuthIdentity = await this.createAuthIdentity({
           email,
           password,
@@ -211,3 +211,4 @@ export class EmailPassAuthService extends AbstractAuthModuleProvider {
     }
   }
 }
+

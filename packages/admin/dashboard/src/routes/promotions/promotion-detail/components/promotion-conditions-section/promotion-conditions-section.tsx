@@ -1,6 +1,6 @@
-import { PencilSquare } from "@medusajs/icons"
-import { HttpTypes, PromotionRuleTypes } from "@medusajs/types"
-import { Badge, Container, Heading } from "@medusajs/ui"
+import { PencilSquare } from "@vikrai/icons"
+import { HttpTypes, PromotionRuleTypes } from "@vikrai/types"
+import { Badge, Container, Heading } from "@vikrai/ui"
 import { useTranslation } from "react-i18next"
 
 import { ActionMenu } from "../../../../../components/common/action-menu"
@@ -97,3 +97,4 @@ export const PromotionConditionsSection = ({
     </Container>
   )
 }
+

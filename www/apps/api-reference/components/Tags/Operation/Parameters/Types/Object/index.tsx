@@ -104,7 +104,7 @@ const TagOperationParametersObject = ({
       <>
         {sortedProperties.map((property, index) => (
           <Fragment key={index}>
-            {index !== 0 && <hr className="bg-medusa-border-base my-0" />}
+            {index !== 0 && <hr className="bg-vikrai-border-base my-0" />}
             <TagOperationParameters
               schemaObject={{
                 ...properties[property],
@@ -152,3 +152,4 @@ const TagOperationParametersObject = ({
 }
 
 export default TagOperationParametersObject
+

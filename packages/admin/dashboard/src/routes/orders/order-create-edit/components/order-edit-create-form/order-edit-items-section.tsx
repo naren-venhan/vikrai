@@ -1,5 +1,5 @@
-import { AdminOrder, AdminOrderPreview } from "@medusajs/types"
-import { Button, Heading, Input, toast } from "@medusajs/ui"
+import { AdminOrder, AdminOrderPreview } from "@vikrai/types"
+import { Button, Heading, Input, toast } from "@vikrai/ui"
 import { useMemo, useState } from "react"
 import { useTranslation } from "react-i18next"
 import {
@@ -143,3 +143,4 @@ export const OrderEditItemsSection = ({
     </div>
   )
 }
+

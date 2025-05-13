@@ -2,9 +2,9 @@ import {
   ISalesChannelModuleService,
   IStoreModuleService,
   SalesChannelDTO,
-} from "@medusajs/framework/types"
-import { MedusaError, Modules, isDefined } from "@medusajs/framework/utils"
-import { StepResponse, createStep } from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/types"
+import { vikraiError, Modules, isDefined } from "@vikrai/framework/utils"
+import { StepResponse, createStep } from "@vikrai/framework/workflows-sdk"
 
 /**
  * The details of the sales channel to find.
@@ -53,8 +53,8 @@ export const findSalesChannelStep = createStep(
     }
 
     if (salesChannel?.is_disabled) {
-      throw new MedusaError(
-        MedusaError.Types.INVALID_DATA,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_DATA,
         `Unable to assign cart to disabled Sales Channel: ${salesChannel.name}`
       )
     }
@@ -62,3 +62,4 @@ export const findSalesChannelStep = createStep(
     return new StepResponse(salesChannel)
   }
 )
+

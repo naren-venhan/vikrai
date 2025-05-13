@@ -4,15 +4,15 @@ import {
   OrderChangeDTO,
   OrderDTO,
   OrderPreviewDTO,
-} from "@medusajs/framework/types"
-import { ChangeActionType, OrderChangeStatus } from "@medusajs/framework/utils"
+} from "@vikrai/framework/types"
+import { ChangeActionType, OrderChangeStatus } from "@vikrai/framework/utils"
 import {
   WorkflowResponse,
   createHook,
   createStep,
   createWorkflow,
   transform,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { useRemoteQueryStep } from "../../../common"
 import { previewOrderChangeStep } from "../../steps"
 import { createOrderShippingMethods } from "../../steps/create-order-shipping-methods"
@@ -45,8 +45,8 @@ export type CreateOrderEditShippingMethodValidationStepInput = {
  *
  * :::note
  *
- * You can retrieve an order and order change details using [Query](https://docs.medusajs.com/learn/fundamentals/module-links/query),
- * or [useQueryGraphStep](https://docs.medusajs.com/resources/references/medusa-workflows/steps/useQueryGraphStep).
+ * You can retrieve an order and order change details using [Query](https://docs.vikrai.com/learn/fundamentals/module-links/query),
+ * or [useQueryGraphStep](https://docs.vikrai.com/resources/references/vikrai-workflows/steps/useQueryGraphStep).
  *
  * :::
  *
@@ -96,7 +96,7 @@ export const createOrderEditShippingMethodWorkflowId =
   "create-order-edit-shipping-method"
 /**
  * This workflow creates a shipping method for an order edit. It's used by the
- * [Add Shipping Method API Route](https://docs.medusajs.com/api/admin#order-edits_postordereditsidshippingmethod).
+ * [Add Shipping Method API Route](https://docs.vikrai.com/api/admin#order-edits_postordereditsidshippingmethod).
  *
  * You can use this workflow within your customizations or your own custom workflows, allowing you to create a shipping method
  * for an order edit in your in your own custom flows.
@@ -129,8 +129,8 @@ export const createOrderEditShippingMethodWorkflowId =
  * You can consume the `setPricingContext` hook to add the `location_id` context to the prices calculation:
  * 
  * ```ts
- * import { createOrderEditShippingMethodWorkflow } from "@medusajs/medusa/core-flows";
- * import { StepResponse } from "@medusajs/workflows-sdk";
+ * import { createOrderEditShippingMethodWorkflow } from "@vikrai/vikrai/core-flows";
+ * import { StepResponse } from "@vikrai/workflows-sdk";
  * 
  * createOrderEditShippingMethodWorkflow.hooks.setPricingContext((
  *   { order, shipping_option_id, additional_data }, { container }
@@ -145,7 +145,7 @@ export const createOrderEditShippingMethodWorkflowId =
  * 
  * :::note
  * 
- * Learn more about prices calculation context in the [Prices Calculation](https://docs.medusajs.com/resources/commerce-modules/pricing/price-calculation) documentation.
+ * Learn more about prices calculation context in the [Prices Calculation](https://docs.vikrai.com/resources/commerce-modules/pricing/price-calculation) documentation.
  * 
  * :::
  */
@@ -282,3 +282,4 @@ export const createOrderEditShippingMethodWorkflow = createWorkflow(
     )
   }
 )
+

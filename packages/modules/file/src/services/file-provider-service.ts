@@ -1,6 +1,6 @@
 import type { Readable } from "stream"
-import { Constructor, FileTypes } from "@medusajs/framework/types"
-import { MedusaError } from "@medusajs/framework/utils"
+import { Constructor, FileTypes } from "@vikrai/framework/types"
+import { vikraiError } from "@vikrai/framework/utils"
 import { FileProviderRegistrationPrefix } from "@types"
 
 type InjectedDependencies = {
@@ -18,8 +18,8 @@ export default class FileProviderService {
     )
 
     if (fileProviderKeys.length !== 1) {
-      throw new MedusaError(
-        MedusaError.Types.INVALID_DATA,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_DATA,
         `File module should be initialized with exactly one provider`
       )
     }
@@ -54,15 +54,15 @@ export default class FileProviderService {
     fileData: FileTypes.ProviderGetPresignedUploadUrlDTO
   ): Promise<FileTypes.ProviderFileResultDTO> {
     if (!this.fileProvider_.getPresignedUploadUrl) {
-      throw new MedusaError(
-        MedusaError.Types.INVALID_DATA,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_DATA,
         "Provider does not support presigned upload URLs"
       )
     }
 
     if (!fileData.filename) {
-      throw new MedusaError(
-        MedusaError.Types.INVALID_DATA,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_DATA,
         "File name is required to get a presigned upload URL"
       )
     }
@@ -78,3 +78,4 @@ export default class FileProviderService {
     return this.fileProvider_.getAsBuffer(fileData)
   }
 }
+

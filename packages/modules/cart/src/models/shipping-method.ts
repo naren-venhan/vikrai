@@ -1,4 +1,4 @@
-import { model } from "@medusajs/framework/utils"
+import { model } from "@vikrai/framework/utils"
 import Cart from "./cart"
 import ShippingMethodAdjustment from "./shipping-method-adjustment"
 import ShippingMethodTaxLine from "./shipping-method-tax-line"
@@ -44,3 +44,4 @@ const ShippingMethod = model
   .checks([(columns) => `${columns.amount} >= 0`])
 
 export default ShippingMethod
+

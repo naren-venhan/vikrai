@@ -1,14 +1,14 @@
 import {
   Constructor,
   LoaderOptions,
-  MedusaContainer,
+  vikraiContainer,
   ModuleServiceInitializeCustomDataLayerOptions,
   ModuleServiceInitializeOptions,
   RepositoryService,
-} from "@medusajs/types"
+} from "@vikrai/types"
 
 import { asClass } from "awilix"
-import { MedusaInternalService } from "../medusa-internal-service"
+import { vikraiInternalService } from "../vikrai-internal-service"
 import { lowerCaseFirst } from "../../common"
 import {
   MikroOrmBaseRepository,
@@ -19,13 +19,13 @@ type RepositoryLoaderOptions = {
   moduleModels: Record<string, any>
   moduleRepositories?: Record<string, any>
   customRepositories: Record<string, any>
-  container: MedusaContainer
+  container: vikraiContainer
 }
 
 type ServiceLoaderOptions = {
   moduleModels: Record<string, any>
   moduleServices: Record<string, any>
-  container: MedusaContainer
+  container: vikraiContainer
 }
 
 /**
@@ -100,7 +100,7 @@ export function loadModuleServices({
     const finalService = moduleServicesMap.get(mappedServiceName)
 
     if (!finalService) {
-      moduleServicesMap.set(mappedServiceName, MedusaInternalService(Model))
+      moduleServicesMap.set(mappedServiceName, vikraiInternalService(Model))
     }
   })
 
@@ -176,3 +176,4 @@ export function loadModuleRepositories({
     })
   })
 }
+

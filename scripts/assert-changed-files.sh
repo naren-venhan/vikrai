@@ -5,8 +5,8 @@ GREP_PATTERN=$1
 
 if [ "$IS_CI" = true ]; then
   git config --local url."https://github.com/".insteadOf git@github.com:
-  git config --local user.name "Medusajs Bot"
-  git config --local user.email "core@medusa-commerce.com"
+  git config --local user.name "vikrai Bot"
+  git config --local user.email "core@vikrai-commerce.com"
 
   git fetch origin
   git merge --no-edit origin/master
@@ -34,3 +34,4 @@ if [ "$FILES_COUNT" -eq 0 ]; then
 else
   echo "$FILES_COUNT file(s) matching '$GREP_PATTERN'; continuing."
 fi
+

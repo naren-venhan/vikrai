@@ -5,11 +5,11 @@ post:
   description: >-
     Reset a customer's password using a reset-password token generated with the
     [Generate Reset Password Token API
-    route](https://docs.medusajs.com/api/store#auth_postactor_typeauth_providerresetpassword).
+    route](https://docs.vikrai.com/api/store#auth_postactor_typeauth_providerresetpassword).
     You pass the token as a bearer token in the request's Authorization header.
   externalDocs:
     url: >-
-      https://docs.medusajs.com/v2/resources/storefront-development/customers/reset-password#2-reset-password-page
+      https://docs.vikrai.com/v2/resources/storefront-development/customers/reset-password#2-reset-password-page
     description: 'Storefront development: How to create the reset password page.'
   x-authenticated: true
   parameters:
@@ -74,3 +74,4 @@ post:
       $ref: ../components/responses/invalid_request_error.yaml
     '500':
       $ref: ../components/responses/500_error.yaml
+

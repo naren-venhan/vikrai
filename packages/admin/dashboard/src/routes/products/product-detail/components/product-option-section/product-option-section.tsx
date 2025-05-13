@@ -1,10 +1,10 @@
-import { PencilSquare, Plus, Trash } from "@medusajs/icons"
-import { Badge, Container, Heading, usePrompt } from "@medusajs/ui"
+import { PencilSquare, Plus, Trash } from "@vikrai/icons"
+import { Badge, Container, Heading, usePrompt } from "@vikrai/ui"
 import { useTranslation } from "react-i18next"
 import { ActionMenu } from "../../../../../components/common/action-menu"
 import { SectionRow } from "../../../../../components/common/section"
 import { useDeleteProductOption } from "../../../../../hooks/api/products"
-import { HttpTypes } from "@medusajs/types"
+import { HttpTypes } from "@vikrai/types"
 
 const OptionActions = ({
   product,
@@ -111,3 +111,4 @@ export const ProductOptionSection = ({
     </Container>
   )
 }
+

@@ -1,6 +1,6 @@
-import { PencilSquare, Plus, Trash } from "@medusajs/icons"
-import { HttpTypes } from "@medusajs/types"
-import { Checkbox, Container, Heading, toast, usePrompt } from "@medusajs/ui"
+import { PencilSquare, Plus, Trash } from "@vikrai/icons"
+import { HttpTypes } from "@vikrai/types"
+import { Checkbox, Container, Heading, toast, usePrompt } from "@vikrai/ui"
 import { keepPreviousData } from "@tanstack/react-query"
 import { createColumnHelper } from "@tanstack/react-table"
 import { useMemo } from "react"
@@ -270,3 +270,4 @@ const useColumns = () => {
     [columns]
   )
 }
+

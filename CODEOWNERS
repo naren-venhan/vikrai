@@ -1,10 +1,10 @@
 # All files not owned by other teams must be reviewed by the core team
-*                                               @medusajs/core 
-package.json                                    @medusajs/engineering
-yarn.lock                                       @medusajs/engineering
-/.changeset/                                    @medusajs/engineering
-/packages/                                      @medusajs/engineering
-/integration-tests/                             @medusajs/engineering
-/docs-util/                                     @medusajs/docs
-/www/                                           @medusajs/docs
-/packages/design-system/                        @medusajs/ui
+*                                               @vikrai/core
+package.json                                    @vikrai/engineering
+yarn.lock                                       @vikrai/engineering
+/.changeset/                                    @vikrai/engineering
+/packages/                                      @vikrai/engineering
+/integration-tests/                             @vikrai/engineering
+/docs-util/                                     @vikrai/docs
+/www/                                           @vikrai/docs
+/packages/design-system/                        @vikrai/ui

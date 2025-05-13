@@ -1,11 +1,11 @@
 {
-  "name": "@medusajs/ui",
+  "name": "@vikrai/ui",
   "version": "4.0.9",
-  "author": "Kasper Kristensen <kasper@medusajs.com>",
+  "author": "Kasper Kristensen <kasper@vikrai.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/medusajs/medusa.git",
+    "url": "https://github.com/vikrai/vikrai.git",
     "directory": "packages/design-system/ui"
   },
   "main": "./dist/cjs/index.js",
@@ -43,7 +43,7 @@
   },
   "devDependencies": {
     "@faker-js/faker": "^9.2.0",
-    "@medusajs/ui-preset": "2.7.1",
+    "@vikrai/ui-preset": "2.7.1",
     "@storybook/addon-essentials": "^8.3.5",
     "@storybook/addon-interactions": "^8.3.5",
     "@storybook/addon-links": "^8.3.5",
@@ -81,7 +81,7 @@
     "vitest": "^3.0.5"
   },
   "dependencies": {
-    "@medusajs/icons": "2.7.1",
+    "@vikrai/icons": "2.7.1",
     "@tanstack/react-table": "8.20.5",
     "clsx": "^1.2.1",
     "copy-to-clipboard": "^3.3.3",
@@ -113,3 +113,4 @@
     "access": "public"
   }
 }
+

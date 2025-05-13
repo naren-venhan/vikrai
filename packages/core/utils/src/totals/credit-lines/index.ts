@@ -1,4 +1,4 @@
-import { BigNumberInput } from "@medusajs/types"
+import { BigNumberInput } from "@vikrai/types"
 import { isDefined } from "../../common"
 import { BigNumber } from "../big-number"
 import { MathBN } from "../math"
@@ -52,3 +52,4 @@ export function calculateCreditLinesTotal({
     creditLinesTaxTotal,
   }
 }
+

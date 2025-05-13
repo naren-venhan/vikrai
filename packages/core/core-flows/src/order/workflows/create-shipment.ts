@@ -7,8 +7,8 @@ import {
   OrderLineItemDTO,
   OrderWorkflow,
   ProductVariantDTO,
-} from "@medusajs/framework/types"
-import { FulfillmentWorkflowEvents, MathBN, Modules } from "@medusajs/framework/utils"
+} from "@vikrai/framework/types"
+import { FulfillmentWorkflowEvents, MathBN, Modules } from "@vikrai/framework/utils"
 import {
   WorkflowData,
   WorkflowResponse,
@@ -17,7 +17,7 @@ import {
   createWorkflow,
   parallelize,
   transform,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { emitEventStep, useRemoteQueryStep } from "../../common"
 import { createShipmentWorkflow } from "../../fulfillment"
 import { registerOrderShipmentStep } from "../steps"
@@ -55,8 +55,8 @@ export type CreateShipmentValidateOrderStepInput = {
  *
  * :::note
  *
- * You can retrieve an order's details using [Query](https://docs.medusajs.com/learn/fundamentals/module-links/query),
- * or [useQueryGraphStep](https://docs.medusajs.com/resources/references/medusa-workflows/steps/useQueryGraphStep).
+ * You can retrieve an order's details using [Query](https://docs.vikrai.com/learn/fundamentals/module-links/query),
+ * or [useQueryGraphStep](https://docs.vikrai.com/resources/references/vikrai-workflows/steps/useQueryGraphStep).
  *
  * :::
  *
@@ -164,7 +164,7 @@ export type CreateOrderShipmentWorkflowInput =
 
 export const createOrderShipmentWorkflowId = "create-order-shipment"
 /**
- * This workflow creates a shipment for an order. It's used by the [Create Order Shipment Admin API Route](https://docs.medusajs.com/api/admin#orders_postordersidfulfillmentsfulfillment_idshipments).
+ * This workflow creates a shipment for an order. It's used by the [Create Order Shipment Admin API Route](https://docs.vikrai.com/api/admin#orders_postordersidfulfillmentsfulfillment_idshipments).
  *
  * This workflow has a hook that allows you to perform custom actions on the created shipment. For example, you can pass under `additional_data` custom data that
  * allows you to create custom data models linked to the shipment.
@@ -257,3 +257,4 @@ export const createOrderShipmentWorkflow = createWorkflow(
     })
   }
 )
+

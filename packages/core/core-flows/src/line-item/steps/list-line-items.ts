@@ -3,9 +3,9 @@ import {
   FilterableLineItemProps,
   FindConfig,
   ICartModuleService,
-} from "@medusajs/framework/types"
-import { Modules } from "@medusajs/framework/utils"
-import { StepResponse, createStep } from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/types"
+import { Modules } from "@vikrai/framework/utils"
+import { StepResponse, createStep } from "@vikrai/framework/workflows-sdk"
 
 /**
  * The data to list line items.
@@ -19,7 +19,7 @@ export interface ListLineItemsStepInput {
    * Configurations to select the line items' fields
    * and relations, and to paginate the results.
    * 
-   * Learn more in the [service factory reference](https://docs.medusajs.com/resources/service-factory-reference/methods/list).
+   * Learn more in the [service factory reference](https://docs.vikrai.com/resources/service-factory-reference/methods/list).
    */
   config?: FindConfig<CartLineItemDTO>
 }
@@ -58,7 +58,7 @@ export const listLineItemsStepId = "list-line-items"
  * })
  * ```
  * 
- * Learn more about listing items in [this service factory reference](https://docs.medusajs.com/resources/service-factory-reference/methods/list).
+ * Learn more about listing items in [this service factory reference](https://docs.vikrai.com/resources/service-factory-reference/methods/list).
  */
 export const listLineItemsStep = createStep(
   listLineItemsStepId,
@@ -70,3 +70,4 @@ export const listLineItemsStep = createStep(
     return new StepResponse(items)
   }
 )
+

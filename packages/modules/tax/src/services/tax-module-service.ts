@@ -8,25 +8,25 @@ import {
   ModulesSdkTypes,
   TaxRegionDTO,
   TaxTypes,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import {
   InjectManager,
   InjectTransactionManager,
   isDefined,
   isString,
-  MedusaContext,
-  MedusaError,
+  vikraiContext,
+  vikraiError,
   ModulesSdkUtils,
   promiseAll,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 import { TaxProvider, TaxRate, TaxRateRule, TaxRegion } from "@models"
 import { TaxProviderService } from "@services"
 
 type InjectedDependencies = {
   baseRepository: DAL.RepositoryService
-  taxRateService: ModulesSdkTypes.IMedusaInternalService<any>
-  taxRegionService: ModulesSdkTypes.IMedusaInternalService<any>
-  taxRateRuleService: ModulesSdkTypes.IMedusaInternalService<any>
+  taxRateService: ModulesSdkTypes.IvikraiInternalService<any>
+  taxRegionService: ModulesSdkTypes.IvikraiInternalService<any>
+  taxRateRuleService: ModulesSdkTypes.IvikraiInternalService<any>
   taxProviderService: TaxProviderService
   [key: `tp_${string}`]: ITaxProvider
 }
@@ -39,7 +39,7 @@ type ItemWithRates = {
 }
 
 export default class TaxModuleService
-  extends ModulesSdkUtils.MedusaService<{
+  extends ModulesSdkUtils.vikraiService<{
     TaxRate: { dto: TaxTypes.TaxRateDTO }
     TaxRegion: { dto: TaxTypes.TaxRegionDTO }
     TaxRateRule: { dto: TaxTypes.TaxRateRuleDTO }
@@ -49,13 +49,13 @@ export default class TaxModuleService
 {
   protected readonly container_: InjectedDependencies
   protected baseRepository_: DAL.RepositoryService
-  protected taxRateService_: ModulesSdkTypes.IMedusaInternalService<
+  protected taxRateService_: ModulesSdkTypes.IvikraiInternalService<
     InferEntityType<typeof TaxRate>
   >
-  protected taxRegionService_: ModulesSdkTypes.IMedusaInternalService<
+  protected taxRegionService_: ModulesSdkTypes.IvikraiInternalService<
     InferEntityType<typeof TaxRegion>
   >
-  protected taxRateRuleService_: ModulesSdkTypes.IMedusaInternalService<
+  protected taxRateRuleService_: ModulesSdkTypes.IvikraiInternalService<
     InferEntityType<typeof TaxRateRule>
   >
   protected taxProviderService_: TaxProviderService
@@ -97,7 +97,7 @@ export default class TaxModuleService
   // @ts-expect-error
   async createTaxRates(
     data: TaxTypes.CreateTaxRateDTO[] | TaxTypes.CreateTaxRateDTO,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<TaxTypes.TaxRateDTO[] | TaxTypes.TaxRateDTO> {
     const input = Array.isArray(data) ? data : [data]
     const rates = await this.createTaxRates_(input, sharedContext)
@@ -107,7 +107,7 @@ export default class TaxModuleService
   @InjectTransactionManager()
   protected async createTaxRates_(
     data: TaxTypes.CreateTaxRateDTO[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ) {
     const [rules, rateData] = data.reduce(
       (acc, region) => {
@@ -174,7 +174,7 @@ export default class TaxModuleService
   async updateTaxRates(
     selector: string | string[] | TaxTypes.FilterableTaxRateProps,
     data: TaxTypes.UpdateTaxRateDTO,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<TaxTypes.TaxRateDTO | TaxTypes.TaxRateDTO[]> {
     const rates = await this.updateTaxRates_(selector, data, sharedContext)
     const serialized = await this.baseRepository_.serialize<
@@ -187,7 +187,7 @@ export default class TaxModuleService
   protected async updateTaxRates_(
     idOrSelector: string | string[] | TaxTypes.FilterableTaxRateProps,
     data: TaxTypes.UpdateTaxRateDTO,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ) {
     const selector =
       Array.isArray(idOrSelector) || isString(idOrSelector)
@@ -285,7 +285,7 @@ export default class TaxModuleService
   @InjectTransactionManager()
   async upsertTaxRates(
     data: TaxTypes.UpsertTaxRateDTO | TaxTypes.UpsertTaxRateDTO[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<TaxTypes.TaxRateDTO | TaxTypes.TaxRateDTO[]> {
     const result = await this.taxRateService_.upsert(data, sharedContext)
     const serialized = await this.baseRepository_.serialize<
@@ -310,7 +310,7 @@ export default class TaxModuleService
   // @ts-expect-error
   async createTaxRegions(
     data: TaxTypes.CreateTaxRegionDTO | TaxTypes.CreateTaxRegionDTO[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ) {
     const input = Array.isArray(data) ? data : [data]
     const result = await this.createTaxRegions_(input, sharedContext)
@@ -368,7 +368,7 @@ export default class TaxModuleService
   // @ts-expect-error
   async createTaxRateRules(
     data: TaxTypes.CreateTaxRateRuleDTO | TaxTypes.CreateTaxRateRuleDTO[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ) {
     const input = Array.isArray(data) ? data : [data]
     const result = await this.createTaxRateRules_(input, sharedContext)
@@ -378,7 +378,7 @@ export default class TaxModuleService
   @InjectTransactionManager()
   async createTaxRateRules_(
     data: TaxTypes.CreateTaxRateRuleDTO[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ) {
     const rules = await this.taxRateRuleService_.create(data, sharedContext)
     return await this.baseRepository_.serialize<TaxTypes.TaxRateRuleDTO[]>(
@@ -393,7 +393,7 @@ export default class TaxModuleService
   async getTaxLines(
     items: (TaxTypes.TaxableItemDTO | TaxTypes.TaxableShippingDTO)[],
     calculationContext: TaxTypes.TaxCalculationContext,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<(TaxTypes.ItemTaxLineDTO | TaxTypes.ShippingTaxLineDTO)[]> {
     const normalizedContext =
       this.normalizeTaxCalculationContext(calculationContext)
@@ -557,15 +557,15 @@ export default class TaxModuleService
             (r) => r.id === region.parent_id
           )
           if (!isDefined(parentRegion)) {
-            throw new MedusaError(
-              MedusaError.Types.INVALID_DATA,
+            throw new vikraiError(
+              vikraiError.Types.INVALID_DATA,
               `Province region must belong to a parent region. You are trying to create a province region with (country: ${region.country_code}, province: ${region.province_code}) but parent does not exist`
             )
           }
 
           if (parentRegion.country_code !== region.country_code) {
-            throw new MedusaError(
-              MedusaError.Types.INVALID_DATA,
+            throw new vikraiError(
+              vikraiError.Types.INVALID_DATA,
               `Province region must belong to a parent region with the same country code. You are trying to create a province region with (country: ${region.country_code}, province: ${region.province_code}) but parent expects (country: ${parentRegion.country_code})`
             )
           }
@@ -721,3 +721,4 @@ export default class TaxModuleService
     return code.toLowerCase()
   }
 }
+

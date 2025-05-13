@@ -1,12 +1,12 @@
 import {
   OrderChangeDTO,
   UpdateOrderChangeActionDTO,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import {
   WorkflowData,
   WorkflowResponse,
   createWorkflow,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { updateOrderChangesStep } from "../steps"
 
 export const updateOrderChangesWorkflowId = "update-order-change"
@@ -28,3 +28,4 @@ export const updateOrderChangesWorkflow = createWorkflow(
     return new WorkflowResponse(updateOrderChangesStep(input))
   }
 )
+

@@ -1,9 +1,9 @@
-import { Context } from "@medusajs/framework/types"
+import { Context } from "@vikrai/framework/types"
 import {
   BigNumber,
   MathBN,
   mikroOrmBaseRepositoryFactory,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 import { SqlEntityManager } from "@mikro-orm/postgresql"
 import { InventoryLevel } from "@models"
 
@@ -73,3 +73,4 @@ export class InventoryLevelRepository extends mikroOrmBaseRepositoryFactory(
     )
   }
 }
+

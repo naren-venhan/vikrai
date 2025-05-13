@@ -1,10 +1,10 @@
 import {
   CreatePriceSetDTO,
   IPricingModuleService,
-  MedusaContainer,
+  vikraiContainer,
   PriceSetDTO,
-} from "@medusajs/types"
-import { Modules } from "@medusajs/utils"
+} from "@vikrai/types"
+import { Modules } from "@vikrai/utils"
 
 const defaultPrices = [
   {
@@ -18,7 +18,7 @@ export const createVariantPriceSet = async ({
   variantId,
   prices = defaultPrices,
 }: {
-  container: MedusaContainer
+  container: vikraiContainer
   variantId: string
   prices?: CreatePriceSetDTO["prices"]
 }): Promise<PriceSetDTO> => {
@@ -40,3 +40,4 @@ export const createVariantPriceSet = async ({
     relations: ["prices"],
   })
 }
+

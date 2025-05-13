@@ -1,6 +1,6 @@
-import { MathBN, Modules } from "@medusajs/framework/utils"
-import { createStep, StepResponse } from "@medusajs/framework/workflows-sdk"
-import { BigNumberInput } from "@medusajs/types"
+import { MathBN, Modules } from "@vikrai/framework/utils"
+import { createStep, StepResponse } from "@vikrai/framework/workflows-sdk"
+import { BigNumberInput } from "@vikrai/types"
 
 /**
  * The details of the items and their quantity to reserve.
@@ -18,8 +18,8 @@ export interface ReserveVariantInventoryStepInput {
     inventory_item_id: string
 
     /**
-     * The number of units a single quantity is equivalent to. For example, if a customer orders one quantity of the variant, Medusa checks the availability of the quantity multiplied by the
-     * value set for `required_quantity`. When the customer orders the quantity, Medusa reserves the ordered quantity multiplied by the value set for `required_quantity`.
+     * The number of units a single quantity is equivalent to. For example, if a customer orders one quantity of the variant, vikrai checks the availability of the quantity multiplied by the
+     * value set for `required_quantity`. When the customer orders the quantity, vikrai reserves the ordered quantity multiplied by the value set for `required_quantity`.
      */
     required_quantity: number
 
@@ -114,3 +114,4 @@ export const reserveInventoryStep = createStep(
     return new StepResponse()
   }
 )
+

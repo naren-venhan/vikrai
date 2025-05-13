@@ -1,5 +1,5 @@
-import { AdminReturnReason } from "@medusajs/types"
-import { toast, usePrompt } from "@medusajs/ui"
+import { AdminReturnReason } from "@vikrai/types"
+import { toast, usePrompt } from "@vikrai/ui"
 import { useTranslation } from "react-i18next"
 import { useDeleteReturnReason } from "../../../../hooks/api/return-reasons"
 
@@ -38,3 +38,4 @@ export const useDeleteReturnReasonAction = ({
 
   return handleDelete
 }
+

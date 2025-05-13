@@ -1,7 +1,7 @@
-import { InventoryTypes } from "@medusajs/framework/types"
-import { createStep, StepResponse } from "@medusajs/framework/workflows-sdk"
+import { InventoryTypes } from "@vikrai/framework/types"
+import { createStep, StepResponse } from "@vikrai/framework/workflows-sdk"
 
-import { Modules } from "@medusajs/framework/utils"
+import { Modules } from "@vikrai/framework/utils"
 
 /**
  * The data to create reservation items.
@@ -57,3 +57,4 @@ export const createReservationsStep = createStep(
     })
   }
 )
+

@@ -1,6 +1,6 @@
-import { OrderChangeDTO } from "@medusajs/framework/types"
-import { Modules } from "@medusajs/framework/utils"
-import { createStep, StepResponse } from "@medusajs/framework/workflows-sdk"
+import { OrderChangeDTO } from "@vikrai/framework/types"
+import { Modules } from "@vikrai/framework/utils"
+import { createStep, StepResponse } from "@vikrai/framework/workflows-sdk"
 
 /**
  * The input for the confirm order changes step.
@@ -60,3 +60,4 @@ export const confirmOrderChanges = createStep(
     )
   }
 )
+

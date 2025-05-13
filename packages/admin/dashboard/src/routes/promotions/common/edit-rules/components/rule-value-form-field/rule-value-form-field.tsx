@@ -1,5 +1,5 @@
-import { HttpTypes } from "@medusajs/types"
-import { Input } from "@medusajs/ui"
+import { HttpTypes } from "@vikrai/types"
+import { Input } from "@vikrai/ui"
 import { useWatch } from "react-hook-form"
 import { Form } from "../../../../../../components/common/form"
 import { Combobox } from "../../../../../../components/inputs/combobox"
@@ -135,3 +135,4 @@ export const RuleValueFormField = ({
     />
   )
 }
+

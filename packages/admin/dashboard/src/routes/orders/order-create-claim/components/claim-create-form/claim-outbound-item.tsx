@@ -1,6 +1,6 @@
-import { XCircle } from "@medusajs/icons"
-import { AdminOrderLineItem, HttpTypes } from "@medusajs/types"
-import { Input, Text } from "@medusajs/ui"
+import { XCircle } from "@vikrai/icons"
+import { AdminOrderLineItem, HttpTypes } from "@vikrai/types"
+import { Input, Text } from "@vikrai/ui"
 import { UseFormReturn } from "react-hook-form"
 import { useTranslation } from "react-i18next"
 
@@ -119,3 +119,4 @@ function ClaimOutboundItem({
 }
 
 export { ClaimOutboundItem }
+

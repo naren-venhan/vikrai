@@ -1,4 +1,4 @@
-import { model } from "@medusajs/framework/utils"
+import { model } from "@vikrai/framework/utils"
 import Store from "./store"
 
 const StoreCurrency = model.define("StoreCurrency", {
@@ -13,3 +13,4 @@ const StoreCurrency = model.define("StoreCurrency", {
 })
 
 export default StoreCurrency
+

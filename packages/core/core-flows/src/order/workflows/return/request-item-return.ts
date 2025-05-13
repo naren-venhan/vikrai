@@ -4,15 +4,15 @@ import {
   OrderPreviewDTO,
   OrderWorkflow,
   ReturnDTO,
-} from "@medusajs/framework/types"
-import { ChangeActionType, OrderChangeStatus } from "@medusajs/framework/utils"
+} from "@vikrai/framework/types"
+import { ChangeActionType, OrderChangeStatus } from "@vikrai/framework/utils"
 import {
   WorkflowData,
   WorkflowResponse,
   createStep,
   createWorkflow,
   transform,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { useRemoteQueryStep } from "../../../common"
 import { previewOrderChangeStep } from "../../steps"
 import {
@@ -53,8 +53,8 @@ export type RequestItemReturnValidationStepInput = {
  *
  * :::note
  *
- * You can retrieve an order, return, and order change details using [Query](https://docs.medusajs.com/learn/fundamentals/module-links/query),
- * or [useQueryGraphStep](https://docs.medusajs.com/resources/references/medusa-workflows/steps/useQueryGraphStep).
+ * You can retrieve an order, return, and order change details using [Query](https://docs.vikrai.com/learn/fundamentals/module-links/query),
+ * or [useQueryGraphStep](https://docs.vikrai.com/resources/references/vikrai-workflows/steps/useQueryGraphStep).
  *
  * :::
  *
@@ -111,7 +111,7 @@ export const requestItemReturnValidationStep = createStep(
 export const requestItemReturnWorkflowId = "request-item-return"
 /**
  * This workflow adds items to a return. It's used by the
- * [Add Requested Items to Return Admin API Route](https://docs.medusajs.com/api/admin#returns_postreturnsidrequestitems).
+ * [Add Requested Items to Return Admin API Route](https://docs.vikrai.com/api/admin#returns_postreturnsidrequestitems).
  *
  * You can use this workflow within your customizations or your own custom workflows, allowing you to add items to a return
  * in your custom flows.
@@ -219,3 +219,4 @@ export const requestItemReturnWorkflow = createWorkflow(
     return new WorkflowResponse(previewOrderChangeStep(order.id))
   }
 )
+

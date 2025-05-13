@@ -3,8 +3,8 @@ import { useMemo, useState } from "react"
 import { useForm } from "react-hook-form"
 import * as zod from "zod"
 
-import { HttpTypes } from "@medusajs/types"
-import { Button, toast } from "@medusajs/ui"
+import { HttpTypes } from "@vikrai/types"
+import { Button, toast } from "@vikrai/ui"
 import { useTranslation } from "react-i18next"
 
 import { DataGrid } from "../../../../../components/data-grid"
@@ -382,3 +382,4 @@ const getDefaultValues = (prices: HttpTypes.AdminShippingOptionPrice[]) => {
     conditional_region_prices,
   }
 }
+

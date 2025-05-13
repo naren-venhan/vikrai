@@ -4,17 +4,17 @@ import {
   ModuleDefinition,
   ModuleExports,
   ModuleResolution,
-} from "@medusajs/types"
+} from "@vikrai/types"
 
 import {
   isObject,
   isString,
   normalizeImportPathWithSource,
-} from "@medusajs/utils"
+} from "@vikrai/utils"
 import { ModulesDefinition } from "../definitions"
 import { MODULE_SCOPE } from "../types"
 
-export const registerMedusaModule = (
+export const registervikraiModule = (
   moduleKey: string,
   moduleDeclaration?:
     | Partial<InternalModuleDeclaration | ExternalModuleDeclaration>
@@ -97,7 +97,7 @@ function getCustomModuleResolution(
   }
 }
 
-export const registerMedusaLinkModule = (
+export const registervikraiLinkModule = (
   definition: ModuleDefinition,
   moduleDeclaration: Partial<InternalModuleDeclaration>,
   moduleExports?: ModuleExports
@@ -166,3 +166,4 @@ function getInternalModuleResolution(
     options: isObj ? moduleConfig.options ?? {} : {},
   }
 }
+

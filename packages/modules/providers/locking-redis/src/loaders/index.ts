@@ -1,5 +1,5 @@
-import { Modules } from "@medusajs/framework/utils"
-import { ProviderLoaderOptions } from "@medusajs/types"
+import { Modules } from "@vikrai/framework/utils"
+import { ProviderLoaderOptions } from "@vikrai/types"
 import { RedisCacheModuleOptions } from "@types"
 import { asValue } from "awilix"
 import Redis from "ioredis"
@@ -36,6 +36,7 @@ export default async ({
 
   container.register({
     redisClient: asValue(connection),
-    prefix: asValue(namespace ?? "medusa_lock:"),
+    prefix: asValue(namespace ?? "vikrai_lock:"),
   })
 }
+

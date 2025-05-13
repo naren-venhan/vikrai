@@ -1,16 +1,16 @@
-import { OrderChangeDTO, OrderDTO } from "@medusajs/framework/types"
+import { OrderChangeDTO, OrderDTO } from "@vikrai/framework/types"
 import {
   ChangeActionType,
   OrderChangeStatus,
   OrderEditWorkflowEvents,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 import {
   WorkflowData,
   createStep,
   createWorkflow,
   parallelize,
   transform,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { emitEventStep, useRemoteQueryStep } from "../../../common"
 import { deleteOrderChangesStep, deleteOrderShippingMethods } from "../../steps"
 import {
@@ -38,8 +38,8 @@ export type CancelBeginOrderEditValidationStepInput = {
  *
  * :::note
  *
- * You can retrieve an order and order change details using [Query](https://docs.medusajs.com/learn/fundamentals/module-links/query),
- * or [useQueryGraphStep](https://docs.medusajs.com/resources/references/medusa-workflows/steps/useQueryGraphStep).
+ * You can retrieve an order and order change details using [Query](https://docs.vikrai.com/learn/fundamentals/module-links/query),
+ * or [useQueryGraphStep](https://docs.vikrai.com/resources/references/vikrai-workflows/steps/useQueryGraphStep).
  *
  * :::
  *
@@ -79,7 +79,7 @@ export type CancelBeginOrderEditWorkflowInput = {
 export const cancelBeginOrderEditWorkflowId = "cancel-begin-order-edit"
 /**
  * This workflow cancels a requested edit for an order. It's used by the
- * [Cancel Order Edit Admin API Route](https://docs.medusajs.com/api/admin#order-edits_deleteordereditsid).
+ * [Cancel Order Edit Admin API Route](https://docs.vikrai.com/api/admin#order-edits_deleteordereditsid).
  *
  * You can use this workflow within your customizations or your own custom workflows, allowing you to cancel an order edit
  * in your custom flow.
@@ -152,3 +152,4 @@ export const cancelBeginOrderEditWorkflow = createWorkflow(
     )
   }
 )
+

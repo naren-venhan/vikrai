@@ -1,5 +1,5 @@
-import { HttpTypes } from "@medusajs/types"
-import { Heading } from "@medusajs/ui"
+import { HttpTypes } from "@vikrai/types"
+import { Heading } from "@vikrai/ui"
 import { useTranslation } from "react-i18next"
 import { useParams } from "react-router-dom"
 
@@ -165,3 +165,4 @@ const useDefaultRulesValues = (
 
   return { initialValues: initialRulesValues, isPending: false }
 }
+

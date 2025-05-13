@@ -1,7 +1,7 @@
 import {
   RemoteQueryObjectConfig,
   RemoteQueryObjectFromStringResult,
-} from "@medusajs/types"
+} from "@vikrai/types"
 import { isObject } from "./is-object"
 
 /**
@@ -158,3 +158,4 @@ export function remoteQueryObjectFromString<
     __value: remoteJoinerConfig,
   } as RemoteQueryObjectFromStringResult<TConfig>
 }
+

@@ -1,7 +1,7 @@
-import { ProductStatus } from "@medusajs/utils"
+import { ProductStatus } from "@vikrai/utils"
 
-export const medusaTshirtProduct = {
-  title: "Medusa T-Shirt",
+export const vikraiTshirtProduct = {
+  title: "vikrai T-Shirt",
   handle: "t-shirt",
   status: ProductStatus.PUBLISHED,
   options: [
@@ -63,3 +63,4 @@ export const medusaTshirtProduct = {
     },
   ],
 }
+

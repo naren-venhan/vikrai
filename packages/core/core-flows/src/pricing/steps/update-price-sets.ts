@@ -1,10 +1,10 @@
-import { IPricingModuleService, PricingTypes } from "@medusajs/framework/types"
+import { IPricingModuleService, PricingTypes } from "@vikrai/framework/types"
 import {
-  MedusaError,
+  vikraiError,
   Modules,
   getSelectsAndRelationsFromObjectArray,
-} from "@medusajs/framework/utils"
-import { StepResponse, createStep } from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/utils"
+import { StepResponse, createStep } from "@vikrai/framework/workflows-sdk"
 
 /**
  * The data to update price sets. You can either update price sets with a selector
@@ -56,8 +56,8 @@ export const updatePriceSetsStep = createStep(
 
     if ("price_sets" in data) {
       if (data.price_sets.some((p) => !p.id)) {
-        throw new MedusaError(
-          MedusaError.Types.INVALID_DATA,
+        throw new vikraiError(
+          vikraiError.Types.INVALID_DATA,
           "Price set id is required when doing a batch update"
         )
       }
@@ -105,3 +105,4 @@ export const updatePriceSetsStep = createStep(
     )
   }
 )
+

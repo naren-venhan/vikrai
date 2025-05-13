@@ -1,9 +1,9 @@
 import { QueryKey, UseQueryOptions, useQuery } from "@tanstack/react-query"
 
-import { HttpTypes } from "@medusajs/types"
+import { HttpTypes } from "@vikrai/types"
 import { sdk } from "../../lib/client"
 import { queryKeysFactory } from "../../lib/query-key-factory"
-import { FetchError } from "@medusajs/js-sdk"
+import { FetchError } from "@vikrai/js-sdk"
 
 const NOTIFICATION_QUERY_KEY = "notification" as const
 export const notificationQueryKeys = queryKeysFactory(NOTIFICATION_QUERY_KEY)
@@ -50,3 +50,4 @@ export const useNotifications = (
 
   return { ...data, ...rest }
 }
+

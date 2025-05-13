@@ -1,5 +1,5 @@
-import { HttpTypes } from "@medusajs/types"
-import { Button, Input, Select, Text, Textarea, toast } from "@medusajs/ui"
+import { HttpTypes } from "@vikrai/types"
+import { Button, Input, Select, Text, Textarea, toast } from "@vikrai/ui"
 import * as zod from "zod"
 import { RouteDrawer, useRouteModal } from "../../../../../../components/modals"
 
@@ -211,3 +211,4 @@ export const EditReservationForm = ({
     </RouteDrawer.Form>
   )
 }
+

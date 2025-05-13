@@ -224,7 +224,7 @@ export const CodeBlockLine = ({
             ],
             !animateTokenHighlights && "w-full",
             "absolute left-0 top-0 h-full z-0",
-            "lg:bg-medusa-alpha-white-alpha-6 lg:border lg:border-medusa-alpha-white-alpha-12",
+            "lg:bg-vikrai-alpha-white-alpha-6 lg:border lg:border-vikrai-alpha-white-alpha-12",
             "lg:rounded-docs_xs scale-x-[1.05]"
           )}
         />
@@ -260,7 +260,7 @@ export const CodeBlockLine = ({
       {...lineProps}
       className={clsx(
         "table-row",
-        isHighlightedLine && "bg-medusa-alpha-white-alpha-6",
+        isHighlightedLine && "bg-vikrai-alpha-white-alpha-6",
         lineProps.className
       )}
     >
@@ -321,3 +321,4 @@ export const CodeBlockLine = ({
     </span>
   )
 }
+

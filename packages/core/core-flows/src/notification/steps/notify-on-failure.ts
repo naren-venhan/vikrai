@@ -1,6 +1,6 @@
-import { INotificationModuleService } from "@medusajs/framework/types"
-import { Modules } from "@medusajs/framework/utils"
-import { StepResponse, createStep } from "@medusajs/framework/workflows-sdk"
+import { INotificationModuleService } from "@vikrai/framework/types"
+import { Modules } from "@vikrai/framework/utils"
+import { StepResponse, createStep } from "@vikrai/framework/workflows-sdk"
 
 /**
  * The notifications to send.
@@ -13,7 +13,7 @@ export type NotifyOnFailureStepInput = {
   to: string
   /**
    * The channel to send the notification through. For example, `email`.
-   * A [Notification Module Provider](https://docs.medusajs.com/resources/infrastructure-modules/notification)
+   * A [Notification Module Provider](https://docs.vikrai.com/resources/infrastructure-modules/notification)
    * must be installed and configured for the specified channel.
    */
   channel: string
@@ -88,3 +88,4 @@ export const notifyOnFailureStep = createStep(
     await service.createNotifications(data)
   }
 )
+

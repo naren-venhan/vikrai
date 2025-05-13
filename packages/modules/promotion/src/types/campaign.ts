@@ -1,4 +1,4 @@
-import { InferEntityType, PromotionDTO } from "@medusajs/framework/types"
+import { InferEntityType, PromotionDTO } from "@vikrai/framework/types"
 import { Promotion } from "@models"
 
 export interface CreateCampaignDTO {
@@ -19,3 +19,4 @@ export interface UpdateCampaignDTO {
   ends_at?: Date | null
   promotions?: (PromotionDTO | InferEntityType<typeof Promotion>)[]
 }
+

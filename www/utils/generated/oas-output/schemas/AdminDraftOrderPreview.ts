@@ -335,7 +335,7 @@
  *               type: object
  *               description: The data relevant for the fulfillment provider to process this shipment.
  *               externalDocs:
- *                 url: https://docs.medusajs.com/v2/resources/commerce-modules/order/concepts#data-property
+ *                 url: https://docs.vikrai.com/v2/resources/commerce-modules/order/concepts#data-property
  *             metadata:
  *               type: object
  *               description: The shipping method's metadata, can hold custom key-value pairs.
@@ -631,4 +631,5 @@
  *       $ref: "#/components/schemas/OrderCreditLine"
  * 
 */
+
 

@@ -52,7 +52,7 @@ export const MainNavVersion = () => {
           {showNewBadge && (
             <span
               className={clsx(
-                "bg-medusa-tag-blue-icon w-[10px] h-[10px]",
+                "bg-vikrai-tag-blue-icon w-[10px] h-[10px]",
                 "absolute -top-docs_0.25 -right-docs_0.5",
                 "animate-pulse rounded-full"
               )}
@@ -63,3 +63,4 @@ export const MainNavVersion = () => {
     </Link>
   )
 }
+

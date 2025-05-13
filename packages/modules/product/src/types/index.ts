@@ -2,7 +2,7 @@ import {
   IEventBusModuleService,
   Logger,
   ProductTypes,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 
 export type InitializeModuleInjectableDependencies = {
   logger?: Logger
@@ -47,3 +47,4 @@ export type UpdateProductVariantInput = ProductTypes.UpdateProductVariantDTO & {
 export type UpdateProductOptionInput = ProductTypes.UpdateProductOptionDTO & {
   id: string
 }
+

@@ -5,7 +5,7 @@ import clsx from "clsx"
 import Link from "next/link"
 import { useSidebar, useSiteConfig } from "../../providers"
 import { Button } from "../Button"
-import { TriangleRightMini } from "@medusajs/icons"
+import { TriangleRightMini } from "@vikrai/icons"
 import { Sidebar } from "types"
 
 type BreadcrumbItems = {
@@ -55,7 +55,7 @@ export const Breadcrumbs = () => {
     <div
       className={clsx(
         "flex items-center gap-docs_0.25",
-        "text-medusa-fg-muted text-compact-small",
+        "text-vikrai-fg-muted text-compact-small",
         "mb-docs_1 flex-wrap"
       )}
     >
@@ -67,7 +67,7 @@ export const Breadcrumbs = () => {
             className={clsx(
               "px-docs_0.5 py-docs_0.25",
               link === "#" && "hover:cursor-default",
-              "!p-0 hover:!bg-transparent hover:!text-medusa-fg-subtle"
+              "!p-0 hover:!bg-transparent hover:!text-vikrai-fg-subtle"
             )}
           >
             <Link
@@ -82,3 +82,4 @@ export const Breadcrumbs = () => {
     </div>
   )
 }
+

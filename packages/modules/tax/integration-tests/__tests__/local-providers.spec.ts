@@ -1,7 +1,7 @@
-import { ITaxModuleService } from "@medusajs/framework/types"
+import { ITaxModuleService } from "@vikrai/framework/types"
 
-import { Modules } from "@medusajs/framework/utils"
-import { moduleIntegrationTestRunner } from "@medusajs/test-utils"
+import { Modules } from "@vikrai/framework/utils"
+import { moduleIntegrationTestRunner } from "@vikrai/test-utils"
 
 jest.setTimeout(30000)
 
@@ -26,3 +26,4 @@ moduleIntegrationTestRunner<ITaxModuleService>({
     })
   },
 })
+

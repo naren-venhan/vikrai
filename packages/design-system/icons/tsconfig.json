@@ -23,9 +23,10 @@
     "baseUrl": "src",
     "declarationDir": "dist",
     "paths": {
-      "@medusajs/icon": ["src/index.ts"]
+      "@vikrai/icon": ["src/index.ts"]
     }
   },
   "include": ["src"],
   "exclude": ["dist", "build", "node_modules", "./src/**/*.spec.tsx"]
 }
+

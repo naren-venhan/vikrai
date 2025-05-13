@@ -3,7 +3,7 @@
 import React, { useRef } from "react"
 import { Button, useCollapsible } from "../.."
 import clsx from "clsx"
-import { TriangleRightMini } from "@medusajs/icons"
+import { TriangleRightMini } from "@vikrai/icons"
 import {
   PrerequisiteItem,
   PrerequisiteItemPosition,
@@ -61,7 +61,7 @@ export const Prerequisites = ({ items }: PrerequisitesProps) => {
           className={clsx(
             "flex items-center",
             "px-docs_0.5 py-docs_0.25",
-            "text-medusa-fg-subtle",
+            "text-vikrai-fg-subtle",
             "active:!outline-none active:!shadow-none",
             "focus:!outline-none focus:!shadow-none"
           )}
@@ -92,3 +92,4 @@ export const Prerequisites = ({ items }: PrerequisitesProps) => {
     </details>
   )
 }
+

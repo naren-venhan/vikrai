@@ -1,13 +1,13 @@
-import { moduleProviderLoader } from "@medusajs/framework/modules-sdk"
+import { moduleProviderLoader } from "@vikrai/framework/modules-sdk"
 import {
   LoaderOptions,
   ModuleProvider,
   ModulesSdkTypes,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import {
   ContainerRegistrationKeys,
   getProviderRegistrationKey,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 import { LockingProviderService } from "@services"
 import {
   LockingDefaultProvider,
@@ -97,3 +97,4 @@ export default async ({
     */
   }
 }
+

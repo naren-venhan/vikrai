@@ -1,6 +1,6 @@
 import { zodResolver } from "@hookform/resolvers/zod"
-import { AdminCampaign, HttpTypes } from "@medusajs/types"
-import { Button, Checkbox, Hint, Tooltip, toast } from "@medusajs/ui"
+import { AdminCampaign, HttpTypes } from "@vikrai/types"
+import { Button, Checkbox, Hint, Tooltip, toast } from "@vikrai/ui"
 import { keepPreviousData } from "@tanstack/react-query"
 import {
   OnChangeFn,
@@ -258,3 +258,4 @@ const useColumns = () => {
     [t, base]
   )
 }
+

@@ -1,9 +1,9 @@
-import { MedusaModule } from "@medusajs/framework/modules-sdk"
+import { vikraiModule } from "@vikrai/framework/modules-sdk"
 import {
   FileSystem,
   GraphQLUtils,
   gqlSchemaToTypes as ModulesSdkGqlSchemaToTypes,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 import { join } from "path"
 import * as process from "process"
 
@@ -12,14 +12,14 @@ export async function gqlSchemaToTypes(
 ) {
   const filename = "index-service-entry-points"
   const filenameWithExt = filename + ".d.ts"
-  const dir = join(process.cwd(), ".medusa/types")
+  const dir = join(process.cwd(), ".vikrai/types")
 
   await ModulesSdkGqlSchemaToTypes({
     schema: executableSchema,
     filename,
     interfaceName: "IndexServiceEntryPoints",
     outputDir: dir,
-    joinerConfigs: MedusaModule.getAllJoinerConfigs(),
+    joinerConfigs: vikraiModule.getAllJoinerConfigs(),
   })
 
   const fileSystem = new FileSystem(dir)
@@ -30,7 +30,7 @@ export async function gqlSchemaToTypes(
   const entryPoints = buildEntryPointsTypeMap(content)
 
   const indexEntryPoints = `
-declare module '@medusajs/framework/types' {
+declare module '@vikrai/framework/types' {
   interface IndexServiceEntryPoints  {
 ${entryPoints
   .map((entry) => `    ${entry.entryPoint}: ${entry.entityType}`)
@@ -52,7 +52,7 @@ function buildEntryPointsTypeMap(
 ): { entryPoint: string; entityType: any }[] {
   // build map entry point to there type to be merged and used by the remote query
 
-  const joinerConfigs = MedusaModule.getAllJoinerConfigs()
+  const joinerConfigs = vikraiModule.getAllJoinerConfigs()
   return joinerConfigs
     .flatMap((config) => {
       const aliases = Array.isArray(config.alias)
@@ -82,3 +82,4 @@ function buildEntryPointsTypeMap(
     })
     .filter(Boolean) as { entryPoint: string; entityType: any }[]
 }
+

@@ -1,4 +1,4 @@
-import { InventoryNext, ProductVariantDTO } from "@medusajs/types"
+import { InventoryNext, ProductVariantDTO } from "@vikrai/types"
 
 import { InventoryActions } from "./inventory-actions"
 import { PlaceholderCell } from "../../../../../components/table/table-cells/common/placeholder-cell"
@@ -102,3 +102,4 @@ export const useInventoryTableColumns = () => {
     [t]
   )
 }
+

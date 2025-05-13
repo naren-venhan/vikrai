@@ -143,7 +143,7 @@
  *     type: object
  *     description: Any data useful for the fulfillment provider to handle the fulfillment.
  *     externalDocs:
- *       url: https://docs.medusajs.com/v2/resources/commerce-modules/fulfillment/shipping-option#data-property
+ *       url: https://docs.vikrai.com/v2/resources/commerce-modules/fulfillment/shipping-option#data-property
  *       description: Learn more about the data property.
  *   packed_at:
  *     type: string
@@ -170,4 +170,5 @@
  *     description: The fulfillment's metadata, used to store custom key-value pairs.
  * 
 */
+
 

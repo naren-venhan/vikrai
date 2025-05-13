@@ -1,14 +1,14 @@
 import type {
-  MedusaNextFunction,
-  MedusaRequest,
-  MedusaResponse,
+  vikraiNextFunction,
+  vikraiRequest,
+  vikraiResponse,
 } from "../types"
 
 export function applyParamsAsFilters(mappings: { [param: string]: string }) {
   return async function paramsAsFiltersMiddleware(
-    req: MedusaRequest,
-    _: MedusaResponse,
-    next: MedusaNextFunction
+    req: vikraiRequest,
+    _: vikraiResponse,
+    next: vikraiNextFunction
   ) {
     for (const [param, paramValue] of Object.entries(req.params)) {
       if (mappings[param]) {
@@ -19,3 +19,4 @@ export function applyParamsAsFilters(mappings: { [param: string]: string }) {
     return next()
   }
 }
+

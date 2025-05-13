@@ -5,7 +5,7 @@ import { Client, FetchError, PUBLISHABLE_KEY_HEADER } from "../client"
 
 const baseUrl = "https://someurl.com"
 const token = "token-123"
-const jwtTokenStorageKey = "medusa_auth_token"
+const jwtTokenStorageKey = "vikrai_auth_token"
 
 // This is just a network-layer mocking, it doesn't start an actual server
 const server = setupServer(
@@ -391,3 +391,4 @@ describe("Client", () => {
     })
   })
 })
+

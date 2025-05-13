@@ -1,10 +1,10 @@
-import { ModulesSdkTypes } from "@medusajs/types"
-import { MedusaError } from "../common"
+import { ModulesSdkTypes } from "@vikrai/types"
+import { vikraiError } from "../common"
 
 function getEnv(key: string, moduleName: string): string {
   const value =
     process.env[`${moduleName.toUpperCase()}_${key}`] ??
-    process.env[`MEDUSA_${key}`] ??
+    process.env[`vikrai_${key}`] ??
     process.env[`${key}`]
   return value ?? ""
 }
@@ -99,11 +99,12 @@ export function loadDatabaseConfig(
   }
 
   if (!database.clientUrl && !silent && !database.connection) {
-    throw new MedusaError(
-      MedusaError.Types.INVALID_ARGUMENT,
-      "No database clientUrl provided. Please provide the clientUrl through the [MODULE]_DATABASE_URL, MEDUSA_DATABASE_URL or DATABASE_URL environment variable or the options object in the initialize function."
+    throw new vikraiError(
+      vikraiError.Types.INVALID_ARGUMENT,
+      "No database clientUrl provided. Please provide the clientUrl through the [MODULE]_DATABASE_URL, vikrai_DATABASE_URL or DATABASE_URL environment variable or the options object in the initialize function."
     )
   }
 
   return database
 }
+

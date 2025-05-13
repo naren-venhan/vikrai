@@ -1,19 +1,19 @@
-import { MedusaModule } from "@medusajs/framework/modules-sdk"
+import { vikraiModule } from "@vikrai/framework/modules-sdk"
 import {
   ExternalModuleDeclaration,
   IEventBusService,
   InternalModuleDeclaration,
-} from "@medusajs/framework/types"
-import { Modules } from "@medusajs/framework/utils"
+} from "@vikrai/framework/types"
+import { Modules } from "@vikrai/framework/utils"
 import { EventBusRedisModuleOptions } from "../types"
 
 export const initialize = async (
   options?: EventBusRedisModuleOptions | ExternalModuleDeclaration
 ): Promise<IEventBusService> => {
   const serviceKey = Modules.EVENT_BUS
-  const loaded = await MedusaModule.bootstrap<IEventBusService>({
+  const loaded = await vikraiModule.bootstrap<IEventBusService>({
     moduleKey: serviceKey,
-    defaultPath: "@medusajs/event-bus-redis",
+    defaultPath: "@vikrai/event-bus-redis",
     declaration: options as
       | InternalModuleDeclaration
       | ExternalModuleDeclaration,
@@ -21,3 +21,4 @@ export const initialize = async (
 
   return loaded[serviceKey]
 }
+

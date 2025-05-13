@@ -1,8 +1,8 @@
-import Medusa from "@medusajs/js-sdk"
+import vikrai from "@vikrai/js-sdk"
 
 export const backendUrl = __BACKEND_URL__ ?? "/"
 
-export const sdk = new Medusa({
+export const sdk = new vikrai({
   baseUrl: backendUrl,
   auth: {
     type: "session",
@@ -13,3 +13,4 @@ export const sdk = new Medusa({
 if (typeof window !== "undefined") {
   ;(window as any).__sdk = sdk
 }
+

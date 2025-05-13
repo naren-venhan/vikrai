@@ -1,13 +1,13 @@
 openapi: 3.0.0
 info:
   version: 2.0.0
-  title: Medusa Admin API
+  title: vikrai Admin API
   license:
     name: MIT
-    url: https://github.com/medusajs/medusa/blob/develop/LICENSE
+    url: https://github.com/vikrai/vikrai/blob/develop/LICENSE
 servers:
   - url: http://localhost:9000
-  - url: https://api.medusajs.com
+  - url: https://api.vikrai.com
 tags:
   - name: Api Keys
     description: >
@@ -23,7 +23,7 @@ tags:
       API keys.
     externalDocs:
       description: Learn more about the API Key Module
-      url: https://docs.medusajs.com/resources/commerce-modules/api-key
+      url: https://docs.vikrai.com/resources/commerce-modules/api-key
     x-associatedSchema:
       $ref: ./components/schemas/AdminApiKey.yaml
   - name: Auth
@@ -39,7 +39,7 @@ tags:
       and promotions that belong to them.
     externalDocs:
       description: Learn more about campaigns.
-      url: https://docs.medusajs.com/resources/commerce-modules/promotion/campaign
+      url: https://docs.vikrai.com/resources/commerce-modules/promotion/campaign
     x-associatedSchema:
       $ref: ./components/schemas/AdminCampaign.yaml
   - name: Claims
@@ -54,7 +54,7 @@ tags:
       $ref: ./components/schemas/AdminClaim.yaml
     externalDocs:
       description: Learn more about order claims.
-      url: https://docs.medusajs.com/resources/commerce-modules/order/claim
+      url: https://docs.vikrai.com/resources/commerce-modules/order/claim
   - name: Collections
     description: >
       A product collection organizes products into a collection for marketing
@@ -75,7 +75,7 @@ tags:
       admins to list and update currencies.
     externalDocs:
       description: Learn more about the Currency Module
-      url: https://docs.medusajs.com/resources/commerce-modules/currency
+      url: https://docs.vikrai.com/resources/commerce-modules/currency
     x-associatedSchema:
       $ref: ./components/schemas/AdminCurrency.yaml
   - name: Customer Groups
@@ -92,7 +92,7 @@ tags:
       them.
     externalDocs:
       description: Learn more about the Customer Module
-      url: https://docs.medusajs.com/resources/commerce-modules/customer
+      url: https://docs.vikrai.com/resources/commerce-modules/customer
     x-associatedSchema:
       $ref: ./components/schemas/AdminCustomerGroup.yaml
   - name: Customers
@@ -104,7 +104,7 @@ tags:
       These API routes allow admin users to manage customers in their store.
     externalDocs:
       description: Learn more about the Customer Module
-      url: https://docs.medusajs.com/resources/commerce-modules/customer
+      url: https://docs.vikrai.com/resources/commerce-modules/customer
     x-associatedSchema:
       $ref: ./components/schemas/AdminCustomer.yaml
   - name: Draft Orders
@@ -117,7 +117,7 @@ tags:
       These API routes allow admin users to create and manage draft orders.
     externalDocs:
       description: Learn more about the Order Module
-      url: https://docs.medusajs.com/resources/commerce-modules/order
+      url: https://docs.vikrai.com/resources/commerce-modules/order
     x-associatedSchema:
       $ref: ./components/schemas/AdminDraftOrder.yaml
   - name: Exchanges
@@ -129,7 +129,7 @@ tags:
       These API routes allow admin users t create and manage exchanges.
     externalDocs:
       description: Learn more about the order exchanges.
-      url: https://docs.medusajs.com/resources/commerce-modules/order/exchange
+      url: https://docs.vikrai.com/resources/commerce-modules/order/exchange
     x-associatedSchema:
       $ref: ./components/schemas/AdminExchange.yaml
   - name: Fulfillment Providers
@@ -142,7 +142,7 @@ tags:
     externalDocs:
       description: Learn more about the fulfillment providers and how to create them.
       url: >-
-        https://docs.medusajs.com/resources/commerce-modules/fulfillment/fulfillment-provider
+        https://docs.vikrai.com/resources/commerce-modules/fulfillment/fulfillment-provider
     x-associatedSchema:
       $ref: ./components/schemas/AdminFulfillmentProvider.yaml
   - name: Fulfillment Sets
@@ -159,7 +159,7 @@ tags:
     externalDocs:
       description: Learn more about fulfillment sets.
       url: >-
-        https://docs.medusajs.com/resources/commerce-modules/fulfillment/concepts
+        https://docs.vikrai.com/resources/commerce-modules/fulfillment/concepts
     x-associatedSchema:
       $ref: ./components/schemas/AdminFulfillmentSet.yaml
   - name: Fulfillments
@@ -172,7 +172,7 @@ tags:
     externalDocs:
       description: Learn more about fulfillments.
       url: >-
-        https://docs.medusajs.com/resources/commerce-modules/fulfillment/item-fulfillment
+        https://docs.vikrai.com/resources/commerce-modules/fulfillment/item-fulfillment
     x-associatedSchema:
       $ref: ./components/schemas/AdminFulfillment.yaml
   - name: Inventory Items
@@ -182,7 +182,7 @@ tags:
       These API routes allow admin users to manage inventory items.
     externalDocs:
       description: Learn more about inventory items.
-      url: https://docs.medusajs.com/resources/commerce-modules/inventory/concepts
+      url: https://docs.vikrai.com/resources/commerce-modules/inventory/concepts
     x-associatedSchema:
       $ref: ./components/schemas/AdminInventoryItem.yaml
   - name: Invites
@@ -194,7 +194,7 @@ tags:
       These API routes allow admin users to manage invites.
     externalDocs:
       description: Learn more about the User Module
-      url: https://docs.medusajs.com/resources/commerce-modules/user
+      url: https://docs.vikrai.com/resources/commerce-modules/user
     x-associatedSchema:
       $ref: ./components/schemas/AdminInvite.yaml
   - name: Notifications
@@ -223,7 +223,7 @@ tags:
       those edits.
     externalDocs:
       description: Learn more about the Order Module
-      url: https://docs.medusajs.com/resources/commerce-modules/order
+      url: https://docs.vikrai.com/resources/commerce-modules/order
   - name: Orders
     description: |
       An order is a purchase made by a customer through a storefront.
@@ -233,7 +233,7 @@ tags:
       These API routes allow admin users to view and manage orders.
     externalDocs:
       description: Learn more about the orders
-      url: https://docs.medusajs.com/resources/commerce-modules/order/concepts
+      url: https://docs.vikrai.com/resources/commerce-modules/order/concepts
     x-associatedSchema:
       $ref: ./components/schemas/AdminOrder.yaml
   - name: Payment Collections
@@ -253,7 +253,7 @@ tags:
     externalDocs:
       description: Learn more about payment collections.
       url: >-
-        https://docs.medusajs.com/resources/commerce-modules/payment/payment-collection
+        https://docs.vikrai.com/resources/commerce-modules/payment/payment-collection
     x-associatedSchema:
       $ref: ./components/schemas/AdminPaymentCollection.yaml
   - name: Payments
@@ -269,22 +269,22 @@ tags:
       These API routes allow admin users to manage payments.
     externalDocs:
       description: Learn more about payments.
-      url: https://docs.medusajs.com/resources/commerce-modules/payment/payment
+      url: https://docs.vikrai.com/resources/commerce-modules/payment/payment
     x-associatedSchema:
       $ref: ./components/schemas/AdminPayment.yaml
   - name: Plugins
     description: >
-      A plugin is a package of reusable Medusa customizations that you can
-      install in any Medusa application.
+      A plugin is a package of reusable vikrai customizations that you can
+      install in any vikrai application.
 
       Plugins can be used to add new functionality, such as wishlists, or
       integrate third-party services, such as payment providers.
 
       These API routes allow admin users to retrieve plugins installed in their
-      Medusa application.
+      vikrai application.
     externalDocs:
       description: Learn more about plugins.
-      url: https://docs.medusajs.com/learn/fundamentals/plugins
+      url: https://docs.vikrai.com/learn/fundamentals/plugins
     x-associatedSchema:
       $ref: ./components/schemas/AdminPlugin.yaml
   - name: Price Lists
@@ -301,7 +301,7 @@ tags:
     externalDocs:
       description: Learn more about price lists.
       url: >-
-        https://docs.medusajs.com/resources/commerce-modules/pricing/concepts#price-list
+        https://docs.vikrai.com/resources/commerce-modules/pricing/concepts#price-list
     x-associatedSchema:
       $ref: ./components/schemas/AdminPriceList.yaml
   - name: Price Preferences
@@ -315,7 +315,7 @@ tags:
     externalDocs:
       description: Learn more about tax-inclusiveness and the role of a price preference.
       url: >-
-        https://docs.medusajs.com/resources/commerce-modules/pricing/tax-inclusive-pricing
+        https://docs.vikrai.com/resources/commerce-modules/pricing/tax-inclusive-pricing
     x-associatedSchema:
       $ref: ./components/schemas/AdminPricePreference.yaml
   - name: Product Categories
@@ -331,7 +331,7 @@ tags:
       in them.
     externalDocs:
       description: Learn more about the Product Module
-      url: https://docs.medusajs.com/resources/commerce-modules/product
+      url: https://docs.vikrai.com/resources/commerce-modules/product
     x-associatedSchema:
       $ref: ./components/schemas/AdminProductCategory.yaml
   - name: Product Tags
@@ -346,7 +346,7 @@ tags:
       These API routes allow admin users to manage product tags.
     externalDocs:
       description: Learn more about the Product Module
-      url: https://docs.medusajs.com/resources/commerce-modules/product
+      url: https://docs.vikrai.com/resources/commerce-modules/product
     x-associatedSchema:
       $ref: ./components/schemas/AdminProductTag.yaml
   - name: Product Types
@@ -358,7 +358,7 @@ tags:
       These API routes allow admin users to manage product types.
     externalDocs:
       description: Learn more about the Product Module
-      url: https://docs.medusajs.com/resources/commerce-modules/product
+      url: https://docs.vikrai.com/resources/commerce-modules/product
     x-associatedSchema:
       $ref: ./components/schemas/AdminProductType.yaml
   - name: Product Variants
@@ -374,7 +374,7 @@ tags:
       These API routes allow admin users to manage product variants.
     externalDocs:
       description: Learn more about the Product Module
-      url: https://docs.medusajs.com/resources/commerce-modules/product
+      url: https://docs.vikrai.com/resources/commerce-modules/product
     x-associatedSchema:
       $ref: ./components/schemas/AdminProductVariant.yaml
   - name: Products
@@ -393,7 +393,7 @@ tags:
       These API routes allow admin users to manage products.
     externalDocs:
       description: Learn more about the Product Module
-      url: https://docs.medusajs.com/resources/commerce-modules/product
+      url: https://docs.vikrai.com/resources/commerce-modules/product
     x-associatedSchema:
       $ref: ./components/schemas/AdminProduct.yaml
   - name: Promotions
@@ -417,7 +417,7 @@ tags:
       These API routes allow admin users to manage promotions.
     externalDocs:
       description: Learn more about promotions.
-      url: https://docs.medusajs.com/resources/commerce-modules/promotion/concepts
+      url: https://docs.vikrai.com/resources/commerce-modules/promotion/concepts
     x-associatedSchema:
       $ref: ./components/schemas/AdminPromotion.yaml
   - name: Refund Reasons
@@ -439,7 +439,7 @@ tags:
       more.
     externalDocs:
       description: Learn more about the Region Module.
-      url: https://docs.medusajs.com/resources/commerce-modules/region
+      url: https://docs.vikrai.com/resources/commerce-modules/region
     x-associatedSchema:
       $ref: ./components/schemas/AdminRegion.yaml
   - name: Reservations
@@ -455,7 +455,7 @@ tags:
       These API routes allow admin users to manage reservations.
     externalDocs:
       description: Learn more about reservations and other inventory concepts.
-      url: https://docs.medusajs.com/resources/commerce-modules/inventory/concepts
+      url: https://docs.vikrai.com/resources/commerce-modules/inventory/concepts
     x-associatedSchema:
       $ref: ./components/schemas/AdminReservation.yaml
   - name: Return Reasons
@@ -480,7 +480,7 @@ tags:
       These API routes allow admin users to manage returns.
     externalDocs:
       description: Learn more about order returns.
-      url: https://docs.medusajs.com/resources/commerce-modules/order/return
+      url: https://docs.vikrai.com/resources/commerce-modules/order/return
     x-associatedSchema:
       $ref: ./components/schemas/AdminReturn.yaml
   - name: Sales Channels
@@ -493,7 +493,7 @@ tags:
       available in them.
     externalDocs:
       description: Learn more about the Sales Channel Module.
-      url: https://docs.medusajs.com/resources/commerce-modules/sales-channel
+      url: https://docs.vikrai.com/resources/commerce-modules/sales-channel
     x-associatedSchema:
       $ref: ./components/schemas/AdminSalesChannel.yaml
   - name: Shipping Options
@@ -513,7 +513,7 @@ tags:
     externalDocs:
       description: Learn more about shipping options.
       url: >-
-        https://docs.medusajs.com/resources/commerce-modules/fulfillment/shipping-option
+        https://docs.vikrai.com/resources/commerce-modules/fulfillment/shipping-option
     x-associatedSchema:
       $ref: ./components/schemas/AdminShippingOption.yaml
   - name: Shipping Profiles
@@ -527,7 +527,7 @@ tags:
     externalDocs:
       description: Learn more about shipping profiles and other fulfillment concepts.
       url: >-
-        https://docs.medusajs.com/resources/commerce-modules/fulfillment/concepts#shipping-profile
+        https://docs.vikrai.com/resources/commerce-modules/fulfillment/concepts#shipping-profile
     x-associatedSchema:
       $ref: ./components/schemas/AdminShippingProfile.yaml
   - name: Stock Locations
@@ -548,7 +548,7 @@ tags:
     externalDocs:
       description: Learn more about stock locations.
       url: >-
-        https://docs.medusajs.com/resources/commerce-modules/stock-location/concepts
+        https://docs.vikrai.com/resources/commerce-modules/stock-location/concepts
     x-associatedSchema:
       $ref: ./components/schemas/AdminStockLocation.yaml
   - name: Stores
@@ -557,7 +557,7 @@ tags:
       store, such as supported currencies or default sales channel.
 
 
-      By default, the Medusa application has one default store. There are no API
+      By default, the vikrai application has one default store. There are no API
       routes to create more stores. Instead, you'd have  to handle that
       customization manually.
 
@@ -565,7 +565,7 @@ tags:
       These API routes allow admin users to manage their store.
     externalDocs:
       description: Learn more about the Store Module.
-      url: https://docs.medusajs.com/resources/commerce-modules/store
+      url: https://docs.vikrai.com/resources/commerce-modules/store
     x-associatedSchema:
       $ref: ./components/schemas/AdminStore.yaml
   - name: Tax Rates
@@ -582,7 +582,7 @@ tags:
     externalDocs:
       description: Learn more about tax rates and rules.
       url: >-
-        https://docs.medusajs.com/resources/commerce-modules/tax/tax-rates-and-rules
+        https://docs.vikrai.com/resources/commerce-modules/tax/tax-rates-and-rules
     x-associatedSchema:
       $ref: ./components/schemas/AdminTaxRate.yaml
   - name: Tax Regions
@@ -597,12 +597,12 @@ tags:
       These API routes allow admin users to manage tax regions. 
     externalDocs:
       description: Learn more about tax regions.
-      url: https://docs.medusajs.com/resources/commerce-modules/tax/tax-region
+      url: https://docs.vikrai.com/resources/commerce-modules/tax/tax-region
     x-associatedSchema:
       $ref: ./components/schemas/AdminTaxRegion.yaml
   - name: Uploads
     description: >
-      Use these API routes to upload files to your Medusa application using the
+      Use these API routes to upload files to your vikrai application using the
       installed file module provider.
 
 
@@ -610,7 +610,7 @@ tags:
       such as CSV files used to import products.
     externalDocs:
       description: Check out available file module providers.
-      url: https://docs.medusajs.com/resources/infrastructure-modules/file
+      url: https://docs.vikrai.com/resources/infrastructure-modules/file
   - name: Users
     description: >
       A user is an admin user that can authenticate and perform functionalities
@@ -624,21 +624,21 @@ tags:
       These API routes allow admin users to manage their team.
     externalDocs:
       description: Learn more about the User Module.
-      url: https://docs.medusajs.com/resources/commerce-modules/user
+      url: https://docs.vikrai.com/resources/commerce-modules/user
     x-associatedSchema:
       $ref: ./components/schemas/AdminUser.yaml
   - name: Workflows Executions
     description: >
-      These API routes allow you to track workflow executions in your Medusa
+      These API routes allow you to track workflow executions in your vikrai
       application.
 
 
       Depending on the workflow engine you use, executions may only be retained
-      for a short while, or only until the Medusa application is restarted.
+      for a short while, or only until the vikrai application is restarted.
     externalDocs:
       description: Check out available Workflow Engine Modules
       url: >-
-        https://docs.medusajs.com/resources/infrastructure-modules/workflow-engine
+        https://docs.vikrai.com/resources/infrastructure-modules/workflow-engine
 paths:
   /admin/api-keys:
     $ref: paths/admin_api-keys.yaml
@@ -1087,3 +1087,4 @@ components:
       x-displayName: Reset Password Token
       scheme: bearer
       x-is-auth: false
+

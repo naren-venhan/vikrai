@@ -3,14 +3,14 @@ import {
   InferEntityType,
   OrderChangeActionDTO,
   OrderDTO,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import {
   ChangeActionType,
   MathBN,
   createRawPropertiesFromBigNumber,
   decorateCartTotals,
   isDefined,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 import { OrderItem, OrderShippingMethod } from "@models"
 import { calculateOrderChange } from "./calculate-order-change"
 
@@ -197,3 +197,4 @@ export async function applyChangesToOrder(
     calculatedOrders,
   }
 }
+

@@ -1,14 +1,14 @@
-import { Modules } from "@medusajs/utils"
+import { Modules } from "@vikrai/utils"
 import {
   adminHeaders,
   createAdminUser,
 } from "../../../../helpers/create-admin-user"
 
-const { medusaIntegrationTestRunner } = require("@medusajs/test-utils")
+const { vikraiIntegrationTestRunner } = require("@vikrai/test-utils")
 
 jest.setTimeout(30000)
 
-medusaIntegrationTestRunner({
+vikraiIntegrationTestRunner({
   testSuite: ({ dbConnection, getContainer, api }) => {
     let location1
     let location2
@@ -378,3 +378,4 @@ medusaIntegrationTestRunner({
     })
   },
 })
+

@@ -5,7 +5,7 @@
  * description: Complete a cart and place an order.
  * x-authenticated: false
  * externalDocs:
- *   url: https://docs.medusajs.com/v2/resources/storefront-development/checkout/complete-cart
+ *   url: https://docs.vikrai.com/v2/resources/storefront-development/checkout/complete-cart
  *   description: "Storefront guide: How to implement cart completion during checkout."
  * parameters:
  *   - name: id
@@ -16,12 +16,12 @@
  *       type: string
  *   - name: x-publishable-api-key
  *     in: header
- *     description: Publishable API Key created in the Medusa Admin.
+ *     description: Publishable API Key created in the vikrai Admin.
  *     required: true
  *     schema:
  *       type: string
  *       externalDocs:
- *         url: https://docs.medusajs.com/api/store#publishable-api-key
+ *         url: https://docs.vikrai.com/api/store#publishable-api-key
  *   - name: fields
  *     in: query
  *     description: Comma-separated fields that should be included in the returned data. if a field is prefixed with `+` it will be added to the default fields, using `-` will remove it from the default
@@ -38,18 +38,18 @@
  *   - lang: JavaScript
  *     label: JS SDK
  *     source: |-
- *       import Medusa from "@medusajs/js-sdk"
+ *       import vikrai from "@vikrai/js-sdk"
  * 
- *       let MEDUSA_BACKEND_URL = "http://localhost:9000"
+ *       let vikrai_BACKEND_URL = "http://localhost:9000"
  * 
- *       if (process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL) {
- *         MEDUSA_BACKEND_URL = process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL
+ *       if (process.env.NEXT_PUBLIC_vikrai_BACKEND_URL) {
+ *         vikrai_BACKEND_URL = process.env.NEXT_PUBLIC_vikrai_BACKEND_URL
  *       }
  * 
- *       export const sdk = new Medusa({
- *         baseUrl: MEDUSA_BACKEND_URL,
+ *       export const sdk = new vikrai({
+ *         baseUrl: vikrai_BACKEND_URL,
  *         debug: process.env.NODE_ENV === "development",
- *         publishableKey: process.env.NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY,
+ *         publishableKey: process.env.NEXT_PUBLIC_vikrai_PUBLISHABLE_KEY,
  *       })
  * 
  *       sdk.store.cart.complete("cart_123")
@@ -123,7 +123,7 @@
  *                       type: string
  *                       title: type
  *                       description: >
- *                         The error's type. Can be a [MedusaError type](https://docs.medusajs.com/v2/advanced-development/api-routes/errors#medusaerror-types) or `payment_authorization_error` or
+ *                         The error's type. Can be a [vikraiError type](https://docs.vikrai.com/v2/advanced-development/api-routes/errors#vikraierror-types) or `payment_authorization_error` or
  *                         `payment_requires_more_error` for payment-related errors.
  *   "400":
  *     $ref: "#/components/responses/400_error"

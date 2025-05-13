@@ -25,14 +25,14 @@ export const VerticalCodeTabs = ({
   return (
     <div
       className={clsx(
-        "rounded-[20px] bg-medusa-bg-subtle p-docs_0.5",
+        "rounded-[20px] bg-vikrai-bg-subtle p-docs_0.5",
         "shadow-elevation-modal dark:shadow-elevation-modal-dark",
         className
       )}
     >
       <div
         className={clsx(
-          "rounded-docs_lg bg-medusa-contrast-bg-base h-full",
+          "rounded-docs_lg bg-vikrai-contrast-bg-base h-full",
           "shadow-elevation-code-block dark:shadow-elevation-code-block-dark",
           "flex flex-col"
         )}
@@ -47,7 +47,7 @@ export const VerticalCodeTabs = ({
             <span
               className={clsx(
                 "inline-block rounded-full w-[10px] h-[10px]",
-                "bg-medusa-contrast-border-bot border border-medusa-contrast-border-bot"
+                "bg-vikrai-contrast-border-bot border border-vikrai-contrast-border-bot"
               )}
               key={index}
             />
@@ -63,12 +63,12 @@ export const VerticalCodeTabs = ({
               <li
                 className={clsx(
                   "px-docs_0.75 py-[11px]",
-                  "rounded-docs_DEFAULT border border-medusa-contrast-border-bot",
+                  "rounded-docs_DEFAULT border border-vikrai-contrast-border-bot",
                   "text-code-body font-monospace cursor-pointer",
                   selectedTabIndex === index &&
-                    "text-medusa-contrast-fg-primary bg-medusa-contrast-border-bot",
+                    "text-vikrai-contrast-fg-primary bg-vikrai-contrast-border-bot",
                   selectedTabIndex !== index &&
-                    "text-medusa-contrast-fg-secondary bg-medusa-contrast-bg-subtle hover:bg-medusa-contrast-border-bot"
+                    "text-vikrai-contrast-fg-secondary bg-vikrai-contrast-bg-subtle hover:bg-vikrai-contrast-border-bot"
                 )}
                 onClick={() => setSelectedTabIndex(index)}
                 key={index}
@@ -86,14 +86,14 @@ export const VerticalCodeTabs = ({
               wrapperClassName="h-full !rounded-docs_DEFAULT"
               className={clsx(
                 "overflow-auto h-full max-h-full !mb-0 !rounded-docs_DEFAULT",
-                "!border !border-medusa-contrast-border-bot"
+                "!border !border-vikrai-contrast-border-bot"
               )}
               innerClassName="h-full"
               animateTokenHighlights
               overrideColors={{
-                bg: "bg-medusa-contrast-bg-subtle",
-                innerBg: "bg-medusa-contrast-bg-subtle",
-                lineNumbersBg: "bg-medusa-contrast-bg-subtle",
+                bg: "bg-vikrai-contrast-bg-subtle",
+                innerBg: "bg-vikrai-contrast-bg-subtle",
+                lineNumbersBg: "bg-vikrai-contrast-bg-subtle",
                 boxShadow: "shadow-none",
               }}
             />
@@ -103,3 +103,4 @@ export const VerticalCodeTabs = ({
     </div>
   )
 }
+

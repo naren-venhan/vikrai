@@ -33,7 +33,7 @@ export class IdProperty extends BaseProperty<string> {
    * This method indicates that the property is the data model's primary key.
    *
    * @example
-   * import { model } from "@medusajs/framework/utils"
+   * import { model } from "@vikrai/framework/utils"
    *
    * const Product = model.define("Product", {
    *   id: model.id().primaryKey(),
@@ -48,3 +48,4 @@ export class IdProperty extends BaseProperty<string> {
     return new PrimaryKeyModifier<string, IdProperty>(this)
   }
 }
+

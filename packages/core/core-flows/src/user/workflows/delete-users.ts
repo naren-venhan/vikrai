@@ -1,11 +1,11 @@
-import { UserWorkflow } from "@medusajs/framework/types"
-import { Modules, UserWorkflowEvents } from "@medusajs/framework/utils"
+import { UserWorkflow } from "@vikrai/framework/types"
+import { Modules, UserWorkflowEvents } from "@vikrai/framework/utils"
 import {
   WorkflowData,
   createWorkflow,
   parallelize,
   transform,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { emitEventStep, removeRemoteLinkStep } from "../../common"
 import { deleteUsersStep } from "../steps"
 
@@ -15,7 +15,7 @@ export const deleteUsersWorkflowId = "delete-user"
  * like {@link removeUserAccountWorkflow}. If you use this workflow directly,
  * you must also remove the association to the auth identity using the
  * {@link setAuthAppMetadataStep}. Learn more about auth identities in
- * [this documentation](https://docs.medusajs.com/resources/commerce-modules/auth/auth-identity-and-actor-types).
+ * [this documentation](https://docs.vikrai.com/resources/commerce-modules/auth/auth-identity-and-actor-types).
  *
  * You can use this workflow within your customizations or your own custom workflows, allowing you to
  * delete users within your custom flows.
@@ -58,3 +58,4 @@ export const deleteUsersWorkflow = createWorkflow(
     )
   }
 )
+

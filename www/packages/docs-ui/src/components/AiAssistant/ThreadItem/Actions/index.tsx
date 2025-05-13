@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import clsx from "clsx"
 import { Badge, Button, Link, type ButtonProps } from "@/components"
-import { ThumbDown, ThumbUp } from "@medusajs/icons"
+import { ThumbDown, ThumbUp } from "@vikrai/icons"
 import { AiAssistantFeedbackType, useAiAssistant } from "@/providers"
 import { AiAssistantThread } from "../../../../providers/AiAssistant/Chat"
 
@@ -47,11 +47,11 @@ export const AiAssistantThreadItemActions = ({
           ))}
         </div>
       )}
-      <div className="flex gap-docs_0.25 items-center text-medusa-fg-muted">
+      <div className="flex gap-docs_0.25 items-center text-vikrai-fg-muted">
         {(feedback === null || feedback === "upvote") && (
           <ActionButton
             onClick={async () => handleFeedback("upvote", item.question_id)}
-            className={clsx(feedback === "upvote" && "!text-medusa-fg-muted")}
+            className={clsx(feedback === "upvote" && "!text-vikrai-fg-muted")}
           >
             <ThumbUp />
           </ActionButton>
@@ -59,7 +59,7 @@ export const AiAssistantThreadItemActions = ({
         {(feedback === null || feedback === "downvote") && (
           <ActionButton
             onClick={async () => handleFeedback("downvote", item.question_id)}
-            className={clsx(feedback === "downvote" && "!text-medusa-fg-muted")}
+            className={clsx(feedback === "downvote" && "!text-vikrai-fg-muted")}
           >
             <ThumbDown />
           </ActionButton>
@@ -74,8 +74,8 @@ const ActionButton = ({ children, className, ...props }: ButtonProps) => {
     <Button
       variant="transparent"
       className={clsx(
-        "text-medusa-fg-muted hover:text-medusa-fg-muted",
-        "hover:bg-medusa-bg-subtle-hover",
+        "text-vikrai-fg-muted hover:text-vikrai-fg-muted",
+        "hover:bg-vikrai-bg-subtle-hover",
         "!p-[4.5px] rounded-docs_sm",
         className
       )}
@@ -85,3 +85,4 @@ const ActionButton = ({ children, className, ...props }: ButtonProps) => {
     </Button>
   )
 }
+

@@ -1,7 +1,7 @@
 {
-  "name": "@medusajs/event-bus-redis",
+  "name": "@vikrai/event-bus-redis",
   "version": "2.7.1",
-  "description": "Redis Event Bus Module for Medusa",
+  "description": "Redis Event Bus Module for vikrai",
   "main": "dist/index.js",
   "files": [
     "dist",
@@ -11,7 +11,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/medusajs/medusa",
+    "url": "https://github.com/vikrai/vikrai",
     "directory": "packages/modules/event-bus-redis"
   },
   "publishConfig": {
@@ -20,10 +20,10 @@
   "engines": {
     "node": ">=20"
   },
-  "author": "Medusa",
+  "author": "vikrai",
   "license": "MIT",
   "devDependencies": {
-    "@medusajs/framework": "2.7.1",
+    "@vikrai/framework": "2.7.1",
     "@swc/core": "^1.7.28",
     "@swc/jest": "^0.2.36",
     "jest": "^29.7.0",
@@ -40,7 +40,8 @@
     "ioredis": "^5.4.1"
   },
   "peerDependencies": {
-    "@medusajs/framework": "2.7.1",
+    "@vikrai/framework": "2.7.1",
     "awilix": "^8.0.1"
   }
 }
+

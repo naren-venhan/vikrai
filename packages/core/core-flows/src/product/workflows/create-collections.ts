@@ -1,12 +1,12 @@
-import { AdditionalData, ProductTypes } from "@medusajs/framework/types"
-import { ProductCollectionWorkflowEvents } from "@medusajs/framework/utils"
+import { AdditionalData, ProductTypes } from "@vikrai/framework/types"
+import { ProductCollectionWorkflowEvents } from "@vikrai/framework/utils"
 import {
   WorkflowData,
   WorkflowResponse,
   createHook,
   createWorkflow,
   transform,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { emitEventStep } from "../../common"
 import { createCollectionsStep } from "../steps"
 
@@ -23,7 +23,7 @@ export type CreateCollectionsWorkflowInput = {
 export const createCollectionsWorkflowId = "create-collections"
 /**
  * This workflow creates one or more collections. It's used by the 
- * [Create Collection Admin API Route](https://docs.medusajs.com/api/admin#collections_postcollections).
+ * [Create Collection Admin API Route](https://docs.vikrai.com/api/admin#collections_postcollections).
  * 
  * This workflow has a hook that allows you to perform custom actions on the created collections. For example, you can pass under `additional_data` custom data that 
  * allows you to create custom data models linked to the product collections.
@@ -77,3 +77,4 @@ export const createCollectionsWorkflow = createWorkflow(
     })
   }
 )
+

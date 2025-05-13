@@ -1,4 +1,4 @@
-import { Tooltip } from "@medusajs/ui"
+import { Tooltip } from "@vikrai/ui"
 import { useTranslation } from "react-i18next"
 import { PlaceholderCell } from "../placeholder-cell"
 import { useDate } from "../../../../../hooks/use-date"
@@ -42,3 +42,4 @@ export const DateHeader = () => {
     </div>
   )
 }
+

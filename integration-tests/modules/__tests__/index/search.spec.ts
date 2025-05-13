@@ -1,6 +1,6 @@
-import { medusaIntegrationTestRunner } from "@medusajs/test-utils"
-import { IndexTypes } from "@medusajs/types"
-import { defaultCurrencies, Modules } from "@medusajs/utils"
+import { vikraiIntegrationTestRunner } from "@vikrai/test-utils"
+import { IndexTypes } from "@vikrai/types"
+import { defaultCurrencies, Modules } from "@vikrai/utils"
 import { setTimeout } from "timers/promises"
 import {
   adminHeaders,
@@ -58,7 +58,7 @@ async function populateData(
   await setTimeout(4000 * (productCount / 10))
 }
 
-medusaIntegrationTestRunner({
+vikraiIntegrationTestRunner({
   testSuite: ({ getContainer, dbConnection, api }) => {
     let indexEngine: IndexTypes.IIndexService
     let appContainer
@@ -232,3 +232,4 @@ medusaIntegrationTestRunner({
     })
   },
 })
+

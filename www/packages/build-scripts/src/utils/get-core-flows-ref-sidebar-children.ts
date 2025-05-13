@@ -18,7 +18,7 @@ export default async function getCoreFlowsRefSidebarChildren(): Promise<
     {
       type: "link",
       title: "Overview",
-      path: "/medusa-workflows-reference",
+      path: "/vikrai-workflows-reference",
       loaded: true,
       isPathHref: true,
     },
@@ -118,3 +118,4 @@ export default async function getCoreFlowsRefSidebarChildren(): Promise<
 
   return sidebarItems
 }
+

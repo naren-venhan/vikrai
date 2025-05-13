@@ -1,4 +1,4 @@
-import { ReservationItemDTO } from "@medusajs/types"
+import { ReservationItemDTO } from "@vikrai/types"
 
 /**
  * Builds a map of reservations by line item id.
@@ -19,3 +19,4 @@ export function buildReservationsMap(reservations: ReservationItemDTO[]) {
 
   return map
 }
+

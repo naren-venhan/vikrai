@@ -7,7 +7,7 @@ import {
   Select,
   Text,
   Textarea,
-} from "@medusajs/ui"
+} from "@vikrai/ui"
 import { useEffect } from "react"
 import { useWatch } from "react-hook-form"
 import { useTranslation } from "react-i18next"
@@ -345,3 +345,4 @@ export const CreateCampaignFormFields = ({ form, fieldScope = "" }) => {
     </div>
   )
 }
+

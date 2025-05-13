@@ -1,6 +1,6 @@
 import { z } from "zod"
 import { NextFunction } from "express"
-import { MedusaRequest, MedusaResponse } from "../types"
+import { vikraiRequest, vikraiResponse } from "../types"
 import { zodValidator } from "../../zod/zod-helpers"
 
 export function validateAndTransformBody(
@@ -10,13 +10,13 @@ export function validateAndTransformBody(
         customSchema?: z.ZodOptional<z.ZodNullable<z.ZodObject<any, any>>>
       ) => z.ZodObject<any, any> | z.ZodEffects<any, any>)
 ): (
-  req: MedusaRequest,
-  res: MedusaResponse,
+  req: vikraiRequest,
+  res: vikraiResponse,
   next: NextFunction
 ) => Promise<void> {
   return async function validateBody(
-    req: MedusaRequest,
-    _: MedusaResponse,
+    req: vikraiRequest,
+    _: vikraiResponse,
     next: NextFunction
   ) {
     try {
@@ -34,3 +34,4 @@ export function validateAndTransformBody(
     }
   }
 }
+

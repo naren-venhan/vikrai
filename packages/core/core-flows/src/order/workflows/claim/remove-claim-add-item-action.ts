@@ -5,8 +5,8 @@ import {
   OrderDTO,
   OrderPreviewDTO,
   OrderWorkflow,
-} from "@medusajs/framework/types"
-import { ChangeActionType, OrderChangeStatus } from "@medusajs/framework/utils"
+} from "@vikrai/framework/types"
+import { ChangeActionType, OrderChangeStatus } from "@vikrai/framework/utils"
 import {
   createStep,
   createWorkflow,
@@ -14,7 +14,7 @@ import {
   when,
   WorkflowData,
   WorkflowResponse,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { useRemoteQueryStep } from "../../../common"
 import {
   deleteOrderChangeActionsStep,
@@ -54,8 +54,8 @@ export type RemoveClaimAddItemActionValidationStepInput = {
  * 
  * :::note
  * 
- * You can retrieve an order, order claim, and order change details using [Query](https://docs.medusajs.com/learn/fundamentals/module-links/query),
- * or [useQueryGraphStep](https://docs.medusajs.com/resources/references/medusa-workflows/steps/useQueryGraphStep).
+ * You can retrieve an order, order claim, and order change details using [Query](https://docs.vikrai.com/learn/fundamentals/module-links/query),
+ * or [useQueryGraphStep](https://docs.vikrai.com/resources/references/vikrai-workflows/steps/useQueryGraphStep).
  * 
  * :::
  * 
@@ -118,7 +118,7 @@ export type RemoveAddItemClaimActionWorkflowInput = OrderWorkflow.DeleteOrderCla
 export const removeAddItemClaimActionWorkflowId = "remove-item-claim-add-action"
 /**
  * This workflow removes outbound (new) items from a claim. It's used by the
- * [Remove Outbound Items Admin API Route](https://docs.medusajs.com/api/admin#claims_deleteclaimsidoutbounditemsaction_id).
+ * [Remove Outbound Items Admin API Route](https://docs.vikrai.com/api/admin#claims_deleteclaimsidoutbounditemsaction_id).
  * 
  * You can use this workflow within your customizations or your own custom workflows, allowing you to remove outbound items from a claim
  * in your custom flows.
@@ -238,3 +238,4 @@ export const removeAddItemClaimActionWorkflow = createWorkflow(
     return new WorkflowResponse(previewOrderChangeStep(order.id))
   }
 )
+

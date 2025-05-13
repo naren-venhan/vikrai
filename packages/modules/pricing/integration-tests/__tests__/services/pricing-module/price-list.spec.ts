@@ -1,14 +1,14 @@
-import { IPricingModuleService } from "@medusajs/framework/types"
+import { IPricingModuleService } from "@vikrai/framework/types"
 import {
   CommonEvents,
   composeMessage,
   Modules,
   PricingEvents,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 import {
   MockEventBusService,
   moduleIntegrationTestRunner,
-} from "@medusajs/test-utils"
+} from "@vikrai/test-utils"
 import { createPriceLists } from "../../../__fixtures__/price-list"
 import { createPriceSets } from "../../../__fixtures__/price-set"
 
@@ -1005,3 +1005,4 @@ moduleIntegrationTestRunner<IPricingModuleService>({
     })
   },
 })
+

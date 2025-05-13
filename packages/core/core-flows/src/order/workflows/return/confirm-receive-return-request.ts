@@ -6,7 +6,7 @@ import {
   OrderPreviewDTO,
   OrderReturnItemDTO,
   ReturnDTO,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import {
   ChangeActionType,
   MathBN,
@@ -14,14 +14,14 @@ import {
   OrderWorkflowEvents,
   ReturnStatus,
   deepFlatMap,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 import {
   WorkflowResponse,
   createStep,
   createWorkflow,
   parallelize,
   transform,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { emitEventStep, useRemoteQueryStep } from "../../../common"
 import { adjustInventoryLevelsStep } from "../../../inventory/steps"
 import {
@@ -59,8 +59,8 @@ export type ConfirmReceiveReturnValidationStepInput = {
  * 
  * :::note
  * 
- * You can retrieve an order, return, and order change details using [Query](https://docs.medusajs.com/learn/fundamentals/module-links/query),
- * or [useQueryGraphStep](https://docs.medusajs.com/resources/references/medusa-workflows/steps/useQueryGraphStep).
+ * You can retrieve an order, return, and order change details using [Query](https://docs.vikrai.com/learn/fundamentals/module-links/query),
+ * or [useQueryGraphStep](https://docs.vikrai.com/resources/references/vikrai-workflows/steps/useQueryGraphStep).
  * 
  * :::
  * 
@@ -181,7 +181,7 @@ export type ConfirmReceiveReturnRequestWorkflowInput = {
 export const confirmReturnReceiveWorkflowId = "confirm-return-receive"
 /**
  * This workflow confirms a return receival request. It's used by the
- * [Confirm Return Receival Admin API Route](https://docs.medusajs.com/api/admin#returns_postreturnsidreceiveconfirm).
+ * [Confirm Return Receival Admin API Route](https://docs.vikrai.com/api/admin#returns_postreturnsidreceiveconfirm).
  * 
  * You can use this workflow within your customizations or your own custom workflows, allowing you
  * to confirm a return receival in your custom flow.
@@ -376,3 +376,4 @@ export const confirmReturnReceiveWorkflow = createWorkflow(
     return new WorkflowResponse(previewOrderChangeStep(order.id))
   }
 )
+

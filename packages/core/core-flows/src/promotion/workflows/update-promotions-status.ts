@@ -1,14 +1,14 @@
 import {
   AdditionalData,
   PromotionStatusValues,
-} from "@medusajs/framework/types"
-import { MedusaError, PromotionStatus } from "@medusajs/framework/utils"
+} from "@vikrai/framework/types"
+import { vikraiError, PromotionStatus } from "@vikrai/framework/utils"
 import {
   WorkflowResponse,
   createHook,
   createStep,
   createWorkflow,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { updatePromotionsStep } from "../steps"
 
 /**
@@ -38,8 +38,8 @@ export const updatePromotionsValidationStep = createStep(
         Object.values(PromotionStatus)
 
       if (!allowedStatuses.includes(promotionData.status)) {
-        throw new MedusaError(
-          MedusaError.Types.INVALID_DATA,
+        throw new vikraiError(
+          vikraiError.Types.INVALID_DATA,
           `promotion's status should be one of - ${allowedStatuses.join(", ")}`
         )
       }
@@ -94,3 +94,4 @@ export const updatePromotionsStatusWorkflow = createWorkflow(
     })
   }
 )
+

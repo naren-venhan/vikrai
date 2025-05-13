@@ -1,6 +1,6 @@
-import { PencilSquare, Trash } from "@medusajs/icons"
-import { HttpTypes } from "@medusajs/types"
-import { Container, Heading, StatusBadge, Text } from "@medusajs/ui"
+import { PencilSquare, Trash } from "@vikrai/icons"
+import { HttpTypes } from "@vikrai/types"
+import { Container, Heading, StatusBadge, Text } from "@vikrai/ui"
 import { useTranslation } from "react-i18next"
 import { ActionMenu } from "../../../../../components/common/action-menu"
 import { useDeleteProductCategoryAction } from "../../../common/hooks/use-delete-product-category-action"
@@ -76,3 +76,4 @@ export const CategoryGeneralSection = ({
     </Container>
   )
 }
+

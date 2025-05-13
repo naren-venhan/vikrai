@@ -3,13 +3,13 @@ import presets from "./theme-presets"
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  presets: [require("@medusajs/ui-preset")],
+  presets: [require("@vikrai/ui-preset")],
   darkMode: ["class", `[data-theme="dark"]`],
   theme: {
     extend: {
       colors: {
         /* docs colors */
-        medusa: {
+        vikrai: {
           bg: {
             subtle: {
               DEFAULT: "var(--docs-bg-subtle)",
@@ -887,3 +887,4 @@ module.exports = {
     ),
   ],
 }
+

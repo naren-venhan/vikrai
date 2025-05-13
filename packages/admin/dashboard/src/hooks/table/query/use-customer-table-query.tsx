@@ -1,4 +1,4 @@
-import { HttpTypes } from "@medusajs/types"
+import { HttpTypes } from "@vikrai/types"
 import { useQueryParams } from "../../use-query-params"
 
 type UseCustomerTableQueryProps = {
@@ -42,3 +42,4 @@ export const useCustomerTableQuery = ({
     raw: queryObject,
   }
 }
+

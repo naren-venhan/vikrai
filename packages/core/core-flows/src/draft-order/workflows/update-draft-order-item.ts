@@ -4,20 +4,20 @@ import {
   MathBN,
   OrderChangeStatus,
   PromotionActions,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 import {
   createWorkflow,
   transform,
   when,
   WorkflowData,
   WorkflowResponse,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import {
   OrderChangeDTO,
   OrderDTO,
   OrderPreviewDTO,
   OrderWorkflow,
-} from "@medusajs/types"
+} from "@vikrai/types"
 import { useRemoteQueryStep } from "../../common"
 import {
   createOrderChangeActionsWorkflow,
@@ -32,7 +32,7 @@ export const updateDraftOrderItemWorkflowId = "update-draft-order-item"
 
 /**
  * This workflow updates an item in a draft order edit. It's used by the
- * [Update Item in Draft Order Edit Admin API Route](https://docs.medusajs.com/api/admin#draft-orders_postdraftordersidedititemsitemitem_id).
+ * [Update Item in Draft Order Edit Admin API Route](https://docs.vikrai.com/api/admin#draft-orders_postdraftordersidedititemsitemitem_id).
  * 
  * You can use this workflow within your customizations or your own custom workflows, allowing you to wrap custom logic around
  * updating an item in a draft order edit.
@@ -146,3 +146,4 @@ export const updateDraftOrderItemWorkflow = createWorkflow(
     return new WorkflowResponse(previewOrderChangeStep(input.order_id))
   }
 )
+

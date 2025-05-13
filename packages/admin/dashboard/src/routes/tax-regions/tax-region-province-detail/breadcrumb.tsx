@@ -1,4 +1,4 @@
-import { HttpTypes } from "@medusajs/types"
+import { HttpTypes } from "@vikrai/types"
 import { UIMatch } from "react-router-dom"
 
 import { useTaxRegion } from "../../../hooks/api"
@@ -30,3 +30,4 @@ export const TaxRegionDetailBreadcrumb = (
 
   return <span>{isValid ? getProvinceByIso2(provinceCode) : provinceCode}</span>
 }
+

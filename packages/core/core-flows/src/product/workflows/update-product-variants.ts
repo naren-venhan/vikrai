@@ -2,15 +2,15 @@ import {
   AdditionalData,
   PricingTypes,
   ProductTypes,
-} from "@medusajs/framework/types"
-import { ProductVariantWorkflowEvents } from "@medusajs/framework/utils"
+} from "@vikrai/framework/types"
+import { ProductVariantWorkflowEvents } from "@vikrai/framework/utils"
 import {
   WorkflowData,
   WorkflowResponse,
   createHook,
   createWorkflow,
   transform,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { emitEventStep } from "../../common"
 import { updatePriceSetsStep } from "../../pricing"
 import { updateProductVariantsStep } from "../steps"
@@ -51,7 +51,7 @@ export type UpdateProductVariantsWorkflowInput = (
 
 export const updateProductVariantsWorkflowId = "update-product-variants"
 /**
- * This workflow updates one or more product variants. It's used by the [Update Product Variant Admin API Route](https://docs.medusajs.com/api/admin#products_postproductsidvariantsvariant_id).
+ * This workflow updates one or more product variants. It's used by the [Update Product Variant Admin API Route](https://docs.vikrai.com/api/admin#products_postproductsidvariantsvariant_id).
  *
  * This workflow has a hook that allows you to perform custom actions on the updated product variants. For example, you can pass under `additional_data` custom data that
  * allows you to update custom data models linked to the product variants.
@@ -61,7 +61,7 @@ export const updateProductVariantsWorkflowId = "update-product-variants"
  * :::note
  * 
  * Learn more about adding rules to the product variant's prices in the Pricing Module's 
- * [Price Rules](https://docs.medusajs.com/resources/commerce-modules/pricing/price-rules) documentation.
+ * [Price Rules](https://docs.vikrai.com/resources/commerce-modules/pricing/price-rules) documentation.
  * 
  * :::
  *
@@ -258,3 +258,4 @@ export const updateProductVariantsWorkflow = createWorkflow(
     })
   }
 )
+

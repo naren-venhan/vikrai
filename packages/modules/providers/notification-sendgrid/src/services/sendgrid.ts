@@ -2,11 +2,11 @@ import {
   Logger,
   NotificationTypes,
   SendgridNotificationServiceOptions,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import {
   AbstractNotificationProviderService,
-  MedusaError,
-} from "@medusajs/framework/utils"
+  vikraiError,
+} from "@vikrai/framework/utils"
 import sendgrid from "@sendgrid/mail"
 
 type InjectedDependencies = {
@@ -43,8 +43,8 @@ export class SendgridNotificationService extends AbstractNotificationProviderSer
     notification: NotificationTypes.ProviderSendNotificationDTO
   ): Promise<NotificationTypes.ProviderSendNotificationResultsDTO> {
     if (!notification) {
-      throw new MedusaError(
-        MedusaError.Types.INVALID_DATA,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_DATA,
         `No notification information provided`
       )
     }
@@ -96,8 +96,8 @@ export class SendgridNotificationService extends AbstractNotificationProviderSer
     } catch (error) {
       const errorCode = error.code
       const responseError = error.response?.body?.errors?.[0]
-      throw new MedusaError(
-        MedusaError.Types.UNEXPECTED_STATE,
+      throw new vikraiError(
+        vikraiError.Types.UNEXPECTED_STATE,
         `Failed to send email: ${errorCode} - ${
           responseError?.message ?? "unknown error"
         }`
@@ -105,3 +105,4 @@ export class SendgridNotificationService extends AbstractNotificationProviderSer
     }
   }
 }
+

@@ -1,314 +1,314 @@
 export const fulfillment = [
   {
     "title": "Manage Order Fulfillments",
-    "path": "https://docs.medusajs.com/user-guide/orders/fulfillments"
+    "path": "https://docs.vikrai.com/user-guide/orders/fulfillments"
   },
   {
     "title": "Manage Shipping Options",
-    "path": "https://docs.medusajs.com/user-guide/settings/locations-and-shipping/locations"
+    "path": "https://docs.vikrai.com/user-guide/settings/locations-and-shipping/locations"
   },
   {
     "title": "Locations & Shipping Overview",
-    "path": "https://docs.medusajs.com/user-guide/settings/locations-and-shipping"
+    "path": "https://docs.vikrai.com/user-guide/settings/locations-and-shipping"
   },
   {
     "title": "Manage Shipping Profiles",
-    "path": "https://docs.medusajs.com/user-guide/settings/locations-and-shipping/shipping-profiles"
+    "path": "https://docs.vikrai.com/user-guide/settings/locations-and-shipping/shipping-profiles"
   },
   {
     "title": "Shipping Option Price Rules",
-    "path": "https://docs.medusajs.com/resources/commerce-modules/pricing/price-rules"
+    "path": "https://docs.vikrai.com/resources/commerce-modules/pricing/price-rules"
   },
   {
     "title": "Product Shipping Requirement",
-    "path": "https://docs.medusajs.com/resources/commerce-modules/product/selling-products"
+    "path": "https://docs.vikrai.com/resources/commerce-modules/product/selling-products"
   },
   {
     "title": "Checkout Step 3: Choose Shipping Method",
-    "path": "https://docs.medusajs.com/resources/storefront-development/checkout/shipping"
+    "path": "https://docs.vikrai.com/resources/storefront-development/checkout/shipping"
   },
   {
-    "title": "Implement Express Checkout with Medusa",
-    "path": "https://docs.medusajs.com/resources/storefront-development/guides/express-checkout"
+    "title": "Implement Express Checkout with vikrai",
+    "path": "https://docs.vikrai.com/resources/storefront-development/guides/express-checkout"
   },
   {
     "title": "validateAndReturnShippingMethodsDataStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/validateAndReturnShippingMethodsDataStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/validateAndReturnShippingMethodsDataStep"
   },
   {
     "title": "validateCartShippingOptionsStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/validateCartShippingOptionsStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/validateCartShippingOptionsStep"
   },
   {
     "title": "addShippingMethodToCartWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/addShippingMethodToCartWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/addShippingMethodToCartWorkflow"
   },
   {
     "title": "addToCartWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/addToCartWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/addToCartWorkflow"
   },
   {
     "title": "listShippingOptionsForCartWithPricingWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/listShippingOptionsForCartWithPricingWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/listShippingOptionsForCartWithPricingWorkflow"
   },
   {
     "title": "refreshCartItemsWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/refreshCartItemsWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/refreshCartItemsWorkflow"
   },
   {
     "title": "refreshCartShippingMethodsWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/refreshCartShippingMethodsWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/refreshCartShippingMethodsWorkflow"
   },
   {
     "title": "transferCartCustomerWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/transferCartCustomerWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/transferCartCustomerWorkflow"
   },
   {
     "title": "updateCartWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateCartWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/updateCartWorkflow"
   },
   {
     "title": "updateLineItemInCartWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateLineItemInCartWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/updateLineItemInCartWorkflow"
   },
   {
     "title": "calculateShippingOptionsPricesStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/calculateShippingOptionsPricesStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/calculateShippingOptionsPricesStep"
   },
   {
     "title": "cancelFulfillmentStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/cancelFulfillmentStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/cancelFulfillmentStep"
   },
   {
     "title": "createFulfillmentSets",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/createFulfillmentSets"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/createFulfillmentSets"
   },
   {
     "title": "createFulfillmentStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/createFulfillmentStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/createFulfillmentStep"
   },
   {
     "title": "createReturnFulfillmentStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/createReturnFulfillmentStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/createReturnFulfillmentStep"
   },
   {
     "title": "createServiceZonesStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/createServiceZonesStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/createServiceZonesStep"
   },
   {
     "title": "createShippingOptionRulesStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/createShippingOptionRulesStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/createShippingOptionRulesStep"
   },
   {
     "title": "createShippingProfilesStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/createShippingProfilesStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/createShippingProfilesStep"
   },
   {
     "title": "deleteFulfillmentSetsStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/deleteFulfillmentSetsStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/deleteFulfillmentSetsStep"
   },
   {
     "title": "deleteServiceZonesStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/deleteServiceZonesStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/deleteServiceZonesStep"
   },
   {
     "title": "deleteShippingOptionRulesStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/deleteShippingOptionRulesStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/deleteShippingOptionRulesStep"
   },
   {
     "title": "deleteShippingOptionsStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/deleteShippingOptionsStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/deleteShippingOptionsStep"
   },
   {
     "title": "updateFulfillmentStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/updateFulfillmentStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/updateFulfillmentStep"
   },
   {
     "title": "updateServiceZonesStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/updateServiceZonesStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/updateServiceZonesStep"
   },
   {
     "title": "updateShippingOptionRulesStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/updateShippingOptionRulesStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/updateShippingOptionRulesStep"
   },
   {
     "title": "updateShippingProfilesStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/updateShippingProfilesStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/updateShippingProfilesStep"
   },
   {
     "title": "upsertShippingOptionsStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/upsertShippingOptionsStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/upsertShippingOptionsStep"
   },
   {
     "title": "validateShipmentStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/validateShipmentStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/validateShipmentStep"
   },
   {
     "title": "validateShippingOptionPricesStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/validateShippingOptionPricesStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/validateShippingOptionPricesStep"
   },
   {
     "title": "batchShippingOptionRulesWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/batchShippingOptionRulesWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/batchShippingOptionRulesWorkflow"
   },
   {
     "title": "calculateShippingOptionsPricesWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/calculateShippingOptionsPricesWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/calculateShippingOptionsPricesWorkflow"
   },
   {
     "title": "cancelFulfillmentWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/cancelFulfillmentWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/cancelFulfillmentWorkflow"
   },
   {
     "title": "createFulfillmentWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createFulfillmentWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/createFulfillmentWorkflow"
   },
   {
     "title": "createReturnFulfillmentWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createReturnFulfillmentWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/createReturnFulfillmentWorkflow"
   },
   {
     "title": "createServiceZonesWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createServiceZonesWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/createServiceZonesWorkflow"
   },
   {
     "title": "createShipmentWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createShipmentWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/createShipmentWorkflow"
   },
   {
     "title": "createShippingOptionsWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createShippingOptionsWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/createShippingOptionsWorkflow"
   },
   {
     "title": "createShippingProfilesWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createShippingProfilesWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/createShippingProfilesWorkflow"
   },
   {
     "title": "deleteFulfillmentSetsWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/deleteFulfillmentSetsWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/deleteFulfillmentSetsWorkflow"
   },
   {
     "title": "deleteServiceZonesWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/deleteServiceZonesWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/deleteServiceZonesWorkflow"
   },
   {
     "title": "deleteShippingOptionsWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/deleteShippingOptionsWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/deleteShippingOptionsWorkflow"
   },
   {
     "title": "markFulfillmentAsDeliveredWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/markFulfillmentAsDeliveredWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/markFulfillmentAsDeliveredWorkflow"
   },
   {
     "title": "updateFulfillmentWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateFulfillmentWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/updateFulfillmentWorkflow"
   },
   {
     "title": "updateServiceZonesWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateServiceZonesWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/updateServiceZonesWorkflow"
   },
   {
     "title": "updateShippingOptionsWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateShippingOptionsWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/updateShippingOptionsWorkflow"
   },
   {
     "title": "updateShippingProfilesWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateShippingProfilesWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/updateShippingProfilesWorkflow"
   },
   {
     "title": "deleteLineItemsWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/deleteLineItemsWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/deleteLineItemsWorkflow"
   },
   {
     "title": "cancelOrderFulfillmentWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/cancelOrderFulfillmentWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/cancelOrderFulfillmentWorkflow"
   },
   {
     "title": "confirmClaimRequestWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/confirmClaimRequestWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/confirmClaimRequestWorkflow"
   },
   {
     "title": "confirmExchangeRequestWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/confirmExchangeRequestWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/confirmExchangeRequestWorkflow"
   },
   {
     "title": "confirmReturnRequestWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/confirmReturnRequestWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/confirmReturnRequestWorkflow"
   },
   {
     "title": "createAndCompleteReturnOrderWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createAndCompleteReturnOrderWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/createAndCompleteReturnOrderWorkflow"
   },
   {
     "title": "createClaimShippingMethodWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createClaimShippingMethodWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/createClaimShippingMethodWorkflow"
   },
   {
     "title": "createExchangeShippingMethodWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createExchangeShippingMethodWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/createExchangeShippingMethodWorkflow"
   },
   {
     "title": "createOrderFulfillmentWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createOrderFulfillmentWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/createOrderFulfillmentWorkflow"
   },
   {
     "title": "createOrderShipmentWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createOrderShipmentWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/createOrderShipmentWorkflow"
   },
   {
     "title": "createReturnShippingMethodWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createReturnShippingMethodWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/createReturnShippingMethodWorkflow"
   },
   {
     "title": "markOrderFulfillmentAsDeliveredWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/markOrderFulfillmentAsDeliveredWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/markOrderFulfillmentAsDeliveredWorkflow"
   },
   {
     "title": "parseProductCsvStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/parseProductCsvStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/parseProductCsvStep"
   },
   {
     "title": "importProductsWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/importProductsWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/importProductsWorkflow"
   },
   {
     "title": "deleteShippingProfilesStep",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/deleteShippingProfilesStep"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/steps/deleteShippingProfilesStep"
   },
   {
     "title": "deleteShippingProfileWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/deleteShippingProfileWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/deleteShippingProfileWorkflow"
   },
   {
     "title": "createLocationFulfillmentSetWorkflow",
-    "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createLocationFulfillmentSetWorkflow"
+    "path": "https://docs.vikrai.com/resources/references/vikrai-workflows/createLocationFulfillmentSetWorkflow"
   },
   {
     "title": "Create Fulfillment Provider",
-    "path": "https://docs.medusajs.com/resources/references/fulfillment/provider"
+    "path": "https://docs.vikrai.com/resources/references/fulfillment/provider"
   },
   {
     "title": "fulfillment",
-    "path": "https://docs.medusajs.com/resources/references/js-sdk/admin/fulfillment"
+    "path": "https://docs.vikrai.com/resources/references/js-sdk/admin/fulfillment"
   },
   {
     "title": "fulfillmentProvider",
-    "path": "https://docs.medusajs.com/resources/references/js-sdk/admin/fulfillmentProvider"
+    "path": "https://docs.vikrai.com/resources/references/js-sdk/admin/fulfillmentProvider"
   },
   {
     "title": "fulfillmentSet",
-    "path": "https://docs.medusajs.com/resources/references/js-sdk/admin/fulfillmentSet"
+    "path": "https://docs.vikrai.com/resources/references/js-sdk/admin/fulfillmentSet"
   },
   {
     "title": "shippingOption",
-    "path": "https://docs.medusajs.com/resources/references/js-sdk/admin/shippingOption"
+    "path": "https://docs.vikrai.com/resources/references/js-sdk/admin/shippingOption"
   },
   {
     "title": "shippingProfile",
-    "path": "https://docs.medusajs.com/resources/references/js-sdk/admin/shippingProfile"
+    "path": "https://docs.vikrai.com/resources/references/js-sdk/admin/shippingProfile"
   },
   {
     "title": "fulfillment",
-    "path": "https://docs.medusajs.com/resources/references/js-sdk/store/fulfillment"
+    "path": "https://docs.vikrai.com/resources/references/js-sdk/store/fulfillment"
   }
 ]

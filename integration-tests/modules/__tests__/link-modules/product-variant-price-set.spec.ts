@@ -1,16 +1,16 @@
-import { medusaIntegrationTestRunner } from "@medusajs/test-utils"
-import { IPricingModuleService, IProductModuleService } from "@medusajs/types"
+import { vikraiIntegrationTestRunner } from "@vikrai/test-utils"
+import { IPricingModuleService, IProductModuleService } from "@vikrai/types"
 import {
   ContainerRegistrationKeys,
   Modules,
   remoteQueryObjectFromString,
-} from "@medusajs/utils"
+} from "@vikrai/utils"
 
 jest.setTimeout(50000)
 
-const env = { MEDUSA_FF_MEDUSA_V2: true }
+const env = { vikrai_FF_vikrai_V2: true }
 
-medusaIntegrationTestRunner({
+vikraiIntegrationTestRunner({
   env,
   testSuite: ({ getContainer }) => {
     describe("ProductVariant Price Sets", () => {
@@ -178,3 +178,4 @@ medusaIntegrationTestRunner({
     })
   },
 })
+

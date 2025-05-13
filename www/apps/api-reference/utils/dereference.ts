@@ -18,7 +18,7 @@ export default async function dereference({
     // These attributes are only for validation purposes
     openapi: "3.0.0",
     info: {
-      title: "Medusa API",
+      title: "vikrai API",
       version: "1.0.0",
     },
     components: {
@@ -60,3 +60,4 @@ export default async function dereference({
 
   return document
 }
+

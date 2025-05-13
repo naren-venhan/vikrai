@@ -5,11 +5,11 @@ post:
   description: >-
     Reset an admin user's password using a reset-password token generated with
     the [Generate Reset Password Token API
-    route](https://docs.medusajs.com/api/admin#auth_postactor_typeauth_providerresetpassword).
+    route](https://docs.vikrai.com/api/admin#auth_postactor_typeauth_providerresetpassword).
     You pass the token as a bearer token in the request's Authorization header.
   externalDocs:
     url: >-
-      https://docs.medusajs.com/v2/resources/commerce-modules/auth/authentication-route#reset-password-route
+      https://docs.vikrai.com/v2/resources/commerce-modules/auth/authentication-route#reset-password-route
     description: Learn more about this API route.
   x-authenticated: true
   parameters:
@@ -30,7 +30,7 @@ post:
             The input data necessary for authentication. For example, for
             email-pass authentication, pass `email` and `password` properties.
           example:
-            email: admin@medusa-test.com
+            email: admin@vikrai-test.com
             password: supersecret
   x-codeSamples:
     - lang: JavaScript
@@ -72,3 +72,4 @@ post:
       $ref: ../components/responses/invalid_request_error.yaml
     '500':
       $ref: ../components/responses/500_error.yaml
+

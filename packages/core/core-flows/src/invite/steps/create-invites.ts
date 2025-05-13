@@ -1,6 +1,6 @@
-import { CreateInviteDTO, IUserModuleService } from "@medusajs/framework/types"
-import { Modules } from "@medusajs/framework/utils"
-import { StepResponse, createStep } from "@medusajs/framework/workflows-sdk"
+import { CreateInviteDTO, IUserModuleService } from "@vikrai/framework/types"
+import { Modules } from "@vikrai/framework/utils"
+import { StepResponse, createStep } from "@vikrai/framework/workflows-sdk"
 
 export const createInviteStepId = "create-invite-step"
 /**
@@ -35,3 +35,4 @@ export const createInviteStep = createStep(
     await service.deleteInvites(createdInvitesIds)
   }
 )
+

@@ -1,6 +1,6 @@
 import { zodResolver } from "@hookform/resolvers/zod"
-import { AdminCampaign } from "@medusajs/types"
-import { Button, DatePicker, Input, toast } from "@medusajs/ui"
+import { AdminCampaign } from "@vikrai/types"
+import { Button, DatePicker, Input, toast } from "@vikrai/ui"
 import { useForm } from "react-hook-form"
 import { useTranslation } from "react-i18next"
 import * as zod from "zod"
@@ -192,3 +192,4 @@ export const EditCampaignForm = ({ campaign }: EditCampaignFormProps) => {
     </RouteDrawer.Form>
   )
 }
+

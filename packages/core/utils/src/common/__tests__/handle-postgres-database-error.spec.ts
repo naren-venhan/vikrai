@@ -35,7 +35,7 @@ describe("handlePostgresDataError", function () {
     expect(outputError.message).toEqual(
       `Failed to establish a connection to PostgreSQL. Please ensure the following is true and try again:
       - You have a PostgreSQL database running
-      - You have passed the correct credentials in medusa-config.js
+      - You have passed the correct credentials in vikrai-config.js
       - You have formatted the database connection string correctly. See below:
       "postgres://[username]:[password]@[host]:[port]/[db_name]" - If there is no password, you can omit it from the connection string
       ${EOL}
@@ -87,7 +87,7 @@ describe("handlePostgresDataError", function () {
     }
 
     expect(outputError.message).toEqual(
-      `Migrations missing. Please run 'medusa migrations run' and try again.`
+      `Migrations missing. Please run 'vikrai migrations run' and try again.`
     )
   })
 
@@ -105,3 +105,4 @@ describe("handlePostgresDataError", function () {
     expect(outputError.message).toEqual("database does not exist")
   })
 })
+

@@ -1,6 +1,6 @@
 import z from "zod"
 import { expectTypeOf } from "expect-type"
-import { TransactionState } from "@medusajs/utils"
+import { TransactionState } from "@vikrai/utils"
 import { createStep } from "../create-step"
 import { createWorkflow } from "../create-workflow"
 import { StepResponse } from "../helpers"
@@ -718,3 +718,4 @@ describe("Workflow composer", () => {
     }
   })
 })
+

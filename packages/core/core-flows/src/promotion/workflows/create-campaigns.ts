@@ -1,10 +1,10 @@
-import { AdditionalData, CreateCampaignDTO } from "@medusajs/framework/types"
+import { AdditionalData, CreateCampaignDTO } from "@vikrai/framework/types"
 import {
   WorkflowData,
   WorkflowResponse,
   createHook,
   createWorkflow,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { createCampaignsStep } from "../steps"
 
 /**
@@ -19,7 +19,7 @@ export type CreateCampaignsWorkflowInput = {
 
 export const createCampaignsWorkflowId = "create-campaigns"
 /**
- * This workflow creates one or more campaigns. It's used by the [Create Campaign Admin API Route](https://docs.medusajs.com/api/admin#campaigns_postcampaigns).
+ * This workflow creates one or more campaigns. It's used by the [Create Campaign Admin API Route](https://docs.vikrai.com/api/admin#campaigns_postcampaigns).
  * 
  * This workflow has a hook that allows you to perform custom actions on the created campaigns. For example, you can pass under `additional_data` custom data that
  * allows you to create custom data models linked to the campaigns.
@@ -68,3 +68,4 @@ export const createCampaignsWorkflow = createWorkflow(
     })
   }
 )
+

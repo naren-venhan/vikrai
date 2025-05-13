@@ -1,4 +1,4 @@
-import { HttpTypes } from "@medusajs/types"
+import { HttpTypes } from "@vikrai/types"
 import { UIMatch } from "react-router-dom"
 import { usePromotion } from "../../../hooks/api"
 
@@ -20,3 +20,4 @@ export const PromotionDetailBreadcrumb = (
 
   return <span>{promotion.code}</span>
 }
+

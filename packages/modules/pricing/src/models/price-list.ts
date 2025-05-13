@@ -2,7 +2,7 @@ import {
   model,
   PriceListStatus,
   PriceListType,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 import Price from "./price"
 import PriceListRule from "./price-list-rule"
 
@@ -28,3 +28,4 @@ const PriceList = model
   })
 
 export default PriceList
+

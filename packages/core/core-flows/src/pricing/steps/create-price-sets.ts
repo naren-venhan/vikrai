@@ -1,9 +1,9 @@
 import {
   CreatePriceSetDTO,
   IPricingModuleService,
-} from "@medusajs/framework/types"
-import { Modules } from "@medusajs/framework/utils"
-import { StepResponse, createStep } from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/types"
+import { Modules } from "@vikrai/framework/utils"
+import { StepResponse, createStep } from "@vikrai/framework/workflows-sdk"
 
 /**
  * The price sets to create.
@@ -50,3 +50,4 @@ export const createPriceSetsStep = createStep(
     await pricingModule.deletePriceSets(priceSets)
   }
 )
+

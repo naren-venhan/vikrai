@@ -6,7 +6,7 @@ import { NextRequest, NextResponse } from "next/server"
 import path from "path"
 import { addUrlToRelativeLink } from "remark-rehype-plugins"
 import type { Plugin } from "unified"
-import * as Icons from "@medusajs/icons"
+import * as Icons from "@vikrai/icons"
 import * as HookValues from "@/registries/hook-values"
 import { colors as allColors } from "@/config/colors"
 

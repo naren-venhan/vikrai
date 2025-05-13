@@ -1,4 +1,4 @@
-import { Text } from "@medusajs/ui"
+import { Text } from "@vikrai/ui"
 
 export default function TextExamples() {
   return (
@@ -39,3 +39,4 @@ export default function TextExamples() {
     </div>
   )
 }
+

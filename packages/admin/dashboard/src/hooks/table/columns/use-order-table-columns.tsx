@@ -1,4 +1,4 @@
-import { HttpTypes } from "@medusajs/types"
+import { HttpTypes } from "@vikrai/types"
 import {
   ColumnDef,
   ColumnDefBase,
@@ -144,3 +144,4 @@ export const useOrderTableColumns = (props: UseOrderTableColumnsProps) => {
     (c) => !shouldExclude(c)
   ) as ColumnDef<HttpTypes.AdminOrder>[]
 }
+

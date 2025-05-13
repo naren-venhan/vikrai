@@ -5,7 +5,7 @@ import {
   createCalendar,
   getLocalTimeZone
 } from "@internationalized/date"
-import { TriangleLeftMini, TriangleRightMini } from "@medusajs/icons"
+import { TriangleLeftMini, TriangleRightMini } from "@vikrai/icons"
 import * as React from "react"
 import {
   DateValue,
@@ -114,3 +114,4 @@ function convertProps(
 }
 
 export { Calendar }
+

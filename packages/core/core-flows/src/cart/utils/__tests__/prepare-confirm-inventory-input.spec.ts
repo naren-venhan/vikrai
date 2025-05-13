@@ -1,5 +1,5 @@
-import { ConfirmVariantInventoryWorkflowInputDTO } from "@medusajs/framework/types"
-import { MedusaError } from "@medusajs/framework/utils"
+import { ConfirmVariantInventoryWorkflowInputDTO } from "@vikrai/framework/types"
+import { vikraiError } from "@vikrai/framework/utils"
 import { prepareConfirmInventoryInput } from "../prepare-confirm-inventory-input"
 
 describe("prepareConfirmInventoryInput", () => {
@@ -286,7 +286,7 @@ describe("prepareConfirmInventoryInput", () => {
       ],
     }
 
-    expect(() => prepareConfirmInventoryInput({ input })).toThrow(MedusaError)
+    expect(() => prepareConfirmInventoryInput({ input })).toThrow(vikraiError)
   })
 
   it("if allow_backorder is true, it should return normally even if there's no stock location for the sales channel", () => {
@@ -528,6 +528,7 @@ describe("prepareConfirmInventoryInput", () => {
       ],
     }
 
-    expect(() => prepareConfirmInventoryInput({ input })).toThrow(MedusaError)
+    expect(() => prepareConfirmInventoryInput({ input })).toThrow(vikraiError)
   })
 })
+

@@ -32,14 +32,14 @@ const SearchProvider = ({ children }: SearchProviderProps) => {
           {
             title: "Getting started? Try one of the following terms.",
             items: [
-              "Install Medusa with create-medusa-app",
+              "Install vikrai with create-vikrai-app",
               "What is an API route?",
               "What is a Module?",
               "What is a Workflow?",
             ],
           },
           {
-            title: "Developing with Medusa",
+            title: "Developing with vikrai",
             items: [
               "How to create a Module",
               "How to create an API route",
@@ -60,3 +60,4 @@ const SearchProvider = ({ children }: SearchProviderProps) => {
 }
 
 export default SearchProvider
+

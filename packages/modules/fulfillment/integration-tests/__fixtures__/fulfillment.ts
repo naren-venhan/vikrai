@@ -1,4 +1,4 @@
-import { CreateFulfillmentDTO } from "@medusajs/framework/types"
+import { CreateFulfillmentDTO } from "@vikrai/framework/types"
 
 export function generateCreateFulfillmentData(
   data: Partial<CreateFulfillmentDTO> & {
@@ -46,3 +46,4 @@ export function generateCreateFulfillmentData(
     order: data.order ?? {},
   }
 }
+

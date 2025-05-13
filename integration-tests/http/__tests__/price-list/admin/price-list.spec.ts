@@ -1,4 +1,4 @@
-import { medusaIntegrationTestRunner } from "@medusajs/test-utils"
+import { vikraiIntegrationTestRunner } from "@vikrai/test-utils"
 import {
   adminHeaders,
   createAdminUser,
@@ -10,7 +10,7 @@ import {
 
 jest.setTimeout(30000)
 
-medusaIntegrationTestRunner({
+vikraiIntegrationTestRunner({
   env: {},
   testSuite: ({ dbConnection, getContainer, api }) => {
     let pricelist1
@@ -726,25 +726,25 @@ medusaIntegrationTestRunner({
 })
 
 // TODO: Revisit tax inclusive pricing
-// describe("[MEDUSA_FF_TAX_INCLUSIVE_PRICING] /admin/price-lists", () => {
-//   let medusaProcess
+// describe("[vikrai_FF_TAX_INCLUSIVE_PRICING] /admin/price-lists", () => {
+//   let vikraiProcess
 //   let dbConnection
 
 //   beforeAll(async () => {
 //     const cwd = path.resolve(path.join(__dirname, "..", ".."))
 //     const [process, connection] = await startServerWithEnvironment({
 //       cwd,
-//       env: { MEDUSA_FF_TAX_INCLUSIVE_PRICING: true },
+//       env: { vikrai_FF_TAX_INCLUSIVE_PRICING: true },
 //     })
 //     dbConnection = connection
-//     medusaProcess = process
+//     vikraiProcess = process
 //   })
 
 //   afterAll(async () => {
 //     const db = useDb()
 //     await db.shutdown()
 
-//     medusaProcess.kill()
+//     vikraiProcess.kill()
 //   })
 
 //   describe("POST /admin/price-list", () => {
@@ -830,3 +830,4 @@ medusaIntegrationTestRunner({
 //     })
 //   })
 // })
+

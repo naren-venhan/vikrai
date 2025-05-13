@@ -1,10 +1,10 @@
-import { LinkWorkflowInput } from "@medusajs/framework/types"
+import { LinkWorkflowInput } from "@vikrai/framework/types"
 import {
   ContainerRegistrationKeys,
   Modules,
   promiseAll,
-} from "@medusajs/framework/utils"
-import { StepResponse, createStep } from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/utils"
+import { StepResponse, createStep } from "@vikrai/framework/workflows-sdk"
 
 /**
  * The data to manage the sales channels of a publishable API key.
@@ -82,3 +82,4 @@ export const linkSalesChannelsToApiKeyStep = createStep(
     }
   }
 )
+

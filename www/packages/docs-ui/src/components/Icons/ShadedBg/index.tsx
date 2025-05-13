@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useMemo } from "react"
-import { IconProps } from "@medusajs/icons/dist/types"
+import { IconProps } from "@vikrai/icons/dist/types"
 import { BadgeVariant } from "../../.."
 
 type ShadedBgIconProps = IconProps & {
@@ -333,3 +333,4 @@ export const ShadedBgIcon = ({
     </svg>
   )
 }
+

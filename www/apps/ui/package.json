@@ -16,9 +16,9 @@
   "dependencies": {
     "@faker-js/faker": "^8.0.2",
     "@mdx-js/react": "^3.1.0",
-    "@medusajs/icons": "2.7.1",
-    "@medusajs/ui": "4.0.9",
-    "@medusajs/ui-preset": "2.7.1",
+    "@vikrai/icons": "2.7.1",
+    "@vikrai/ui": "4.0.9",
+    "@vikrai/ui-preset": "2.7.1",
     "autoprefixer": "10.4.14",
     "build-scripts": "*",
     "clsx": "^2.0.0",
@@ -62,3 +62,4 @@
     "@types/react-dom": "npm:types-react-dom@rc"
   }
 }
+

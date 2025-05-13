@@ -4,7 +4,7 @@ import clsx from "clsx"
 import React from "react"
 import { Tooltip } from "../../../Tooltip"
 import { Link } from "../../../Link"
-import { ShieldCheck, XMark } from "@medusajs/icons"
+import { ShieldCheck, XMark } from "@vikrai/icons"
 import { Button } from "../../../Button"
 import { useAiAssistant } from "../../../../providers"
 
@@ -15,11 +15,11 @@ export const AiAssistantChatWindowHeader = () => {
       className={clsx(
         "flex gap-docs_0.5 items-center justify-between",
         "w-full px-docs_1 py-docs_0.75 rounded-t-docs_sm",
-        "border-medusa-border-base border-b"
+        "border-vikrai-border-base border-b"
       )}
     >
       <div className="flex gap-[6px] items-center">
-        <span className="text-h3 text-medusa-fg-base">Ask Anything</span>
+        <span className="text-h3 text-vikrai-fg-base">Ask Anything</span>
         <Tooltip
           tooltipChildren={
             <>
@@ -36,7 +36,7 @@ export const AiAssistantChatWindowHeader = () => {
           clickable={true}
           tooltipClassName={"!text-compact-small-plus"}
         >
-          <ShieldCheck className="text-medusa-fg-muted" />
+          <ShieldCheck className="text-vikrai-fg-muted" />
         </Tooltip>
       </div>
       <Button
@@ -44,8 +44,9 @@ export const AiAssistantChatWindowHeader = () => {
         className="!p-[6.5px] rounded-docs_sm"
         onClick={() => setChatOpened(false)}
       >
-        <XMark className="text-medusa-fg-muted" height={15} width={15} />
+        <XMark className="text-vikrai-fg-muted" height={15} width={15} />
       </Button>
     </div>
   )
 }
+

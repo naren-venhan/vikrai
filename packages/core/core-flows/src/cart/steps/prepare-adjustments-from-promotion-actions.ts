@@ -6,9 +6,9 @@ import {
   PromotionDTO,
   RemoveItemAdjustmentAction,
   RemoveShippingMethodAdjustment,
-} from "@medusajs/framework/types"
-import { ComputedActions, Modules } from "@medusajs/framework/utils"
-import { StepResponse, createStep } from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/types"
+import { ComputedActions, Modules } from "@vikrai/framework/utils"
+import { StepResponse, createStep } from "@vikrai/framework/workflows-sdk"
 
 /**
  * The details of the actions computed by the Promotion Module.
@@ -172,3 +172,4 @@ export const prepareAdjustmentsFromPromotionActionsStep = createStep(
     } as PrepareAdjustmentsFromPromotionActionsStepOutput)
   }
 )
+

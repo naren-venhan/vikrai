@@ -1,5 +1,5 @@
-import { AdminOrder } from "@medusajs/types"
-import { Container, Heading } from "@medusajs/ui"
+import { AdminOrder } from "@vikrai/types"
+import { Container, Heading } from "@vikrai/ui"
 import { useTranslation } from "react-i18next"
 import { OrderTimeline } from "./order-timeline"
 
@@ -23,3 +23,4 @@ export const OrderActivitySection = ({ order }: OrderActivityProps) => {
     </Container>
   )
 }
+

@@ -1,6 +1,6 @@
 "use client"
 
-import { BarsThree, Book, SidebarLeft, TimelineVertical } from "@medusajs/icons"
+import { BarsThree, Book, SidebarLeft, TimelineVertical } from "@vikrai/icons"
 import React, { useMemo, useRef, useState } from "react"
 import {
   Button,
@@ -31,19 +31,19 @@ export const MainNavDesktopMenu = () => {
         type: "link",
         icon: <HouseIcon />,
         title: "Homepage",
-        link: "https://medusajs.com",
+        link: "https://vikrai.com",
       },
       {
         type: "link",
         icon: <Book />,
-        title: "Medusa v1",
-        link: "https://docs.medusajs.com/v1",
+        title: "vikrai v1",
+        link: "https://docs.vikrai.com/v1",
       },
       {
         type: "link",
         icon: <TimelineVertical />,
         title: "Changelog",
-        link: "https://medusajs.com/changelog",
+        link: "https://vikrai.com/changelog",
       },
     ]
 
@@ -88,7 +88,7 @@ export const MainNavDesktopMenu = () => {
         onClick={() => setIsOpen((prev) => !prev)}
         className="!p-[6.5px]"
       >
-        <BarsThree className="text-medusa-fg-subtle" />
+        <BarsThree className="text-vikrai-fg-subtle" />
       </Button>
       <Menu
         className={clsx(
@@ -100,3 +100,4 @@ export const MainNavDesktopMenu = () => {
     </div>
   )
 }
+

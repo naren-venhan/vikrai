@@ -1,7 +1,7 @@
-import { DeleteEntityInput } from "@medusajs/framework/modules-sdk"
-import { IFulfillmentModuleService } from "@medusajs/framework/types"
-import { Modules } from "@medusajs/framework/utils"
-import { StepResponse, createStep } from "@medusajs/framework/workflows-sdk"
+import { DeleteEntityInput } from "@vikrai/framework/modules-sdk"
+import { IFulfillmentModuleService } from "@vikrai/framework/types"
+import { Modules } from "@vikrai/framework/utils"
+import { StepResponse, createStep } from "@vikrai/framework/workflows-sdk"
 
 /**
  * The IDs of the shipping options to delete.
@@ -44,3 +44,4 @@ export const deleteShippingOptionsStep = createStep(
     await service.restoreShippingOptions(prevIds)
   }
 )
+

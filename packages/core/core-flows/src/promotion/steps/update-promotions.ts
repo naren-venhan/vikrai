@@ -1,13 +1,13 @@
 import {
   IPromotionModuleService,
   UpdatePromotionDTO,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import {
   Modules,
   convertItemResponseToUpdateRequest,
   getSelectsAndRelationsFromObjectArray,
-} from "@medusajs/framework/utils"
-import { StepResponse, createStep } from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/utils"
+import { StepResponse, createStep } from "@vikrai/framework/workflows-sdk"
 
 export const updatePromotionsStepId = "update-promotions"
 /**
@@ -60,3 +60,4 @@ export const updatePromotionsStep = createStep(
     )
   }
 )
+

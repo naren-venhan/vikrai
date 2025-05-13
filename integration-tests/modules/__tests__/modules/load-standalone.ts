@@ -1,11 +1,11 @@
-import { medusaIntegrationTestRunner } from "@medusajs/test-utils"
-import { MedusaApp } from "@medusajs/modules-sdk"
-import { IProductModuleService } from "@medusajs/types"
-import { Modules } from "@medusajs/utils"
+import { vikraiIntegrationTestRunner } from "@vikrai/test-utils"
+import { vikraiApp } from "@vikrai/modules-sdk"
+import { IProductModuleService } from "@vikrai/types"
+import { Modules } from "@vikrai/utils"
 
 jest.setTimeout(30000)
 
-medusaIntegrationTestRunner({
+vikraiIntegrationTestRunner({
   testSuite: ({ dbConfig: { clientUrl } }) => {
     describe("Standalone Modules", () => {
       beforeAll(async () => {
@@ -17,7 +17,7 @@ medusaIntegrationTestRunner({
       })
 
       it("Should migrate database and initialize Product module using connection string from environment variable ", async function () {
-        const { modules, runMigrations } = await MedusaApp({
+        const { modules, runMigrations } = await vikraiApp({
           modulesConfig: {
             [Modules.PRODUCT]: true,
           },
@@ -36,3 +36,4 @@ medusaIntegrationTestRunner({
     })
   },
 })
+

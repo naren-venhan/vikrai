@@ -1,9 +1,9 @@
 import {
-  MedusaError,
+  vikraiError,
   OrderStatus,
   PromotionStatus,
-} from "@medusajs/framework/utils"
-import { OrderDTO, PromotionDTO } from "@medusajs/types"
+} from "@vikrai/framework/utils"
+import { OrderDTO, PromotionDTO } from "@vikrai/types"
 
 interface ThrowIfNotDraftOrderInput {
   order: OrderDTO
@@ -11,8 +11,8 @@ interface ThrowIfNotDraftOrderInput {
 
 export function throwIfNotDraftOrder({ order }: ThrowIfNotDraftOrderInput) {
   if (order.status !== OrderStatus.DRAFT && !order.is_draft_order) {
-    throw new MedusaError(
-      MedusaError.Types.INVALID_DATA,
+    throw new vikraiError(
+      vikraiError.Types.INVALID_DATA,
       "Order is not a draft"
     )
   }
@@ -31,8 +31,8 @@ export function throwIfCodesAreMissing(
   )
 
   if (missingPromoCodes.length > 0) {
-    throw new MedusaError(
-      MedusaError.Types.INVALID_DATA,
+    throw new vikraiError(
+      vikraiError.Types.INVALID_DATA,
       getMessageByCount(
         missingPromoCodes.length,
         `Promotion code "${missingPromoCodes[0]}" not found`,
@@ -54,8 +54,8 @@ export function throwIfCodesAreInactive(
   )
 
   if (inactivePromoCodes.length > 0) {
-    throw new MedusaError(
-      MedusaError.Types.INVALID_DATA,
+    throw new vikraiError(
+      vikraiError.Types.INVALID_DATA,
       getMessageByCount(
         inactivePromoCodes.length,
         `Promotion code "${inactivePromoCodes[0]}" is not active`,
@@ -64,3 +64,4 @@ export function throwIfCodesAreInactive(
     )
   }
 }
+

@@ -1,12 +1,12 @@
-import { OrderDTO, OrderWorkflow } from "@medusajs/framework/types"
+import { OrderDTO, OrderWorkflow } from "@vikrai/framework/types"
 import {
   WorkflowData,
   WorkflowResponse,
   createStep,
   createWorkflow,
   transform,
-} from "@medusajs/framework/workflows-sdk"
-import { CustomerDTO, OrderPreviewDTO } from "@medusajs/types"
+} from "@vikrai/framework/workflows-sdk"
+import { CustomerDTO, OrderPreviewDTO } from "@vikrai/types"
 import { v4 as uid } from "uuid"
 
 import { emitEventStep, useRemoteQueryStep } from "../../../common"
@@ -15,10 +15,10 @@ import { throwIfOrderIsCancelled } from "../../utils/order-validation"
 import { createOrderChangeActionsWorkflow } from "../create-order-change-actions"
 import {
   ChangeActionType,
-  MedusaError,
+  vikraiError,
   OrderChangeStatus,
   OrderWorkflowEvents,
-} from "@medusajs/utils"
+} from "@vikrai/utils"
 import { previewOrderChangeStep, updateOrderChangesStep } from "../../steps"
 
 /**
@@ -42,8 +42,8 @@ export type RequestOrderTransferValidationStepInput = {
  * 
  * :::note
  * 
- * You can retrieve an order and customer details using [Query](https://docs.medusajs.com/learn/fundamentals/module-links/query),
- * or [useQueryGraphStep](https://docs.medusajs.com/resources/references/medusa-workflows/steps/useQueryGraphStep).
+ * You can retrieve an order and customer details using [Query](https://docs.vikrai.com/learn/fundamentals/module-links/query),
+ * or [useQueryGraphStep](https://docs.vikrai.com/resources/references/vikrai-workflows/steps/useQueryGraphStep).
  * 
  * :::
  * 
@@ -68,15 +68,15 @@ export const requestOrderTransferValidationStep = createStep(
     throwIfOrderIsCancelled({ order })
 
     if (!customer.has_account) {
-      throw new MedusaError(
-        MedusaError.Types.INVALID_DATA,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_DATA,
         `Cannot transfer order: ${order.id} to a guest customer account: ${customer.email}`
       )
     }
 
     if (order.customer_id === customer.id) {
-      throw new MedusaError(
-        MedusaError.Types.INVALID_DATA,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_DATA,
         `Order: ${order.id} already belongs to customer: ${customer.id}`
       )
     }
@@ -88,8 +88,8 @@ export const requestOrderTransferWorkflowId = "request-order-transfer-workflow"
  * This workflow requests an order transfer from a guest customer to a registered customer. It can be requested by an admin user or a customer.
  * If a customer requested the transfer, the `logged_in_user` input property should be the same as the customer's ID.
  * 
- * This workflow is used by the [Request Order Transfer Store API Route](https://docs.medusajs.com/api/store#orders_postordersidtransferrequest),
- * and the [Request Order Transfer Admin API Route](https://docs.medusajs.com/api/admin#orders_postordersidtransfer).
+ * This workflow is used by the [Request Order Transfer Store API Route](https://docs.vikrai.com/api/store#orders_postordersidtransferrequest),
+ * and the [Request Order Transfer Admin API Route](https://docs.vikrai.com/api/admin#orders_postordersidtransfer).
  * 
  * You can use this workflow within your customizations or your own custom workflows, allowing you to build a custom flow around requesting an order transfer.
  * 
@@ -186,3 +186,4 @@ export const requestOrderTransferWorkflow = createWorkflow(
     return new WorkflowResponse(previewOrderChangeStep(input.order_id))
   }
 )
+

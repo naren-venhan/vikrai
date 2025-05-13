@@ -23,7 +23,7 @@ type UpdateFlatShippingOptionInputBase = {
   shipping_profile_id?: string
   /**
    * Custom data that's necessary for the shipping option's fulfillment provider.
-   * Learn more about this property in [this documentation](https://docs.medusajs.com/resources/commerce-modules/fulfillment/shipping-option#data-property).
+   * Learn more about this property in [this documentation](https://docs.vikrai.com/resources/commerce-modules/fulfillment/shipping-option#data-property).
    */
   data?: Record<string, unknown>
   /**
@@ -158,3 +158,4 @@ export type UpdateShippingOptionsWorkflowOutput = {
    */
   id: string
 }[]
+

@@ -1,9 +1,9 @@
-import { LinkWorkflowInput } from "@medusajs/framework/types"
+import { LinkWorkflowInput } from "@vikrai/framework/types"
 import {
   WorkflowData,
   createWorkflow,
   parallelize,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import {
   addCampaignPromotionsStep,
   removeCampaignPromotionsStep,
@@ -22,7 +22,7 @@ export const addOrRemoveCampaignPromotionsWorkflowId =
   "add-or-remove-campaign-promotions"
 /**
  * This workflow manages the promotions of a campaign. It's used by the 
- * [Manage Promotions Admin API Route](https://docs.medusajs.com/api/admin#campaigns_postcampaignsidpromotions).
+ * [Manage Promotions Admin API Route](https://docs.vikrai.com/api/admin#campaigns_postcampaignsidpromotions).
  * 
  * You can use this workflow within your own customizations or custom workflows, allowing you to
  * manage the promotions of a campaign within your custom flows.
@@ -50,3 +50,4 @@ export const addOrRemoveCampaignPromotionsWorkflow = createWorkflow(
     )
   }
 )
+

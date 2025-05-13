@@ -1,22 +1,22 @@
-import { RemoteJoiner } from "@medusajs/framework/orchestration"
-import CustomerModule from "@medusajs/medusa/customer"
-import RegionModule from "@medusajs/medusa/region"
-import { MedusaModule } from "@medusajs/modules-sdk"
-import { medusaIntegrationTestRunner } from "@medusajs/test-utils"
+import { RemoteJoiner } from "@vikrai/framework/orchestration"
+import CustomerModule from "@vikrai/vikrai/customer"
+import RegionModule from "@vikrai/vikrai/region"
+import { vikraiModule } from "@vikrai/modules-sdk"
+import { vikraiIntegrationTestRunner } from "@vikrai/test-utils"
 import {
   IRegionModuleService,
   ModuleJoinerConfig,
   RemoteQueryFunction,
-} from "@medusajs/types"
-import { ContainerRegistrationKeys, defineLink, Modules } from "@medusajs/utils"
+} from "@vikrai/types"
+import { ContainerRegistrationKeys, defineLink, Modules } from "@vikrai/utils"
 import { createAdminUser } from "../../..//helpers/create-admin-user"
 import { adminHeaders } from "../../../helpers/create-admin-user"
 
 jest.setTimeout(50000)
 
-const env = { MEDUSA_FF_MEDUSA_V2: true }
+const env = { vikrai_FF_vikrai_V2: true }
 
-medusaIntegrationTestRunner({
+vikraiIntegrationTestRunner({
   env,
   testSuite: ({ dbConnection, getContainer, api }) => {
     describe("Remote Query", () => {
@@ -450,7 +450,7 @@ medusaIntegrationTestRunner({
         defineLink(customer, country)
         defineLink(customerGroup, country)
 
-        const modulesLoaded = MedusaModule.getLoadedModules().map(
+        const modulesLoaded = vikraiModule.getLoadedModules().map(
           (mod) => Object.values(mod)[0]
         )
 
@@ -463,10 +463,10 @@ medusaIntegrationTestRunner({
 
           servicesConfig_!.push(mod.__joinerConfig)
         }
-        const linkDefinition = MedusaModule.getCustomLinks().map(
+        const linkDefinition = vikraiModule.getCustomLinks().map(
           (linkDefinition: any) => {
             const definition = linkDefinition(
-              MedusaModule.getAllJoinerConfigs()
+              vikraiModule.getAllJoinerConfigs()
             )
             return definition
           }
@@ -523,3 +523,4 @@ medusaIntegrationTestRunner({
     })
   },
 })
+

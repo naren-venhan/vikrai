@@ -1,4 +1,4 @@
-import { ITaxProvider, TaxTypes } from "@medusajs/framework/types"
+import { ITaxProvider, TaxTypes } from "@vikrai/framework/types"
 
 export default class SystemTaxService implements ITaxProvider {
   static identifier = "system"
@@ -40,3 +40,4 @@ export default class SystemTaxService implements ITaxProvider {
     return taxLines
   }
 }
+

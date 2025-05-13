@@ -21,25 +21,26 @@ export const LinkButton = ({
         className,
         "inline-flex justify-center items-center",
         "gap-docs_0.25 rounded-docs_xs",
-        "text-compact-small-plus disabled:text-medusa-fg-disabled",
+        "text-compact-small-plus disabled:text-vikrai-fg-disabled",
         "focus:shadow-borders-focus no-underline",
         variant === "base" && [
-          "text-medusa-fg-base hover:text-medusa-fg-subtle",
-          "focus:text-medusa-fg-base",
+          "text-vikrai-fg-base hover:text-vikrai-fg-subtle",
+          "focus:text-vikrai-fg-base",
         ],
         variant === "interactive" && [
-          "text-medusa-fg-interactive hover:text-medusa-interactive-hover",
-          "focus:text-medusa-fg-interactive",
+          "text-vikrai-fg-interactive hover:text-vikrai-interactive-hover",
+          "focus:text-vikrai-fg-interactive",
         ],
         variant === "subtle" && [
-          "text-medusa-fg-subtle hover:text-medusa-fg-base",
-          "focus:text-medusa-fg-subtle",
+          "text-vikrai-fg-subtle hover:text-vikrai-fg-base",
+          "focus:text-vikrai-fg-subtle",
         ],
         variant === "muted" && [
-          "text-medusa-fg-muted hover:text-medusa-fg-subtle",
-          "focus:text-medusa-fg-muted",
+          "text-vikrai-fg-muted hover:text-vikrai-fg-subtle",
+          "focus:text-vikrai-fg-muted",
         ]
       )}
     />
   )
 }
+

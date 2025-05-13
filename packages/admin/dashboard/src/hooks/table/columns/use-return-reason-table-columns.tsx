@@ -1,5 +1,5 @@
-import { HttpTypes } from "@medusajs/types"
-import { Badge } from "@medusajs/ui"
+import { HttpTypes } from "@vikrai/types"
+import { Badge } from "@vikrai/ui"
 import { createColumnHelper } from "@tanstack/react-table"
 import { useMemo } from "react"
 
@@ -30,3 +30,4 @@ export const useReturnReasonTableColumns = () => {
     []
   )
 }
+

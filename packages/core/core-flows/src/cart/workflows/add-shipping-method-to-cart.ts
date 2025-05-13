@@ -1,4 +1,4 @@
-import { CartWorkflowEvents, MedusaError } from "@medusajs/framework/utils"
+import { CartWorkflowEvents, vikraiError } from "@vikrai/framework/utils"
 import {
   createHook,
   createWorkflow,
@@ -6,7 +6,7 @@ import {
   transform,
   WorkflowData,
   WorkflowResponse,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { emitEventStep } from "../../common/steps/emit-event"
 import { useRemoteQueryStep } from "../../common/steps/use-remote-query"
 import {
@@ -40,7 +40,7 @@ export interface AddShippingMethodToCartWorkflowInput {
     /**
      * Custom data useful for the fulfillment provider processing the shipping option or method.
      *
-     * Learn more in [this documentation](https://docs.medusajs.com/resources/commerce-modules/fulfillment/shipping-option#data-property).
+     * Learn more in [this documentation](https://docs.vikrai.com/resources/commerce-modules/fulfillment/shipping-option#data-property).
      */
     data?: Record<string, unknown>
   }[]
@@ -49,7 +49,7 @@ export interface AddShippingMethodToCartWorkflowInput {
 export const addShippingMethodToCartWorkflowId = "add-shipping-method-to-cart"
 /**
  * This workflow adds a shipping method to a cart. It's executed by the
- * [Add Shipping Method Store API Route](https://docs.medusajs.com/api/store#carts_postcartsidshippingmethods).
+ * [Add Shipping Method Store API Route](https://docs.vikrai.com/api/store#carts_postcartsidshippingmethods).
  *
  * You can use this workflow within your own customizations or custom workflows, allowing you to wrap custom logic around adding a shipping method to the cart.
  *
@@ -156,8 +156,8 @@ export const addShippingMethodToCartWorkflow = createWorkflow(
           )!
 
           if (!shippingOption?.calculated_price) {
-            throw new MedusaError(
-              MedusaError.Types.INVALID_DATA,
+            throw new vikraiError(
+              vikraiError.Types.INVALID_DATA,
               `Shipping option with ID ${shippingOption.id} do not have a price`
             )
           }
@@ -208,3 +208,4 @@ export const addShippingMethodToCartWorkflow = createWorkflow(
     })
   }
 )
+

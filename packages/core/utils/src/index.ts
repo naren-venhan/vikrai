@@ -29,5 +29,6 @@ export * from "./totals"
 export * from "./totals/big-number"
 export * from "./user"
 
-export const MedusaModuleType = Symbol.for("MedusaModule")
-export const MedusaModuleProviderType = Symbol.for("MedusaModuleProvider")
+export const vikraiModuleType = Symbol.for("vikraiModule")
+export const vikraiModuleProviderType = Symbol.for("vikraiModuleProvider")
+

@@ -1,8 +1,8 @@
 import {
   ChangeActionType,
   MathBN,
-  MedusaError,
-} from "@medusajs/framework/utils"
+  vikraiError,
+} from "@vikrai/framework/utils"
 import { VirtualOrder } from "@types"
 import { OrderChangeProcessing } from "../calculate-order-change"
 import { setActionReference } from "../set-action-reference"
@@ -46,24 +46,25 @@ OrderChangeProcessing.registerActionType(ChangeActionType.ITEM_ADD, {
     const refId = action.details?.reference_id
 
     if (action.amount == null && action.details?.unit_price == null) {
-      throw new MedusaError(
-        MedusaError.Types.INVALID_DATA,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_DATA,
         `Unit price of item ${refId} is required if no action.amount is provided.`
       )
     }
 
     if (!action.details?.quantity) {
-      throw new MedusaError(
-        MedusaError.Types.INVALID_DATA,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_DATA,
         `Quantity of item ${refId} is required.`
       )
     }
 
     if (MathBN.lt(action.details?.quantity, 1)) {
-      throw new MedusaError(
-        MedusaError.Types.INVALID_DATA,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_DATA,
         `Quantity of item ${refId} must be greater than 0.`
       )
     }
   },
 })
+

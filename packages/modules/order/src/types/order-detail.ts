@@ -1,4 +1,4 @@
-import { BigNumberInput } from "@medusajs/framework/types"
+import { BigNumberInput } from "@vikrai/framework/types"
 
 export interface PartialUpsertOrderItemDTO {
   order_id?: string
@@ -27,3 +27,4 @@ export interface UpdateOrderItemDTO
     Partial<CreateOrderItemDTO> {
   id: string
 }
+

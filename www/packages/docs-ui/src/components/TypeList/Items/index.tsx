@@ -18,7 +18,7 @@ import {
   FlagMini,
   Link,
   TriangleRightMini,
-} from "@medusajs/icons"
+} from "@vikrai/icons"
 import { decodeStr, isInView } from "@/utils"
 import { usePathname } from "next/navigation"
 import { useIsBrowser, useSiteConfig } from "../../.."
@@ -176,14 +176,14 @@ const TypeListItem = ({
           {nested && (
             <TriangleRightMini
               className={clsx(
-                "text-medusa-fg-subtle transition-transform",
+                "text-vikrai-fg-subtle transition-transform",
                 rotateForGroupName
               )}
             />
           )}
           {!nested && level > 1 && (
             <ArrowDownLeftMini
-              className={clsx("text-medusa-fg-subtle flip-y")}
+              className={clsx("text-vikrai-fg-subtle flip-y")}
             />
           )}
           {level === 1 && typeId.length > 0 && (
@@ -196,14 +196,14 @@ const TypeListItem = ({
             >
               <Link
                 className={clsx(
-                  "text-medusa-fg-interactive hover:text-medusa-fg-interactive-hover"
+                  "text-vikrai-fg-interactive hover:text-vikrai-fg-interactive-hover"
                 )}
               />
             </CopyButton>
           )}
           <div className="flex gap-0.75 flex-wrap flex-1">
             <InlineCode>{decodeStr(item.name)}</InlineCode>
-            <span className="font-monospace text-compact-small-plus text-medusa-fg-subtle">
+            <span className="font-monospace text-compact-small-plus text-vikrai-fg-subtle">
               <MarkdownContent allowedElements={["a"]} unwrapDisallowed={true}>
                 {item.type}
               </MarkdownContent>
@@ -212,7 +212,7 @@ const TypeListItem = ({
               <span
                 className={clsx(
                   "text-compact-x-small-plus",
-                  "text-medusa-tag-blue-text"
+                  "text-vikrai-tag-blue-text"
                 )}
               >
                 Optional
@@ -224,7 +224,7 @@ const TypeListItem = ({
                 type="type"
                 badgeClassName="!p-0 leading-none"
                 badgeContent={
-                  <FlagMini className="!text-medusa-tag-green-text" />
+                  <FlagMini className="!text-vikrai-tag-green-text" />
                 }
               />
             )}
@@ -286,3 +286,4 @@ const TypeListItems = ({ types, ...rest }: TypeListItemsProps) => {
 }
 
 export default TypeListItems
+

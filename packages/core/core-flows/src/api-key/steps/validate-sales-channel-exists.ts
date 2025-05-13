@@ -1,10 +1,10 @@
-import { ISalesChannelModuleService } from "@medusajs/framework/types"
+import { ISalesChannelModuleService } from "@vikrai/framework/types"
 import {
-  MedusaError,
+  vikraiError,
   Modules,
   arrayDifference,
-} from "@medusajs/framework/utils"
-import { StepResponse, createStep } from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/utils"
+import { StepResponse, createStep } from "@vikrai/framework/workflows-sdk"
 
 /**
  * The data to validate that the sales channels exist.
@@ -37,8 +37,8 @@ export const validateSalesChannelsExistStep = createStep(
     const notFound = arrayDifference(data.sales_channel_ids, salesChannelIds)
 
     if (notFound.length) {
-      throw new MedusaError(
-        MedusaError.Types.INVALID_DATA,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_DATA,
         `Sales channels with IDs ${notFound.join(", ")} do not exist`
       )
     }
@@ -46,3 +46,4 @@ export const validateSalesChannelsExistStep = createStep(
     return new StepResponse(salesChannelIds)
   }
 )
+

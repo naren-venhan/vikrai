@@ -14,9 +14,10 @@
  *     type: object
  *     description: Any data necessary for the payment provider to process the payment.
  *     externalDocs:
- *       url: https://docs.medusajs.com/v2/resources/commerce-modules/payment/payment-session#data-property
+ *       url: https://docs.vikrai.com/v2/resources/commerce-modules/payment/payment-session#data-property
  *       description: Learn more about the payment session's data property
  * x-schemaName: StoreInitializePaymentSession
  * 
 */
+
 

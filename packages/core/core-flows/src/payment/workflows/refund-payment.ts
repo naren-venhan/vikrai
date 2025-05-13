@@ -1,5 +1,5 @@
-import { BigNumberInput, OrderDTO, PaymentDTO } from "@medusajs/framework/types"
-import { MathBN, MedusaError, PaymentEvents } from "@medusajs/framework/utils"
+import { BigNumberInput, OrderDTO, PaymentDTO } from "@vikrai/framework/types"
+import { MathBN, vikraiError, PaymentEvents } from "@vikrai/framework/utils"
 import {
   WorkflowData,
   WorkflowResponse,
@@ -7,7 +7,7 @@ import {
   createWorkflow,
   transform,
   when,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { emitEventStep, useRemoteQueryStep } from "../../common"
 import { addOrderTransactionStep } from "../../order/steps/add-order-transaction"
 import { refundPaymentStep } from "../steps/refund-payment"
@@ -36,8 +36,8 @@ export type ValidateRefundStepInput = {
  *
  * :::note
  *
- * You can retrieve an order or payment's details using [Query](https://docs.medusajs.com/learn/fundamentals/module-links/query),
- * or [useQueryGraphStep](https://docs.medusajs.com/resources/references/medusa-workflows/steps/useQueryGraphStep).
+ * You can retrieve an order or payment's details using [Query](https://docs.vikrai.com/learn/fundamentals/module-links/query),
+ * or [useQueryGraphStep](https://docs.vikrai.com/resources/references/vikrai-workflows/steps/useQueryGraphStep).
  *
  * :::
  *
@@ -63,8 +63,8 @@ export const validateRefundStep = createStep(
       0
 
     if (MathBN.gte(pendingDifference, 0)) {
-      throw new MedusaError(
-        MedusaError.Types.INVALID_DATA,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_DATA,
         `Order does not have an outstanding balance to refund`
       )
     }
@@ -73,8 +73,8 @@ export const validateRefundStep = createStep(
     const amountToRefund = amount ?? payment.raw_amount ?? payment.amount
 
     if (MathBN.gt(amountToRefund, amountPending)) {
-      throw new MedusaError(
-        MedusaError.Types.INVALID_DATA,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_DATA,
         `Cannot refund more than pending difference - ${amountPending}`
       )
     }
@@ -102,7 +102,7 @@ export type RefundPaymentWorkflowInput = {
 export const refundPaymentWorkflowId = "refund-payment-workflow"
 /**
  * This workflow refunds a payment. It's used by the
- * [Refund Payment Admin API Route](https://docs.medusajs.com/api/admin#payments_postpaymentsidrefund).
+ * [Refund Payment Admin API Route](https://docs.vikrai.com/api/admin#payments_postpaymentsidrefund).
  *
  * You can use this workflow within your own customizations or custom workflows, allowing you
  * to refund a payment in your custom flows.
@@ -185,3 +185,4 @@ export const refundPaymentWorkflow = createWorkflow(
     return new WorkflowResponse(payment)
   }
 )
+

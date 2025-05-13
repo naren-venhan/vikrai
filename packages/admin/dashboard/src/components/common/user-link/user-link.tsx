@@ -1,4 +1,4 @@
-import { Avatar, Text } from "@medusajs/ui"
+import { Avatar, Text } from "@vikrai/ui"
 import { Link } from "react-router-dom"
 import { useUser } from "../../../hooks/api/users"
 
@@ -43,3 +43,4 @@ export const By = ({ id }: { id: string }) => {
 
   return <UserLink {...user} />
 }
+

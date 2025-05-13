@@ -9,7 +9,7 @@ import {
   InternalModuleDeclaration,
   ModuleJoinerConfig,
   ModulesSdkTypes,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import {
   ApiKeyType,
   InjectManager,
@@ -17,11 +17,11 @@ import {
   isObject,
   isPresent,
   isString,
-  MedusaContext,
-  MedusaError,
-  MedusaService,
+  vikraiContext,
+  vikraiError,
+  vikraiService,
   promiseAll,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 import { ApiKey } from "@models"
 import {
   CreateApiKeyDTO,
@@ -37,17 +37,17 @@ const scrypt = util.promisify(crypto.scrypt)
 
 type InjectedDependencies = {
   baseRepository: DAL.RepositoryService
-  apiKeyService: ModulesSdkTypes.IMedusaInternalService<any>
+  apiKeyService: ModulesSdkTypes.IvikraiInternalService<any>
 }
 
 export class ApiKeyModuleService
-  extends MedusaService<{
+  extends vikraiService<{
     ApiKey: { dto: ApiKeyTypes.ApiKeyDTO }
   }>({ ApiKey })
   implements IApiKeyModuleService
 {
   protected baseRepository_: DAL.RepositoryService
-  protected readonly apiKeyService_: ModulesSdkTypes.IMedusaInternalService<
+  protected readonly apiKeyService_: ModulesSdkTypes.IvikraiInternalService<
     InferEntityType<typeof ApiKey>
   >
 
@@ -69,7 +69,7 @@ export class ApiKeyModuleService
   // @ts-expect-error
   async deleteApiKeys(
     ids: string | string[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ) {
     const apiKeyIds = Array.isArray(ids) ? ids : [ids]
 
@@ -88,8 +88,8 @@ export class ApiKeyModuleService
     ).map((apiKey) => apiKey.id)
 
     if (isPresent(unrevokedApiKeys)) {
-      throw new MedusaError(
-        MedusaError.Types.NOT_ALLOWED,
+      throw new vikraiError(
+        vikraiError.Types.NOT_ALLOWED,
         `Cannot delete api keys that are not revoked - ${unrevokedApiKeys.join(
           ", "
         )}`
@@ -114,7 +114,7 @@ export class ApiKeyModuleService
   //@ts-expect-error
   async createApiKeys(
     data: ApiKeyTypes.CreateApiKeyDTO | ApiKeyTypes.CreateApiKeyDTO[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<ApiKeyTypes.ApiKeyDTO | ApiKeyTypes.ApiKeyDTO[]> {
     const [createdApiKeys, generatedTokens] = await this.createApiKeys_(
       Array.isArray(data) ? data : [data],
@@ -142,7 +142,7 @@ export class ApiKeyModuleService
   @InjectTransactionManager()
   protected async createApiKeys_(
     data: ApiKeyTypes.CreateApiKeyDTO[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<[InferEntityType<typeof ApiKey>[], TokenDTO[]]> {
     await this.validateCreateApiKeys_(data, sharedContext)
 
@@ -185,7 +185,7 @@ export class ApiKeyModuleService
   @InjectManager()
   async upsertApiKeys(
     data: ApiKeyTypes.UpsertApiKeyDTO | ApiKeyTypes.UpsertApiKeyDTO[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<ApiKeyTypes.ApiKeyDTO | ApiKeyTypes.ApiKeyDTO[]> {
     const input = Array.isArray(data) ? data : [data]
     const forUpdate = input.filter(
@@ -257,7 +257,7 @@ export class ApiKeyModuleService
   async updateApiKeys(
     idOrSelector: string | FilterableApiKeyProps,
     data: ApiKeyTypes.UpdateApiKeyDTO,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<ApiKeyTypes.ApiKeyDTO[] | ApiKeyTypes.ApiKeyDTO> {
     let normalizedInput = await this.normalizeUpdateInput_<UpdateApiKeyInput>(
       idOrSelector,
@@ -282,7 +282,7 @@ export class ApiKeyModuleService
   @InjectTransactionManager()
   protected async updateApiKeys_(
     normalizedInput: UpdateApiKeyInput[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<InferEntityType<typeof ApiKey>[]> {
     const updateRequest = normalizedInput.map((k) => ({
       id: k.id,
@@ -372,7 +372,7 @@ export class ApiKeyModuleService
   async revoke(
     idOrSelector: string | FilterableApiKeyProps,
     data: ApiKeyTypes.RevokeApiKeyDTO,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<ApiKeyTypes.ApiKeyDTO[] | ApiKeyTypes.ApiKeyDTO> {
     const normalizedInput = await this.normalizeUpdateInput_<RevokeApiKeyInput>(
       idOrSelector,
@@ -393,7 +393,7 @@ export class ApiKeyModuleService
   @InjectTransactionManager()
   async revoke_(
     normalizedInput: RevokeApiKeyInput[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<InferEntityType<typeof ApiKey>[]> {
     await this.validateRevokeApiKeys_(normalizedInput)
 
@@ -421,7 +421,7 @@ export class ApiKeyModuleService
   @InjectManager()
   async authenticate(
     token: string,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<ApiKeyTypes.ApiKeyDTO | false> {
     const result = await this.authenticate_(token, sharedContext)
     if (!result) {
@@ -439,7 +439,7 @@ export class ApiKeyModuleService
   @InjectTransactionManager()
   protected async authenticate_(
     token: string,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<InferEntityType<typeof ApiKey> | false> {
     // Since we only allow up to 2 active tokens, getitng the list and checking each token isn't an issue.
     // We can always filter on the redacted key if we add support for an arbitrary number of tokens.
@@ -492,8 +492,8 @@ export class ApiKeyModuleService
     }
 
     if (secretKeysToCreate.length > 1) {
-      throw new MedusaError(
-        MedusaError.Types.INVALID_DATA,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_DATA,
         `You can only create one secret key at a time. You tried to create ${secretKeysToCreate.length} secret keys.`
       )
     }
@@ -512,8 +512,8 @@ export class ApiKeyModuleService
     )
 
     if (dbSecretKeys.length) {
-      throw new MedusaError(
-        MedusaError.Types.INVALID_DATA,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_DATA,
         `You can only have one active secret key a time. Revoke or delete your existing key before creating a new one.`
       )
     }
@@ -557,15 +557,15 @@ export class ApiKeyModuleService
     }
 
     if (data.some((k) => !k.id)) {
-      throw new MedusaError(
-        MedusaError.Types.INVALID_DATA,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_DATA,
         `You must provide an api key id field when revoking a key.`
       )
     }
 
     if (data.some((k) => !k.revoked_by)) {
-      throw new MedusaError(
-        MedusaError.Types.INVALID_DATA,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_DATA,
         `You must provide a revoked_by field when revoking a key.`
       )
     }
@@ -581,8 +581,8 @@ export class ApiKeyModuleService
     )
 
     if (revokedApiKeys.length) {
-      throw new MedusaError(
-        MedusaError.Types.INVALID_DATA,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_DATA,
         `There are ${revokedApiKeys.length} secret keys that are already revoked.`
       )
     }
@@ -634,3 +634,4 @@ const omitToken = (
 const redactKey = (key: string): string => {
   return [key.slice(0, 6), key.slice(-3)].join("***")
 }
+

@@ -1,5 +1,5 @@
-import { CustomFieldModel } from "@medusajs/admin-shared"
-import linkModule from "virtual:medusa/links"
+import { CustomFieldModel } from "@vikrai/admin-shared"
+import linkModule from "virtual:vikrai/links"
 
 function appendLinkableFields(
   fields: string = "",
@@ -18,3 +18,4 @@ export function getLinkedFields(model: CustomFieldModel, fields: string = "") {
   const links = linkModule.links[model]
   return appendLinkableFields(fields, links)
 }
+

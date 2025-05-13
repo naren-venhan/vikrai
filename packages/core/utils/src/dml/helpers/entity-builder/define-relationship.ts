@@ -4,7 +4,7 @@ import {
   PropertyType,
   RelationshipMetadata,
   RelationshipType,
-} from "@medusajs/types"
+} from "@vikrai/types"
 import {
   BeforeCreate,
   BeforeUpdate,
@@ -860,3 +860,4 @@ export function defineRelationship(
       break
   }
 }
+

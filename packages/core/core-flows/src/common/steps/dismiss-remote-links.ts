@@ -1,8 +1,8 @@
-import { Link } from "@medusajs/framework/modules-sdk"
-import { LinkDefinition } from "@medusajs/framework/types"
-import { createStep, StepResponse } from "@medusajs/framework/workflows-sdk"
+import { Link } from "@vikrai/framework/modules-sdk"
+import { LinkDefinition } from "@vikrai/framework/types"
+import { createStep, StepResponse } from "@vikrai/framework/workflows-sdk"
 
-import { ContainerRegistrationKeys } from "@medusajs/framework/utils"
+import { ContainerRegistrationKeys } from "@vikrai/framework/utils"
 
 export type DismissRemoteLinksStepInput = LinkDefinition | LinkDefinition[]
 
@@ -11,7 +11,7 @@ export const dismissRemoteLinkStepId = "dismiss-remote-links"
 /**
  * This step removes remote links between two records of linked data models.
  *
- * Learn more in the [Remote Link documentation.](https://docs.medusajs.com/learn/fundamentals/module-links/remote-link#dismiss-link).
+ * Learn more in the [Remote Link documentation.](https://docs.vikrai.com/learn/fundamentals/module-links/remote-link#dismiss-link).
  *
  * @example
  * dismissRemoteLinkStep([{
@@ -55,3 +55,4 @@ export const dismissRemoteLinkStep = createStep(
     await link.create(dataBeforeDismiss)
   }
 )
+

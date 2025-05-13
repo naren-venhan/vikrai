@@ -1,5 +1,5 @@
-import { ShoppingBag } from "@medusajs/icons"
-import { Container, Heading } from "@medusajs/ui"
+import { ShoppingBag } from "@vikrai/icons"
+import { Container, Heading } from "@vikrai/ui"
 import { useTranslation } from "react-i18next"
 import { useLoaderData } from "react-router-dom"
 
@@ -80,3 +80,4 @@ const LinksSection = () => {
     </Container>
   )
 }
+

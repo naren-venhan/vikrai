@@ -1,4 +1,4 @@
-import { clx } from "@medusajs/ui"
+import { clx } from "@vikrai/ui"
 import { Transition, motion } from "motion/react"
 
 type LogoBoxProps = {
@@ -72,3 +72,4 @@ export const LogoBox = ({
     </div>
   )
 }
+

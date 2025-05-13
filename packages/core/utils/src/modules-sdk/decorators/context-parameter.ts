@@ -1,19 +1,20 @@
-export function MedusaContext() {
+export function vikraiContext() {
   return function (
     target: any,
     propertyKey: string | symbol,
     parameterIndex: number
   ) {
-    target.MedusaContextIndex_ ??= {}
-    target.MedusaContextIndex_[propertyKey] = parameterIndex
+    target.vikraiContextIndex_ ??= {}
+    target.vikraiContextIndex_[propertyKey] = parameterIndex
   }
 }
 
-MedusaContext.getIndex = function (
+vikraiContext.getIndex = function (
   target: any,
   propertyKey: string
 ): number | undefined {
-  return target.MedusaContextIndex_?.[propertyKey]
+  return target.vikraiContextIndex_?.[propertyKey]
 }
 
-export const MedusaContextType = "MedusaContext"
+export const vikraiContextType = "vikraiContext"
+

@@ -51,7 +51,7 @@
  *     type: array
  *     description: The exchange's transactions.
  *     externalDocs:
- *       url: https://docs.medusajs.com/v2/resources/commerce-modules/order/transactions
+ *       url: https://docs.vikrai.com/v2/resources/commerce-modules/order/transactions
  *     items:
  *       $ref: "#/components/schemas/OrderTransaction"
  *   metadata:
@@ -107,4 +107,5 @@
  *     format: date-time
  * 
 */
+
 

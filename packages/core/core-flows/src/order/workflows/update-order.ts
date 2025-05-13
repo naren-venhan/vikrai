@@ -1,21 +1,21 @@
-import { OrderDTO, OrderWorkflow } from "@medusajs/framework/types"
+import { OrderDTO, OrderWorkflow } from "@vikrai/framework/types"
 import {
-  MedusaError,
+  vikraiError,
   OrderWorkflowEvents,
   validateEmail,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 import {
   WorkflowData,
   WorkflowResponse,
   createStep,
   createWorkflow,
   transform,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import {
   OrderPreviewDTO,
   RegisterOrderChangeDTO,
   UpdateOrderDTO,
-} from "@medusajs/types"
+} from "@vikrai/types"
 
 import { emitEventStep, useQueryGraphStep } from "../../common"
 import {
@@ -45,8 +45,8 @@ export type UpdateOrderValidationStepInput = {
  *
  * :::note
  *
- * You can retrieve an order's details using [Query](https://docs.medusajs.com/learn/fundamentals/module-links/query),
- * or [useQueryGraphStep](https://docs.medusajs.com/resources/references/medusa-workflows/steps/useQueryGraphStep).
+ * You can retrieve an order's details using [Query](https://docs.vikrai.com/learn/fundamentals/module-links/query),
+ * or [useQueryGraphStep](https://docs.vikrai.com/resources/references/vikrai-workflows/steps/useQueryGraphStep).
  *
  * :::
  *
@@ -72,8 +72,8 @@ export const updateOrderValidationStep = createStep(
       order.shipping_address?.country_code !==
         input.shipping_address?.country_code
     ) {
-      throw new MedusaError(
-        MedusaError.Types.INVALID_DATA,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_DATA,
         "Country code cannot be changed"
       )
     }
@@ -83,8 +83,8 @@ export const updateOrderValidationStep = createStep(
       order.billing_address?.country_code !==
         input.billing_address?.country_code
     ) {
-      throw new MedusaError(
-        MedusaError.Types.INVALID_DATA,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_DATA,
         "Country code cannot be changed"
       )
     }
@@ -98,7 +98,7 @@ export const updateOrderValidationStep = createStep(
 export const updateOrderWorkflowId = "update-order-workflow"
 /**
  * This workflow updates an order's general details, such as its email or addresses. It's used by the
- * [Update Order Admin API Route](https://docs.medusajs.com/api/admin#orders_postordersid).
+ * [Update Order Admin API Route](https://docs.vikrai.com/api/admin#orders_postordersid).
  *
  * You can use this workflow within your customizations or your own custom workflows, allowing you to update an
  * order's details in your custom flows.
@@ -249,3 +249,4 @@ export const updateOrderWorkflow = createWorkflow(
     return new WorkflowResponse(previewOrderChangeStep(input.id))
   }
 )
+

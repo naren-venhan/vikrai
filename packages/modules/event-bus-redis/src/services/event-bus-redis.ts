@@ -3,12 +3,12 @@ import {
   InternalModuleDeclaration,
   Logger,
   Message,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import {
   AbstractEventBusModuleService,
   isPresent,
   promiseAll,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 import { BulkJobOptions, Queue, Worker } from "bullmq"
 import { Redis } from "ioredis"
 import { BullJob, EventBusRedisModuleOptions, Options } from "../types"
@@ -333,3 +333,4 @@ export default class RedisEventBusService extends AbstractEventBusModuleService 
     return subscribersResult
   }
 }
+

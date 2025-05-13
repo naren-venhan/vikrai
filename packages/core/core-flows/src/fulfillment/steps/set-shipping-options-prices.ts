@@ -8,15 +8,15 @@ import {
   PriceDTO,
   PriceSetDTO,
   RemoteQueryFunction,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import {
   ContainerRegistrationKeys,
   LINKS,
   Modules,
   isDefined,
   isString,
-} from "@medusajs/framework/utils"
-import { StepResponse, createStep } from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/utils"
+import { StepResponse, createStep } from "@vikrai/framework/workflows-sdk"
 
 interface PriceRegionId {
   region_id: string
@@ -247,3 +247,4 @@ export const setShippingOptionsPricesStep = createStep(
     }
   }
 )
+

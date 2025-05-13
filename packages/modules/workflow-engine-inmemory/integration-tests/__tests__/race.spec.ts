@@ -1,13 +1,13 @@
-import { IWorkflowEngineService } from "@medusajs/framework/types"
-import { Modules } from "@medusajs/framework/utils"
+import { IWorkflowEngineService } from "@vikrai/framework/types"
+import { Modules } from "@vikrai/framework/utils"
 import {
   createStep,
   createWorkflow,
   StepResponse,
   transform,
   WorkflowResponse,
-} from "@medusajs/framework/workflows-sdk"
-import { moduleIntegrationTestRunner } from "@medusajs/test-utils"
+} from "@vikrai/framework/workflows-sdk"
+import { moduleIntegrationTestRunner } from "@vikrai/test-utils"
 import { setTimeout as setTimeoutSync } from "timers"
 import { setTimeout } from "timers/promises"
 import "../__fixtures__"
@@ -27,8 +27,8 @@ const failTrap = (done) => {
 moduleIntegrationTestRunner<IWorkflowEngineService>({
   moduleName: Modules.WORKFLOW_ENGINE,
   resolve: __dirname + "/../..",
-  testSuite: ({ service: workflowOrcModule, medusaApp }) => {
-    // TODO: Debug the issue with this test https://github.com/medusajs/medusa/actions/runs/13900190144/job/38897122803#step:5:5616
+  testSuite: ({ service: workflowOrcModule, vikraiApp }) => {
+    // TODO: Debug the issue with this test https://github.com/vikrai/vikrai/actions/runs/13900190144/job/38897122803#step:5:5616
     describe.skip("Testing race condition of the workflow during retry", () => {
       it("should prevent race continuation of the workflow during retryIntervalAwaiting in background execution", (done) => {
         const step0InvokeMock = jest.fn()
@@ -195,3 +195,4 @@ moduleIntegrationTestRunner<IWorkflowEngineService>({
     })
   },
 })
+

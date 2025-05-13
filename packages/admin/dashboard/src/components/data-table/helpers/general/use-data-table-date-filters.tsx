@@ -1,4 +1,4 @@
-import { createDataTableFilterHelper } from "@medusajs/ui"
+import { createDataTableFilterHelper } from "@vikrai/ui"
 import { subDays, subMonths } from "date-fns"
 import { useMemo } from "react"
 import { useTranslation } from "react-i18next"
@@ -93,3 +93,4 @@ export const useDataTableDateFilters = (disableRangeOption?: boolean) => {
     ]
   }, [t, dateFilterOptions, getFullDate, rangeOptions])
 }
+

@@ -1,6 +1,6 @@
-import { Logger } from "@medusajs/framework/types"
-import { ContainerRegistrationKeys } from "@medusajs/framework/utils"
-import { createStep, StepResponse } from "@medusajs/framework/workflows-sdk"
+import { Logger } from "@vikrai/framework/types"
+import { ContainerRegistrationKeys } from "@vikrai/framework/utils"
+import { createStep, StepResponse } from "@vikrai/framework/workflows-sdk"
 import { refundPaymentAndRecreatePaymentSessionWorkflow } from "../workflows/refund-payment-recreate-payment-session"
 
 /**
@@ -84,3 +84,4 @@ export const compensatePaymentIfNeededStep = createStep(
     }
   }
 )
+

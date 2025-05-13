@@ -1,4 +1,4 @@
-import { MedusaModule, MODULE_SCOPE } from "@medusajs/framework/modules-sdk"
+import { vikraiModule, MODULE_SCOPE } from "@vikrai/framework/modules-sdk"
 import {
   ExternalModuleDeclaration,
   ILinkModule,
@@ -8,7 +8,7 @@ import {
   ModuleJoinerConfig,
   ModuleServiceInitializeCustomDataLayerOptions,
   ModuleServiceInitializeOptions,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import {
   arrayDifference,
   composeLinkName,
@@ -17,7 +17,7 @@ import {
   Modules,
   simpleHash,
   toPascalCase,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 import * as linkDefinitions from "../definitions"
 import { MigrationsExecutionPlanner } from "../migration"
 import { InitializeModuleInjectableDependencies } from "../types"
@@ -34,7 +34,7 @@ export const initialize = async (
   injectedDependencies?: InitializeModuleInjectableDependencies
 ): Promise<{ [link: string]: ILinkModule }> => {
   const allLinks = {}
-  const modulesLoadedKeys = MedusaModule.getLoadedModules().map(
+  const modulesLoadedKeys = vikraiModule.getLoadedModules().map(
     (mod) => Object.keys(mod)[0]
   )
 
@@ -157,7 +157,7 @@ export const initialize = async (
       },
     }
 
-    const loaded = await MedusaModule.bootstrapLink({
+    const loaded = await vikraiModule.bootstrapLink({
       definition: linkModuleDefinition,
       declaration: options as InternalModuleDeclaration,
       moduleExports: moduleDefinition,
@@ -182,7 +182,7 @@ export function getMigrationPlanner(
   options: ModuleServiceInitializeOptions,
   pluginLinksDefinition?: ModuleJoinerConfig[]
 ) {
-  const modulesLoadedKeys = MedusaModule.getLoadedModules().map(
+  const modulesLoadedKeys = vikraiModule.getLoadedModules().map(
     (mod) => Object.keys(mod)[0]
   )
 
@@ -228,3 +228,4 @@ export function getMigrationPlanner(
 
   return new MigrationsExecutionPlanner(allLinksToLoad, options)
 }
+

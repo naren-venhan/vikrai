@@ -7,7 +7,7 @@ import {
   TimelineVertical,
   User as UserIcon,
   XMark,
-} from "@medusajs/icons"
+} from "@vikrai/icons"
 import {
   Avatar,
   DropdownMenu,
@@ -17,7 +17,7 @@ import {
   Kbd,
   Text,
   clx,
-} from "@medusajs/ui"
+} from "@vikrai/ui"
 import { Dialog as RadixDialog } from "radix-ui"
 import { useTranslation } from "react-i18next"
 
@@ -57,13 +57,13 @@ export const UserMenu = () => {
           </DropdownMenu.Item>
           <DropdownMenu.Separator />
           <DropdownMenu.Item asChild>
-            <Link to="https://docs.medusajs.com" target="_blank">
+            <Link to="https://docs.vikrai.com" target="_blank">
               <BookOpen className="text-ui-fg-subtle mr-2" />
               {t("app.menus.user.documentation")}
             </Link>
           </DropdownMenu.Item>
           <DropdownMenu.Item asChild>
-            <Link to="https://medusajs.com/changelog/" target="_blank">
+            <Link to="https://vikrai.com/changelog/" target="_blank">
               <TimelineVertical className="text-ui-fg-subtle mr-2" />
               {t("app.menus.user.changelog")}
             </Link>
@@ -340,3 +340,4 @@ const UserItem = () => {
     </div>
   )
 }
+

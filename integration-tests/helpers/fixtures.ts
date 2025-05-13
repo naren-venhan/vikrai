@@ -1,4 +1,4 @@
-import { HttpTypes } from "@medusajs/framework/types"
+import { HttpTypes } from "@vikrai/framework/types"
 
 export const getProductFixture = (
   overrides: Partial<HttpTypes.AdminCreateProduct>
@@ -56,3 +56,4 @@ export const getPricelistFixture = (overrides: Partial<any>) => {
     ...overrides,
   }
 }
+

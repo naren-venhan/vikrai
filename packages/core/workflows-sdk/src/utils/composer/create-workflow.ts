@@ -2,18 +2,18 @@ import {
   TransactionModelOptions,
   WorkflowHandler,
   WorkflowManager,
-} from "@medusajs/orchestration"
+} from "@vikrai/orchestration"
 import {
   IWorkflowEngineService,
   LoadedModule,
-  MedusaContainer,
-} from "@medusajs/types"
+  vikraiContainer,
+} from "@vikrai/types"
 import {
   getCallerFilePath,
   isString,
   Modules,
   OrchestrationUtils,
-} from "@medusajs/utils"
+} from "@vikrai/utils"
 import { ulid } from "ulid"
 import { exportWorkflow, WorkflowResult } from "../../helper"
 import { createStep } from "./create-step"
@@ -28,7 +28,7 @@ import {
   WorkflowData,
 } from "./type"
 
-global[OrchestrationUtils.SymbolMedusaWorkflowComposerContext] = null
+global[OrchestrationUtils.SymbolvikraiWorkflowComposerContext] = null
 
 /**
  * This function creates a workflow with the provided name and a constructor function.
@@ -46,8 +46,8 @@ global[OrchestrationUtils.SymbolMedusaWorkflowComposerContext] = null
  * import {
  *   createWorkflow,
  *   WorkflowResponse
- * } from "@medusajs/framework/workflows-sdk"
- * import { MedusaRequest, MedusaResponse } from "@medusajs/framework/http"
+ * } from "@vikrai/framework/workflows-sdk"
+ * import { vikraiRequest, vikraiResponse } from "@vikrai/framework/http"
  * import {
  *   createProductStep,
  *   getProductStep,
@@ -69,8 +69,8 @@ global[OrchestrationUtils.SymbolMedusaWorkflowComposerContext] = null
  * )
  *
  * export async function GET(
- *   req: MedusaRequest,
- *   res: MedusaResponse
+ *   req: vikraiRequest,
+ *   res: vikraiResponse
  * ) {
  *   const { result: product } = await myWorkflow(req.scope)
  *     .run({
@@ -112,7 +112,7 @@ export function createWorkflow<TData, TResult, THooks extends any[]>(
   }
 
   const context: CreateWorkflowComposerContext = {
-    __type: OrchestrationUtils.SymbolMedusaWorkflowComposerContext,
+    __type: OrchestrationUtils.SymbolvikraiWorkflowComposerContext,
     workflowId: name,
     flow: WorkflowManager.getEmptyTransactionDefinition(),
     isAsync: false,
@@ -134,7 +134,7 @@ export function createWorkflow<TData, TResult, THooks extends any[]>(
     },
   }
 
-  global[OrchestrationUtils.SymbolMedusaWorkflowComposerContext] = context
+  global[OrchestrationUtils.SymbolvikraiWorkflowComposerContext] = context
 
   const inputPlaceHolder = proxify<WorkflowData>({
     __type: OrchestrationUtils.SymbolInputReference,
@@ -147,7 +147,7 @@ export function createWorkflow<TData, TResult, THooks extends any[]>(
 
   const returnedStep = composer.apply(context, [inputPlaceHolder])
 
-  delete global[OrchestrationUtils.SymbolMedusaWorkflowComposerContext]
+  delete global[OrchestrationUtils.SymbolvikraiWorkflowComposerContext]
 
   if (newWorkflow) {
     WorkflowManager.update(name, context.flow, handlers, options)
@@ -161,7 +161,7 @@ export function createWorkflow<TData, TResult, THooks extends any[]>(
   })
 
   const mainFlow = <TDataOverride = undefined, TResultOverride = undefined>(
-    container?: LoadedModule[] | MedusaContainer
+    container?: LoadedModule[] | vikraiContainer
   ) => {
     const workflow_ = workflow<TDataOverride, TResultOverride>(container)
     const expandedFlow: any = workflow_
@@ -267,3 +267,4 @@ export function createWorkflow<TData, TResult, THooks extends any[]>(
 
   return mainFlow as ReturnWorkflow<TData, TResult, THooks>
 }
+

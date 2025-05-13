@@ -1,4 +1,4 @@
-import { Select } from "@medusajs/ui"
+import { Select } from "@vikrai/ui"
 
 export default function SelectDemo() {
   return (
@@ -56,3 +56,4 @@ const data = [
     ],
   },
 ]
+

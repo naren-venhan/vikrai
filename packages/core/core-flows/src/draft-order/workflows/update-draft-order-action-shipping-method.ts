@@ -1,4 +1,4 @@
-import { OrderChangeStatus, PromotionActions } from "@medusajs/framework/utils"
+import { OrderChangeStatus, PromotionActions } from "@vikrai/framework/utils"
 import {
   createWorkflow,
   parallelize,
@@ -6,14 +6,14 @@ import {
   when,
   WorkflowData,
   WorkflowResponse,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import {
   OrderChangeActionDTO,
   OrderChangeDTO,
   OrderDTO,
   OrderPreviewDTO,
   OrderWorkflow,
-} from "@medusajs/types"
+} from "@vikrai/types"
 import { useRemoteQueryStep } from "../../common"
 import {
   previewOrderChangeStep,
@@ -32,7 +32,7 @@ export const updateDraftOrderActionShippingMethodWorkflowId =
 
 /**
  * This workflow updates a new shipping method that was added to a draft order edit. It's used by the
- * [Update New Shipping Method in Draft Order Edit Admin API Route](https://docs.medusajs.com/api/admin#draft-orders_postdraftordersideditshippingmethodsaction_id).
+ * [Update New Shipping Method in Draft Order Edit Admin API Route](https://docs.vikrai.com/api/admin#draft-orders_postdraftordersideditshippingmethodsaction_id).
  * 
  * You can use this workflow within your customizations or your own custom workflows, allowing you to wrap custom logic around
  * updating a new shipping method in a draft order edit.
@@ -172,3 +172,4 @@ export const updateDraftOrderActionShippingMethodWorkflow = createWorkflow(
     return new WorkflowResponse(previewOrderChangeStep(input.order_id))
   }
 )
+

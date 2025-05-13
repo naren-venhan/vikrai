@@ -1,11 +1,11 @@
 {
-  "name": "@medusajs/auth-github",
+  "name": "@vikrai/auth-github",
   "version": "2.7.1",
-  "description": "Github OAuth authentication provider for Medusa",
+  "description": "Github OAuth authentication provider for vikrai",
   "main": "dist/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/medusajs/medusa",
+    "url": "https://github.com/vikrai/vikrai",
     "directory": "packages/modules/providers/auth-github"
   },
   "files": [
@@ -17,7 +17,7 @@
   "engines": {
     "node": ">=20"
   },
-  "author": "Medusa",
+  "author": "vikrai",
   "license": "MIT",
   "scripts": {
     "test": "jest --passWithNoTests src",
@@ -26,7 +26,7 @@
     "watch": "tsc --watch"
   },
   "devDependencies": {
-    "@medusajs/framework": "2.7.1",
+    "@vikrai/framework": "2.7.1",
     "@swc/core": "^1.7.28",
     "@swc/jest": "^0.2.36",
     "jest": "^29.7.0",
@@ -35,10 +35,11 @@
     "typescript": "^5.6.2"
   },
   "peerDependencies": {
-    "@medusajs/framework": "2.7.1"
+    "@vikrai/framework": "2.7.1"
   },
   "keywords": [
-    "medusa-provider",
-    "medusa-provider-auth-github"
+    "vikrai-provider",
+    "vikrai-provider-auth-github"
   ]
 }
+

@@ -5,14 +5,14 @@ import {
   createShipmentWorkflowId,
   updateFulfillmentWorkflow,
   updateFulfillmentWorkflowId,
-} from "@medusajs/core-flows"
+} from "@vikrai/core-flows"
 import {
   IFulfillmentModuleService,
-  MedusaContainer,
+  vikraiContainer,
   StockLocationDTO,
-} from "@medusajs/types"
-import { ContainerRegistrationKeys, Modules } from "@medusajs/utils"
-import { medusaIntegrationTestRunner } from "@medusajs/test-utils"
+} from "@vikrai/types"
+import { ContainerRegistrationKeys, Modules } from "@vikrai/utils"
+import { vikraiIntegrationTestRunner } from "@vikrai/test-utils"
 import {
   generateCreateFulfillmentData,
   generateCreateShippingOptionsData,
@@ -22,12 +22,12 @@ jest.setTimeout(50000)
 
 const providerId = "manual_test-provider"
 
-medusaIntegrationTestRunner({
-  env: { MEDUSA_FF_MEDUSA_V2: true },
+vikraiIntegrationTestRunner({
+  env: { vikrai_FF_vikrai_V2: true },
   testSuite: ({ getContainer }) => {
     describe("Workflows: Fulfillment", () => {
       let location: StockLocationDTO
-      let appContainer: MedusaContainer
+      let appContainer: vikraiContainer
       let service: IFulfillmentModuleService
 
       beforeAll(async () => {
@@ -368,3 +368,4 @@ medusaIntegrationTestRunner({
     })
   },
 })
+

@@ -1,4 +1,4 @@
-import { ProgressTabs, Text } from "@medusajs/ui"
+import { ProgressTabs, Text } from "@vikrai/ui"
 
 export default function ProgressTabsDemo() {
   return (
@@ -51,3 +51,4 @@ export default function ProgressTabsDemo() {
     </div>
   )
 }
+

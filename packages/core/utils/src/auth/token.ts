@@ -1,5 +1,5 @@
 import jwt from "jsonwebtoken"
-import { MedusaError } from "../common"
+import { vikraiError } from "../common"
 
 export const generateJwtToken = (
   tokenPayload: Record<string, unknown>,
@@ -9,8 +9,8 @@ export const generateJwtToken = (
   }
 ) => {
   if (!jwtConfig.secret || !jwtConfig.expiresIn) {
-    throw new MedusaError(
-      MedusaError.Types.INVALID_ARGUMENT,
+    throw new vikraiError(
+      vikraiError.Types.INVALID_ARGUMENT,
       "JWT secret and expiresIn must be provided when generating a token"
     )
   }
@@ -19,3 +19,4 @@ export const generateJwtToken = (
     expiresIn: jwtConfig.expiresIn,
   })
 }
+

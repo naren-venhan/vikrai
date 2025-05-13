@@ -2,17 +2,17 @@ import {
   OrderChangeDTO,
   OrderDTO,
   OrderPreviewDTO,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import {
   OrderChangeStatus,
   OrderEditWorkflowEvents,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 import {
   WorkflowResponse,
   createStep,
   createWorkflow,
   transform,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { emitEventStep, useRemoteQueryStep } from "../../../common"
 import { previewOrderChangeStep } from "../../steps"
 import { updateOrderChangesStep } from "../../steps/update-order-changes"
@@ -60,8 +60,8 @@ export type RequestOrderEditRequestValidationStepInput = {
  *
  * :::note
  *
- * You can retrieve an order and order change details using [Query](https://docs.medusajs.com/learn/fundamentals/module-links/query),
- * or [useQueryGraphStep](https://docs.medusajs.com/resources/references/medusa-workflows/steps/useQueryGraphStep).
+ * You can retrieve an order and order change details using [Query](https://docs.vikrai.com/learn/fundamentals/module-links/query),
+ * or [useQueryGraphStep](https://docs.vikrai.com/resources/references/vikrai-workflows/steps/useQueryGraphStep).
  *
  * :::
  *
@@ -105,7 +105,7 @@ export type OrderEditRequestWorkflowInput = {
 export const requestOrderEditRequestWorkflowId = "order-edit-request"
 /**
  * This workflow requests a previously created order edit request by {@link beginOrderEditOrderWorkflow}. This workflow is used by
- * the [Request Order Edit Admin API Route](https://docs.medusajs.com/api/admin#order-edits_postordereditsidrequest).
+ * the [Request Order Edit Admin API Route](https://docs.vikrai.com/api/admin#order-edits_postordereditsidrequest).
  *
  * You can use this workflow within your customizations or your own custom workflows, allowing you to request an order edit
  * in your custom flows.
@@ -173,3 +173,4 @@ export const requestOrderEditRequestWorkflow = createWorkflow(
     return new WorkflowResponse(previewOrderChangeStep(order.id))
   }
 )
+

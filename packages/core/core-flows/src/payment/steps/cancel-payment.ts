@@ -1,10 +1,10 @@
-import { IPaymentModuleService, Logger } from "@medusajs/framework/types"
+import { IPaymentModuleService, Logger } from "@vikrai/framework/types"
 import {
   ContainerRegistrationKeys,
   Modules,
   promiseAll,
-} from "@medusajs/framework/utils"
-import { createStep } from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/utils"
+import { createStep } from "@vikrai/framework/workflows-sdk"
 
 /**
  * The data to cancel one or more payments.
@@ -47,3 +47,4 @@ export const cancelPaymentStep = createStep(
     await promiseAll(promises)
   }
 )
+

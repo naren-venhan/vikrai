@@ -9,7 +9,7 @@ import {
   ModuleJoinerConfig,
   ModulesSdkTypes,
   ProductTypes,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import {
   Product,
   ProductCategory,
@@ -34,14 +34,14 @@ import {
   isString,
   isValidHandle,
   kebabCase,
-  MedusaContext,
-  MedusaError,
-  MedusaService,
+  vikraiContext,
+  vikraiError,
+  vikraiService,
   Modules,
   ProductStatus,
   removeUndefined,
   toHandle,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 import { ProductRepository } from "../repositories"
 import {
   UpdateCategoryInput,
@@ -58,21 +58,21 @@ import { joinerConfig } from "./../joiner-config"
 type InjectedDependencies = {
   baseRepository: DAL.RepositoryService
   productRepository: ProductRepository
-  productService: ModulesSdkTypes.IMedusaInternalService<any, any>
-  productVariantService: ModulesSdkTypes.IMedusaInternalService<any, any>
-  productTagService: ModulesSdkTypes.IMedusaInternalService<any>
+  productService: ModulesSdkTypes.IvikraiInternalService<any, any>
+  productVariantService: ModulesSdkTypes.IvikraiInternalService<any, any>
+  productTagService: ModulesSdkTypes.IvikraiInternalService<any>
   productCategoryService: ProductCategoryService
-  productCollectionService: ModulesSdkTypes.IMedusaInternalService<any>
-  productImageService: ModulesSdkTypes.IMedusaInternalService<any>
-  productImageProductService: ModulesSdkTypes.IMedusaInternalService<any>
-  productTypeService: ModulesSdkTypes.IMedusaInternalService<any>
-  productOptionService: ModulesSdkTypes.IMedusaInternalService<any>
-  productOptionValueService: ModulesSdkTypes.IMedusaInternalService<any>
+  productCollectionService: ModulesSdkTypes.IvikraiInternalService<any>
+  productImageService: ModulesSdkTypes.IvikraiInternalService<any>
+  productImageProductService: ModulesSdkTypes.IvikraiInternalService<any>
+  productTypeService: ModulesSdkTypes.IvikraiInternalService<any>
+  productOptionService: ModulesSdkTypes.IvikraiInternalService<any>
+  productOptionValueService: ModulesSdkTypes.IvikraiInternalService<any>
   [Modules.EVENT_BUS]?: IEventBusModuleService
 }
 
 export default class ProductModuleService
-  extends MedusaService<{
+  extends vikraiService<{
     Product: {
       dto: ProductTypes.ProductDTO
     }
@@ -115,29 +115,29 @@ export default class ProductModuleService
 {
   protected baseRepository_: DAL.RepositoryService
   protected readonly productRepository_: ProductRepository
-  protected readonly productService_: ModulesSdkTypes.IMedusaInternalService<
+  protected readonly productService_: ModulesSdkTypes.IvikraiInternalService<
     InferEntityType<typeof Product>
   >
-  protected readonly productVariantService_: ModulesSdkTypes.IMedusaInternalService<
+  protected readonly productVariantService_: ModulesSdkTypes.IvikraiInternalService<
     InferEntityType<typeof ProductVariant>
   >
   protected readonly productCategoryService_: ProductCategoryService
-  protected readonly productTagService_: ModulesSdkTypes.IMedusaInternalService<
+  protected readonly productTagService_: ModulesSdkTypes.IvikraiInternalService<
     InferEntityType<typeof ProductTag>
   >
-  protected readonly productCollectionService_: ModulesSdkTypes.IMedusaInternalService<
+  protected readonly productCollectionService_: ModulesSdkTypes.IvikraiInternalService<
     InferEntityType<typeof ProductCollection>
   >
-  protected readonly productImageService_: ModulesSdkTypes.IMedusaInternalService<
+  protected readonly productImageService_: ModulesSdkTypes.IvikraiInternalService<
     InferEntityType<typeof ProductImage>
   >
-  protected readonly productTypeService_: ModulesSdkTypes.IMedusaInternalService<
+  protected readonly productTypeService_: ModulesSdkTypes.IvikraiInternalService<
     InferEntityType<typeof ProductType>
   >
-  protected readonly productOptionService_: ModulesSdkTypes.IMedusaInternalService<
+  protected readonly productOptionService_: ModulesSdkTypes.IvikraiInternalService<
     InferEntityType<typeof ProductOption>
   >
-  protected readonly productOptionValueService_: ModulesSdkTypes.IMedusaInternalService<
+  protected readonly productOptionValueService_: ModulesSdkTypes.IvikraiInternalService<
     InferEntityType<typeof ProductOptionValue>
   >
   protected readonly eventBusModuleService_?: IEventBusModuleService
@@ -186,7 +186,7 @@ export default class ProductModuleService
   async retrieveProduct(
     productId: string,
     config?: FindConfig<ProductTypes.ProductDTO>,
-    @MedusaContext() sharedContext?: Context
+    @vikraiContext() sharedContext?: Context
   ): Promise<ProductTypes.ProductDTO> {
     const product = await this.productService_.retrieve(
       productId,
@@ -270,7 +270,7 @@ export default class ProductModuleService
     data:
       | ProductTypes.CreateProductVariantDTO[]
       | ProductTypes.CreateProductVariantDTO,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<
     ProductTypes.ProductVariantDTO[] | ProductTypes.ProductVariantDTO
   > {
@@ -288,11 +288,11 @@ export default class ProductModuleService
   @InjectTransactionManager()
   protected async createVariants_(
     data: ProductTypes.CreateProductVariantDTO[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<InferEntityType<typeof ProductVariant>[]> {
     if (data.some((v) => !v.product_id)) {
-      throw new MedusaError(
-        MedusaError.Types.INVALID_DATA,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_DATA,
         "Unable to create variants without specifying a product_id"
       )
     }
@@ -353,7 +353,7 @@ export default class ProductModuleService
     data:
       | ProductTypes.UpsertProductVariantDTO[]
       | ProductTypes.UpsertProductVariantDTO,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<
     ProductTypes.ProductVariantDTO[] | ProductTypes.ProductVariantDTO
   > {
@@ -402,7 +402,7 @@ export default class ProductModuleService
   async updateProductVariants(
     idOrSelector: string | ProductTypes.FilterableProductVariantProps,
     data: ProductTypes.UpdateProductVariantDTO,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<
     ProductTypes.ProductVariantDTO[] | ProductTypes.ProductVariantDTO
   > {
@@ -434,7 +434,7 @@ export default class ProductModuleService
   @InjectTransactionManager()
   protected async updateVariants_(
     data: UpdateProductVariantInput[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<InferEntityType<typeof ProductVariant>[]> {
     // Validation step
     const variantIdsToUpdate = data.map(({ id }) => id)
@@ -451,8 +451,8 @@ export default class ProductModuleService
     )
 
     if (variants.length !== data.length) {
-      throw new MedusaError(
-        MedusaError.Types.INVALID_DATA,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_DATA,
         `Cannot update non-existing variants with ids: ${arrayDifference(
           variantIdsToUpdate,
           variants.map(({ id }) => id)
@@ -533,7 +533,7 @@ export default class ProductModuleService
   // @ts-expect-error
   async createProductTags(
     data: ProductTypes.CreateProductTagDTO[] | ProductTypes.CreateProductTagDTO,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<ProductTypes.ProductTagDTO[] | ProductTypes.ProductTagDTO> {
     const input = Array.isArray(data) ? data : [data]
 
@@ -564,7 +564,7 @@ export default class ProductModuleService
   @EmitEvents()
   async upsertProductTags(
     data: ProductTypes.UpsertProductTagDTO[] | ProductTypes.UpsertProductTagDTO,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<ProductTypes.ProductTagDTO[] | ProductTypes.ProductTagDTO> {
     const input = Array.isArray(data) ? data : [data]
     const forUpdate = input.filter((tag): tag is UpdateTagInput => !!tag.id)
@@ -617,7 +617,7 @@ export default class ProductModuleService
   async updateProductTags(
     idOrSelector: string | ProductTypes.FilterableProductTagProps,
     data: ProductTypes.UpdateProductTagDTO,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<ProductTypes.ProductTagDTO[] | ProductTypes.ProductTagDTO> {
     let normalizedInput: UpdateTagInput[] = []
     if (isString(idOrSelector)) {
@@ -671,7 +671,7 @@ export default class ProductModuleService
     data:
       | ProductTypes.CreateProductTypeDTO[]
       | ProductTypes.CreateProductTypeDTO,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<ProductTypes.ProductTypeDTO[] | ProductTypes.ProductTypeDTO> {
     const input = Array.isArray(data) ? data : [data]
 
@@ -698,7 +698,7 @@ export default class ProductModuleService
     data:
       | ProductTypes.UpsertProductTypeDTO[]
       | ProductTypes.UpsertProductTypeDTO,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<ProductTypes.ProductTypeDTO[] | ProductTypes.ProductTypeDTO> {
     const input = Array.isArray(data) ? data : [data]
     const forUpdate = input.filter((type): type is UpdateTypeInput => !!type.id)
@@ -742,7 +742,7 @@ export default class ProductModuleService
   async updateProductTypes(
     idOrSelector: string | ProductTypes.FilterableProductTypeProps,
     data: ProductTypes.UpdateProductTypeDTO,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<ProductTypes.ProductTypeDTO[] | ProductTypes.ProductTypeDTO> {
     let normalizedInput: UpdateTypeInput[] = []
     if (isString(idOrSelector)) {
@@ -791,7 +791,7 @@ export default class ProductModuleService
     data:
       | ProductTypes.CreateProductOptionDTO[]
       | ProductTypes.CreateProductOptionDTO,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<ProductTypes.ProductOptionDTO[] | ProductTypes.ProductOptionDTO> {
     const input = Array.isArray(data) ? data : [data]
 
@@ -807,11 +807,11 @@ export default class ProductModuleService
   @InjectTransactionManager()
   protected async createOptions_(
     data: ProductTypes.CreateProductOptionDTO[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<InferEntityType<typeof ProductOption>[]> {
     if (data.some((v) => !v.product_id)) {
-      throw new MedusaError(
-        MedusaError.Types.INVALID_DATA,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_DATA,
         "Tried to create options without specifying a product_id"
       )
     }
@@ -845,7 +845,7 @@ export default class ProductModuleService
     data:
       | ProductTypes.UpsertProductOptionDTO[]
       | ProductTypes.UpsertProductOptionDTO,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<ProductTypes.ProductOptionDTO[] | ProductTypes.ProductOptionDTO> {
     const input = Array.isArray(data) ? data : [data]
     const forUpdate = input.filter(
@@ -891,7 +891,7 @@ export default class ProductModuleService
   async updateProductOptions(
     idOrSelector: string | ProductTypes.FilterableProductOptionProps,
     data: ProductTypes.UpdateProductOptionDTO,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<ProductTypes.ProductOptionDTO[] | ProductTypes.ProductOptionDTO> {
     let normalizedInput: UpdateProductOptionInput[] = []
     if (isString(idOrSelector)) {
@@ -922,12 +922,12 @@ export default class ProductModuleService
   @InjectTransactionManager()
   protected async updateOptions_(
     data: UpdateProductOptionInput[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<InferEntityType<typeof ProductOption>[]> {
     // Validation step
     if (data.some((option) => !option.id)) {
-      throw new MedusaError(
-        MedusaError.Types.INVALID_DATA,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_DATA,
         "Tried to update options without specifying an ID"
       )
     }
@@ -939,8 +939,8 @@ export default class ProductModuleService
     )
 
     if (dbOptions.length !== data.length) {
-      throw new MedusaError(
-        MedusaError.Types.INVALID_DATA,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_DATA,
         `Cannot update non-existing options with ids: ${arrayDifference(
           data.map(({ id }) => id),
           dbOptions.map(({ id }) => id)
@@ -1010,7 +1010,7 @@ export default class ProductModuleService
     data:
       | ProductTypes.CreateProductCollectionDTO[]
       | ProductTypes.CreateProductCollectionDTO,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<
     ProductTypes.ProductCollectionDTO[] | ProductTypes.ProductCollectionDTO
   > {
@@ -1033,7 +1033,7 @@ export default class ProductModuleService
   @InjectTransactionManager()
   async createCollections_(
     data: ProductTypes.CreateProductCollectionDTO[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<InferEntityType<typeof ProductCollection>[]> {
     const normalizedInput = data.map(
       ProductModuleService.normalizeCreateProductCollectionInput
@@ -1066,7 +1066,7 @@ export default class ProductModuleService
     data:
       | ProductTypes.UpsertProductCollectionDTO[]
       | ProductTypes.UpsertProductCollectionDTO,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<
     ProductTypes.ProductCollectionDTO[] | ProductTypes.ProductCollectionDTO
   > {
@@ -1131,7 +1131,7 @@ export default class ProductModuleService
   async updateProductCollections(
     idOrSelector: string | ProductTypes.FilterableProductCollectionProps,
     data: ProductTypes.UpdateProductCollectionDTO,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<
     ProductTypes.ProductCollectionDTO[] | ProductTypes.ProductCollectionDTO
   > {
@@ -1176,7 +1176,7 @@ export default class ProductModuleService
   @InjectTransactionManager()
   protected async updateCollections_(
     data: UpdateCollectionInput[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<InferEntityType<typeof ProductCollection>[]> {
     const normalizedInput = data.map(
       ProductModuleService.normalizeUpdateProductCollectionInput
@@ -1262,7 +1262,7 @@ export default class ProductModuleService
     data:
       | ProductTypes.CreateProductCategoryDTO[]
       | ProductTypes.CreateProductCategoryDTO,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<
     ProductTypes.ProductCategoryDTO[] | ProductTypes.ProductCategoryDTO
   > {
@@ -1305,7 +1305,7 @@ export default class ProductModuleService
     data:
       | ProductTypes.UpsertProductCategoryDTO[]
       | ProductTypes.UpsertProductCategoryDTO,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<
     ProductTypes.ProductCategoryDTO[] | ProductTypes.ProductCategoryDTO
   > {
@@ -1374,7 +1374,7 @@ export default class ProductModuleService
   async updateProductCategories(
     idOrSelector: string | ProductTypes.FilterableProductTypeProps,
     data: ProductTypes.UpdateProductCategoryDTO,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<
     ProductTypes.ProductCategoryDTO[] | ProductTypes.ProductCategoryDTO
   > {
@@ -1433,7 +1433,7 @@ export default class ProductModuleService
   // @ts-expect-error
   async createProducts(
     data: ProductTypes.CreateProductDTO[] | ProductTypes.CreateProductDTO,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<ProductTypes.ProductDTO[] | ProductTypes.ProductDTO> {
     const input = Array.isArray(data) ? data : [data]
     const products = await this.createProducts_(input, sharedContext)
@@ -1463,7 +1463,7 @@ export default class ProductModuleService
   @EmitEvents()
   async upsertProducts(
     data: ProductTypes.UpsertProductDTO[] | ProductTypes.UpsertProductDTO,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<ProductTypes.ProductDTO[] | ProductTypes.ProductDTO> {
     const input = Array.isArray(data) ? data : [data]
     const forUpdate = input.filter(
@@ -1524,7 +1524,7 @@ export default class ProductModuleService
   async updateProducts(
     idOrSelector: string | ProductTypes.FilterableProductProps,
     data: ProductTypes.UpdateProductDTO,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<ProductTypes.ProductDTO[] | ProductTypes.ProductDTO> {
     let normalizedInput: UpdateProductInput[] = []
     if (isString(idOrSelector)) {
@@ -1562,7 +1562,7 @@ export default class ProductModuleService
   @InjectTransactionManager()
   protected async createProducts_(
     data: ProductTypes.CreateProductDTO[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<InferEntityType<typeof Product>[]> {
     const normalizedProducts = await this.normalizeCreateProductInput(
       data,
@@ -1632,8 +1632,8 @@ export default class ProductModuleService
               return existingTag
             }
 
-            throw new MedusaError(
-              MedusaError.Types.INVALID_DATA,
+            throw new vikraiError(
+              vikraiError.Types.INVALID_DATA,
               `Tag with id ${tag.id} not found. Please create the tag before associating it with the product.`
             )
           }
@@ -1654,7 +1654,7 @@ export default class ProductModuleService
   @InjectTransactionManager()
   protected async updateProducts_(
     data: UpdateProductInput[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<InferEntityType<typeof Product>[]> {
     const normalizedProducts = await this.normalizeUpdateProductInput(
       data,
@@ -1744,8 +1744,8 @@ export default class ProductModuleService
     productData: UpdateProductInput | ProductTypes.CreateProductDTO
   ) {
     if (productData.handle && !isValidHandle(productData.handle)) {
-      throw new MedusaError(
-        MedusaError.Types.INVALID_DATA,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_DATA,
         `Invalid product handle '${productData.handle}'. It must contain URL safe characters`
       )
     }
@@ -1757,8 +1757,8 @@ export default class ProductModuleService
     this.validateProductPayload(productData)
 
     if (!productData.title) {
-      throw new MedusaError(
-        MedusaError.Types.INVALID_DATA,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_DATA,
         `Product title is required`
       )
     }
@@ -1777,8 +1777,8 @@ export default class ProductModuleService
     }
 
     if (missingOptionsVariants.length) {
-      throw new MedusaError(
-        MedusaError.Types.INVALID_DATA,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_DATA,
         `Product "${
           productData.title
         }" has variants with missing options: [${missingOptionsVariants.join(
@@ -1799,7 +1799,7 @@ export default class ProductModuleService
       : ProductTypes.CreateProductDTO
   >(
     products: T,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<TOutput> {
     const products_ = Array.isArray(products) ? products : [products]
 
@@ -1845,7 +1845,7 @@ export default class ProductModuleService
       : UpdateProductInput
   >(
     products: T,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<TOutput> {
     const products_ = Array.isArray(products) ? products : [products]
     const productsIds = products_.map((p) => p.id).filter(Boolean)
@@ -1987,8 +1987,8 @@ export default class ProductModuleService
         numOfProvidedVariantOptionValues &&
         productsOptions.length !== numOfProvidedVariantOptionValues
       ) {
-        throw new MedusaError(
-          MedusaError.Types.INVALID_DATA,
+        throw new vikraiError(
+          vikraiError.Types.INVALID_DATA,
           `Product has ${productsOptions.length} option values but there were ${numOfProvidedVariantOptionValues} provided option values for the variant: ${variant.title}.`
         )
       }
@@ -2002,8 +2002,8 @@ export default class ProductModuleService
           )
 
           if (!optionValue) {
-            throw new MedusaError(
-              MedusaError.Types.INVALID_DATA,
+            throw new vikraiError(
+              vikraiError.Types.INVALID_DATA,
               `Option value ${val} does not exist for option ${key}`
             )
           }
@@ -2065,8 +2065,8 @@ export default class ProductModuleService
       })
 
       if (existingVariant) {
-        throw new MedusaError(
-          MedusaError.Types.INVALID_DATA,
+        throw new vikraiError(
+          vikraiError.Types.INVALID_DATA,
           `Variant (${existingVariant.title}) with provided options already exists.`
         )
       }
@@ -2096,8 +2096,8 @@ export default class ProductModuleService
         )
 
         if (exists) {
-          throw new MedusaError(
-            MedusaError.Types.INVALID_DATA,
+          throw new vikraiError(
+            vikraiError.Types.INVALID_DATA,
             `Variant "${variant.title}" has same combination of option values as "${compareVariant.title}".`
           )
         }
@@ -2105,3 +2105,4 @@ export default class ProductModuleService
     }
   }
 }
+

@@ -12,7 +12,7 @@ export const H1 = ({ className, hideLlmDropdown, ...props }: H1Props) => {
     <div className="flex items-start justify-between gap-2 h1-wrapper">
       <h1
         className={clsx(
-          "h1-docs [&_code]:!h1-docs [&_code]:!font-mono mb-docs_1 text-medusa-fg-base",
+          "h1-docs [&_code]:!h1-docs [&_code]:!font-mono mb-docs_1 text-vikrai-fg-base",
           props.id && "scroll-m-docs_7",
           className
         )}
@@ -22,3 +22,4 @@ export const H1 = ({ className, hideLlmDropdown, ...props }: H1Props) => {
     </div>
   )
 }
+

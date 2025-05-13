@@ -3,8 +3,8 @@ import {
   RemoteQueryFilters,
   RemoteQueryGraph,
   RemoteQueryInput,
-} from "@medusajs/types"
-import { isObject, QueryContext } from "@medusajs/utils"
+} from "@vikrai/types"
+import { isObject, QueryContext } from "@vikrai/utils"
 import { parseAndAssignFilters } from "./parse-filters"
 
 const FIELDS = "__fields"
@@ -146,3 +146,4 @@ export function toRemoteQuery<const TEntity extends string>(
 
   return joinerQuery as RemoteQueryGraph<TEntity>
 }
+

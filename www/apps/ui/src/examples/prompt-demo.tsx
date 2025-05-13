@@ -1,4 +1,4 @@
-import { Button, Prompt } from "@medusajs/ui"
+import { Button, Prompt } from "@vikrai/ui"
 
 export default function PromptDemo() {
   return (
@@ -21,3 +21,4 @@ export default function PromptDemo() {
     </Prompt>
   )
 }
+

@@ -4,15 +4,15 @@ import {
   CreatePromotionRuleDTO,
   PromotionRuleDTO,
   UpdatePromotionRuleDTO,
-} from "@medusajs/framework/types"
-import { RuleType } from "@medusajs/framework/utils"
+} from "@vikrai/framework/types"
+import { RuleType } from "@vikrai/framework/utils"
 import {
   WorkflowData,
   WorkflowResponse,
   createWorkflow,
   parallelize,
   transform,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { deletePromotionRulesWorkflowStep } from "../steps/delete-promotion-rules-workflow"
 import { createPromotionRulesWorkflow } from "./create-promotion-rules"
 import { updatePromotionRulesWorkflow } from "./update-promotion-rules"
@@ -46,9 +46,9 @@ export interface BatchPromotionRulesWorkflowOutput extends BatchWorkflowOutput<P
 export const batchPromotionRulesWorkflowId = "batch-promotion-rules"
 /**
  * This workflow manages a promotion's rules. It's used by the
- * [Manage Promotion Rules Admin API Route](https://docs.medusajs.com/api/admin#promotions_postpromotionsidrulesbatch),
- * [Manage Promotion Buy Rules Admin API Route](https://docs.medusajs.com/api/admin#promotions_postpromotionsidbuyrulesbatch),
- * and [Manage Promotion Target Rules Admin API Route](https://docs.medusajs.com/api/admin#promotions_postpromotionsidtargetrulesbatch).
+ * [Manage Promotion Rules Admin API Route](https://docs.vikrai.com/api/admin#promotions_postpromotionsidrulesbatch),
+ * [Manage Promotion Buy Rules Admin API Route](https://docs.vikrai.com/api/admin#promotions_postpromotionsidbuyrulesbatch),
+ * and [Manage Promotion Target Rules Admin API Route](https://docs.vikrai.com/api/admin#promotions_postpromotionsidtargetrulesbatch).
  * 
  * You can use this workflow within your own customizations or custom workflows, allowing you to
  * manage promotion rules within your custom flows.
@@ -58,7 +58,7 @@ export const batchPromotionRulesWorkflowId = "batch-promotion-rules"
  * .run({
  *   input: {
  *     id: "promo_123",
- *     // import { RuleType } from "@medusajs/framework/utils"
+ *     // import { RuleType } from "@vikrai/framework/utils"
  *     rule_type: RuleType.RULES,
  *     create: [
  *       {
@@ -115,3 +115,4 @@ export const batchPromotionRulesWorkflow = createWorkflow(
     )
   }
 )
+

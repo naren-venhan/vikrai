@@ -11,7 +11,8 @@ export interface StoreInitializePaymentSession {
   /**
    * Any data necessary for the payment provider to process the payment.
    *
-   * Learn more in [this documentation](https://docs.medusajs.com/resources/commerce-modules/payment/payment-session#data-property).
+   * Learn more in [this documentation](https://docs.vikrai.com/resources/commerce-modules/payment/payment-session#data-property).
    */
   data?: Record<string, unknown>
 }
+

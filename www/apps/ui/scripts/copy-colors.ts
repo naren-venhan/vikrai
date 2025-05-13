@@ -5,11 +5,11 @@ const fs = require("fs")
 const path = require("path")
 const { execSync } = require("child_process")
 
-// copy colors from the `@medusajs/ui-preset` package
+// copy colors from the `@vikrai/ui-preset` package
 // to `src/config/colors.ts`
 
 const originalPath = path.join(
-  require.resolve("@medusajs/ui-preset"),
+  require.resolve("@vikrai/ui-preset"),
   "../..",
   "src/theme/tokens/colors.ts"
 )
@@ -27,3 +27,4 @@ console.info("Running ESLint...")
 execSync(`npx eslint ${newPath} --fix`)
 
 console.info("Finished ESLint process")
+

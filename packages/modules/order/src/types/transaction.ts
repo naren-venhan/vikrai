@@ -1,3 +1,4 @@
-import { OrderTypes } from "@medusajs/framework/types"
+import { OrderTypes } from "@vikrai/framework/types"
 
 export type OrderTransactionDTO = OrderTypes.OrderTransactionDTO
+

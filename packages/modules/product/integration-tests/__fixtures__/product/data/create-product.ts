@@ -1,5 +1,5 @@
-import { ProductTypes } from "@medusajs/framework/types"
-import { ProductStatus, toHandle } from "@medusajs/framework/utils"
+import { ProductTypes } from "@vikrai/framework/types"
+import { ProductStatus, toHandle } from "@vikrai/framework/utils"
 import { ProductImage } from "@models"
 import faker from "faker"
 
@@ -88,3 +88,4 @@ export const buildProductAndRelationsData = ({
     // TODO: add categories, must be created first
   }
 }
+

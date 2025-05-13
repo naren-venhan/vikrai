@@ -7,13 +7,13 @@ import {
   ShippingOptionRule,
   ShippingOptionType,
 } from "@models"
-import { Context, InferEntityType } from "@medusajs/framework/types"
+import { Context, InferEntityType } from "@vikrai/framework/types"
 import {
   CommonEvents,
   FulfillmentEvents,
   moduleEventBuilderFactory,
   Modules,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 
 export const eventBuilders = {
   createdFulfillment: moduleEventBuilderFactory({
@@ -288,3 +288,4 @@ export function buildCreatedServiceZoneEvents({
   eventBuilders.createdServiceZone({ data: serviceZones, sharedContext })
   eventBuilders.createdGeoZone({ data: geoZones, sharedContext })
 }
+

@@ -1,4 +1,4 @@
-import { ModuleServiceInitializeOptions } from "@medusajs/types"
+import { ModuleServiceInitializeOptions } from "@vikrai/types"
 import { Filter as MikroORMFilter } from "@mikro-orm/core"
 import { TSMigrationGenerator } from "@mikro-orm/migrations"
 import { isString } from "../../common"
@@ -118,3 +118,4 @@ export async function mikroOrmCreateConnection(
     })
   )
 }
+

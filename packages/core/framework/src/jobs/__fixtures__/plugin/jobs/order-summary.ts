@@ -1,6 +1,6 @@
-import { MedusaContainer } from "@medusajs/types"
+import { vikraiContainer } from "@vikrai/types"
 
-export default async function handler(container: MedusaContainer) {
+export default async function handler(container: vikraiContainer) {
   console.log(`You have received 5 orders today`)
 }
 
@@ -9,3 +9,4 @@ export const config = {
   schedule: "* * * * * *",
   numberOfExecutions: 2,
 }
+

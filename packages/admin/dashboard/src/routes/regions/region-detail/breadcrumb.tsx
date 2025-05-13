@@ -1,4 +1,4 @@
-import { HttpTypes } from "@medusajs/types"
+import { HttpTypes } from "@vikrai/types"
 import { UIMatch } from "react-router-dom"
 import { useRegion } from "../../../hooks/api/regions"
 import { REGION_DETAIL_FIELDS } from "./constants"
@@ -25,3 +25,4 @@ export const RegionDetailBreadcrumb = (props: RegionDetailBreadcrumbProps) => {
 
   return <span>{region.name}</span>
 }
+

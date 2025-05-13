@@ -1,6 +1,6 @@
 import { QueryClient } from "@tanstack/react-query"
 
-import { HttpTypes } from "@medusajs/types"
+import { HttpTypes } from "@vikrai/types"
 import { productsQueryKeys } from "../../../hooks/api/products"
 import { sdk } from "../../../lib/client"
 import { queryClient } from "../../../lib/query-client"
@@ -26,3 +26,4 @@ export const productsLoader = (client: QueryClient) => {
     )
   }
 }
+

@@ -13,6 +13,7 @@ type Story = StoryObj<typeof Code>
 
 export const Default: Story = {
   args: {
-    children: "yarn add -D @medusajs/ui-preset",
+    children: "yarn add -D @vikrai/ui-preset",
   },
 }
+

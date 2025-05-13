@@ -1,4 +1,4 @@
-import { model } from "@medusajs/framework/utils"
+import { model } from "@vikrai/framework/utils"
 
 import { ShippingOption } from "./shipping-option"
 
@@ -11,3 +11,4 @@ export const ShippingOptionType = model.define("shipping_option_type", {
     mappedBy: "type",
   }),
 })
+

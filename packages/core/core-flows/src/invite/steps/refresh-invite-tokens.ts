@@ -1,7 +1,7 @@
-import { IUserModuleService } from "@medusajs/framework/types"
-import { StepResponse, createStep } from "@medusajs/framework/workflows-sdk"
+import { IUserModuleService } from "@vikrai/framework/types"
+import { StepResponse, createStep } from "@vikrai/framework/workflows-sdk"
 
-import { Modules } from "@medusajs/framework/utils"
+import { Modules } from "@vikrai/framework/utils"
 
 /**
  * The IDs of the invites to refresh.
@@ -22,3 +22,4 @@ export const refreshInviteTokensStep = createStep(
     return new StepResponse(invites)
   }
 )
+

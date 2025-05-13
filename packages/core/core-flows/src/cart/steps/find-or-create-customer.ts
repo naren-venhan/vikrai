@@ -1,6 +1,6 @@
-import { CustomerDTO, ICustomerModuleService } from "@medusajs/framework/types"
-import { isDefined, Modules, validateEmail } from "@medusajs/framework/utils"
-import { createStep, StepResponse } from "@medusajs/framework/workflows-sdk"
+import { CustomerDTO, ICustomerModuleService } from "@vikrai/framework/types"
+import { isDefined, Modules, validateEmail } from "@vikrai/framework/utils"
+import { createStep, StepResponse } from "@vikrai/framework/workflows-sdk"
 
 /**
  * The details of the customer to find or create.
@@ -122,3 +122,4 @@ export const findOrCreateCustomerStep = createStep(
     await service.deleteCustomers(customer.id)
   }
 )
+

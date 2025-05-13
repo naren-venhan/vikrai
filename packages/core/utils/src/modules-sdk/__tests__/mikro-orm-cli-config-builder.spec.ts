@@ -14,7 +14,7 @@ describe("defineMikroOrmCliConfig", () => {
   test("should return the correct config", () => {
     const config = defineMikroOrmCliConfig(moduleName, {
       entities: [{} as any],
-      dbName: "medusa-fulfillment",
+      dbName: "vikrai-fulfillment",
     })
 
     expect(config).toEqual({
@@ -23,10 +23,10 @@ describe("defineMikroOrmCliConfig", () => {
       host: "127.0.0.1",
       user: "postgres",
       password: "",
-      dbName: "medusa-fulfillment",
+      dbName: "vikrai-fulfillment",
       migrations: {
         generator: expect.any(Function),
-        snapshotName: ".snapshot-medusa-my-test",
+        snapshotName: ".snapshot-vikrai-my-test",
       },
     })
   })
@@ -39,14 +39,15 @@ describe("defineMikroOrmCliConfig", () => {
     expect(config).toEqual({
       entities: [{}],
       driver: expect.any(Function),
-      dbName: "medusa-my-test",
+      dbName: "vikrai-my-test",
       host: "127.0.0.1",
       user: "postgres",
       password: "",
       migrations: {
         generator: expect.any(Function),
-        snapshotName: ".snapshot-medusa-my-test",
+        snapshotName: ".snapshot-vikrai-my-test",
       },
     })
   })
 })
+

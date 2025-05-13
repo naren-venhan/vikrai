@@ -97,7 +97,7 @@ export const Search = ({
               setFilters(filterOptions.map((option) => option.value))
             }
           }}
-          className="px-docs_1 pt-docs_1 bg-medusa-bg-base z-10"
+          className="px-docs_1 pt-docs_1 bg-vikrai-bg-base z-10"
         />
       )}
       {/* @ts-expect-error React v19 doesn't see this type as a React element */}
@@ -109,19 +109,19 @@ export const Search = ({
         }}
         insights={true}
       >
-        <div className={clsx("bg-medusa-bg-base flex z-[1]")}>
+        <div className={clsx("bg-vikrai-bg-base flex z-[1]")}>
           {/* @ts-expect-error React v19 doesn't see this type as a React element */}
           <SearchBox
             classNames={{
               root: clsx(
                 "h-[57px] w-full md:rounded-t-docs_xl relative border-0 border-solid",
-                "border-b border-medusa-border-base",
+                "border-b border-vikrai-border-base",
                 "bg-transparent"
               ),
               form: clsx("h-full md:rounded-t-docs_xl bg-transparent"),
               input: clsx(
-                "w-full h-full px-docs_1 py-docs_0.75 text-medusa-fg-base",
-                "placeholder:text-medusa-fg-muted bg-medusa-bg-base",
+                "w-full h-full px-docs_1 py-docs_0.75 text-vikrai-fg-base",
+                "placeholder:text-vikrai-fg-muted bg-vikrai-bg-base",
                 "md:rounded-t-docs_xl text-compact-large sm:text-compact-medium",
                 "appearance-none search-cancel:hidden border-0 active:outline-none focus:outline-none"
               ),
@@ -131,7 +131,7 @@ export const Search = ({
             }}
             submitIconComponent={() => <></>}
             resetIconComponent={() => (
-              <span className="text-medusa-fg-muted text-compact-small-plus hover:text-medusa-fg-subtle">
+              <span className="text-vikrai-fg-muted text-compact-small-plus hover:text-vikrai-fg-subtle">
                 Clear
               </span>
             )}
@@ -172,3 +172,4 @@ export const Search = ({
     </div>
   )
 }
+

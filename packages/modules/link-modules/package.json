@@ -1,7 +1,7 @@
 {
-  "name": "@medusajs/link-modules",
+  "name": "@vikrai/link-modules",
   "version": "2.7.1",
-  "description": "Medusa Default Link Modules Package and Definitions",
+  "description": "vikrai Default Link Modules Package and Definitions",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -12,7 +12,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/medusajs/medusa",
+    "url": "https://github.com/vikrai/vikrai",
     "directory": "packages/modules/link-modules"
   },
   "publishConfig": {
@@ -21,7 +21,7 @@
   "engines": {
     "node": ">=20"
   },
-  "author": "Medusa",
+  "author": "vikrai",
   "license": "MIT",
   "scripts": {
     "watch": "tsc --build --watch",
@@ -33,8 +33,8 @@
     "test:integration": "jest --forceExit -- integration-tests/**/__tests__/**/*.ts"
   },
   "devDependencies": {
-    "@medusajs/framework": "2.7.1",
-    "@medusajs/test-utils": "2.7.1",
+    "@vikrai/framework": "2.7.1",
+    "@vikrai/test-utils": "2.7.1",
     "@mikro-orm/core": "6.4.3",
     "@mikro-orm/migrations": "6.4.3",
     "@mikro-orm/postgresql": "6.4.3",
@@ -47,10 +47,11 @@
     "typescript": "^5.6.2"
   },
   "peerDependencies": {
-    "@medusajs/framework": "2.7.1",
+    "@vikrai/framework": "2.7.1",
     "@mikro-orm/core": "6.4.3",
     "@mikro-orm/migrations": "6.4.3",
     "@mikro-orm/postgresql": "6.4.3",
     "awilix": "^8.0.1"
   }
 }
+

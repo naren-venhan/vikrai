@@ -1,4 +1,4 @@
-import { AbstractFulfillmentProviderService } from "@medusajs/framework/utils"
+import { AbstractFulfillmentProviderService } from "@vikrai/framework/utils"
 
 export class ManualFulfillmentService extends AbstractFulfillmentProviderService {
   static identifier = "manual-calculated"
@@ -78,3 +78,4 @@ export class ManualFulfillmentService extends AbstractFulfillmentProviderService
     return { data: {}, labels: [] }
   }
 }
+

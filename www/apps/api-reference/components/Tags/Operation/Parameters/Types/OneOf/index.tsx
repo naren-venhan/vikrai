@@ -76,11 +76,11 @@ const TagOperationParamatersOneOf = ({
                   "flex justify-center items-center text-compact-small-plus",
                   "focus:shadow-borders-interactive-with-focus transition-colors",
                   activeTab === index && [
-                    "text-medusa-fg-base bg-medusa-bg-base",
+                    "text-vikrai-fg-base bg-vikrai-bg-base",
                     "shadow-elevation-card-rest dark:shadow-elevation-card-rest-dark",
                   ],
                   activeTab !== index && [
-                    "text-medusa-fg-muted hover:text-medusa-fg-base",
+                    "text-vikrai-fg-muted hover:text-vikrai-fg-base",
                   ]
                 )}
                 onClick={() => setActiveTab(index)}
@@ -130,3 +130,4 @@ const TagOperationParamatersOneOf = ({
 }
 
 export default TagOperationParamatersOneOf
+

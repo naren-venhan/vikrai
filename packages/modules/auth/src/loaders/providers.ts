@@ -2,9 +2,9 @@ import {
   LoaderOptions,
   ModuleProvider,
   ModulesSdkTypes,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import { asFunction, asValue, Lifetime } from "awilix"
-import { moduleProviderLoader } from "@medusajs/framework/modules-sdk"
+import { moduleProviderLoader } from "@vikrai/framework/modules-sdk"
 import {
   AuthIdentifiersRegistrationName,
   AuthProviderRegistrationPrefix,
@@ -41,3 +41,4 @@ export default async ({
     registerServiceFn: registrationFn,
   })
 }
+

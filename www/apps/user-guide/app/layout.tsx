@@ -8,14 +8,14 @@ import clsx from "clsx"
 import Footer from "../components/Footer"
 
 const ogImage =
-  "https://res.cloudinary.com/dza7lstvk/image/upload/v1732200992/Medusa%20Resources/opengraph-image_daq6nx.jpg"
+  "https://res.cloudinary.com/dza7lstvk/image/upload/v1732200992/vikrai%20Resources/opengraph-image_daq6nx.jpg"
 
 export const metadata: Metadata = {
   title: {
     template: `%s - ${config.titleSuffix}`,
     default: config.titleSuffix || "",
   },
-  description: "Explore and learn how to use the Medusa Admin.",
+  description: "Explore and learn how to use the vikrai Admin.",
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000"
   ),
@@ -68,3 +68,4 @@ export default function RootLayout({
     </BareboneLayout>
   )
 }
+

@@ -1,4 +1,4 @@
-import { HttpTypes } from "@medusajs/types"
+import { HttpTypes } from "@vikrai/types"
 import { useMemo } from "react"
 
 import { _DataTable } from "../../../../../components/table/data-table"
@@ -68,3 +68,4 @@ export const ReservationItemTable = ({
     />
   )
 }
+

@@ -20,7 +20,7 @@ describe("Local notification provider", () => {
   it("sends logs to the console output with the notification details", async () => {
     const logSpy = jest.spyOn(console, "info")
     await localService.send({
-      to: "test@medusajs.com",
+      to: "test@vikrai.com",
       channel: "email",
       template: "some-template",
       data: {
@@ -30,7 +30,8 @@ describe("Local notification provider", () => {
 
     expect(logSpy).toHaveBeenCalled()
     expect(logSpy).toHaveBeenCalledWith(
-      `Attempting to send a notification to: 'test@medusajs.com' on the channel: 'email' with template: 'some-template' and data: '{\"username\":\"john-doe\"}'`
+      `Attempting to send a notification to: 'test@vikrai.com' on the channel: 'email' with template: 'some-template' and data: '{\"username\":\"john-doe\"}'`
     )
   })
 })
+

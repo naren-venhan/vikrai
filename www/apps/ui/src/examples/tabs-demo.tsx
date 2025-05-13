@@ -1,4 +1,4 @@
-import { Tabs, Text } from "@medusajs/ui"
+import { Tabs, Text } from "@vikrai/ui"
 
 export default function TabsDemo() {
   return (
@@ -47,3 +47,4 @@ export default function TabsDemo() {
     </div>
   )
 }
+

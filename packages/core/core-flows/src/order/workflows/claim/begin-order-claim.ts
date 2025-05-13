@@ -2,14 +2,14 @@ import {
   OrderChangeDTO,
   OrderDTO,
   OrderWorkflow,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import {
   WorkflowData,
   WorkflowResponse,
   createStep,
   createWorkflow,
   transform,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { useRemoteQueryStep } from "../../../common"
 import { createOrderClaimsStep } from "../../steps/claim/create-claims"
 import { createOrderChangeStep } from "../../steps/create-order-change"
@@ -31,8 +31,8 @@ export type BeginClaimOrderValidationStepInput = {
  * 
  * :::note
  * 
- * You can retrieve an order's details using [Query](https://docs.medusajs.com/learn/fundamentals/module-links/query),
- * or [useQueryGraphStep](https://docs.medusajs.com/resources/references/medusa-workflows/steps/useQueryGraphStep).
+ * You can retrieve an order's details using [Query](https://docs.vikrai.com/learn/fundamentals/module-links/query),
+ * or [useQueryGraphStep](https://docs.vikrai.com/resources/references/vikrai-workflows/steps/useQueryGraphStep).
  * 
  * :::
  * 
@@ -54,7 +54,7 @@ export const beginClaimOrderValidationStep = createStep(
 export const beginClaimOrderWorkflowId = "begin-claim-order"
 /**
  * This workflow creates an order claim in requested state. It's used by the 
- * [Create Claim Admin API Route](https://docs.medusajs.com/api/admin#claims_postclaims).
+ * [Create Claim Admin API Route](https://docs.vikrai.com/api/admin#claims_postclaims).
  * 
  * You can use this workflow within your customizations or your own custom workflows, allowing you to create a claim
  * for an order in your custom flows.
@@ -112,3 +112,4 @@ export const beginClaimOrderWorkflow = createWorkflow(
     return new WorkflowResponse(createOrderChangeStep(orderChangeInput))
   }
 )
+

@@ -1,14 +1,14 @@
-import { moduleProviderLoader } from "@medusajs/framework/modules-sdk"
+import { moduleProviderLoader } from "@vikrai/framework/modules-sdk"
 import {
   LoaderOptions,
   ModuleProvider,
   ModulesSdkTypes,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import {
   ContainerRegistrationKeys,
   lowerCaseFirst,
   promiseAll,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 import { FulfillmentProviderService } from "@services"
 import { FulfillmentIdentifiersRegistrationName } from "@types"
 import { Lifetime, asFunction, asValue } from "awilix"
@@ -71,7 +71,7 @@ async function syncDatabaseProviders({ container }) {
       container.resolve(FulfillmentIdentifiersRegistrationName) ?? []
     ).filter(Boolean)
 
-    const providerService: ModulesSdkTypes.IMedusaInternalService<any> =
+    const providerService: ModulesSdkTypes.IvikraiInternalService<any> =
       container.resolve(providerServiceRegistrationKey)
 
     const providers = await providerService.list({})
@@ -116,3 +116,4 @@ async function syncDatabaseProviders({ container }) {
     logger.error(`Error syncing the fulfillment providers: ${error.message}`)
   }
 }
+

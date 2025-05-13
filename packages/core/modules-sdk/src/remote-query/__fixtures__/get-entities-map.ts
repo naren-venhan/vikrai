@@ -1,15 +1,16 @@
-import { GraphQLUtils } from "@medusajs/utils"
+import { GraphQLUtils } from "@vikrai/utils"
 
 export function getEntitiesMap(loadedSchema): Map<string, any> {
-  const defaultMedusaSchema = `
+  const defaultvikraiSchema = `
     scalar DateTime
     scalar JSON
   `
   const { schema } = GraphQLUtils.cleanGraphQLSchema(
-    defaultMedusaSchema + loadedSchema
+    defaultvikraiSchema + loadedSchema
   )
   const mergedSchema = GraphQLUtils.mergeTypeDefs(schema)
   return GraphQLUtils.makeExecutableSchema({
     typeDefs: mergedSchema,
   }).getTypeMap() as any
 }
+

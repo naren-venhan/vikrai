@@ -1,4 +1,4 @@
-import { ChangeActionType } from "@medusajs/framework/utils"
+import { ChangeActionType } from "@vikrai/framework/utils"
 import { OrderChangeEvent } from "../../../../types"
 import { calculateOrderChange } from "../../../../utils"
 
@@ -244,3 +244,4 @@ describe("Order Exchange - Actions", function () {
     ])
   })
 })
+

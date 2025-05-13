@@ -12,14 +12,14 @@ const baseUrl = process.env.NEXT_PUBLIC_DOCS_URL || "http://localhost:3000"
 
 export const siteConfig: SiteConfig = {
   ...globalConfig,
-  name: "Medusa UI",
+  name: "vikrai UI",
   baseUrl,
   basePath: process.env.NEXT_PUBLIC_BASE_PATH,
   url: `${baseUrl}/${process.env.NEXT_PUBLIC_BASE_PATH}`,
-  description: "Primitives for building Medusa applications.",
+  description: "Primitives for building vikrai applications.",
   sidebars,
   project: {
-    title: "Medusa UI",
+    title: "vikrai UI",
     key: "ui",
   },
   breadcrumbOptions: {
@@ -36,3 +36,4 @@ export const siteConfig: SiteConfig = {
     hide: true,
   },
 }
+

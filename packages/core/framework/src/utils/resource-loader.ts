@@ -1,4 +1,4 @@
-import { dynamicImport, promiseAll, readDirRecursive } from "@medusajs/utils"
+import { dynamicImport, promiseAll, readDirRecursive } from "@vikrai/utils"
 import { Dirent } from "fs"
 import { access } from "fs/promises"
 import { join, parse } from "path"
@@ -99,3 +99,4 @@ export abstract class ResourceLoader {
     fileExports: Record<string, unknown>
   ): Promise<void> | never
 }
+

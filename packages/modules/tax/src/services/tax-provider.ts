@@ -1,5 +1,5 @@
-import { DAL, ITaxProvider, Logger, TaxTypes } from "@medusajs/framework/types"
-import { ModulesSdkUtils } from "@medusajs/framework/utils"
+import { DAL, ITaxProvider, Logger, TaxTypes } from "@vikrai/framework/types"
+import { ModulesSdkUtils } from "@vikrai/framework/utils"
 
 import TaxProvider from "../models/tax-provider"
 
@@ -9,7 +9,7 @@ type InjectedDependencies = {
   [key: `tp_${string}`]: ITaxProvider
 }
 
-export default class TaxProviderService extends ModulesSdkUtils.MedusaInternalService<InjectedDependencies>(
+export default class TaxProviderService extends ModulesSdkUtils.vikraiInternalService<InjectedDependencies>(
   TaxProvider
 ) {
   #logger: Logger
@@ -49,3 +49,4 @@ export default class TaxProviderService extends ModulesSdkUtils.MedusaInternalSe
     return provider.getTaxLines(itemLines, shippingLines, context)
   }
 }
+

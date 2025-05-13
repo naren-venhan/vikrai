@@ -6,7 +6,7 @@
  * description: Initialize and add a payment session to a payment collection. This is used during checkout, where you create a payment collection for the cart, then initialize a payment session for the
  *   payment provider that the customer chooses.
  * externalDocs:
- *   url: https://docs.medusajs.com/v2/resources/storefront-development/checkout/payment
+ *   url: https://docs.vikrai.com/v2/resources/storefront-development/checkout/payment
  *   description: "Storefront guide: How to implement payment during checkout."
  * x-authenticated: false
  * parameters:
@@ -18,12 +18,12 @@
  *       type: string
  *   - name: x-publishable-api-key
  *     in: header
- *     description: Publishable API Key created in the Medusa Admin.
+ *     description: Publishable API Key created in the vikrai Admin.
  *     required: true
  *     schema:
  *       type: string
  *       externalDocs:
- *         url: https://docs.medusajs.com/api/store#publishable-api-key
+ *         url: https://docs.vikrai.com/api/store#publishable-api-key
  *   - name: fields
  *     in: query
  *     description: Comma-separated fields that should be included in the returned data. if a field is prefixed with `+` it will be added to the default fields, using `-` will remove it from the default

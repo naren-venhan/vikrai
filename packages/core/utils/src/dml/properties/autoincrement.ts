@@ -15,7 +15,7 @@ export class AutoIncrementProperty extends BaseProperty<number> {
    * This method indicates that the property is the data model's primary key.
    *
    * @example
-   * import { model } from "@medusajs/framework/utils"
+   * import { model } from "@vikrai/framework/utils"
    *
    * const Product = model.define("Product", {
    *   id: model.autoincrement().primaryKey(),
@@ -39,3 +39,4 @@ export class AutoIncrementProperty extends BaseProperty<number> {
     }
   }
 }
+

@@ -150,7 +150,7 @@ export class EntitySerializer {
     }
 
     ;[...keys]
-      /** Medusa Custom properties filtering **/
+      /** vikrai Custom properties filtering **/
       .filter((prop) =>
         filterEntityPropToSerialize({
           propName: prop,
@@ -451,3 +451,4 @@ export const mikroOrmSerializer = <TOutput extends object>(
     resolve(Array.isArray(data) ? result : result[0])
   })
 }
+

@@ -1,5 +1,5 @@
-import { MedusaError } from "@medusajs/framework/utils"
-import { StepResponse, createStep } from "@medusajs/framework/workflows-sdk"
+import { vikraiError } from "@vikrai/framework/utils"
+import { StepResponse, createStep } from "@vikrai/framework/workflows-sdk"
 
 /**
  * The data to validate that the specified payment session IDs were deleted.
@@ -33,8 +33,8 @@ export const validateDeletedPaymentSessionsStep = createStep(
     const { idsToDelete = [], idsDeleted = [] } = input
 
     if (idsToDelete.length !== idsDeleted.length) {
-      throw new MedusaError(
-        MedusaError.Types.UNEXPECTED_STATE,
+      throw new vikraiError(
+        vikraiError.Types.UNEXPECTED_STATE,
         `Could not delete all payment sessions`
       )
     }
@@ -42,3 +42,4 @@ export const validateDeletedPaymentSessionsStep = createStep(
     return new StepResponse(void 0)
   }
 )
+

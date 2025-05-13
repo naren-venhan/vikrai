@@ -1,5 +1,5 @@
 import React from "react"
-import { IconProps } from "@medusajs/icons/dist/types"
+import { IconProps } from "@vikrai/icons/dist/types"
 
 export const CalendarRefreshIcon = (props: IconProps) => {
   return (
@@ -68,3 +68,4 @@ export const CalendarRefreshIcon = (props: IconProps) => {
     </svg>
   )
 }
+

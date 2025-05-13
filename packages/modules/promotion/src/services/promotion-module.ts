@@ -10,7 +10,7 @@ import {
   ModulesSdkTypes,
   PromotionDTO,
   PromotionTypes,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import {
   ApplicationMethodAllocation,
   ApplicationMethodTargetType,
@@ -24,14 +24,14 @@ import {
   isPresent,
   isString,
   MathBN,
-  MedusaContext,
-  MedusaError,
-  MedusaService,
+  vikraiContext,
+  vikraiError,
+  vikraiService,
   PromotionStatus,
   PromotionType,
   toMikroORMEntity,
   transformPropertiesToBigNumber,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 import {
   ApplicationMethod,
   Campaign,
@@ -64,16 +64,16 @@ import { CreatePromotionRuleValueDTO } from "../types/promotion-rule-value"
 
 type InjectedDependencies = {
   baseRepository: DAL.RepositoryService
-  promotionService: ModulesSdkTypes.IMedusaInternalService<any>
-  applicationMethodService: ModulesSdkTypes.IMedusaInternalService<any>
-  promotionRuleService: ModulesSdkTypes.IMedusaInternalService<any>
-  promotionRuleValueService: ModulesSdkTypes.IMedusaInternalService<any>
-  campaignService: ModulesSdkTypes.IMedusaInternalService<any>
-  campaignBudgetService: ModulesSdkTypes.IMedusaInternalService<any>
+  promotionService: ModulesSdkTypes.IvikraiInternalService<any>
+  applicationMethodService: ModulesSdkTypes.IvikraiInternalService<any>
+  promotionRuleService: ModulesSdkTypes.IvikraiInternalService<any>
+  promotionRuleValueService: ModulesSdkTypes.IvikraiInternalService<any>
+  campaignService: ModulesSdkTypes.IvikraiInternalService<any>
+  campaignBudgetService: ModulesSdkTypes.IvikraiInternalService<any>
 }
 
 export default class PromotionModuleService
-  extends MedusaService<{
+  extends vikraiService<{
     Promotion: { dto: PromotionTypes.PromotionDTO }
     ApplicationMethod: { dto: PromotionTypes.ApplicationMethodDTO }
     Campaign: { dto: PromotionTypes.CampaignDTO }
@@ -91,22 +91,22 @@ export default class PromotionModuleService
   implements PromotionTypes.IPromotionModuleService
 {
   protected baseRepository_: DAL.RepositoryService
-  protected promotionService_: ModulesSdkTypes.IMedusaInternalService<
+  protected promotionService_: ModulesSdkTypes.IvikraiInternalService<
     InferEntityType<typeof Promotion>
   >
-  protected applicationMethodService_: ModulesSdkTypes.IMedusaInternalService<
+  protected applicationMethodService_: ModulesSdkTypes.IvikraiInternalService<
     InferEntityType<typeof ApplicationMethod>
   >
-  protected promotionRuleService_: ModulesSdkTypes.IMedusaInternalService<
+  protected promotionRuleService_: ModulesSdkTypes.IvikraiInternalService<
     InferEntityType<typeof PromotionRule>
   >
-  protected promotionRuleValueService_: ModulesSdkTypes.IMedusaInternalService<
+  protected promotionRuleValueService_: ModulesSdkTypes.IvikraiInternalService<
     InferEntityType<typeof PromotionRuleValue>
   >
-  protected campaignService_: ModulesSdkTypes.IMedusaInternalService<
+  protected campaignService_: ModulesSdkTypes.IvikraiInternalService<
     InferEntityType<typeof Campaign>
   >
-  protected campaignBudgetService_: ModulesSdkTypes.IMedusaInternalService<
+  protected campaignBudgetService_: ModulesSdkTypes.IvikraiInternalService<
     InferEntityType<typeof CampaignBudget>
   >
 
@@ -176,7 +176,7 @@ export default class PromotionModuleService
   @InjectTransactionManager()
   async registerUsage(
     computedActions: PromotionTypes.UsageComputedActions[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<void> {
     const promotionCodes = computedActions
       .map((computedAction) => computedAction.code)
@@ -288,7 +288,7 @@ export default class PromotionModuleService
   @InjectTransactionManager()
   async revertUsage(
     computedActions: PromotionTypes.UsageComputedActions[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<void> {
     const promotionCodeUsageMap = new Map<string, boolean>()
     const campaignBudgetMap = new Map<string, UpdateCampaignBudgetDTO>()
@@ -385,7 +385,7 @@ export default class PromotionModuleService
     promotionCodes: string[],
     applicationContext: PromotionTypes.ComputeActionContext,
     options: PromotionTypes.ComputeActionOptions = {},
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<PromotionTypes.ComputeActions[]> {
     const { prevent_auto_promotions: preventAutoPromotions } = options
     const computedActions: PromotionTypes.ComputeActions[] = []
@@ -601,7 +601,7 @@ export default class PromotionModuleService
     data:
       | PromotionTypes.CreatePromotionDTO
       | PromotionTypes.CreatePromotionDTO[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<PromotionTypes.PromotionDTO | PromotionTypes.PromotionDTO[]> {
     const input = Array.isArray(data) ? data : [data]
     const createdPromotions = await this.createPromotions_(input, sharedContext)
@@ -630,7 +630,7 @@ export default class PromotionModuleService
   @InjectTransactionManager()
   protected async createPromotions_(
     data: PromotionTypes.CreatePromotionDTO[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ) {
     const promotionsData: CreatePromotionDTO[] = []
     const applicationMethodsData: CreateApplicationMethodDTO[] = []
@@ -688,8 +688,8 @@ export default class PromotionModuleService
       }
 
       if (campaignData && campaignId) {
-        throw new MedusaError(
-          MedusaError.Types.INVALID_DATA,
+        throw new vikraiError(
+          vikraiError.Types.INVALID_DATA,
           `Provide either the 'campaign' or 'campaign_id' parameter; both cannot be used simultaneously.`
         )
       }
@@ -704,8 +704,8 @@ export default class PromotionModuleService
       )
 
       if (campaignId && !existingCampaign) {
-        throw new MedusaError(
-          MedusaError.Types.NOT_FOUND,
+        throw new vikraiError(
+          vikraiError.Types.NOT_FOUND,
           `Could not find campaign with id - ${campaignId}`
         )
       }
@@ -719,8 +719,8 @@ export default class PromotionModuleService
         campaignData?.budget?.type === CampaignBudgetType.SPEND &&
         campaignCurrency !== applicationMethodData?.currency_code
       ) {
-        throw new MedusaError(
-          MedusaError.Types.INVALID_DATA,
+        throw new vikraiError(
+          vikraiError.Types.INVALID_DATA,
           `Currency between promotion and campaigns should match`
         )
       }
@@ -770,15 +770,15 @@ export default class PromotionModuleService
             ApplicationMethodTargetType.ORDER &&
           targetRulesData.length
         ) {
-          throw new MedusaError(
-            MedusaError.Types.INVALID_DATA,
+          throw new vikraiError(
+            vikraiError.Types.INVALID_DATA,
             `Target rules for application method with target type (${ApplicationMethodTargetType.ORDER}) is not allowed`
           )
         }
 
         if (promotion.type === PromotionType.BUYGET && !buyRulesData.length) {
-          throw new MedusaError(
-            MedusaError.Types.INVALID_DATA,
+          throw new vikraiError(
+            vikraiError.Types.INVALID_DATA,
             `Buy rules are required for ${PromotionType.BUYGET} promotion type`
           )
         }
@@ -787,8 +787,8 @@ export default class PromotionModuleService
           promotion.type === PromotionType.BUYGET &&
           !targetRulesData.length
         ) {
-          throw new MedusaError(
-            MedusaError.Types.INVALID_DATA,
+          throw new vikraiError(
+            vikraiError.Types.INVALID_DATA,
             `Target rules are required for ${PromotionType.BUYGET} promotion type`
           )
         }
@@ -888,7 +888,7 @@ export default class PromotionModuleService
     data:
       | PromotionTypes.UpdatePromotionDTO
       | PromotionTypes.UpdatePromotionDTO[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<PromotionTypes.PromotionDTO | PromotionTypes.PromotionDTO[]> {
     const input = Array.isArray(data) ? data : [data]
     const updatedPromotions = await this.updatePromotions_(input, sharedContext)
@@ -915,7 +915,7 @@ export default class PromotionModuleService
   @InjectTransactionManager()
   protected async updatePromotions_(
     data: PromotionTypes.UpdatePromotionDTO[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ) {
     const promotionIds = data.map((d) => d.id)
     const existingPromotions = await this.promotionService_.list(
@@ -950,8 +950,8 @@ export default class PromotionModuleService
         applicationMethodData?.currency_code
 
       if (campaignId && !existingCampaign) {
-        throw new MedusaError(
-          MedusaError.Types.INVALID_DATA,
+        throw new vikraiError(
+          vikraiError.Types.INVALID_DATA,
           `Could not find campaign with id ${campaignId}`
         )
       }
@@ -961,8 +961,8 @@ export default class PromotionModuleService
         existingCampaign?.budget?.type === CampaignBudgetType.SPEND &&
         existingCampaign.budget.currency_code !== promotionCurrencyCode
       ) {
-        throw new MedusaError(
-          MedusaError.Types.INVALID_DATA,
+        throw new vikraiError(
+          vikraiError.Types.INVALID_DATA,
           `Currency code doesn't match for campaign (${campaignId}) and promotion (${existingPromotion.id})`
         )
       }
@@ -1015,7 +1015,7 @@ export default class PromotionModuleService
   // @ts-ignore
   async updatePromotionRules(
     data: PromotionTypes.UpdatePromotionRuleDTO[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<PromotionTypes.PromotionRuleDTO[]> {
     const updatedPromotionRules = await this.updatePromotionRules_(
       data,
@@ -1032,7 +1032,7 @@ export default class PromotionModuleService
   @InjectTransactionManager()
   protected async updatePromotionRules_(
     data: PromotionTypes.UpdatePromotionRuleDTO[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ) {
     const promotionRuleIds = data.map((d) => d.id)
 
@@ -1048,8 +1048,8 @@ export default class PromotionModuleService
     )
 
     if (invalidRuleId.length) {
-      throw new MedusaError(
-        MedusaError.Types.INVALID_DATA,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_DATA,
         `Promotion rules with id - ${invalidRuleId.join(", ")} not found`
       )
     }
@@ -1096,7 +1096,7 @@ export default class PromotionModuleService
   async addPromotionRules(
     promotionId: string,
     rulesData: PromotionTypes.CreatePromotionRuleDTO[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<PromotionTypes.PromotionRuleDTO[]> {
     const promotion = await this.promotionService_.retrieve(promotionId)
 
@@ -1118,7 +1118,7 @@ export default class PromotionModuleService
   async addPromotionTargetRules(
     promotionId: string,
     rulesData: PromotionTypes.CreatePromotionRuleDTO[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<PromotionTypes.PromotionRuleDTO[]> {
     const promotion = await this.promotionService_.retrieve(promotionId, {
       relations: ["application_method"],
@@ -1127,8 +1127,8 @@ export default class PromotionModuleService
     const applicationMethod = promotion.application_method
 
     if (!applicationMethod) {
-      throw new MedusaError(
-        MedusaError.Types.INVALID_DATA,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_DATA,
         `application_method for promotion not found`
       )
     }
@@ -1151,7 +1151,7 @@ export default class PromotionModuleService
   async addPromotionBuyRules(
     promotionId: string,
     rulesData: PromotionTypes.CreatePromotionRuleDTO[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<PromotionTypes.PromotionRuleDTO[]> {
     const promotion = await this.promotionService_.retrieve(
       promotionId,
@@ -1162,8 +1162,8 @@ export default class PromotionModuleService
     const applicationMethod = promotion.application_method
 
     if (!applicationMethod) {
-      throw new MedusaError(
-        MedusaError.Types.INVALID_DATA,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_DATA,
         `application_method for promotion not found`
       )
     }
@@ -1189,7 +1189,7 @@ export default class PromotionModuleService
     relation:
       | InferEntityType<typeof Promotion>
       | InferEntityType<typeof ApplicationMethod>,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<InferEntityType<typeof PromotionRule>[]> {
     const MikroORMApplicationMethod = toMikroORMEntity(ApplicationMethod)
     const createdPromotionRules: InferEntityType<typeof PromotionRule>[] = []
@@ -1206,8 +1206,8 @@ export default class PromotionModuleService
       relationName === "method_buy_rules" &&
       promotion.type === PromotionType.STANDARD
     ) {
-      throw new MedusaError(
-        MedusaError.Types.INVALID_DATA,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_DATA,
         `Can't add buy rules to a ${PromotionType.STANDARD} promotion`
       )
     }
@@ -1247,7 +1247,7 @@ export default class PromotionModuleService
   async removePromotionRules(
     promotionId: string,
     ruleIds: string[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<void> {
     await this.removePromotionRules_(promotionId, ruleIds, sharedContext)
   }
@@ -1256,7 +1256,7 @@ export default class PromotionModuleService
   protected async removePromotionRules_(
     promotionId: string,
     ruleIds: string[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<void> {
     const promotion = await this.promotionService_.retrieve(
       promotionId,
@@ -1274,7 +1274,7 @@ export default class PromotionModuleService
   async removePromotionTargetRules(
     promotionId: string,
     ruleIds: string[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<void> {
     await this.removeApplicationMethodRules_(
       promotionId,
@@ -1288,7 +1288,7 @@ export default class PromotionModuleService
   async removePromotionBuyRules(
     promotionId: string,
     ruleIds: string[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<void> {
     await this.removeApplicationMethodRules_(
       promotionId,
@@ -1305,7 +1305,7 @@ export default class PromotionModuleService
     relation:
       | ApplicationMethodRuleTypes.TARGET_RULES
       | ApplicationMethodRuleTypes.BUY_RULES,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<void> {
     const promotion = await this.promotionService_.retrieve(
       promotionId,
@@ -1316,8 +1316,8 @@ export default class PromotionModuleService
     const applicationMethod = promotion.application_method
 
     if (!applicationMethod) {
-      throw new MedusaError(
-        MedusaError.Types.INVALID_DATA,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_DATA,
         `application_method for promotion not found`
       )
     }
@@ -1348,7 +1348,7 @@ export default class PromotionModuleService
   // @ts-expect-error
   async createCampaigns(
     data: PromotionTypes.CreateCampaignDTO | PromotionTypes.CreateCampaignDTO[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<PromotionTypes.CampaignDTO | PromotionTypes.CampaignDTO[]> {
     const input = Array.isArray(data) ? data : [data]
     const createdCampaigns = await this.createCampaigns_(input, sharedContext)
@@ -1367,7 +1367,7 @@ export default class PromotionModuleService
   @InjectTransactionManager()
   protected async createCampaigns_(
     data: PromotionTypes.CreateCampaignDTO[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ) {
     const campaignsData: CreateCampaignDTO[] = []
     const campaignBudgetsData: CreateCampaignBudgetDTO[] = []
@@ -1426,8 +1426,8 @@ export default class PromotionModuleService
     currency_code?: string | null
   }) {
     if (!data.type) {
-      throw new MedusaError(
-        MedusaError.Types.INVALID_DATA,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_DATA,
         `Campaign Budget type is a required field`
       )
     }
@@ -1436,8 +1436,8 @@ export default class PromotionModuleService
       data.type === CampaignBudgetType.SPEND &&
       !isPresent(data.currency_code)
     ) {
-      throw new MedusaError(
-        MedusaError.Types.INVALID_DATA,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_DATA,
         `Campaign Budget type is a required field`
       )
     }
@@ -1459,7 +1459,7 @@ export default class PromotionModuleService
   // @ts-expect-error
   async updateCampaigns(
     data: PromotionTypes.UpdateCampaignDTO | PromotionTypes.UpdateCampaignDTO[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<PromotionTypes.CampaignDTO | PromotionTypes.CampaignDTO[]> {
     const input = Array.isArray(data) ? data : [data]
     const updatedCampaigns = await this.updateCampaigns_(input, sharedContext)
@@ -1478,7 +1478,7 @@ export default class PromotionModuleService
   @InjectTransactionManager()
   protected async updateCampaigns_(
     data: PromotionTypes.UpdateCampaignDTO[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ) {
     const campaignIds = data.map((d) => d.id)
     const campaignsData: UpdateCampaignDTO[] = []
@@ -1510,8 +1510,8 @@ export default class PromotionModuleService
         delete budgetData?.type
         delete budgetData?.currency_code
 
-        throw new MedusaError(
-          MedusaError.Types.INVALID_DATA,
+        throw new vikraiError(
+          vikraiError.Types.INVALID_DATA,
           `Campaign budget attributes (type, currency_code) are immutable`
         )
       }
@@ -1564,7 +1564,7 @@ export default class PromotionModuleService
   @InjectTransactionManager()
   protected async addPromotionsToCampaign_(
     data: PromotionTypes.AddPromotionsToCampaignDTO,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ) {
     const { id, promotion_ids: promotionIds = [] } = data
 
@@ -1581,8 +1581,8 @@ export default class PromotionModuleService
     )
 
     if (diff.length > 0) {
-      throw new MedusaError(
-        MedusaError.Types.NOT_FOUND,
+      throw new vikraiError(
+        vikraiError.Types.NOT_FOUND,
         `Cannot add promotions (${diff.join(
           ","
         )}) to campaign. These promotions are either already part of a campaign or not found.`
@@ -1597,8 +1597,8 @@ export default class PromotionModuleService
     )
 
     if (promotionsWithInvalidCurrency.length > 0) {
-      throw new MedusaError(
-        MedusaError.Types.INVALID_DATA,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_DATA,
         `Cannot add promotions to campaign where currency_code don't match.`
       )
     }
@@ -1627,7 +1627,7 @@ export default class PromotionModuleService
   @InjectTransactionManager()
   protected async removePromotionsFromCampaign_(
     data: PromotionTypes.AddPromotionsToCampaignDTO,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ) {
     const { id, promotion_ids: promotionIds = [] } = data
 
@@ -1644,8 +1644,8 @@ export default class PromotionModuleService
     )
 
     if (diff.length > 0) {
-      throw new MedusaError(
-        MedusaError.Types.NOT_FOUND,
+      throw new vikraiError(
+        vikraiError.Types.NOT_FOUND,
         `Promotions with ids (${diff.join(",")}) not found.`
       )
     }
@@ -1661,3 +1661,4 @@ export default class PromotionModuleService
     return promotionsToRemove.map((promo) => promo.id)
   }
 }
+

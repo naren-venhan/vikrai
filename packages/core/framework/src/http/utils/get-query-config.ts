@@ -1,10 +1,10 @@
-import { FindConfig, QueryConfig, RequestQueryFields } from "@medusajs/types"
+import { FindConfig, QueryConfig, RequestQueryFields } from "@vikrai/types"
 import {
   isDefined,
   isPresent,
-  MedusaError,
+  vikraiError,
   stringToSelectRelationObject,
-} from "@medusajs/utils"
+} from "@vikrai/utils"
 import { pick } from "lodash"
 
 export function pickByConfig<TModel>(
@@ -176,8 +176,8 @@ export function prepareListQuery<T extends RequestQueryFields, TEntity>(
   }
 
   if (notAllowedFields.length) {
-    throw new MedusaError(
-      MedusaError.Types.INVALID_DATA,
+    throw new vikraiError(
+      vikraiError.Types.INVALID_DATA,
       `Requested fields [${Array.from(notAllowedFields).join(
         ", "
       )}] are not valid`
@@ -205,8 +205,8 @@ export function prepareListQuery<T extends RequestQueryFields, TEntity>(
     }
 
     if (allowed.length && !allowed.includes(orderField)) {
-      throw new MedusaError(
-        MedusaError.Types.INVALID_DATA,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_DATA,
         `Order field ${orderField} is not valid`
       )
     }
@@ -258,3 +258,4 @@ export function prepareRetrieveQuery<T extends RequestQueryFields, TEntity>(
     },
   }
 }
+

@@ -1,10 +1,10 @@
-import { IEventBusModuleService } from "@medusajs/types"
-import { CommonEvents, Modules } from "@medusajs/utils"
+import { IEventBusModuleService } from "@vikrai/types"
+import { CommonEvents, Modules } from "@vikrai/utils"
 import fs from "fs/promises"
 import {
   TestEventUtils,
-  medusaIntegrationTestRunner,
-} from "@medusajs/test-utils"
+  vikraiIntegrationTestRunner,
+} from "@vikrai/test-utils"
 import path from "path"
 import {
   adminHeaders,
@@ -45,7 +45,7 @@ const compareCSVs = async (filePath, expectedFilePath) => {
   expect(fileContent).toEqual(fixturesContent)
 }
 
-medusaIntegrationTestRunner({
+vikraiIntegrationTestRunner({
   testSuite: ({ dbConnection, getContainer, api }) => {
     let baseProduct
     let proposedProduct
@@ -375,3 +375,4 @@ medusaIntegrationTestRunner({
     })
   },
 })
+

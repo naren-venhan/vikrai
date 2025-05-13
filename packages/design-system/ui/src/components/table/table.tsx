@@ -1,4 +1,4 @@
-import { Minus } from "@medusajs/icons"
+import { Minus } from "@vikrai/icons"
 import * as React from "react"
 
 import { Button } from "@/components/button"
@@ -230,3 +230,4 @@ const Table = Object.assign(Root, {
 })
 
 export { Table }
+

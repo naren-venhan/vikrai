@@ -3,7 +3,7 @@
 import clsx from "clsx"
 import React from "react"
 import { Link, Tooltip } from "@/components"
-import { ExclamationCircle, PlaySolid } from "@medusajs/icons"
+import { ExclamationCircle, PlaySolid } from "@vikrai/icons"
 import { GITHUB_ISSUES_LINK } from "@/constants"
 import { CodeBlockCopyAction } from "./Copy"
 import { CodeBlockAskAiAction } from "./AskAi"
@@ -34,9 +34,9 @@ export const CodeBlockActions = ({
   noCopy = false,
 }: CodeBlockActionsProps) => {
   const iconClassName = [
-    "text-medusa-contrast-fg-secondary",
-    "group-hover:text-medusa-contrast-fg-primary",
-    "group-focus:text-medusa-contrast-fg-primary",
+    "text-vikrai-contrast-fg-secondary",
+    "group-hover:text-vikrai-contrast-fg-primary",
+    "group-focus:text-vikrai-contrast-fg-primary",
   ]
 
   return (
@@ -84,7 +84,7 @@ export const CodeBlockActions = ({
             innerClassName={clsx(
               inHeader && "flex",
               "h-fit rounded-docs_sm",
-              "group-hover:bg-medusa-contrast-bg-base-hover group-focus:bg-medusa-contrast-bg-base-hover"
+              "group-hover:bg-vikrai-contrast-bg-base-hover group-focus:bg-vikrai-contrast-bg-base-hover"
             )}
           >
             <span
@@ -107,7 +107,7 @@ export const CodeBlockActions = ({
             innerClassName={clsx(
               inHeader && "flex",
               "h-fit rounded-docs_sm",
-              "group-hover:bg-medusa-contrast-bg-base-hover group-focus:bg-medusa-contrast-bg-base-hover"
+              "group-hover:bg-vikrai-contrast-bg-base-hover group-focus:bg-vikrai-contrast-bg-base-hover"
             )}
           >
             <Link
@@ -131,3 +131,4 @@ export const CodeBlockActions = ({
     </div>
   )
 }
+

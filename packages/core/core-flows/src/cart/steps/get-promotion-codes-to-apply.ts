@@ -1,6 +1,6 @@
-import { IPromotionModuleService } from "@medusajs/framework/types"
-import { Modules, PromotionActions } from "@medusajs/framework/utils"
-import { StepResponse, createStep } from "@medusajs/framework/workflows-sdk"
+import { IPromotionModuleService } from "@vikrai/framework/types"
+import { Modules, PromotionActions } from "@vikrai/framework/utils"
+import { StepResponse, createStep } from "@vikrai/framework/workflows-sdk"
 
 /**
  * The details of the promotion codes to apply on a cart.
@@ -112,3 +112,4 @@ export const getPromotionCodesToApply = createStep(
     )
   }
 )
+

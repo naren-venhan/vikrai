@@ -1,10 +1,10 @@
-import { MedusaModule } from "../../medusa-module"
+import { vikraiModule } from "../../vikrai-module"
 import { getEntitiesMap } from "../__fixtures__/get-entities-map"
 import "../__fixtures__/parse-filters"
 import { parseAndAssignFilters } from "../parse-filters"
 
 const entitiesMap = getEntitiesMap(
-  MedusaModule.getAllJoinerConfigs()
+  vikraiModule.getAllJoinerConfigs()
     .map((m) => m.schema)
     .join("\n")
 )
@@ -584,3 +584,4 @@ describe("parse-filters", () => {
     })
   })
 })
+

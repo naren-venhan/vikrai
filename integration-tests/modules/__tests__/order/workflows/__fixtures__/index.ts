@@ -1,16 +1,16 @@
-import { createShippingOptionsWorkflow } from "@medusajs/core-flows"
+import { createShippingOptionsWorkflow } from "@vikrai/core-flows"
 import {
   FulfillmentWorkflow,
   IOrderModuleService,
   IRegionModuleService,
   IStockLocationService,
   StockLocationDTO,
-} from "@medusajs/types"
+} from "@vikrai/types"
 import {
   ContainerRegistrationKeys,
   Modules,
   remoteQueryObjectFromString,
-} from "@medusajs/utils"
+} from "@vikrai/utils"
 
 const providerId = "manual_test-provider"
 const providerIdCalculated = "manual-calculated_test-provider-calculated"
@@ -365,3 +365,4 @@ export async function createOrderFixture({
 
   return order
 }
+

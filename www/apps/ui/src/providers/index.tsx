@@ -10,7 +10,7 @@ import SearchProvider from "./search"
 import SidebarProvider from "./sidebar"
 import { siteConfig } from "../config/site"
 import { MainNavProvider } from "./main-nav"
-import { TooltipProvider } from "@medusajs/ui"
+import { TooltipProvider } from "@vikrai/ui"
 
 type ProvidersProps = {
   children: React.ReactNode
@@ -44,3 +44,4 @@ const Providers = ({ children }: ProvidersProps) => {
 }
 
 export { Providers }
+

@@ -1,6 +1,6 @@
-import { PlusMini, Trash } from "@medusajs/icons"
-import { HttpTypes } from "@medusajs/types"
-import { Checkbox, Container, Heading, toast, usePrompt } from "@medusajs/ui"
+import { PlusMini, Trash } from "@vikrai/icons"
+import { HttpTypes } from "@vikrai/types"
+import { Checkbox, Container, Heading, toast, usePrompt } from "@vikrai/ui"
 import {
   ColumnDef,
   RowSelectionState,
@@ -253,3 +253,4 @@ const useColumns = () => {
     [base]
   ) as ColumnDef<HttpTypes.AdminRegionCountry>[]
 }
+

@@ -7,7 +7,7 @@
   "redirects": [
     {
       "source": "/ui/hooks/use-toast",
-      "destination": "/upgrade-guides/medusa-ui/3-0-0"
+      "destination": "/upgrade-guides/vikrai-ui/3-0-0"
     }
   ]
 }

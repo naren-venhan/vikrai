@@ -1,4 +1,4 @@
-import { createShippingOptionsWorkflow } from "@medusajs/core-flows"
+import { createShippingOptionsWorkflow } from "@vikrai/core-flows"
 import {
   FulfillmentSetDTO,
   FulfillmentWorkflow,
@@ -6,21 +6,21 @@ import {
   IRegionModuleService,
   ServiceZoneDTO,
   ShippingProfileDTO,
-} from "@medusajs/types"
+} from "@vikrai/types"
 import {
   ContainerRegistrationKeys,
   Modules,
   RuleOperator,
   remoteQueryObjectFromString,
-} from "@medusajs/utils"
-import { medusaIntegrationTestRunner } from "@medusajs/test-utils"
+} from "@vikrai/utils"
+import { vikraiIntegrationTestRunner } from "@vikrai/test-utils"
 
 jest.setTimeout(100000)
 
-const env = { MEDUSA_FF_MEDUSA_V2: true }
+const env = { vikrai_FF_vikrai_V2: true }
 const provider_id = "manual_test-provider"
 
-medusaIntegrationTestRunner({
+vikraiIntegrationTestRunner({
   env,
   testSuite: ({ getContainer }) => {
     let service: IFulfillmentModuleService
@@ -352,3 +352,4 @@ medusaIntegrationTestRunner({
     })
   },
 })
+

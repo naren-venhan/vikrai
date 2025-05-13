@@ -1,4 +1,4 @@
-import { ModuleExports } from "@medusajs/framework/types"
+import { ModuleExports } from "@vikrai/framework/types"
 import InMemoryCacheService from "./services/inmemory-cache"
 
 const service = InMemoryCacheService
@@ -10,3 +10,4 @@ const moduleDefinition: ModuleExports = {
 export default moduleDefinition
 export * from "./initialize"
 export * from "./types"
+

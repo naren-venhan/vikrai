@@ -1,12 +1,12 @@
-import { BigNumberInput, PaymentDTO } from "@medusajs/framework/types"
-import { isDefined, MathBN, MedusaError } from "@medusajs/framework/utils"
+import { BigNumberInput, PaymentDTO } from "@vikrai/framework/types"
+import { isDefined, MathBN, vikraiError } from "@vikrai/framework/utils"
 import {
   createStep,
   createWorkflow,
   transform,
   WorkflowData,
   WorkflowResponse,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { useQueryGraphStep } from "../../common"
 import { addOrderTransactionStep } from "../../order/steps/add-order-transaction"
 import { refundPaymentsStep } from "../steps/refund-payments"
@@ -32,8 +32,8 @@ export type ValidatePaymentsRefundStepInput = {
  *
  * :::note
  *
- * You can retrieve a payment's details using [Query](https://docs.medusajs.com/learn/fundamentals/module-links/query),
- * or [useQueryGraphStep](https://docs.medusajs.com/resources/references/medusa-workflows/steps/useQueryGraphStep).
+ * You can retrieve a payment's details using [Query](https://docs.vikrai.com/learn/fundamentals/module-links/query),
+ * or [useQueryGraphStep](https://docs.vikrai.com/resources/references/vikrai-workflows/steps/useQueryGraphStep).
  *
  * :::
  *
@@ -73,8 +73,8 @@ export const validatePaymentsRefundStep = createStep(
       const amountToRefund = paymentIdAmountMap.get(payment.id)!
 
       if (MathBN.gt(amountToRefund, refundableAmount)) {
-        throw new MedusaError(
-          MedusaError.Types.INVALID_DATA,
+        throw new vikraiError(
+          vikraiError.Types.INVALID_DATA,
           `Payment with id ${payment.id} is trying to refund amount greater than the refundable amount`
         )
       }
@@ -198,3 +198,4 @@ export const refundPaymentsWorkflow = createWorkflow(
     return new WorkflowResponse(refundedPayments)
   }
 )
+

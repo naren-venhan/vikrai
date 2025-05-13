@@ -1,6 +1,6 @@
 import { SqlEntityManager } from "@mikro-orm/postgresql"
 import { PriceList } from "@models"
-import { toMikroORMEntity } from "@medusajs/framework/utils"
+import { toMikroORMEntity } from "@vikrai/framework/utils"
 import { defaultPriceListData } from "./data"
 
 export * from "./data"
@@ -21,3 +21,4 @@ export async function createPriceLists(
 
   return priceLists
 }
+

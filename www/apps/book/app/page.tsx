@@ -11,8 +11,8 @@ const Homepage = () => {
   return (
     <body
       className={clsx(
-        "bg-medusa-bg-subtle font-base text-medium w-full",
-        "text-medusa-fg-base px-0.25 pt-0.25",
+        "bg-vikrai-bg-subtle font-base text-medium w-full",
+        "text-vikrai-fg-base px-0.25 pt-0.25",
         "h-screen overflow-hidden"
       )}
     >
@@ -28,7 +28,7 @@ const Homepage = () => {
         >
           <div
             className={clsx(
-              "rounded-t bg-medusa-bg-base",
+              "rounded-t bg-vikrai-bg-base",
               "shadow-elevation-card-rest dark:shadow-elevation-card-rest-dark",
               "h-full w-full",
               "overflow-y-scroll overflow-x-hidden"
@@ -36,10 +36,10 @@ const Homepage = () => {
             id="main"
           >
             <MainNav
-              className="border-b border-medusa-border-base"
+              className="border-b border-vikrai-border-base"
               itemsClassName={clsx(
-                "!my-1 [&_li_div]:!text-medusa-fg-subtle [&_li_a]:!text-medusa-fg-subtle [&_li_span]:!text-medusa-fg-subtle",
-                "hover:[&_li_div]:!text-medusa-fg-base hover:[&_li_a]:!text-medusa-fg-base hover:[&_li_span]:!text-medusa-fg-base"
+                "!my-1 [&_li_div]:!text-vikrai-fg-subtle [&_li_a]:!text-vikrai-fg-subtle [&_li_span]:!text-vikrai-fg-subtle",
+                "hover:[&_li_div]:!text-vikrai-fg-base hover:[&_li_a]:!text-vikrai-fg-base hover:[&_li_span]:!text-vikrai-fg-base"
               )}
             />
             <HomepageTopSection />
@@ -56,3 +56,4 @@ const Homepage = () => {
 }
 
 export default Homepage
+

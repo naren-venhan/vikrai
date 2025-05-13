@@ -5,7 +5,7 @@ import {
   QueryGraphFunction,
   RemoteQueryFunction,
   Subscriber,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import {
   MikroOrmBaseRepository as BaseRepository,
   CommonEvents,
@@ -14,10 +14,10 @@ import {
   InjectManager,
   InjectTransactionManager,
   isDefined,
-  MedusaContext,
+  vikraiContext,
   toMikroORMEntity,
   unflattenObjectKeys,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 import {
   EntityManager,
   EntityRepository,
@@ -233,7 +233,7 @@ export class PostgresProvider implements IndexTypes.StorageProvider {
   @InjectManager()
   async query<const TEntry extends string>(
     config: IndexTypes.IndexQueryConfig<TEntry>,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<IndexTypes.QueryResultSet<TEntry>> {
     await this.#isReady_
 
@@ -361,7 +361,7 @@ export class PostgresProvider implements IndexTypes.StorageProvider {
       data: TData | TData[]
       schemaEntityObjectRepresentation: IndexTypes.SchemaObjectEntityRepresentation
     },
-    @MedusaContext() sharedContext: Context<SqlEntityManager> = {}
+    @vikraiContext() sharedContext: Context<SqlEntityManager> = {}
   ) {
     const { transactionManager: em } = sharedContext
     const indexRepository = em!.getRepository(
@@ -486,7 +486,7 @@ export class PostgresProvider implements IndexTypes.StorageProvider {
       data: TData | TData[]
       schemaEntityObjectRepresentation: IndexTypes.SchemaObjectEntityRepresentation
     },
-    @MedusaContext() sharedContext: Context<SqlEntityManager> = {}
+    @vikraiContext() sharedContext: Context<SqlEntityManager> = {}
   ) {
     const { transactionManager: em } = sharedContext
     const indexRepository = em!.getRepository(
@@ -537,7 +537,7 @@ export class PostgresProvider implements IndexTypes.StorageProvider {
       data: TData | TData[]
       schemaEntityObjectRepresentation: IndexTypes.SchemaObjectEntityRepresentation
     },
-    @MedusaContext() sharedContext: Context<SqlEntityManager> = {}
+    @vikraiContext() sharedContext: Context<SqlEntityManager> = {}
   ) {
     const { transactionManager: em } = sharedContext
     const indexRepository = em!.getRepository(toMikroORMEntity(IndexData))
@@ -589,7 +589,7 @@ export class PostgresProvider implements IndexTypes.StorageProvider {
       data: TData | TData[]
       schemaEntityObjectRepresentation: IndexTypes.SchemaObjectEntityRepresentation
     },
-    @MedusaContext() sharedContext: Context<SqlEntityManager> = {}
+    @vikraiContext() sharedContext: Context<SqlEntityManager> = {}
   ) {
     const { transactionManager: em } = sharedContext
     const indexRepository = em!.getRepository(toMikroORMEntity(IndexData))
@@ -728,7 +728,7 @@ export class PostgresProvider implements IndexTypes.StorageProvider {
       data: TData | TData[]
       schemaEntityObjectRepresentation: IndexTypes.SchemaObjectEntityRepresentation
     },
-    @MedusaContext() sharedContext: Context<SqlEntityManager> = {}
+    @vikraiContext() sharedContext: Context<SqlEntityManager> = {}
   ) {
     const { transactionManager: em } = sharedContext
     const indexRepository = em!.getRepository(toMikroORMEntity(IndexData))
@@ -762,3 +762,4 @@ export class PostgresProvider implements IndexTypes.StorageProvider {
     })
   }
 }
+

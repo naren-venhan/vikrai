@@ -1,17 +1,17 @@
 import {
   CreatePriceSetDTO,
   IPricingModuleService,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import {
   CommonEvents,
   composeMessage,
   Modules,
   PricingEvents,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 import {
   MockEventBusService,
   moduleIntegrationTestRunner,
-} from "@medusajs/test-utils"
+} from "@vikrai/test-utils"
 import { seedPriceData } from "../../../__fixtures__/seed-price-data"
 
 jest.setTimeout(30000)
@@ -959,3 +959,4 @@ moduleIntegrationTestRunner<IPricingModuleService>({
     })
   },
 })
+

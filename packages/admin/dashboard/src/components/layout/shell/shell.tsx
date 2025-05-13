@@ -1,5 +1,5 @@
-import { SidebarLeft, TriangleRightMini, XMark } from "@medusajs/icons"
-import { IconButton, clx } from "@medusajs/ui"
+import { SidebarLeft, TriangleRightMini, XMark } from "@vikrai/icons"
+import { IconButton, clx } from "@vikrai/ui"
 import { AnimatePresence } from "motion/react"
 import { Dialog as RadixDialog } from "radix-ui"
 import { PropsWithChildren, ReactNode, useEffect, useState } from "react"
@@ -261,3 +261,4 @@ const MobileSidebarContainer = ({ children }: PropsWithChildren) => {
     </RadixDialog.Root>
   )
 }
+

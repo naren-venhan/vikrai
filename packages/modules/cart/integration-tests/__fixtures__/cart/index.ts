@@ -1,8 +1,8 @@
-import { CreateCartDTO, InferEntityType } from "@medusajs/framework/types"
+import { CreateCartDTO, InferEntityType } from "@vikrai/framework/types"
 import { SqlEntityManager } from "@mikro-orm/postgresql"
 import { Cart } from "../../../src/models"
 import { defaultCartsData } from "./data"
-import { toMikroORMEntity } from "@medusajs/framework/utils"
+import { toMikroORMEntity } from "@vikrai/framework/utils"
 
 export * from "./data"
 
@@ -20,3 +20,4 @@ export async function createCarts(
 
   return carts
 }
+

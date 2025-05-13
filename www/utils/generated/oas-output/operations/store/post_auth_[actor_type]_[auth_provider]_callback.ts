@@ -9,7 +9,7 @@
  *   You can decode the JWT token using libraries like [react-jwt](https://www.npmjs.com/package/react-jwt) in the storefront. If the decoded data doesn't 
  *   have an `actor_id` property, then you must register the customer using the Create Customer API route passing the token in the request's Authorization header.
  * externalDocs:
- *   url: https://docs.medusajs.com/v2/storefront-development/customers/third-party-login
+ *   url: https://docs.vikrai.com/v2/storefront-development/customers/third-party-login
  *   description: "Storefront development: Implement third-party (social) login."
  * x-authenticated: false
  * parameters:
@@ -24,18 +24,18 @@
  *   - lang: JavaScript
  *     label: Google Provider
  *     source: |-
- *       import Medusa from "@medusajs/js-sdk"
+ *       import vikrai from "@vikrai/js-sdk"
  * 
- *       let MEDUSA_BACKEND_URL = "http://localhost:9000"
+ *       let vikrai_BACKEND_URL = "http://localhost:9000"
  * 
- *       if (process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL) {
- *         MEDUSA_BACKEND_URL = process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL
+ *       if (process.env.NEXT_PUBLIC_vikrai_BACKEND_URL) {
+ *         vikrai_BACKEND_URL = process.env.NEXT_PUBLIC_vikrai_BACKEND_URL
  *       }
  * 
- *       export const sdk = new Medusa({
- *         baseUrl: MEDUSA_BACKEND_URL,
+ *       export const sdk = new vikrai({
+ *         baseUrl: vikrai_BACKEND_URL,
  *         debug: process.env.NODE_ENV === "development",
- *         publishableKey: process.env.NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY,
+ *         publishableKey: process.env.NEXT_PUBLIC_vikrai_PUBLISHABLE_KEY,
  *       })
  * 
  *       await sdk.auth.callback(
@@ -55,18 +55,18 @@
  *   - lang: TypeScript
  *     label: GitHub Provider
  *     source: |-
- *       import Medusa from "@medusajs/js-sdk"
+ *       import vikrai from "@vikrai/js-sdk"
  * 
- *       let MEDUSA_BACKEND_URL = "http://localhost:9000"
+ *       let vikrai_BACKEND_URL = "http://localhost:9000"
  * 
- *       if (process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL) {
- *         MEDUSA_BACKEND_URL = process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL
+ *       if (process.env.NEXT_PUBLIC_vikrai_BACKEND_URL) {
+ *         vikrai_BACKEND_URL = process.env.NEXT_PUBLIC_vikrai_BACKEND_URL
  *       }
  * 
- *       export const sdk = new Medusa({
- *         baseUrl: MEDUSA_BACKEND_URL,
+ *       export const sdk = new vikrai({
+ *         baseUrl: vikrai_BACKEND_URL,
  *         debug: process.env.NODE_ENV === "development",
- *         publishableKey: process.env.NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY,
+ *         publishableKey: process.env.NEXT_PUBLIC_vikrai_PUBLISHABLE_KEY,
  *       })
  * 
  *       await sdk.auth.callback(

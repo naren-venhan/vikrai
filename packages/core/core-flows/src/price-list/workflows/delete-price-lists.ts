@@ -1,5 +1,5 @@
-import { Modules } from "@medusajs/framework/utils"
-import { createWorkflow, WorkflowData } from "@medusajs/framework/workflows-sdk"
+import { Modules } from "@vikrai/framework/utils"
+import { createWorkflow, WorkflowData } from "@vikrai/framework/workflows-sdk"
 import { removeRemoteLinkStep } from "../../common/steps/remove-remote-links"
 import { deletePriceListsStep } from "../steps"
 
@@ -16,7 +16,7 @@ export type DeletePriceListsWorkflowInput = {
 export const deletePriceListsWorkflowId = "delete-price-lists"
 /**
  * This workflow deletes one or more price lists. It's used by the
- * [Delete Price List Admin API Route](https://docs.medusajs.com/api/admin#price-lists_deletepricelistsid).
+ * [Delete Price List Admin API Route](https://docs.vikrai.com/api/admin#price-lists_deletepricelistsid).
  *
  * You can use this workflow within your customizations or your own custom workflows, allowing you to
  * delete price lists in your custom flows.
@@ -47,3 +47,4 @@ export const deletePriceListsWorkflow = createWorkflow(
     return deletedPriceLists
   }
 )
+

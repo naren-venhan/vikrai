@@ -5,7 +5,7 @@ post:
   description: >-
     Cancel an order transfer that the logged-in customer previously requested
     using the [Request Order
-    Transfer](https://docs.medusajs.com/api/store#orders_postordersidtransferrequest)
+    Transfer](https://docs.vikrai.com/api/store#orders_postordersidtransferrequest)
     API route.
   x-authenticated: true
   parameters:
@@ -17,12 +17,12 @@ post:
         type: string
     - name: x-publishable-api-key
       in: header
-      description: Publishable API Key created in the Medusa Admin.
+      description: Publishable API Key created in the vikrai Admin.
       required: true
       schema:
         type: string
         externalDocs:
-          url: https://docs.medusajs.com/api/store#publishable-api-key
+          url: https://docs.vikrai.com/api/store#publishable-api-key
     - name: fields
       in: query
       description: >-
@@ -78,3 +78,4 @@ post:
     - cookie_auth: []
     - jwt_token: []
   x-events: []
+

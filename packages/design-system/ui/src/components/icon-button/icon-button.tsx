@@ -1,4 +1,4 @@
-import { Spinner } from "@medusajs/icons"
+import { Spinner } from "@vikrai/icons"
 import { VariantProps, cva } from "cva"
 import { Slot } from "radix-ui"
 import * as React from "react"
@@ -119,3 +119,4 @@ const IconButton = React.forwardRef<HTMLButtonElement, IconButtonProps>(
 IconButton.displayName = "IconButton"
 
 export { IconButton, iconButtonVariants }
+

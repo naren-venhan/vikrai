@@ -1,4 +1,4 @@
-import { Badge, Tooltip } from "@medusajs/ui"
+import { Badge, Tooltip } from "@vikrai/ui"
 import { useTranslation } from "react-i18next"
 import { DataGridRowError } from "../types"
 
@@ -53,3 +53,4 @@ const DataGridRowErrorLine = ({
     </li>
   )
 }
+

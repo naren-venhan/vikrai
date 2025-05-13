@@ -33,7 +33,7 @@ properties:
       payment.
     externalDocs:
       url: >-
-        https://docs.medusajs.com/resources/commerce-modules/payment/payment-session#data-property
+        https://docs.vikrai.com/resources/commerce-modules/payment/payment-session#data-property
   context:
     type: object
     description: The context around the payment, such as the customer's details.
@@ -59,3 +59,4 @@ properties:
     type: object
   payment:
     $ref: ./BasePayment.yaml
+

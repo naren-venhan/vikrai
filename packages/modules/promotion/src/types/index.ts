@@ -1,4 +1,4 @@
-import { Logger } from "@medusajs/framework/types"
+import { Logger } from "@vikrai/framework/types"
 
 export type InitializeModuleInjectableDependencies = {
   logger?: Logger
@@ -10,3 +10,4 @@ export * from "./campaign-budget"
 export * from "./promotion"
 export * from "./promotion-rule"
 export * from "./promotion-rule-value"
+

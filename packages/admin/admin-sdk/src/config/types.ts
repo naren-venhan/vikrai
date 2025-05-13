@@ -5,7 +5,7 @@ import type {
   CustomFieldModelFormTabsMap,
   InjectionZone,
   NestedRoutePosition,
-} from "@medusajs/admin-shared"
+} from "@vikrai/admin-shared"
 import type { ComponentType } from "react"
 import { ZodFirstPartySchemaTypes } from "zod"
 
@@ -148,3 +148,4 @@ export interface CustomFieldConfig<TModel extends CustomFieldModel> {
     component: ComponentType
   }>
 }
+

@@ -1,12 +1,12 @@
-import { AdditionalData, ProductTypes } from "@medusajs/framework/types"
-import { ProductTagWorkflowEvents } from "@medusajs/framework/utils"
+import { AdditionalData, ProductTypes } from "@vikrai/framework/types"
+import { ProductTagWorkflowEvents } from "@vikrai/framework/utils"
 import {
   WorkflowData,
   WorkflowResponse,
   createHook,
   createWorkflow,
   transform,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { emitEventStep } from "../../common/steps/emit-event"
 import { createProductTagsStep } from "../steps"
 
@@ -23,7 +23,7 @@ export type CreateProductTagsWorkflowInput = {
 export const createProductTagsWorkflowId = "create-product-tags"
 /**
  * This workflow creates one or more product tags. It's used by the 
- * [Create Product Tag Admin API Route](https://docs.medusajs.com/api/admin#product-tags_postproducttags).
+ * [Create Product Tag Admin API Route](https://docs.vikrai.com/api/admin#product-tags_postproducttags).
  * 
  * This workflow has a hook that allows you to perform custom actions on the created product tags. For example, you can pass under `additional_data` custom data that 
  * allows you to create custom data models linked to the product tags.
@@ -76,3 +76,4 @@ export const createProductTagsWorkflow = createWorkflow(
     })
   }
 )
+

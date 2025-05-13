@@ -20,7 +20,7 @@ export default async function generate(
   const references = names.includes("all") ? allReferences : names
 
   if (references.includes("core-flows")) {
-    await import("@medusajs/core-flows")
+    await import("@vikrai/core-flows")
   }
 
   for (const referenceName of references) {
@@ -93,3 +93,4 @@ export default async function generate(
     await merge()
   }
 }
+

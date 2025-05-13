@@ -3,9 +3,9 @@ import {
   IProductModuleService,
   IRegionModuleService,
   ISalesChannelModuleService,
-} from "@medusajs/framework/types"
-import { MedusaError, Modules } from "@medusajs/framework/utils"
-import { StepResponse, createStep } from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/types"
+import { vikraiError, Modules } from "@vikrai/framework/utils"
+import { StepResponse, createStep } from "@vikrai/framework/workflows-sdk"
 import { normalizeForImport } from "../helpers/normalize-for-import"
 import { normalizeV1Products } from "../helpers/normalize-v1-import"
 import { convertCsvToJson } from "../utlils"
@@ -60,8 +60,8 @@ export const parseProductCsvStep = createStep(
     // We use the handle to group products and variants correctly.
     v1Normalized.forEach((product: any) => {
       if (!product["Product Handle"]) {
-        throw new MedusaError(
-          MedusaError.Types.INVALID_DATA,
+        throw new vikraiError(
+          vikraiError.Types.INVALID_DATA,
           "Product handle is required when importing products"
         )
       }
@@ -82,3 +82,4 @@ export const parseProductCsvStep = createStep(
     return new StepResponse(normalizedData)
   }
 )
+

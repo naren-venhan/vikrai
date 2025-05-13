@@ -2,7 +2,7 @@
 
 import React, { useRef, useState } from "react"
 import { Button } from "../../Button"
-import { ArrowUturnLeft, BarsThree, XMark } from "@medusajs/icons"
+import { ArrowUturnLeft, BarsThree, XMark } from "@vikrai/icons"
 import clsx from "clsx"
 import { MenuItem } from "types"
 // @ts-expect-error can't install the types package because it doesn't support React v19
@@ -25,7 +25,7 @@ export const MainNavMobileMenu = () => {
       <Button
         variant="transparent"
         onClick={() => setIsOpen((prev) => !prev)}
-        className="text-medusa-fg-subtle !p-[6.5px]"
+        className="text-vikrai-fg-subtle !p-[6.5px]"
       >
         {!isOpen && <BarsThree />}
         {isOpen && <XMark />}
@@ -33,7 +33,7 @@ export const MainNavMobileMenu = () => {
       <div
         className={clsx(
           "flex items-center justify-center fixed w-full h-[calc(100vh-52px)]",
-          "top-[52px] transition-[left] bg-medusa-bg-subtle z-50",
+          "top-[52px] transition-[left] bg-vikrai-bg-subtle z-50",
           !isOpen && "-left-full",
           isOpen && "left-0"
         )}
@@ -64,7 +64,7 @@ export const MainNavMobileMenu = () => {
                   <div
                     className={clsx(
                       "flex items-center gap-docs_0.5",
-                      "text-medusa-fg-base my-[14px]",
+                      "text-vikrai-fg-base my-[14px]",
                       "cursor-pointer"
                     )}
                     tabIndex={-1}
@@ -92,3 +92,4 @@ export const MainNavMobileMenu = () => {
     </div>
   )
 }
+

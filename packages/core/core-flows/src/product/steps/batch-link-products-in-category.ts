@@ -1,9 +1,9 @@
 import {
   IProductModuleService,
   ProductCategoryWorkflow,
-} from "@medusajs/framework/types"
-import { Modules } from "@medusajs/framework/utils"
-import { createStep, StepResponse } from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/types"
+import { Modules } from "@vikrai/framework/utils"
+import { createStep, StepResponse } from "@vikrai/framework/workflows-sdk"
 
 export const batchLinkProductsToCategoryStepId =
   "batch-link-products-to-category"
@@ -98,3 +98,4 @@ export const batchLinkProductsToCategoryStep = createStep(
     await service.upsertProducts(productsWithRevertedCategories)
   }
 )
+

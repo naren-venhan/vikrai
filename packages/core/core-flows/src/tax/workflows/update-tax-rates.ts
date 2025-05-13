@@ -3,8 +3,8 @@ import {
   ITaxModuleService,
   TaxRateDTO,
   UpdateTaxRateDTO,
-} from "@medusajs/framework/types"
-import { Modules } from "@medusajs/framework/utils"
+} from "@vikrai/framework/types"
+import { Modules } from "@vikrai/framework/utils"
 import {
   StepResponse,
   WorkflowData,
@@ -12,7 +12,7 @@ import {
   createStep,
   createWorkflow,
   transform,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import {
   createTaxRateRulesStep,
   deleteTaxRateRulesStep,
@@ -120,7 +120,7 @@ export const maybeListTaxRateRuleIdsStep = createStep(
 export const updateTaxRatesWorkflowId = "update-tax-rates"
 /**
  * This workflow updates tax rates matching specified filters. It's used by the
- * [Update Tax Rates Admin API Route](https://docs.medusajs.com/api/admin#tax-rates_posttaxratesid).
+ * [Update Tax Rates Admin API Route](https://docs.vikrai.com/api/admin#tax-rates_posttaxratesid).
  * 
  * You can use this workflow within your own customizations or custom workflows, allowing you
  * to update tax rates in your custom flows.
@@ -205,3 +205,4 @@ export const updateTaxRatesWorkflow = createWorkflow(
     return new WorkflowResponse(updatedRates)
   }
 )
+

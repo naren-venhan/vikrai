@@ -4,8 +4,8 @@ import {
   transform,
   WorkflowData,
   WorkflowResponse,
-} from "@medusajs/framework/workflows-sdk"
-import { BatchWorkflowInput, BatchWorkflowOutput, InventoryLevelDTO, InventoryTypes } from "@medusajs/types"
+} from "@vikrai/framework/workflows-sdk"
+import { BatchWorkflowInput, BatchWorkflowOutput, InventoryLevelDTO, InventoryTypes } from "@vikrai/types"
 import { createInventoryLevelsStep, updateInventoryLevelsStep } from "../steps"
 import { deleteInventoryLevelsWorkflow } from "./delete-inventory-levels"
 
@@ -114,3 +114,4 @@ export const batchInventoryItemLevelsWorkflow = createWorkflow(
     )
   }
 )
+

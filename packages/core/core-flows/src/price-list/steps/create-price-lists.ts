@@ -2,9 +2,9 @@ import {
   CreatePriceListDTO,
   CreatePriceListsWorkflowStepDTO,
   IPricingModuleService,
-} from "@medusajs/framework/types"
-import { Modules } from "@medusajs/framework/utils"
-import { StepResponse, createStep } from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/types"
+import { Modules } from "@vikrai/framework/utils"
+import { StepResponse, createStep } from "@vikrai/framework/workflows-sdk"
 
 export const createPriceListsStepId = "create-price-lists"
 /**
@@ -76,3 +76,4 @@ export const createPriceListsStep = createStep(
     await pricingModule.deletePriceLists(createdPriceListIds)
   }
 )
+

@@ -2,7 +2,7 @@ import React from "react"
 import { CardProps } from "../.."
 import { useIsExternalLink } from "../../../.."
 import clsx from "clsx"
-import { ArrowUpRightOnBox, TriangleRightMini } from "@medusajs/icons"
+import { ArrowUpRightOnBox, TriangleRightMini } from "@vikrai/icons"
 import Link from "next/link"
 
 export const CardLargeLayout = ({
@@ -26,7 +26,7 @@ export const CardLargeLayout = ({
     >
       <div
         className={clsx(
-          "rounded-docs_DEFAULT bg-medusa-bg-component w-[290px] h-[144px]",
+          "rounded-docs_DEFAULT bg-vikrai-bg-component w-[290px] h-[144px]",
           "shadow-elevation-card-rest dark:shadow-elevation-card-rest-dark",
           href &&
             "group-hover:shadow-elevation-card-hover group-hover:dark:shadow-elevation-card-hover-dark",
@@ -35,7 +35,7 @@ export const CardLargeLayout = ({
       >
         {IconComponent && (
           <IconComponent
-            className="text-medusa-fg-subtle"
+            className="text-vikrai-fg-subtle"
             width={32}
             height={32}
             viewBox="0 0 32 32"
@@ -46,7 +46,7 @@ export const CardLargeLayout = ({
         )}
       </div>
       <div className="flex flex-col">
-        <div className="flex gap-docs_0.25 items-center text-medusa-fg-base">
+        <div className="flex gap-docs_0.25 items-center text-vikrai-fg-base">
           {title && <span className="text-compact-small-plus">{title}</span>}
           {href && isExternal && <ArrowUpRightOnBox />}
           {href && !isExternal && (
@@ -54,7 +54,7 @@ export const CardLargeLayout = ({
           )}
         </div>
         {text && (
-          <span className="text-small-plus text-medusa-fg-subtle">{text}</span>
+          <span className="text-small-plus text-vikrai-fg-subtle">{text}</span>
         )}
       </div>
       {href && (
@@ -67,3 +67,4 @@ export const CardLargeLayout = ({
     </div>
   )
 }
+

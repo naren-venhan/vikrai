@@ -1,4 +1,4 @@
-import { DALUtils } from "@medusajs/framework/utils"
+import { DALUtils } from "@vikrai/framework/utils"
 import { Order } from "@models"
 import { setFindMethods } from "../utils/base-repository-find"
 
@@ -7,3 +7,4 @@ export class OrderRepository extends DALUtils.mikroOrmBaseRepositoryFactory(
 ) {}
 
 setFindMethods(OrderRepository, Order)
+

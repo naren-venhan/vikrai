@@ -1,4 +1,4 @@
-import { Container, Heading } from "@medusajs/ui"
+import { Container, Heading } from "@vikrai/ui"
 
 export default function ContainerLayout() {
   return (
@@ -20,3 +20,4 @@ export default function ContainerLayout() {
     </div>
   )
 }
+

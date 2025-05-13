@@ -12,30 +12,30 @@ import {
   SoftDeleteReturn,
   UpdateRegionDTO,
   UpsertRegionDTO,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import {
   arrayDifference,
   getDuplicates,
   InjectManager,
   InjectTransactionManager,
   isString,
-  MedusaContext,
-  MedusaError,
-  MedusaService,
+  vikraiContext,
+  vikraiError,
+  vikraiService,
   promiseAll,
   removeUndefined,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 import { Country, Region } from "@models"
 import { UpdateRegionInput } from "@types"
 
 type InjectedDependencies = {
   baseRepository: DAL.RepositoryService
-  regionService: ModulesSdkTypes.IMedusaInternalService<any>
-  countryService: ModulesSdkTypes.IMedusaInternalService<any>
+  regionService: ModulesSdkTypes.IvikraiInternalService<any>
+  countryService: ModulesSdkTypes.IvikraiInternalService<any>
 }
 
 export default class RegionModuleService
-  extends MedusaService<{
+  extends vikraiService<{
     Region: {
       dto: RegionDTO
       model: typeof Region
@@ -48,10 +48,10 @@ export default class RegionModuleService
   implements IRegionModuleService
 {
   protected baseRepository_: DAL.RepositoryService
-  protected readonly regionService_: ModulesSdkTypes.IMedusaInternalService<
+  protected readonly regionService_: ModulesSdkTypes.IvikraiInternalService<
     typeof Region
   >
-  protected readonly countryService_: ModulesSdkTypes.IMedusaInternalService<
+  protected readonly countryService_: ModulesSdkTypes.IvikraiInternalService<
     typeof Country
   >
 
@@ -81,7 +81,7 @@ export default class RegionModuleService
   // @ts-expect-error
   async createRegions(
     data: CreateRegionDTO | CreateRegionDTO[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<RegionDTO | RegionDTO[]> {
     const input = Array.isArray(data) ? data : [data]
 
@@ -95,7 +95,7 @@ export default class RegionModuleService
   @InjectTransactionManager()
   async createRegions_(
     data: CreateRegionDTO[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<InferEntityType<typeof Region>[]> {
     let normalizedInput = RegionModuleService.normalizeInput(data)
 
@@ -136,7 +136,7 @@ export default class RegionModuleService
   async softDeleteRegions(
     ids: string | object | string[] | object[],
     config?: SoftDeleteReturn<string>,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<Record<string, string[]> | void> {
     const result = await super.softDeleteRegions(ids, config, sharedContext)
     // Note: You cannot revert the state of a region by simply restoring it. The association with countries is lost.
@@ -163,7 +163,7 @@ export default class RegionModuleService
   @InjectTransactionManager()
   async upsertRegions(
     data: UpsertRegionDTO | UpsertRegionDTO[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<RegionDTO | RegionDTO[]> {
     const input = Array.isArray(data) ? data : [data]
     const forUpdate = input.filter(
@@ -206,7 +206,7 @@ export default class RegionModuleService
   async updateRegions(
     idOrSelector: string | FilterableRegionProps,
     data: UpdateRegionDTO,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<RegionDTO | RegionDTO[]> {
     let normalizedInput: UpdateRegionInput[] = []
     if (isString(idOrSelector)) {
@@ -239,7 +239,7 @@ export default class RegionModuleService
   @InjectTransactionManager()
   protected async updateRegions_(
     data: UpdateRegionInput[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<InferEntityType<typeof Region>[]> {
     const normalizedInput = RegionModuleService.normalizeInput(data)
 
@@ -317,8 +317,8 @@ export default class RegionModuleService
     // The new regions being created have a country conflict
     const uniqueCountries = Array.from(new Set(countries))
     if (uniqueCountries.length !== countries.length) {
-      throw new MedusaError(
-        MedusaError.Types.INVALID_DATA,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_DATA,
         `Countries with codes: "${getDuplicates(countries).join(
           ", "
         )}" are already assigned to a region`
@@ -339,8 +339,8 @@ export default class RegionModuleService
         countryCodesInDb
       )
 
-      throw new MedusaError(
-        MedusaError.Types.INVALID_DATA,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_DATA,
         `Countries with codes: "${missingCountries.join(", ")}" do not exist`
       )
     }
@@ -349,8 +349,8 @@ export default class RegionModuleService
     // @ts-ignore
     const countriesWithRegion = countriesInDb.filter((c) => !!c.region_id)
     if (countriesWithRegion.length) {
-      throw new MedusaError(
-        MedusaError.Types.INVALID_DATA,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_DATA,
         `Countries with codes: "${countriesWithRegion
           .map((c) => c.iso_2)
           .join(", ")}" are already assigned to a region`
@@ -360,3 +360,4 @@ export default class RegionModuleService
     return countriesInDb
   }
 }
+

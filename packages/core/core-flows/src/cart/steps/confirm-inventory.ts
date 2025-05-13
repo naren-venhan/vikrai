@@ -1,11 +1,11 @@
-import { BigNumberInput, IInventoryService } from "@medusajs/framework/types"
+import { BigNumberInput, IInventoryService } from "@vikrai/framework/types"
 import {
   MathBN,
-  MedusaError,
+  vikraiError,
   Modules,
   promiseAll,
-} from "@medusajs/framework/utils"
-import { StepResponse, createStep } from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/utils"
+import { StepResponse, createStep } from "@vikrai/framework/workflows-sdk"
 
 /**
  * The details of the cart items to confirm their inventory availability.
@@ -20,8 +20,8 @@ export interface ConfirmVariantInventoryStepInput {
      */
     inventory_item_id: string
     /**
-     * The number of units a single quantity is equivalent to. For example, if a customer orders one quantity of the variant, Medusa checks the availability of the quantity multiplied by the
-     * value set for `required_quantity`. When the customer orders the quantity, Medusa reserves the ordered quantity multiplied by the value set for `required_quantity`.
+     * The number of units a single quantity is equivalent to. For example, if a customer orders one quantity of the variant, vikrai checks the availability of the quantity multiplied by the
+     * value set for `required_quantity`. When the customer orders the quantity, vikrai reserves the ordered quantity multiplied by the value set for `required_quantity`.
      */
     required_quantity: number
     /**
@@ -86,13 +86,14 @@ export const confirmInventoryStep = createStep(
     const inventoryCoverage = await promiseAll(promises)
 
     if (inventoryCoverage.some((hasCoverage) => !hasCoverage)) {
-      throw new MedusaError(
-        MedusaError.Types.NOT_ALLOWED,
+      throw new vikraiError(
+        vikraiError.Types.NOT_ALLOWED,
         `Some variant does not have the required inventory`,
-        MedusaError.Codes.INSUFFICIENT_INVENTORY
+        vikraiError.Codes.INSUFFICIENT_INVENTORY
       )
     }
 
     return new StepResponse(null)
   }
 )
+

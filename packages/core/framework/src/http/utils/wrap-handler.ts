@@ -1,7 +1,7 @@
 import type {
-  MedusaNextFunction,
-  MedusaRequest,
-  MedusaResponse,
+  vikraiNextFunction,
+  vikraiRequest,
+  vikraiResponse,
   MiddlewareFunction,
   RouteHandler,
 } from "../types"
@@ -10,11 +10,11 @@ export const wrapHandler = <T extends RouteHandler | MiddlewareFunction>(
   fn: T
 ) => {
   async function wrappedHandler(
-    req: MedusaRequest,
-    res: MedusaResponse,
-    next: MedusaNextFunction
+    req: vikraiRequest,
+    res: vikraiResponse,
+    next: vikraiNextFunction
   ) {
-    const req_ = req as MedusaRequest & { errors?: Error[] }
+    const req_ = req as vikraiRequest & { errors?: Error[] }
     if (req_?.errors?.length) {
       return res.status(400).json({
         errors: req_.errors,
@@ -35,3 +35,4 @@ export const wrapHandler = <T extends RouteHandler | MiddlewareFunction>(
   }
   return wrappedHandler as T
 }
+

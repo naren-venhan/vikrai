@@ -1,12 +1,12 @@
 import {
   RefundReasonDTO,
   UpdateRefundReasonDTO,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import {
   WorkflowData,
   WorkflowResponse,
   createWorkflow,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { updateRefundReasonsStep } from "../steps"
 
 /**
@@ -22,7 +22,7 @@ export type UpdateRefundReasonsWorkflowOutput = RefundReasonDTO[]
 export const updateRefundReasonsWorkflowId = "update-refund-reasons"
 /**
  * This workflow updates one or more refund reasons. It's used by the
- * [Update Refund Reason Admin API Route](https://docs.medusajs.com/api/admin#refund-reasons_postrefundreasonsid).
+ * [Update Refund Reason Admin API Route](https://docs.vikrai.com/api/admin#refund-reasons_postrefundreasonsid).
  * 
  * You can use this workflow within your own customizations or custom workflows, allowing you
  * to update refund reasons in your custom flows.
@@ -50,3 +50,4 @@ export const updateRefundReasonsWorkflow = createWorkflow(
     return new WorkflowResponse(updateRefundReasonsStep(input))
   }
 )
+

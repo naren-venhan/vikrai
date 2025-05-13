@@ -4,14 +4,14 @@ import {
   CreateShippingOptionRuleDTO,
   ShippingOptionRuleDTO,
   UpdateShippingOptionRuleDTO,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import {
   createWorkflow,
   parallelize,
   transform,
   WorkflowData,
   WorkflowResponse,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import {
   createShippingOptionRulesStep,
   deleteShippingOptionRulesStep,
@@ -42,7 +42,7 @@ export interface BatchShippingOptionRulesOutput extends BatchWorkflowOutput<Ship
 export const batchShippingOptionRulesWorkflowId = "batch-shipping-option-rules"
 /**
  * This workflow manages shipping option rules allowing you to create, update, or delete them. It's used by the
- * [Manage the Rules of Shipping Option Admin API Route](https://docs.medusajs.com/api/admin#shipping-options_postshippingoptionsidrulesbatch).
+ * [Manage the Rules of Shipping Option Admin API Route](https://docs.vikrai.com/api/admin#shipping-options_postshippingoptionsidrulesbatch).
  * 
  * You can use this workflow within your own customizations or custom workflows, allowing you to 
  * manage shipping option rules within your custom flows.
@@ -98,3 +98,4 @@ export const batchShippingOptionRulesWorkflow = createWorkflow(
     )
   }
 )
+

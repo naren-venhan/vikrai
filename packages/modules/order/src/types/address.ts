@@ -1,4 +1,4 @@
-import { OrderTypes } from "@medusajs/framework/types"
+import { OrderTypes } from "@vikrai/framework/types"
 
 export type UpsertOrderAddressDTO = OrderTypes.UpsertOrderAddressDTO
 
@@ -9,3 +9,4 @@ export interface UpdateOrderAddressDTO extends UpsertOrderAddressDTO {
 export interface CreateOrderAddressDTO extends UpsertOrderAddressDTO {}
 
 export type OrderAddressDTO = OrderTypes.OrderAddressDTO
+

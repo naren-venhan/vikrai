@@ -1,6 +1,6 @@
-import { CartDTO, CartWorkflowDTO } from "@medusajs/framework/types"
-import { MedusaError } from "@medusajs/framework/utils"
-import { createStep } from "@medusajs/framework/workflows-sdk"
+import { CartDTO, CartWorkflowDTO } from "@vikrai/framework/types"
+import { vikraiError } from "@vikrai/framework/utils"
+import { createStep } from "@vikrai/framework/workflows-sdk"
 
 /**
  * The details of the cart to validate.
@@ -36,10 +36,11 @@ export const validateCartStep = createStep(
     const { cart } = data
 
     if (cart.completed_at) {
-      throw new MedusaError(
-        MedusaError.Types.INVALID_DATA,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_DATA,
         `Cart ${cart.id} is already completed.`
       )
     }
   }
 )
+

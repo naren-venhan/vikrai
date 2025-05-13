@@ -2,7 +2,7 @@ import {
   createStep,
   createWorkflow,
   StepResponse,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 
 const step_1 = createStep(
   "step_1",
@@ -60,3 +60,4 @@ createWorkflow("workflow_1", function (input) {
 
   return step_3(ret2)
 })
+

@@ -1,4 +1,4 @@
-import { QueryCondition, QueryValue, SimpleQueryValue } from "@medusajs/types"
+import { QueryCondition, QueryValue, SimpleQueryValue } from "@vikrai/types"
 import { isBoolean, isDefined, isObject, isString } from "../../../common"
 
 /*
@@ -66,3 +66,4 @@ function formatValue(value: SimpleQueryValue): string {
 
   return String(value)
 }
+

@@ -7,7 +7,7 @@ import type { TagOperationCodeSectionRequestSamplesProps } from "./RequestSample
 import dynamic from "next/dynamic"
 import clsx from "clsx"
 import { CopyButton } from "docs-ui"
-import { SquareTwoStack } from "@medusajs/icons"
+import { SquareTwoStack } from "@vikrai/icons"
 
 const TagOperationCodeSectionRequestSamples =
   dynamic<TagOperationCodeSectionRequestSamplesProps>(
@@ -30,18 +30,18 @@ const TagOperationCodeSection = ({
     <div className={clsx("mt-2 flex flex-col gap-2", className)}>
       <div
         className={clsx(
-          "bg-medusa-bg-subtle border-medusa-border-base px-0.75 rounded border py-0.5",
+          "bg-vikrai-bg-subtle border-vikrai-border-base px-0.75 rounded border py-0.5",
           "text-code-body flex w-full justify-between gap-1"
         )}
       >
         <div className={clsx("flex w-[calc(100%-36px)] gap-1")}>
           <MethodLabel method={method} className="h-fit" />
-          <code className="text-medusa-fg-base =break-words break-all">
+          <code className="text-vikrai-fg-base =break-words break-all">
             {endpointPath}
           </code>
         </div>
         <CopyButton text={endpointPath} tooltipClassName="font-base">
-          <SquareTwoStack className="text-medusa-fg-muted" />
+          <SquareTwoStack className="text-vikrai-fg-muted" />
         </CopyButton>
       </div>
       {operation["x-codeSamples"] && (
@@ -55,3 +55,4 @@ const TagOperationCodeSection = ({
 }
 
 export default TagOperationCodeSection
+

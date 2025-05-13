@@ -1,4 +1,4 @@
-import { KebabCase, SnakeCase } from "@medusajs/types"
+import { KebabCase, SnakeCase } from "@vikrai/types"
 import { camelToSnakeCase, kebabCase, lowerCaseFirst } from "../common"
 import { CommonEvents } from "./common-events"
 
@@ -88,3 +88,4 @@ export function buildEventNamesFromEntityName<TNames extends string[]>(
 
   return events as ReturnType<TNames>
 }
+

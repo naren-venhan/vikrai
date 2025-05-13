@@ -1,6 +1,6 @@
-import { IFulfillmentModuleService } from "@medusajs/framework/types"
-import { MedusaError, Modules } from "@medusajs/framework/utils"
-import { StepResponse, createStep } from "@medusajs/framework/workflows-sdk"
+import { IFulfillmentModuleService } from "@vikrai/framework/types"
+import { vikraiError, Modules } from "@vikrai/framework/utils"
+import { StepResponse, createStep } from "@vikrai/framework/workflows-sdk"
 
 /**
  * The ID of the shipment to validate.
@@ -24,22 +24,22 @@ export const validateShipmentStep = createStep(
     })
 
     if (fulfillment.shipped_at) {
-      throw new MedusaError(
-        MedusaError.Types.NOT_ALLOWED,
+      throw new vikraiError(
+        vikraiError.Types.NOT_ALLOWED,
         "Shipment has already been created"
       )
     }
 
     if (fulfillment.canceled_at) {
-      throw new MedusaError(
-        MedusaError.Types.NOT_ALLOWED,
+      throw new vikraiError(
+        vikraiError.Types.NOT_ALLOWED,
         "Cannot create shipment for a canceled fulfillment"
       )
     }
 
     if (!fulfillment.shipping_option_id) {
-      throw new MedusaError(
-        MedusaError.Types.NOT_ALLOWED,
+      throw new vikraiError(
+        vikraiError.Types.NOT_ALLOWED,
         "Cannot create shipment without a Shipping Option"
       )
     }
@@ -47,3 +47,4 @@ export const validateShipmentStep = createStep(
     return new StepResponse(void 0)
   }
 )
+

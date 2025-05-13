@@ -2,8 +2,8 @@ import {
   Constructor,
   ILockingProvider,
   Logger,
-} from "@medusajs/framework/types"
-import { MedusaError } from "@medusajs/framework/utils"
+} from "@vikrai/framework/types"
+import { vikraiError } from "@vikrai/framework/utils"
 import { LockingProviderRegistrationPrefix } from "../types"
 
 type InjectedDependencies = {
@@ -26,8 +26,8 @@ export default class LockingProviderService {
     providerClass: Constructor<ILockingProvider>
   ) {
     if (!(providerClass as any).identifier) {
-      throw new MedusaError(
-        MedusaError.Types.INVALID_ARGUMENT,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_ARGUMENT,
         `Trying to register a locking provider without an identifier.`
       )
     }
@@ -54,3 +54,4 @@ Please make sure that the provider is registered in the container and it is conf
     }
   }
 }
+

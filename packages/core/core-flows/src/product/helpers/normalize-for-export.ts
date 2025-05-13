@@ -3,8 +3,8 @@ import {
   HttpTypes,
   PricingTypes,
   RegionTypes,
-} from "@medusajs/framework/types"
-import { MedusaError, upperCaseFirst } from "@medusajs/framework/utils"
+} from "@vikrai/framework/types"
+import { vikraiError, upperCaseFirst } from "@vikrai/framework/utils"
 
 // We want to have one row per variant, so we need to normalize the data
 export const normalizeForExport = (
@@ -114,8 +114,8 @@ const normalizeVariantForExport = (
       if (regionRule) {
         const region = regionsMap.get(regionRule?.value!)
         if (!region) {
-          throw new MedusaError(
-            MedusaError.Types.NOT_FOUND,
+          throw new vikraiError(
+            vikraiError.Types.NOT_FOUND,
             `Region with id ${regionRule?.value} not found`
           )
         }
@@ -171,3 +171,4 @@ const prefixFields = (obj: object, prefix: string): object => {
 const beautifyKey = (key: string): string => {
   return key.split("_").map(upperCaseFirst).join(" ")
 }
+

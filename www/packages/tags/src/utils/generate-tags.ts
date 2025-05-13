@@ -16,7 +16,7 @@ type ConfigItem = {
 // We need to set the base URL to solve problems
 // when linking between projects
 // TODO maybe find a better way of setting this
-const BASE_URL = "https://docs.medusajs.com"
+const BASE_URL = "https://docs.vikrai.com"
 
 const config: ConfigItem[] = [
   {
@@ -161,3 +161,4 @@ export async function generateTags(basePath?: string) {
   const indexContent = files.sort().map((file) => `export * from "./${file}"\n`)
   await writeFile(path.join(tagsDir, "index.ts"), indexContent)
 }
+

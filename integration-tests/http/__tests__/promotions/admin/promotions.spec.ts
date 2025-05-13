@@ -1,16 +1,16 @@
-import { medusaIntegrationTestRunner } from "@medusajs/test-utils"
-import { PromotionStatus, PromotionType } from "@medusajs/utils"
+import { vikraiIntegrationTestRunner } from "@vikrai/test-utils"
+import { PromotionStatus, PromotionType } from "@vikrai/utils"
 import {
   createAdminUser,
   generatePublishableKey,
   generateStoreHeaders,
 } from "../../../../helpers/create-admin-user"
-import { medusaTshirtProduct } from "../../../__fixtures__/product"
+import { vikraiTshirtProduct } from "../../../__fixtures__/product"
 
 jest.setTimeout(50000)
 
 const adminHeaders = {
-  headers: { "x-medusa-access-token": "test_token" },
+  headers: { "x-vikrai-access-token": "test_token" },
 }
 
 const standardPromotionPayload = {
@@ -50,7 +50,7 @@ const standardPromotionPayload = {
   ],
 }
 
-medusaIntegrationTestRunner({
+vikraiIntegrationTestRunner({
   testSuite: ({ dbConnection, getContainer, api }) => {
     describe("Admin Promotions API", () => {
       let appContainer
@@ -522,7 +522,7 @@ medusaIntegrationTestRunner({
               await api.post(
                 "/admin/products",
                 {
-                  ...medusaTshirtProduct,
+                  ...vikraiTshirtProduct,
                   shipping_profile_id: shippingProfile.id,
                 },
                 adminHeaders
@@ -1626,3 +1626,4 @@ medusaIntegrationTestRunner({
     })
   },
 })
+

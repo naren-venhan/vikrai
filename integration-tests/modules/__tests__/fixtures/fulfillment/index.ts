@@ -2,7 +2,7 @@ import {
   CreateFulfillmentDTO,
   CreateShippingOptionDTO,
   IFulfillmentModuleService,
-} from "@medusajs/types"
+} from "@vikrai/types"
 
 export function generateCreateFulfillmentData(
   data: Partial<CreateFulfillmentDTO> & {
@@ -143,3 +143,4 @@ export async function setupFullDataFulfillmentStructure(
     })
   )
 }
+

@@ -21,12 +21,12 @@ import {
   UpdatePaymentInput,
   UpdatePaymentOutput,
   WebhookActionResult,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import {
   AbstractPaymentProvider,
   PaymentActions,
   PaymentSessionStatus,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 
 export class SystemProviderService extends AbstractPaymentProvider {
   static identifier = "system"
@@ -93,3 +93,4 @@ export class SystemProviderService extends AbstractPaymentProvider {
 }
 
 export default SystemProviderService
+

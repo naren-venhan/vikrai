@@ -1,11 +1,11 @@
-import { PromotionActions } from "@medusajs/framework/utils"
+import { PromotionActions } from "@vikrai/framework/utils"
 import {
   createWorkflow,
   parallelize,
   WorkflowData,
   WorkflowResponse,
-} from "@medusajs/framework/workflows-sdk"
-import { OrderDTO } from "@medusajs/types"
+} from "@vikrai/framework/workflows-sdk"
+import { OrderDTO } from "@vikrai/types"
 import {
   getActionsToComputeFromPromotionsStep,
   getPromotionCodesToApply,
@@ -57,7 +57,7 @@ export interface RefreshDraftOrderAdjustmentsWorkflowInput {
  *   input: {
  *     order: order,
  *     promo_codes: ["PROMO_CODE_1", "PROMO_CODE_2"],
- *     // imported from "@medusajs/framework/utils"
+ *     // imported from "@vikrai/framework/utils"
  *     action: PromotionActions.ADD,
  *   }
  * })
@@ -112,3 +112,4 @@ export const refreshDraftOrderAdjustmentsWorkflow = createWorkflow(
     return new WorkflowResponse(void 0)
   }
 )
+

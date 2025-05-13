@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react"
 import * as React from "react"
 
-import { BuildingTax } from "@medusajs/icons"
+import { BuildingTax } from "@vikrai/icons"
 import { IconBadge } from "./icon-badge"
 
 const meta: Meta<typeof IconBadge> = {
@@ -112,3 +112,4 @@ export const PurpleLarge: Story = {
     size: "large",
   },
 }
+

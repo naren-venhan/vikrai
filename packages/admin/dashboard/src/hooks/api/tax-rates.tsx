@@ -1,5 +1,5 @@
-import { FetchError } from "@medusajs/js-sdk"
-import { HttpTypes } from "@medusajs/types"
+import { FetchError } from "@vikrai/js-sdk"
+import { HttpTypes } from "@vikrai/types"
 import {
   QueryKey,
   UseMutationOptions,
@@ -125,3 +125,4 @@ export const useDeleteTaxRate = (
     ...options,
   })
 }
+

@@ -1,4 +1,4 @@
-import { HttpTypes } from "@medusajs/types"
+import { HttpTypes } from "@vikrai/types"
 import { LoaderFunctionArgs } from "react-router-dom"
 import { regionsQueryKeys } from "../../../hooks/api/regions"
 import { sdk } from "../../../lib/client"
@@ -23,3 +23,4 @@ export const regionLoader = async ({ params }: LoaderFunctionArgs) => {
     ) ?? (await queryClient.fetchQuery(query))
   )
 }
+

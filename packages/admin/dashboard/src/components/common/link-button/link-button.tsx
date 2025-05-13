@@ -1,4 +1,4 @@
-import { clx } from "@medusajs/ui"
+import { clx } from "@vikrai/ui"
 import { ComponentPropsWithoutRef } from "react"
 import { Link } from "react-router-dom"
 
@@ -27,3 +27,4 @@ export const LinkButton = ({
     />
   )
 }
+

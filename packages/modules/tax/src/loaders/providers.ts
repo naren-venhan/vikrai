@@ -1,14 +1,14 @@
-import { moduleProviderLoader } from "@medusajs/framework/modules-sdk"
+import { moduleProviderLoader } from "@vikrai/framework/modules-sdk"
 
 import {
   CreateTaxProviderDTO,
   LoaderOptions,
   ModuleProvider,
   ModulesSdkTypes,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import { asFunction, asValue, Lifetime } from "awilix"
 
-import { MedusaError } from "@medusajs/framework/utils"
+import { vikraiError } from "@vikrai/framework/utils"
 import * as providers from "../providers"
 import TaxProviderService from "../services/tax-provider"
 
@@ -16,8 +16,8 @@ const PROVIDER_REGISTRATION_KEY = "tax_providers" as const
 
 const registrationFn = async (klass, container, pluginOptions) => {
   if (!klass?.identifier) {
-    throw new MedusaError(
-      MedusaError.Types.INVALID_ARGUMENT,
+    throw new vikraiError(
+      vikraiError.Types.INVALID_ARGUMENT,
       `Trying to register a tax provider without a provider identifier.`
     )
   }
@@ -84,3 +84,4 @@ const registerProvidersInDb = async ({
 
   await taxProviderService.upsert(upsertData)
 }
+

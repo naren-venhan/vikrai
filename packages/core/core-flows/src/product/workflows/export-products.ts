@@ -2,8 +2,8 @@ import {
   WorkflowData,
   createWorkflow,
   transform,
-} from "@medusajs/framework/workflows-sdk"
-import { WorkflowTypes } from "@medusajs/framework/types"
+} from "@vikrai/framework/workflows-sdk"
+import { WorkflowTypes } from "@vikrai/framework/types"
 import { generateProductCsvStep, getAllProductsStep } from "../steps"
 import { useRemoteQueryStep } from "../../common"
 import { notifyOnFailureStep, sendNotificationsStep } from "../../notification"
@@ -11,12 +11,12 @@ import { notifyOnFailureStep, sendNotificationsStep } from "../../notification"
 export const exportProductsWorkflowId = "export-products"
 /**
  * This workflow exports products matching the specified filters. It's used by the 
- * [Export Products Admin API Route](https://docs.medusajs.com/api/admin#products_postproductsexport).
+ * [Export Products Admin API Route](https://docs.vikrai.com/api/admin#products_postproductsexport).
  * 
  * :::note
  * 
  * This workflow doesn't return the exported products. Instead, it sends a notification to the admin
- * users that they can download the exported products. Learn more in the [API Reference](https://docs.medusajs.com/api/admin#products_postproductsexport).
+ * users that they can download the exported products. Learn more in the [API Reference](https://docs.vikrai.com/api/admin#products_postproductsexport).
  * 
  * :::
  * 
@@ -107,3 +107,4 @@ export const exportProductsWorkflow = createWorkflow(
     sendNotificationsStep(notifications)
   }
 )
+

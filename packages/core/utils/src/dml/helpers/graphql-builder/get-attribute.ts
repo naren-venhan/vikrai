@@ -1,4 +1,4 @@
-import { PropertyType } from "@medusajs/types"
+import { PropertyType } from "@vikrai/types"
 import { toPascalCase } from "../../../common"
 import { PrimaryKeyModifier } from "../../properties/primary-key"
 
@@ -80,3 +80,4 @@ export function getGraphQLAttributeFromDMLPropety(
     attribute: `${gqlAttr!.property}: ${gqlAttr!.type}`,
   }
 }
+

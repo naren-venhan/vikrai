@@ -3,17 +3,17 @@ import {
   batchProductsWorkflowId,
   batchProductVariantsWorkflow,
   batchProductVariantsWorkflowId,
-} from "@medusajs/core-flows"
+} from "@vikrai/core-flows"
 import {
   IFulfillmentModuleService,
   IProductModuleService,
-} from "@medusajs/types"
-import { Modules } from "@medusajs/utils"
-import { medusaIntegrationTestRunner } from "@medusajs/test-utils"
+} from "@vikrai/types"
+import { Modules } from "@vikrai/utils"
+import { vikraiIntegrationTestRunner } from "@vikrai/test-utils"
 
 jest.setTimeout(50000)
 
-medusaIntegrationTestRunner({
+vikraiIntegrationTestRunner({
   env: {},
   testSuite: ({ getContainer }) => {
     describe("Workflows: Batch Product", () => {
@@ -179,3 +179,4 @@ medusaIntegrationTestRunner({
     })
   },
 })
+

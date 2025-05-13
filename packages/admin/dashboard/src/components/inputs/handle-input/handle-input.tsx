@@ -1,4 +1,4 @@
-import { Input, Text } from "@medusajs/ui"
+import { Input, Text } from "@vikrai/ui"
 import { ComponentProps, ElementRef, forwardRef } from "react"
 
 export const HandleInput = forwardRef<
@@ -22,3 +22,4 @@ export const HandleInput = forwardRef<
   )
 })
 HandleInput.displayName = "HandleInput"
+

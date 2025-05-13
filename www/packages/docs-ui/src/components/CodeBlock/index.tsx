@@ -148,10 +148,10 @@ export const CodeBlock = ({
       clsx(
         overrideColors.bg,
         !overrideColors.bg && [
-          blockStyle === "loud" && "bg-medusa-contrast-bg-base",
+          blockStyle === "loud" && "bg-vikrai-contrast-bg-base",
           blockStyle === "subtle" && [
-            colorMode === "light" && "bg-medusa-bg-subtle",
-            colorMode === "dark" && "bg-medusa-code-bg-base",
+            colorMode === "light" && "bg-vikrai-bg-subtle",
+            colorMode === "dark" && "bg-vikrai-code-bg-base",
           ],
         ]
       ),
@@ -163,10 +163,10 @@ export const CodeBlock = ({
       clsx(
         overrideColors.lineNumbersBg,
         !overrideColors.lineNumbersBg && [
-          blockStyle === "loud" && "text-medusa-contrast-fg-secondary",
+          blockStyle === "loud" && "text-vikrai-contrast-fg-secondary",
           blockStyle === "subtle" && [
-            colorMode === "light" && "text-medusa-fg-muted",
-            colorMode === "dark" && "text-medusa-contrast-fg-secondary",
+            colorMode === "light" && "text-vikrai-fg-muted",
+            colorMode === "dark" && "text-vikrai-contrast-fg-secondary",
           ],
         ]
       ),
@@ -180,8 +180,8 @@ export const CodeBlock = ({
         !overrideColors.border && [
           blockStyle === "loud" && "border-0",
           blockStyle === "subtle" && [
-            colorMode === "light" && "border-medusa-border-base",
-            colorMode === "dark" && "border-medusa-code-border",
+            colorMode === "light" && "border-vikrai-border-base",
+            colorMode === "dark" && "border-vikrai-code-border",
           ],
         ]
       ),
@@ -207,8 +207,8 @@ export const CodeBlock = ({
         overrideColors.innerBg,
         !overrideColors.innerBg && [
           blockStyle === "loud" && [
-            hasInnerCodeBlock && "bg-medusa-contrast-bg-subtle",
-            !hasInnerCodeBlock && "bg-medusa-contrast-bg-base",
+            hasInnerCodeBlock && "bg-vikrai-contrast-bg-subtle",
+            !hasInnerCodeBlock && "bg-vikrai-contrast-bg-base",
           ],
           blockStyle === "subtle" && bgColor,
         ]
@@ -223,7 +223,7 @@ export const CodeBlock = ({
         !overrideColors.innerBorder && [
           blockStyle === "loud" && [
             hasInnerCodeBlock &&
-              "border border-solid border-medusa-contrast-border-bot rounded-docs_DEFAULT",
+              "border border-solid border-vikrai-contrast-border-bot rounded-docs_DEFAULT",
             !hasInnerCodeBlock && "border-transparent rounded-docs_DEFAULT",
           ],
           blockStyle === "subtle" && "border-transparent rounded-docs_DEFAULT",
@@ -508,3 +508,4 @@ export const CodeBlock = ({
     </>
   )
 }
+

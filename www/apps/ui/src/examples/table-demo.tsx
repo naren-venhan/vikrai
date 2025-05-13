@@ -1,4 +1,4 @@
-import { Table } from "@medusajs/ui"
+import { Table } from "@vikrai/ui"
 
 type Order = {
   id: string
@@ -90,3 +90,4 @@ export default function TableDemo() {
     </Table>
   )
 }
+

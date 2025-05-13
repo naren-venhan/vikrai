@@ -1,4 +1,4 @@
-import { Select } from "@medusajs/ui"
+import { Select } from "@vikrai/ui"
 
 export default function SelectSmall() {
   return (
@@ -33,3 +33,4 @@ const currencies = [
     label: "DKK",
   },
 ]
+

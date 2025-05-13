@@ -1,32 +1,32 @@
-import { Modules, TransactionState } from "@medusajs/framework/utils"
+import { Modules, TransactionState } from "@vikrai/framework/utils"
 import {
   createStep,
   createWorkflow,
   StepResponse,
   WorkflowData,
   WorkflowResponse,
-} from "@medusajs/framework/workflows-sdk"
-import { medusaIntegrationTestRunner } from "@medusajs/test-utils"
+} from "@vikrai/framework/workflows-sdk"
+import { vikraiIntegrationTestRunner } from "@vikrai/test-utils"
 import {
   adminHeaders,
   createAdminUser,
 } from "../../../helpers/create-admin-user"
-import { emitEventStep } from "@medusajs/core-flows"
-import { IEventBusModuleService } from "@medusajs/types"
+import { emitEventStep } from "@vikrai/core-flows"
+import { IEventBusModuleService } from "@vikrai/types"
 
 jest.setTimeout(300000)
 
-medusaIntegrationTestRunner({
+vikraiIntegrationTestRunner({
   testSuite: ({ dbConnection, getContainer, api }) => {
     describe("Workflow Engine API", () => {
-      let medusaContainer
+      let vikraiContainer
 
       beforeAll(() => {
-        medusaContainer = getContainer()
+        vikraiContainer = getContainer()
       })
 
       beforeEach(async () => {
-        await createAdminUser(dbConnection, adminHeaders, medusaContainer)
+        await createAdminUser(dbConnection, adminHeaders, vikraiContainer)
       })
 
       describe("Testing WorkflowEngine.run", () => {
@@ -54,12 +54,12 @@ medusaIntegrationTestRunner({
           )
         })
 
-        it("Should invoke modules passing the current medusa context as argument", async () => {
-          const testMod = medusaContainer.resolve("testingModule") as any
+        it("Should invoke modules passing the current vikrai context as argument", async () => {
+          const testMod = vikraiContainer.resolve("testingModule") as any
 
           const methodSpy = jest.spyOn(testMod, "methodName")
 
-          const engine = medusaContainer.resolve(Modules.WORKFLOW_ENGINE)
+          const engine = vikraiContainer.resolve(Modules.WORKFLOW_ENGINE)
 
           const res = await engine.run("my-workflow-name", {
             transactionId: "trx-id",
@@ -80,7 +80,7 @@ medusaIntegrationTestRunner({
             "abc",
             expect.objectContaining({
               transactionId: "trx-id",
-              __type: "MedusaContext",
+              __type: "vikraiContext",
               eventGroupId: expect.any(String),
               idempotencyKey: "my-workflow-name:trx-id:my-step:invoke",
               meta: {
@@ -168,3 +168,4 @@ medusaIntegrationTestRunner({
     })
   },
 })
+

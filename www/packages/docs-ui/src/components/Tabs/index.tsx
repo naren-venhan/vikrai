@@ -1,10 +1,10 @@
 "use client"
 
 import React, { useMemo } from "react"
-import { Tabs as UiTabs } from "@medusajs/ui"
+import { Tabs as UiTabs } from "@vikrai/ui"
 import { ComponentProps } from "react"
 import clsx from "clsx"
-import { EllipseMiniSolid } from "@medusajs/icons"
+import { EllipseMiniSolid } from "@vikrai/icons"
 import { useMobile } from "../.."
 
 type TabsProps = ComponentProps<typeof UiTabs> & {
@@ -79,8 +79,8 @@ export const TabsTriggerVertical = ({
       {...props}
       className={clsx(
         className,
-        "px-docs_0.5 py-docs_0.25 !text-medusa-fg-base text-compact-small data-[state=active]:!text-compact-small-plus",
-        "[&[data-state=active]_svg]:!visible hover:!bg-medusa-bg-base-hover rounded-docs_DEFAULT",
+        "px-docs_0.5 py-docs_0.25 !text-vikrai-fg-base text-compact-small data-[state=active]:!text-compact-small-plus",
+        "[&[data-state=active]_svg]:!visible hover:!bg-vikrai-bg-base-hover rounded-docs_DEFAULT",
         "!shadow-none"
       )}
     >
@@ -105,3 +105,4 @@ export const TabsContentWrapper = ({
 export const TabsContent = (props: ComponentProps<typeof UiTabs.Content>) => (
   <UiTabs.Content {...props} />
 )
+

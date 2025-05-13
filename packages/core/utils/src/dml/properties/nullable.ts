@@ -1,4 +1,4 @@
-import { PropertyType } from "@medusajs/types"
+import { PropertyType } from "@vikrai/types"
 import { ComputedProperty } from "./computed"
 
 const IsNullableModifier = Symbol.for("isNullableModifier")
@@ -45,3 +45,4 @@ export class NullableModifier<T, Schema extends PropertyType<T>>
     return schema
   }
 }
+

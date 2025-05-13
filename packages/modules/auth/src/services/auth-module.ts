@@ -11,37 +11,37 @@ import {
   Logger,
   ModuleJoinerConfig,
   ModulesSdkTypes,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import {
   InjectManager,
-  MedusaContext,
-  MedusaError,
-  MedusaService,
-} from "@medusajs/framework/utils"
+  vikraiContext,
+  vikraiError,
+  vikraiService,
+} from "@vikrai/framework/utils"
 import { AuthIdentity, ProviderIdentity } from "@models"
 import { joinerConfig } from "../joiner-config"
 import AuthProviderService from "./auth-provider"
 
 type InjectedDependencies = {
   baseRepository: DAL.RepositoryService
-  authIdentityService: ModulesSdkTypes.IMedusaInternalService<any>
-  providerIdentityService: ModulesSdkTypes.IMedusaInternalService<any>
+  authIdentityService: ModulesSdkTypes.IvikraiInternalService<any>
+  providerIdentityService: ModulesSdkTypes.IvikraiInternalService<any>
   authProviderService: AuthProviderService
   logger?: Logger
   cache?: ICacheService
 }
 export default class AuthModuleService
-  extends MedusaService<{
+  extends vikraiService<{
     AuthIdentity: { dto: AuthTypes.AuthIdentityDTO }
     ProviderIdentity: { dto: AuthTypes.ProviderIdentityDTO }
   }>({ AuthIdentity, ProviderIdentity })
   implements AuthTypes.IAuthModuleService
 {
   protected baseRepository_: DAL.RepositoryService
-  protected authIdentityService_: ModulesSdkTypes.IMedusaInternalService<
+  protected authIdentityService_: ModulesSdkTypes.IvikraiInternalService<
     InferEntityType<typeof AuthIdentity>
   >
-  protected providerIdentityService_: ModulesSdkTypes.IMedusaInternalService<
+  protected providerIdentityService_: ModulesSdkTypes.IvikraiInternalService<
     InferEntityType<typeof ProviderIdentity>
   >
   protected readonly authProviderService_: AuthProviderService
@@ -84,7 +84,7 @@ export default class AuthModuleService
   @InjectManager()
   async createAuthIdentities(
     data: AuthTypes.CreateAuthIdentityDTO[] | AuthTypes.CreateAuthIdentityDTO,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<AuthTypes.AuthIdentityDTO | AuthTypes.AuthIdentityDTO[]> {
     const authIdentities = await this.authIdentityService_.create(
       data,
@@ -116,7 +116,7 @@ export default class AuthModuleService
   // @ts-expect-error
   async updateAuthIdentities(
     data: AuthTypes.UpdateAuthIdentityDTO | AuthTypes.UpdateAuthIdentityDTO[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<AuthTypes.AuthIdentityDTO | AuthTypes.AuthIdentityDTO[]> {
     const updatedUsers = await this.authIdentityService_.update(
       data,
@@ -165,7 +165,7 @@ export default class AuthModuleService
     data:
       | AuthTypes.CreateProviderIdentityDTO[]
       | AuthTypes.CreateProviderIdentityDTO,
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<AuthTypes.ProviderIdentityDTO | AuthTypes.ProviderIdentityDTO[]> {
     const providerIdentities = await this.providerIdentityService_.create(
       data,
@@ -195,7 +195,7 @@ export default class AuthModuleService
     data:
       | AuthTypes.UpdateProviderIdentityDTO
       | AuthTypes.UpdateProviderIdentityDTO[],
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<AuthTypes.ProviderIdentityDTO | AuthTypes.ProviderIdentityDTO[]> {
     const updatedProviders = await this.providerIdentityService_.update(
       data,
@@ -272,15 +272,15 @@ export default class AuthModuleService
         )
 
         if (!authIdentities.length) {
-          throw new MedusaError(
-            MedusaError.Types.NOT_FOUND,
+          throw new vikraiError(
+            vikraiError.Types.NOT_FOUND,
             `AuthIdentity with entity_id "${entity_id}" not found`
           )
         }
 
         if (authIdentities.length > 1) {
-          throw new MedusaError(
-            MedusaError.Types.INVALID_DATA,
+          throw new vikraiError(
+            vikraiError.Types.INVALID_DATA,
             `Multiple authIdentities found for entity_id "${entity_id}"`
           )
         }
@@ -334,15 +334,15 @@ export default class AuthModuleService
         )
 
         if (!authIdentities.length) {
-          throw new MedusaError(
-            MedusaError.Types.NOT_FOUND,
+          throw new vikraiError(
+            vikraiError.Types.NOT_FOUND,
             `AuthIdentity with entity_id "${entity_id}" not found`
           )
         }
 
         if (authIdentities.length > 1) {
-          throw new MedusaError(
-            MedusaError.Types.INVALID_DATA,
+          throw new vikraiError(
+            vikraiError.Types.INVALID_DATA,
             `Multiple authIdentities found for entity_id "${entity_id}"`
           )
         }
@@ -352,8 +352,8 @@ export default class AuthModuleService
         )
 
         if (!providerIdentityData) {
-          throw new MedusaError(
-            MedusaError.Types.NOT_FOUND,
+          throw new vikraiError(
+            vikraiError.Types.NOT_FOUND,
             `ProviderIdentity with entity_id "${entity_id}" not found`
           )
         }
@@ -384,8 +384,8 @@ export default class AuthModuleService
       },
       setState: async (key: string, value: Record<string, unknown>) => {
         if (!this.cache_) {
-          throw new MedusaError(
-            MedusaError.Types.INVALID_ARGUMENT,
+          throw new vikraiError(
+            vikraiError.Types.INVALID_ARGUMENT,
             "Cache module dependency is required when using OAuth providers that require state"
           )
         }
@@ -395,8 +395,8 @@ export default class AuthModuleService
       },
       getState: async (key: string) => {
         if (!this.cache_) {
-          throw new MedusaError(
-            MedusaError.Types.INVALID_ARGUMENT,
+          throw new vikraiError(
+            vikraiError.Types.INVALID_ARGUMENT,
             "Cache module dependency is required when using OAuth providers that require state"
           )
         }
@@ -406,3 +406,4 @@ export default class AuthModuleService
     }
   }
 }
+

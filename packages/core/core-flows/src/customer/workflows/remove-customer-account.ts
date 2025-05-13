@@ -1,11 +1,11 @@
-import { MedusaError } from "@medusajs/framework/utils"
+import { vikraiError } from "@vikrai/framework/utils"
 import {
   WorkflowData,
   WorkflowResponse,
   createWorkflow,
   transform,
   when,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { setAuthAppMetadataStep } from "../../auth"
 import { useRemoteQueryStep } from "../../common"
 import { deleteCustomersWorkflow } from "./delete-customers"
@@ -16,7 +16,7 @@ export type RemoveCustomerAccountWorkflowInput = {
 export const removeCustomerAccountWorkflowId = "remove-customer-account"
 /**
  * This workflow deletes a customer and remove its association to its auth identity. It's used by the
- * [Delete Customer Admin API Route](https://docs.medusajs.com/api/admin#customers_deletecustomersid).
+ * [Delete Customer Admin API Route](https://docs.vikrai.com/api/admin#customers_deletecustomersid).
  * 
  * You can use this workflow within your customizations or your own custom workflows, allowing you to
  * delete customer accounts within your custom flows.
@@ -80,8 +80,8 @@ export const removeCustomerAccountWorkflow = createWorkflow(
           const authIdentity = authIdentities[0]
 
           if (!authIdentity) {
-            throw new MedusaError(
-              MedusaError.Types.NOT_FOUND,
+            throw new vikraiError(
+              vikraiError.Types.NOT_FOUND,
               "Auth identity not found"
             )
           }
@@ -100,3 +100,4 @@ export const removeCustomerAccountWorkflow = createWorkflow(
     return new WorkflowResponse(input.customerId)
   }
 )
+

@@ -1,5 +1,5 @@
 import { zodResolver } from "@hookform/resolvers/zod"
-import { Button, ProgressStatus, ProgressTabs, toast } from "@medusajs/ui"
+import { Button, ProgressStatus, ProgressTabs, toast } from "@vikrai/ui"
 import { useForm } from "react-hook-form"
 import { useTranslation } from "react-i18next"
 
@@ -206,3 +206,4 @@ export const CreateCategoryForm = ({
     </RouteFocusModal.Form>
   )
 }
+

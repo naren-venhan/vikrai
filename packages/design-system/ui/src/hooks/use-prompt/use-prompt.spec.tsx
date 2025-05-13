@@ -8,7 +8,7 @@ const TITLE_TEXT = "Delete something"
 const DESCRIPTION_TEXT = "Are you sure? This cannot be undone."
 const CANCEL_TEXT = "Cancel"
 const CONFIRM_TEXT = "Confirm"
-const VERIFICATION_TEXT = "medusa-design-system"
+const VERIFICATION_TEXT = "vikrai-design-system"
 
 const DialogTest = ({ verificationText }: { verificationText?: string }) => {
   const dialog = usePrompt()
@@ -119,3 +119,4 @@ describe("usePrompt", () => {
     expect(button).toBeEnabled()
   })
 })
+

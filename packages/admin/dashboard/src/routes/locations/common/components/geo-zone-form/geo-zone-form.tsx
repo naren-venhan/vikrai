@@ -1,4 +1,4 @@
-import { Button, Checkbox } from "@medusajs/ui"
+import { Button, Checkbox } from "@vikrai/ui"
 import {
   OnChangeFn,
   RowSelectionState,
@@ -325,3 +325,4 @@ function validateForm(form: UseFormReturn) {
 export const GeoZoneForm = Object.assign(GeoZoneFormImpl, {
   AreaDrawer: AreaStackedModal,
 })
+

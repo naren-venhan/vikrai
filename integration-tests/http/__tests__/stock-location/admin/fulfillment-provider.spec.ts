@@ -3,11 +3,11 @@ import {
   createAdminUser,
 } from "../../../../helpers/create-admin-user"
 
-import { medusaIntegrationTestRunner } from "@medusajs/test-utils"
+import { vikraiIntegrationTestRunner } from "@vikrai/test-utils"
 
 jest.setTimeout(30000)
 
-medusaIntegrationTestRunner({
+vikraiIntegrationTestRunner({
   testSuite: ({ dbConnection, getContainer, api }) => {
     let location
 
@@ -67,3 +67,4 @@ medusaIntegrationTestRunner({
     })
   },
 })
+

@@ -1,4 +1,4 @@
-import { Drawer, clx } from "@medusajs/ui"
+import { Drawer, clx } from "@vikrai/ui"
 import { PropsWithChildren, useEffect, useState } from "react"
 import { Path, useNavigate } from "react-router-dom"
 import { useStateAwareTo } from "../hooks/use-state-aware-to"
@@ -80,3 +80,4 @@ export const RouteDrawer = Object.assign(Root, {
   Close,
   Form,
 })
+

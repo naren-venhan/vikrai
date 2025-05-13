@@ -3,7 +3,7 @@ import {
   ContainerRegistrationKeys,
   Modules,
   promiseAll,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 import {
   Event,
   ILockingModule,
@@ -12,7 +12,7 @@ import {
   ModulesSdkTypes,
   RemoteQueryFunction,
   SchemaObjectEntityRepresentation,
-} from "@medusajs/types"
+} from "@vikrai/types"
 import { IndexMetadataStatus, Orchestrator } from "@utils"
 import { setTimeout } from "timers/promises"
 export class DataSynchronizer {
@@ -32,16 +32,16 @@ export class DataSynchronizer {
     return this.#container[Modules.LOCKING] as ILockingModule
   }
 
-  get #indexMetadataService(): ModulesSdkTypes.IMedusaInternalService<any> {
+  get #indexMetadataService(): ModulesSdkTypes.IvikraiInternalService<any> {
     return this.#container.indexMetadataService
   }
 
-  get #indexSyncService(): ModulesSdkTypes.IMedusaInternalService<any> {
+  get #indexSyncService(): ModulesSdkTypes.IvikraiInternalService<any> {
     return this.#container.indexSyncService
   }
 
   // @ts-ignore
-  get #indexRelationService(): ModulesSdkTypes.IMedusaInternalService<any> {
+  get #indexRelationService(): ModulesSdkTypes.IvikraiInternalService<any> {
     return this.#container.indexRelationService
   }
 
@@ -349,3 +349,4 @@ export class DataSynchronizer {
     return acknoledgement
   }
 }
+

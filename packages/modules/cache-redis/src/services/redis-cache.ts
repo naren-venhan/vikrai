@@ -1,8 +1,8 @@
-import { ICacheService } from "@medusajs/framework/types"
+import { ICacheService } from "@vikrai/framework/types"
 import { Redis } from "ioredis"
 import { RedisCacheModuleOptions } from "../types"
 
-const DEFAULT_NAMESPACE = "medusa"
+const DEFAULT_NAMESPACE = "vikrai"
 const DEFAULT_CACHE_TIME = 30 // 30 seconds
 const EXPIRY_MODE = "EX" // "EX" stands for an expiry time in second
 
@@ -110,3 +110,4 @@ class RedisCacheService implements ICacheService {
 }
 
 export default RedisCacheService
+

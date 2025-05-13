@@ -20,11 +20,11 @@
   }
   
   h1, h2, h3, h4 {
-    @apply text-medusa-fg-base;
+    @apply text-vikrai-fg-base;
   }
   
   hr {
-    @apply h-[1px] w-full border-0 bg-medusa-border-base my-2;
+    @apply h-[1px] w-full border-0 bg-vikrai-border-base my-2;
   }
   
   p, ul, ol {
@@ -41,7 +41,7 @@
   }
 
   *::selection {
-    @apply bg-medusa-bg-highlight;
+    @apply bg-vikrai-bg-highlight;
   }
 
   * {

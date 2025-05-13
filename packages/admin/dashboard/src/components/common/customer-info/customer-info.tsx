@@ -1,7 +1,7 @@
-import { Avatar, Copy, Text } from "@medusajs/ui"
+import { Avatar, Copy, Text } from "@vikrai/ui"
 import { useTranslation } from "react-i18next"
 import { Link } from "react-router-dom"
-import { HttpTypes } from "@medusajs/types"
+import { HttpTypes } from "@vikrai/types"
 import { getFormattedAddress, isSameAddress } from "../../../lib/addresses"
 
 const ID = ({ data }: { data: HttpTypes.AdminOrder }) => {
@@ -200,3 +200,4 @@ const getOrderCustomer = (obj: HttpTypes.AdminOrder) => {
 
   return name
 }
+

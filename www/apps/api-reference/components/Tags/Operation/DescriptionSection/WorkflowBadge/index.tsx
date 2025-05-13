@@ -12,7 +12,7 @@ const TagsOperationDescriptionSectionWorkflowBadge = ({
     <p className="my-1">
       Workflow{" "}
       <SourceCodeLink
-        link={`${config.baseUrl}/resources/references/medusa-workflows/${workflow}`}
+        link={`${config.baseUrl}/resources/references/vikrai-workflows/${workflow}`}
         text={workflow}
         icon={<DecisionProcessIcon />}
       />{" "}
@@ -22,3 +22,4 @@ const TagsOperationDescriptionSectionWorkflowBadge = ({
 }
 
 export default TagsOperationDescriptionSectionWorkflowBadge
+

@@ -4,8 +4,8 @@ import {
   OrderClaimDTO,
   OrderPreviewDTO,
   OrderWorkflow,
-} from "@medusajs/framework/types"
-import { ChangeActionType, OrderChangeStatus } from "@medusajs/framework/utils"
+} from "@vikrai/framework/types"
+import { ChangeActionType, OrderChangeStatus } from "@vikrai/framework/utils"
 import {
   WorkflowData,
   WorkflowResponse,
@@ -13,7 +13,7 @@ import {
   createWorkflow,
   parallelize,
   transform,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { useRemoteQueryStep } from "../../../common"
 import { deleteOrderShippingMethods } from "../../steps"
 import { deleteOrderChangeActionsStep } from "../../steps/delete-order-change-actions"
@@ -48,8 +48,8 @@ export type RemoveClaimShippingMethodValidationStepInput = {
  * 
  * :::note
  * 
- * You can retrieve an order claim and order change details using [Query](https://docs.medusajs.com/learn/fundamentals/module-links/query),
- * or [useQueryGraphStep](https://docs.medusajs.com/resources/references/medusa-workflows/steps/useQueryGraphStep).
+ * You can retrieve an order claim and order change details using [Query](https://docs.vikrai.com/learn/fundamentals/module-links/query),
+ * or [useQueryGraphStep](https://docs.vikrai.com/resources/references/vikrai-workflows/steps/useQueryGraphStep).
  * 
  * :::
  * 
@@ -99,8 +99,8 @@ export const removeClaimShippingMethodWorkflowId =
   "remove-claim-shipping-method"
 /**
  * This workflow removes an inbound (return) or outbound (delivery of new items) shipping method of a claim.
- * It's used by the [Remove Inbound Shipping Method](https://docs.medusajs.com/api/admin#claims_deleteclaimsidinboundshippingmethodaction_id),
- * or [Remove Outbound Shipping Method](https://docs.medusajs.com/api/admin#claims_deleteclaimsidoutboundshippingmethodaction_id) Admin API Routes.
+ * It's used by the [Remove Inbound Shipping Method](https://docs.vikrai.com/api/admin#claims_deleteclaimsidinboundshippingmethodaction_id),
+ * or [Remove Outbound Shipping Method](https://docs.vikrai.com/api/admin#claims_deleteclaimsidoutboundshippingmethodaction_id) Admin API Routes.
  * 
  * You can use this workflow within your customizations or your own custom workflows, allowing you to remove shipping methods from a claim
  * in your own custom flows.
@@ -168,3 +168,4 @@ export const removeClaimShippingMethodWorkflow = createWorkflow(
     return new WorkflowResponse(previewOrderChangeStep(orderClaim.order_id))
   }
 )
+

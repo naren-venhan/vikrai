@@ -34,7 +34,7 @@ describe("getResolvedPlugins | relative paths", () => {
 
     expect(plugins).toEqual([
       {
-        resolve: path.join(fs.basePath, "./plugins/dummy/.medusa/server/src"),
+        resolve: path.join(fs.basePath, "./plugins/dummy/.vikrai/server/src"),
         admin: undefined,
         name: "my-dummy-plugin",
         id: "my-dummy-plugin",
@@ -51,7 +51,7 @@ describe("getResolvedPlugins | relative paths", () => {
       version: "1.0.0",
     })
     await fs.create(
-      "plugins/dummy/.medusa/server/src/modules/blog/index.js",
+      "plugins/dummy/.vikrai/server/src/modules/blog/index.js",
       ``
     )
 
@@ -72,7 +72,7 @@ describe("getResolvedPlugins | relative paths", () => {
 
     expect(plugins).toEqual([
       {
-        resolve: path.join(fs.basePath, "./plugins/dummy/.medusa/server/src"),
+        resolve: path.join(fs.basePath, "./plugins/dummy/.vikrai/server/src"),
         admin: undefined,
         name: "my-dummy-plugin",
         id: "my-dummy-plugin",
@@ -83,7 +83,7 @@ describe("getResolvedPlugins | relative paths", () => {
             options: {
               apiKey: "asecret",
             },
-            resolve: "./plugins/dummy/.medusa/server/src/modules/blog",
+            resolve: "./plugins/dummy/.vikrai/server/src/modules/blog",
           },
         ],
       },
@@ -112,17 +112,17 @@ describe("getResolvedPlugins | relative paths", () => {
     )
   })
 
-  test("resolve admin source from medusa-plugin-options file", async () => {
+  test("resolve admin source from vikrai-plugin-options file", async () => {
     await fs.createJson("plugins/dummy/package.json", {
       name: "my-dummy-plugin",
       version: "1.0.0",
     })
     await fs.create(
-      "plugins/dummy/.medusa/server/src/modules/blog/index.js",
+      "plugins/dummy/.vikrai/server/src/modules/blog/index.js",
       ``
     )
     await fs.createJson(
-      "plugins/dummy/.medusa/server/medusa-plugin-options.json",
+      "plugins/dummy/.vikrai/server/vikrai-plugin-options.json",
       {
         srcDir: path.join(fs.basePath, "plugins/dummy/src"),
       }
@@ -145,7 +145,7 @@ describe("getResolvedPlugins | relative paths", () => {
 
     expect(plugins).toEqual([
       {
-        resolve: path.join(fs.basePath, "./plugins/dummy/.medusa/server/src"),
+        resolve: path.join(fs.basePath, "./plugins/dummy/.vikrai/server/src"),
         admin: {
           type: "local",
           resolve: path.join(fs.basePath, "./plugins/dummy/src/admin"),
@@ -159,7 +159,7 @@ describe("getResolvedPlugins | relative paths", () => {
             options: {
               apiKey: "asecret",
             },
-            resolve: "./plugins/dummy/.medusa/server/src/modules/blog",
+            resolve: "./plugins/dummy/.vikrai/server/src/modules/blog",
           },
         ],
       },
@@ -194,7 +194,7 @@ describe("getResolvedPlugins | package reference", () => {
       {
         resolve: path.join(
           fs.basePath,
-          "node_modules/@plugins/dummy/.medusa/server/src"
+          "node_modules/@plugins/dummy/.vikrai/server/src"
         ),
         admin: undefined,
         name: "my-dummy-plugin",
@@ -213,7 +213,7 @@ describe("getResolvedPlugins | package reference", () => {
       version: "1.0.0",
     })
     await fs.create(
-      "node_modules/@plugins/dummy/.medusa/server/src/modules/blog/index.js",
+      "node_modules/@plugins/dummy/.vikrai/server/src/modules/blog/index.js",
       ``
     )
 
@@ -236,7 +236,7 @@ describe("getResolvedPlugins | package reference", () => {
       {
         resolve: path.join(
           fs.basePath,
-          "node_modules/@plugins/dummy/.medusa/server/src"
+          "node_modules/@plugins/dummy/.vikrai/server/src"
         ),
         admin: undefined,
         name: "my-dummy-plugin",
@@ -248,7 +248,7 @@ describe("getResolvedPlugins | package reference", () => {
             options: {
               apiKey: "asecret",
             },
-            resolve: "@plugins/dummy/.medusa/server/src/modules/blog",
+            resolve: "@plugins/dummy/.vikrai/server/src/modules/blog",
           },
         ],
       },
@@ -277,3 +277,4 @@ describe("getResolvedPlugins | package reference", () => {
     )
   })
 })
+

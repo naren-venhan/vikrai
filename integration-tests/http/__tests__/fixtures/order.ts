@@ -3,8 +3,8 @@ import {
   AdminProduct,
   AdminShippingProfile,
   AdminStockLocation,
-  MedusaContainer,
-} from "@medusajs/types"
+  vikraiContainer,
+} from "@vikrai/types"
 import {
   adminHeaders,
   generatePublishableKey,
@@ -23,7 +23,7 @@ export async function createOrderSeeder({
   withoutShipping,
 }: {
   api: any
-  container: MedusaContainer
+  container: vikraiContainer
   storeHeaderOverride?: any
   productOverride?: AdminProduct
   stockChannelOverride?: AdminStockLocation
@@ -290,3 +290,4 @@ export async function createOrderSeeder({
     paymentCollection,
   }
 }
+

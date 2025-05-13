@@ -1,4 +1,4 @@
-import { HttpTypes } from "@medusajs/types"
+import { HttpTypes } from "@vikrai/types"
 import { i18n } from "../components/utilities/i18n"
 
 export enum PromotionStatus {
@@ -47,3 +47,4 @@ export const getPromotionStatus = (promotion: HttpTypes.AdminPromotion) => {
 
   return promotionStatusMap[promotion.status!.toUpperCase()]
 }
+

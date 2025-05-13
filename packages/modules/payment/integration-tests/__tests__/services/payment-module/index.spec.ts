@@ -1,6 +1,6 @@
-import { IPaymentModuleService } from "@medusajs/framework/types"
-import { Module, Modules, promiseAll } from "@medusajs/framework/utils"
-import { moduleIntegrationTestRunner } from "@medusajs/test-utils"
+import { IPaymentModuleService } from "@vikrai/framework/types"
+import { Module, Modules, promiseAll } from "@vikrai/framework/utils"
+import { moduleIntegrationTestRunner } from "@vikrai/test-utils"
 import { PaymentModuleService } from "@services"
 import {
   createPaymentCollections,
@@ -1045,3 +1045,4 @@ moduleIntegrationTestRunner<IPaymentModuleService>({
     })
   },
 })
+

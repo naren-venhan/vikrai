@@ -41,7 +41,7 @@ properties:
     type: boolean
     title: manage_inventory
     description: >-
-      Whether Medusa manages the variant's inventory quantity. If disabled, the
+      Whether vikrai manages the variant's inventory quantity. If disabled, the
       product variant is always considered in stock.
   variant_rank:
     type: number
@@ -91,3 +91,4 @@ properties:
     description: The variant's inventory items to create.
     items:
       $ref: ./AdminCreateProductVariantInventoryKit.yaml
+

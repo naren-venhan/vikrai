@@ -1,4 +1,4 @@
-import { model } from "@medusajs/framework/utils"
+import { model } from "@vikrai/framework/utils"
 import { Order } from "./order"
 
 const OrderCreditLine_ = model
@@ -29,3 +29,4 @@ const OrderCreditLine_ = model
   ])
 
 export const OrderCreditLine = OrderCreditLine_
+

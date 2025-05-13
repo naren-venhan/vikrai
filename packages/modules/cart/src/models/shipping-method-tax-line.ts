@@ -1,4 +1,4 @@
-import { model } from "@medusajs/framework/utils"
+import { model } from "@vikrai/framework/utils"
 import ShippingMethod from "./shipping-method"
 
 const ShippingMethodTaxLine = model
@@ -34,3 +34,4 @@ const ShippingMethodTaxLine = model
   ])
 
 export default ShippingMethodTaxLine
+

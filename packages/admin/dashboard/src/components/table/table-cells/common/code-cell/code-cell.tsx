@@ -1,4 +1,4 @@
-import { Badge } from "@medusajs/ui"
+import { Badge } from "@vikrai/ui"
 
 type CellProps = {
   code: string
@@ -25,3 +25,4 @@ export const CodeHeader = ({ text }: HeaderProps) => {
     </div>
   )
 }
+

@@ -1,4 +1,4 @@
-import { Module, Modules } from "@medusajs/framework/utils"
+import { Module, Modules } from "@vikrai/framework/utils"
 import { PricingModuleService } from "@services"
 
 export default Module(Modules.PRICING, {
@@ -6,3 +6,4 @@ export default Module(Modules.PRICING, {
 })
 
 export * from "./types"
+

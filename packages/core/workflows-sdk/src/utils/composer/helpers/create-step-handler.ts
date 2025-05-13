@@ -1,5 +1,5 @@
-import { WorkflowStepHandlerArguments } from "@medusajs/orchestration"
-import { OrchestrationUtils } from "@medusajs/utils"
+import { WorkflowStepHandlerArguments } from "@vikrai/orchestration"
+import { OrchestrationUtils } from "@vikrai/utils"
 import { ApplyStepOptions } from "../create-step"
 import {
   CreateWorkflowComposerContext,
@@ -115,3 +115,4 @@ export function createStepHandler<
 
   return handler
 }
+

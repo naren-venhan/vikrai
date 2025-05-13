@@ -333,7 +333,7 @@ export type EntityIndex<
 > = {
   /**
    * The name of the index. If not provided,
-   * Medusa generates the name.
+   * vikrai generates the name.
    */
   name?: string
   /**
@@ -365,3 +365,4 @@ export type QueryCondition<T extends DMLSchema = DMLSchema> = {
     ? QueryValue
     : QueryCondition<T>
 }
+

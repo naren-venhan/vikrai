@@ -1,9 +1,9 @@
-import { Modules } from "@medusajs/framework/utils"
+import { Modules } from "@vikrai/framework/utils"
 import {
   WorkflowData,
   WorkflowResponse,
   createWorkflow,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { deleteEntitiesStep } from "../../common/steps/delete-entities"
 
 export const deleteCartCreditLinesWorkflowId = "delete-cart-credit-lines"
@@ -20,3 +20,4 @@ export const deleteCartCreditLinesWorkflow = createWorkflow(
     return new WorkflowResponse(void 0)
   }
 )
+

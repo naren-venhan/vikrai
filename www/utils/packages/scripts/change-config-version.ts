@@ -42,8 +42,8 @@ async function main() {
   const response = await octokit.request(
     "GET /repos/{owner}/{repo}/releases/latest",
     {
-      owner: "medusajs",
-      repo: "medusa",
+      owner: "vikrai",
+      repo: "vikrai",
       sha: "develop",
     }
   )
@@ -78,3 +78,4 @@ async function main() {
 }
 
 void main()
+

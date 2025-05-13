@@ -1,4 +1,4 @@
-import { model } from "@medusajs/framework/utils"
+import { model } from "@vikrai/framework/utils"
 import PriceList from "./price-list"
 
 const PriceListRule = model
@@ -22,3 +22,4 @@ const PriceListRule = model
   ])
 
 export default PriceListRule
+

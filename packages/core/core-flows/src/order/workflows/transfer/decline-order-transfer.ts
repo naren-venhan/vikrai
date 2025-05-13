@@ -2,18 +2,18 @@ import {
   OrderChangeDTO,
   OrderDTO,
   OrderWorkflow,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import {
   ChangeActionType,
-  MedusaError,
+  vikraiError,
   OrderChangeStatus,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 import {
   WorkflowData,
   createStep,
   createWorkflow,
   transform,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 
 import { useQueryGraphStep } from "../../../common"
 import { declineOrderChangeStep } from "../../steps"
@@ -47,8 +47,8 @@ export type DeclineTransferOrderRequestValidationStepInput = {
  *
  * :::note
  *
- * You can retrieve an order and order change details using [Query](https://docs.medusajs.com/learn/fundamentals/module-links/query),
- * or [useQueryGraphStep](https://docs.medusajs.com/resources/references/medusa-workflows/steps/useQueryGraphStep).
+ * You can retrieve an order and order change details using [Query](https://docs.vikrai.com/learn/fundamentals/module-links/query),
+ * or [useQueryGraphStep](https://docs.vikrai.com/resources/references/vikrai-workflows/steps/useQueryGraphStep).
  *
  * :::
  *
@@ -83,7 +83,7 @@ export const declineTransferOrderRequestValidationStep = createStep(
     )?.details!.token
 
     if (!input.token?.length || token !== input.token) {
-      throw new MedusaError(MedusaError.Types.NOT_ALLOWED, "Invalid token.")
+      throw new vikraiError(vikraiError.Types.NOT_ALLOWED, "Invalid token.")
     }
   }
 )
@@ -92,7 +92,7 @@ export const declineTransferOrderRequestWorkflowId =
   "decline-transfer-order-request"
 /**
  * This workflow declines a requested order transfer by its token. It's used by the
- * [Decline Order Transfer Store API Route](https://docs.medusajs.com/api/store#orders_postordersidtransferdecline).
+ * [Decline Order Transfer Store API Route](https://docs.vikrai.com/api/store#orders_postordersidtransferdecline).
  *
  * You can use this workflow within your customizations or your own custom workflows, allowing you to wrap custom logic around declining an order transfer request.
  *
@@ -145,3 +145,4 @@ export const declineOrderTransferRequestWorkflow = createWorkflow(
     declineOrderChangeStep({ id: orderChange.id })
   }
 )
+

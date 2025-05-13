@@ -1,7 +1,7 @@
 "use client"
 
-import { Spinner } from "@medusajs/icons"
-import { Tabs, clx } from "@medusajs/ui"
+import { Spinner } from "@vikrai/icons"
+import { Tabs, clx } from "@vikrai/ui"
 import { CodeBlock } from "docs-ui"
 import * as React from "react"
 
@@ -46,14 +46,14 @@ export function ComponentExample({
           >
             <div
               className={clx(
-                "bg-medusa-bg-base border-medusa-border-base flex max-h-[400px] min-h-[400px]",
+                "bg-vikrai-bg-base border-vikrai-border-base flex max-h-[400px] min-h-[400px]",
                 "w-full overflow-auto justify-center rounded-md border px-10 py-5",
                 !disableCenterAlignPreview && "items-center"
               )}
             >
               <React.Suspense
                 fallback={
-                  <div className="text-medusa-fg-muted flex items-center text-sm">
+                  <div className="text-vikrai-fg-muted flex items-center text-sm">
                     <Spinner className="animate-spin" />
                   </div>
                 }
@@ -77,3 +77,4 @@ export function ComponentExample({
     </div>
   )
 }
+

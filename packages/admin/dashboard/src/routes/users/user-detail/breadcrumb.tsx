@@ -1,4 +1,4 @@
-import { HttpTypes } from "@medusajs/types"
+import { HttpTypes } from "@vikrai/types"
 import { UIMatch } from "react-router-dom"
 import { useUser } from "../../../hooks/api/users"
 
@@ -22,3 +22,4 @@ export const UserDetailBreadcrumb = (props: UserDetailBreadcrumbProps) => {
 
   return <span>{display}</span>
 }
+

@@ -3,7 +3,7 @@ import {
   moduleEventBuilderFactory,
   Modules,
   ProductEvents,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 
 export const eventBuilders = {
   createdProduct: moduleEventBuilderFactory({
@@ -151,3 +151,4 @@ export const eventBuilders = {
     eventName: ProductEvents.PRODUCT_OPTION_VALUE_DELETED,
   }),
 }
+

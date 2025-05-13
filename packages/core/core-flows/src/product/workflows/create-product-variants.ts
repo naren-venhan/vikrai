@@ -4,19 +4,19 @@ import {
   LinkDefinition,
   PricingTypes,
   ProductTypes,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import {
-  MedusaError,
+  vikraiError,
   Modules,
   ProductVariantWorkflowEvents,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 import {
   WorkflowData,
   WorkflowResponse,
   createHook,
   createWorkflow,
   transform,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { emitEventStep } from "../../common"
 import { createLinksWorkflow } from "../../common/workflows/create-links"
 import { validateInventoryItems } from "../../inventory/steps/validate-inventory-items"
@@ -52,8 +52,8 @@ export type CreateProductVariantsWorkflowInput = {
       inventory_item_id: string
       /**
        * The number of units a single quantity is equivalent to. For example, if a customer orders one quantity of the variant, 
-       * Medusa checks the availability of the quantity multiplied by the value set for `required_quantity`. 
-       * When the customer orders the quantity, Medusa reserves the ordered quantity multiplied by the value 
+       * vikrai checks the availability of the quantity multiplied by the value set for `required_quantity`. 
+       * When the customer orders the quantity, vikrai reserves the ordered quantity multiplied by the value 
        * set for `required_quantity`.
        */
       required_quantity?: number
@@ -100,8 +100,8 @@ const validateVariantsDuplicateInventoryItemIds = (
   }
 
   if (erroredVariantIds.length) {
-    throw new MedusaError(
-      MedusaError.Types.INVALID_DATA,
+    throw new vikraiError(
+      vikraiError.Types.INVALID_DATA,
       `Cannot associate duplicate inventory items to variant(s) ${erroredVariantIds.join(
         "\n"
       )}`
@@ -200,7 +200,7 @@ const buildVariantItemCreateMap = (data: {
 
 export const createProductVariantsWorkflowId = "create-product-variants"
 /**
- * This workflow creates one or more product variants. It's used by the [Create Product Variant Admin API Route](https://docs.medusajs.com/api/admin#products_postproductsidvariants).
+ * This workflow creates one or more product variants. It's used by the [Create Product Variant Admin API Route](https://docs.vikrai.com/api/admin#products_postproductsidvariants).
  * 
  * This workflow has a hook that allows you to perform custom actions on the created product variants. For example, you can pass under `additional_data` custom data that 
  * allows you to create custom data models linked to the product variants.
@@ -210,7 +210,7 @@ export const createProductVariantsWorkflowId = "create-product-variants"
  * :::note
  * 
  * Learn more about adding rules to the product variant's prices in the Pricing Module's 
- * [Price Rules](https://docs.medusajs.com/resources/commerce-modules/pricing/price-rules) documentation.
+ * [Price Rules](https://docs.vikrai.com/resources/commerce-modules/pricing/price-rules) documentation.
  * 
  * :::
  * 
@@ -371,3 +371,4 @@ export const createProductVariantsWorkflow = createWorkflow(
     })
   }
 )
+

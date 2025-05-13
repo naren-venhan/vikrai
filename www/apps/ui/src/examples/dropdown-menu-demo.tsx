@@ -1,5 +1,5 @@
-import { EllipsisHorizontal, PencilSquare, Plus, Trash } from "@medusajs/icons"
-import { DropdownMenu, IconButton } from "@medusajs/ui"
+import { EllipsisHorizontal, PencilSquare, Plus, Trash } from "@vikrai/icons"
+import { DropdownMenu, IconButton } from "@vikrai/ui"
 
 export default function DropdownMenuDemo() {
   return (
@@ -27,3 +27,4 @@ export default function DropdownMenuDemo() {
     </DropdownMenu>
   )
 }
+

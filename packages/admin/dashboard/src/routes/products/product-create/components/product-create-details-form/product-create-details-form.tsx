@@ -1,4 +1,4 @@
-import { Divider, Heading } from "@medusajs/ui"
+import { Divider, Heading } from "@vikrai/ui"
 import { UseFormReturn } from "react-hook-form"
 import { useTranslation } from "react-i18next"
 
@@ -42,3 +42,4 @@ const Header = () => {
     </div>
   )
 }
+

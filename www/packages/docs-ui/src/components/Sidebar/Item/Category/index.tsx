@@ -6,7 +6,7 @@ import React, { useEffect, useMemo, useState } from "react"
 import { Sidebar } from "types"
 import { Badge, Loading, SidebarItem, useSidebar } from "../../../.."
 import clsx from "clsx"
-import { MinusMini, PlusMini } from "@medusajs/icons"
+import { MinusMini, PlusMini } from "@vikrai/icons"
 
 export type SidebarItemCategoryProps = {
   item: Sidebar.SidebarItemCategory
@@ -87,7 +87,7 @@ export const SidebarItemCategory = ({
           className={clsx(
             "py-docs_0.25 px-docs_0.5",
             "flex justify-between items-center gap-docs_0.5",
-            "text-medusa-fg-muted",
+            "text-vikrai-fg-muted",
             "cursor-pointer relative",
             "z-[2]",
             !isTitleOneWord && "break-words"
@@ -143,3 +143,4 @@ export const SidebarItemCategory = ({
     </div>
   )
 }
+

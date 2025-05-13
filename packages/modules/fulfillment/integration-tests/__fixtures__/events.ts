@@ -1,4 +1,4 @@
-import { EventBusTypes } from "@medusajs/framework/types"
+import { EventBusTypes } from "@vikrai/framework/types"
 
 export function buildExpectedEventMessageShape(options: {
   eventName: string
@@ -20,3 +20,4 @@ export function buildExpectedEventMessageShape(options: {
     options: options.options,
   }
 }
+

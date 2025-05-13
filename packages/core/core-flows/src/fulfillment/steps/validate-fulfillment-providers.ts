@@ -1,10 +1,10 @@
-import { ServiceZoneDTO, ShippingOptionDTO } from "@medusajs/framework/types"
+import { ServiceZoneDTO, ShippingOptionDTO } from "@vikrai/framework/types"
 import {
   ContainerRegistrationKeys,
-  MedusaError,
+  vikraiError,
   Modules,
-} from "@medusajs/framework/utils"
-import { createStep, StepResponse } from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/utils"
+import { createStep, StepResponse } from "@vikrai/framework/workflows-sdk"
 
 /**
  * The data to validate fulfillment providers.
@@ -89,8 +89,8 @@ export const validateFulfillmentProvidersStep = createStep(
         continue
       }
 
-      throw new MedusaError(
-        MedusaError.Types.NOT_ALLOWED,
+      throw new vikraiError(
+        vikraiError.Types.NOT_ALLOWED,
         `service_zone_id and provider_id are required to create a shipping option`
       )
     }
@@ -135,8 +135,8 @@ export const validateFulfillmentProvidersStep = createStep(
     }
 
     if (invalidProviders.length) {
-      throw new MedusaError(
-        MedusaError.Types.NOT_ALLOWED,
+      throw new vikraiError(
+        vikraiError.Types.NOT_ALLOWED,
         `Providers (${invalidProviders.join(
           ","
         )}) are not enabled for the service location`
@@ -146,3 +146,4 @@ export const validateFulfillmentProvidersStep = createStep(
     return new StepResponse(void 0)
   }
 )
+

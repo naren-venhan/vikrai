@@ -1,4 +1,4 @@
-import { HttpTypes } from "@medusajs/types"
+import { HttpTypes } from "@vikrai/types"
 import { castNumber } from "../../../lib/cast-number"
 import { ProductCreateSchemaType } from "./types"
 
@@ -116,3 +116,4 @@ export const decorateVariantsWithDefaultValues = (
     inventory_kit: variant.inventory_kit || false,
   }))
 }
+

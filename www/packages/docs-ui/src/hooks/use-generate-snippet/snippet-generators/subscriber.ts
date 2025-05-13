@@ -51,7 +51,7 @@ export const subscriberSnippetGenerator = ({
     .replace("{{payload}}", payloadString)
 }
 
-const subscriberSnippet = `import { SubscriberArgs, type SubscriberConfig } from "@medusajs/framework"
+const subscriberSnippet = `import { SubscriberArgs, type SubscriberConfig } from "@vikrai/framework"
 
 export default async function {{subscriberName}}({
   event: { data },
@@ -63,3 +63,4 @@ export default async function {{subscriberName}}({
 export const config: SubscriberConfig = {
   event: "{{event}}",
 }`
+

@@ -1,4 +1,4 @@
-import { BigNumberInput } from "@medusajs/framework/types"
+import { BigNumberInput } from "@vikrai/framework/types"
 
 export interface CreateShippingMethodDTO {
   name: string
@@ -13,3 +13,4 @@ export interface UpdateShippingMethodDTO {
   amount?: BigNumberInput
   data?: Record<string, unknown>
 }
+

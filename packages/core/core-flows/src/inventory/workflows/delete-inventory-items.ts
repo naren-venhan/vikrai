@@ -2,8 +2,8 @@ import {
   createWorkflow,
   WorkflowData,
   WorkflowResponse,
-} from "@medusajs/framework/workflows-sdk"
-import { Modules } from "@medusajs/framework/utils"
+} from "@vikrai/framework/workflows-sdk"
+import { Modules } from "@vikrai/framework/utils"
 
 import { deleteInventoryItemStep, validateInventoryDeleteStep } from "../steps"
 import { removeRemoteLinkStep } from "../../common/steps/remove-remote-links"
@@ -22,7 +22,7 @@ export type DeleteInventoryItemWorkflowOutput = string[]
 export const deleteInventoryItemWorkflowId = "delete-inventory-item-workflow"
 /**
  * This workflow deletes one or more inventory items. It's used by the
- * [Delete Inventory Item Admin API Route](https://docs.medusajs.com/api/admin#inventory-items_deleteinventoryitemsid).
+ * [Delete Inventory Item Admin API Route](https://docs.vikrai.com/api/admin#inventory-items_deleteinventoryitemsid).
  * 
  * You can use this workflow within your own customizations or custom workflows, allowing you
  * to delete inventory items in your custom flows.
@@ -59,3 +59,4 @@ export const deleteInventoryItemWorkflow = createWorkflow(
     return new WorkflowResponse(input)
   }
 )
+

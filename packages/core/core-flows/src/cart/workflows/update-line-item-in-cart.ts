@@ -1,8 +1,8 @@
 import {
   AdditionalData,
   UpdateLineItemInCartWorkflowInputDTO,
-} from "@medusajs/framework/types"
-import { CartWorkflowEvents, isDefined, MedusaError } from "@medusajs/framework/utils"
+} from "@vikrai/framework/types"
+import { CartWorkflowEvents, isDefined, vikraiError } from "@vikrai/framework/utils"
 import {
   createHook,
   createWorkflow,
@@ -10,7 +10,7 @@ import {
   when,
   WorkflowData,
   WorkflowResponse,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { useQueryGraphStep } from "../../common"
 import { emitEventStep } from "../../common/steps/emit-event"
 import { useRemoteQueryStep } from "../../common/steps/use-remote-query"
@@ -30,7 +30,7 @@ const cartFields = cartFieldsForPricingContext.concat(["items.*"])
 export const updateLineItemInCartWorkflowId = "update-line-item-in-cart"
 /**
  * This workflow updates a line item's details in a cart. You can update the line item's quantity, unit price, and more. This workflow is executed
- * by the [Update Line Item Store API Route](https://docs.medusajs.com/api/store#carts_postcartsidlineitemsline_id).
+ * by the [Update Line Item Store API Route](https://docs.vikrai.com/api/store#carts_postcartsidlineitemsline_id).
  *
  * You can use this workflow within your own customizations or custom workflows, allowing you to update a line item's details in your custom flows.
  *
@@ -66,8 +66,8 @@ export const updateLineItemInCartWorkflowId = "update-line-item-in-cart"
  * You can consume the `setPricingContext` hook to add the `location_id` context to the prices calculation:
  * 
  * ```ts
- * import { addToCartWorkflow } from "@medusajs/medusa/core-flows";
- * import { StepResponse } from "@medusajs/workflows-sdk";
+ * import { addToCartWorkflow } from "@vikrai/vikrai/core-flows";
+ * import { StepResponse } from "@vikrai/workflows-sdk";
  * 
  * addToCartWorkflow.hooks.setPricingContext((
  *   { cart, variantIds, items, additional_data }, { container }
@@ -82,7 +82,7 @@ export const updateLineItemInCartWorkflowId = "update-line-item-in-cart"
  * 
  * :::note
  * 
- * Learn more about prices calculation context in the [Prices Calculation](https://docs.medusajs.com/resources/commerce-modules/pricing/price-calculation) documentation.
+ * Learn more about prices calculation context in the [Prices Calculation](https://docs.vikrai.com/resources/commerce-modules/pricing/price-calculation) documentation.
  * 
  * :::
  */
@@ -196,8 +196,8 @@ export const updateLineItemInCartWorkflow = createWorkflow(
       }
 
       if (!isDefined(updateData.unit_price)) {
-        throw new MedusaError(
-          MedusaError.Types.INVALID_DATA,
+        throw new vikraiError(
+          vikraiError.Types.INVALID_DATA,
           `Line item ${item.title} has no unit price`
         )
       }
@@ -226,3 +226,4 @@ export const updateLineItemInCartWorkflow = createWorkflow(
     })
   }
 )
+

@@ -1,0 +1,11 @@
+{
+  "$schema": "http://json.schemastore.org/tsconfig",
+  "extends": [
+    "../../../../packages/vikrai/tsconfig.json"
+  ],
+  "include": ["../../../../packages/vikrai/src"],
+  "exclude": [
+    "../../../../packages/vikrai/dist", 
+    "../../../../packages/vikrai/node_modules"
+  ]
+}

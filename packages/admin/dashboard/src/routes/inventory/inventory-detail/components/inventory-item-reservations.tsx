@@ -1,5 +1,5 @@
-import { HttpTypes } from "@medusajs/types"
-import { Button, Container, Heading } from "@medusajs/ui"
+import { HttpTypes } from "@vikrai/types"
+import { Button, Container, Heading } from "@vikrai/ui"
 import { useTranslation } from "react-i18next"
 import { Link } from "react-router-dom"
 import { ReservationItemTable } from "./reservations-table/reservation-list-table"
@@ -26,3 +26,4 @@ export const InventoryItemReservationsSection = ({
     </Container>
   )
 }
+

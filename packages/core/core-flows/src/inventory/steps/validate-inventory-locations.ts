@@ -1,11 +1,11 @@
 import {
   arrayDifference,
   ContainerRegistrationKeys,
-  MedusaError,
-} from "@medusajs/framework/utils"
+  vikraiError,
+} from "@vikrai/framework/utils"
 
-import { InventoryTypes } from "@medusajs/framework/types"
-import { createStep } from "@medusajs/framework/workflows-sdk"
+import { InventoryTypes } from "@vikrai/framework/types"
+import { createStep } from "@vikrai/framework/workflows-sdk"
 
 /**
  * The data to validate the inventory levels.
@@ -38,10 +38,11 @@ export const validateInventoryLocationsStep = createStep(
       stockLocations.map((l) => l.id)
     )
     if (diff.length > 0) {
-      throw new MedusaError(
-        MedusaError.Types.NOT_FOUND,
+      throw new vikraiError(
+        vikraiError.Types.NOT_FOUND,
         `Stock locations with ids: ${diff.join(", ")} was not found`
       )
     }
   }
 )
+

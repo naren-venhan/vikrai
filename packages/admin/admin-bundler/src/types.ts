@@ -1,4 +1,4 @@
-import { AdminOptions } from "@medusajs/types"
+import { AdminOptions } from "@vikrai/types"
 
 export type BundlerOptions = Required<Pick<AdminOptions, "path">> &
   Pick<AdminOptions, "vite" | "backendUrl" | "storefrontUrl"> & {
@@ -6,3 +6,4 @@ export type BundlerOptions = Required<Pick<AdminOptions, "path">> &
     sources?: string[]
     plugins?: string[]
   }
+

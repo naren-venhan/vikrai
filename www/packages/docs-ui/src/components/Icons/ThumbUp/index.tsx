@@ -1,4 +1,4 @@
-import { IconProps } from "@medusajs/icons/dist/types"
+import { IconProps } from "@vikrai/icons/dist/types"
 import React from "react"
 
 export const ThumbUpIcon = (props: IconProps) => {
@@ -21,3 +21,4 @@ export const ThumbUpIcon = (props: IconProps) => {
     </svg>
   )
 }
+

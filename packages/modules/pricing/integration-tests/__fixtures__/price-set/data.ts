@@ -1,4 +1,4 @@
-import { CreatePriceSetDTO } from "@medusajs/framework/types"
+import { CreatePriceSetDTO } from "@vikrai/framework/types"
 
 export const defaultPriceSetsData = [
   {
@@ -11,3 +11,4 @@ export const defaultPriceSetsData = [
     id: "price-set-3",
   },
 ] as unknown as CreatePriceSetDTO[]
+

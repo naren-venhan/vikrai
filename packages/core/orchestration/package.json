@@ -1,14 +1,14 @@
 {
-  "name": "@medusajs/orchestration",
+  "name": "@vikrai/orchestration",
   "version": "2.7.1",
-  "description": "Medusa utilities to orchestrate modules",
+  "description": "vikrai utilities to orchestrate modules",
   "main": "dist/index.js",
   "exports": {
     ".": "./dist/index.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/medusajs/medusa",
+    "url": "https://github.com/vikrai/vikrai",
     "directory": "packages/core/orchestration"
   },
   "engines": {
@@ -23,7 +23,7 @@
     "!dist/**/__fixtures__",
     "!dist/**/__mocks__"
   ],
-  "author": "Medusa",
+  "author": "vikrai",
   "license": "MIT",
   "devDependencies": {
     "@mikro-orm/core": "6.4.3",
@@ -39,8 +39,8 @@
     "typescript": "^5.6.2"
   },
   "dependencies": {
-    "@medusajs/types": "2.7.1",
-    "@medusajs/utils": "2.7.1",
+    "@vikrai/types": "2.7.1",
+    "@vikrai/utils": "2.7.1",
     "ulid": "^2.3.0"
   },
   "peerDependencies": {
@@ -58,3 +58,4 @@
     "test": "jest --runInBand --bail --forceExit"
   }
 }
+

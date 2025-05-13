@@ -4,19 +4,19 @@ import {
   createReturnShippingMethodWorkflow,
   requestItemReturnWorkflow,
   updateRequestItemReturnWorkflow,
-} from "@medusajs/core-flows"
-import { IFulfillmentModuleService, OrderDTO, ReturnDTO } from "@medusajs/types"
+} from "@vikrai/core-flows"
+import { IFulfillmentModuleService, OrderDTO, ReturnDTO } from "@vikrai/types"
 import {
   ContainerRegistrationKeys,
   Modules,
   remoteQueryObjectFromString,
-} from "@medusajs/utils"
-import { medusaIntegrationTestRunner } from "@medusajs/test-utils"
+} from "@vikrai/utils"
+import { vikraiIntegrationTestRunner } from "@vikrai/test-utils"
 import { createOrderFixture, prepareDataFixtures } from "../__fixtures__"
 jest.setTimeout(50000)
 
-medusaIntegrationTestRunner({
-  env: { MEDUSA_FF_MEDUSA_V2: true },
+vikraiIntegrationTestRunner({
+  env: { vikrai_FF_vikrai_V2: true },
   testSuite: ({ getContainer }) => {
     let container
 
@@ -249,3 +249,4 @@ medusaIntegrationTestRunner({
     })
   },
 })
+

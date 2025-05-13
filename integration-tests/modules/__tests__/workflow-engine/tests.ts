@@ -3,8 +3,8 @@ import {
   createWorkflow,
   StepResponse,
   WorkflowData,
-} from "@medusajs/framework/workflows-sdk"
-import { medusaIntegrationTestRunner } from "@medusajs/test-utils"
+} from "@vikrai/framework/workflows-sdk"
+import { vikraiIntegrationTestRunner } from "@vikrai/test-utils"
 import { createAdminUser } from "../../../helpers/create-admin-user"
 
 export const workflowEngineTestSuite = (
@@ -13,23 +13,23 @@ export const workflowEngineTestSuite = (
 ) => {
   const adminHeaders = {
     headers: {
-      "x-medusa-access-token": "test_token",
+      "x-vikrai-access-token": "test_token",
     },
   }
 
-  return medusaIntegrationTestRunner({
+  return vikraiIntegrationTestRunner({
     env,
     force_modules_migration: extraParams.force_modules_migration,
     testSuite: ({ dbConnection, getContainer, api }) => {
       describe("Workflow Engine API", () => {
-        let medusaContainer
+        let vikraiContainer
 
         beforeAll(() => {
-          medusaContainer = getContainer()
+          vikraiContainer = getContainer()
         })
 
         beforeEach(async () => {
-          await createAdminUser(dbConnection, adminHeaders, medusaContainer)
+          await createAdminUser(dbConnection, adminHeaders, vikraiContainer)
         })
 
         describe("running workflows", () => {
@@ -272,3 +272,4 @@ describe("Noop test", () => {
     expect(true).toBe(true)
   })
 })
+

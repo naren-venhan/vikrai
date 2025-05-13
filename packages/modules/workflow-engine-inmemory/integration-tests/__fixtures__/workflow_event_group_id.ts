@@ -1,4 +1,4 @@
-import { createStep, createWorkflow } from "@medusajs/framework/workflows-sdk"
+import { createStep, createWorkflow } from "@vikrai/framework/workflows-sdk"
 import { setTimeout } from "timers/promises"
 
 export const workflowEventGroupIdStep1Mock = jest.fn(async (input) => {
@@ -38,3 +38,4 @@ createWorkflow(
     return resp
   }
 )
+

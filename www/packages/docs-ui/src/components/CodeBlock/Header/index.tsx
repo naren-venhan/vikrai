@@ -33,10 +33,10 @@ export const CodeBlockHeader = ({
   const titleColor = useMemo(
     () =>
       clsx(
-        blockStyle === "loud" && "text-medusa-contrast-fg-secondary",
+        blockStyle === "loud" && "text-vikrai-contrast-fg-secondary",
         blockStyle === "subtle" && [
-          colorMode === "light" && "text-medusa-fg-subtle",
-          colorMode === "dark" && "text-medusa-contrast-fg-secondary",
+          colorMode === "light" && "text-vikrai-fg-subtle",
+          colorMode === "dark" && "text-vikrai-contrast-fg-secondary",
         ]
       ),
     [blockStyle, colorMode]
@@ -60,3 +60,4 @@ export const CodeBlockHeader = ({
     </CodeBlockHeaderWrapper>
   )
 }
+

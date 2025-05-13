@@ -1,5 +1,5 @@
-import { DeclineOrderChangeDTO } from "@medusajs/framework/types"
-import { WorkflowData, createWorkflow } from "@medusajs/framework/workflows-sdk"
+import { DeclineOrderChangeDTO } from "@vikrai/framework/types"
+import { WorkflowData, createWorkflow } from "@vikrai/framework/workflows-sdk"
 import { declineOrderChangeStep } from "../steps"
 
 export const declineOrderChangeWorkflowId = "decline-order-change"
@@ -19,3 +19,4 @@ export const declineOrderChangeWorkflow = createWorkflow(
     declineOrderChangeStep(input)
   }
 )
+

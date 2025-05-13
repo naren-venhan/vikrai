@@ -1,4 +1,4 @@
-import { RuleWithOperator } from "@medusajs/types"
+import { RuleWithOperator } from "@vikrai/types"
 
 export const withOperator = (
   border,
@@ -37,3 +37,4 @@ export const withOperator = (
     return []
   }
 }
+

@@ -1,4 +1,4 @@
-import { PromotionUtils, model } from "@medusajs/framework/utils"
+import { PromotionUtils, model } from "@vikrai/framework/utils"
 import ApplicationMethod from "./application-method"
 import Campaign from "./campaign"
 import PromotionRule from "./promotion-rule"
@@ -41,3 +41,4 @@ const Promotion = model
   ])
 
 export default Promotion
+

@@ -1,4 +1,4 @@
-import { CurrencyInput } from "@medusajs/ui"
+import { CurrencyInput } from "@vikrai/ui"
 
 export default function CurrencyInputSmall() {
   return (
@@ -7,3 +7,4 @@ export default function CurrencyInputSmall() {
     </div>
   )
 }
+

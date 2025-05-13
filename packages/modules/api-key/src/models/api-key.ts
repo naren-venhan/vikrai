@@ -1,4 +1,4 @@
-import { model } from "@medusajs/framework/utils"
+import { model } from "@vikrai/framework/utils"
 
 const ApiKey = model
   .define("ApiKey", {
@@ -24,3 +24,4 @@ const ApiKey = model
   ])
 
 export default ApiKey
+

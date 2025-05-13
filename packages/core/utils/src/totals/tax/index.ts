@@ -1,4 +1,4 @@
-import { BigNumberInput, TaxLineDTO } from "@medusajs/types"
+import { BigNumberInput, TaxLineDTO } from "@vikrai/types"
 import { BigNumber } from "../big-number"
 import { MathBN } from "../math"
 
@@ -59,3 +59,4 @@ export function calculateAmountsWithTax({
     priceWithoutTax: includesTax ? MathBN.sub(amount, tax).toNumber() : amount,
   }
 }
+

@@ -6,7 +6,7 @@ import {
   AcademicCapSolid,
   ComputerDesktopSolid,
   BuildingStorefront,
-} from "@medusajs/icons"
+} from "@vikrai/icons"
 import React from "react"
 
 const H1 = MDXComponents.h1!
@@ -26,7 +26,7 @@ export default function NotFound() {
       {/* @ts-expect-error React v19 doesn't recognize these as elements. */}
       <P>
         If you think this is a mistake, please
-        <Link href="https://github.com/medusajs/medusa/issues/new?assignees=&labels=type%3A+docs&template=docs.yml">
+        <Link href="https://github.com/vikrai/vikrai/issues/new?assignees=&labels=type%3A+docs&template=docs.yml">
           report this issue on GitHub
         </Link>
       </P>
@@ -58,3 +58,4 @@ export default function NotFound() {
     </div>
   )
 }
+

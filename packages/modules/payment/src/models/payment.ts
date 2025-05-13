@@ -1,4 +1,4 @@
-import { model } from "@medusajs/framework/utils"
+import { model } from "@vikrai/framework/utils"
 import Capture from "./capture"
 import PaymentCollection from "./payment-collection"
 import PaymentSession from "./payment-session"
@@ -48,3 +48,4 @@ const Payment = model
   ])
 
 export default Payment
+

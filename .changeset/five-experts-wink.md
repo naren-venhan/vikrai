@@ -1,5 +1,6 @@
 ---
-"@medusajs/medusa": patch
+"@vikrai/vikrai": patch
 ---
 
-fix(medusa): Support additional data on admin/collections
+fix(vikrai): Support additional data on admin/collections
+

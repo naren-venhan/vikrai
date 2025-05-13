@@ -4,7 +4,7 @@ import {
   AuthIdentityProviderService,
   AuthTypes,
   Logger,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import { AuthProviderRegistrationPrefix } from "@types"
 
 type InjectedDependencies = {
@@ -84,3 +84,4 @@ Please make sure that the provider is registered in the container and it is conf
     )
   }
 }
+

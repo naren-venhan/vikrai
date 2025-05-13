@@ -1,6 +1,6 @@
 import { zodResolver } from "@hookform/resolvers/zod"
-import { HttpTypes } from "@medusajs/types"
-import { Button, Input, toast } from "@medusajs/ui"
+import { HttpTypes } from "@vikrai/types"
+import { Button, Input, toast } from "@vikrai/ui"
 import { useForm } from "react-hook-form"
 import { useTranslation } from "react-i18next"
 import * as zod from "zod"
@@ -233,3 +233,4 @@ export const EditLocationForm = ({ location }: EditLocationFormProps) => {
     </RouteDrawer.Form>
   )
 }
+

@@ -1,5 +1,5 @@
-import { InventoryTypes } from "@medusajs/types"
-import { Button, Container, Heading, Text } from "@medusajs/ui"
+import { InventoryTypes } from "@vikrai/types"
+import { Button, Container, Heading, Text } from "@vikrai/ui"
 
 import { RowSelectionState } from "@tanstack/react-table"
 import { useState } from "react"
@@ -103,3 +103,4 @@ export const InventoryListTable = () => {
     </Container>
   )
 }
+

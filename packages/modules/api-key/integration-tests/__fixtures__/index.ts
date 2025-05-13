@@ -1,5 +1,5 @@
 import { CreateApiKeyDTO } from "@types"
-import { ApiKeyType } from "@medusajs/framework/utils"
+import { ApiKeyType } from "@vikrai/framework/utils"
 
 export const createSecretKeyFixture: CreateApiKeyDTO = {
   title: "Secret key",
@@ -12,3 +12,4 @@ export const createPublishableKeyFixture: CreateApiKeyDTO = {
   type: ApiKeyType.PUBLISHABLE,
   created_by: "test",
 }
+

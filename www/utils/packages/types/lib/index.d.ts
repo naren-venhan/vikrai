@@ -336,7 +336,7 @@ export declare type NamespaceGenerateDetails = {
   children?: NamespaceGenerateDetails[]
 }
 
-export declare type MedusaEvent = {
+export declare type vikraiEvent = {
   name: string
   parentName: string
   propertyName: string
@@ -348,3 +348,4 @@ export declare type MedusaEvent = {
   deprecated_message?: string
   version?: string
 }
+

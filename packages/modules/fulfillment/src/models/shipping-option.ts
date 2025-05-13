@@ -1,4 +1,4 @@
-import { model, ShippingOptionPriceType } from "@medusajs/framework/utils"
+import { model, ShippingOptionPriceType } from "@vikrai/framework/utils"
 
 import { Fulfillment } from "./fulfillment"
 import { FulfillmentProvider } from "./fulfillment-provider"
@@ -40,3 +40,4 @@ export const ShippingOption = model
   .cascades({
     delete: ["rules", "type"],
   })
+

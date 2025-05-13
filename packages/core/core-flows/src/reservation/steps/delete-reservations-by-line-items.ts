@@ -1,7 +1,7 @@
-import { StepResponse, createStep } from "@medusajs/framework/workflows-sdk"
+import { StepResponse, createStep } from "@vikrai/framework/workflows-sdk"
 
-import { IInventoryService } from "@medusajs/framework/types"
-import { Modules } from "@medusajs/framework/utils"
+import { IInventoryService } from "@vikrai/framework/types"
+import { Modules } from "@vikrai/framework/utils"
 
 /**
  * The IDs of the line items to delete reservations for.
@@ -32,3 +32,4 @@ export const deleteReservationsByLineItemsStep = createStep(
     await service.restoreReservationItemsByLineItem(prevIds)
   }
 )
+

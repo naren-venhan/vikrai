@@ -1,4 +1,4 @@
-import { Label } from "@medusajs/ui"
+import { Label } from "@vikrai/ui"
 
 export default function LabelSmallPlus() {
   return (
@@ -7,3 +7,4 @@ export default function LabelSmallPlus() {
     </Label>
   )
 }
+

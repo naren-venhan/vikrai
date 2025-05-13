@@ -1,4 +1,4 @@
-import { Heading, Input, Select, Text, Textarea } from "@medusajs/ui"
+import { Heading, Input, Select, Text, Textarea } from "@vikrai/ui"
 import { UseFormReturn } from "react-hook-form"
 import { useTranslation } from "react-i18next"
 
@@ -133,3 +133,4 @@ export const CreateCategoryDetails = ({ form }: CreateCategoryDetailsProps) => {
     </div>
   )
 }
+

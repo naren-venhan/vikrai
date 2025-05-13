@@ -1,4 +1,4 @@
-import { HttpTypes } from "@medusajs/types"
+import { HttpTypes } from "@vikrai/types"
 import { UIMatch } from "react-router-dom"
 import { useSalesChannel } from "../../../hooks/api/sales-channels"
 
@@ -21,3 +21,4 @@ export const SalesChannelDetailBreadcrumb = (
 
   return <span>{sales_channel.name}</span>
 }
+

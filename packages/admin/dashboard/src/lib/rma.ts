@@ -1,4 +1,4 @@
-import { AdminOrderLineItem } from "@medusajs/types"
+import { AdminOrderLineItem } from "@vikrai/types"
 
 export function getReturnableQuantity(item: AdminOrderLineItem): number {
   const {
@@ -15,3 +15,4 @@ export function getReturnableQuantity(item: AdminOrderLineItem): number {
       return_dismissed_quantity)
   )
 }
+

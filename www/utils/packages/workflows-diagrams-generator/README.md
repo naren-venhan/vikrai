@@ -2,7 +2,7 @@
 
 An internal tool to generate [Mermaid](https://mermaid.js.org/) diagrams for workflows.
 
-> Note: This tool is a beta tool created to generate diagrams that can be used in the Medusa documentation.
+> Note: This tool is a beta tool created to generate diagrams that can be used in the vikrai documentation.
 
 ## Usage
 
@@ -41,7 +41,7 @@ The `type` of diagram to be generated. It can be one of the following:
 yarn start run ./path/to/workflow -o ./path/to/output/dir --no-theme
 ```
 
-Removes Medusa's default theming from the outputted diagram. Note that Medusa's theme doesn't support dark mode.
+Removes vikrai's default theming from the outputted diagram. Note that vikrai's theme doesn't support dark mode.
 
 #### --pretty-names
 
@@ -50,3 +50,4 @@ yarn start run ./path/to/workflow -o ./path/to/output/dir --pretty-names
 ```
 
 Changes slug and camel-case names of steps to capitalized names.
+

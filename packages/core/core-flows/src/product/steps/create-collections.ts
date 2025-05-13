@@ -1,6 +1,6 @@
-import { IProductModuleService, ProductTypes } from "@medusajs/framework/types"
-import { Modules } from "@medusajs/framework/utils"
-import { StepResponse, createStep } from "@medusajs/framework/workflows-sdk"
+import { IProductModuleService, ProductTypes } from "@vikrai/framework/types"
+import { Modules } from "@vikrai/framework/utils"
+import { StepResponse, createStep } from "@vikrai/framework/workflows-sdk"
 
 export const createCollectionsStepId = "create-collections"
 /**
@@ -27,3 +27,4 @@ export const createCollectionsStep = createStep(
     await service.deleteProductCollections(createdIds)
   }
 )
+

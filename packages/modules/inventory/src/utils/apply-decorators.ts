@@ -3,7 +3,7 @@ import {
   isDefined,
   MathBN,
   toMikroORMEntity,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 import { Formula, OnInit } from "@mikro-orm/core"
 
 import InventoryItem from "../models/inventory-item"
@@ -43,3 +43,4 @@ export const applyEntityHooks = () => {
   applyHook()
   applyFormulas()
 }
+

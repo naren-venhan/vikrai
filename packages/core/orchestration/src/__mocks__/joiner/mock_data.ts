@@ -1,4 +1,4 @@
-import { JoinerServiceConfig } from "@medusajs/types"
+import { JoinerServiceConfig } from "@vikrai/types"
 import { remoteJoinerData } from "./../../__fixtures__/joiner/data"
 
 export const serviceConfigs: JoinerServiceConfig[] = [
@@ -147,3 +147,4 @@ export const serviceMock = {
   productService: mockServiceList("productService"),
   variantService: mockServiceList("variantService"),
 }
+

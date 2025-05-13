@@ -13,8 +13,8 @@ import {
   SquaresPlus,
   Tag,
   Users,
-} from "@medusajs/icons"
-import { Avatar, Divider, DropdownMenu, Text, clx } from "@medusajs/ui"
+} from "@vikrai/icons"
+import { Avatar, Divider, DropdownMenu, Text, clx } from "@vikrai/ui"
 import { Collapsible as RadixCollapsible } from "radix-ui"
 import { useTranslation } from "react-i18next"
 
@@ -384,3 +384,4 @@ const UserSection = () => {
     </div>
   )
 }
+

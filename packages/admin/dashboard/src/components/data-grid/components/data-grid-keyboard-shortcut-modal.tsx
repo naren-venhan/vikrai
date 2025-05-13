@@ -1,4 +1,4 @@
-import { XMark } from "@medusajs/icons"
+import { XMark } from "@vikrai/icons"
 import {
   Button,
   clx,
@@ -7,7 +7,7 @@ import {
   Input,
   Kbd,
   Text,
-} from "@medusajs/ui"
+} from "@vikrai/ui"
 import { Dialog as RadixDialog } from "radix-ui"
 import { useMemo, useState } from "react"
 import { useTranslation } from "react-i18next"
@@ -243,3 +243,4 @@ export const DataGridKeyboardShortcutModal = ({
     </RadixDialog.Root>
   )
 }
+

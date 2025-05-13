@@ -1,6 +1,6 @@
-import { Channels, PencilSquare } from "@medusajs/icons"
-import { HttpTypes } from "@medusajs/types"
-import { Container, Heading, Text } from "@medusajs/ui"
+import { Channels, PencilSquare } from "@vikrai/icons"
+import { HttpTypes } from "@vikrai/types"
+import { Container, Heading, Text } from "@vikrai/ui"
 import { useTranslation } from "react-i18next"
 
 import { ActionMenu } from "../../../../../components/common/action-menu"
@@ -74,3 +74,4 @@ function LocationsSalesChannelsSection({
 }
 
 export default LocationsSalesChannelsSection
+

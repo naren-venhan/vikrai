@@ -2,15 +2,15 @@ import {
   ChangeActionType,
   OrderChangeStatus,
   PromotionActions,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 import {
   createWorkflow,
   parallelize,
   transform,
   when,
   WorkflowData,
-} from "@medusajs/framework/workflows-sdk"
-import { OrderChangeDTO, OrderDTO } from "@medusajs/types"
+} from "@vikrai/framework/workflows-sdk"
+import { OrderChangeDTO, OrderDTO } from "@vikrai/types"
 import { useRemoteQueryStep } from "../../common"
 import { deleteOrderChangesStep, deleteOrderShippingMethods } from "../../order"
 import { restoreDraftOrderShippingMethodsStep } from "../steps/restore-draft-order-shipping-methods"
@@ -32,7 +32,7 @@ export interface CancelDraftOrderEditWorkflowInput {
 
 /**
  * This workflow cancels a draft order edit. It's used by the
- * [Cancel Draft Order Edit Admin API Route](https://docs.medusajs.com/api/admin#draft-orders_deletedraftordersidedit).
+ * [Cancel Draft Order Edit Admin API Route](https://docs.vikrai.com/api/admin#draft-orders_deletedraftordersidedit).
  * 
  * You can use this workflow within your customizations or your own custom workflows, allowing you to wrap custom logic around
  * cancelling a draft order edit.
@@ -172,3 +172,4 @@ export const cancelDraftOrderEditWorkflow = createWorkflow(
     })
   }
 )
+

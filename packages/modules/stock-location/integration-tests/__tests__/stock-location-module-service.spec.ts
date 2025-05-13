@@ -1,7 +1,7 @@
-import { moduleIntegrationTestRunner } from "@medusajs/test-utils"
+import { moduleIntegrationTestRunner } from "@vikrai/test-utils"
 
-import { IStockLocationService } from "@medusajs/framework/types"
-import { Module, Modules } from "@medusajs/framework/utils"
+import { IStockLocationService } from "@vikrai/framework/types"
+import { Module, Modules } from "@vikrai/framework/utils"
 import { StockLocationModuleService } from "../../src/services"
 
 jest.setTimeout(100000)
@@ -200,3 +200,4 @@ moduleIntegrationTestRunner<IStockLocationService>({
     })
   },
 })
+

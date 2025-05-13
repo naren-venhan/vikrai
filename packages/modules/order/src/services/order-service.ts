@@ -5,20 +5,20 @@ import {
   InferEntityType,
   OrderTypes,
   RepositoryService,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import {
   InjectManager,
-  MedusaContext,
-  MedusaError,
+  vikraiContext,
+  vikraiError,
   ModulesSdkUtils,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 import { Order } from "@models"
 
 type InjectedDependencies = {
   orderRepository: DAL.RepositoryService
 }
 
-export default class OrderService extends ModulesSdkUtils.MedusaInternalService<
+export default class OrderService extends ModulesSdkUtils.vikraiInternalService<
   InjectedDependencies,
   InferEntityType<typeof Order>
 >(Order) {
@@ -37,7 +37,7 @@ export default class OrderService extends ModulesSdkUtils.MedusaInternalService<
     id: string,
     version: number,
     config: FindConfig<TEntityMethod> = {},
-    @MedusaContext() sharedContext: Context = {}
+    @vikraiContext() sharedContext: Context = {}
   ): Promise<typeof Order> {
     const queryConfig = ModulesSdkUtils.buildQuery<typeof Order>(
       { id, items: { version } },
@@ -49,8 +49,8 @@ export default class OrderService extends ModulesSdkUtils.MedusaInternalService<
     )
 
     if (!result) {
-      throw new MedusaError(
-        MedusaError.Types.NOT_FOUND,
+      throw new vikraiError(
+        vikraiError.Types.NOT_FOUND,
         `Order with id: "${id}" and version: "${version}" not found`
       )
     }
@@ -58,3 +58,4 @@ export default class OrderService extends ModulesSdkUtils.MedusaInternalService<
     return result
   }
 }
+

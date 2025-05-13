@@ -3,8 +3,8 @@ import {
   PromotionDTO,
   PromotionStatusValues,
   UpdatePromotionDTO,
-} from "@medusajs/framework/types"
-import { isString } from "@medusajs/framework/utils"
+} from "@vikrai/framework/types"
+import { isString } from "@vikrai/framework/utils"
 import {
   createHook,
   createWorkflow,
@@ -12,7 +12,7 @@ import {
   when,
   WorkflowData,
   WorkflowResponse,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { useRemoteQueryStep } from "../../common"
 import { updatePromotionsStep } from "../steps"
 import { updatePromotionsStatusWorkflow } from "./update-promotions-status"
@@ -29,7 +29,7 @@ export type UpdatePromotionsWorkflowInput = {
 
 export const updatePromotionsWorkflowId = "update-promotions"
 /**
- * This workflow updates one or more promotions. It's used by the [Update Promotion Admin API Route](https://docs.medusajs.com/api/admin#promotions_postpromotionsid).
+ * This workflow updates one or more promotions. It's used by the [Update Promotion Admin API Route](https://docs.vikrai.com/api/admin#promotions_postpromotionsid).
  *
  * This workflow has a hook that allows you to perform custom actions on the updated promotion. For example, you can pass under `additional_data` custom data that
  * allows you to update custom data models linked to the promotions.
@@ -133,3 +133,4 @@ export const updatePromotionsWorkflow = createWorkflow(
     })
   }
 )
+

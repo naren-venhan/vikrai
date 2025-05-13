@@ -1,4 +1,4 @@
-import { ModuleProvider, Modules } from "@medusajs/framework/utils"
+import { ModuleProvider, Modules } from "@vikrai/framework/utils"
 import { EmailPassAuthService } from "./services/emailpass"
 
 const services = [EmailPassAuthService]
@@ -6,3 +6,4 @@ const services = [EmailPassAuthService]
 export default ModuleProvider(Modules.AUTH, {
   services,
 })
+

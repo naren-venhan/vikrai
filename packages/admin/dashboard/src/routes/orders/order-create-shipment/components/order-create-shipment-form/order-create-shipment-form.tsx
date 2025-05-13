@@ -2,8 +2,8 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import { useTranslation } from "react-i18next"
 import * as zod from "zod"
 
-import { AdminFulfillment, AdminOrder } from "@medusajs/types"
-import { Button, Heading, Input, Switch, toast } from "@medusajs/ui"
+import { AdminFulfillment, AdminOrder } from "@vikrai/types"
+import { Button, Heading, Input, Switch, toast } from "@vikrai/ui"
 import { useFieldArray, useForm } from "react-hook-form"
 
 import { Form } from "../../../../../components/common/form"
@@ -170,3 +170,4 @@ export function OrderCreateShipmentForm({
     </RouteFocusModal.Form>
   )
 }
+

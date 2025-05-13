@@ -1,11 +1,11 @@
-import type { SchedulerOptions } from "@medusajs/orchestration"
-import { MedusaContainer } from "@medusajs/types"
-import { isObject, MedusaError } from "@medusajs/utils"
+import type { SchedulerOptions } from "@vikrai/orchestration"
+import { vikraiContainer } from "@vikrai/types"
+import { isObject, vikraiError } from "@vikrai/utils"
 import {
   createStep,
   createWorkflow,
   StepResponse,
-} from "@medusajs/workflows-sdk"
+} from "@vikrai/workflows-sdk"
 import { logger } from "../logger"
 import { ResourceLoader } from "../utils/resource-loader"
 
@@ -15,7 +15,7 @@ type CronJobConfig = {
   numberOfExecutions?: SchedulerOptions["numberOfExecutions"]
 }
 
-type CronJobHandler = (container: MedusaContainer) => Promise<any>
+type CronJobHandler = (container: vikraiContainer) => Promise<any>
 
 export class JobLoader extends ResourceLoader {
   protected resourceName = "job"
@@ -49,22 +49,22 @@ export class JobLoader extends ResourceLoader {
     name: string
   }) {
     if (!config) {
-      throw new MedusaError(
-        MedusaError.Types.INVALID_ARGUMENT,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_ARGUMENT,
         "Config is required for scheduled jobs."
       )
     }
 
     if (!config.schedule) {
-      throw new MedusaError(
-        MedusaError.Types.INVALID_ARGUMENT,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_ARGUMENT,
         "Cron schedule definition is required for scheduled jobs."
       )
     }
 
     if (!config.name) {
-      throw new MedusaError(
-        MedusaError.Types.INVALID_ARGUMENT,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_ARGUMENT,
         "Job name is required for scheduled jobs."
       )
     }
@@ -124,3 +124,4 @@ export class JobLoader extends ResourceLoader {
     logger.debug(`Jobs registered.`)
   }
 }
+

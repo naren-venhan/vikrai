@@ -25,7 +25,7 @@ export interface AdminCreateRegion {
   /**
    * Whether prices in this region include taxes by default.
    * 
-   * Learn more in the [tax-inclusive pricing](https://docs.medusajs.com/resources/commerce-modules/pricing/tax-inclusive-pricing#content) documentation.
+   * Learn more in the [tax-inclusive pricing](https://docs.vikrai.com/resources/commerce-modules/pricing/tax-inclusive-pricing#content) documentation.
    */
   is_tax_inclusive?: boolean
   /**
@@ -69,7 +69,7 @@ export interface AdminUpdateRegion {
   /**
    * Whether prices in this region include taxes by default.
    * 
-   * Learn more in the [tax-inclusive pricing](https://docs.medusajs.com/resources/commerce-modules/pricing/tax-inclusive-pricing#content) documentation.
+   * Learn more in the [tax-inclusive pricing](https://docs.vikrai.com/resources/commerce-modules/pricing/tax-inclusive-pricing#content) documentation.
    */
   is_tax_inclusive?: boolean
   /**
@@ -85,3 +85,4 @@ export interface AdminUpdateRegion {
    */
   metadata?: Record<string, any> | null
 }
+

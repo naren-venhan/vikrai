@@ -2,16 +2,16 @@ import {
   configLoader,
   container,
   logger,
-  MedusaAppLoader,
-} from "@medusajs/framework"
-import { MedusaAppOutput, MedusaModule } from "@medusajs/framework/modules-sdk"
-import { IndexTypes, InferEntityType } from "@medusajs/framework/types"
+  vikraiAppLoader,
+} from "@vikrai/framework"
+import { vikraiAppOutput, vikraiModule } from "@vikrai/framework/modules-sdk"
+import { IndexTypes, InferEntityType } from "@vikrai/framework/types"
 import {
   ContainerRegistrationKeys,
   Modules,
   toMikroORMEntity,
-} from "@medusajs/framework/utils"
-import { initDb, TestDatabaseUtils } from "@medusajs/test-utils"
+} from "@vikrai/framework/utils"
+import { initDb, TestDatabaseUtils } from "@vikrai/test-utils"
 import { EntityManager } from "@mikro-orm/postgresql"
 import { IndexData, IndexRelation } from "@models"
 import { DataSynchronizer } from "@services"
@@ -19,7 +19,7 @@ import { asValue } from "awilix"
 import * as path from "path"
 import { setTimeout } from "timers/promises"
 import { EventBusServiceMock } from "../__fixtures__"
-import config, { dbName } from "../__fixtures__/medusa-config"
+import config, { dbName } from "../__fixtures__/vikrai-config"
 
 const eventBusMock = new EventBusServiceMock()
 const queryMock = {
@@ -64,14 +64,14 @@ const mockData = [
   },
 ]
 
-let medusaAppLoader!: MedusaAppLoader
+let vikraiAppLoader!: vikraiAppLoader
 let index!: IndexTypes.IIndexService
 
 const beforeAll_ = async () => {
   try {
     await configLoader(
       path.join(__dirname, "./../__fixtures__"),
-      "medusa-config"
+      "vikrai-config"
     )
 
     console.log(`Creating database ${dbName}`)
@@ -83,19 +83,19 @@ const beforeAll_ = async () => {
       [ContainerRegistrationKeys.PG_CONNECTION]: asValue(dbUtils.pgConnection_),
     })
 
-    medusaAppLoader = new MedusaAppLoader()
+    vikraiAppLoader = new vikraiAppLoader()
 
     // Migrations
-    await medusaAppLoader.runModulesMigrations()
-    const linkPlanner = await medusaAppLoader.getLinksExecutionPlanner()
+    await vikraiAppLoader.runModulesMigrations()
+    const linkPlanner = await vikraiAppLoader.getLinksExecutionPlanner()
     const plan = await linkPlanner.createPlan()
     await linkPlanner.executePlan(plan)
 
     // Clear partially loaded instances
-    MedusaModule.clearInstances()
+    vikraiModule.clearInstances()
 
     // Bootstrap modules
-    const globalApp = await medusaAppLoader.load()
+    const globalApp = await vikraiAppLoader.load()
     container.register({
       [ContainerRegistrationKeys.QUERY]: asValue(queryMock),
       [ContainerRegistrationKeys.REMOTE_QUERY]: asValue(queryMock),
@@ -117,15 +117,15 @@ const beforeAll_ = async () => {
 describe("DataSynchronizer", () => {
   let index: IndexTypes.IIndexService
   let dataSynchronizer: DataSynchronizer
-  let medusaApp: MedusaAppOutput
+  let vikraiApp: vikraiAppOutput
   let onApplicationPrepareShutdown!: () => Promise<void>
   let onApplicationShutdown!: () => Promise<void>
   let manager: EntityManager
 
   beforeAll(async () => {
-    medusaApp = await beforeAll_()
-    onApplicationPrepareShutdown = medusaApp.onApplicationPrepareShutdown
-    onApplicationShutdown = medusaApp.onApplicationShutdown
+    vikraiApp = await beforeAll_()
+    onApplicationPrepareShutdown = vikraiApp.onApplicationPrepareShutdown
+    onApplicationShutdown = vikraiApp.onApplicationShutdown
   })
 
   afterAll(async () => {
@@ -449,3 +449,4 @@ describe("DataSynchronizer", () => {
 
   // TODO: Add tests for errors handling and failure handling
 })
+

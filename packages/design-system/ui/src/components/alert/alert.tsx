@@ -7,7 +7,7 @@ import {
   InformationCircleSolid,
   XCircleSolid,
   XMarkMini,
-} from "@medusajs/icons"
+} from "@vikrai/icons"
 import * as React from "react"
 
 import { IconButton } from "@/components/icon-button"
@@ -92,3 +92,4 @@ export const Alert = React.forwardRef<HTMLDivElement, AlertProps>(
     )
   }
 )
+

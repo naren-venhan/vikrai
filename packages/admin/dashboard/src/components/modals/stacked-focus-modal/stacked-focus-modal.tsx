@@ -1,4 +1,4 @@
-import { FocusModal, clx } from "@medusajs/ui"
+import { FocusModal, clx } from "@vikrai/ui"
 import {
   ComponentPropsWithoutRef,
   PropsWithChildren,
@@ -96,3 +96,4 @@ export const StackedFocusModal = Object.assign(Root, {
   Description,
   Title,
 })
+

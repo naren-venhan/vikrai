@@ -1,17 +1,17 @@
-import { MedusaContainer } from "@medusajs/types"
+import { vikraiContainer } from "@vikrai/types"
 import {
   ContainerRegistrationKeys,
   isString,
   remoteQueryObjectFromString,
-} from "@medusajs/utils"
-import { MedusaRequest } from "../types"
+} from "@vikrai/utils"
+import { vikraiRequest } from "../types"
 
 export const refetchEntities = async (
   entryPoint: string,
   idOrFilter: string | object,
-  scope: MedusaContainer,
+  scope: vikraiContainer,
   fields: string[],
-  pagination?: MedusaRequest["queryConfig"]["pagination"]
+  pagination?: vikraiRequest["queryConfig"]["pagination"]
 ) => {
   const remoteQuery = scope.resolve(ContainerRegistrationKeys.REMOTE_QUERY)
   const filters = isString(idOrFilter) ? { id: idOrFilter } : idOrFilter
@@ -39,10 +39,11 @@ export const refetchEntities = async (
 export const refetchEntity = async (
   entryPoint: string,
   idOrFilter: string | object,
-  scope: MedusaContainer,
+  scope: vikraiContainer,
   fields: string[]
 ) => {
   const [entity] = await refetchEntities(entryPoint, idOrFilter, scope, fields)
 
   return entity
 }
+

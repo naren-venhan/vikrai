@@ -1,14 +1,14 @@
-import logger from "@medusajs/cli/dist/reporter"
+import logger from "@vikrai/cli/dist/reporter"
 import cors, { CorsOptions } from "cors"
-import { parseCorsOrigins } from "@medusajs/utils"
+import { parseCorsOrigins } from "@vikrai/utils"
 import type { Express, RequestHandler, ErrorRequestHandler } from "express"
 import type {
-  MedusaRequest,
-  MedusaResponse,
+  vikraiRequest,
+  vikraiResponse,
   MiddlewareVerb,
   RouteDescriptor,
   MiddlewareFunction,
-  MedusaNextFunction,
+  vikraiNextFunction,
   MiddlewareDescriptor,
   BodyParserConfigRoute,
   RouteHandler,
@@ -150,9 +150,9 @@ export class ApiLoader {
    */
   #assignRestrictedFields(baseRestrictedFields: string[]) {
     this.#app.use("/store", ((
-      req: MedusaRequest,
-      _: MedusaResponse,
-      next: MedusaNextFunction
+      req: vikraiRequest,
+      _: vikraiResponse,
+      next: vikraiNextFunction
     ) => {
       req.restrictedFields = new RestrictedFields()
       req.restrictedFields.add(baseRestrictedFields)
@@ -160,9 +160,9 @@ export class ApiLoader {
     }) as unknown as RequestHandler)
 
     this.#app.use("/admin", ((
-      req: MedusaRequest,
-      _: MedusaResponse,
-      next: MedusaNextFunction
+      req: vikraiRequest,
+      _: vikraiResponse,
+      next: vikraiNextFunction
     ) => {
       req.restrictedFields = new RestrictedFields()
       next()
@@ -297,9 +297,9 @@ export class ApiLoader {
     )
 
     const additionalDataValidator = function additionalDataValidator(
-      req: MedusaRequest,
-      _: MedusaResponse,
-      next: MedusaNextFunction
+      req: vikraiRequest,
+      _: vikraiResponse,
+      next: vikraiNextFunction
     ) {
       const matchingRoute = routesFinder.find(
         req.path,
@@ -451,3 +451,4 @@ export class ApiLoader {
     this.#app.use(sourceErrorHandler ?? errorHandler())
   }
 }
+

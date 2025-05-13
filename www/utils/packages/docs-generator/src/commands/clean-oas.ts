@@ -38,7 +38,7 @@ export default async function () {
   const apiRoutesPath = path.join(
     getMonorepoRoot(),
     "packages",
-    "medusa",
+    "vikrai",
     "src",
     "api"
   )
@@ -325,3 +325,4 @@ export default async function () {
 
   console.log("Finished clean up")
 }
+

@@ -4,7 +4,7 @@ import path from "node:path"
 import type * as Vite from "vite"
 import { generateCustomFieldHashes } from "./custom-fields"
 import { generateRouteHashes } from "./routes"
-import { MedusaVitePlugin } from "./types"
+import { vikraiVitePlugin } from "./types"
 import { AdminSubdirectory, isFileInAdminSubdirectory } from "./utils"
 import {
   generateVirtualDisplayModule,
@@ -28,7 +28,7 @@ enum Mode {
   APPLICATION = "application",
 }
 
-export const medusaVitePlugin: MedusaVitePlugin = (options) => {
+export const vikraiVitePlugin: vikraiVitePlugin = (options) => {
   const hashMap = new Map<VirtualModule, string>()
   const _sources = new Set<string>(options?.sources ?? [])
 
@@ -87,7 +87,7 @@ export const medusaVitePlugin: MedusaVitePlugin = (options) => {
 
     // Create the index.js content that re-exports everything
     return `
-      // Auto-generated index file for Medusa Admin UI extensions
+      // Auto-generated index file for vikrai Admin UI extensions
     ${widgetModule.code}
     ${routeModule.code}
     ${menuItemModule.code}
@@ -112,7 +112,7 @@ export const medusaVitePlugin: MedusaVitePlugin = (options) => {
   )
 
   return {
-    name: "@medusajs/admin-vite-plugin",
+    name: "@vikrai/admin-vite-plugin",
     enforce: "pre",
     async buildStart() {
       switch (mode) {
@@ -293,3 +293,4 @@ const watcherConfigs: WatcherConfig[] = [
     ],
   },
 ]
+

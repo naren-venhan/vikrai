@@ -1,4 +1,4 @@
-import { model } from "@medusajs/framework/utils"
+import { model } from "@vikrai/framework/utils"
 
 const _ReturnReason = model
   .define("ReturnReason", {
@@ -41,3 +41,4 @@ const _ReturnReason = model
   ])
 
 export const ReturnReason = _ReturnReason
+

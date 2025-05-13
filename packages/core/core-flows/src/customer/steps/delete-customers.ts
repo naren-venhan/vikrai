@@ -1,6 +1,6 @@
-import { ICustomerModuleService } from "@medusajs/framework/types"
-import { Modules } from "@medusajs/framework/utils"
-import { createStep, StepResponse } from "@medusajs/framework/workflows-sdk"
+import { ICustomerModuleService } from "@vikrai/framework/types"
+import { Modules } from "@vikrai/framework/utils"
+import { createStep, StepResponse } from "@vikrai/framework/workflows-sdk"
 
 /**
  * The IDs of the customers to delete.
@@ -30,3 +30,4 @@ export const deleteCustomersStep = createStep(
     await service.restoreCustomers(prevCustomerIds)
   }
 )
+

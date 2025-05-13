@@ -1,4 +1,4 @@
-import { Tooltip, clx } from "@medusajs/ui"
+import { Tooltip, clx } from "@vikrai/ui"
 import { useTranslation } from "react-i18next"
 
 type ListSummaryProps = {
@@ -68,3 +68,4 @@ export const ListSummary = ({
     </div>
   )
 }
+

@@ -1,4 +1,4 @@
-import { ChangeActionType } from "@medusajs/framework/utils"
+import { ChangeActionType } from "@vikrai/framework/utils"
 
 import { OrderChangeProcessing } from "../calculate-order-change"
 import { setActionReference } from "../set-action-reference"
@@ -18,3 +18,4 @@ OrderChangeProcessing.registerActionType(
     },
   }
 )
+

@@ -1,4 +1,4 @@
-import { model } from "@medusajs/framework/utils"
+import { model } from "@vikrai/framework/utils"
 
 import { FulfillmentAddress } from "./address"
 import { FulfillmentItem } from "./fulfillment-item"
@@ -52,3 +52,4 @@ export const Fulfillment = model
   .cascades({
     delete: ["delivery_address", "items", "labels"],
   })
+

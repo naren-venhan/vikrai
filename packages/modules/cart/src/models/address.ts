@@ -1,4 +1,4 @@
-import { model } from "@medusajs/framework/utils"
+import { model } from "@vikrai/framework/utils"
 
 const Address = model.define(
   { tableName: "cart_address", name: "Address" },
@@ -20,3 +20,4 @@ const Address = model.define(
 )
 
 export default Address
+

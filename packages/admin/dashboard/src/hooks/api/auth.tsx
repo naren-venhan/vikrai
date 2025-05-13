@@ -1,5 +1,5 @@
-import { FetchError } from "@medusajs/js-sdk"
-import { HttpTypes } from "@medusajs/types"
+import { FetchError } from "@vikrai/js-sdk"
+import { HttpTypes } from "@vikrai/types"
 import { UseMutationOptions, useMutation } from "@tanstack/react-query"
 import { sdk } from "../../lib/client"
 
@@ -73,3 +73,4 @@ export const useUpdateProviderForEmailPass = (
     ...options,
   })
 }
+

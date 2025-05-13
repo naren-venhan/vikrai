@@ -4,8 +4,8 @@ import {
   InferEntityType,
   ProductCategoryTransformOptions,
   ProductTypes,
-} from "@medusajs/framework/types"
-import { DALUtils, isDefined, MedusaError } from "@medusajs/framework/utils"
+} from "@vikrai/framework/types"
+import { DALUtils, isDefined, vikraiError } from "@vikrai/framework/utils"
 import { LoadStrategy, FindOptions as MikroOptions } from "@mikro-orm/core"
 import { SqlEntityManager } from "@mikro-orm/postgresql"
 import { ProductCategory } from "@models"
@@ -297,8 +297,8 @@ export class ProductCategoryRepository extends DALUtils.MikroOrmBaseTreeReposito
         })
 
         if (!productCategory) {
-          throw new MedusaError(
-            MedusaError.Types.NOT_FOUND,
+          throw new vikraiError(
+            vikraiError.Types.NOT_FOUND,
             `ProductCategory with id: ${id} was not found`
           )
         }
@@ -351,15 +351,15 @@ export class ProductCategoryRepository extends DALUtils.MikroOrmBaseTreeReposito
         )
 
         if (!productCategory) {
-          throw new MedusaError(
-            MedusaError.Types.NOT_FOUND,
+          throw new vikraiError(
+            vikraiError.Types.NOT_FOUND,
             `ProductCategory with id: ${id} was not found`
           )
         }
 
         if (productCategory.category_children.length > 0) {
-          throw new MedusaError(
-            MedusaError.Types.NOT_ALLOWED,
+          throw new vikraiError(
+            vikraiError.Types.NOT_ALLOWED,
             `Deleting ProductCategory (${id}) with category children is not allowed`
           )
         }
@@ -406,8 +406,8 @@ export class ProductCategoryRepository extends DALUtils.MikroOrmBaseTreeReposito
           >(ProductCategory.name, parentCategoryId)
 
           if (!parentCategory) {
-            throw new MedusaError(
-              MedusaError.Types.INVALID_ARGUMENT,
+            throw new vikraiError(
+              vikraiError.Types.INVALID_ARGUMENT,
               `Parent category with id: '${parentCategoryId}' does not exist`
             )
           }
@@ -457,8 +457,8 @@ export class ProductCategoryRepository extends DALUtils.MikroOrmBaseTreeReposito
         })
 
         if (!productCategory) {
-          throw new MedusaError(
-            MedusaError.Types.NOT_FOUND,
+          throw new vikraiError(
+            vikraiError.Types.NOT_FOUND,
             `ProductCategory with id: ${categoryData.id} was not found`
           )
         }
@@ -506,8 +506,8 @@ export class ProductCategoryRepository extends DALUtils.MikroOrmBaseTreeReposito
             >(ProductCategory.name, categoryData.parent_category_id)
 
             if (!newParentCategory) {
-              throw new MedusaError(
-                MedusaError.Types.INVALID_ARGUMENT,
+              throw new vikraiError(
+                vikraiError.Types.INVALID_ARGUMENT,
                 `Parent category with id: '${categoryData.parent_category_id}' does not exist`
               )
             }
@@ -698,3 +698,4 @@ export class ProductCategoryRepository extends DALUtils.MikroOrmBaseTreeReposito
     }
   }
 }
+

@@ -32,12 +32,12 @@ export const MainNav = ({ className, itemsClassName }: MainNavProps) => {
 
   return (
     <div
-      className={clsx("w-full z-20 sticky top-0 bg-medusa-bg-base", className)}
+      className={clsx("w-full z-20 sticky top-0 bg-vikrai-bg-base", className)}
     >
       <div
         className={clsx(
           "flex justify-between items-center px-docs_1 w-full gap-docs_1",
-          showCollapsedNavbar && "border-b border-medusa-border-base"
+          showCollapsedNavbar && "border-b border-vikrai-border-base"
         )}
       >
         <div className="flex items-center gap-[10px]">
@@ -69,7 +69,7 @@ export const MainNav = ({ className, itemsClassName }: MainNavProps) => {
             showCollapsedNavbar && "flex-grow justify-between"
           )}
         >
-          <div className="lg:flex items-center gap-[6px] text-medusa-fg-subtle hidden">
+          <div className="lg:flex items-center gap-[6px] text-vikrai-fg-subtle hidden">
             <MainNavVersion />
             <span
               className={clsx(
@@ -87,7 +87,7 @@ export const MainNav = ({ className, itemsClassName }: MainNavProps) => {
                   {
                     type: "link",
                     title: "Troubleshooting",
-                    link: "https://docs.medusajs.com/resources/troubleshooting",
+                    link: "https://docs.vikrai.com/resources/troubleshooting",
                   },
                   {
                     type: "link",
@@ -97,7 +97,7 @@ export const MainNav = ({ className, itemsClassName }: MainNavProps) => {
                   {
                     type: "link",
                     title: "Discord Community",
-                    link: "https://discord.gg/medusajs",
+                    link: "https://discord.gg/vikrai",
                   },
                   {
                     type: "divider",
@@ -105,12 +105,12 @@ export const MainNav = ({ className, itemsClassName }: MainNavProps) => {
                   {
                     type: "link",
                     title: "Contact Sales",
-                    link: "https://medusajs.com/contact/",
+                    link: "https://vikrai.com/contact/",
                   },
                 ],
               }}
               isActive={false}
-              className="text-medusa-fg-subtle"
+              className="text-vikrai-fg-subtle"
               wrapperClassName="z-10"
             />
             {!showCollapsedNavbar && (
@@ -126,10 +126,11 @@ export const MainNav = ({ className, itemsClassName }: MainNavProps) => {
         </div>
       </div>
       {showCollapsedNavbar && (
-        <div className={clsx("border-b border-medusa-border-base px-docs_1")}>
+        <div className={clsx("border-b border-vikrai-border-base px-docs_1")}>
           <MainNavItems className={clsx("flex-wrap", itemsClassName)} />
         </div>
       )}
     </div>
   )
 }
+

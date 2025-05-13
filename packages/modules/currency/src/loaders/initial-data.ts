@@ -2,11 +2,11 @@ import {
   LoaderOptions,
   Logger,
   ModulesSdkTypes,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import {
   ContainerRegistrationKeys,
   defaultCurrencies,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 import { Currency } from "@models"
 
 export default async ({
@@ -20,7 +20,7 @@ export default async ({
   const logger =
     container.resolve<Logger>(ContainerRegistrationKeys.LOGGER) ?? console
   const { currencyService_ } = container.resolve<{
-    currencyService_: ModulesSdkTypes.IMedusaInternalService<typeof Currency>
+    currencyService_: ModulesSdkTypes.IvikraiInternalService<typeof Currency>
   }>("currencyModuleService")
 
   try {
@@ -36,3 +36,4 @@ export default async ({
     )
   }
 }
+

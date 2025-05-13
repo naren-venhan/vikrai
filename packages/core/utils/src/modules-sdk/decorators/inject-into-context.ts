@@ -6,13 +6,13 @@ export function InjectIntoContext(
     propertyKey: string | symbol,
     descriptor: any
   ): void {
-    if (!target.MedusaContextIndex_) {
+    if (!target.vikraiContextIndex_) {
       throw new Error(
-        `To apply @InjectIntoContext you have to flag a parameter using @MedusaContext`
+        `To apply @InjectIntoContext you have to flag a parameter using @vikraiContext`
       )
     }
 
-    const argIndex = target.MedusaContextIndex_[propertyKey]
+    const argIndex = target.vikraiContextIndex_[propertyKey]
     const original = descriptor.value
     descriptor.value = async function (...args: any[]) {
       for (const key of Object.keys(properties)) {
@@ -28,3 +28,4 @@ export function InjectIntoContext(
     }
   }
 }
+

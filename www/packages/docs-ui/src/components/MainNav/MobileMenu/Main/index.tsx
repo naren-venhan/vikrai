@@ -3,7 +3,7 @@
 import React from "react"
 import { useMainNav } from "../../../../providers"
 import Link from "next/link"
-import { TriangleRightMini } from "@medusajs/icons"
+import { TriangleRightMini } from "@vikrai/icons"
 import clsx from "clsx"
 import { SelectedMenu } from ".."
 
@@ -18,7 +18,7 @@ export const MainNavMobileMainMenu = ({
 
   return (
     <div className="flex flex-col gap-[23px]">
-      <span className="text-compact-small-plus text-medusa-fg-muted uppercase">
+      <span className="text-compact-small-plus text-vikrai-fg-muted uppercase">
         Menu
       </span>
       <ul className="flex flex-col gap-[18px]">
@@ -26,7 +26,7 @@ export const MainNavMobileMainMenu = ({
           <li
             key={index}
             className={clsx(
-              "text-h1 text-medusa-fg-base cursor-pointer",
+              "text-h1 text-vikrai-fg-base cursor-pointer",
               "flex justify-between gap-docs_1"
             )}
             onClick={() => {
@@ -60,3 +60,4 @@ export const MainNavMobileMainMenu = ({
     </div>
   )
 }
+

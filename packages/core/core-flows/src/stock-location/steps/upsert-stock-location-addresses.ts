@@ -1,14 +1,14 @@
 import {
   IStockLocationService,
   UpsertStockLocationAddressInput,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import {
   getSelectsAndRelationsFromObjectArray,
   promiseAll,
-} from "@medusajs/framework/utils"
-import { StepResponse, createStep } from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/utils"
+import { StepResponse, createStep } from "@vikrai/framework/workflows-sdk"
 
-import { Modules } from "@medusajs/framework/utils"
+import { Modules } from "@vikrai/framework/utils"
 
 /**
  * The data to upsert stock location addresses.
@@ -76,3 +76,4 @@ export const upsertStockLocationAddressesStep = createStep(
     await promiseAll(promises)
   }
 )
+

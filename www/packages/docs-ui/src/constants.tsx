@@ -2,7 +2,7 @@ import { OptionType } from "@/hooks"
 import { NavigationItem } from "types"
 
 export const GITHUB_ISSUES_LINK =
-  "https://github.com/medusajs/medusa/issues/new/choose"
+  "https://github.com/vikrai/vikrai/issues/new/choose"
 
 export const navDropdownItems: NavigationItem[] = [
   {
@@ -37,8 +37,8 @@ export const navDropdownItems: NavigationItem[] = [
           },
           {
             type: "link",
-            title: "Medusa Container",
-            link: "/learn/fundamentals/medusa-container",
+            title: "vikrai Container",
+            link: "/learn/fundamentals/vikrai-container",
           },
           {
             type: "link",
@@ -247,13 +247,13 @@ export const navDropdownItems: NavigationItem[] = [
         items: [
           {
             type: "link",
-            title: "create-medusa-app",
-            link: "/resources/create-medusa-app",
+            title: "create-vikrai-app",
+            link: "/resources/create-vikrai-app",
           },
           {
             type: "link",
-            title: "Medusa CLI",
-            link: "/resources/medusa-cli",
+            title: "vikrai CLI",
+            link: "/resources/vikrai-cli",
           },
         ],
       },
@@ -269,7 +269,7 @@ export const navDropdownItems: NavigationItem[] = [
       },
       {
         type: "link",
-        title: "Medusa UI",
+        title: "vikrai UI",
         link: "/ui",
       },
     ],
@@ -301,12 +301,12 @@ export const navDropdownItems: NavigationItem[] = [
       {
         type: "link",
         title: "Container Resources",
-        link: "/resources/medusa-container-resources",
+        link: "/resources/vikrai-container-resources",
       },
       {
         type: "link",
         title: "Core Workflows",
-        link: "/resources/medusa-workflows-reference",
+        link: "/resources/vikrai-workflows-reference",
       },
       {
         type: "link",
@@ -379,3 +379,4 @@ export const searchFilters: OptionType[] = [
     label: "Troubleshooting",
   },
 ]
+

@@ -1,12 +1,12 @@
-import { WorkflowTypes } from "@medusajs/framework/types"
-import { RegionWorkflowEvents } from "@medusajs/framework/utils"
+import { WorkflowTypes } from "@vikrai/framework/types"
+import { RegionWorkflowEvents } from "@vikrai/framework/utils"
 import {
   WorkflowData,
   WorkflowResponse,
   createWorkflow,
   parallelize,
   transform,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { emitEventStep } from "../../common/steps/emit-event"
 import { createPricePreferencesWorkflow } from "../../pricing"
 import { createRegionsStep } from "../steps"
@@ -15,7 +15,7 @@ import { setRegionsPaymentProvidersStep } from "../steps/set-regions-payment-pro
 export const createRegionsWorkflowId = "create-regions"
 /**
  * This workflow creates one or more regions. It's used by the
- * [Create Region Admin API Route](https://docs.medusajs.com/api/admin#regions_postregions).
+ * [Create Region Admin API Route](https://docs.vikrai.com/api/admin#regions_postregions).
  * 
  * You can use this workflow within your own customizations or custom workflows, allowing you
  * to create regions in your custom flows.
@@ -122,3 +122,4 @@ export const createRegionsWorkflow = createWorkflow(
     return new WorkflowResponse(regions)
   }
 )
+

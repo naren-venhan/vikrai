@@ -1,9 +1,9 @@
-import { FulfillmentWorkflow, ServiceZoneDTO } from "@medusajs/framework/types"
+import { FulfillmentWorkflow, ServiceZoneDTO } from "@vikrai/framework/types"
 import {
   WorkflowData,
   WorkflowResponse,
   createWorkflow,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { updateServiceZonesStep } from "../steps/update-service-zones"
 
 /**
@@ -14,7 +14,7 @@ export type UpdateServiceZonesWorkflowOutput = ServiceZoneDTO[]
 export const updateServiceZonesWorkflowId = "update-service-zones-workflow"
 /**
  * This workflow updates one or more service zones. It's used by the
- * [Update Service Zones Admin API Route](https://docs.medusajs.com/api/admin#fulfillment-sets_postfulfillmentsetsidservicezoneszone_id).
+ * [Update Service Zones Admin API Route](https://docs.vikrai.com/api/admin#fulfillment-sets_postfulfillmentsetsidservicezoneszone_id).
  * 
  * You can use this workflow within your own customizations or custom workflows, allowing you to
  * update service zones within your custom flows.
@@ -44,3 +44,4 @@ export const updateServiceZonesWorkflow = createWorkflow(
     return new WorkflowResponse(updateServiceZonesStep(input))
   }
 )
+

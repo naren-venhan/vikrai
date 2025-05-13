@@ -1,4 +1,4 @@
-import { PromotionUtils, model } from "@medusajs/framework/utils"
+import { PromotionUtils, model } from "@vikrai/framework/utils"
 import Campaign from "./campaign"
 
 const CampaignBudget = model.define(
@@ -18,3 +18,4 @@ const CampaignBudget = model.define(
 )
 
 export default CampaignBudget
+

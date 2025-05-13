@@ -31,9 +31,9 @@ export const AiAssistantThreadItem = ({ item }: AiAssistantThreadItemProps) => {
       )}
       <div
         className={clsx(
-          "txt-small text-medusa-fg-base",
+          "txt-small text-vikrai-fg-base",
           item.type === "question" && [
-            "rounded-docs_xl bg-medusa-tag-neutral-bg",
+            "rounded-docs_xl bg-vikrai-tag-neutral-bg",
             "px-docs_0.75 py-docs_0.5 max-w-full md:max-w-[400px]",
           ],
           item.type !== "question" && "flex-1",
@@ -69,9 +69,9 @@ export const AiAssistantThreadItem = ({ item }: AiAssistantThreadItemProps) => {
                       wrapperClassName: "rounded-docs_lg",
                       innerClassName: "border rounded-docs_lg",
                       overrideColors: {
-                        bg: "bg-medusa-contrast-bg-subtle",
-                        innerBg: "bg-medusa-contrast-bg-subtle",
-                        innerBorder: "border-medusa-contrast-border-bot",
+                        bg: "bg-vikrai-contrast-bg-subtle",
+                        innerBg: "bg-vikrai-contrast-bg-subtle",
+                        innerBorder: "border-vikrai-contrast-border-bot",
                       },
                     }}
                   />
@@ -100,9 +100,10 @@ export const AiAssistantThreadItem = ({ item }: AiAssistantThreadItemProps) => {
           </div>
         )}
         {item.type === "error" && (
-          <span className="text-medusa-fg-error">{item.content}</span>
+          <span className="text-vikrai-fg-error">{item.content}</span>
         )}
       </div>
     </div>
   )
 }
+

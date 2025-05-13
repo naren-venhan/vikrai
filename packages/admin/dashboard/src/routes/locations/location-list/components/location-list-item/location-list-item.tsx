@@ -1,6 +1,6 @@
-import { Buildings, PencilSquare, Trash } from "@medusajs/icons"
-import { HttpTypes } from "@medusajs/types"
-import { Container, StatusBadge, Text, toast, usePrompt } from "@medusajs/ui"
+import { Buildings, PencilSquare, Trash } from "@vikrai/icons"
+import { HttpTypes } from "@vikrai/types"
+import { Container, StatusBadge, Text, toast, usePrompt } from "@vikrai/ui"
 import { useTranslation } from "react-i18next"
 
 import { ActionMenu } from "../../../../../components/common/action-menu"
@@ -184,3 +184,4 @@ function LocationListItem(props: LocationProps) {
 }
 
 export default LocationListItem
+

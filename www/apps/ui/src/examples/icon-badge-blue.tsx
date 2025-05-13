@@ -1,5 +1,5 @@
-import { BuildingTax } from "@medusajs/icons"
-import { IconBadge } from "@medusajs/ui"
+import { BuildingTax } from "@vikrai/icons"
+import { IconBadge } from "@vikrai/ui"
 
 export default function IconBadgeBlue() {
   return (
@@ -8,3 +8,4 @@ export default function IconBadgeBlue() {
     </IconBadge>
   )
 }
+

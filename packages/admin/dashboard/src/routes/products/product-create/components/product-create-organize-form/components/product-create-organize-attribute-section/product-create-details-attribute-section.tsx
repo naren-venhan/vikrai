@@ -1,4 +1,4 @@
-import { Heading, Input } from "@medusajs/ui"
+import { Heading, Input } from "@vikrai/ui"
 import { UseFormReturn } from "react-hook-form"
 import { useTranslation } from "react-i18next"
 
@@ -153,3 +153,4 @@ export const ProductCreateAttributeSection = ({
     </div>
   )
 }
+

@@ -5,9 +5,9 @@ import {
   dismissLinksWorkflowId,
   updateLinksWorkflow,
   updateLinksWorkflowId,
-} from "@medusajs/core-flows"
-import { Modules } from "@medusajs/utils"
-import { medusaIntegrationTestRunner } from "@medusajs/test-utils"
+} from "@vikrai/core-flows"
+import { Modules } from "@vikrai/utils"
+import { vikraiIntegrationTestRunner } from "@vikrai/test-utils"
 import {
   adminHeaders,
   createAdminUser,
@@ -15,7 +15,7 @@ import {
 
 jest.setTimeout(50000)
 
-medusaIntegrationTestRunner({
+vikraiIntegrationTestRunner({
   env: {},
   testSuite: ({ getContainer, api, dbConnection }) => {
     describe("Workflows: Common", () => {
@@ -329,3 +329,4 @@ medusaIntegrationTestRunner({
     })
   },
 })
+

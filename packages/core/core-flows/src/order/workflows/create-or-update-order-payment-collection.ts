@@ -1,16 +1,16 @@
-import { PaymentCollectionDTO } from "@medusajs/framework/types"
+import { PaymentCollectionDTO } from "@vikrai/framework/types"
 import {
   MathBN,
-  MedusaError,
+  vikraiError,
   PaymentCollectionStatus,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 import {
   createWorkflow,
   transform,
   when,
   WorkflowData,
   WorkflowResponse,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { useRemoteQueryStep } from "../../common"
 import { updatePaymentCollectionStep } from "../../payment-collection"
 import { createOrderPaymentCollectionWorkflow } from "./create-order-payment-collection"
@@ -117,8 +117,8 @@ export const createOrUpdateOrderPaymentCollectionWorkflow = createWorkflow(
         order.summary.raw_pending_difference ?? order.summary.pending_difference
 
       if (amountToCharge > 0 && MathBN.gt(amountToCharge, amountPending)) {
-        throw new MedusaError(
-          MedusaError.Types.NOT_ALLOWED,
+        throw new vikraiError(
+          vikraiError.Types.NOT_ALLOWED,
           `Amount cannot be greater than ${amountPending}`
         )
       }
@@ -187,3 +187,4 @@ export const createOrUpdateOrderPaymentCollectionWorkflow = createWorkflow(
     return new WorkflowResponse(paymentCollections)
   }
 )
+

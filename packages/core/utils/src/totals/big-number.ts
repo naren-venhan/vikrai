@@ -1,4 +1,4 @@
-import { BigNumberInput, BigNumberRawValue, IBigNumber } from "@medusajs/types"
+import { BigNumberInput, BigNumberRawValue, IBigNumber } from "@vikrai/types"
 import { BigNumber as BigNumberJS } from "bignumber.js"
 import { isBigNumber, isString } from "../common"
 
@@ -130,3 +130,4 @@ export class BigNumber implements IBigNumber {
     return this.numeric_
   }
 }
+

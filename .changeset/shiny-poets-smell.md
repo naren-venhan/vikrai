@@ -1,5 +1,6 @@
 ---
-"create-medusa-app": patch
+"create-vikrai-app": patch
 ---
 
-fix(create-medusa-app): updates to text and prompts
+fix(create-vikrai-app): updates to text and prompts
+

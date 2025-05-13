@@ -1,15 +1,15 @@
-import { PricingWorkflow } from "@medusajs/framework/types"
+import { PricingWorkflow } from "@vikrai/framework/types"
 import {
   WorkflowData,
   WorkflowResponse,
   createWorkflow,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { updatePricePreferencesStep } from "../steps"
 
 export const updatePricePreferencesWorkflowId = "update-price-preferences"
 /**
  * This workflow updates one or more price preferences. It's used by the
- * [Update Price Preference Admin API Route](https://docs.medusajs.com/api/admin#price-preferences_postpricepreferencesid).
+ * [Update Price Preference Admin API Route](https://docs.vikrai.com/api/admin#price-preferences_postpricepreferencesid).
  * 
  * You can use this workflow within your customizations or your own custom workflows, allowing you to
  * update price preferences in your custom flows.
@@ -39,3 +39,4 @@ export const updatePricePreferencesWorkflow = createWorkflow(
     return new WorkflowResponse(updatePricePreferencesStep(input))
   }
 )
+

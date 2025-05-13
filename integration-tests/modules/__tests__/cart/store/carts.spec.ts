@@ -1,5 +1,5 @@
-import { RemoteLink } from "@medusajs/modules-sdk"
-import { medusaIntegrationTestRunner } from "@medusajs/test-utils"
+import { RemoteLink } from "@vikrai/modules-sdk"
+import { vikraiIntegrationTestRunner } from "@vikrai/test-utils"
 import {
   IApiKeyModuleService,
   ICartModuleService,
@@ -13,15 +13,15 @@ import {
   ISalesChannelModuleService,
   IStoreModuleService,
   ITaxModuleService,
-} from "@medusajs/types"
+} from "@vikrai/types"
 import {
   ContainerRegistrationKeys,
-  MedusaError,
+  vikraiError,
   Modules,
   ProductStatus,
   PromotionStatus,
   PromotionType,
-} from "@medusajs/utils"
+} from "@vikrai/utils"
 import {
   createAdminUser,
   generatePublishableKey,
@@ -33,10 +33,10 @@ import { setupTaxStructure } from "../../fixtures"
 
 jest.setTimeout(100000)
 
-const env = { MEDUSA_FF_MEDUSA_V2: true }
-const adminHeaders = { headers: { "x-medusa-access-token": "test_token" } }
+const env = { vikrai_FF_vikrai_V2: true }
+const adminHeaders = { headers: { "x-vikrai-access-token": "test_token" } }
 
-medusaIntegrationTestRunner({
+vikraiIntegrationTestRunner({
   env,
   testSuite: ({ dbConnection, getContainer, api }) => {
     describe("Store Carts API", () => {
@@ -660,7 +660,7 @@ medusaIntegrationTestRunner({
         let region
 
         const productData = {
-          title: "Medusa T-Shirt",
+          title: "vikrai T-Shirt",
           handle: "t-shirt",
           status: ProductStatus.PUBLISHED,
           options: [
@@ -1897,8 +1897,8 @@ medusaIntegrationTestRunner({
           // Mock the authorizePaymentSession to throw error
           authorizePaymentSessionSpy.mockImplementation(
             (id, context, sharedContext) => {
-              throw new MedusaError(
-                MedusaError.Types.INVALID_DATA,
+              throw new vikraiError(
+                vikraiError.Types.INVALID_DATA,
                 `Throw a random error`
               )
             }
@@ -1962,3 +1962,4 @@ medusaIntegrationTestRunner({
     })
   },
 })
+

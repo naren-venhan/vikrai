@@ -1,4 +1,4 @@
-import { camelToSnakeCase, simpleHash } from "@medusajs/framework/utils"
+import { camelToSnakeCase, simpleHash } from "@vikrai/framework/utils"
 
 export function compressName(name: string, limit = 58) {
   if (name.length <= limit) {
@@ -36,3 +36,4 @@ export function compressName(name: string, limit = 58) {
 
   return (name + hash).toLowerCase()
 }
+

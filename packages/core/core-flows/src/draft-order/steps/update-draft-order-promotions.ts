@@ -2,9 +2,9 @@ import {
   ContainerRegistrationKeys,
   Modules,
   PromotionActions,
-} from "@medusajs/framework/utils"
-import { createStep, StepResponse } from "@medusajs/framework/workflows-sdk"
-import { IPromotionModuleService } from "@medusajs/types"
+} from "@vikrai/framework/utils"
+import { createStep, StepResponse } from "@vikrai/framework/workflows-sdk"
+import { IPromotionModuleService } from "@vikrai/types"
 
 export const updateDraftOrderPromotionsStepId = "update-draft-order-promotions"
 
@@ -37,7 +37,7 @@ export interface UpdateDraftOrderPromotionsStepInput {
  * const data = updateDraftOrderPromotionsStep({
  *   id: "order_123",
  *   promo_codes: ["PROMO_123", "PROMO_456"],
- *   // Import from "@medusajs/framework/utils"
+ *   // Import from "@vikrai/framework/utils"
  *   action: PromotionActions.ADD,
  * })
  */
@@ -131,3 +131,4 @@ export const updateDraftOrderPromotionsStep = createStep(
     }
   }
 )
+

@@ -3,13 +3,13 @@ import {
   OrderWorkflow,
   PaymentCollectionDTO,
   ReturnDTO,
-} from "@medusajs/framework/types"
-import { MathBN, MedusaError } from "@medusajs/framework/utils"
+} from "@vikrai/framework/types"
+import { MathBN, vikraiError } from "@vikrai/framework/utils"
 import {
   WorkflowData,
   createStep,
   createWorkflow,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { useRemoteQueryStep } from "../../../common"
 import { cancelOrderReturnStep } from "../../steps"
 import { throwIfIsCancelled } from "../../utils/order-validation"
@@ -35,8 +35,8 @@ export type CancelReturnValidateOrderInput = {
  * 
  * :::note
  * 
- * You can retrieve a return details using [Query](https://docs.medusajs.com/learn/fundamentals/module-links/query),
- * or [useQueryGraphStep](https://docs.medusajs.com/resources/references/medusa-workflows/steps/useQueryGraphStep).
+ * You can retrieve a return details using [Query](https://docs.vikrai.com/learn/fundamentals/module-links/query),
+ * or [useQueryGraphStep](https://docs.vikrai.com/resources/references/vikrai-workflows/steps/useQueryGraphStep).
  * 
  * :::
  * 
@@ -69,7 +69,7 @@ export const cancelReturnValidateOrder = createStep(
       message: string
     ) => {
       if (arr?.some(pred)) {
-        throw new MedusaError(MedusaError.Types.NOT_ALLOWED, message)
+        throw new vikraiError(vikraiError.Types.NOT_ALLOWED, message)
       }
     }
 
@@ -93,7 +93,7 @@ export const cancelReturnValidateOrder = createStep(
 export const cancelReturnWorkflowId = "cancel-return"
 /**
  * This workflow cancels a return. It's used by the 
- * [Cancel Return Admin API Route](https://docs.medusajs.com/api/admin#returns_postreturnsidcancel).
+ * [Cancel Return Admin API Route](https://docs.vikrai.com/api/admin#returns_postreturnsidcancel).
  * 
  * You can use this workflow within your customizations or your own custom workflows, allowing you
  * to cancel a return in your custom flow.
@@ -140,3 +140,4 @@ export const cancelReturnWorkflow = createWorkflow(
     })
   }
 )
+

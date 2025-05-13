@@ -1,4 +1,4 @@
-import { model } from "@medusajs/framework/utils"
+import { model } from "@vikrai/framework/utils"
 
 const _OrderAddress = model
   .define("OrderAddress", {
@@ -25,3 +25,4 @@ const _OrderAddress = model
   ])
 
 export const OrderAddress = _OrderAddress
+

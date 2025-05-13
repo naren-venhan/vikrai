@@ -2,20 +2,20 @@ import {
   OrderChangeDTO,
   OrderDTO,
   OrderWorkflow,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import {
   WorkflowData,
   WorkflowResponse,
   createStep,
   createWorkflow,
   transform,
-} from "@medusajs/framework/workflows-sdk"
-import { OrderPreviewDTO } from "@medusajs/types"
+} from "@vikrai/framework/workflows-sdk"
+import { OrderPreviewDTO } from "@vikrai/types"
 import {
   ChangeActionType,
-  MedusaError,
+  vikraiError,
   OrderChangeStatus,
-} from "@medusajs/utils"
+} from "@vikrai/utils"
 
 import { useQueryGraphStep } from "../../../common"
 import { previewOrderChangeStep } from "../../steps"
@@ -46,8 +46,8 @@ export type AcceptOrderTransferValidationStepInput = {
  *
  * :::note
  *
- * You can retrieve an order and order change details using [Query](https://docs.medusajs.com/learn/fundamentals/module-links/query),
- * or [useQueryGraphStep](https://docs.medusajs.com/resources/references/medusa-workflows/steps/useQueryGraphStep).
+ * You can retrieve an order and order change details using [Query](https://docs.vikrai.com/learn/fundamentals/module-links/query),
+ * or [useQueryGraphStep](https://docs.vikrai.com/resources/references/vikrai-workflows/steps/useQueryGraphStep).
  *
  * :::
  *
@@ -78,8 +78,8 @@ export const acceptOrderTransferValidationStep = createStep(
     throwIfOrderIsCancelled({ order })
 
     if (!orderChange || orderChange.change_type !== "transfer") {
-      throw new MedusaError(
-        MedusaError.Types.INVALID_DATA,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_DATA,
         `Order ${order.id} does not have an order transfer request.`
       )
     }
@@ -88,7 +88,7 @@ export const acceptOrderTransferValidationStep = createStep(
     )
 
     if (!token.length || token !== transferCustomerAction?.details!.token) {
-      throw new MedusaError(MedusaError.Types.NOT_ALLOWED, "Invalid token.")
+      throw new vikraiError(vikraiError.Types.NOT_ALLOWED, "Invalid token.")
     }
   }
 )
@@ -96,7 +96,7 @@ export const acceptOrderTransferValidationStep = createStep(
 export const acceptOrderTransferWorkflowId = "accept-order-transfer-workflow"
 /**
  * This workflow accepts an order transfer, requested previously by the {@link requestOrderTransferWorkflow}. This workflow is used by the
- * [Accept Order Transfer Store API Route](https://docs.medusajs.com/api/store#orders_postordersidtransferaccept).
+ * [Accept Order Transfer Store API Route](https://docs.vikrai.com/api/store#orders_postordersidtransferaccept).
  *
  * You can use this workflow within your customizations or your own custom workflows, allowing you to build a custom flow
  * around accepting an order transfer.
@@ -170,3 +170,4 @@ export const acceptOrderTransferWorkflow = createWorkflow(
     return new WorkflowResponse(previewOrderChangeStep(input.order_id))
   }
 )
+

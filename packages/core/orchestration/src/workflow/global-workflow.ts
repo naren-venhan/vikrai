@@ -1,5 +1,5 @@
-import { Context, LoadedModule, MedusaContainer } from "@medusajs/types"
-import { createMedusaContainer } from "@medusajs/utils"
+import { Context, LoadedModule, vikraiContainer } from "@vikrai/types"
+import { createvikraiContainer } from "@vikrai/utils"
 import { asValue } from "awilix"
 
 import {
@@ -10,12 +10,12 @@ import { WorkflowDefinition, WorkflowManager } from "./workflow-manager"
 
 export class GlobalWorkflow extends WorkflowManager {
   protected static workflows: Map<string, WorkflowDefinition> = new Map()
-  protected container: MedusaContainer
+  protected container: vikraiContainer
   protected context: Context
   protected subscribe: DistributedTransactionEvents
 
   constructor(
-    modulesLoaded?: LoadedModule[] | MedusaContainer,
+    modulesLoaded?: LoadedModule[] | vikraiContainer,
     context?: Context,
     subscribe?: DistributedTransactionEvents
   ) {
@@ -25,12 +25,12 @@ export class GlobalWorkflow extends WorkflowManager {
 
     if (!Array.isArray(modulesLoaded) && modulesLoaded) {
       if (!("cradle" in modulesLoaded)) {
-        container = createMedusaContainer(modulesLoaded)
+        container = createvikraiContainer(modulesLoaded)
       } else {
         container = modulesLoaded
       }
     } else if (Array.isArray(modulesLoaded) && modulesLoaded.length) {
-      container = createMedusaContainer()
+      container = createvikraiContainer()
 
       for (const mod of modulesLoaded || []) {
         const keyName = mod.__definition.key
@@ -143,3 +143,4 @@ export class GlobalWorkflow extends WorkflowManager {
     })
   }
 }
+

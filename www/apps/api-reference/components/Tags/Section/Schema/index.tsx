@@ -107,16 +107,16 @@ const TagSectionSchema = ({ schema, tagName }: TagSectionSchemaProps) => {
               <div>
                 <h2>{formattedName} Object</h2>
                 <Note>
-                  This object&apos;s schema is as returned by Medusa&apos;s{" "}
+                  This object&apos;s schema is as returned by vikrai&apos;s{" "}
                   {displayedArea} API routes. However, the related model in the
-                  Medusa application may support more fields and relations. To
-                  view the models in the Medusa application and their relations,
+                  vikrai application may support more fields and relations. To
+                  view the models in the vikrai application and their relations,
                   visit the{" "}
-                  <Link href="https://docs.medusajs.com/resources/commerce-modules">
+                  <Link href="https://docs.vikrai.com/resources/commerce-modules">
                     Commerce Modules Documentation
                   </Link>
                 </Note>
-                <h4 className="border-medusa-border-base border-b py-1.5 mt-2">
+                <h4 className="border-vikrai-border-base border-b py-1.5 mt-2">
                   Fields
                 </h4>
                 <TagOperationParameters schemaObject={schema} topLevel={true} />
@@ -145,3 +145,4 @@ const TagSectionSchema = ({ schema, tagName }: TagSectionSchemaProps) => {
 }
 
 export default TagSectionSchema
+

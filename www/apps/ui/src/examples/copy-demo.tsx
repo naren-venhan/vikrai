@@ -1,5 +1,6 @@
-import { Copy } from "@medusajs/ui"
+import { Copy } from "@vikrai/ui"
 
 export default function CopyDemo() {
-  return <Copy content="yarn add @medusajs/ui" />
+  return <Copy content="yarn add @vikrai/ui" />
 }
+

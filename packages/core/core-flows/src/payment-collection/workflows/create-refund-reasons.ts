@@ -1,12 +1,12 @@
 import {
   CreateRefundReasonDTO,
   RefundReasonDTO,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import {
   WorkflowData,
   WorkflowResponse,
   createWorkflow,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { createRefundReasonStep } from "../steps/create-refund-reasons"
 
 /**
@@ -22,7 +22,7 @@ export type CreateRefundReasonsWorkflowInput = {
 export const createRefundReasonsWorkflowId = "create-refund-reasons-workflow"
 /**
  * This workflow creates one or more refund reasons. It's used by the
- * [Create Refund Reason Admin API Route](https://docs.medusajs.com/api/admin#refund-reasons_postrefundreasons).
+ * [Create Refund Reason Admin API Route](https://docs.vikrai.com/api/admin#refund-reasons_postrefundreasons).
  * 
  * You can use this workflow within your own customizations or custom workflows, allowing you
  * to create refund reasons in your custom flows.
@@ -51,3 +51,4 @@ export const createRefundReasonsWorkflow = createWorkflow(
     return new WorkflowResponse(createRefundReasonStep(input.data))
   }
 )
+

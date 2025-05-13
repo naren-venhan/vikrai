@@ -1,7 +1,7 @@
 import zod from "zod"
-import { MedusaError } from "@medusajs/utils"
+import { vikraiError } from "@vikrai/utils"
 import { validateAndTransformBody } from "../utils/validate-body"
-import { MedusaRequest, MedusaResponse } from "../types"
+import { vikraiRequest, vikraiResponse } from "../types"
 
 const createLinkBody = () => {
   return zod.object({
@@ -21,9 +21,9 @@ describe("validateAndTransformBody", () => {
       body: {
         additional_data: {},
       },
-    } as MedusaRequest
+    } as vikraiRequest
 
-    const mockResponse = {} as MedusaResponse
+    const mockResponse = {} as vikraiResponse
     const nextFunction = jest.fn()
 
     mockRequest.additionalDataValidator = zod
@@ -46,7 +46,7 @@ describe("validateAndTransformBody", () => {
 
     await middleware(mockRequest, mockResponse, nextFunction)
     expect(nextFunction.mock.calls[0]).toEqual([
-      new MedusaError(
+      new vikraiError(
         "invalid_data",
         `Invalid request: Field 'additional_data, brand_id' is required`
       ),
@@ -57,9 +57,9 @@ describe("validateAndTransformBody", () => {
     let mockRequest = {
       query: {},
       body: {},
-    } as MedusaRequest
+    } as vikraiRequest
 
-    const mockResponse = {} as MedusaResponse
+    const mockResponse = {} as vikraiResponse
     const nextFunction = jest.fn()
 
     mockRequest.additionalDataValidator = zod
@@ -90,9 +90,9 @@ describe("validateAndTransformBody", () => {
       body: {
         additional_data: {},
       },
-    } as MedusaRequest
+    } as vikraiRequest
 
-    const mockResponse = {} as MedusaResponse
+    const mockResponse = {} as vikraiResponse
     const nextFunction = jest.fn()
 
     mockRequest.additionalDataValidator = zod
@@ -117,3 +117,4 @@ describe("validateAndTransformBody", () => {
     expect(nextFunction.mock.calls[0]).toEqual([])
   })
 })
+

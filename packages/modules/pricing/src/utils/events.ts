@@ -3,7 +3,7 @@ import {
   moduleEventBuilderFactory,
   Modules,
   PricingEvents,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 
 export const eventBuilders = {
   createdPriceSet: moduleEventBuilderFactory({
@@ -97,3 +97,4 @@ export const eventBuilders = {
     eventName: PricingEvents.PRICE_RULE_DELETED,
   }),
 }
+

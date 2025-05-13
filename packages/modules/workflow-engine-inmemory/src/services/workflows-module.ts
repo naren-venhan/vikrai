@@ -8,18 +8,18 @@ import {
   ModulesSdkTypes,
   WorkflowExecutionDTO,
   WorkflowsSdkTypes,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import {
   InjectManager,
   InjectSharedContext,
   isDefined,
-  MedusaContext,
+  vikraiContext,
   ModulesSdkUtils,
-} from "@medusajs/framework/utils"
+} from "@vikrai/framework/utils"
 import type {
   ReturnWorkflow,
   UnwrapWorkflowInputDataType,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 import { SqlEntityManager } from "@mikro-orm/postgresql"
 import { WorkflowExecution } from "@models"
 import { WorkflowOrchestratorService } from "@services"
@@ -28,7 +28,7 @@ import { WorkflowOrchestratorCancelOptions } from "@types"
 type InjectedDependencies = {
   manager: SqlEntityManager
   baseRepository: DAL.RepositoryService
-  workflowExecutionService: ModulesSdkTypes.IMedusaInternalService<any>
+  workflowExecutionService: ModulesSdkTypes.IvikraiInternalService<any>
   workflowOrchestratorService: WorkflowOrchestratorService
 }
 
@@ -36,11 +36,11 @@ export class WorkflowsModuleService<
   TWorkflowExecution extends InferEntityType<
     typeof WorkflowExecution
   > = InferEntityType<typeof WorkflowExecution>
-> extends ModulesSdkUtils.MedusaService<{
+> extends ModulesSdkUtils.vikraiService<{
   WorkflowExecution: { dto: InferEntityType<typeof WorkflowExecution> }
 }>({ WorkflowExecution }) {
   protected baseRepository_: DAL.RepositoryService
-  protected workflowExecutionService_: ModulesSdkTypes.IMedusaInternalService<TWorkflowExecution>
+  protected workflowExecutionService_: ModulesSdkTypes.IvikraiInternalService<TWorkflowExecution>
   protected workflowOrchestratorService_: WorkflowOrchestratorService
   protected manager_: SqlEntityManager
   private clearTimeout_: NodeJS.Timeout
@@ -119,7 +119,7 @@ export class WorkflowsModuleService<
   async listWorkflowExecutions(
     filters: FilterableWorkflowExecutionProps = {},
     config?: FindConfig<WorkflowExecutionDTO>,
-    @MedusaContext() sharedContext?: Context
+    @vikraiContext() sharedContext?: Context
   ) {
     const filters_ = WorkflowsModuleService.prepareFilters(filters)
     return await super.listWorkflowExecutions(filters_, config, sharedContext)
@@ -130,7 +130,7 @@ export class WorkflowsModuleService<
   async listAndCountWorkflowExecutions(
     filters: FilterableWorkflowExecutionProps = {},
     config?: FindConfig<WorkflowExecutionDTO>,
-    @MedusaContext() sharedContext?: Context
+    @vikraiContext() sharedContext?: Context
   ) {
     const filters_ = WorkflowsModuleService.prepareFilters(filters)
     return await super.listAndCountWorkflowExecutions(
@@ -148,7 +148,7 @@ export class WorkflowsModuleService<
         ? UnwrapWorkflowInputDataType<TWorkflow>
         : unknown
     > = {},
-    @MedusaContext() context: Context = {}
+    @vikraiContext() context: Context = {}
   ) {
     const options_ = JSON.parse(JSON.stringify(options ?? {}))
 
@@ -203,7 +203,7 @@ export class WorkflowsModuleService<
   async getRunningTransaction(
     workflowId: string,
     transactionId: string,
-    @MedusaContext() context: Context = {}
+    @vikraiContext() context: Context = {}
   ) {
     return await this.workflowOrchestratorService_.getRunningTransaction(
       workflowId,
@@ -223,7 +223,7 @@ export class WorkflowsModuleService<
       stepResponse: unknown
       options?: Record<string, any>
     },
-    @MedusaContext() context: Context = {}
+    @vikraiContext() context: Context = {}
   ) {
     const options_ = JSON.parse(JSON.stringify(options ?? {}))
 
@@ -249,7 +249,7 @@ export class WorkflowsModuleService<
       stepResponse: unknown
       options?: Record<string, any>
     },
-    @MedusaContext() context: Context = {}
+    @vikraiContext() context: Context = {}
   ) {
     const options_ = JSON.parse(JSON.stringify(options ?? {}))
 
@@ -272,7 +272,7 @@ export class WorkflowsModuleService<
       subscriber: Function
       subscriberId?: string
     },
-    @MedusaContext() context: Context = {}
+    @vikraiContext() context: Context = {}
   ) {
     return this.workflowOrchestratorService_.subscribe(args as any)
   }
@@ -284,7 +284,7 @@ export class WorkflowsModuleService<
       transactionId?: string
       subscriberOrId: string | Function
     },
-    @MedusaContext() context: Context = {}
+    @vikraiContext() context: Context = {}
   ) {
     return this.workflowOrchestratorService_.unsubscribe(args as any)
   }
@@ -301,7 +301,7 @@ export class WorkflowsModuleService<
   async cancel<TWorkflow extends string | ReturnWorkflow<any, any, any>>(
     workflowIdOrWorkflow: TWorkflow,
     options: WorkflowOrchestratorCancelOptions,
-    @MedusaContext() context: Context = {}
+    @vikraiContext() context: Context = {}
   ) {
     return await this.workflowOrchestratorService_.cancel(
       workflowIdOrWorkflow,
@@ -309,3 +309,4 @@ export class WorkflowsModuleService<
     )
   }
 }
+

@@ -1,6 +1,6 @@
-import { MedusaError, Modules } from "@medusajs/framework/utils"
-import { createStep, StepResponse } from "@medusajs/framework/workflows-sdk"
-import { BigNumberInput, IOrderModuleService } from "@medusajs/types"
+import { vikraiError, Modules } from "@vikrai/framework/utils"
+import { createStep, StepResponse } from "@vikrai/framework/workflows-sdk"
+import { BigNumberInput, IOrderModuleService } from "@vikrai/types"
 
 export const updateDraftOrderShippingMethodStepId =
   "update-draft-order-shipping-method"
@@ -60,8 +60,8 @@ export const updateDraftOrderShippingMethodStep = createStep(
     )
 
     if (!beforeUpdate) {
-      throw new MedusaError(
-        MedusaError.Types.INVALID_DATA,
+      throw new vikraiError(
+        vikraiError.Types.INVALID_DATA,
         `A shipping method with id ${input.shipping_method_id} was not found`
       )
     }
@@ -92,3 +92,4 @@ export const updateDraftOrderShippingMethodStep = createStep(
     service.updateOrderShippingMethods([input])
   }
 )
+

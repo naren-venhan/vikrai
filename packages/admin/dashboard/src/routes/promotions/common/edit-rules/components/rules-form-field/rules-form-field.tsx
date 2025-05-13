@@ -1,6 +1,6 @@
-import { XMarkMini } from "@medusajs/icons"
-import { PromotionDTO } from "@medusajs/types"
-import { Badge, Button, Heading, IconButton, Select, Text } from "@medusajs/ui"
+import { XMarkMini } from "@vikrai/icons"
+import { PromotionDTO } from "@vikrai/types"
+import { Badge, Button, Heading, IconButton, Select, Text } from "@vikrai/ui"
 import { forwardRef, Fragment, useEffect } from "react"
 import {
   ControllerRenderProps,
@@ -397,3 +397,4 @@ const DisabledField = forwardRef<HTMLInputElement, DisabledAttributeProps>(
 )
 
 DisabledField.displayName = "DisabledField"
+

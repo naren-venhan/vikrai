@@ -1,4 +1,4 @@
-import { DatePicker } from "@medusajs/ui"
+import { DatePicker } from "@vikrai/ui"
 
 export default function DatePickerDemo() {
   return (
@@ -7,3 +7,4 @@ export default function DatePickerDemo() {
     </div>
   )
 }
+

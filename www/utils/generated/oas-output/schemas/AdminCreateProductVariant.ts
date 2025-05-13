@@ -42,7 +42,7 @@
  *   manage_inventory:
  *     type: boolean
  *     title: manage_inventory
- *     description: Whether Medusa manages the variant's inventory quantity. If disabled, the product variant is always considered in stock.
+ *     description: Whether vikrai manages the variant's inventory quantity. If disabled, the product variant is always considered in stock.
  *   variant_rank:
  *     type: number
  *     title: variant_rank
@@ -91,4 +91,5 @@
  *       $ref: "#/components/schemas/AdminCreateProductVariantInventoryKit"
  * 
 */
+
 

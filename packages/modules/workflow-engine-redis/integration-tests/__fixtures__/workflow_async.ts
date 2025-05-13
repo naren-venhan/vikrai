@@ -4,7 +4,7 @@ import {
   parallelize,
   StepResponse,
   WorkflowResponse,
-} from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/workflows-sdk"
 
 const step_1_background = createStep(
   {
@@ -58,3 +58,4 @@ createWorkflow(
     return new WorkflowResponse(ret)
   }
 )
+

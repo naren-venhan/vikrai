@@ -1,21 +1,21 @@
 import {
   moduleLoader,
   ModulesDefinition,
-  registerMedusaModule,
-} from "@medusajs/modules-sdk"
-import { ContainerRegistrationKeys, generateJwtToken } from "@medusajs/utils"
+  registervikraiModule,
+} from "@vikrai/modules-sdk"
+import { ContainerRegistrationKeys, generateJwtToken } from "@vikrai/utils"
 import { asValue } from "awilix"
 import express from "express"
 import querystring from "querystring"
 import supertest from "supertest"
 
 import { config } from "../mocks"
-import { MedusaContainer } from "@medusajs/types"
+import { vikraiContainer } from "@vikrai/types"
 import { configManager } from "../../../config"
 import { container } from "../../../container"
 import { featureFlagsLoader } from "../../../feature-flags"
 import { logger } from "../../../logger"
-import { MedusaRequest } from "../../types"
+import { vikraiRequest } from "../../types"
 import { ApiLoader } from "../../router"
 
 function asArray(resolvers) {
@@ -35,7 +35,7 @@ export const createServer = async (rootDir) => {
 
   const moduleResolutions = {}
   Object.entries(ModulesDefinition).forEach(([moduleKey, module]) => {
-    moduleResolutions[moduleKey] = registerMedusaModule(
+    moduleResolutions[moduleKey] = registervikraiModule(
       moduleKey,
       module.defaultModuleDeclaration,
       undefined,
@@ -48,7 +48,7 @@ export const createServer = async (rootDir) => {
     baseDir: rootDir,
   })
 
-  container.registerAdd = function (this: MedusaContainer, name, registration) {
+  container.registerAdd = function (this: vikraiContainer, name, registration) {
     const storeKey = name + "_STORE"
 
     if (this.registrations[storeKey] === undefined) {
@@ -90,7 +90,7 @@ export const createServer = async (rootDir) => {
   await moduleLoader({ container, moduleResolutions, logger })
 
   app.use((req, res, next) => {
-    ;(req as MedusaRequest).scope = container.createScope() as MedusaContainer
+    ;(req as vikraiRequest).scope = container.createScope() as vikraiContainer
     next()
   })
 
@@ -180,3 +180,4 @@ export const createServer = async (rootDir) => {
     },
   }
 }
+

@@ -1,3 +1,4 @@
 # User Module
 
-The User Module is Medusa’s user engine.
+The User Module is vikrai’s user engine.
+

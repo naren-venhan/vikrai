@@ -69,7 +69,7 @@ const TagOperationParametersName = ({
   return (
     <span className="inline-flex gap-0.5 items-center">
       <span className="font-monospace">{name}</span>
-      <span className="text-medusa-fg-muted text-compact-small">
+      <span className="text-vikrai-fg-muted text-compact-small">
         {typeDescription}
       </span>
       {schema.deprecated && (
@@ -84,7 +84,7 @@ const TagOperationParametersName = ({
         <FeatureFlagNotice featureFlag={schema["x-featureFlag"]} type="type" />
       )}
       {!isRequired && (
-        <span className="text-medusa-tag-blue-text text-compact-x-small">
+        <span className="text-vikrai-tag-blue-text text-compact-x-small">
           optional
         </span>
       )}
@@ -111,3 +111,4 @@ function formatUnionDescription(arr?: OpenAPI.SchemaObject[]) {
   const types = [...new Set(arr?.map((type) => type.type || "object"))]
   return <>{types.join(" or ")}</>
 }
+

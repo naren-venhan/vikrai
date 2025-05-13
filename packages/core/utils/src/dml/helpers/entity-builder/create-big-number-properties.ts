@@ -1,4 +1,4 @@
-import { DMLSchema } from "@medusajs/types"
+import { DMLSchema } from "@vikrai/types"
 import { BigNumberProperty } from "../../properties/big-number"
 import { JSONProperty } from "../../properties/json"
 import { NullableModifier } from "../../properties/nullable"
@@ -57,3 +57,4 @@ export function createBigNumberProperties<Schema extends DMLSchema>(
 
   return schemaWithBigNumber as DMLSchemaWithBigNumber<Schema>
 }
+

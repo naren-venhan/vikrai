@@ -3,8 +3,8 @@ import {
   CreateOrderChangeActionDTO,
   OrderTypes,
   ReturnDTO,
-} from "@medusajs/framework/types"
-import { ChangeActionType, promiseAll } from "@medusajs/framework/utils"
+} from "@vikrai/framework/types"
+import { ChangeActionType, promiseAll } from "@vikrai/framework/utils"
 
 async function createOrderChange(
   service,
@@ -103,3 +103,4 @@ export async function cancelReturn(
 
   return returnOrder
 }
+

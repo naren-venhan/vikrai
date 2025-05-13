@@ -1,4 +1,4 @@
-import { OperatorMap } from "@medusajs/types"
+import { OperatorMap } from "@vikrai/types"
 
 export const FilterOperatorMap: { [K in keyof OperatorMap<string>]: string } = {
   $and: "$and",
@@ -21,3 +21,4 @@ export const FilterOperatorMap: { [K in keyof OperatorMap<string>]: string } = {
   $contained: "$contained",
   $exists: "$exists",
 }
+

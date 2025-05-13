@@ -1,13 +1,13 @@
 import {
   ITaxModuleService,
   UpdateTaxRegionDTO,
-} from "@medusajs/framework/types"
+} from "@vikrai/framework/types"
 import {
   Modules,
   getSelectsAndRelationsFromObjectArray,
   removeUndefined,
-} from "@medusajs/framework/utils"
-import { StepResponse, createStep } from "@medusajs/framework/workflows-sdk"
+} from "@vikrai/framework/utils"
+import { StepResponse, createStep } from "@vikrai/framework/workflows-sdk"
 
 /**
  * The tax regions to update.
@@ -70,3 +70,4 @@ export const updateTaxRegionsStep = createStep(
     await service.updateTaxRegions(updateData)
   }
 )
+

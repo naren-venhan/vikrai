@@ -1,4 +1,4 @@
-import { RuleOperator } from "@medusajs/framework/utils"
+import { RuleOperator } from "@vikrai/framework/utils"
 import { isContextValid } from "../utils"
 
 describe("isContextValidForRules", () => {
@@ -247,3 +247,4 @@ describe("isContextValidForRules", () => {
     expect(isContextValid(context, rules)).toBe(false)
   })
 })
+
