@@ -1,54 +1,73 @@
-name: 📚 Documentation
-description: Report errors you find in our documentation or ideas for enhancing our documentation
-labels: ["type: docs"]
+name: Documentation
+description: Report an issue with our documentation
+title: 'docs: '
+labels: ['type: docs']
 body:
   - type: markdown
     attributes:
       value: |
-        # Hello 👋
-
-        Thanks for taking the time to fill out this issue.
-        Please fill out each section below. This info helps Medusa maintainers understand the issue better and fix it in a short time.
-
-        Useful links:
-
-        - Contribution Guidelines: https://github.com/medusajs/medusa/blob/master/CONTRIBUTING.md
-        - Documentation: https://docs.medusajs.com/
+        Thank you for taking the time to submit a documentation-related issue!
+        
+        Please make use of the provided template to help us understand the issue better.
+  - type: markdown
+    attributes:
+      value: |
+        ### Resources
+        - Documentation: https://docs.vikrai.com/
+        - Contribution Guidelines: https://github.com/sadhakaai/VikrAI/blob/master/CONTRIBUTING.md
   - type: dropdown
+    id: issue-type
     attributes:
-      label: "What Medusa version and documentation are you using?"
+      label: Issue Type
+      description: What type of documentation issue is this?
       options:
-        - v1
-        - v2
-  - type: checkboxes
-    attributes:
-      label: Preliminary Checks
-      description: Please make sure that you verify each checkbox and follow the instructions for them.
-      options:
-        - label: "This issue is not a duplicate. Before opening a new issue, please search existing issues: https://github.com/medusajs/medusa/issues"
-          required: true
-  - type: textarea
+        - Error/Bug
+        - Unclear Explanation
+        - Missing Information
+        - Outdated Content
+        - Other (specify below)
     validations:
       required: true
-    attributes:
-      label: Issue Summary
-      description: |
-        What is the error you found in our documentation or what do you think should be enhanced?
-  - type: textarea
-    validations:
-      required: false
-    attributes:
-      label: How can this issue be resolved?
-      description: If you have an idea of how the issue can be resolved, please details the steps below.
-      value: |
-        1.
-        2.
-        3.
-        ...
   - type: checkboxes
     attributes:
-      label: Are you interested in working on this issue?
-      description: If you're interested in not only reporting this issue but also fix it, check the box below.
+      label: Pre-submission Checklist
       options:
-        - label: "I would like to fix this issue"
-          required: false
+        - label: "I have searched for similar issues before creating this one"
+          required: true
+        - label: "This issue is not a duplicate. Before opening a new issue, please search existing issues: https://github.com/sadhakaai/VikrAI/issues"
+          required: true
+  - type: input
+    attributes:
+      label: Affected Documentation Page
+      description: Please provide the URL of the documentation page with the issue.
+      placeholder: "https://docs.vikrai.com/..."
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Issue Description
+      description: Please provide a clear and detailed description of the documentation issue.
+      placeholder: |
+        For example:
+        - What is unclear or incorrect?
+        - What additional documentation would be helpful?
+        - How could we make this documentation better?
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Proposed Solution (Optional)
+      description: If you have a suggestion for how to improve the documentation, please let us know.
+      placeholder: |
+        For example:
+        - Reword this paragraph to...
+        - Add a new section about...
+        - Include an example showing...
+    validations:
+      required: false
+  - type: textarea
+    attributes:
+      label: Additional Context (Optional)
+      description: Add any other context about the problem here.
+    validations:
+      required: false

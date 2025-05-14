@@ -1,4 +1,4 @@
-name: Medusa Pipeline
+name: VikrAI Pipeline
 on:
   push:
     branches:

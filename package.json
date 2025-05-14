@@ -68,7 +68,7 @@
     "openapi:generate": "yarn ./packages/cli/oas/oas-github-ci run ci --with-full-file",
     "vikrai-oas": "yarn ./packages/cli/oas/vikrai-oas-cli run vikrai-oas",
     "release:snapshot": "changeset publish --no-git-tags --snapshot --tag snapshot",
-    "release:next": "chgstangeset publish --no-git-tags --snapshot --tag next",
+    "release:next": "changeset publish --no-git-tags --snapshot --tag next",
     "version:next": "changeset version --snapshot next",
     "release": "changeset publish",
     "version": "changeset version && yarn install --no-immutable"

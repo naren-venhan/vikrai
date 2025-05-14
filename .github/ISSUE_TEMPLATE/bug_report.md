@@ -1,53 +1,55 @@
 ---
-name: Bug report for v1.x
-about: Create a report to help us improve Medusa
-title: ''
-labels: 'status: needs triaging, type: bug, version: 1.x'
-
+name: Bug report
+about: Create a report to help us improve
+title: 'bug: '
+labels: 'type: bug'
 ---
 
-<!--
-Thank you for submitting an issue!
+# Bug Report
 
-Please make sure your issue is understandable and reproducible.
-To make your issue readable make sure you use valid Markdown syntax: https://guides.github.com/features/mastering-markdown/
+## Prerequisites
 
-Please ensure you have also read and understood our contribution guide: https://github.com/medusajs/medusa/blob/master/CONTRIBUTING.md
--->
+Please answer the following questions before submitting an issue.
 
-## Bug report
+- [ ] I am running the latest version
+- [ ] I checked the documentation and found no answer
+- [ ] I checked to make sure that this issue has not already been filed
+- [ ] I'm reporting the issue to the correct repository
 
-### Describe the bug
+Please ensure you have also read and understood our contribution guide: https://github.com/sadhakaai/VikrAI/blob/master/CONTRIBUTING.md
 
-A clear and concise description of what the bug is.
+## Current Behavior
 
-### System information
+<!-- What is the current behavior? -->
 
-Medusa version (including plugins):
-Node.js version:
-Database:
-Operating system:
-Browser (if relevant):
+## Expected Behavior
 
-### Steps to reproduce the behavior
+<!-- Please describe the behavior you are expecting -->
 
-1. Go to '...'
-2. Click on '....'
-3. Scroll down to '....'
-4. See error
+## Failure Information
 
-### Expected behavior
+<!-- Please help provide information about the failure if this is a bug -->
 
-A clear and concise description of what you expected to happen
+### Steps to Reproduce
 
-### Screenshots
+<!-- Please provide detailed steps for reproducing the issue including relevant documentation references -->
 
-If applicable, add screenshots to help explain your problem
+1. step 1
+2. step 2
+3. step 3
+   ...
 
-### Code snippets
+### Context
 
-If applicable, add code samples to help explain your problem
+<!-- Please provide any relevant information about your setup -->
 
-### Additional context
+- Package Version:
+- Node Version:
+- NPM Version:
+- Database Version:
+- OS:
+- etc.
 
-Add any other context about the problem here
+### Failure Logs
+
+<!-- Please include any relevant log snippets, if necessary -->

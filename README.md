@@ -1,72 +1,62 @@
-<p align="center">
-  <a href="https://www.vikrai.com">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://user-images.githubusercontent.com/59018053/229103275-b5e482bb-4601-46e6-8142-244f531cebdb.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://user-images.githubusercontent.com/59018053/229103726-e5b529a3-9b3f-4970-8a1f-c6af37f087bf.svg">
-    <img alt="vikrai logo" src="https://user-images.githubusercontent.com/59018053/229103726-e5b529a3-9b3f-4970-8a1f-c6af37f087bf.svg">
-    </picture>
-  </a>
-</p>
-<h1 align="center">
-  vikrai
-</h1>
+# VikrAI Commerce Platform
 
-<h4 align="center">
-  <a href="https://docs.vikrai.com">Documentation</a> |
-  <a href="https://www.vikrai.com">Website</a>
-</h4>
+VikrAI is a composable commerce platform that provides the building blocks for crafting flexible and custom e-commerce experiences.
 
-<p align="center">
-  Building blocks for digital commerce
-</p>
-<p align="center">
-  <a href="https://github.com/vikrai/vikrai/blob/develop/LICENSE">
-    <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="vikrai is released under the MIT license." />
-  </a>
-  <a href="https://github.com/vikrai/vikrai/blob/develop/CONTRIBUTING.md">
-    <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat" alt="PRs welcome!" />
-  </a>
- <p align="center">
-  <a href="https://twitter.com/intent/follow?screen_name=vikrai">
-    <img src="https://img.shields.io/twitter/follow/vikrai.svg?label=Follow%20@vikrai" alt="Follow @vikrai" />
-  <a href="https://discord.gg/vikrai">
-    <img src="https://img.shields.io/badge/chat-on%20discord-7289DA.svg" alt="Discord Chat" />
-  </a>
-</p>
+## Features
+
+- **Modular Architecture** - Use only what you need
+- **Headless by Design** - Build your own frontend or use our dashboard
+- **API-First** - RESTful APIs for all commerce functionality
+- **Extendable** - Easily add custom functionality with plugins
+- **Developer Friendly** - Typescript throughout, great DX
+- **Open Source** - MIT licensed
 
 ## Getting Started
 
-Visit the [Documentation](https://docs.vikrai.com/learn) to set up a vikrai application.
+### Prerequisites
 
-## What is vikrai
+- Node.js 20+
+- A PostgreSQL database
 
-vikrai is an ecommerce platform with a built-in framework for customization that allows you to build custom commerce applications without reinventing core commerce logic. The framework and modules can be used to build advanced B2B or DTC ecommerce stores, marketplaces, PoS systems, service businesses, or any product that needs foundational commerce primitives. All commerce modules are open-source and freely available on npm.
+### Installation
 
-Learn more about [vikrai’s architecture](https://docs.vikrai.com/learn/advanced-development/architecture/overview) and [commerce modules](https://docs.vikrai.com/resources/commerce-modules) in the Docs.
+```bash
+# Using npm
+npm install -g @vikrai/cli
 
-## Upgrades & Integrations
+# Create a new VikrAI project
+vikrai new my-store
 
-Follow the [Release Notes](https://github.com/vikrai/vikrai/releases) to keep your vikrai project up-to-date.
+# Change directory to the new project
+cd my-store
 
-Check out all [available vikrai integrations](https://docs.vikrai.com/resources/integrations).
+# Start development server
+vikrai develop
+```
 
-## Community & Contributions
+## Project Structure
 
-The community and core team are available in [GitHub Discussions](https://github.com/vikrai/vikrai/discussions), where you can ask for support, discuss roadmap, and share ideas.
+The VikrAI repository is a monorepo managed with Yarn workspaces. Here's an overview of the main packages:
 
-Our [Contribution Guide](https://github.com/vikrai/vikrai/blob/develop/CONTRIBUTING.md) describes how to contribute to the codebase and Docs.
+- `packages/vikrai` - Core commerce functionality
+- `packages/admin` - Admin dashboard UI
+- `packages/modules/*` - Commerce modules like cart, payment, etc.
+- `packages/core/*` - Core utilities and shared functionality
+- `packages/cli/*` - Command-line tools
 
-Join our [Discord server](https://discord.com/invite/vikrai) to meet other community members.
+## Contributing
 
-## Other channels
+We welcome and appreciate contributions! Please read our [Contributing Guide](CONTRIBUTING.md) for details on how to submit pull requests, the development process, and our code of conduct.
 
-- [GitHub Issues](https://github.com/vikrai/vikrai/issues)
-- [Community Discord](https://discord.gg/vikrai)
-- [Twitter](https://twitter.com/vikrai)
-- [LinkedIn](https://www.linkedin.com/company/vikrai)
-- [vikrai Blog](https://vikrai.com/blog/)
+## Documentation
+
+For detailed documentation, visit [docs.vikrai.com](https://docs.vikrai.com).
+
+## Support
+
+For questions and support, join our [Discord community](https://discord.gg/vikrai).
 
 ## License
 
-Licensed under the [MIT License](https://github.com/vikrai/vikrai/blob/develop/LICENSE).
+VikrAI is [MIT licensed](LICENSE).
 

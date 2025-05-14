@@ -18,10 +18,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/vikrai/vikrai",
+    "url": "git+https://github.com/vikrai/vikrai.git",
     "directory": "packages/vikrai"
   },
   "publishConfig": {
+    "registry": "https://npm.pkg.github.com/",
     "access": "public"
   },
   "files": [
